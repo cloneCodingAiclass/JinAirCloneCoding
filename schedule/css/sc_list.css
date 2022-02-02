@@ -102,6 +102,8 @@ header{
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
+    padding-top: 80px;
+    padding-left: 100px;
 }
 #container > .sidebar > nav li{
     display: none;
@@ -120,4 +122,122 @@ header{
     margin: 5px 0;
     padding-left: 5px;
     width: 125px;
+}
+
+#container > .contents > .title{ 
+    clear: both;
+    font-size: 1.1em; 
+    font-weight: 700;
+
+}
+
+#container > .contents > .btn_top{
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#container > .contents > .btn_top input[type="button"]{
+    width: 100px;
+    height: 30px;
+    background-color:#BDD600;
+    clear: both;
+    border: 0;
+    margin-right: 20px;
+    font-size: 0.8em;
+}
+
+#container > .contents > .table{
+    width: 80%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+#container > .contents > .table tr:first-child{
+    background-color: #F2F2F2;
+}
+
+#container > .contents > .table tr {
+    height: 40px;
+}
+
+#container > .contents > .table tr:first-child td{
+    width: 145px;
+    border-bottom: 1px solid black;
+}
+
+#container > .contents > .btn_box{
+    width: 80%;
+    display: flex;
+    justify-content: right;
+}
+
+#container > .contents > .btn_box input[type="button"]{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    clear: both;
+    border: 0
+}
+
+.modal_container{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_container .modal p{
+    margin-bottom: 20px;
+}
+
+.modal_container .modal input[type="date"]{
+    margin-left: 20px;
+    width: 150px;
+    height: 30px;
+}
+.modal_container .modal{
+    width: 700px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    border: 3px solid #BDD600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal_container .modal input[type="text"]{
+    width: 150px;
+    height: 30px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+}
+
+.modal_container .modal select{
+    width: 150px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.modal_container .modal .btn_modal{
+    display: flex;
+    justify-content: center;
+}
+
+.modal_container .modal input[type="button"]{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: 0;
+    margin-right: 20px;
 }

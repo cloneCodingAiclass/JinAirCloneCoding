@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>운항스케줄 | 항공기 조회 정보</title>
-    <link rel="stylesheet" href="./css/aircraft_list.css">
+    <title>운항 스케줄 | 운항 스케줄 조회</title>
+    <link rel="stylesheet" href="./css/sc_list.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/aircraft_list.js"></script>
+    <script src="./js/sc_list.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -70,24 +70,59 @@
                 </nav>
             </div>
             <div class="contents">
-                <p class="title">항공기 조회</p>
+                <p class="title">운항 스케줄 조회</p>                    
+                <div class="btn_top"><input type="button" value="조건 조회" class="btn_modal"></div>
                 <div class="table">
                 <table>
                     <tr>
-                        <td>항공사 이름</td>
-                        <td>항공사 아이디</td>
-                        <td>좌석수</td>
+                        <td>운항편</td>
+                        <td>출발 일자</td>
+                        <td>출발지</td>
+                        <td>출발시간</td>
+                        <td>도착지</td>
+                        <td>도착시간</td>
+                        <td>예약 가능 좌석<br>(수용 좌석)</td>
                     </tr>
                     <tr>
-                        <td>진에어</td>
-                        <td>B777-200ER</td>
-                        <td>393석</td>
+                        <td>LJ438</td>
+                        <td>2022-01-28</td>
+                        <td>서울/김포(GMP)</td>
+                        <td>08:20</td>
+                        <td>제주(CJU)</td>
+                        <td>09:10</td>
+                        <td>278(430)</td>
                     </tr>
                 </table>
                 </div>
+                <!-- 모달 창-->
                 <div class="btn_box">
-                    <input type="button" value="항공기 신규 등록" onclick="location.href='aircrift_regist.html'">
+                    <input type="button" value="운항 스케줄 등록" onclick="location.href='sc_regist.html'">
                 </div>
+            </div>
+        </div>
+        <div class="modal_container">
+            <div class="modal">
+                <form action="#">
+                <p>항공편명 <input type="text" placeholder="(예) 001, 세자리">
+                <select>
+                    <optgroup label="출발지">
+                        <option>서울/김포(GMP)</option>
+                        <option>서울/인천(ICH)</option>
+                    </optgroup>
+                </select>
+                <select>
+                    <optgroup label="도착지">
+                        <option>서울/김포(GMP)</option>
+                        <option>서울/인천(ICH)</option>
+                    </optgroup>
+                </select>
+                </p>
+                <p>검색기간 <input type="text" id="datepicker"><input type="text" id="datepicker"></p>
+                <div class="btn_modal">
+                    <input type="button" value="취소" class="modal_cancel"> 
+                    <input type="button" value="검색">
+                </div>
+                </form>
             </div>
         </div>
     </div>

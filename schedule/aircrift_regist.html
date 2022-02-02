@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>운항 스케줄 | 운항 스케줄 조회</title>
-    <link rel="stylesheet" href="./css/sc_list.css">
+    <title>운항 스케줄 | 운항 스케줄 등록</title>
+    <link rel="stylesheet" href="./css/aircrift_regist.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/sc_list.js"></script>
+    <script src="./js/sc_regist.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -70,7 +70,25 @@
                 </nav>
             </div>
             <div class="contents">
-                
+                <p class="title">항공기 신규 등록</p>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>항공사 이름</td>
+                            <td>항공사 아이디</td>
+                            <td>좌석수</td>
+                        </tr>
+                        <tr>
+                            <td>진에어</td>
+                            <td><input type="text" id="airplane_id" class="airplane_id"></td>
+                            <td><input type="text" id="airplane_seat" class="airplane_seat"></td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="btn_box">
+                        <input type="button" value="취소" onclick="location.href='sc_list.html'">
+                        <input type="button" value="등록" onclick="location.href='sc_list.html'">
+                    </div>
             </div>
         </div>
     </div>
