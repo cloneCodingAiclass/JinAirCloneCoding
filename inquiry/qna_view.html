@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>운항스케줄 | 항공기 조회 정보</title>
-    <link rel="stylesheet" href="./css/aircraft_list.css">
+    <title>문의 | FAQ 목록</title>
+    <link rel="stylesheet" href="./css/qna_main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/aircraft_list.js"></script>
+    <script src="./js/qna_main.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -24,9 +24,9 @@
                     </ul>
                     <ul>
                         <p class="nav2"><a href="#">운항스케줄</a></p>
-                        <li><a href="./aircraft_list.html">- 항공기 정보 조회</a></li>
-                        <li><a href="./sc_list.html">- 운항스케줄 조회</a></li>
-                        <li><a href="./sc_regist.html">- 운항 스케줄 등록</a></li>
+                        <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
                     </ul>
                     <ul>
                         <p class="nav3"><a href="#">예약 조회</a></p>
@@ -47,8 +47,8 @@
                     </ul>
                     <ul>
                         <p class="nav7"><a href="#">문의</a></p>
-                        <li><a href="../inquiry/qna_main.html">- Q&A 관리</a></li>
-                        <li><a href="../inquiry/faq_main.html">- FAQ 관리</a></li>
+                        <li><a href="./qna_main.html">- Q&A 관리</a></li>
+                        <li><a href="./faq_main.html">- FAQ 관리</a></li>
                     </ul>
                     <ul>
                         <p class="nav8"><a href="../event/evn_ing.html">이벤트</a></p>
@@ -70,23 +70,53 @@
                 </nav>
             </div>
             <div class="contents">
-                <p class="title">항공기 조회</p>
-                <div class="table">
-                <table>
-                    <tr>
-                        <td>항공사 이름</td>
-                        <td>항공사 아이디</td>
-                        <td>좌석수</td>
-                    </tr>
-                    <tr>
-                        <td>진에어</td>
-                        <td>B777-200ER</td>
-                        <td>393석</td>
-                    </tr>
-                </table>
+                <div class="title">
+                    <p>Q&A 세부내용</p>
                 </div>
-                <div class="btn_box">
-                    <input type="button" value="항공기 신규 등록" onclick="location.href='aircrift_regist.html'">
+                <div class="qustion_table">
+                    <table>
+                        <tr>
+                            <td>결제금액은 언제 돌려받아요?</td>
+                            <td class="user_name">작성자 : apple</td>
+                            <td>등록일 : 2021-12-24</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">야호야호</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="answer_table">
+                <table>
+                            <tr>
+                            <td>결제금액은 언제 돌려받아요?</td>
+                            <td>답변일 : 2021-12-24</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">야호야호</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_box">
+                <input type="button" value="목록" onclick="location.href='qna_main.html'">
+                <input type="button" value="답변 등록" class="qna_add">
+            </div>
+            <div class="btn_user_container">
+                <div class="btn_user_info">
+                    <p class="btn_user">작성자 정보 보기</p>
+                </div>
+            </div>
+            <div class="user_container">
+                <div class="user_info">
+                    <p>고객정보</p>
+                    <p>이름 : </p>
+                    <p>아이디 : </p>
+                    <p>연락처 : </p>
+                    <p>이메일 : </p>
+                    <p>예약번호 : </p>
+                    <p>외신 불요 여부 문의 : </p>
+                    <p>개인정보 수집 동의 : </p>
+                <input type="button" value="확인" class="btn_check">
                 </div>
             </div>
         </div>

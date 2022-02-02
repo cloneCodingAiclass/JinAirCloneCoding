@@ -128,7 +128,6 @@ header{
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
-
 }
 
 #container > .contents > .btn_top{
@@ -180,6 +179,7 @@ header{
 #container > .contents > .btn_box input[type="button"]{
     width: 150px;
     height: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     background-color:#BDD600;
     clear: both;
     border: 0
