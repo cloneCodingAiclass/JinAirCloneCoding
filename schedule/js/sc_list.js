@@ -103,7 +103,8 @@ $(function () {
     $('.btn_modal').on('click', function(){
         $('.modal_container').fadeIn(200);
     })
-    $('.modal_cancel').on('click', function(){
+    $('.modal_cancel').on('click', function(e){
         $('.modal_container').fadeOut(200);
+        e.stopPropagation();
     })
 });
