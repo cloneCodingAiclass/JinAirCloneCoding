@@ -1,8 +1,7 @@
 $(function () {
-    $('.nav9').find('a').css({"color":"rgb(124,0,72)"});
-    $('.nav9').siblings('li').css({"display":"block"});
-    $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
-
+    // 사이드바
+    $('.nav6').find('a').css({"color":"rgb(124,0,72)"});
+    $('.nav6').siblings('li').css({"display":"block"});
     $('.nav1').on('mouseover', function(e){
         e.stopPropagation();
         $(this).parent().siblings().find('a').css({"color":"rgb(0,0,0)"});
@@ -65,7 +64,6 @@ $(function () {
         $(this).find('a').css({"color":"rgb(124,0,72)"});
         $(this).siblings('li').css({"display":"block"});
         $(this).parent().siblings().find('li').css({"display":"none"});
-        $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     });
     $('.nav10').on('mouseover', function(e){
         e.stopPropagation();
@@ -84,19 +82,17 @@ $(function () {
 
     $('header').on('mouseover', function (e) {
         e.stopPropagation();
-        $('.nav9').parent().siblings().find('a').css({"color":"rgb(0,0,0)"});
-        $('.nav9').find('a').css({"color":"rgb(124,0,72)"});
-        $('.nav9').siblings('li').css({"display":"block"});
-        $('.nav9').parent().siblings().find('li').css({"display":"none"});
-        $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav6').parent().siblings().find('a').css({"color":"rgb(0,0,0)"});
+        $('.nav6').find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav6').siblings('li').css({"display":"block"});
+        $('.nav6').parent().siblings().find('li').css({"display":"none"});
     })
     $('.contents').on('mouseover', function (e) {
         e.stopPropagation();
-        $('.nav9').parent().siblings().find('a').css({"color":"rgb(0,0,0)"});
-        $('.nav9').find('a').css({"color":"rgb(124,0,72)"});
-        $('.nav9').siblings('li').css({"display":"block"});
-        $('.nav9').parent().siblings().find('li').css({"display":"none"});
-        $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav6').parent().siblings().find('a').css({"color":"rgb(0,0,0)"});
+        $('.nav6').find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav6').siblings('li').css({"display":"block"});
+        $('.nav6').parent().siblings().find('li').css({"display":"none"});
     })
 
 });

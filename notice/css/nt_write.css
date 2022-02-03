@@ -136,34 +136,7 @@ header{
     font-weight: 700;
     display: inline;
     align-self:flex-start;
-} 
-.contents > .con_wrap > .search > form{
-    display: inline;
-    align-self:flex-end
 }
-.contents > .con_wrap > .search > form > input[type="text"]{
-    width: 350px;
-    height: 25px;
-    border-radius: 2px;
-    border: 1px solid grey;
-    text-indent: 10px;
-    font-size: 12px;
-    color: grey;
-    position: relative;
-    bottom: 1px;
-}
-.contents > .con_wrap > .search > form > input[type="summit"]{
-    text-align: center;
-    width: 100px;
-    height: 26px;
-    border: none;
-    border-radius: 2px;
-    background-color: #BDD600;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .contents > .con_wrap > table{
     margin-top: 5px;
     width: 1000px;
@@ -174,60 +147,74 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-.contents > .con_wrap > table tr{
-    height: 40px;
-}
 .contents > .con_wrap > table tr:nth-child(1){
+    height: 40px;
     background-color: #F2F2F2;
     border-bottom: 1px solid grey;
 }
-
+.contents > .con_wrap > table tr:nth-child(1){
+    text-indent: 10px;
+}
+.contents > .con_wrap > table tr:nth-child(1) input{
+    text-indent: 5px;
+    width: 980px;
+    height: 24px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: #F2F2F2;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.contents > .con_wrap > table .fileadd span{
+    position: relative;
+    left: 65px;
+    top: 2px;
+}
+.contents > .con_wrap > table input[type="file"]{
+    display: inline-block;
+    margin: 3px 10px 0;
+    width: 300px;
+    height: 25px;
+    vertical-align: middle;
+    overflow: hidden;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+.contents > .con_wrap > table label{
+    position: relative;
+    left: 87px;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    vertical-align: middle;
+    background-color: #BDD600;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 3px;
+}
+.contents > .con_wrap > table textarea{
+    width: 980px;
+    height: 350px;
+    margin-top: 4px;
+    border: 1px solid rgb(199, 199, 199);
+    outline: none;
+    padding: 5px;
+}
 .footer{
     margin-top: 15px;
     width: 1000px;
     height: 30px;
 }
-.footer > .center{
-    display: flex;
-    justify-content: center;
-}
-.footer table{
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bolder;
-}
-.footer table td{
-    width: 25px;
-    height: 25px;
-    border: 1px solid rgb(187, 187, 187);
-    padding-top: 2px;
-}
-.footer table td:nth-child(11){
-    background: url(../../img/right.png) center no-repeat;
-    background-size: 21px;
-    cursor: pointer;
-}
-.footer table td:nth-child(12){
-    background: url(../../img/double_right.png) center no-repeat;
-    background-size: 21px;
-    cursor: pointer;
-}
-.footer table td:nth-child(1){
-    background-color: rgb(124,0,72);
-}
-.footer table td:nth-child(1) > a{
-    color:white
-}
-.footer > .notice_write{ 
+.footer > .btn_notice{
     display: inline-block;
     position: relative;
-    bottom: 30px;
-    left: 850px;
+    left: 820px;
 }
-.footer > .notice_write > input{
+.footer > .btn_notice > input{
     text-align: center;
-    width: 120px;
+    width: 80px;
     height: 30px;
     border: none;
     border-radius: 2px;
@@ -235,4 +222,8 @@ header{
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+}
+.footer > .btn_cancel > input{
+    border: 3px solid #BDD600;
+    background-color: white;
 }

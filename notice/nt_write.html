@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지니매거진 | 지니매거진 목록</title>
-    <link rel="stylesheet" href="./css/genieList.css">
+    <title>공지사항 | 공지사항 등록</title>
+    <link rel="stylesheet" href="./css/nt_write.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/genieList.js"></script>
+    <script src="./js/nt_write.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -43,7 +43,7 @@
                         <li><a href="../item/itemadd.html">- 유실물 등록</a></li>
                     </ul>
                     <ul>
-                        <p class="nav6"><a href="../notice/notice.html">공지사항</a></p>
+                        <p class="nav6"><a href="./notice.html">공지사항</a></p>
                     </ul>
                     <ul>
                         <p class="nav7"><a href="#">문의</a></p>
@@ -65,12 +65,34 @@
                     </ul>
                     <ul>
                         <p class="nav11"><a href="#">지니 매거진</a></p>
-                        <li><a href="./genieList.html">- 매거진 등록</a></li>
+                        <li><a href="../magazine/genieList.html">- 매거진 등록</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="contents">
-                
+                <div class="con_wrap">
+                    <div class="search">
+                        <p class="title">공지사항 등록</p>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col width="1000">
+                        </colgroup>
+                        <tr>
+                            <th style="text-align: left;"><input type="text" value="제목을 입력하세요"></th>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <p  class="fileadd" style="text-align: right;"><span>파일첨부</span><label for="ex_file">찾아보기</label><input type="file" id="ex_file"></p>
+                                <textarea style="resize: none;">내용을 입력하세요.</textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="footer">
+                        <a href="./notice.html" class="btn_notice btn_cancel"><input type="button" value="취소"></a>
+                        <a href="./notice.html" class="btn_notice btn_add"><input type="button" value="등록"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
