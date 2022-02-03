@@ -107,7 +107,6 @@ $(function () {
         $('.btn_user_container').css("position", "absolute").css("top", y).css("left", x);
         $('.btn_user_container').fadeIn(200);
     });
-    
 
     $('.btn_user').on('click', function(){
         $('.btn_user_container').hide();
@@ -115,7 +114,8 @@ $(function () {
     });
 
     $('.btn_check').on('click', function(e){
-        $('.user_info').fadeOut(200);
+        $('.user_container').fadeOut(200);
         e.stopPropagation();
     });
+
 });

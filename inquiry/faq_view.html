@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>운항스케줄 | 항공기 조회 정보</title>
-    <link rel="stylesheet" href="./css/aircraft_list.css">
+    <title>문의 | FAQ 세부내용</title>
+    <link rel="stylesheet" href="./css/faq_main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/aircraft_list.js"></script>
+    <script src="./js/faq_main.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -24,9 +24,9 @@
                     </ul>
                     <ul>
                         <p class="nav2"><a href="#">운항스케줄</a></p>
-                        <li><a href="./aircraft_list.html">- 항공기 정보 조회</a></li>
-                        <li><a href="./sc_list.html">- 운항스케줄 조회</a></li>
-                        <li><a href="./sc_regist.html">- 운항 스케줄 등록</a></li>
+                        <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
                     </ul>
                     <ul>
                         <p class="nav3"><a href="#">예약 조회</a></p>
@@ -47,8 +47,8 @@
                     </ul>
                     <ul>
                         <p class="nav7"><a href="#">문의</a></p>
-                        <li><a href="../inquiry/qna_main.html">- Q&A 관리</a></li>
-                        <li><a href="../inquiry/faq_main.html">- FAQ 관리</a></li>
+                        <li><a href="./qna_main.html">- Q&A 관리</a></li>
+                        <li><a href="./faq_main.html">- FAQ 관리</a></li>
                     </ul>
                     <ul>
                         <p class="nav8"><a href="../event/evn_ing.html">이벤트</a></p>
@@ -70,23 +70,45 @@
                 </nav>
             </div>
             <div class="contents">
-                <p class="title">항공기 조회</p>
-                <div class="contents_main">
-                <table>
-                    <tr>
-                        <td>항공사 이름</td>
-                        <td>항공사 아이디</td>
-                        <td>좌석수</td>
-                    </tr>
-                    <tr>
-                        <td>진에어</td>
-                        <td>B777-200ER</td>
-                        <td>393석</td>
-                    </tr>
-                </table>
+                <div class="title">
+                    <p>FAQ 세부내용</p>
                 </div>
-                <div class="btn_box">
-                    <input type="button" value="항공기 신규 등록" onclick="location.href='aircrift_regist.html'">
+                <div class="contents_main">
+                    <table>
+                        <tr>
+                            <td>항공권 예매</td>
+                            <td>비행기 좌석을 사전에 구매할 수 있나요?</td>
+                            <td>등록일</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">내용</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contents_bottom">
+                    <div class="faq_btn_add">                        
+                        <input type="button" value="목록" onclick="location.href='faq_main.html'">
+                        <input type="button" value="삭제" class="btn_del">
+                        <input type="button" value="수정" class="btn_edit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="del_container">
+            <div class="del_info">
+                <p>게시글을 정말 삭제하시겠습니까?</p>
+                <div class="del_modal">
+                    <input type="button" value="취소" class="btn_cancel">
+                    <input type="button" value="삭제">
+                </div>
+            </div>
+        </div>
+        <div class="edit_container">
+            <div class="edit_info">
+                <p>게시글을 수정하시겠습니까?</p>
+                <div class="edit_modal">
+                    <input type="button" value="취소" class="btn_cancel">
+                    <input type="button" value="수정" onclick="location.href='faq_edit.html'">
                 </div>
             </div>
         </div>

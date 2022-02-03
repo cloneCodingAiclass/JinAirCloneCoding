@@ -123,30 +123,27 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-
 #container > .contents .title{ 
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
 }
-
-#container > .contents > .head_select{
+#container > .contents > .contents_top{
     width: 80%;
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
 }
-
-#container > .contents > .head_select select{
+#container > .contents > .contents_top select{
     width: 150px;
     height: 30px;
 }
-#container > .contents > .head_select input[type="text"]{
+#container > .contents > .contents_top .btn_top input[type="text"]{
     width: 200px;
     height: 30px;
     text-indent: 10px;
 }
-#container > .contents > .head_select input[type="button"]{
+#container > .contents > .contents_top .btn_top input[type="button"]{
     width: 80px;
     height: 30px;
     background-color:#BDD600;
@@ -154,38 +151,37 @@ header{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     margin-left: 10px;
 }
-#container > .contents > .main_table{
+#container > .contents > .contents_main{
     width: 80%;
 }
-
-#container > .contents > .main_table table{
+#container > .contents > .contents_main table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
-#container > .contents > .main_table table tr:first-child{
+#container > .contents > .contents_main table tr:first-child{
     background-color: #F2F2F2;
 }
-
-#container > .contents > .main_table table tr:first-child td{
+#container > .contents > .contents_main table tr:first-child td{
     border-bottom: 1px solid gray;
 }
-#container > .contents > .main_table table tr td{
+#container > .contents > .contents_main table tr td{
     width: 125px;
     height: 30px;
     text-align: center;
     font-size: 0.8em;
 }
-#container > .contents > .main_table table tr td:nth-child(2){
+#container > .contents > .contents_main table tr td:nth-child(2){
     width: 500px;
     height: 30px;
     text-align: center;
 }
+/* qna main 끝 */ 
+/* qna view 시작 */ 
 #container > .contents > .qustion_table{
     margin-top: 20px;
     width: 80%;
 }
-
 #container > .contents > .qustion_table table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -202,19 +198,16 @@ header{
     text-align: center;
     font-size: 0.8em;
 }
-
 #container > .contents > .qustion_table table tr td:first-child{
     width: 700px;
     height: 30px;
     text-align: center;
     font-size: 0.8em;
 }
-
 #container > .contents > .answer_table{
     margin-top: 20px;
     width: 80%;
 }
-
 #container > .contents > .answer_table table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -231,21 +224,34 @@ header{
     text-align: center;
     font-size: 0.8em;
 }
-
 #container > .contents > .answer_table table tr td:first-child{
     width: 800px;
     height: 30px;
     text-align: center;
     font-size: 0.8em;
 }
-
+#container > .contents > .qustion_table > .btn_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+#container > .contents > .qustion_table > .btn_box input[type="button"]{
+    width: 80px;
+    height: 30px;
+    background-color:#BDD600;
+    border: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    margin-left: 10px;
+}
+/* 모달창 시작 */
 .btn_user_container{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .btn_user_container .btn_user_info{
     width: 100px;
     height: 30px;
@@ -257,7 +263,6 @@ header{
     align-items: center;
     font-size: 0.8em;
 }
-
 .user_container{
     position: absolute;
     display: flex;
@@ -265,7 +270,6 @@ header{
     align-items: center;
     left: 0; right: 0; top: 0; bottom: 0;
 }
-
 .user_container .user_info{
     width: 400px;
     height: 500px;
@@ -283,7 +287,6 @@ header{
     font-size: 1.1em;
     font-weight: 700;
 }
-
 .user_container .user_info input[type="button"]{
     width: 150px;
     height: 40px;
@@ -292,3 +295,4 @@ header{
     border: 0;
     margin: 0 auto;
 }
+/* 모달창 끝 */

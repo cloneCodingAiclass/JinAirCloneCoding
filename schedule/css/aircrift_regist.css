@@ -123,21 +123,21 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-#container > .contents > .title{ 
+#container > .contents > .contents_main{ 
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-#container > .contents > .title{ 
+#container > .contents > .contents_main{ 
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-#container > .contents > .table{
+#container > .contents > .contents_main{
     width: 80%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -146,20 +146,20 @@ header{
     border-collapse: collapse;
 }
 
-#container > .contents > .table tr:nth-child(2n+1){
+#container > .contents > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
 }
 
-#container > .contents > .table tr {
+#container > .contents > .contents_main tr {
     height: 40px;
 }
 
-#container > .contents > .table tr:first-child td{
+#container > .contents > .contents_main tr:first-child td{
     width: 333px;
     border-bottom: 1px solid black;
 }
 
-#container > .contents > .table tr:nth-child(3) td{
+#container > .contents > .contents_main tr:nth-child(3) td{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }

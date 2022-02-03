@@ -124,7 +124,7 @@ header{
     width: 125px;
 }
 
-#container > .contents > .title{ 
+#container > .contents > .contents_main{ 
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
@@ -147,7 +147,7 @@ header{
     font-size: 0.8em;
 }
 
-#container > .contents > .table{
+#container > .contents > .contents_main{
     width: 80%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -156,16 +156,15 @@ header{
     margin-bottom: 20px;
 }
 
-
-#container > .contents > .table tr:first-child{
+#container > .contents > .contents_main tr:first-child{
     background-color: #F2F2F2;
 }
 
-#container > .contents > .table tr {
+#container > .contents > .contents_main tr {
     height: 40px;
 }
 
-#container > .contents > .table tr:first-child td{
+#container > .contents > .contents_main tr:first-child td{
     width: 145px;
     border-bottom: 1px solid black;
 }
