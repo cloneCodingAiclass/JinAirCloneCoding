@@ -195,3 +195,18 @@ header {
     border: 1px solid #ebebeb;
     border-radius: 5px;
 }
+
+/* btn */
+#form_btn {
+    text-align: center;
+    margin-top: 50px;
+}
+#form_btn input[type="submit"] {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(188, 216, 53);
+}
+#form_btn input[type="submit"]:hover {
+    background-color: rgb(153, 153, 153, 0.5);
+    color: #fff;
+}

@@ -37,7 +37,7 @@
                                 >
                             </li>
                             <li>
-                                <a href="../schedule/sc.list.html"
+                                <a href="../schedule/sc_list.html"
                                     >- 운항스케줄 조회</a
                                 >
                             </li>
@@ -134,62 +134,67 @@
                     <div class="contents_box">
                         <div id="itemadd_title">유실물 등록</div>
                         <div id="itemadd_contents">
-                            <table>
-                                <tr>
-                                    <td>항공편</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            name="aircraft_name"
-                                            id="aircraft_name"
-                                        />
-                                    </td>
-                                    <td>물품 유형</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            name="item_type"
-                                            id="item_type"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>도착 날짜</td>
-                                    <td>
-                                        <input
-                                            type="date"
-                                            name="arrival_date"
-                                            id="arrival_date"
-                                        />
-                                    </td>
-                                    <td>도착지 공항</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            name="arrival_airport"
-                                            id="arrival_airport"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">
-                                        이미지 첨부
-                                        <label for="item_img">
-                                            첨부파일
+                            <form action="#">
+                                <table>
+                                    <tr>
+                                        <td>항공편</td>
+                                        <td>
                                             <input
-                                                type="file"
-                                                name="item_img"
-                                                id="item_img"
+                                                type="text"
+                                                name="aircraft_name"
+                                                id="aircraft_name"
                                             />
-                                        </label>
-                                        <input
-                                            class="item_img_upload"
-                                            value="파일선택"
-                                            readonly
-                                        />
-                                    </td>
-                                </tr>
-                            </table>
+                                        </td>
+                                        <td>물품 유형</td>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                name="item_type"
+                                                id="item_type"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>도착 날짜</td>
+                                        <td>
+                                            <input
+                                                type="date"
+                                                name="arrival_date"
+                                                id="arrival_date"
+                                            />
+                                        </td>
+                                        <td>도착지 공항</td>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                name="arrival_airport"
+                                                id="arrival_airport"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            이미지 첨부
+                                            <label for="item_img">
+                                                첨부파일
+                                                <input
+                                                    type="file"
+                                                    name="item_img"
+                                                    id="item_img"
+                                                />
+                                            </label>
+                                            <input
+                                                class="item_img_upload"
+                                                value="파일이름"
+                                                readonly
+                                            />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div id="form_btn">
+                                    <input type="submit" value="등록" />
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
