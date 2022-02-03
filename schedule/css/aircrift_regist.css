@@ -130,7 +130,7 @@ header{
     margin-bottom: 20px;
 }
 #container > .contents > .contents_main{
-    width: 80%;
+    width: 1000px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
@@ -153,7 +153,7 @@ header{
     border-bottom: 1px solid black;
 }
 #container > .contents > .btn_box{
-    width: 80%;
+    width: 1000px;
     display: flex;
     justify-content: right;
 }

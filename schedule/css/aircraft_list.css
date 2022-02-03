@@ -135,7 +135,7 @@ header{
     background-color:#BDD600;
 }
 #container > .contents > .contents_main{
-    width: 80%;
+    width: 1000px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
@@ -155,7 +155,7 @@ header{
     height: 40px;
 }
 #container > .contents > .btn_box{
-    width: 80%;
+    width: 1000px;
     display: flex;
     justify-content: right;
 }

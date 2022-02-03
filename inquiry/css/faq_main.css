@@ -129,7 +129,7 @@ header{
     font-weight: 700;
 }
 #container > .contents .contents_top{
-    width: 80%;
+    width: 1000px;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -183,7 +183,7 @@ header{
     width: 700px;
 }
 #container > .contents > .contents_bottom{
-    width: 80%;
+    width: 1000px;
     margin-top: 10px;
     display: flex;
     justify-content: right;

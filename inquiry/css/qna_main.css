@@ -129,7 +129,7 @@ header{
     font-weight: 700;
 }
 #container > .contents > .contents_top{
-    width: 80%;
+    width: 1000px;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -152,7 +152,7 @@ header{
     margin-left: 10px;
 }
 #container > .contents > .contents_main{
-    width: 80%;
+    width: 1000px;
     font-size: 0.8rem;
 }
 #container > .contents > .contents_main table{
@@ -180,7 +180,7 @@ header{
 /* qna view 시작 */ 
 #container > .contents > .qustion_table{
     margin-top: 20px;
-    width: 80%;
+    width: 1000px;
     font-size: 0.8rem;
 }
 #container > .contents > .qustion_table table{
@@ -205,7 +205,7 @@ header{
 }
 #container > .contents > .answer_table{
     margin-top: 20px;
-    width: 80%;
+    width: 1000px;
     font-size: 0.8rem;
 }
 #container > .contents > .answer_table table{
@@ -229,7 +229,7 @@ header{
     text-align: center;
 }
 #container > .contents > .qustion_table > .btn_box{
-    width: 100%;
+    width: 1000px;
     height: auto;
     display: flex;
     justify-content: right;
