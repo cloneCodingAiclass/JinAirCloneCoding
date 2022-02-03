@@ -125,7 +125,7 @@ header{
 }
 #container > .contents .title{ 
     clear: both;
-    font-size: 1.1em; 
+    font-size: 1.1rem; 
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -141,6 +141,7 @@ header{
     text-align: center;
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 0.8rem;
 }
 #container > .contents > .contents_main tr:first-child{
     background-color: #F2F2F2;
@@ -159,9 +160,11 @@ header{
     justify-content: right;
 }
 #container > .contents > .btn_box input[type="button"]{ 
-    width: 150px;
+    width: 130px;
     height: 40px;
     background-color:#BDD600;
     clear: both;
-    border: 0
+    border: 0;
+    font-size: 0.8rem;
+    margin-right: 20px;
 }

@@ -142,7 +142,7 @@ header{
     width: 80px;
     height: 30px;
     background-color:#BDD600;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -159,7 +159,7 @@ header{
     height: 30px;
     background-color:#BDD600;
     border: 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin-left: 10px;
 }
 #container > .contents > .contents_main table{
@@ -177,7 +177,7 @@ header{
     width: 150px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 #container > .contents > .contents_main table tr td:nth-child(2){
     width: 700px;
@@ -194,10 +194,11 @@ header{
     background-color:#BDD600;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin-left: 10px;
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 /* faq_main 끝 */
@@ -205,6 +206,7 @@ header{
 
 #container > .contents > .contents_main{
     margin-top: 10px;
+    font-size: 0.8rem;
 }
 
 #container > .contents > .contents_main select{
@@ -232,7 +234,7 @@ header{
     margin-left: 10px;
     align-items: center;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 /* faq_write 끝 */
 /* faq_view 시작(모달창) */
@@ -252,7 +254,7 @@ header{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     flex-direction: column;
     text-align: center;
 }
@@ -287,7 +289,7 @@ header{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     flex-direction: column;
     text-align: center;
 }

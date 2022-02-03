@@ -123,20 +123,17 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-
-#container > .contents > .contents_main{ 
+#container > .contents > .title{ 
     clear: both;
-    font-size: 1.1em; 
+    font-size: 1.1rem; 
     font-weight: 700;
 }
-
 #container > .contents > .btn_top{
     display: flex;
     justify-content: right;
     width: 80%;
     margin-bottom: 10px;
 }
-
 #container > .contents > .btn_top input[type="button"]{
     width: 100px;
     height: 30px;
@@ -144,9 +141,8 @@ header{
     clear: both;
     border: 0;
     margin-right: 20px;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
-
 #container > .contents > .contents_main{
     width: 80%;
     border-top: 1px solid black;
@@ -154,36 +150,33 @@ header{
     text-align: center;
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 0.8rem;
 }
-
 #container > .contents > .contents_main tr:first-child{
     background-color: #F2F2F2;
 }
-
 #container > .contents > .contents_main tr {
     height: 40px;
 }
-
 #container > .contents > .contents_main tr:first-child td{
     width: 145px;
     border-bottom: 1px solid black;
 }
-
 #container > .contents > .btn_box{
     width: 80%;
     display: flex;
     justify-content: right;
 }
-
 #container > .contents > .btn_box input[type="button"]{
-    width: 150px;
+    width: 110px;
     height: 40px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color:#BDD600;
     clear: both;
-    border: 0
+    border: 0;
+    font-size: 0.8rem;
+    margin-right: 20px;
 }
-
 .modal_container{
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
@@ -192,11 +185,9 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 .modal_container .modal p{
     margin-bottom: 20px;
 }
-
 .modal_container .modal input[type="date"]{
     margin-left: 20px;
     width: 150px;
@@ -212,26 +203,21 @@ header{
     justify-content: center;
     align-items: center;
 }
-
-
 .modal_container .modal input[type="text"]{
     width: 150px;
     height: 30px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin-left: 20px;
 }
-
 .modal_container .modal select{
     width: 150px;
     height: 30px;
     margin-left: 20px;
 }
-
 .modal_container .modal .btn_modal{
     display: flex;
     justify-content: center;
 }
-
 .modal_container .modal input[type="button"]{
     width: 150px;
     height: 40px;

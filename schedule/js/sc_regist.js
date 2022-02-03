@@ -113,4 +113,10 @@ $(function () {
     $('.add_btn').on('click', function(){
         $('.modal_container').fadeOut(200);
     })
+
+        
+    $(() => {
+        document.getElementById('item_start_date').valueAsDate = new Date();
+        document.getElementById('item_end_date').valueAsDate = new Date();
+    })
 });

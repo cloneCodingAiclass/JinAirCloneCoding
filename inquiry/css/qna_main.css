@@ -153,6 +153,7 @@ header{
 }
 #container > .contents > .contents_main{
     width: 80%;
+    font-size: 0.8rem;
 }
 #container > .contents > .contents_main table{
     border-top: 1px solid black;
@@ -169,7 +170,6 @@ header{
     width: 125px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
 }
 #container > .contents > .contents_main table tr td:nth-child(2){
     width: 500px;
@@ -181,6 +181,7 @@ header{
 #container > .contents > .qustion_table{
     margin-top: 20px;
     width: 80%;
+    font-size: 0.8rem;
 }
 #container > .contents > .qustion_table table{
     border-top: 1px solid black;
@@ -196,17 +197,16 @@ header{
     width: 150px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
 }
 #container > .contents > .qustion_table table tr td:first-child{
     width: 700px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
 }
 #container > .contents > .answer_table{
     margin-top: 20px;
     width: 80%;
+    font-size: 0.8rem;
 }
 #container > .contents > .answer_table table{
     border-top: 1px solid black;
@@ -222,13 +222,11 @@ header{
     width: 200px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
 }
 #container > .contents > .answer_table table tr td:first-child{
     width: 800px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
 }
 #container > .contents > .qustion_table > .btn_box{
     width: 100%;
@@ -244,6 +242,7 @@ header{
     border: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     margin-left: 10px;
+    font-size: 0.8rem;
 }
 /* 모달창 시작 */
 .btn_user_container{
@@ -261,7 +260,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 .user_container{
     position: absolute;
@@ -278,7 +277,7 @@ header{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     flex-direction: column;
 }
 .user_container .user_info p{
