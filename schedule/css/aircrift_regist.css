@@ -125,61 +125,49 @@ header{
 }
 #container > .contents > .title{ 
     clear: both;
-    font-size: 1.1em; 
+    font-size: 1.1rem; 
     font-weight: 700;
     margin-bottom: 20px;
 }
-
-#container > .contents > .title{ 
-    clear: both;
-    font-size: 1.1em; 
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-#container > .contents > .table{
-    width: 80%;
+#container > .contents > .contents_main{
+    width: 1000px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
     margin-bottom: 20px;
     border-collapse: collapse;
+    font-size: 0.8rem;
 }
-
-#container > .contents > .table tr:nth-child(2n+1){
+#container > .contents > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
 }
-
-#container > .contents > .table tr {
+#container > .contents > .contents_main tr {
     height: 40px;
 }
-
-#container > .contents > .table tr:first-child td{
+#container > .contents > .contents_main tr:first-child td{
     width: 333px;
     border-bottom: 1px solid black;
 }
-
-#container > .contents > .table tr:nth-child(3) td{
+#container > .contents > .contents_main tr:nth-child(3) td{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-
 #container > .contents > .btn_box{
-    width: 80%;
+    width: 1000px;
     display: flex;
     justify-content: right;
 }
-
 #container > .contents > .btn_box input[type="button"]{ 
-    width: 150px;
+    width: 130px;
     height: 40px;
     background-color:#BDD600;
     clear: both;
     border: 0;
     margin-right: 10px;
+    font-size: 0.8rem;
 }
-
 #container > .contents > .btn_box input[type="button"]:first-child{ 
     border: 3px solid #BDD600;
     background-color: white;
+    font-size: 0.8rem;
 }

@@ -100,3 +100,12 @@ $(function () {
     })
 
 });
+
+$(() => {
+    document.getElementById('arrival_date').valueAsDate = new Date();
+
+    $("#item_img").on('change',function(){
+        let fileName = $("#item_img").val();
+        $(".item_img_upload").val(fileName);
+    });
+})

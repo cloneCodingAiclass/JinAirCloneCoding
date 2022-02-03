@@ -98,5 +98,23 @@ $(function () {
         $('.nav7').parent().siblings().find('li').css({"display":"none"});
         $('.nav7').siblings('li').eq(1).find('a').css({"color":"rgb(124,0,72)"});
     })
+    $('.del_container').hide();
+    $('.btn_del').on('click', function(){
+        $('.del_container').fadeIn(200);
+    });
+
+    $('.btn_cancel').on('click', function(e){
+        $('.del_container').fadeOut(200);
+        e.stopPropagation();
+    });
+    $('.edit_container').hide();
+    $('.btn_edit').on('click', function(){
+        $('.edit_container').fadeIn(200);
+    });
+
+    $('.btn_cancel').on('click', function(e){
+        $('.edit_container').fadeOut(200);
+        e.stopPropagation();
+    });
 
 });

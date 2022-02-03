@@ -123,61 +123,191 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-
 #container > .contents .title{ 
     clear: both;
     font-size: 1.1em; 
     font-weight: 700;
 }
-
-#container > .contents > .head_select{
-    width: 80%;
+#container > .contents .contents_top{
+    width: 1000px;
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-top: 10px;
 }
-
-#container > .contents > .head_select select{
-    width: 150px;
+#container > .contents .contents_top .faq_check_box{
+    display: flex;
+}
+#container > .contents .faq_check_box li{
+    width: 80px;
     height: 30px;
+    background-color:#BDD600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
 }
-#container > .contents > .head_select input[type="text"]{
-    width: 200px;
+#container > .contents > .contents_top .btn_top input[type="text"]{
+    width: 250px;
     height: 30px;
     text-indent: 10px;
 }
-#container > .contents > .head_select input[type="button"]{
+#container > .contents > .contents_top .btn_top input[type="button"]{
     width: 80px;
     height: 30px;
     background-color:#BDD600;
     border: 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     margin-left: 10px;
 }
-#container > .contents > .main_table{
-    width: 80%;
-}
-
-#container > .contents > .main_table table{
+#container > .contents > .contents_main table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-
-#container > .contents > .main_table table tr:first-child{
+#container > .contents > .contents_main tr:first-child{
     background-color: #F2F2F2;
+    height: 40px;
 }
-
-#container > .contents > .main_table table tr:first-child td{
+#container > .contents > .contents_main table tr:first-child td{
     border-bottom: 1px solid gray;
 }
-#container > .contents > .main_table table tr td{
-    width: 125px;
+#container > .contents > .contents_main table tr td{
+    width: 150px;
     height: 30px;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
-#container > .contents > .main_table table tr td:nth-child(2){
-    width: 500px;
+#container > .contents > .contents_main table tr td:nth-child(2){
+    width: 700px;
+}
+#container > .contents > .contents_bottom{
+    width: 1000px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+}
+#container > .contents > .contents_bottom .faq_btn_write input[type="button"]{
+    width: 80px;
     height: 30px;
+    background-color:#BDD600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* faq_main 끝 */
+/* faq_write 시작 */
+
+#container > .contents > .contents_main{
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+#container > .contents > .contents_main select{
+    width: 130px;
+    height: 30px;
+}
+#container > .contents > .contents_main input[type="text"]{
+    width: 600px;
+    height: 30px;
+    text-indent: 10px;
+}
+#container > .contents > .contents_main textarea{
+    width: 1000px;
+    height: 300px;
+}
+#container > .contents > .contents_bottom .faq_btn_add{
+    display: flex;
+}
+#container > .contents > .contents_bottom .faq_btn_add input[type="button"]{
+    width: 80px;
+    height: 30px;
+    background-color:#BDD600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: 0;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+/* faq_write 끝 */
+/* faq_view 시작(모달창) */
+
+.del_container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+.del_container .del_info{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid #BDD600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-direction: column;
     text-align: center;
 }
+.del_container .del_info p{
+    margin-bottom: 20px;
+}
+.del_container .del_info .del_modal{
+    display: flex;
+    justify-content: center;
+}
+.del_container .del_info .del_modal input[type="button"]{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: 0;
+    margin-right: 10px;
+}
+
+.edit_container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+.edit_container .edit_info{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid #BDD600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+}
+.edit_container .edit_info p{
+    margin-bottom: 20px;
+}
+.edit_container .edit_info .edit_modal{
+    display: flex;
+    justify-content: center;
+}
+.edit_container .edit_info .edit_modal input[type="button"]{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: 0;
+    margin-right: 10px;
+}
+
+
+/* faq_view 끝(모달창) */
