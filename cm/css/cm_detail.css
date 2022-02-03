@@ -135,180 +135,65 @@ header {
 }
 
 /* contents */
-/* 유실물 검색 */
-#item_search {
-    margin: 0 auto;
+#cm_detail_box {
     width: 1200px;
-    margin-bottom: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
-#item_search fieldset {
-    background-color: rgb(188, 216, 53, 0.58);
-    height: 150px;
-}
-#item_search legend {
-    margin-left: 20px;
+/* title */
+#cm_detail_box #cm_detail_title {
     line-height: 2;
     font-weight: bold;
-    font-size: 1.1em;
+    border-bottom: 1px solid rgb(188, 216, 53);
 }
-#item_search table {
+/* table */
+#cm_detail table {
     margin: 0 auto;
-    width: 900px;
-}
-#item_search table td {
-    text-align: center;
-    line-height: 2;
-}
-#item_search span {
-    font-size: 16px;
-    line-height: 2;
-}
-#item_search input,
-#item_search select {
-    height: 30px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-}
-#item_search input {
-    margin: 0 auto;
-    width: 180px;
-}
-#item_search select {
-    width: 120px;
-    text-align: center;
-}
-#item_search #item_search_btn {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#item_search #item_search_btn input {
-    background-color: rgb(188, 216, 53);
-    cursor: pointer;
-    font-weight: bold;
-    height: 50px;
-}
-#item_search #item_search_btn input:hover {
-    color: #fff;
-    background-color: rgb(153, 153, 153, 0.5);
-}
-/* 유실물 리스트 */
-#item_list {
-    margin: 0 auto;
-    width: 1200px;
-}
-#item_list > .title {
-    margin-left: 20px;
-    line-height: 2;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-#item_list > table {
-    margin: 0 auto;
+    margin-top: 5px;
     width: 100%;
     border-collapse: collapse;
     text-align: center;
     line-height: 1.2;
     font-size: 16px;
 }
-#item_list > table th {
+#cm_detail table th {
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
-    border-top: 3px solid #888;
     border-bottom: 3px solid #888;
 }
-#item_list > table td {
-    height: 80px;
+#cm_detail table td {
     border-bottom: 1px solid rgb(153, 153, 153, 0.5);
 }
-#item_list > table td button {
-    border: none;
-    width: 60px;
-    height: 30px;
-    background-color: rgb(188, 216, 53);
+#cm_detail table td #kor_first_name,
+#cm_detail table td #kor_last_name,
+#cm_detail table td #eng_first_name,
+#cm_detail table td #eng_last_name {
+    width: 100px;
 }
-#item_list > table td button:hover {
-    color: #fff;
-    background-color: rgb(153, 153, 153, 0.5);
+
+/* btn */
+#form_btn {
+    text-align: right;
+    margin-top: 20px;
 }
-#item_list > ul {
-    text-align: center;
-}
-#item_list > ul li {
-    margin: 0;
-    margin-top: 10px;
-    width: 40px;
-    font-size: 16px;
-    display: inline-block;
-}
-#item_list .item_list_page {
-    padding: 10px 0 0;
-    text-align: center;
-}
-#item_list .item_list_page a {
-    display: inline-block;
-    margin-right: 10px;
-}
-#item_list .item_list_page a.pbtn {
-    margin: 0;
-    display: inline-block;
-    padding: 7px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0;
-}
-#item_list .item_list_page a.pbtn img {
-    width: 35px;
-}
-#item_list .item_list_page a.page_num {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
-}
-#item_list .item_list_page a.current_page {
-    width: 25px;
-    color: #fff;
-    background-color: rgb(145, 0, 70);
-}
-#item_list .item_list_page a.page_num:hover {
-    background-color: rgb(188, 216, 53);
-    color: #fff;
-}
-/* 모달창 수령완료 / 미완료 */
-#modal_isfind {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    display: none;
-}
-#modal_isfind > #modal_isfind_content {
-    width: 400px;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-    border: 8px solid rgb(188, 216, 53);
-    background-color: #fff;
-    text-align: center;
-}
-#modal_isfind > #modal_isfind_content > #modal_isfind_title {
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-#modal_isfind > #modal_isfind_content button {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
+#form_btn input {
+    width: 150px;
     height: 50px;
+}
+#form_btn input[type="submit"] {
+    border: 3px solid rgb(188, 216, 53);
+    background-color: #fff;
+}
+#form_btn input[type="submit"]:hover {
+    background-color: rgb(188, 216, 53);
+    color: #fff;
+}
+#form_btn input[type="button"] {
     border: none;
     background-color: rgb(188, 216, 53);
 }
-#modal_isfind > #modal_isfind_content button:hover {
+#form_btn input[type="button"]:hover {
+    background-color: rgb(153, 153, 153, 0.58);
     color: #fff;
 }

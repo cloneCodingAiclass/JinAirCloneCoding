@@ -1,19 +1,25 @@
 @font-face {
-    font-family: 'NanumBarunGothic';
+    font-family: "NanumBarunGothic";
     font-style: normal;
-    font-weight:normal;
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+    font-weight: normal;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
+            format("embedded-opentype"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff")
+            format("woff"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf")
+            format("truetype");
 }
 /*전체 페이지*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'NanumBarunGothic';
+    font-family: "NanumBarunGothic";
     word-break: keep-all;
 }
-ul, li {
+ul,
+li {
     list-style: none;
     text-decoration: none;
     word-break: keep-all;
@@ -25,30 +31,36 @@ ul {
 li {
     margin: 0.5%;
 }
-a{text-decoration: none;}
-a:link{color:#444;}
-a:visited{color:#444;}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #444;
+}
+a:visited {
+    color: #444;
+}
 
 ::selection {
-    background-color: #BDD600;
+    background-color: #bdd600;
 }
-body{
-    height: 1; 
+body {
+    height: 1;
     color: #444;
-    white-space: normal; 
-    word-wrap: break-word; 
+    white-space: normal;
+    word-wrap: break-word;
     line-height: 1;
 }
-#wrap{
+#wrap {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    display:table;
+    display: table;
 }
 
 /* 헤더 */
-header{
+header {
     width: 100%;
     height: 40px;
     padding: 0;
@@ -57,33 +69,33 @@ header{
     left: 0;
     top: 0;
 }
-.header_inner{
+.header_inner {
     background-color: rgb(240, 240, 240);
     border-bottom: 1px solid rgb(240, 240, 240);
 }
-.header_inner{
+.header_inner {
     display: inline-block;
     display: flex;
     align-items: center;
 }
-.header_inner .img{
+.header_inner .img {
     background: url(../../img/logo_02.png) no-repeat center;
     background-size: 100%;
     width: 120px;
     height: 40px;
     margin-left: 13px;
 }
-.header_inner span{
+.header_inner span {
     padding-top: 3px;
     margin-left: 20px;
     font-size: 17px;
     font-weight: 900;
 }
 /* 사이드 메뉴 */
-#container{
+#container {
     display: flex;
 }
-#container > .sidebar{
+#container > .sidebar {
     position: fixed;
     top: 40px;
     float: left;
@@ -92,7 +104,7 @@ header{
     align-items: stretch;
     background-color: rgb(240, 240, 240);
 }
-#container > .contents{
+#container > .contents {
     position: fixed;
     top: 40px;
     right: 0;
@@ -103,21 +115,83 @@ header{
     /* 배경 입시 선정 */
     background-color: white;
 }
-#container > .sidebar > nav li{
+#container > .sidebar > nav li {
     display: none;
 }
-#container > .sidebar > nav{
+#container > .sidebar > nav {
     padding-top: 20px;
 }
-#container > .sidebar > nav ul{
+#container > .sidebar > nav ul {
     width: 80px;
     margin: 25px 0px 25px 20px;
     font-size: 16px;
     font-weight: 900;
 }
-#container > .sidebar > nav li{
+#container > .sidebar > nav li {
     font-size: 11px;
     margin: 5px 0;
     padding-left: 5px;
     width: 125px;
+}
+
+/* contents */
+.contents_box {
+    width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.contents_box #itemadd_title {
+    line-height: 2;
+    margin-left: 100px;
+    font-weight: bold;
+}
+.contents_box #itemadd_contents table {
+    background-color: rgb(240, 240, 240);
+    width: 1000px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+.contents_box #itemadd_contents input,
+.contents_box #itemadd_contents select {
+    width: 230px;
+    height: 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.contents_box #itemadd_contents input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.contents_box #itemadd_contents label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: rgb(188, 216, 53);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contents_box #itemadd_contents label:hover {
+    color: #fff;
+    background-color: rgb(153, 153, 153, 0.5);
+}
+
+/* named upload */
+.contents_box #itemadd_contents .item_img_upload {
+    display: inline-block;
+    height: 35px;
+    font-size: 18px;
+    padding: 0 10px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
 }
