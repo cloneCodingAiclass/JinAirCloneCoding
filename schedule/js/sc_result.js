@@ -1,13 +1,4 @@
 $(function () {
-    $('.modal_container').hide();
-
-    $('.btn_search').on('click', function(){
-        $('.modal_container').fadeIn(200);
-    })
-    $('.modal_cancel').on('click', function(){
-        $('.modal_container').fadeOut(200);
-    })
-
     $('.nav2').find('a').css({"color":"rgb(124,0,72)"});
     $('.nav2').siblings('li').css({"display":"block"});
     $('.nav2').siblings('li').eq(1).find('a').css({"color":"rgb(124,0,72)"});

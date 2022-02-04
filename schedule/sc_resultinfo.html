@@ -7,7 +7,7 @@
     <title>운항 스케줄 | 운항 스케줄 상세정보</title>
     <link rel="stylesheet" href="./css/sc_regist.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/sc_regist.js"></script>
+    <script src="./js/sc_resultinfo.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -69,9 +69,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="contents">
-                <p class="title">상세정보</p>                    
-                <div class="btn_top"><input type="button" value="전체 조회" onclick="location.href='sc_list.html'"></div>
+            <div class="contents">                 
+                <div class="btn_top"><p class="title">상세정보</p>
+                </div>
                 <div class="contents_main">
                 <table>
                     <tr>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="btn_box">
                     <input type="button" value="삭제" class="del_modal">
-                    <input type="button" value="목록" onclick="location.href='sc_list.html'">
+                    <input type="button" value="목록" class="list" onclick="location.href='sc_list.html'">
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                     <p>※ 주의</p>
                     <p>이미 예약자가 있을 경우 삭제가 <span>불가능</span>합니다.</p>
                     <form action="#">
-                    <input type="button" value="취소" onclick="location.href='sc_resultinfo.html'"><input type="button" value="삭제" id="del_btn" onclick="location.href='sc_result.html'">
+                    <input type="button" value="취소" onclick="location.href='sc_resultinfo.html'"><input type="button" value="삭제" id="del_btn" onclick="location.href='sc_list.html'">
                     </form>
             </div>
         </div>

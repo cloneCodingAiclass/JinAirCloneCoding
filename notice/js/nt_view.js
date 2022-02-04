@@ -103,5 +103,4 @@ $(function () {
         $('.nav6').siblings('li').css({"display":"block"});
         $('.nav6').parent().siblings().find('li').css({"display":"none"});
     })
-
 });

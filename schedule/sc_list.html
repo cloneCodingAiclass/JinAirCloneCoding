@@ -70,7 +70,9 @@
                 </nav>
             </div>
             <div class="contents">                  
-                <div class="btn_top"><p class="title">운항 스케줄 조회</p><input type="button" value="조건 조회" class="btn_modal"></div>
+                <div class="btn_top"><p class="title">운항 스케줄 조회</p>
+                    <input type="button" value="조건 조회" class="btn_search">
+                </div>
                 <div class="contents_main">
                 <table>
                     <tr>
@@ -83,13 +85,13 @@
                         <td>예약 가능 좌석<br>(수용 좌석)</td>
                     </tr>
                     <tr>
-                        <td>LJ438</td>
-                        <td>2022-01-28</td>
-                        <td>서울/김포(GMP)</td>
-                        <td>08:20</td>
-                        <td>제주(CJU)</td>
-                        <td>09:10</td>
-                        <td>278(430)</td>
+                        <td><a href="./sc_resultinfo.html">LJ438</a></td>
+                        <td><a href="./sc_resultinfo.html">2022-01-28</a></td>
+                        <td><a href="./sc_resultinfo.html">서울/김포(GMP)</a></td>
+                        <td><a href="./sc_resultinfo.html">08:20</a></td>
+                        <td><a href="./sc_resultinfo.html">제주(CJU)</a></td>
+                        <td><a href="./sc_resultinfo.html">09:10</a></td>
+                        <td><a href="./sc_resultinfo.html">278(430)</a></td>
                     </tr>
                 </table>
                 </div>
@@ -101,7 +103,7 @@
         <!-- 모달 창-->
         <div class="modal_container">
             <div class="modal">
-                <form action="#">
+                <form action="./sc_result.html">
                 <p>항공편명 <input type="text" placeholder="(예) 001, 세자리">
                 <select>
                     <optgroup label="출발지">
@@ -119,7 +121,7 @@
                 <p>검색기간 <input type="text" id="datepicker"><input type="text" id="datepicker"></p>
                 <div class="btn_modal">
                     <input type="button" value="취소" class="modal_cancel"> 
-                    <input type="button" value="검색">
+                    <input type="submit" value="검색" class="modal_search">
                 </div>
                 </form>
             </div>

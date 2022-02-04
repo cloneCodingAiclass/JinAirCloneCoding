@@ -123,38 +123,48 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-#container > .contents > .title{ 
+#container > .contents .title{ 
     clear: both;
     font-size: 1.1rem; 
     font-weight: 700;
+    align-self:flex-start;
 }
 #container > .contents > .btn_top{
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    height: 35px;
     width: 1000px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 #container > .contents > .btn_top input[type="button"]{
     width: 100px;
-    height: 30px;
+    height: 26px;
     background-color:#BDD600;
+    border-radius: 2px;
     clear: both;
     border: 0;
     margin-right: 20px;
     font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    top: 7px;
 }
 #container > .contents > .contents_main{
     width: 1000px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     text-align: center;
     margin-bottom: 20px;
-    border-collapse: collapse;
     font-size: 0.8rem;
+    font-weight: 600;
 }
-
+#container > .contents > .contents_main table{
+    border-collapse: collapse;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
 #container > .contents > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
+    border-bottom: 1px solid grey;
 }
 
 #container > .contents > .contents_main tr {
@@ -163,12 +173,10 @@ header{
 
 #container > .contents > .contents_main tr:first-child td{
     width: 333px;
-    border-bottom: 1px solid black;
 }
 
 #container > .contents > .contents_main tr:nth-child(3) td{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid grey;
 }
 
 #container > .contents > .btn_box{
@@ -177,17 +185,49 @@ header{
     justify-content: right;
 }
 #container > .contents > .btn_box input[type="button"]{ 
-    width: 130px;
-    height: 40px;
+    width: 140px;
+    height: 30px;
     background-color:#BDD600;
+    border-radius: 2px;
     clear: both;
     border: 0;
-    margin-right: 10px;
     font-size: 0.8rem;
+    margin-right: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }
 #container > .contents > .btn_box input[type="button"]:first-child{ 
+    width: 80px;
+    height: 30px;
     border: 3px solid #BDD600;
     background-color: white;
+}
+#container > .contents > .btn_box input[type="button"].list{
+    width: 80px;
+}
+#container > .contents input[type="text"]{
+    width: 100px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+}
+#container > .contents input[type="date"]{
+    outline: none;
+    font-size: 13px;
+    font-weight: 900;
+}
+#container > .contents select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 900;
+}
+#container > .contents input[type="text"].jinipoint{
+    width: 70px;
+}
+#container > .contents input[type="text"].percent{
+    width: 20px;
+    border: none;
 }
 .modal_container{
     position: absolute;
@@ -199,16 +239,25 @@ header{
 }
 .modal_container .modal p{
     margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 900;
 }
 .modal_container .modal p span{
     color : red;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 900;
+}
+.modal_container .modal p:nth-child(1){
+    margin-top: 26px;
+    font-size: 20px;
+    font-weight: 900;
 }
 .modal_container .modal{
-    width: 700px;
+    width: 500px;
     height: 300px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
     border: 3px solid #BDD600;
     display: flex;
     flex-direction: column;
@@ -220,10 +269,17 @@ header{
     justify-content: center;
 }
 .modal_container .modal input[type="button"]{
-    width: 150px;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100px;
     height: 40px;
     background-color:#BDD600;
+    border: none;
+    border-radius: 2px ;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    border: 0;
-    margin-right: 20px;
+    margin: 40px 10px 0;
+}
+.modal_container > .modal input[type="button"].btn_cancel{
+    background-color: white;
+    border: 3px solid #BDD600;
 }

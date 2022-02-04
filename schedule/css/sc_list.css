@@ -221,10 +221,12 @@ header{
 .modal_container .modal input[type="text"]{
     width: 140px;
     height: 30px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin-left: 20px;
     font-weight: 600;
     border: 2px solid grey;
+    border-radius: 4px;
+    text-indent: 5px;
+    outline: none;
 }
 .modal_container .modal select{
     width: 140px;
@@ -232,16 +234,39 @@ header{
     margin-left: 20px;
     font-weight: 600;
     border: 2px solid grey;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .modal_container .modal .btn_modal{
     display: flex;
     justify-content: center;
 }
 .modal_container .modal input[type="button"]{
-    width: 150px;
+    width: 100px;
     height: 40px;
     background-color:#BDD600;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     border: 0;
+    border-radius: 2px ;
     margin-right: 20px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.modal_container .modal input[type="submit"].modal_search{
+    width: 100px;
+    height: 40px;
+    background-color:#BDD600;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: 0;
+    border-radius: 2px ;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.modal_container .modal input[type="button"].modal_cancel{
+    background-color: white;
+    border: 3px solid #BDD600;
 }

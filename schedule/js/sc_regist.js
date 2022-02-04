@@ -1,4 +1,13 @@
 $(function () {
+    $('.modal_container').hide();
+
+    $('.sc_add').on('click', function(){
+        $('.modal_container').fadeIn(200);
+    })
+    $('.btn_cancel').on('click', function(){
+        $('.modal_container').fadeOut(200);
+    })
+
     $('.nav2').find('a').css({"color":"rgb(124,0,72)"});
     $('.nav2').siblings('li').css({"display":"block"});
     $('.nav2').siblings('li').eq(2).find('a').css({"color":"rgb(124,0,72)"});
@@ -97,21 +106,6 @@ $(function () {
         $('.nav2').siblings('li').css({"display":"block"});
         $('.nav2').parent().siblings().find('li').css({"display":"none"});
         $('.nav2').siblings('li').eq(2).find('a').css({"color":"rgb(124,0,72)"});
-    })
-
-    $('.modal_container').hide();
-    $('.del_modal').on('click', function(){
-        $('.modal_container').fadeIn(200);
-    })
-    $('.del_btn').on('click', function(){
-        $('.modal_container').fadeOut(200);
-    })
-
-    $('.sc_add').on('click', function(){
-        $('.modal_container').fadeIn(200);
-    })
-    $('.add_btn').on('click', function(){
-        $('.modal_container').fadeOut(200);
     })
 
         
