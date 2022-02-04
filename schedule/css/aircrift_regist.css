@@ -138,14 +138,14 @@ header{
 }
 #container > .contents > .contents_main table{
     border-collapse: collapse;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 #container > .contents > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
 }
 #container > .contents > .contents_main tr {
-    border-top: 1px solid grey;
+    border-top: 1px solid gray;
     height: 40px;
 }
 #container > .contents > .contents_main tr:first-child td{
