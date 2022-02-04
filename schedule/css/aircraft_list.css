@@ -136,20 +136,23 @@ header{
 }
 #container > .contents > .contents_main{
     width: 1000px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     text-align: center;
-    border-collapse: collapse;
     margin-bottom: 20px;
     font-size: 0.8rem;
+    font-weight: 600;
+}
+#container > .contents > .contents_main table{
+    border-collapse: collapse;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 #container > .contents > .contents_main tr:first-child{
+    border-bottom: 1px solid grey;
     background-color: #F2F2F2;
     height: 40px;
 }
 #container > .contents > .contents_main tr:first-child td{
     width: 333px;
-    border-bottom: 1px solid black;
 }
 #container > .contents > .contents_main tr td{
     height: 40px;
@@ -160,11 +163,14 @@ header{
     justify-content: right;
 }
 #container > .contents > .btn_box input[type="button"]{ 
-    width: 130px;
-    height: 40px;
+    width: 150px;
+    height: 30px;
+    border-radius: 2px;
     background-color:#BDD600;
     clear: both;
     border: 0;
     font-size: 0.8rem;
+    font-weight: 600;
     margin-right: 20px;
+    cursor: pointer;
 }
