@@ -99,4 +99,22 @@ $(function () {
         $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     })
 
+    $('.user_sch').hide();
+    $('#select_box').change(function() {
+        let result = $('#select_box option:selected').val();
+        if (result != '이륙 지원 보상') {
+        $('.user_sch').show();
+        } else {
+        $('.user_sch').hide();
+        }
+    });
+    $('.rs_sch').hide();
+    $('#select_box').change(function() {
+        let result = $('#select_box option:selected').val();
+        if (result == ('이륙 지원 보상')) {
+        $('.rs_sch').show();
+        } else {
+        $('.rs_sch').hide();
+        }
+    }); 
 });
