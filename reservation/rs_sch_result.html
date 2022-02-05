@@ -25,7 +25,7 @@
                     <ul>
                         <p class="nav2"><a href="#">운항스케줄</a></p>
                         <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
-                        <li><a href="../schedule/sc.list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
                         <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
                     </ul>
                     <ul>
@@ -74,22 +74,18 @@
                     <div class="search">
                         <p class="title">예약자 명 조회</p>
                     </div>
-                    <div class="searchName">
-                        <p class="korN">
-                            예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
-                            예약자 명<input type="text" name="res_korN" id="res_korN" placeholder="성명(KOR)" class="searchbox yelgcolor" required>
-                            <input type="button" class="search_butt" value="검색">
-                        </p>
-                        <p class="engN">
-                            예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
-                            예약자 명<input type="text" name="res_engN" id="res_engN" placeholder="성명(ENG)" class="searchbox yelgcolor" required>
-                            <input type="button" class="search_butt" value="검색" onclick="location.href='./rs_sch_result.html'">
-                        </p>
-                    </div>
                     <div class="searchwrap">
                         <!-- 예약자 리스트 -->
                         <div class="rs_list">
                             <table>
+                                <colgroup>
+                                    <col width="120">
+                                    <col width="180">
+                                    <col width="200">
+                                    <col width="150">
+                                    <col width="200">
+                                    <col width="150">
+                                </colgroup>
                                 <tr class="table_tit">
                                     <th>운항편</th>
                                     <th>출발 일자</th>
@@ -108,6 +104,12 @@
                                 </tr>
                             </table>
                             <table>
+                                <colgroup>
+                                    <col width="150">
+                                    <col width="350">
+                                    <col width="150">
+                                    <col width="350">
+                                </colgroup>
                                 <tr>
                                     <th>예약 번호</th>
                                     <td class="lefttd">11Q37D</td>
@@ -184,26 +186,20 @@
                                     <td colspan="3">결제 카드</td>
                                 </tr>
                             </table>
-                            <input type="button" value="예약취소" class="cancbutt">
+                            <div class="btnarea">
+                                <input type="button" value="뒤로" class="cancbutt golist" onclick="history.back()">
+                                <input type="button" value="예약취소" class="cancbutt">
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="modal_issearch">
-                <div id="modal_issearch_content">
-                    <div id="modal_issearch_title"><p class="text">조회할 예약자가 존재하지 않습니다.</p></div>
-                    <div>
-                    <button class="modal_issearch_ok">확인</button>
                     </div>
                 </div>
             </div>
             <div id="modal_iscancel">
                 <div id="modal_iscancel_content">
-                    <div id="modal_iscancel_title"><h3>※ 주의</h3><p class="text">예약을 <b class="tcolr">취소</b>할 경우, 데이터가 사라져 복구하기 어렵습니다.</p></div>
-                    
+                    <div id="modal_iscancel_title"><h3>※ 주의</h3><p class="text">예약을 <b class="tcolr">취소</b>할 경우, 데이터가 사라져<br> 복구하기 어렵습니다.</p></div>
                     <div>
                     <button class="modal_iscancel_btn uncomplete">취소</button>
-                    <button class="modal_iscancel_btn complete">예약취소</button>
+                    <a href="./rs_sch.html"><button class="modal_iscancel_btn complete">예약취소</button></a>
                     </div>
                 </div>
             </div>

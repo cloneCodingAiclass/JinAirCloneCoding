@@ -111,7 +111,7 @@ header{
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
-    padding-top : 30px; padding-left: 100px;
+    padding-top : 80px; padding-left: 100px;
 }
 #container > .sidebar > nav li{
     display: none;
@@ -140,184 +140,77 @@ header{
     display: flex;
     justify-content: space-between;
     height: 35px;
+    margin-bottom: 3px;
 }
 .contents > .contwrap > .search > .title{
-    font-size: 1.1 rem; 
+    font-size: 1.1rem; 
     font-weight: 700;
     display: inline;
     align-self:flex-start;
 }
-
 .contents > .contwrap > .searchwrap {
-    width: 100%;
+    width: 1000px;
 }
-
 .rs_list {
     margin: 0 auto;
     width: 100%;
 }
 .rs_list > table {
-    margin: 0 auto;
+    margin: 0 auto 5px;
     width: 100%;
     border-collapse: collapse;
     text-align: center;
     line-height: 1.2;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 .rs_list > table th {
-    padding: 5px;
+    height: 33px;
     font-weight: bold;
-    vertical-align: top;
     background-color: #f2f2f2;
-    border-top: 0.7px solid #888;
-    border-bottom: 0.7px solid #888;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
-
 .rs_list > table td {
+    height: 33px;
+}
+.footer{
+    margin-top: 15px;
+    width: 1000px;
     height: 30px;
-    border-top: 1px solid #888;
-    border-bottom: 0.7px solid #888;
 }
-
-.rs_list > table td > .firstN {
-    padding: 0px;
-    text-align: center;
+.footer > .center{
+    display: flex;
+    justify-content: center;
 }
-
-.rs_list > table td > .kfirstN {
-    margin-right: 150px;
-    font-weight: 400;
-}
-
-.rs_list > table td > .efirstN {
-    margin-right: 100px;
-    font-weight: 400;
-}
-
-.rs_list > table:nth-child(2) {
-    margin: 0 auto;
-    margin-top: 10px;
-}
-.rs_list > table:nth-child(2) th {
-    vertical-align: middle;
-    border-top: 0.7px solid #888;
-}
-
-.rs_list > table:nth-child(2) td {
-    height: 45px;
-    border-top: 0.7px solid #888;
-}
-
-.rs_list > table:nth-child(2) .lefttd {
-    border-right: 0.7px solid #888;
-}
-
-.rs_list > table:nth-child(2) td input[type=radio] {
-    margin: 5px;
-}
-
-.rs_list > .cancbutt {
-    margin-top: 5px;
-    float: right;
-    right: 0px;
-    width: 100px;
-    height: 35px;
-    border: none;
-    background-color: #BDD600;
-}
-.rs_list .rs_list_page {
-    padding: 10px 0 0;
-    text-align: center;
-}
-.rs_list .rs_list_page a {
+.footer table{
     display: inline-block;
-    margin-right: 10px;
-}
-.rs_list .rs_list_page a.pbtn {
-    margin: 0;
-    display: inline-block;
-    padding: 7px;
     text-align: center;
-    vertical-align: middle;
-    font-size: 0;
+    font-size: 12px;
+    font-weight: bolder;
 }
-.rs_list .rs_list_page a.pbtn img {
-    width: 35px;
-}
-.rs_list .rs_list_page a.page_num {
-    display: inline-block;
+.footer table td{
     width: 25px;
     height: 25px;
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #888;
+    border: 1px solid rgb(187, 187, 187);
+    padding-top: 2px;
 }
-.rs_list .rs_list_page a.current_page {
-    width: 25px;
-    color: #fff !important;
-    background-color: rgb(145, 0, 70);
+.footer table td:nth-child(6){
+    background: url(../../img/right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
 }
-
-.rs_list .rs_list_page a.page_num:hover {
-    background-color: rgb(188, 216, 53);
-    color: #fff;
+.footer table td:nth-child(1){
+    background-color: rgb(124,0,72);
 }
-
-/* 모달창 수령완료 / 미완료 */
-#modal_iscancel {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    display: none;
+.footer table td:nth-child(1) > a{
+    color:white
 }
-#modal_iscancel > #modal_iscancel_content {
-    width: 400px;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-    border: 8px solid rgb(188, 216, 53);
-    background-color: #fff;
-    text-align: center;
+.footer table td:hover{
+    background-color: #bdd600;
 }
-#modal_iscancel > #modal_iscancel_content > #modal_iscancel_title {
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-#modal_iscancel > #modal_iscancel_content button {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
-    border: none;
-    background-color: rgb(188, 216, 53);
-}
-
-#modal_iscancel > #modal_iscancel_content button.uncomplete {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
-    border: 5px solid rgb(188, 216, 53);
-    background-color: #fff;
-}
-
-#modal_iscancel > #modal_iscancel_content button.complete:hover {
-    color: #fff;
-}
-
-#modal_iscancel h3 {
-    margin-bottom: 7px;
-}
-
-#modal_iscancel p.text {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.tcolr {
-    color: red;
+.footer table td:hover a{
+    color:white
 }
