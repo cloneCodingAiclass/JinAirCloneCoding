@@ -152,7 +152,7 @@ header{
     position: relative;
     bottom: 1px;
 }
-.contents > .con_wrap > .search > form > input[type="summit"]{
+.contents > .con_wrap > .search > form > input[type="submit"]{
     text-align: center;
     width: 100px;
     height: 26px;
@@ -163,7 +163,6 @@ header{
     font-weight: 600;
     cursor: pointer;
 }
-
 .contents > .con_wrap > table{
     margin-top: 5px;
     width: 1000px;
