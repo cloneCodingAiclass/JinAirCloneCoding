@@ -74,7 +74,7 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    position: fixed;
+    position: relative;
     left: 0;
     top: 0;
     z-index: 100;
@@ -157,7 +157,6 @@ body{
     top: 3px;
 }
 #header nav{
-    position: fixed;
     top: 47px;
     box-sizing: border-box;
     margin: 0;
@@ -289,7 +288,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 500px;
+    height: 780px;
 }
 
 /*푸터*/
@@ -562,20 +561,113 @@ body{
 
 /* 로그인창 */
 
-#wrap > #container > .login_container{
-    display: block;
+.login_container{
+    display: flex;
     max-width: 550px;
-    height: 778px;
+    height: 750px;
     margin: 0 auto;
+    flex-direction: column;
 }
 
-#wrap > #container > .login_container > .login_top{
+.login_container > .login_top{
     padding-top: 75px;
     width: 100%;
-    height: 90px;
+    height: 165px;
 
 }
-#wrap > #container > .login_container > .login_top p{
-    font-size: 24px;
+.login_container > .login_top p{
+    font-size: 3.5rem;
     text-align: center;
+    color: #661E43;
+    font-weight: 600;
+}
+
+.login_container > .login_main{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.login_container > .login_main input[type="text"]{
+    height: 77px;
+    margin-top: 10px;
+    text-indent: 20px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
+}
+.login_container > .login_main a{
+    margin: 40px auto;
+}
+.login_container > .login_main input[type="button"]{
+    width: 220px;
+    height: 60px;
+    background-color:#BDD600;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.login_container > .login_main > .find{
+    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.login_container > .login_main > .btn_sns{
+    margin: 20px auto;
+}
+.login_container > .login_main > .btn_sns a{
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+}
+.login_container > .login_footer input[id*="slide"]{
+    display: none;
+}
+.login_container > .login_footer .list_wrap{
+    max-width: 550px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.login_container > .login_footer .list_wrap .login_fad_list{
+    white-space: nowrap;
+    font-size: 0;
+}
+.login_container > .login_footer .list_wrap .login_fad_list > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .5s;
+}
+.login_container > .login_footer .list_wrap .login_fad_list > li > a{
+    display: block;
+    position: relative;
+}
+.login_container > .login_footer .list_wrap .login_fad_list > li > a img{
+    width: 100%;
+}
+.login_container > .login_footer .list_wrap .login_fad_list label{
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    padding: 50px;
+    cursor: pointer;
+}
+.login_container > .login_footer .list_wrap .login_fad_list .left{
+    left: 0;
+}
+
+.login_container > .login_footer .list_wrap .login_fad_list .right{
+    right: 3px;
+}
+.login_container > .login_footer input[id*="slide01"]:checked ~ .list_wrap .login_fad_list > li {
+    transform:translateX(0%);
+}
+.login_container > .login_footer input[id*="slide02"]:checked ~ .list_wrap .login_fad_list > li {
+    transform:translateX(-101%);
+}
+.login_container > .login_footer input[id*="slide03"]:checked ~ .list_wrap .login_fad_list > li {
+    transform:translateX(-202%);
 }

@@ -109,13 +109,15 @@ $(() => {
 
 // 모달창 수령완료 / 미완료
 $(()=> {
+    $('#modal_isfind').hide();
+
     $(".item_isfind_btn").on('click', () => {
-        $("#modal_isfind").fadeIn();
+        $("#modal_isfind").fadeIn(200);
     })
     $(".complete").on('click', () => {
-        $("#modal_isfind").fadeOut();
+        $("#modal_isfind").fadeOut(200);
     })
     $(".uncomplete").on('click', () => {
-        $("#modal_isfind").fadeOut();
+        $("#modal_isfind").fadeOut(200);
     })
 })
