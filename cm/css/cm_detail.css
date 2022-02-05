@@ -114,6 +114,7 @@ header {
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
+    padding-top : 80px; padding-left: 100px;
 }
 #container > .sidebar > nav li {
     display: none;
@@ -136,64 +137,98 @@ header {
 
 /* contents */
 #cm_detail_box {
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 50px;
+    width: 1000px;
 }
 /* title */
 #cm_detail_box #cm_detail_title {
-    line-height: 2;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(188, 216, 53);
+    font-size: 1.1rem; 
+    font-weight: 700;
+    display: inline;
+    align-self:flex-start;
 }
 /* table */
 #cm_detail table {
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 100%;
-    border-collapse: collapse;
+    margin-top: 20px;
+    width: 1000px;
     text-align: center;
-    line-height: 1.2;
-    font-size: 16px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+    font-size: 13px;
+    font-weight: bold;
+}
+#cm_detail table tr{
+    font-size: 14px;
+    height: 40px;
+    border-bottom: 1px solid grey;
 }
 #cm_detail table th {
-    padding: 10px;
     font-weight: bold;
-    vertical-align: top;
-    border-bottom: 3px solid #888;
-}
-#cm_detail table td {
-    border-bottom: 1px solid rgb(153, 153, 153, 0.5);
+    background-color: #F2F2F2;
+    border-right: 1px solid grey;
 }
 #cm_detail table td #kor_first_name,
 #cm_detail table td #kor_last_name,
 #cm_detail table td #eng_first_name,
 #cm_detail table td #eng_last_name {
-    width: 100px;
+    text-align: center;
+    width: 120px;
 }
+#cm_detail table input, #cm_detail table select{
+    outline: none;
+    height: 26px;
+    font-size: 13px;
+    font-weight: bolder;
+    text-indent: 5px;
+    text-align: center;
+}
+#cm_detail table input[type="text"]{
+    width: 320px
+}
+#cm_detail table input[type="email"]{
+    width: 320px
+}
+#cm_detail table input[type="tel"]{
+    width: 320px
+}
+#cm_detail table select{
+    width: 320px;
+    border: none;
+}
+#cm_detail table span{
+    position: relative;
+    bottom: 8px;
+}
+#cm_detail table input[type="radio"]{
+    margin: 0 15px 0 0;
+}
+#cm_detail table td input{
+    border: none;
+}
+
 
 /* btn */
 #form_btn {
     text-align: right;
     margin-top: 20px;
 }
-#form_btn input {
-    width: 150px;
-    height: 50px;
-}
 #form_btn input[type="submit"] {
-    border: 3px solid rgb(188, 216, 53);
-    background-color: #fff;
-}
-#form_btn input[type="submit"]:hover {
-    background-color: rgb(188, 216, 53);
-    color: #fff;
-}
-#form_btn input[type="button"] {
+    width: 130px;
     border: none;
     background-color: rgb(188, 216, 53);
+    cursor: pointer;
+    height: 26px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
 }
-#form_btn input[type="button"]:hover {
-    background-color: rgb(153, 153, 153, 0.58);
-    color: #fff;
+#form_btn input[type="button"] {
+    width: 80px;
+    border: 3px solid rgb(188, 216, 53);
+    background-color: #fff;
+    height: 26px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }

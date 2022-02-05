@@ -25,7 +25,7 @@
                     <ul>
                         <p class="nav2"><a href="#">운항스케줄</a></p>
                         <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
-                        <li><a href="../schedule/sc.list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
                         <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
                     </ul>
                     <ul>
@@ -73,18 +73,22 @@
                 <div class="contwrap">
                     <div class="search">
                         <p class="title">예약자 명 조회</p>
-                    </div>
-                    <div class="searchName">
-                        <p class="korN">
-                            예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
-                            예약자 명<input type="text" name="res_korN" id="res_korN" placeholder="성명(KOR)" class="searchbox yelgcolor" required>
-                            <input type="button" class="search_butt" value="검색">
-                        </p>
-                        <p class="engN">
-                            예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
-                            예약자 명<input type="text" name="res_engN" id="res_engN" placeholder="성명(ENG)" class="searchbox yelgcolor" required>
-                            <input type="button" class="search_butt" value="검색" onclick="location.href='./rs_sch_result.html'">
-                        </p>
+                        <div class="searchName">
+                            <p class="korN">
+                                <form action="#">
+                                    예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
+                                    예약자 명<input type="text" name="res_korN" id="res_korN" placeholder="성명(KOR)" class="searchbox yelgcolor" required>
+                                    <input type="submit" class="search_butt" value="검색">
+                                </form>
+                            </p>
+                            <p class="engN">
+                                <form action="./rs_sch_result.html">
+                                    예약번호 <input type="text" name="res_num" id="res_num" placeholder="예약번호" class="searchbox yelgcolor" required>
+                                    예약자 명<input type="text" name="res_engN" id="res_engN" placeholder="성명(ENG)" class="searchbox yelgcolor" required>
+                                    <input type="submit" class="search_butt" value="검색" onclick="href='rs_sch_result.html'">
+                                </form>
+                            </p>
+                        </div>
                     </div>
                     <div class="searchwrap">
                         <!-- 예약자 리스트 -->

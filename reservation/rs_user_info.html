@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>운항 스케줄 | 운항 스케줄 등록</title>
+    <title>예약조회 | 운항별 예약자 조회 | 상세보기</title>
     <link rel="stylesheet" href="./css/rs_user_info.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/rs_index.js"></script>
@@ -25,7 +25,7 @@
                     <ul>
                         <p class="nav2"><a href="#">운항스케줄</a></p>
                         <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
-                        <li><a href="../schedule/sc.list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
                         <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
                     </ul>
                     <ul>
@@ -72,12 +72,20 @@
             <div class="contents">
                 <div class="contwrap">
                     <div class="search">
-                        <p class="title">운항편(LJ438) 예약자 조회</p>
+                        <p class="title">운항편(LJ438) 예약자 상세정보</p>
                     </div>
                     <div class="searchwrap">
                         <!-- 예약자 리스트 -->
                         <div class="rs_list">
                             <table>
+                                <colgroup>
+                                    <col width="120">
+                                    <col width="180">
+                                    <col width="200">
+                                    <col width="150">
+                                    <col width="200">
+                                    <col width="150">
+                                </colgroup>
                                 <tr class="table_tit">
                                     <th>운항편</th>
                                     <th>출발 일자</th>
@@ -96,6 +104,12 @@
                                 </tr>
                             </table>
                             <table>
+                                <colgroup>
+                                    <col width="150">
+                                    <col width="350">
+                                    <col width="150">
+                                    <col width="350">
+                                </colgroup>
                                 <tr>
                                     <th>예약 번호</th>
                                     <td class="lefttd">11Q37D</td>
@@ -137,7 +151,7 @@
                                 </tr>
                                 <tr>
                                     <th>국적</th>
-                                    <td class="lefttd">한국(REPUBLIC OF KOREA</td>
+                                    <td class="lefttd">한국(REPUBLIC OF KOREA)</td>
                                     <th>회원여부</th>
                                     <td colspan="3">
                                         회원<input type="radio" name="memberC" class="radio" value="y">
@@ -146,7 +160,7 @@
                                 </tr>
                                 <tr>
                                     <th>거주국가</th>
-                                    <td class="lefttd">한국(REPUBLIC OF KOREA</td>
+                                    <td class="lefttd">한국(REPUBLIC OF KOREA)</td>
                                     <th>개인정보 동의 여부</th>
                                     <td colspan="3">
                                         동의<input type="radio" name="agreeC" class="radio" value="y" checked>
@@ -172,18 +186,21 @@
                                     <td colspan="3">결제 카드</td>
                                 </tr>
                             </table>
-                            <input type="button" value="예약취소" class="cancbutt">
+                            <div class="btnarea">
+                                <input type="button" value="목록" class="cancbutt golist" onclick="history.back()">
+                                <input type="button" value="예약취소" class="cancbutt">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="modal_iscancel">
                 <div id="modal_iscancel_content">
-                    <div id="modal_iscancel_title"><h3>※ 주의</h3><p class="text">예약을 <b class="tcolr">취소</b>할 경우, 데이터가 사라져 복구하기 어렵습니다.</p></div>
+                    <div id="modal_iscancel_title"><h3>※ 주의</h3><p class="text">예약을 <b class="tcolr">취소</b>할 경우, 데이터가 사라져<br> 복구하기 어렵습니다.</p></div>
                     
                     <div>
                     <button class="modal_iscancel_btn uncomplete">취소</button>
-                    <button class="modal_iscancel_btn complete">예약취소</button>
+                    <a href="./rs_user.html"><button class="modal_iscancel_btn complete">예약취소</button></a>
                     </div>
                 </div>
             </div>

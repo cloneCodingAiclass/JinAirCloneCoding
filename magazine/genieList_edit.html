@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나비 쿠폰 | 지니쿠폰 등록</title>
-    <link rel="stylesheet" href="./css/couponadd.css">
+    <title>지니매거진 | 지니매거진 목록</title>
+    <link rel="stylesheet" href="./css/genieList.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/couponadd.js"></script>
+    <script src="./js/genieList.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -60,81 +60,46 @@
                     </ul>
                     <ul>
                         <p class="nav10"><a href="#">지니 쿠폰</a></p>
-                        <li><a href="./couponadd.html">- 지니 쿠폰 발급</a></li>
-                        <li><a href="./usecouponlist.html">- 지니 쿠폰 사용 내역 조회</a></li>
+                        <li><a href="../coupon/couponadd.html">- 지니 쿠폰 발급</a></li>
+                        <li><a href="../coupon/usecouponlist.html">- 지니 쿠폰 사용 내역 조회</a></li>
                     </ul>
                     <ul>
                         <p class="nav11"><a href="#">지니 매거진</a></p>
-                        <li><a href="../magazine/genieList.html">- 매거진 등록</a></li>
+                        <li><a href="./genieList.html">- 매거진 등록</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="contents">
-                <p class="title">지니 쿠폰 발급</p>
+                <p class="title">지니매거진 수정</p>
                 <div class="contents_main">
-                    <div class="contents_sch" class="btn_box">
-                        <select class="coupon_box">
-                            <option value="" selected="selected">구분</option>
-                            <option value="국내">국내</option>
-                            <option value="국내">국외</option>
-                        </select>
-                        <select class="coupon_box">
-                            <option value="" selected="selected">구분</option>
-                            <option value="전 노선">전 노선</option>
-                            <option value="CJU">CJU</option>
-                            <option value="USN">USN</option>
-                            <option value="TAE">TAE</option>
-                        </select>
-                        <input class="coupon_box" type="text" value="할인률">%
-                        <input class="coupon_box" type="date" value="시작 일자">
-                        <input class="coupon_box" type="date" value="종료 일자">
-                        <input class="coupon_box" type="text" value="수량">
-                        <button class="coupon_btn">쿠폰 발급</button>
-                    </div>
-                    <table class="coupon_tb">
+                    <table>
                         <tr>
-                            <td>쿠폰 번호</td>
-                            <td>발급 일자</td>
-                            <td>쿠폰 명</td>
-                            <td>시작일자</td>
-                            <td>종료일자</td>
-                            <td>쿠폰 수</td>
-                            <td>미등록 쿠폰</td>
-                            <td>상태</td>
-                        </tr>
-                        <tr>
-                            <td>10010103</td>
-                            <td>2021-12-30</td>
-                            <td>선착순 고객 국내여행 전 노선 10%</td>
-                            <td>2022-01-20</td>
-                            <td>2022-01-30</td>
-                            <td>100</td>
-                            <td>31</td>
-                            <td>유효</td>
+                            <td>제목</td>
+                            <td>VOL.39 매거진(2020년 5월)</td>
+                            <td>등록일 2020-05-01</td>
                         </tr>
                     </table>
-                    <div class="item_list_page">
-                        <a href="#" class="page_num current_page">1</a>
-                        <a href="#" class="page_num">2</a>
-                        <a href="#" class="page_num">3</a>
-                        <a href="#" class="page_num">4</a>
-                        <a href="#" class="page_num">5</a>
-                        <a href="#" class="nextpage pbtn">
-                        <img src="./img/one_arrow.png" alt="다음 페이지로 이동" />
-                        </a>
-                        <a href="#" class="lastpage pbtn">
-                        <img src="./img/double_arrow.png" alt="마지막 페이지로 이동" />
-                        </a>
+                    <div class="file_add">
+                        메인 이미지 파일 첨부
                     </div>
+                    <div class="file_add">
+                        퀴즈 파일 첨부
+                    </div>
+                    <div class="file_add">
+                        매거진 파일첨부
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <input type="button" value="취소" onClick="location.href='./genieList.html'">
+                    <input type="button" value="수정" class="edit_btn">
                 </div>
                 <div id="modal_isfind">
                     <div id="modal_isfind_content">
-                        <div id="modal_isfind_title">[선착순 고객 국내여행 전노선 40% 2022-01-15 / 2021-01-30 100매 ]
-                            쿠폰발급을 하시겠습니까?
+                        <div id="modal_isfind_title">수정이 완료되었습니다.
                         </div>
                         <div>
-                            <button class="modal_isfind_btn complete">확인</button>
-                            <button class="modal_isfind_btn uncomplete">취소</button>
+                            <button class="modal_isfind_btn complete" onclick="location.href='./genieList.html'">예</button>
+                            <button class="modal_isfind_btn uncomplete">아니요</button>
                         </div>
                     </div>
                 </div>

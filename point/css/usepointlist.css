@@ -102,6 +102,8 @@ header{
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
+    padding-top: 80px;
+    padding-left: 100px;
 }
 #container > .sidebar > nav li{
     display: none;
@@ -120,4 +122,67 @@ header{
     margin: 5px 0;
     padding-left: 5px;
     width: 125px;
+}
+#container > .contents .title{ 
+    clear: both;
+    font-size: 1.1rem; 
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#container > .contents > .contents_sch{
+    width: 1000px;
+    display: flex;
+    justify-content: right;
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+#container > .contents > .contents_sch > p input[type="text"]{
+    width: 150px;
+    height: 30px;
+} 
+#container > .contents > .contents_sch > p input[type="button"]{ 
+    width: 100px;
+    height: 30px;
+    background-color:#BDD600;
+    clear: both;
+    border: 0;
+    font-size: 0.8rem;
+    margin-right: 20px;
+} 
+#container > .contents > .contents_sch > .btn_top input[type="button"]{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+}
+#container > .contents > .contents_main{
+    width: 1000px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+#container > .contents > .contents_main .point_tp{
+    display: flex;
+    
+}
+#container > .contents > .contents_main tr:first-child{
+    background-color: #F2F2F2;
+    height: 40px;
+}
+#container > .contents > .contents_main tr:first-child td{
+    width: 222px;
+    border-bottom: 1px solid black;
+}
+#container > .contents > .contents_main tr td{
+    height: 30px;
+}
+#container > .contents > .btn_box{
+    width: 1000px;
+    display: flex;
+    justify-content: right;
+    font-size: 0.8rem;
+    line-height: 30px;
 }
