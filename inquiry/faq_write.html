@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의 | FAQ 목록</title>
-    <link rel="stylesheet" href="./css/faq_main.css">
+    <title>문의 | FAQ 목록 | 작성</title>
+    <link rel="stylesheet" href="./css/faq_write.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/faq_main.js"></script>
 </head>
@@ -73,30 +73,32 @@
                 <div class="title">
                     <p>FAQ 작성하기</p>
                 </div>
-                <div class="contents_main">
-                    <table>
-                        <tr>
-                            <td><select>
-                                <option>항공권 예매</option>
-                                <option>할인 제도</option>
-                                <option>수하물</option>
-                                <option>기내 서비스</option>
-                                <option>기타</option>
-                            </select></td>
-                            <td><input type="text" placeholder="제목을 입력하세요"></td>
-                            <td>등록일</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="contents_bottom">
-                    <div class="faq_btn_add">                        
-                        <input type="button" value="목록" onclick="location.href='faq_main.html'">
-                        <input type="button" value="등록">
+                <form action="./faq_main.html">
+                    <div class="contents_main">
+                        <table>
+                            <tr>
+                                <td><select>
+                                    <option>항공권 예매</option>
+                                    <option>할인 제도</option>
+                                    <option>수하물</option>
+                                    <option>기내 서비스</option>
+                                    <option>기타</option>
+                                </select></td>
+                                <td><input type="text" placeholder="제목을 입력하세요"></td>
+                                <td>등록일</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><textarea name="" id=""></textarea></td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
+                    <div class="contents_bottom">
+                        <div class="faq_btn_add">                        
+                            <a href="./faq_main.html"><input type="button" value="목록"></a>
+                            <input type="submit" value="등록">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
