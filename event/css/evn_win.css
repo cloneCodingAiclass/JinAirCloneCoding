@@ -192,6 +192,10 @@ header{
     font-weight: bold;
 }
 
+.contents > .contwrap > .event_wrap > .event_list td.list_tit {
+    text-align: left;
+}
+
 .contents > .contwrap > .event_wrap > .event_list .last_list {
     border-bottom: 0.7px solid #888;
 }

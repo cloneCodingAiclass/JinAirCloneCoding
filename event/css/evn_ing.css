@@ -190,6 +190,11 @@ header{
 .contents > .contwrap > .event_wrap > .event_list td {
     height: 40px;
     font-weight: bold;
+    text-align: left;
+}
+
+.contents > .contwrap > .event_wrap > .event_list td.list_tit {
+    text-align: left;
 }
 
 .contents > .contwrap > .event_wrap > .event_list .last_list {
