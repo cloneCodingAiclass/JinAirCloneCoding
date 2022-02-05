@@ -1,7 +1,6 @@
 $(function () {
-    $('.nav3').find('a').css({"color":"rgb(124,0,72)"});
-    $('.nav3').siblings('li').css({"display":"block"});
-    $('.nav3').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
+    $('.nav8').find('a').css({"color":"rgb(124,0,72)"});
+    $('.nav8').siblings('li').css({"display":"block"});
 
     $('.nav1').on('mouseover', function(e){
         e.stopPropagation();
@@ -23,7 +22,6 @@ $(function () {
         $(this).find('a').css({"color":"rgb(124,0,72)"});
         $(this).siblings('li').css({"display":"block"});
         $(this).parents().siblings().find('li').css({"display":"none"});
-        $('.nav3').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     });
     $('.nav4').on('mouseover', function(e){
         e.stopPropagation();
@@ -84,21 +82,18 @@ $(function () {
 
     $('header').on('mouseover', function (e) {
         e.stopPropagation();
-        $('.nav3').parents().siblings().find('a').css({"color":"rgb(0,0,0)"});
-        $('.nav3').find('a').css({"color":"rgb(124,0,72)"});
-        $('.nav3').siblings('li').css({"display":"block"});
-        $('.nav3').parents().siblings().find('li').css({"display":"none"});
-        $('.nav3').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav8').parents().siblings().find('a').css({"color":"rgb(0,0,0)"});
+        $('.nav8').find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav8').siblings('li').css({"display":"block"});
+        $('.nav8').parents().siblings().find('li').css({"display":"none"});
     })
     $('.contents').on('mouseover', function (e) {
         e.stopPropagation();
-        $('.nav3').parents().siblings().find('a').css({"color":"rgb(0,0,0)"});
-        $('.nav3').find('a').css({"color":"rgb(124,0,72)"});
-        $('.nav3').siblings('li').css({"display":"block"});
-        $('.nav3').parents().siblings().find('li').css({"display":"none"});
-        $('.nav3').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav8').parents().siblings().find('a').css({"color":"rgb(0,0,0)"});
+        $('.nav8').find('a').css({"color":"rgb(124,0,72)"});
+        $('.nav8').siblings('li').css({"display":"block"});
+        $('.nav8').parents().siblings().find('li').css({"display":"none"});
     })
-
 });
 
 $(() => {
@@ -108,13 +103,25 @@ $(() => {
 
 
 $(()=> {
-    $(".cancbutt").on('click', () => {
-        $("#modal_iscancel").fadeIn();
+    $(".canc_btn").on('click', () => {
+        $("#modal_iseditcancel").fadeIn();
+    })
+    $(".cancuncomplete").on('click', () => {
+        location.href='./evn_view.html';
+    })
+    $(".canccomplete").on('click', () => {
+        $("#modal_iseditcancel").fadeOut();
+    })
+});
+
+$(()=> {
+    $(".edit_btn").on('click', () => {
+        $("#modal_isedit").fadeIn();
     })
     $(".complete").on('click', () => {
-        $("#modal_iscancel").fadeOut();
+        location.href='./evn_view.html';
     })
     $(".uncomplete").on('click', () => {
-        $("#modal_iscancel").fadeOut();
+        $("#modal_isedit").fadeOut();
     })
-})
+});

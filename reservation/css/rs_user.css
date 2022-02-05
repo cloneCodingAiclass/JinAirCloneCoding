@@ -111,7 +111,7 @@ header{
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
-    padding-top : 80px; padding-left: 100px;
+    padding-top : 30px; padding-left: 100px;
 }
 #container > .sidebar > nav li{
     display: none;
@@ -136,96 +136,115 @@ header{
     width: 1000px;
 }
 
-.contents > .contwrap > .event{
+.contents > .contwrap > .search{
     display: flex;
     justify-content: space-between;
     height: 35px;
 }
-.contents > .contwrap > .event > .title{
+.contents > .contwrap > .search > .title{
     font-size: 1.1 rem; 
     font-weight: 700;
     display: inline;
     align-self:flex-start;
 }
 
-.contents > .contwrap > .event_wrap {
-    padding: 15px;
-}
-
-.contents > .contwrap > .event_wrap > .event_kind {
-    border-collapse: collapse;
-    border-top: 2px solid #888;
+.contents > .contwrap > .searchwrap {
     width: 100%;
-    height: 35px;
 }
 
-.contents > .contwrap > .event_wrap .current_list {
-    background-color: rgb(145, 0, 70);
-}
-
-.contents > .contwrap > .event_wrap .current_list > a {
-    color: #fff !important;
-}
-
-.contents > .contwrap > .event_wrap > .event_list {
+.rs_list {
     margin: 0 auto;
-    margin-top: 30px;
+    width: 100%;
+}
+.rs_list > table {
+    margin: 0 auto;
     width: 100%;
     border-collapse: collapse;
     text-align: center;
     line-height: 1.2;
     font-size: 16px;
-    color: #444;
 }
-
-.contents > .contwrap > .event_wrap > .event_list th {
-    padding: 10px;
+.rs_list > table th {
+    padding: 5px;
     font-weight: bold;
-    vertical-align: middle;
+    vertical-align: top;
     background-color: #f2f2f2;
     border-top: 0.7px solid #888;
     border-bottom: 0.7px solid #888;
 }
 
-.contents > .contwrap > .event_wrap > .event_list td {
-    height: 40px;
-    font-weight: bold;
-}
-
-.contents > .contwrap > .event_wrap > .event_list .last_list {
+.rs_list > table td {
+    height: 30px;
+    border-top: 1px solid #888;
     border-bottom: 0.7px solid #888;
 }
 
-.contents > .contwrap > .event_wrap > .event_wirte_butt {
-    margin-top: 10px;
-    width: 100px;
-    height: 35px;
-    float: right;
-    background-color: #BDD600;
-    border: none;
+.rs_list > table td > .firstN {
+    padding: 0px;
+    text-align: center;
 }
 
-.event_wrap .event_list_page {
+.rs_list > table td > .kfirstN {
+    margin-right: 150px;
+    font-weight: 400;
+}
+
+.rs_list > table td > .efirstN {
+    margin-right: 100px;
+    font-weight: 400;
+}
+
+.rs_list > table:nth-child(2) {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.rs_list > table:nth-child(2) th {
+    vertical-align: middle;
+    border-top: 0.7px solid #888;
+}
+
+.rs_list > table:nth-child(2) td {
+    height: 45px;
+    border-top: 0.7px solid #888;
+}
+
+.rs_list > table:nth-child(2) .lefttd {
+    border-right: 0.7px solid #888;
+}
+
+.rs_list > table:nth-child(2) td input[type=radio] {
+    margin: 5px;
+}
+
+.rs_list > .cancbutt {
+    margin-top: 5px;
+    float: right;
+    right: 0px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #BDD600;
+}
+.rs_list .rs_list_page {
     padding: 10px 0 0;
     text-align: center;
 }
-.event_wrap .event_list_page a {
+.rs_list .rs_list_page a {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 10px;
 }
-.event_wrap .event_list_page a.pbtn {
+.rs_list .rs_list_page a.pbtn {
     margin: 0;
     display: inline-block;
-    padding: 3px;
+    padding: 7px;
     text-align: center;
     vertical-align: middle;
     font-size: 0;
 }
-.event_wrap .event_list_page a.pbtn img {
-    width: 25px;
-    border: 1px solid #888;
+.rs_list .rs_list_page a.pbtn img {
+    width: 35px;
 }
-.event_wrap .event_list_page a.page_num {
+.rs_list .rs_list_page a.page_num {
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -234,13 +253,71 @@ header{
     vertical-align: middle;
     border: 1px solid #888;
 }
-.event_wrap .event_list_page a.current_page {
+.rs_list .rs_list_page a.current_page {
     width: 25px;
     color: #fff !important;
     background-color: rgb(145, 0, 70);
 }
 
-.event_wrap .event_list_page a.page_num:hover {
+.rs_list .rs_list_page a.page_num:hover {
     background-color: rgb(188, 216, 53);
     color: #fff;
+}
+
+/* 모달창 수령완료 / 미완료 */
+#modal_iscancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    display: none;
+}
+#modal_iscancel > #modal_iscancel_content {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border: 8px solid rgb(188, 216, 53);
+    background-color: #fff;
+    text-align: center;
+}
+#modal_iscancel > #modal_iscancel_content > #modal_iscancel_title {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#modal_iscancel > #modal_iscancel_content button {
+    margin: 10px;
+    margin-top: 0;
+    width: 80px;
+    height: 50px;
+    border: none;
+    background-color: rgb(188, 216, 53);
+}
+
+#modal_iscancel > #modal_iscancel_content button.uncomplete {
+    margin: 10px;
+    margin-top: 0;
+    width: 80px;
+    height: 50px;
+    border: 5px solid rgb(188, 216, 53);
+    background-color: #fff;
+}
+
+#modal_iscancel > #modal_iscancel_content button.complete:hover {
+    color: #fff;
+}
+
+#modal_iscancel h3 {
+    margin-bottom: 7px;
+}
+
+#modal_iscancel p.text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.tcolr {
+    color: red;
 }

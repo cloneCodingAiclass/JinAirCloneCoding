@@ -100,3 +100,24 @@ $(function () {
     })
 
 });
+
+$(()=> {
+    $(".cancbutt").on('click', () => {
+        $("#modal_iscancel").fadeIn();
+    })
+    $(".complete").on('click', () => {
+        $("#modal_iscancel").fadeOut();
+    })
+    $(".uncomplete").on('click', () => {
+        $("#modal_iscancel").fadeOut();
+    })
+})
+
+$(()=> {
+    $(".search_butt").on('click', () => {
+        $("#modal_issearch").fadeIn();
+    })
+    $(".modal_issearch_ok").on('click', () => {
+        $("#modal_issearch").fadeOut();
+    })
+})

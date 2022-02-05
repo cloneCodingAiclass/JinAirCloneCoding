@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운항 스케줄 | 운항 스케줄 등록</title>
+    <link rel="stylesheet" href="./css/rs_user.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/rs_index.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_inner">
+                <div class="img"></div><span>관리자 센터</span>
+            </div>
+        </header>
+        <div id="container">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <p class="nav1"><a href="../admin_main.html">메인페이지</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav2"><a href="#">운항스케줄</a></p>
+                        <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
+                        <li><a href="../schedule/sc.list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav3"><a href="#">예약 조회</a></p>
+                        <li><a href="./rs_index.html">- 운항 별 예약자 조회</a></li>
+                        <li><a href="./rs_sch.html">- 예약자 명 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav4"><a href="#">고객관리</a></p>
+                        <li><a href="../cm/cm_list.html">- 고객 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav5"><a href="#">유실물 관리</a></p>
+                        <li><a href="../item/item.html">- 유실물 조회</a></li>
+                        <li><a href="../item/itemadd.html">- 유실물 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav6"><a href="../notice/notice.html">공지사항</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav7"><a href="#">문의</a></p>
+                        <li><a href="../inquiry/qna_main.html">- Q&A 관리</a></li>
+                        <li><a href="../inquiry/faq_main.html">- FAQ 관리</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav8"><a href="../event/evn_ing.html">이벤트</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav9"><a href="#">나비 포인트</a></p>
+                        <li><a href="../point/pointadd.html">- 지니 포인트 등록</a></li>
+                        <li><a href="../point/usepointlist.html">- 포인트 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav10"><a href="#">지니 쿠폰</a></p>
+                        <li><a href="../coupon/couponadd.html">- 지니 쿠폰 발급</a></li>
+                        <li><a href="../coupon/usecouponlist.html">- 지니 쿠폰 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav11"><a href="#">지니 매거진</a></p>
+                        <li><a href="../magazine/genieList.html">- 매거진 등록</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contents">
+                <div class="contwrap">
+                    <div class="search">
+                        <p class="title">운항편(LJ438) 예약자 조회</p>
+                    </div>
+                    <div class="searchwrap">
+                        <!-- 예약자 리스트 -->
+                        <div class="rs_list">
+                            <table>
+                                <tr class="table_tit">
+                                    <th>항공기 아이디</th>
+                                    <th>운항편</th>
+                                    <th>출발 일자</th>
+                                    <th>출발지</th>
+                                    <th>출발 시간</th>
+                                    <th>도착지</th>
+                                    <th>도착 시간</th>
+                                </tr>
+                                <tr>
+                                    <td>B777-200ER</td>
+                                    <td>LJ438</td>
+                                    <td>2022-01-30</td>
+                                    <td>서울/김포(GMP)</td>
+                                    <td>08:20</td>
+                                    <td>제주(CJU)</td>
+                                    <td>09:10</td>
+                                </tr>
+                                <tr class="table_tit">
+                                    <th>수용 좌석수</th>
+                                    <th>예약된 좌석</th>
+                                    <th>예약 가능 좌석수</th>
+                                    <th>비행시간</th>
+                                    <th>가격</th>
+                                    <th colspan="2">나비포인트</th>
+                                </tr>
+                                <tr>
+                                    <td>180</td>
+                                    <td>148</td>
+                                    <td>32</td>
+                                    <td>00시간 50분</td>
+                                    <td>32,000원</td>
+                                    <td colspan="2">2%</td>
+                                </tr>
+                            </table>
+                            <table class="table_list">
+                                <tr class="table_tit">
+                                    <th>예약 번호</th>
+                                    <th>성명</th>
+                                    <th>좌석 번호</th>
+                                    <th>이메일</th>
+                                    <th>생년월일</th>
+                                    <th>연락처</th>
+                                    <th>회원여부</th>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q32D</a></td>
+                                    <td><a href="./rs_user_info.html">홍길동(HONG GILDONG)</a></td>
+                                    <td><a href="./rs_user_info.html">B2</a></td>
+                                    <td><a href="./rs_user_info.html">dongdong@naver.com</a></td>
+                                    <td><a href="./rs_user_info.html">1996-10-22</a></td>
+                                    <td><a href="./rs_user_info.html">010-0000-0000</a></td>
+                                    <td><a href="./rs_user_info.html">○</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q33D</a></td>
+                                    <td><a href="./rs_user_info.html">한효주(HAN HYOJU)</a></td>
+                                    <td><a href="./rs_user_info.html">A2</a></td>
+                                    <td><a href="./rs_user_info.html">hansworld@naver.com</a></td>
+                                    <td><a href="./rs_user_info.html">2001-09-15</a></td>
+                                    <td><a href="./rs_user_info.html">010-0000-0000</a></td>
+                                    <td><a href="./rs_user_info.html">○</a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q34D</a></td>
+                                    <td><a href="./rs_user_info.html">배애리(BAE AEIL)</a></td>
+                                    <td><a href="./rs_user_info.html">A3</a></td>
+                                    <td><a href="./rs_user_info.html">berry@daum.net</a></td>
+                                    <td><a href="./rs_user_info.html">1969-08-28</a></td>
+                                    <td><a href="./rs_user_info.html">010-1234-5678</a></td>
+                                    <td><a href="./rs_user_info.html">x</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q35D</a></td>
+                                    <td><a href="./rs_user_info.html">손흥민(SON HEUNGMIN)</a></td>
+                                    <td><a href="./rs_user_info.html">C11</a></td>
+                                    <td><a href="./rs_user_info.html">superstar@gmail.com</a></td>
+                                    <td><a href="./rs_user_info.html">1995-01-21</a></td>
+                                    <td><a href="./rs_user_info.html">010-0000-0000</a></td>
+                                    <td><a href="./rs_user_info.html">○</a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q36D</a></td>
+                                    <td><a href="./rs_user_info.html">김연아(KIM YEONA</a></td>
+                                    <td><a href="./rs_user_info.html">D2</a></td>
+                                    <td><a href="./rs_user_info.html">icequeen@naver.com</a></td>
+                                    <td><a href="./rs_user_info.html">1988-08-17</a></td>
+                                    <td><a href="./rs_user_info.html">010-0123-4567</a></td>
+                                    <td><a href="./rs_user_info.html">○</a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./rs_user_info.html">11Q37D</a></td>
+                                    <td><a href="./rs_user_info.html">김연경(KIM YEONKYONG)</a></td>
+                                    <td><a href="./rs_user_info.html">A9</a></td>
+                                    <td><a href="./rs_user_info.html">yeon@naver.com</a></td>
+                                    <td><a href="./rs_user_info.html">1965-03-25</a></td>
+                                    <td><a href="./rs_user_info.html">010-1345-8679</a></td>
+                                    <td><a href="./rs_user_info.html">x</a></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="rs_list_page">
+                                <a href="#" class="page_num current_page">1</a>
+                                <a href="#" class="page_num">2</a>
+                                <a href="#" class="page_num">3</a>
+                                <a href="#" class="page_num">4</a>
+                                <a href="#" class="page_num">5</a>
+                                <a href="#" class="nextpage pbtn">
+                                    <img src="../img/one_arrow.png" alt="다음 페이지" />
+                                </a>
+                            </div>
+                            <!-- 예약자 리스트 -->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -141,7 +141,7 @@ header{
     justify-content: space-between;
     height: 35px;
 }
-.contents > .contwrap > .event > .title{
+.contents > .contwrap .event > .title{
     font-size: 1.1 rem; 
     font-weight: 700;
     display: inline;
@@ -152,22 +152,12 @@ header{
     padding: 15px;
 }
 
-.contents > .contwrap > .event_wrap > .event_kind {
-    border-collapse: collapse;
-    border-top: 2px solid #888;
+.contents > .contwrap > .event_wrap > .event_add {
     width: 100%;
-    height: 35px;
+    margin-top: 10px;
 }
 
-.contents > .contwrap > .event_wrap .current_list {
-    background-color: rgb(145, 0, 70);
-}
-
-.contents > .contwrap > .event_wrap .current_list > a {
-    color: #fff !important;
-}
-
-.contents > .contwrap > .event_wrap > .event_list {
+.contents > .contwrap > .event_wrap > .event_add table {
     margin: 0 auto;
     margin-top: 30px;
     width: 100%;
@@ -178,31 +168,142 @@ header{
     color: #444;
 }
 
-.contents > .contwrap > .event_wrap > .event_list th {
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: middle;
-    background-color: #f2f2f2;
-    border-top: 0.7px solid #888;
-    border-bottom: 0.7px solid #888;
+.file-upload {
+    display: inline;
 }
 
-.contents > .contwrap > .event_wrap > .event_list td {
-    height: 40px;
+.file-upload label {
+    padding: .5em .3em;
+    font-weight: lighter;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #BDD600;    
+    width: 100px;
+    height: 35px;
+    margin-left: 8px;
+}
+
+.file-upload input[type="file"] {  /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+.contents > .contwrap > .event_wrap > .event_view table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 16px;
+    table-layout: fixed;
+}
+
+.contents > .contwrap > .event_wrap > .event_view table .textbox {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+}
+
+.contents > .contwrap > .event_wrap > .event_view table .textbox::placeholder {
+    color: #BDD600;
+}
+
+.contents > .contwrap > .event_wrap > .event_view .event_content {
+    vertical-align: middle;
+    width: 100%;
+    height: 350px;
+    resize: none;
+    padding: 5px;
+}
+
+.contents > .contwrap > .event_wrap > .event_view table .event_content::placeholder {
+    color: #BDD600;
+}
+
+.contents > .contwrap > .event_wrap > .event_view th {
+    padding: 5px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.contents > .contwrap > .event_wrap > .event_view th.right {
+    text-align: center;
+}
+
+.contents > .contwrap > .event_wrap > .event_view div.tit {
     font-weight: bold;
 }
+
+.contents > .contwrap > .event_wrap > .event_view th.botbor {
+    border-bottom: 1.5px solid #888; opacity: 0.7;
+}
+
+.contents > .contwrap > .event_wrap > .event_view th .evndate {
+    font-size: 12px;
+}
+
+.contents > .contwrap > .event_wrap > .event_view th .evndate p {
+    display: inline;
+}
+
+.contents > .contwrap > .event_wrap > .event_view td {
+    padding: 5px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.contents > .contwrap > .event_wrap > .event_view td.content_txt {
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #888; opacity: 0.7;
+}
+
+.contents > .contwrap > .event_wrap > .event_view td.content_txt .bottT {
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.8);
+}
+
+.contents > .contwrap > .event_wrap > .event_view td.file > img {
+    display: block; 
+    margin: auto;
+    width: 330px;
+    height: 300px;
+}
+
+.contents > .contwrap > .event_wrap > .event_view td input[type=text] {
+    width: 750px;
+}
+
 
 .contents > .contwrap > .event_wrap > .event_list .last_list {
     border-bottom: 0.7px solid #888;
 }
 
-.contents > .contwrap > .event_wrap > .event_wirte_butt {
+.contents > .contwrap > .event_wrap > .event_view .butt {
     margin-top: 10px;
     width: 100px;
     height: 35px;
-    float: right;
+    margin: 5px;
     background-color: #BDD600;
     border: none;
+    vertical-align: middle;
+    float: right;
+}
+
+.contents > .contwrap > .event_wrap > .event_view .canc_btn {
+    background-color: #fff;
+    border: 3px solid #BDD600;
 }
 
 .event_wrap .event_list_page {
@@ -243,4 +344,58 @@ header{
 .event_wrap .event_list_page a.page_num:hover {
     background-color: rgb(188, 216, 53);
     color: #fff;
+}
+
+
+/* 모달창 이벤트 삭제*/
+#modal_isdelete {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    display: none;
+}
+#modal_isdelete > #modal_isdelete_content {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border: 8px solid rgb(188, 216, 53);
+    background-color: #fff;
+    text-align: center;
+}
+
+#modal_isdelete > #modal_isdelete_content > #modal_isdelete_title {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#modal_isdelete > #modal_isdelete_content button {
+    margin: 10px;
+    margin-top: 0;
+    width: 80px;
+    height: 50px;
+    border: none;
+    background-color: rgb(188, 216, 53);
+}
+
+#modal_isdelete > #modal_isdelete_content button.uncomplete {
+    margin: 10px;
+    margin-top: 0;
+    width: 80px;
+    height: 50px;
+    border: 5px solid rgb(188, 216, 53);
+    background-color: #fff;
+}
+
+#modal_isdelete > #modal_isdelete_content button.complete:hover {
+    color: #fff;
+}
+
+
+#modal_isdelete p.text {
+    width: 60%;
+    margin: 0 auto;
 }

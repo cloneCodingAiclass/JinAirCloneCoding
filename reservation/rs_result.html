@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>운항 스케줄 | 운항 스케줄 등록</title>
-    <link rel="stylesheet" href="./css/rs_index.css">
+    <link rel="stylesheet" href="./css/rs_result.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/rs_index.js"></script>
 </head>
@@ -96,11 +96,66 @@
                         </div>
                         <div class="searchwrap_b">
                             <p>검색기간</p>
-                            <p><input type="date" name="start_date" id="start_date" class="searchbox yelgcolor" required>
+                            <p><input type="date" name="start_date" id="end_date" class="searchbox yelgcolor" required>
                             <input type="date" name="end_date" id="end_date" class="searchbox yelgcolor" required/></p>
                         </div>
                         <p><input type="submit" value="검색" class="searchbox yelgback searchbutt" onclick="location.href='rs_result.html'"></p>
                     </div>
+                <!-- 예약자 리스트 -->
+                <div class="search mg_top">
+                    <p class="title">조회 결과</p>
+                </div>
+                <div class="rs_list">
+                    <table>
+                    <tr class="table_tit">
+                        <th>운항편</th>
+                        <th>출발 일자</th>
+                        <th>출발지</th>
+                        <th>출발 시간</th>
+                        <th>도착지</th>
+                        <th>도착 시간</th>
+                        <th>예약자 / 수용 좌석수</th>
+                    </tr>
+                    <tr>
+                        <td><a href="./rs_user.html">LJ438</a></td>
+                        <td><a href="./rs_user.html">2022-01-28</a></td>
+                        <td><a href="./rs_user.html">서울/김포(GMP)</a></td>
+                        <td><a href="./rs_user.html">08:20</a></td>
+                        <td><a href="./rs_user.html">제주(CJU)</a></td>
+                        <td><a href="./rs_user.html">09:10</a></td>
+                        <td><a href="./rs_user.html">372/380</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./rs_user.html">LJ438</a></td>
+                        <td><a href="./rs_user.html">2022-01-28</a></td>
+                        <td><a href="./rs_user.html">서울/김포(GMP)</a></td>
+                        <td><a href="./rs_user.html">15:20</a></td>
+                        <td><a href="./rs_user.html">제주(CJU)</a></td>
+                        <td><a href="./rs_user.html">16:10</a></td>
+                        <td><a href="./rs_user.html">398/420</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./rs_user.html">LJ438</a></td>
+                        <td><a href="./rs_user.html">2022-01-29</a></td>
+                        <td><a href="./rs_user.html">서울/김포(GMP)</a></td>
+                        <td><a href="./rs_user.html">08:20</a></td>
+                        <td><a href="./rs_user.html">제주(CJU)</a></td>
+                        <td><a href="./rs_user.html">09:10</a></td>
+                        <td><a href="./rs_user.html">372/380</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./rs_user.html">LJ438</a></td>
+                        <td><a href="./rs_user.html">2022-01-29</a></td>
+                        <td><a href="./rs_user.html">서울/김포(GMP)</a></td>
+                        <td><a href="./rs_user.html">15:20</a></td>
+                        <td><a href="./rs_user.html">제주(CJU)</a></td>
+                        <td><a href="./rs_user.html">16:10</a></td>
+                        <td><a href="./rs_user.html">398/420</a></td>
+                        <td></td>
+                    </tr>
+                    </table>
+                    <!-- 예약자 리스트 -->
                 </div>
             </div>
         </div>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 | 진행중인 이벤트</title>
+    <link rel="stylesheet" href="./css/evn_edit.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/evn_edit.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_inner">
+                <div class="img"></div><span>관리자 센터</span>
+            </div>
+        </header>
+        <div id="container">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <p class="nav1"><a href="../admin_main.html">메인페이지</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav2"><a href="#">운항스케줄</a></p>
+                        <li><a href="../schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
+                        <li><a href="../schedule/sc_list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="../schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav3"><a href="#">예약 조회</a></p>
+                        <li><a href="../reservation/rs_index.html">- 운항 별 예약자 조회</a></li>
+                        <li><a href="../reservation/rs_sch.html">- 예약자 명 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav4"><a href="#">고객관리</a></p>
+                        <li><a href="../cm/cm_list.html">- 고객 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav5"><a href="#">유실물 관리</a></p>
+                        <li><a href="../item/item.html">- 유실물 조회</a></li>
+                        <li><a href="../item/itemadd.html">- 유실물 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav6"><a href="../notice/notice.html">공지사항</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav7"><a href="#">문의</a></p>
+                        <li><a href="../inquiry/qna_main.html">- Q&A 관리</a></li>
+                        <li><a href="../inquiry/faq_main.html">- FAQ 관리</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav8"><a href="./evn_ing.html">이벤트</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav9"><a href="#">나비 포인트</a></p>
+                        <li><a href="../point/pointadd.html">- 지니 포인트 등록</a></li>
+                        <li><a href="../point/usepointlist.html">- 포인트 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav10"><a href="#">지니 쿠폰</a></p>
+                        <li><a href="../coupon/couponadd.html">- 지니 쿠폰 발급</a></li>
+                        <li><a href="../coupon/usecouponlist.html">- 지니 쿠폰 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav11"><a href="#">지니 매거진</a></p>
+                        <li><a href="../magazine/genieList.html">- 매거진 등록</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contents">
+                <div class="contwrap">
+                    <div class="event_wrap">
+                        <div class="event">
+                            <p class="title">이벤트</p>
+                        </div>
+                        <div class="event_edit">
+                            <form action="#">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:85%;">
+                                        <col style="width:15%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th class="botbor"><input type="text" class="tit" value="[이벤트]제주면세점 진에어 회원혜택"></input><div class="evndate">
+                                        <th class="right botbor">등록일 <p class="wrdate">2022-01-28</p></th>
+                                    </tr>
+                                    <tr>
+                                        <td>이벤트 기간<input type="date" name="start_date" id="start_date" class="evndate" required> ~ 
+                                        <input type="date" name="end_date" id="end_date"class="evndate" required/></td>
+                                        <td class="file_wrap"><input type="text" placeholder="파일첨부">
+                                            <div class="file-upload">
+                                                <label for="ex_file" class="ex_file">찾아보기</label>
+                                                <input type="file" id="ex_file">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content_txt" colspan="2">
+                                            <img src="../img/event.jpg" alt="이벤트사진">
+                                            <textarea  name="event_content" class="event_content">유의사항 본 프로모션은 진에어 홈페이지 회원 대상으로 진행됩니다.
+본 프로모션은 당사 또는 제휴사 사정에 의하여 사전 고지 없이 변경 및 조기 종료될 수 있습니다.
+면세할인 쿠폰은 제주관광공사 인터넷면세점 가입 후 '마이페이지 > 쿠폰 > 쿠폰 바로 등록'을 통해 등록할 수 있습니다.
+면세할인 쿠폰은 면세점 회원 기준 1인 1매 사용가능하며 일부 품목 및 브랜드는 쿠폰 사용이 제한될 수 있습니다.</textarea>
+                                            <p class="bottT">Fly, better fly Jin Air</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="butt_wrap" colspan="2">
+                                            <input type="button" value="수정 완료" class="butt edit_btn">
+                                            <input type="button" value="취소" class="butt canc_btn">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal_iseditcancel">
+                <div id="modal_iseditcancel_content">
+                    <div id="modal_iseditcancel_title"><p class="text">이벤트 수정을 취소하시겠습니까?</p></div>
+                    <div>
+                        <button class="modal_iseditcancel_btn cancuncomplete">취소</button>
+                        <button class="modal_iseditcancel_btn canccomplete">계속 수정</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal_isedit">
+                <div id="modal_isedit_content">
+                    <div id="modal_isedit_title"><p class="text">이벤트수정을 하시겠습니까?</p></div>
+                    <div>
+                        <button class="modal_isedit_btn uncomplete">취소</button>
+                        <button class="modal_isedit_btn complete">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
