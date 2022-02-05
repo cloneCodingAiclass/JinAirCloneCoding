@@ -134,7 +134,7 @@
                     <div class="contents_box">
                         <div id="itemadd_title">유실물 등록</div>
                         <div id="itemadd_contents">
-                            <form action="#">
+                            <form action="./item.html">
                                 <table>
                                     <tr>
                                         <td>항공편</td>
@@ -143,15 +143,32 @@
                                                 type="text"
                                                 name="aircraft_name"
                                                 id="aircraft_name"
+                                                placeholder="(예) 항공편명 LJ"
                                             />
                                         </td>
                                         <td>물품 유형</td>
                                         <td>
-                                            <input
-                                                type="text"
-                                                name="item_type"
-                                                id="item_type"
-                                            />
+                                            <select name="" id="item_list">
+                                                <option value="" selected>전체</option>
+                                                <option value="">가방</option>
+                                                <option value="">기타 전자제품</option>
+                                                <option value="">노트북/테블릿</option>
+                                                <option value="">담배</option>
+                                                <option value="">도서</option>
+                                                <option value="">모자</option>
+                                                <option value="">배게/담요</option>
+                                                <option value="">시계</option>
+                                                <option value="">식품</option>
+                                                <option value="">신발</option>
+                                                <option value="">안경/선글라스</option>
+                                                <option value="">액세서리</option>
+                                                <option value="">의류</option>
+                                                <option value="">이어폰/휴대폰</option>
+                                                <option value="">주류</option>
+                                                <option value="">자갑</option>
+                                                <option value="">화장품</option>
+                                                <option value="">기타</option>
+                                              </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -165,11 +182,13 @@
                                         </td>
                                         <td>도착지 공항</td>
                                         <td>
-                                            <input
-                                                type="text"
-                                                name="arrival_airport"
-                                                id="arrival_airport"
-                                            />
+                                            <select name="arrival_airport_list" id="arrival_airport_list">
+                                                <option value="" selected>전체</option>
+                                                <option value="">인천</option>
+                                                <option value="">김포</option>
+                                                <option value="">부산</option>
+                                                <option value="">제주</option>
+                                              </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -192,7 +211,7 @@
                                     </tr>
                                 </table>
                                 <div id="form_btn">
-                                    <input type="submit" value="등록" />
+                                    <a href="./item.html"><input type="button" value="취소" /></a> <input type="submit" value="등록" />
                                 </div>
                             </form>
                         </div>
