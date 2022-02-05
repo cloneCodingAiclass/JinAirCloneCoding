@@ -98,4 +98,40 @@ $(function () {
         $('.nav11').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     })
 
+    $(()=> {
+        $(".coupon_btn").on('click', () => {
+            $("#modal_isfind").fadeIn();
+        })
+        $(".complete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+        $(".uncomplete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+    })
+
+    $(()=> {
+        $(".del_btn").on('click', () => {
+            $("#modal_isfind").fadeIn();
+        })
+        $(".complete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+        $(".uncomplete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+    })
+
+    $(()=> {
+        $(".edit_btn").on('click', () => {
+            $("#modal_isfind").fadeIn();
+        })
+        $(".complete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+        $(".uncomplete").on('click', () => {
+            $("#modal_isfind").fadeOut();
+        })
+    })
+
 });

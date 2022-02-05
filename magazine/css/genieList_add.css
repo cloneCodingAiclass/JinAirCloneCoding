@@ -130,31 +130,6 @@ header{
     margin-bottom: 20px;
 }
 
-#container > .contents > .contents_sch{
-    width: 1000px;
-    display: flex;
-    justify-content: right;
-    font-size: 0.8rem;
-    line-height: 30px;
-}
-#container > .contents > .contents_sch > p input[type="text"]{
-    width: 150px;
-    height: 30px;
-} 
-#container > .contents > .contents_sch > p input[type="button"]{ 
-    width: 100px;
-    height: 30px;
-    background-color:#BDD600;
-    clear: both;
-    border: 0;
-    font-size: 0.8rem;
-    margin-right: 20px;
-} 
-#container > .contents > .contents_sch > .btn_top input[type="button"]{
-    width: 150px;
-    height: 40px;
-    background-color:#BDD600;
-}
 #container > .contents > .contents_main{
     width: 1000px;
     border-top: 1px solid black;
@@ -164,25 +139,65 @@ header{
     margin-bottom: 20px;
     font-size: 0.8rem;
 }
-#container > .contents > .contents_main .point_tp{
-    display: flex;
-    
-}
 #container > .contents > .contents_main tr:first-child{
     background-color: #F2F2F2;
     height: 40px;
 }
 #container > .contents > .contents_main tr:first-child td{
-    width: 222px;
+    width: 322px;
     border-bottom: 1px solid black;
+    font-weight: bold;
 }
 #container > .contents > .contents_main tr td{
     height: 30px;
 }
-#container > .contents > .btn_box{
+
+#container > .contents > .contents_main > .file_add{
     width: 1000px;
-    display: flex;
-    justify-content: right;
+    height: 50px;
+}
+
+#container > .contents > .btn_box {
+    width: 100px;
+    height: 30px;
+    background-color:#BDD600;
+    clear: both;
+    border: 0;
     font-size: 0.8rem;
-    line-height: 30px;
+    margin-right: 20px;
+}
+
+
+.item_list_page {
+    width: 1000px;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.item_list_page a {
+    display: inline-block;
+    margin-right: 10px;
+}
+.item_list_page a.pbtn {
+    margin: 0;
+    display: inline-block;
+    padding: 7px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;
+}
+.item_list_page a.pbtn img {
+    width: 35px;
+}
+.item_list_page a.page_num {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+.item_list_page a.current_page {
+    width: 25px;
+    color: #fff;
+    background-color: rgb(145, 0, 70);
 }

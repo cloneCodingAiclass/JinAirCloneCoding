@@ -70,7 +70,73 @@
                 </nav>
             </div>
             <div class="contents">
-                
+                <p class="title">지니 포인트 등록</p>
+                <div class="contents_main">
+                    <div class="point_tap">
+                        <div class="point_op">
+                        <p>구분
+                        <select class="point_box" id="select_box" name="selectbox">
+                            <option value="" selected="selected">구분</option>
+                            <option value="이륙 지원 보상">이륙 지원 보상</option>
+                            <option value="이벤트 당첨">이벤트 당첨</option>
+                            <option value="우수 회원">우수 회원</option>
+                            <option value="공모전 수상">공모전 수상</option>
+                            <option value="직접 입력">직접 입력</option>
+                        </select>
+                        <input type="button" value="적용" class="btn_op">
+                        </div>
+                        </p>
+                        <div class="user_sch">
+                            <p  class="point_p">고객조회</p>
+                            아이디<input type="text" class="id_sch">
+                            <input type="button" value="조회" class="btn_op">
+                        </div>
+                        <div class="rs_sch">
+                            <p class="point_p">예약자 조회</p>
+                            <p>구분
+                                <select class="point_box" name="selectbox" id="select_box">
+                                    <option value="국내">국내</option>
+                                    <option value="국외">국외</option>
+                                </select>
+                            </p>
+                            <p>출발일
+                                    <input type="date" class="point_box">
+                                <select name="selectbox" class="point_date">
+                                    <option>PUS -> ICN 08:20</option>
+                                    <option>PUS -> CJU 09:00</option>
+                                    <option>ICN -> CJU 09:20</option>
+                                    <option>GMP -> PUS 10:20</option>
+                                    <option>CJU -> CJJ 10:50</option>
+                                </select>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <table class="point_tb">
+                        <tr>
+                            <td class="ckbox">선택</td>
+                            <td>아이디</td>
+                            <td>성명</td>
+                            <td>이메일</td>
+                            <td>생년월일</td>
+                            <td>연락처</td>
+                        </tr>
+                        <tr>
+                            <td class="ckbox"><input type="checkbox"></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn_box">
+                    <p>포인트
+                    <input type="text" class="point_point">
+                    <input type="button" value="적용">
+                    </p>
+                </div>
             </div>
         </div>
     </div>
