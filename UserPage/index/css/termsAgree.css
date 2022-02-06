@@ -684,8 +684,8 @@ body{
     margin: 20px 0;
 }
 .termsAgree_container > .termsAgree_main label{
-    padding-left: 40px;
-    font-size: 0.8rem;
+    padding-left: 30px;
+    font-size: 1rem;
     position: relative; 
     display: inline-block; 
 }
@@ -698,12 +698,13 @@ body{
     word-break: keep-all;
     background: #f7f7f6;
     display: flex;
-    align-items: center;;
+    align-items: center;
 }
 .joinAgree li span{
     font-weight: 700;
     color: #661E43;
     margin-left: 10px;
+    margin-right: 5px;
 }
 .termsAgree_main input[type="checkbox"]{
     display: none;
@@ -776,6 +777,7 @@ body{
 }
 .termsAgree_container .btn{
     text-align: center;
+    margin-top: 40px;
 }
 .termsAgree_container > .btn input[type="button"]{
     width: 200px;

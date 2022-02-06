@@ -98,7 +98,11 @@ $(function () {
         let term3 = $('#term03').is(':checked');
         
         if(term1 && term2 && term3 == true){
-            
+            //api로 넘기기
+            $('.confirm_phone, confirm_ipin').click(function(){
+                let url = "./joinForm.html";
+                $(location).prop('herf', url);
+            });
         }else{
             $('.false_modal').fadeIn(200);
             $('.btn_cancel').click(function(){
