@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입_약관동의 및 본인인증 | 로그인 | 진에어</title>
-    <link rel="stylesheet" href="../css/termsAgree.css">
+    <title>항공권 예매 | 진에어</title>
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../js/find_info.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <ul class="skipnavi"><!--책갈피 역할-->
@@ -20,7 +20,7 @@
             <!--상당 메뉴-->
             <div class="header_sub">
                 <div class="header_wrap">
-                    <h1 class="logo"><a href="./index.html"><img src="../index_img/logo_02.png" alt=""></a></h1>
+                    <h1 class="logo"><a href="./index.html"><img src="./index_img/logo_02.png" alt=""></a></h1>
                     <ul class="login">
                         <li><a href="#">로그인</a><span>|</span><p class="lang">한국(한국어)<span>/ </span>KRW</p><p class="lang_img"></p></li>
                     </ul>
@@ -174,79 +174,6 @@
         <!--header 끝-->
         <!--container-->
         <div id="container">
-            <div class="termsAgree_container">
-                <div class="termsAgree_top">
-                    <p>회원가입</p>
-                </div>
-                <div class="join_step">
-                    <div class="step1">
-                        <p class="step_text">Step1</p>
-                        <p class="step_sub">약관동의 및 본인인증</p>
-                    </div>
-                    <div class="step2">
-                        <p class="step_text">Step2</p>
-                        <p class="step_sub">정보입력</p>
-                    </div>
-                    <div class="step3">
-                        <p class="step_text">Step3</p>
-                        <p class="step_sub">가입완료</p>
-                    </div>
-                </div>
-                <h3>약관동의</h3>
-                <div class="termsAgree_main">
-                    <p><input type="checkbox" name="agreeAll" id="agreeAll"><label for="agreeAll">아래 약관 및 개인정보 수집, 이용 등에 모두 동의 합니다.</label></p>
-                    <ul class="joinAgree">
-                        <li>
-                            <input type="checkbox" name="term01" id="term01" class="terms"><label for="term01"><span>[선택]</span> 홈페이지 이용 약관</label>
-                            <a onclick="showPopupLayer('/member/individual/term01Layer?termCode=01'); return false" class="btnTypeB">상세보기</a>
-                        </li>
-                        
-                        <li>
-                            <input type="checkbox" name="term02" id="term02" class="terms"><label for="term02"><span>[선택]</span> 개인정보 수집 및 이용 관련 동의</label>
-                            <a onclick="showPopupLayer('/policy/02/latest/layer'); return false" class="btnTypeB">상세보기</a>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="term06" id="term06" class="terms"><label for="term06"><span>[선택]</span> 개인정보 국외 이전에 관한 동의</label>
-                            <a onclick="showPopupLayer('/policy/06/latest/layer?wide=true'); return false" class="btnTypeB">
-                            상세보기</a>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="term03" id="term03" class="terms"><label for="term03"><span>[선택]</span> 개인정보 제3자 제공에 대한 안내</label>
-                            <a onclick="showPopupLayer('/policy/03/latest/layer'); return false" class="btnTypeB">상세보기</a>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="term04" id="term04" class="terms"><label for="term04"><span>[선택]</span> 고유식별정보 수집 및 이용 관련 동의</label>
-                            <a onclick="showPopupLayer('/member/individual/term04Layer?termCode=04'); return false" class="btnTypeB">상세보기</a>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="term05" id="term05" class="terms"><label for="term05"><span>[선택]</span> 마케팅 및 광고 활용 동의</label>
-                            <a onclick="showPopupLayer('/member/individual/term05Layer?termCode=05'); return false" class="btnTypeB">상세보기</a>
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="confirm_box">
-                            <h3>본인인증</h3>
-                        <div class="confirm_main">
-                            <div class="confirm_phone">
-                                <p><img src="../index_img/ico_phone.png" alt="휴대폰 인증"></p>
-                                <p><span>휴대폰 본인인증</span><br>본인 명의로 가입된 핸드폰 번호를 통해 인증</p>
-                            </div>
-                            <div class="confirm_ipin">
-                                <p><img src="../index_img/ico_lock.png" alt="아이핀 인증"><p><span>아이핀(I-PIN) 인증</span><br>아이핀으로 인증</p>
-                            </div>
-                            <p class="text">진에어는 『정보통신망 이용촉진 및 정보보호 등에 관한 법률』 제23조의2 (주민등록번호의 사용제한)에 의거하여 고객님의 주민등록번호를 수집·이용하지 않습니다. 이에 대한 본인확인인증수단으로 '휴대폰본인확인서비스'와 '아이핀(I-PIN)인증서비스'를 제공합니다.</p>
-                            <ul class="caution">
-                                <li>- 본인확인서비스는 한국모바일인증㈜ 에서 제공합니다.</li>
-                                <li>- 타인의 개인정보를 도용할 경우 관계법에 의해 처벌될 수 있으며 서비스 이용에 제한이 있을 수 있습니다.</li>
-                                <li>- 가입하신 고객이 개명한 경우 혹은 본인인증에 문제가 있는 경우 고객센터(1600-6200)로 문의 주시기 바랍니다.</li>
-                            </ul>
-                        </div>
-                    </div>                    
-                    <div class="btn">
-                        <input type="button" class="btn_confirm" value="취소" onclick="location.href='joinGate.html'">
-                    </div>
-                </div>
-            </div>
         </div>
         <!--container 끝-->
         <!-- 푸터-->
@@ -306,8 +233,8 @@
                             </ul>
                             <ul class="Aicon"><!--app icon-->
                                 <li class="Aicon_txt">APP 다운로드</li>
-                                <li><a href=""><img src="../index_img/ico_apple.png" alt=""></a></li>
-                                <li><a href=""><img src="../index_img/google.PNG" alt=""></a></li>
+                                <li><a href=""><img src="./index_img/ico_apple.png" alt=""></a></li>
+                                <li><a href=""><img src="./index_img/google.PNG" alt=""></a></li>
                             </ul>
                             <ul class="site">
                                 <li><a href="#"><p class="sit circle">대리점 사이트</p></a></li>
@@ -323,7 +250,7 @@
                                 <li><input type="submit"></li>
                             </ul>
                             <ul>
-                                <li><img src="../index_img/ico_isms.png" alt="인증"></li>
+                                <li><img src="./index_img/ico_isms.png" alt="인증"></li>
                             </ul>
                         </div><!--뉴스레터 끝-->
                         <div id="info"><!--정보-->
@@ -349,6 +276,7 @@
     <!--wrap 끝-->
     <!--퀵 메뉴-->
     <!--퀵 메뉴 끝-->
+
     <div class="modal">
     </div>
 </body>

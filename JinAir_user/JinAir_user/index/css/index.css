@@ -69,12 +69,13 @@ body{
     margin: 0;
     padding: 0;
 }
+
 /* 헤더 */
 #header{
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    position: relative;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
@@ -157,6 +158,7 @@ body{
     top: 3px;
 }
 #header nav{
+    position: fixed;
     top: 47px;
     box-sizing: border-box;
     margin: 0;
@@ -288,7 +290,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 1600px;
+    height: 500px;
 }
 
 /*푸터*/
@@ -557,204 +559,4 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-/* 회원 가입 */
-.termsAgree_container{
-    max-width: 550px;
-    height: 100%;
-    margin: 0 auto;
-}
-.termsAgree_container > h3{
-    margin-top: 35px;
-}
-.termsAgree_container > .termsAgree_top{
-    text-align: center;
-    padding-top: 75px;
-}
-.termsAgree_container > .termsAgree_top p{
-    font-size: 3.5rem;
-    text-align: center;
-    color: #661E43;
-    font-weight: 600;
-}
-.termsAgree_container > .join_step{
-    display: flex;
-    height: 70px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-}
-.termsAgree_container > .join_step > .step1{
-    width: 175px;
-    height: 100%;
-    background-color: #661E43;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.termsAgree_container > .join_step .step1::after{
-    content: "";
-    margin-left: 165px;
-    top: 251px;
-    width: 26px;
-    height: 70px;
-    position: absolute;
-    background: url(../index_img/ico_member.png) -30px -200px;
-}
-.termsAgree_container > .join_step > .step2{
-    width: 175px;
-    padding-left: 25px;
-    height: 100%;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.termsAgree_container > .join_step .step2::after{
-    content: "";
-    margin-left: 139px;
-    top: 251px;
-    width: 26px;
-    height: 70px;
-    position: absolute;
-    background: url(../index_img/ico_member.png) 0 -200px;
-}
-.termsAgree_container > .join_step > .step3{
-    margin-right: 50px;
-    padding-left: 25px;
-    width: 175px;
-    height: 100%;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.termsAgree_container > .join_step .step3::after{
-    content: "";
-    margin-left: 139px;
-    top: 251px;
-    width: 26px;
-    height: 70px;
-    position: absolute;
-    background: url(../index_img/ico_member.png) 0 -200px;
-}
-.termsAgree_container > .join_step .step_text{
-    font-size: 1rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-.termsAgree_container > .join_step .step_sub{
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-.termsAgree_container > .termsAgree_main{
-    margin: 20px 0;
-}
-.termsAgree_container > .termsAgree_main label{
-    padding-left: 40px;
-    font-size: 0.8rem;
-    position: relative; 
-    display: inline-block; 
-    padding-left: 26px; 
-}
-
-.joinAgree li {
-    position: relative;
-    padding: 30px 150px 22px 20px;
-    margin-top: 10px;
-    border: 1px solid #eaeaea;
-    word-break: keep-all;
-    background: #f7f7f6;
-    display: flex;
-    align-items: center;;
-}
-.joinAgree li span{
-    font-weight: 700;
-    color: #661E43;
-    margin-left: 10px;
-}
-.termsAgree_main input[type="checkbox"]{
-    display: none;
-}
-.termsAgree_main input[type="checkbox"] + label{
-    display: inline-block;
-    height: 20px;
-    background: url(../index_img/ico_check.png) no-repeat 0 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-.termsAgree_main input[type="checkbox"]:checked + label{
-    background-position: 0 -20px;
-}
-.joinAgree li .btnTypeB {
-    position:absolute; 
-    right: 20px; top: 50%; 
-    min-width: 1px; 
-    padding: 0 20px;
-    margin-top: -7px;
-}
-
-.confirm_box .confirm_main{
-    margin-top: 20px;
-    text-align: center;
-}
-.confirm_box .confirm_main span{
-    font-weight: 700;
-    color: #661E43;
-    line-height: 40px;
-}
-.confirm_box .confirm_main p{
-    font-weight: 600;
-}
-.confirm_box .confirm_main .confirm_phone{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 180px;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.confirm_box .confirm_main .confirm_ipin{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 180px;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.confirm_box .confirm_main .text{
-    text-align: left;
-    font-weight: 600;
-    line-height: 25px;
-}
-.confirm_box .confirm_main .caution{
-    text-align: left;
-    line-height: 25px;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
-.termsAgree_container .btn{
-    text-align: center;
-}
-.termsAgree_container > .btn input[type="button"]{
-    width: 200px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
 }
