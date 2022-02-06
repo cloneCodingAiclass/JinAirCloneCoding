@@ -593,7 +593,7 @@ body{
 /* 회원가입 */
 
 .joinForm_container{
-    max-width: 550px;
+    max-width: 700px;
     margin: 0 auto;
 }
 .joinForm_top{
@@ -624,7 +624,7 @@ body{
 }
 .joinForm_step .step1::after{
     content: "";
-    margin-left: 163px;
+    margin-left: 172px;
     top: 251px;
     width: 26px;
     height: 70px;
@@ -642,7 +642,7 @@ body{
 }
 .joinForm_step .step2::after{
     content: "";
-    margin-left: 165px;
+    margin-left: 172px;
     top: 251px;
     width: 26px;
     height: 70px;
@@ -661,7 +661,7 @@ body{
 }
 .joinForm_step .step3::after{
     content: "";
-    margin-left: 139px;
+    margin-left: 147px;
     top: 251px;
     width: 26px;
     height: 70px;
@@ -703,7 +703,7 @@ body{
     padding-bottom: 0;
 }
 .joinForm_container table tr:last-child th{
-    width: 150px;
+    width: 235px;
 }
 .joinForm_container table th{
     width: 150px;
@@ -711,6 +711,9 @@ body{
 }
 .joinForm_container table td{
     margin-left: 40px;
+}
+.joinForm_container table .bor_tn th{
+    width: 280px;
 }
 .joinForm_container input[type="text"], [type="password"], select{
     width: 200px;

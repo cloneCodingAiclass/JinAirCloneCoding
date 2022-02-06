@@ -609,3 +609,8 @@ body{
     margin: 30px;
     line-height: 20px;
 }
+
+.joinGate_container > .joinGate_box p:last-child{
+    margin-top:20px;
+    font-weight: 700;
+}

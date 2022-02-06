@@ -688,7 +688,6 @@ body{
     font-size: 0.8rem;
     position: relative; 
     display: inline-block; 
-    padding-left: 26px; 
 }
 
 .joinAgree li {
@@ -725,7 +724,7 @@ body{
     right: 20px; top: 50%; 
     min-width: 1px; 
     padding: 0 20px;
-    margin-top: -7px;
+    margin-top: -20px;
 }
 
 .confirm_box .confirm_main{
@@ -775,7 +774,6 @@ body{
     font-weight: 600;
     font-size: 0.8rem;
 }
-
 .termsAgree_container .btn{
     text-align: center;
 }
@@ -787,4 +785,13 @@ body{
     font-size: 1.1rem;
     font-weight: 700;
     margin-right: 20px;
+}
+.joinAgree .btnTypeB{
+    border: 2px solid #BDD600;
+    height: 40px;
+    font-weight: 700;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
