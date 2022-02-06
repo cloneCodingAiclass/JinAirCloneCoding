@@ -96,3 +96,9 @@ $(function () {
     })
 
 });
+
+$(()=> {
+    $('#ex_file').on('change', function(){
+        $('.filetext').val($('#ex_file').val());
+    });
+});

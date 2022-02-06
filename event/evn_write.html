@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트 | 진행중인 이벤트</title>
+    <title>이벤트 | 이벤트 등록</title>
     <link rel="stylesheet" href="./css/evn_write.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/evn_write.js"></script>
@@ -70,66 +70,48 @@
                 </nav>
             </div>
             <div class="contents">
-                <div class="contwrap">
-                    <div class="event_wrap">
-                        <div class="event">
-                            <p class="title">이벤트 등록</p>
+                <div class="con_wrap">
+                    <form action="#">
+                        <div class="search">
+                            <p class="title">신규 이벤트 등록</p>
                         </div>
-                        <div class="event_add">
-                            <form action="#">
-                                <table>
-                                    <colgroup>
-                                        <col style="width:10%;">
-                                        <col style="width:90%;">
-                                    </colgroup>
-                                    <tr>
-                                        <th>제목</th>
-                                        <td>
-                                            <input type="text" name="event_name" id="event_name" class="textbox" placeholder="제목을 입력하세요."/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>파일첨부</th>
-                                        <td>
-                                            <input type="text" name="file_name" id="file_name" class="textbox" placeholder="파일을 선택하세요."/>
-                                            <div class="file-upload">
-                                                <label for="ex_file" class="ex_file">찾아보기</label>
-                                                <input type="file" id="ex_file">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>이벤트 기간</th>
-                                        <td>
-                                            <p><input type="date" name="start_date" id="start_date" class="datebox" required> ~ 
-                                            <input type="date" name="end_date" id="end_date"class="datebox" required/></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>내용</th>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <textarea name="event_content" class="event_content" maxlength="400" placeholder="내용을 입력하세요."></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="butt_wrap" colspan="2">
-                                            <input type="submit" value="등록" class="butt write_btn">
-                                            <input type="submit" value="취소" class="butt canc_btn">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </form>
+                        <table>
+                            <colgroup>
+                                <col width="1000">
+                            </colgroup>
+                            <tr>
+                                <th style="text-align: left;"><input type="text" placeholder="제목을 입력하세요"></th>
+                            </tr>
+                            <tr>
+                                <td class="calandfile">
+                                    <div>
+                                        이벤트 기간<input type="date" name="start_date" id="start_date" class="evndate" required> ~ <input type="date" name="end_date" id="end_date"class="evndate" required/>
+                                    </div>
+                                    <div class="file-upload">
+                                        <input type="text" placeholder="파일첨부" class="filetext">
+                                        <label for="ex_file" class="ex_file">찾아보기</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea style="resize: none;" placeholder="내용을 입력하세요."></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="footer">
+                            <input type="button" value="취소" class="canc_btn btn_notice">
+                            <input type="submit" value="등록" class="write_btn btn_notice">
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div id="modal_iscancel">
                 <div id="modal_iscancel_content">
                     <div id="modal_iscancel_title"><p class="text">이벤트 등록을 취소하시겠습니까?</p></div>
                     <div>
-                        <button class="modal_iscancel_btn uncomplete">취소</button>
+                        <button class="modal_iscancel_btn uncomplete" onclick="location.href='./evn_ing.html'">취소</button>
                         <button class="modal_iscancel_btn complete">계속 작성</button>
                     </div>
                 </div>
@@ -139,7 +121,7 @@
                     <div id="modal_iswrite_title"><p class="text">이벤트를 등록하시겠습니까?</p></div>
                     <div>
                         <button class="modal_iswrite_btn uncomplete">취소</button>
-                        <button class="modal_iswrite_btn complete" onclick="location.href='./evn_view.html'">등록</button>
+                        <button class="modal_iswrite_btn complete" onclick="location.href='./evn_ing.html'">등록</button>
                     </div>
                 </div>
             </div>

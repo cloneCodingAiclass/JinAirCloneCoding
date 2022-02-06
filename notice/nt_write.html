@@ -79,12 +79,16 @@
                             <col width="1000">
                         </colgroup>
                         <tr>
-                            <th style="text-align: left;"><input type="text" value="제목을 입력하세요"></th>
+                            <th style="text-align: left;"><input type="text" placeholder="제목을 입력하세요"></th>
                         </tr>
                         <tr>
                             <td colspan="1">
-                                <p  class="fileadd" style="text-align: right;"><span>파일첨부</span><label for="ex_file">찾아보기</label><input type="file" id="ex_file"></p>
-                                <textarea style="resize: none;">내용을 입력하세요.</textarea>
+                                <div class="file-upload">
+                                    <input type="text" placeholder="파일첨부" class="filetext">
+                                    <label for="ex_file" class="ex_file">찾아보기</label>
+                                    <input type="file" id="ex_file">
+                                </div>
+                                <textarea style="resize: none;" placeholder="내용을 입력하세요."></textarea>
                             </td>
                         </tr>
                     </table>
