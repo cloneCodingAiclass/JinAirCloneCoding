@@ -98,17 +98,17 @@ $(function () {
         $('.nav10').parent().siblings().find('li').css({"display":"none"});
         $('.nav10').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     })
-
-    $(()=> {
-        $(".coupon_btn").on('click', () => {
-            $("#modal_isfind").fadeIn();
-        })
-        $(".complete").on('click', () => {
-            $("#modal_isfind").fadeOut();
-        })
-        $(".uncomplete").on('click', () => {
-            $("#modal_isfind").fadeOut();
-        })
-    })
-
 });
+
+$(()=> {
+    $('#modal_isfind').hide();
+    $(".coupon_btn").on('click', () => {
+        $("#modal_isfind").fadeIn();
+    })
+    $(".complete").on('click', () => {
+        $("#modal_isfind").fadeOut();
+    })
+    $(".uncomplete").on('click', () => {
+        $("#modal_isfind").fadeOut();
+    })
+})

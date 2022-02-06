@@ -123,7 +123,6 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-
 #container > .contents .title{ 
     clear: both;
     font-size: 1.1rem; 
@@ -132,123 +131,162 @@ header{
 }
 #container > .contents > .contents_main > .contents_sch{
     width: 1000px;
+    border-top: 1px solid grey;
     background-color: #F2F2F2;
     height: 50px;
     text-align: center;
-    line-height: 40px;
+    line-height: 50px;
 }
-#container > .contents > .contents_main > .contents_sch > .coupon_box{
-    width: 100px;
-    height: 25px;
+#container > .contents > .contents_main > .contents_sch input{
+    font-size: 14px;
+    font-weight: 900;
+}
+#container > .contents > .contents_main > .contents_sch .coupon_box{
+    width: 120px;
+    height: 26px;
     margin-left: 10px;
     text-align: center;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 900;
+    margin-left: 10px;
 }
-#container > .contents > .contents_main > .contents_sch > .coupon_btn{
+#container > .contents > .contents_main > .contents_sch .coupon_box1{
+    text-align: center;
+    width: 16px;
+    height: 26px;
+    border: none;
+    background-color: #F2F2F2;
+    outline: none;
+}
+#container > .contents > .contents_main > .contents_sch .coupon_box2{
+    text-align: center;
+    width: 150px;
+    height: 26px;
+}
+#container > .contents > .contents_main > .contents_sch .coupon_box4{
+    text-align: center;
+    width: 150px;
+    height: 26px;
+    margin-left: 10px;
+}
+#container > .contents > .contents_main > .contents_sch .coupon_box3{
+    text-align: center;
+    width: 70px;
+    height: 26px;
+    margin-left: 10px;
+}
+#container > .contents > .contents_main > .contents_sch .coupon_btn{
     width: 100px;
-    height: 30px;
+    height: 26px;
     background-color:#BDD600;
+    border-radius: 2px;
     clear: both;
     border: 0;
     font-size: 0.8rem;
     margin-right: 20px;
+    cursor: pointer;
 }
 
-#container > .contents > .contents_main{
+.contents_main > .coupon_tb{
     width: 1000px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     text-align: center;
+    border-bottom: 1px solid grey;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-}
-
-#container > .contents > .contents_main > .coupon_tb tr td{
+    font-size: 14px;
     font-weight: bold;
-    height: 30px;
 }
-
-#container > .contents > .contents_main > .coupon_tb tr:first-child{
-    background-color: #F2F2F2;  
+.contents_main > .coupon_tb tr{
     height: 40px;
 }
-#container > .contents > .contents_main > .coupon_tb tr:first-child td{
-    width: 222px;
-    border-bottom: 1px solid black;
+.contents_main > .coupon_tb tr:nth-child(1){
+    background-color: #F2F2F2;
+    border-bottom: 1px solid grey;
 }
 
-.contents_main .item_list_page {
-    padding: 10px 0 0;
+.footer{
+    margin-top: 15px;
+    width: 1000px;
+    height: 30px;
+}
+.footer > .center{
+    display: flex;
+    justify-content: center;
+}
+.footer table{
+    display: inline-block;
     text-align: center;
+    font-size: 12px;
+    font-weight: bolder;
 }
-.contents_main .item_list_page a {
-    display: inline-block;
-    margin-right: 10px;
-}
-.contents_main .item_list_page a.pbtn {
-    margin: 0;
-    display: inline-block;
-    padding: 7px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0;
-}
-.contents_main .item_list_page a.pbtn img {
-    width: 35px;
-}
-.contents_main .item_list_page a.page_num {
-    display: inline-block;
+.footer table td{
     width: 25px;
     height: 25px;
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
+    border: 1px solid rgb(187, 187, 187);
+    padding-top: 2px;
 }
-.contents_main .item_list_page a.current_page {
-    width: 25px;
-    color: #fff;
-    background-color: rgb(145, 0, 70);
+.footer table td:nth-child(11){
+    background: url(../../img/right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(12){
+    background: url(../../img/double_right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(1){
+    background-color: rgb(124,0,72);
+}
+.footer table td:nth-child(1) > a{
+    color:white
+}
+.footer table td:hover{
+    background-color: #bdd600;
+}
+.footer table td:hover a{
+    color:white
 }
 
+/* 모달 */
 #modal_isfind {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #modal_isfind > #modal_isfind_content {
     width: 400px;
     height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-    border: 8px solid rgb(188, 216, 53);
+    margin: 0 auto 30px;
+    padding-top: 20px;
+    border-radius: 5px;
+    border: 3px solid #BDD600;
     background-color: #fff;
     text-align: center;
+    font-size: 16px;
+    font-weight: 900;
 }
 #modal_isfind > #modal_isfind_content > #modal_isfind_title {
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 #modal_isfind > #modal_isfind_content button {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100px;
+    height: 40px;
+    background-color:#BDD600;
     border: none;
-    background-color: rgb(188, 216, 53);
+    border-radius: 2px ;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
 }
 #modal_isfind > #modal_isfind_content .uncomplete {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
-    border: none;
-    background-color: #F2F2F2;
-}
-
-#modal_isfind > #modal_isfind_content button:hover {
-    color: #fff;
+    border: 3px solid #BDD600;
+    background-color: #fff;
 }

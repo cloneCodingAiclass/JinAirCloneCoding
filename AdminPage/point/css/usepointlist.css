@@ -154,9 +154,11 @@ header{
     border: 1px solid grey;
     text-indent: 10px;
     font-size: 12px;
-    color: grey;
+    font-weight: bolder;
+    color: black;
     position: relative;
     bottom: 1px;
+    outline: none;
 }
 .contents > .con_wrap > .search > form > input[type="submit"]{
     text-align: center;
