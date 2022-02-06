@@ -79,6 +79,36 @@ header{
     font-size: 17px;
     font-weight: 900;
 }
+.header_inner .logout{
+    display: flex;
+    position: fixed;
+    right: 130px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.header_inner .logout p{
+    padding-top: 6px;
+    margin-right: 3px;
+}
+.header_inner .logout .nim{
+    width: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    font-size: 14px;
+    font-weight: bolder;
+}
+.header_inner .logout input[type="button"]{
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #BDD600;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+}
+
 /* 사이드 메뉴 */
 #container{
     display: flex;
