@@ -132,60 +132,92 @@ header{
     width: 125px;
 }
 
-#container > .contents > .contwrap{
+#container > .contents > .con_wrap{
     width: 1000px;
 }
-
-.contents > .contwrap > .event{
+.contents > .con_wrap .search{
     display: flex;
     justify-content: space-between;
     height: 35px;
 }
-.contents > .contwrap .event > .title{
-    font-size: 1.1 rem; 
+.contents > .con_wrap .search > .title{
+    font-size: 1.1rem; 
     font-weight: 700;
     display: inline;
     align-self:flex-start;
 }
-
-.contents > .contwrap > .event_wrap {
-    padding: 15px;
-}
-
-.contents > .contwrap > .event_wrap > .event_add {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contents > .contwrap > .event_wrap > .event_add table {
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 100%;
-    border-collapse: collapse;
+.contents > .con_wrap table{
+    margin-top: 5px;
+    width: 1000px;
     text-align: center;
-    line-height: 1.2;
-    font-size: 16px;
-    color: #444;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: bold;
 }
-
-.file-upload {
+.contents > .con_wrap table tr:nth-child(1){
+    height: 40px;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid grey;
+}
+.contents > .con_wrap table tr:nth-child(1){
+    text-indent: 10px;
+}
+.contents > .con_wrap table tr:nth-child(1) input{
+    text-indent: 5px;
+    width: 980px;
+    height: 24px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: #F2F2F2;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.calandfile{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    vertical-align: middle;
+    padding: 5px 10px 3px;
+}
+.evndate:first-child {
+    margin-left: 15px;
+}
+.evndate{
     display: inline;
+    font-size: 11px;
+    font-weight: bolder;
+    text-indent: 3px;
+    height: 26px;
+    outline: none;
 }
-
+.file-upload{
+    text-align: right;
+}
+.file-upload input[type="text"]{
+    width: 250px;
+    height: 26px;
+    font-size: 11px;
+    font-weight: 900;
+    text-indent: 7px;
+    outline: none;
+}
 .file-upload label {
-    padding: .5em .3em;
-    font-weight: lighter;
+    padding: 6px 3px;
     display: inline-block;
     line-height: normal;
     vertical-align: middle;
     text-align: center;
     background-color: #BDD600;    
-    width: 100px;
-    height: 35px;
-    margin-left: 8px;
+    width: 80px;
+    height: 26px;
+    margin-left: 3px;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
 }
-
-.file-upload input[type="file"] {  /* 파일 필드 숨기기 */
+.file-upload input[type="file"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -195,217 +227,123 @@ header{
     clip:rect(0,0,0,0);
     border: 0;
 }
-
-.contents > .contwrap > .event_wrap > .event_add table {
-    margin: 0 auto;
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    line-height: 1.2;
-    font-size: 16px;
-    table-layout: fixed;
-}
-
-.contents > .contwrap > .event_wrap > .event_add table .textbox {
-    width: 100%;
-    height: 35px;
-    padding: 5px;
-}
-
-.contents > .contwrap > .event_wrap > .event_add table .textbox::placeholder {
-    color: #BDD600;
-}
-
-.contents > .contwrap > .event_wrap > .event_add .event_content {
-    vertical-align: middle;
-    width: 100%;
+.contents > .con_wrap table textarea{
+    width: 980px;
     height: 350px;
-    resize: none;
+    margin-top: 4px;
+    border: 1px solid rgb(199, 199, 199);
+    outline: none;
     padding: 5px;
 }
-
-.contents > .contwrap > .event_wrap > .event_add table .event_content::placeholder {
-    color: #BDD600;
+.footer{
+    margin-top: 15px;
+    width: 1000px;
+    height: 30px;
 }
-
-.contents > .contwrap > .event_wrap > .event_add th {
-    padding: 5px;
-    font-weight: bold;
-    vertical-align: middle;
-    text-align: left;
+.footer .btn_notice{
+    display: inline-block;
+    position: relative;
+    left: 820px;
 }
-
-.contents > .contwrap > .event_wrap > .event_add td {
-    padding: 5px;
-    font-weight: bold;
-    vertical-align: middle;
-    text-align: left;
-}
-
-.contents > .contwrap > .event_wrap > .event_add td input[type=text] {
-    width: 750px;
-}
-
-
-.contents > .contwrap > .event_wrap > .event_list .last_list {
-    border-bottom: 0.7px solid #888;
-}
-
-.contents > .contwrap > .event_wrap > .event_add .butt {
-    margin-top: 10px;
-    width: 100px;
-    height: 35px;
-    margin: 5px;
-    background-color: #BDD600;
+.footer .btn_notice{
+    text-align: center;
+    width: 80px;
+    height: 30px;
     border: none;
-    vertical-align: middle;
-    float: right;
+    border-radius: 2px;
+    background-color: #BDD600;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
-
-.contents > .contwrap > .event_wrap > .event_add .canc_btn {
-    background-color: #fff;
+.footer .canc_btn{
     border: 3px solid #BDD600;
-}
-
-.event_wrap .event_list_page {
-    padding: 10px 0 0;
-    text-align: center;
-}
-.event_wrap .event_list_page a {
-    display: inline-block;
-    margin-right: 5px;
-}
-.event_wrap .event_list_page a.pbtn {
-    margin: 0;
-    display: inline-block;
-    padding: 3px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0;
-}
-.event_wrap .event_list_page a.pbtn img {
-    width: 25px;
-    border: 1px solid #888;
-}
-.event_wrap .event_list_page a.page_num {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #888;
-}
-.event_wrap .event_list_page a.current_page {
-    width: 25px;
-    color: #fff !important;
-    background-color: rgb(145, 0, 70);
-}
-
-.event_wrap .event_list_page a.page_num:hover {
-    background-color: rgb(188, 216, 53);
-    color: #fff;
+    background-color: white;
 }
 
 /* 모달창 이벤트 등록*/
 #modal_iswrite {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #modal_iswrite > #modal_iswrite_content {
     width: 400px;
     height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-    border: 8px solid rgb(188, 216, 53);
+    margin: 0 auto 30px;
+    padding-top: 30px;
+    border-radius: 5px;
+    border: 3px solid #BDD600;
     background-color: #fff;
     text-align: center;
+    font-size: 18px;
+    font-weight: 900;
 }
-#modal_iswrite > #modal_iswrite_content > #modal_iswrite_title {
+#modal_iswrite_title {
     margin-top: 50px;
     margin-bottom: 100px;
 }
 #modal_iswrite > #modal_iswrite_content button {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100px;
+    height: 40px;
+    background-color:#BDD600;
     border: none;
-    background-color: rgb(188, 216, 53);
+    border-radius: 2px ;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
 }
 
 #modal_iswrite > #modal_iswrite_content button.uncomplete {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
-    border: 5px solid rgb(188, 216, 53);
+    border: 3px solid #BDD600;
     background-color: #fff;
-}
-
-#modal_iswrite > #modal_iswrite_content button.complete:hover {
-    color: #fff;
-}
-
-
-#modal_iswrite p.text {
-    width: 60%;
-    margin: 0 auto;
 }
 
 /* 모달창 이벤트 등록 취소*/
 #modal_iscancel {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #modal_iscancel > #modal_iscancel_content {
     width: 400px;
     height: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-    border: 8px solid rgb(188, 216, 53);
+    margin: 0 auto 30px;
+    padding-top: 30px;
+    border-radius: 5px;
+    border: 3px solid #BDD600;
     background-color: #fff;
     text-align: center;
+    font-size: 18px;
+    font-weight: 900;
 }
-#modal_iscancel > #modal_iscancel_content > #modal_iscancel_title {
+#modal_iscancel_title {
     margin-top: 50px;
     margin-bottom: 100px;
 }
 
 #modal_iscancel > #modal_iscancel_content button {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
+    font-size: 14px;
+    font-weight: 900;
+    width: 100px;
+    height: 40px;
+    background-color:#BDD600;
     border: none;
-    background-color: rgb(188, 216, 53);
+    border-radius: 2px ;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
 }
 
 #modal_iscancel > #modal_iscancel_content button.uncomplete {
-    margin: 10px;
-    margin-top: 0;
-    width: 80px;
-    height: 50px;
-    border: 5px solid rgb(188, 216, 53);
+    border: 3px solid #BDD600;
     background-color: #fff;
-}
-
-#modal_iscancel > #modal_iscancel_content button.complete:hover {
-    color: #fff;
-}
-
-
-#modal_iscancel p.text {
-    width: 60%;
-    margin: 0 auto;
 }

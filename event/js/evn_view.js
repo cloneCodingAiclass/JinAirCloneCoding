@@ -103,13 +103,11 @@ $(() => {
 
 
 $(()=> {
+    $('#modal_isdelete').hide();
     $(".canc_btn").on('click', () => {
         $("#modal_isdelete").fadeIn();
     })
     $(".uncomplete").on('click', () => {
-        $("#modal_isdelete").fadeOut();
-    })
-    $(".complete").on('click', () => {
         $("#modal_isdelete").fadeOut();
     })
 });

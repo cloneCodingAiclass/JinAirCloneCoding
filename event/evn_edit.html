@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트 | 진행중인 이벤트</title>
+    <title>이벤트 | 이벤트 수정</title>
     <link rel="stylesheet" href="./css/evn_edit.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/evn_edit.js"></script>
@@ -83,16 +83,19 @@
                                         <col style="width:15%;">
                                     </colgroup>
                                     <tr>
-                                        <th class="botbor"><input type="text" class="tit" value="[이벤트]제주면세점 진에어 회원혜택"></input><div class="evndate">
+                                        <th class="botbor"><input type="text" class="tit" value="[이벤트]제주면세점 진에어 회원혜택">
                                         <th class="right botbor">등록일 <p class="wrdate">2022-01-28</p></th>
                                     </tr>
                                     <tr>
-                                        <td>이벤트 기간<input type="date" name="start_date" id="start_date" class="evndate" required> ~ 
-                                        <input type="date" name="end_date" id="end_date"class="evndate" required/></td>
-                                        <td class="file_wrap"><input type="text" placeholder="파일첨부">
-                                            <div class="file-upload">
-                                                <label for="ex_file" class="ex_file">찾아보기</label>
-                                                <input type="file" id="ex_file">
+                                        <td class="calandfile" colspan="2">
+                                            <div>
+                                                이벤트 기간<input type="date" name="start_date" id="start_date" class="evndate" required> ~ <input type="date" name="end_date" id="end_date"class="evndate" required/>
+                                            </div>
+                                            <div><input type="text" placeholder="파일첨부" class="filetext">
+                                                <div class="file-upload">
+                                                    <label for="ex_file" class="ex_file">찾아보기</label>
+                                                    <input type="file" id="ex_file">
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -102,17 +105,16 @@
                                             <textarea  name="event_content" class="event_content">유의사항 본 프로모션은 진에어 홈페이지 회원 대상으로 진행됩니다.
 본 프로모션은 당사 또는 제휴사 사정에 의하여 사전 고지 없이 변경 및 조기 종료될 수 있습니다.
 면세할인 쿠폰은 제주관광공사 인터넷면세점 가입 후 '마이페이지 > 쿠폰 > 쿠폰 바로 등록'을 통해 등록할 수 있습니다.
-면세할인 쿠폰은 면세점 회원 기준 1인 1매 사용가능하며 일부 품목 및 브랜드는 쿠폰 사용이 제한될 수 있습니다.</textarea>
-                                            <p class="bottT">Fly, better fly Jin Air</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="butt_wrap" colspan="2">
-                                            <input type="button" value="수정 완료" class="butt edit_btn">
-                                            <input type="button" value="취소" class="butt canc_btn">
+면세할인 쿠폰은 면세점 회원 기준 1인 1매 사용가능하며 일부 품목 및 브랜드는 쿠폰 사용이 제한될 수 있습니다.
+
+Fly, better fly Jin Air</textarea>
                                         </td>
                                     </tr>
                                 </table>
+                                <div class="footer">
+                                    <input type="button" value="취소" class="butt canc_btn">
+                                    <input type="button" value="수정 완료" class="butt edit_btn">
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -120,10 +122,12 @@
             </div>
             <div id="modal_iseditcancel">
                 <div id="modal_iseditcancel_content">
-                    <div id="modal_iseditcancel_title"><p class="text">이벤트 수정을 취소하시겠습니까?</p></div>
+                    <div id="modal_iseditcancel_title">
+                        <p class="text">이벤트 수정을 취소하시겠습니까?</p>
+                    </div>
                     <div>
-                        <button class="modal_iseditcancel_btn cancuncomplete">취소</button>
-                        <button class="modal_iseditcancel_btn canccomplete">계속 수정</button>
+                        <button class="modal_iseditcancel_btn canccomplete">취소</button>
+                        <button class="modal_iseditcancel_btn cancuncomplete">진행</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +136,7 @@
                     <div id="modal_isedit_title"><p class="text">이벤트수정을 하시겠습니까?</p></div>
                     <div>
                         <button class="modal_isedit_btn uncomplete">취소</button>
-                        <button class="modal_isedit_btn complete">확인</button>
+                        <button class="modal_isedit_btn complete" onclick="location.href='./evn_view.html'">수정</button>
                     </div>
                 </div>
             </div>

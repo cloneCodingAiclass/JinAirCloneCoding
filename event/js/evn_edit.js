@@ -103,6 +103,7 @@ $(() => {
 
 
 $(()=> {
+    $('#modal_iseditcancel').hide();
     $(".canc_btn").on('click', () => {
         $("#modal_iseditcancel").fadeIn();
     })
@@ -115,13 +116,17 @@ $(()=> {
 });
 
 $(()=> {
+    $('#modal_isedit').hide();
     $(".edit_btn").on('click', () => {
         $("#modal_isedit").fadeIn();
-    })
-    $(".complete").on('click', () => {
-        location.href='./evn_view.html';
     })
     $(".uncomplete").on('click', () => {
         $("#modal_isedit").fadeOut();
     })
+});
+
+$(()=> {
+    $('#ex_file').on('change', function(){
+        $('.filetext').val($('#ex_file').val());
+    });
 });

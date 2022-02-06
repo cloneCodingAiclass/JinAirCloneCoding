@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트 | 진행중인 이벤트</title>
+    <title>이벤트 | 이벤트 상세보기</title>
     <link rel="stylesheet" href="./css/evn_view.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/evn_view.js"></script>
@@ -97,14 +97,12 @@
                                             <p class="bottT">Fly, better fly Jin Air</p>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="butt_wrap" colspan="2">
-                                            <input type="button" value="목록" class="butt list_btn" onclick="location.href='./evn_ing.html'">
-                                            <input type="button" value="삭제" class="butt canc_btn">
-                                            <input type="button" value="수정" class="butt write_btn" onclick="location.href='./evn_edit.html'">
-                                        </td>
-                                    </tr>
                                 </table>
+                                <div class="footer">
+                                    <input type="button" value="목록" class="butt list_btn" onclick="location.href='./evn_ing.html'">
+                                    <input type="button" value="삭제" class="butt canc_btn">
+                                    <input type="button" value="수정" class="butt write_btn" onclick="location.href='./evn_edit.html'">
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -115,7 +113,7 @@
                     <div id="modal_isdelete_title"><p class="text">이벤트를 삭제하시겠습니까?</p></div>
                     <div>
                         <button class="modal_isdelete_btn uncomplete">취소</button>
-                        <button class="modal_isdelete_btn complete">삭제</button>
+                        <button class="modal_isdelete_btn complete" onclick="location.href='./evn_ing.html'">삭제</button>
                     </div>
                 </div>
             </div>

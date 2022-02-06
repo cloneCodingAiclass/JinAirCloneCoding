@@ -103,11 +103,9 @@ $(() => {
 
 
 $(()=> {
+    $('#modal_iswrite').hide();
     $(".write_btn").on('click', () => {
         $("#modal_iswrite").fadeIn();
-    })
-    $(".complete").on('click', () => {
-        $("#modal_iswrite").fadeOut();
     })
     $(".uncomplete").on('click', () => {
         $("#modal_iswrite").fadeOut();
@@ -115,13 +113,17 @@ $(()=> {
 })
 
 $(()=> {
+    $('#modal_iscancel').hide();
     $(".canc_btn").on('click', () => {
         $("#modal_iscancel").fadeIn();
     })
     $(".complete").on('click', () => {
-        location.href='./evn_view.html';
-    })
-    $(".uncomplete").on('click', () => {
         $("#modal_iscancel").fadeOut();
     })
+});
+
+$(()=> {
+    $('#ex_file').on('change', function(){
+        $('.filetext').val($('#ex_file').val());
+    });
 });

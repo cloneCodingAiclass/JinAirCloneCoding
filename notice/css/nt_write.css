@@ -165,34 +165,41 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-.contents > .con_wrap > table .fileadd span{
-    position: relative;
-    left: 65px;
-    top: 2px;
-}
-.contents > .con_wrap > table input[type="file"]{
-    display: inline-block;
-    margin: 3px 10px 0;
-    width: 300px;
-    height: 25px;
-    vertical-align: middle;
-    overflow: hidden;
-    border: 1px solid grey;
-    border-radius: 3px;
-}
-.contents > .con_wrap > table label{
-    position: relative;
-    left: 87px;
-    display: inline-block;
-    width: 100px;
-    height: 25px;
-    vertical-align: middle;
-    background-color: #BDD600;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    padding-top: 6px;
+.file-upload{
     margin-top: 3px;
+    text-align: right;
+}
+.file-upload input[type="text"]{
+    width: 250px;
+    height: 26px;
+    font-size: 11px;
+    font-weight: 900;
+    text-indent: 7px;
+    outline: none;
+}
+.file-upload label {
+    padding: 6px 3px;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #BDD600;    
+    width: 80px;
+    height: 26px;
+    margin-left: 3px;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
 }
 .contents > .con_wrap > table textarea{
     width: 980px;
