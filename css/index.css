@@ -88,7 +88,7 @@ body {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
@@ -171,8 +171,7 @@ body {
     top: 3px;
 }
 #header nav {
-    /* fixed -> absolute로 변경 */
-    position: absolute;
+    position: fixed;
     top: 47px;
     box-sizing: border-box;
     margin: 0;
@@ -313,13 +312,12 @@ body {
 #container .w_120 {
     width: 120px;
 }
-#container .w_1054 .visual {
-    margin-top: 20px;
+#container .w_1160 .visual {
+    margin-top: 95px;
 }
-#container .w_1054 .visual img {
+#container .w_1160 .visual img {
     margin: 0 auto;
     margin-top: 20px;
-    margin-left: -60px;
 }
 /***** reservation *****/
 #container #reservation {
