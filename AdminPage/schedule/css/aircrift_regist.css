@@ -129,38 +129,38 @@ header{
     font-weight: 700;
     margin-bottom: 20px;
 }
-#container > .contents > .contents_main{
+#container > .contents .contents_main{
     width: 1000px;
     text-align: center;
     margin-bottom: 20px;
     font-size: 0.8rem;
     font-weight: bold;
 }
-#container > .contents > .contents_main table{
+#container > .contents .contents_main table{
     border-collapse: collapse;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
-#container > .contents > .contents_main tr:nth-child(2n+1){
+#container > .contents .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
 }
-#container > .contents > .contents_main tr {
+#container > .contents .contents_main tr {
     border-top: 1px solid gray;
     height: 40px;
 }
-#container > .contents > .contents_main tr:first-child td{
+#container > .contents .contents_main tr:first-child td{
     width: 333px;
 }
-#container > .contents > .contents_main tr:nth-child(3) td{
+#container > .contents .contents_main tr:nth-child(3) td{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-#container > .contents > .btn_box{
+#container > .contents .btn_box{
     width: 1000px;
     display: flex;
     justify-content: right;
 }
-#container > .contents > .btn_box input[type="button"]{ 
+#container > .contents .btn_box input[type="submit"]{ 
     width: 80px;
     height: 30px;
     background-color:#BDD600;
@@ -172,8 +172,16 @@ header{
     font-size: 0.8rem;
     cursor: pointer;
 }
-#container > .contents > .btn_box input[type="button"]:first-child{ 
+#container > .contents .btn_box input[type="button"]:first-child{ 
+    width: 80px;
+    height: 30px;
     border: 3px solid #BDD600;
     background-color: white;
     font-size: 0.8rem;
+    border-radius: 2px;
+    clear: both;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
 }

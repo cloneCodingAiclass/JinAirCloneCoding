@@ -218,7 +218,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-.modal_container .modal input[type="text"]{
+.modal_container .modal input{
     width: 140px;
     height: 30px;
     margin-left: 20px;

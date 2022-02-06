@@ -92,7 +92,7 @@ header{
     align-items: stretch;
     background-color: rgb(240, 240, 240);
 }
-#container > .contents{
+#container .contents{
     position: fixed;
     top: 40px;
     right: 0;
@@ -123,113 +123,115 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-#container > .contents .title{ 
-    clear: both;
-    font-size: 1.1rem; 
-    font-weight: 700;
-    align-self:flex-start;
+#container .contents > .con_wrap{
+    width: 1000px;
 }
-#container > .contents > .btn_top{
+.contents > .con_wrap > .search{
     display: flex;
     justify-content: space-between;
     height: 35px;
-    width: 1000px;
-    margin-bottom: 3px;
 }
-#container > .contents > .btn_top input[type="button"]{
-    width: 100px;
-    height: 26px;
-    background-color:#BDD600;
-    border-radius: 2px;
-    clear: both;
-    border: 0;
-    margin-right: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    top: 7px;
-}
-#container > .contents > .contents_main{
+.contents > .con_wrap > .search > .title{
+    font-size: 1.1rem; 
+    font-weight: 700;
+    display: inline;
+    align-self:flex-start;
+} 
+.contents > .con_wrap > table{
+    margin-top: 5px;
     width: 1000px;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-#container > .contents > .contents_main table{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
     border-collapse: collapse;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    font-size: 14px;
+    font-weight: bold;
 }
-#container > .contents > .contents_main tr:nth-child(2n+1){
+.contents > .con_wrap > table tr{
+    height: 100px;
+}
+.contents > .con_wrap > table tr:nth-child(1){
     background-color: #F2F2F2;
-    border-bottom: 1px solid gray;
-}
-
-#container > .contents > .contents_main tr {
+    border-bottom: 1px solid grey;
     height: 40px;
 }
-
-#container > .contents > .contents_main tr:first-child td{
-    width: 333px;
+.contents > .con_wrap > table tr:nth-child(1) td:nth-child(2){
+    text-align: left;
+    text-indent: 10px;
 }
-
-#container > .contents > .contents_main tr:nth-child(3) td{
-    border-top: 1px solid gray;
+.file-upload{
+    margin-top: 3px;
+    text-align: left;
+    margin-left: 10px;
 }
-
-#container > .contents > .btn_box{
-    width: 1000px;
-    display: flex;
-    justify-content: right;
+.file-upload .filetext1{
+    margin-left: 20px;
 }
-#container > .contents > .btn_box input[type="button"]{ 
-    width: 140px;
-    height: 30px;
-    background-color:#BDD600;
+.file-upload .filetext2{
+    margin-left: 60px;
+}
+.file-upload .filetext3{
+    margin-left: 48px;
+}
+.file-upload input[type="text"]{
+    width: 350px;
+    height: 26px;
+    font-size: 11px;
+    font-weight: 900;
+    text-indent: 7px;
+    outline: none;
+}
+.file-upload label {
+    padding: 6px 3px;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #BDD600;    
+    width: 80px;
+    height: 26px;
+    margin-left: 3px;
     border-radius: 2px;
-    clear: both;
+    font-size: 12px;
+    cursor: pointer;
+}
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
     border: 0;
-    font-size: 0.8rem;
-    margin-right: 20px;
+}
+
+.footer{
+    margin-top: 15px;
+    width: 1000px;
+    height: 30px;
+    text-align: right;
+}
+.footer input{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color: #BDD600;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
-#container > .contents > .btn_box input[type="button"]:first-child{ 
+.footer input.goback{
     width: 80px;
-    height: 30px;
     border: 3px solid #BDD600;
     background-color: white;
 }
-#container > .contents > .btn_box input[type="button"].list{
-    width: 80px;
-}
-#container > .contents input[type="text"]{
-    width: 100px;
-    outline: none;
-    font-size: 14px;
-    font-weight: 900;
-    text-align: center;
-}
-#container > .contents input[type="date"]{
-    outline: none;
-    font-size: 13px;
-    font-weight: 900;
-}
-#container > .contents select{
-    outline: none;
-    font-size: 14px;
-    font-weight: 900;
-}
-#container > .contents input[type="text"].jinipoint{
-    width: 70px;
-}
-#container > .contents input[type="text"].percent{
-    width: 20px;
-    border: none;
-}
-.modal_container{
+
+
+/* 모달 */
+#modal_isfind{
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     left: 0; right: 0; top: 0; bottom: 0;
@@ -237,22 +239,7 @@ header{
     justify-content: center;
     align-items: center;
 }
-.modal_container .modal p{
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: 900;
-}
-.modal_container .modal p span{
-    color : red;
-    font-size: 17px;
-    font-weight: 900;
-}
-.modal_container .modal p:nth-child(1){
-    margin-top: 26px;
-    font-size: 20px;
-    font-weight: 900;
-}
-.modal_container .modal{
+#modal_isfind .modal{
     width: 500px;
     height: 300px;
     background-color: #fff;
@@ -263,12 +250,14 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    font-weight: 900;
 }
-.modal_container .modal .btn_modal{
+#modal_isfind .modal .btn_modal{
     display: flex;
     justify-content: center;
 }
-.modal_container .modal input[type="submit"]{
+#modal_isfind .modal input[type="submit"]{
     font-size: 14px;
     font-weight: 900;
     width: 100px;
@@ -278,15 +267,17 @@ header{
     border-radius: 2px ;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin: 40px 10px 0;
+    cursor: pointer;
 }
-.modal_container > .modal input[type="button"].btn_cancel{
+#modal_isfind > .modal input[type="button"].uncomplete{
     background-color: white;
     border: 3px solid #BDD600;
-    border-radius: 2px ;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    margin: 40px 10px 0;
     font-size: 14px;
     font-weight: 900;
     width: 100px;
     height: 40px;
+    border-radius: 2px ;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 40px 10px 0;
+    cursor: pointer;
 }

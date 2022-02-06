@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지니매거진 | 지니매거진 목록</title>
-    <link rel="stylesheet" href="./css/genieList.css">
+    <link rel="stylesheet" href="./css/genieList_edit.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/genieList.js"></script>
 </head>
@@ -69,44 +69,62 @@
                     </ul>
                 </nav>
             </div>
-            <div class="contents">
-                <p class="title">지니매거진 수정</p>
-                <div class="contents_main">
-                    <table>
-                        <tr>
-                            <td>제목</td>
-                            <td>VOL.39 매거진(2020년 5월)</td>
-                            <td>등록일 2020-05-01</td>
-                        </tr>
-                    </table>
-                    <div class="file_add">
-                        메인 이미지 파일 첨부
-                        <input type="file">
-                    </div>
-                    <div class="file_add">
-                        퀴즈 파일 첨부
-                        <input type="file">
-                    </div>
-                    <div class="file_add">
-                        매거진 파일첨부
-                        <input type="file">
-                    </div>
-                </div>
-                <div class="btn_box">
-                    <input type="button" value="취소" onClick="location.href='./genieList.html'">
-                    <input type="button" value="수정" class="edit_btn">
+            <form action="./genieList_view.html">
+                <div class="contents">
+                    <div class="con_wrap">
+                        <div class="search">
+                            <p class="title">지니매거진 세부 수정</p>
+                        </div>
+                        <table>
+                            <colgroup>
+                                <col width="100">
+                                <col width="460">
+                                <col width="180">
+                            </colgroup>
+                            <tr>
+                                <td>제목</td>
+                                <td>VOL.39매거진(2020년 5월)</td>
+                                <td>등록일 2020-05-01</td>
+                            </tr>
+                            <tr>
+                                <td  colspan="3" class="file_id">
+                                    <div class="file-upload">
+                                        메인 페이지 파일 첨부
+                                        <input type="text" class="filetext1">
+                                        <label for="ex_file1" class="ex_file">찾아보기</label>
+                                        <input type="file" id="ex_file1">
+                                    </div>
+                                    <div class="file-upload">
+                                        퀴즈 파일 첨부
+                                        <input type="text" class="filetext2">
+                                        <label for="ex_file2" class="ex_file">찾아보기</label>
+                                        <input type="file" id="ex_file2">
+                                    </div>
+                                    <div class="file-upload">
+                                        매거진 파일 첨부
+                                        <input type="text" class="filetext3">
+                                        <label for="ex_file3" class="ex_file">찾아보기</label>
+                                        <input type="file" id="ex_file3">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="footer">
+                            <input type="button" value="뒤로" onclick="history.back()" class="goback">
+                            <input type="button" value="수정 완료" class="edit_btn">
+                        </div>
+                    </div>  
                 </div>
                 <div id="modal_isfind">
-                    <div id="modal_isfind_content">
-                        <div id="modal_isfind_title">수정이 완료되었습니다.
-                        </div>
+                    <div class="modal">
+                        <div id="modal_isfind_title">수정하시겠습니까?</div>
                         <div>
-                            <button class="modal_isfind_btn complete" onclick="location.href='./genieList.html'">예</button>
-                            <button class="modal_isfind_btn uncomplete">아니요</button>
+                            <input type="button" value="취소" class="modal_isfind_btn uncomplete">
+                            <input type="submit" value="수정" class="modal_isfind_btn complete">
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </body>

@@ -123,98 +123,127 @@ header{
     padding-left: 5px;
     width: 125px;
 }
-#container > .contents .title{ 
-    clear: both;
+#container > .contents > .con_wrap{
+    width: 1000px;
+}
+.contents > .con_wrap > .search{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+.contents > .con_wrap > .search > .title{
     font-size: 1.1rem; 
     font-weight: 700;
-    margin-bottom: 20px;
+    display: inline;
+    align-self:flex-start;
+} 
+.contents > .con_wrap > .search > form{
+    display: inline;
+    align-self:flex-end
 }
-
-#container > .contents > .contents_main{
-    width: 1000px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.contents > .con_wrap > .search > form > input[type="text"]{
+    width: 350px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid grey;
+    text-indent: 10px;
+    font-size: 12px;
+    color: grey;
+    position: relative;
+    bottom: 1px;
+}
+.contents > .con_wrap > .search > form > input[type="submit"]{
     text-align: center;
+    width: 100px;
+    height: 26px;
+    border: none;
+    border-radius: 2px;
+    background-color: #BDD600;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.contents > .con_wrap > table{
+    margin-top: 5px;
+    width: 1000px;
+    text-align: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-}
-
-#container > .contents > .contents_main .point_tp{
-    display: flex;
-    
-}
-#container > .contents > .contents_main tr:first-child{
-    background-color: #F2F2F2;
-    height: 40px;
-}
-#container > .contents > .contents_main tr:first-child td{
-    width: 322px;
-    border-bottom: 1px solid black;
+    font-size: 14px;
     font-weight: bold;
 }
-#container > .contents > .contents_main tr td{
-    height: 30px;
+.contents > .con_wrap > table tr{
+    height: 40px;
+}
+.contents > .con_wrap > table tr:nth-child(1){
+    background-color: #F2F2F2;
+    border-bottom: 1px solid grey;
 }
 
-#container > .contents > .contents_main > .file_add input[type="file"]{
-    background-color:#BDD600;
-    border: 0;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-#container > .contents > .btn_box{
+.footer{
+    margin-top: 15px;
     width: 1000px;
+    height: 30px;
+}
+.footer > .center{
     display: flex;
-    justify-content: right;
-    font-size: 0.8rem;
-    line-height: 30px;
+    justify-content: center;
 }
-#container > .contents > .btn_box > .coupon_btn{
-    width: 70px;
-    height: 30px;
-    background-color:#BDD600;
-}
-#container > .contents > .btn_box input[type="button"]{
-    width: 70px;
-    height: 30px;
-    background-color:#BDD600;
-}
-
-.item_list_page {
-    width: 1000px;
-    padding: 10px 0 0;
+.footer table{
+    display: inline-block;
     text-align: center;
+    font-size: 12px;
+    font-weight: bolder;
 }
-.item_list_page a {
-    display: inline-block;
-    margin-right: 10px;
-}
-.item_list_page a.pbtn {
-    margin: 0;
-    display: inline-block;
-    padding: 7px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0;
-}
-.item_list_page a.pbtn img {
-    width: 35px;
-}
-.item_list_page a.page_num {
-    display: inline-block;
+.footer table td{
     width: 25px;
     height: 25px;
-    line-height: 25px;
-    text-align: center;
-    vertical-align: middle;
+    border: 1px solid rgb(187, 187, 187);
+    padding-top: 2px;
 }
-.item_list_page a.current_page {
-    width: 25px;
-    color: #fff;
-    background-color: rgb(145, 0, 70);
+.footer table td:nth-child(11){
+    background: url(../../img/right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(12){
+    background: url(../../img/double_right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(1){
+    background-color: rgb(124,0,72);
+}
+.footer table td:nth-child(1) > a{
+    color:white
+}
+.footer table td:hover{
+    background-color: #bdd600;
+}
+.footer table td:hover a{
+    color:white
+}
+.footer > .notice_write{ 
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+    left: 850px;
+}
+.footer > .notice_write > input{
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color: #BDD600;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
+
+/* 모달 */
 #modal_isfind {
     position: absolute;
     width: 100%;
