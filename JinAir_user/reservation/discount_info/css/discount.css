@@ -301,8 +301,6 @@ body{
 #container {
     position: relative;
     top: 100px;
-    width: 80%;
-    margin: auto;
     height: 2000px;
 }
 
