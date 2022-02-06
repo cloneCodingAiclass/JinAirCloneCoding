@@ -384,6 +384,11 @@ body{
     margin-right: 45px;
 }
 
+#container > .contentswrap > div div {  /*할인내용 박스 크기설정*/
+    width: 80%;
+    height: 100px;
+}
+
 #container > .contentswrap > div .tit_num {    /*할인내용 중 왼쪽 제목 박스 숫자 크기설정 */
     font-size: 5em;
 }
@@ -396,9 +401,8 @@ body{
     font-size: 20px;
 }
 
-#container > .contentswrap > div div {  /*할인내용 오른쪽 박스 크기설정*/
-    width: 80%;
-    height: 100px;
+#container > .contentswrap > div div div{   /*할인내용 오른쪽 박스 위치조정*/
+    margin-top: -40px;
 }
 
 #container > .contentswrap > div div h3 {/*할인 안내 내용 중 제목 크기 설정*/
@@ -455,6 +459,7 @@ body{
 #container > .contentswrap > .discount_family .standard_content ul li:last-child:before {
     content: none;
 }
+
 
 #container > .contentswrap > .discount_family .target_content p, .discount_family .notice_content p {
     padding-bottom: 3px;
