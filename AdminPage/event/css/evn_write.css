@@ -286,7 +286,7 @@ header{
     margin-top: 50px;
     margin-bottom: 100px;
 }
-#modal_iswrite > #modal_iswrite_content button {
+#modal_iswrite > #modal_iswrite_content input {
     font-size: 14px;
     font-weight: 900;
     width: 100px;
@@ -299,7 +299,7 @@ header{
     cursor: pointer;
 }
 
-#modal_iswrite > #modal_iswrite_content button.uncomplete {
+#modal_iswrite > #modal_iswrite_content input.uncomplete {
     border: 3px solid #BDD600;
     background-color: #fff;
 }

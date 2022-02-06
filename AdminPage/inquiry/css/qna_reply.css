@@ -193,12 +193,12 @@ header{
 }
 /* qna main 끝 */ 
 /* qna view 시작 */ 
-#container > .contents > .qustion_table{
+#container > .contents .qustion_table{
     margin-top: 20px;
     width: 1000px;
     font-size: 0.8rem;
 }
-#container > .contents > .qustion_table table{
+#container > .contents .qustion_table table{
     margin-top: 5px;
     width: 1000px;
     text-align: center;
@@ -208,24 +208,24 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-#container > .contents > .qustion_table table tr:first-child{
+#container > .contents .qustion_table table tr:first-child{
     background-color: #F2F2F2;
 }
-#container > .contents > .qustion_table table tr:first-child td{
+#container > .contents .qustion_table table tr:first-child td{
     border-bottom: 1px solid gray;
     height: 40px;
 }
-#container > .contents > .qustion_table table tr:nth-child(1) td:first-child{
+#container > .contents .qustion_table table tr:nth-child(1) td:first-child{
     width: 700px;
     height: 30px;
     text-align: left;
     text-indent: 20px;
 }
-#container > .contents > .qustion_table table tr:nth-child(1) td{
+#container > .contents .qustion_table table tr:nth-child(1) td{
     width: 150px;
     text-align: center;
 }
-#container > .contents > .qustion_table table textarea{
+#container > .contents .qustion_table table textarea{
     width: 980px;
     height: 130px;
     margin-top: 4px;
@@ -236,12 +236,12 @@ header{
     resize: none;
 }
 
-#container > .contents > .answer_table{
+#container > .contents .answer_table{
     margin-top: 20px;
     width: 1000px;
     font-size: 0.8rem;
 }
-#container > .contents > .answer_table table{
+#container > .contents .answer_table table{
     margin-top: 5px;
     width: 1000px;
     text-align: center;
@@ -251,23 +251,23 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-#container > .contents > .answer_table table tr:first-child{
+#container > .contents .answer_table table tr:first-child{
     background-color: #F2F2F2;
 }
-#container > .contents > .answer_table table tr:first-child td{
+#container > .contents .answer_table table tr:first-child td{
     border-bottom: 1px solid gray;
     height: 40px;
 }
-#container > .contents > .answer_table table tr:nth-child(1) td:first-child{
+#container > .contents .answer_table table tr:nth-child(1) td:first-child{
     width: 700px;
     text-align: left;
     text-indent: 20px;
 }
-#container > .contents > .answer_table table tr:nth-child(1) td{
+#container > .contents .answer_table table tr:nth-child(1) td{
     width: 150px;
     text-align: center;
 }
-#container > .contents > .answer_table table textarea{
+#container > .contents .answer_table table textarea{
     width: 980px;
     height: 150px;
     margin-top: 4px;

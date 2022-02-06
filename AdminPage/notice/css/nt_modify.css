@@ -137,7 +137,7 @@ header{
     display: inline;
     align-self:flex-start;
 }
-.contents > .con_wrap > table{
+.contents > .con_wrap table{
     margin-top: 5px;
     width: 1000px;
     text-align: center;
@@ -147,15 +147,15 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-.contents > .con_wrap > table tr:nth-child(1){
+.contents > .con_wrap table tr:nth-child(1){
     height: 40px;
     background-color: #F2F2F2;
     border-bottom: 1px solid grey;
 }
-.contents > .con_wrap > table tr:nth-child(1){
+.contents > .con_wrap table tr:nth-child(1){
     text-indent: 10px;
 }
-.contents > .con_wrap > table tr:nth-child(1) input{
+.contents > .con_wrap table tr:nth-child(1) input{
     text-indent: 5px;
     width: 800px;
     height: 24px;
@@ -165,12 +165,12 @@ header{
     font-size: 14px;
     font-weight: bold;
 }
-.contents > .con_wrap > table .fileadd span{
+.contents > .con_wrap table .fileadd span{
     position: relative;
     left: 65px;
     top: 2px;
 }
-.contents > .con_wrap > table input[type="file"]{
+.contents > .con_wrap table input[type="file"]{
     display: inline-block;
     margin: 3px 10px 0;
     width: 300px;
@@ -180,7 +180,7 @@ header{
     border: 1px solid grey;
     border-radius: 3px;
 }
-.contents > .con_wrap > table label{
+.contents > .con_wrap table label{
     position: relative;
     left: 87px;
     display: inline-block;
@@ -194,7 +194,7 @@ header{
     padding-top: 6px;
     margin-top: 3px;
 }
-.contents > .con_wrap > table textarea{
+.contents > .con_wrap table textarea{
     width: 980px;
     height: 350px;
     margin-top: 4px;

@@ -345,7 +345,7 @@ header{
     margin-bottom: 100px;
 }
 
-#modal_isedit > #modal_isedit_content button {
+#modal_isedit > #modal_isedit_content input {
     font-size: 14px;
     font-weight: 900;
     width: 100px;
@@ -358,7 +358,7 @@ header{
     cursor: pointer;
 }
 
-#modal_isedit > #modal_isedit_content button.uncomplete {
+#modal_isedit > #modal_isedit_content input.uncomplete {
     border: 3px solid #BDD600;
     background-color: #fff;
 }

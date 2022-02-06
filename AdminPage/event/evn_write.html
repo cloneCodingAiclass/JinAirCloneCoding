@@ -10,6 +10,7 @@
     <script src="./js/evn_write.js"></script>
 </head>
 <body>
+    <form action="./evn_ing.html">
     <div id="wrap">
         <header>
             <div class="header_inner">
@@ -71,7 +72,6 @@
             </div>
             <div class="contents">
                 <div class="con_wrap">
-                    <form action="#">
                         <div class="search">
                             <p class="title">신규 이벤트 등록</p>
                         </div>
@@ -102,30 +102,30 @@
                         </table>
                         <div class="footer">
                             <input type="button" value="취소" class="canc_btn btn_notice">
-                            <input type="submit" value="등록" class="write_btn btn_notice">
+                            <input type="button" value="등록" class="write_btn btn_notice">
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div id="modal_iscancel">
-                <div id="modal_iscancel_content">
-                    <div id="modal_iscancel_title"><p class="text">이벤트 등록을 취소하시겠습니까?</p></div>
-                    <div>
-                        <button class="modal_iscancel_btn uncomplete" onclick="location.href='./evn_ing.html'">취소</button>
-                        <button class="modal_iscancel_btn complete">계속 작성</button>
                     </div>
                 </div>
-            </div>
-            <div id="modal_iswrite">
-                <div id="modal_iswrite_content">
-                    <div id="modal_iswrite_title"><p class="text">이벤트를 등록하시겠습니까?</p></div>
-                    <div>
-                        <button class="modal_iswrite_btn uncomplete">취소</button>
-                        <button class="modal_iswrite_btn complete" onclick="location.href='./evn_ing.html'">등록</button>
+                <div id="modal_iscancel">
+                    <div id="modal_iscancel_content">
+                        <div id="modal_iscancel_title"><p class="text">이벤트 등록을 취소하시겠습니까?</p></div>
+                        <div>
+                            <button class="modal_iscancel_btn uncomplete" onclick="location.href='./evn_ing.html'">취소</button>
+                            <button class="modal_iscancel_btn complete">계속 작성</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal_iswrite">
+                    <div id="modal_iswrite_content">
+                        <div id="modal_iswrite_title"><p class="text">이벤트를 등록하시겠습니까?</p></div>
+                        <div>
+                            <input type="button" class="modal_iswrite_btn uncomplete" value="취소">
+                            <input type="submit" class="modal_iswrite_btn complete" value="등록">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
