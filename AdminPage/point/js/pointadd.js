@@ -99,22 +99,33 @@ $(function () {
         $('.nav9').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     })
 
-    $('.user_sch').hide();
+    $('.point_category').hide();
     $('#select_box').change(function() {
+        $('.select_rs').hide();
         let result = $('#select_box option:selected').val();
-        if (result != '이륙 지원 보상') {
-        $('.user_sch').show();
+        if (result == '이륙 지원 보상') {
+        $('.point_category').show();
         } else {
-        $('.user_sch').hide();
+        $('.point_category').hide();
         }
     });
-    $('.rs_sch').hide();
+
     $('#select_box').change(function() {
+        $('.select_user').hide();
         let result = $('#select_box option:selected').val();
-        if (result == ('이륙 지원 보상')) {
-        $('.rs_sch').show();
+        if (result != '이륙 지원 보상') {
+        $('.user_category').show();
         } else {
-        $('.rs_sch').hide();
+        $('.user_category').hide();
         }
-    }); 
+    });
+    $('.select_rs').hide();
+    $('.btn_search').on('click', function() {
+        $('.select_rs').show();
+    });
+
+    $('.select_user').hide();
+    $('.btn_usersearch').on('click', function() {
+        $('.select_user').show();
+    });
 });
