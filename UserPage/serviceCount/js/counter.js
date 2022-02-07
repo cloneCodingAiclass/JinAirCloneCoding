@@ -205,48 +205,10 @@ $(() => {
 })
 
 
-    $(function showCounterTab(obj) {
-        var $target = $(obj).parent();
-        $target.siblings("h3").find("a").removeClass("on");
-        $target.siblings(".list").not($target.next(".list")).stop().slideUp(100);
-        $(obj).toggleClass("on");
-        setTimeout(function() {
-            var contentTop = $target.offset().top - $("#gnb").height();
-            $target.next(".list").stop().slideToggle(100, function() {
-                if($(obj).hasClass('on')) {
-                    $("html, body").stop().animate({scrollTop:contentTop}, 200);
-                }
-            });
-        }, 110);
+/* counter js */
+
+$(() => {
+    $(".counter").on('click', function (e){
+        $('#domestic').addClass('show');
     })
-    
-    $(document).ready(function() {
-        showTab('#international', '.counter');
-    
-        $('#domestic_tab, #international_tab, #city_tab').on('click', changeInfo);
-        changeInfo();
-    });
-    
-    $(window).on('load', function() {
-        if(false) {
-            var contentTop = $('#countryRule').offset().top - $('#gnb').height() - 30;
-            $('html, body').stop().animate({scrollTop: contentTop}, 200);
-        }
-    });
-    
-    $(function changeInfo() {
-        var tabId = $('.tabArea li.choice a').prop('id');
-        if(tabId === 'domestic_tab') {
-            $('#domestic_a').show();
-            $('#international_a').hide();
-            $('#city_a').hide();
-        } else if(tabId === 'international_tab') {
-            $('#domestic_a').hide();
-            $('#international_a').show();
-            $('#city_a').hide();
-        } else if(tabId === 'city_tab') {
-            $('#domestic_a').hide();
-            $('#international_a').hide();
-            $('#city_a').show();
-        }
-    })
+})
