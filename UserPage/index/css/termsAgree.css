@@ -797,3 +797,90 @@ body{
     display: flex;
     align-items: center;
 }
+
+/* 약관 레이아웃 */
+.confirm_modal1{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.confirm_modal2{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.confirm_modal3{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.confirm_modal_box{
+    background-color: white;
+    width: 700px;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #BDD600;
+    font-weight: 600;
+}
+.confirm_modal_box iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.confirm_modal_box .popTitle{
+    width: 700px;
+    height: 100px;
+    background-color: #661E43;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+.confirm_modal_box .popTitle .xbox{
+    cursor: pointer;
+}
+#popWrap{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    line-height: 25px;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+}
+#popWrap h2, h3{
+    margin: 20px 0;
+}
+#popWrap table{
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#popWrap table tr, td, th{
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+#popWrap table td:last-child, th:last-child{
+    border-right: 0;
+}
+#popWrap .point, .point2{
+    color: red;
+    font-weight: 700;
+}
