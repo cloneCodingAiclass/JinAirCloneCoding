@@ -17,6 +17,7 @@
         href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
         <script src="./js/index.js"></script>
+        <script src="./js/index_reserve.js"></script>
     </head>
     <body>
         <ul class="skipnavi">
@@ -212,7 +213,7 @@
                             <div class="pc_select in_bl">
                                 <div class="trip_type w_120 in_bl">
                                     <a href="#">
-                                        <div class="trip_layerbtn open">
+                                        <div class="trip_layerbtn">
                                             <span class="trip_select_opt">
                                                 왕복
                                             </span>
@@ -254,51 +255,91 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="person_type w_120 in_bl">
-                                <a href="#">
-                                    <div class="person_layerbtn">
-                                        <span class="person_select_opt">
-                                            성인
-                                        </span>
-                                        <span class="person_num"></span>
-                                        <span>
-                                            <img
-                                                class="person_down_img"
-                                                src="./index_img/down.png"
-                                                alt="드롭다운"
-                                            />
-                                            <img
-                                                class="person_up_img"
-                                                src="./index_img/up.png"
-                                                alt="드롭업"
-                                            />
-                                        </span>
-                                    </div>
-                                </a>
-                                <ul class="person_pop_layer in_bl">
-                                    <li>
-                                        <span
-                                            role="person-type-option"
-                                            class="person_type1"
-                                            >성인
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span
-                                            role="person-type-option"
-                                            class="person_type2"
-                                            >소아
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span
-                                            role="person-type-option"
-                                            class="person_type3"
-                                            >유아
-                                        </span>
-                                    </li>
-                                </ul>
+                                <div class="person_type w_120 in_bl">
+                                    <a href="#">
+                                        <div class="person_layerbtn">
+                                            <span class="person_select_opt">
+                                                성인
+                                            </span>
+                                            <strong class="person_num">1</strong>
+                                            <span>
+                                                <img
+                                                    class="person_down_img"
+                                                    src="./index_img/down.png"
+                                                    alt="드롭다운"
+                                                />
+                                                <img
+                                                    class="person_up_img"
+                                                    src="./index_img/up.png"
+                                                    alt="드롭업"
+                                                />
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <ul class="person_pop_layer in_bl">
+                                        <li>
+                                            <div class="w_180 in_bl">
+                                                <strong class="num_font" name="adultCnt">1</strong>
+                                                <span
+                                                    role="person-type-option"
+                                                    class="person_type1 person_font"
+                                                    >성인
+                                                </span>
+                                            </div>
+                                            <div class="person_btn in_bl">
+                                                <button class="adult_minus" onclick="personCount('adult', 'minus')">-</button>
+                                                <button class="adult_plus" onclick="personCount('adult', 'plut')">+</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="w_180 in_bl">
+                                                <strong class="num_font" name="childCnt">0</strong>
+                                                <span
+                                                    role="person-type-option"
+                                                    class="person_type2 person_font"
+                                                    >소아
+                                                </span>
+                                                <button class="child_info_btn">
+                                                    <img src="./index_img/ico_question.png" alt="질문">
+                                                </button>
+                                            </div>
+                                            <div class="person_btn in_bl">
+                                                <button class="child_minus" onclick="personCount('child', 'minus')">-</button>
+                                                <button class="child_plus" onclick="personCount('child', 'plut')">+</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="w_180 in_bl">
+                                                <strong class="num_font" name="babyCnt">0</strong>
+                                                <span
+                                                    role="person-type-option"
+                                                    class="person_type3 person_font"
+                                                    >유아
+                                                </span>
+                                                <button class="baby_info_btn">
+                                                    <img src="./index_img/ico_question.png" alt="질문">
+                                                </button>
+                                            </div>
+                                            <div class="person_btn in_bl">
+                                                <button class="baby_minus" onclick="personCount('baby', 'minus')">-</button>
+                                                <button class="baby_plus" onclick="personCount('baby', 'plut')">+</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="submit_btn">
+                                                <button>확인</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cnt_age">
+                                                <a href="#">
+                                                    유/소아 나이 계산기
+                                                    <img src="./img/double_right.png" alt="이동">
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="bonus in_bl">
                                 <a href="#">
@@ -334,6 +375,72 @@
                                         </span>
                                     </div>
                                 </a>
+                                <div class="go_layer">
+                                    <div class="KOR in_bl">
+                                        <h3>한국</h3>
+                                        <ul>
+                                            <li><a href="" class="">서울/인천(ICN)</a></li>
+                                            <li><a href="" class="">서울/김포(GMP)</a></li>
+                                            <li><a href="" class="">부산(PUS)</a></li>
+                                            <li><a href="" class="">제주(CJU)</a></li>
+                                            <li><a href="" class="">청주(CJJ)</a></li>
+                                            <li><a href="" class="">광주(KWJ)</a></li>
+                                            <li><a href="" class="">대구(TAE)</a></li>
+                                            <li><a href="" class="">여수(RSU)</a></li>
+                                            <li><a href="" class="">울산(USN)</a></li>
+                                            <li><a href="" class="">포항(KPO)</a></li>
+                                            <li><a href="" class="">원주(WJU)</a></li>
+                                            <li><a href="" class="">군산(KUV)</a></li>
+                                            <li><a href="" class="">사천(HIN)</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="ENA in_bl">
+                                        <h3>동북아</h3>
+                                        <ul>
+                                            <li><a href="" class="">도쿄/나리타(NRT)</a></li>
+                                            <li><a href="" class="">오사카/간사이(KIX)</a></li>
+                                            <li><a href="" class="">후쿠오카(FUK)</a></li>
+                                            <li><a href="" class="">삿포로(CTS)</a></li>
+                                            <li><a href="" class="">오키나와(OKA)</a></li>
+                                            <li><a href="" class="">기타큐슈(KKJ)</a></li>
+                                            <li><a href="" class="">상하이/푸동(PVG)</a></li>
+                                            <li><a href="" class="">시안(XIY)</a></li>
+                                            <li><a href="" class="">홍콩(HKG)</a></li>
+                                            <li><a href="" class="">마카오(MFM)</a></li>
+                                            <li><a href="" class="">타이베이/타오위안(TPE)</a></li>
+                                            <li><a href="" class="">칭다오(TAO)</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="ESA in_bl">
+                                        <h3>동남아</h3>
+                                        <ul>
+                                            <li><a href="" class="">방콕(BKK)</a></li>
+                                            <li><a href="" class="">푸껫(HKT)</a></li>
+                                            <li><a href="" class="">치앙마이(CNX)</a></li>
+                                            <li><a href="" class="">세부(CEB)</a></li>
+                                            <li><a href="" class="">클락(CRK)</a></li>
+                                            <li><a href="" class="">보라카이/칼리보(KLO)</a></li>
+                                            <li><a href="" class="">다낭(DAD)</a></li>
+                                            <li><a href="" class="">하노이(HAN)</a></li>
+                                            <li><a href="" class="">비엔티안(VTE)</a></li>
+                                            <li><a href="" class="">코타 키나발루(BKI)</a></li>
+                                            <li><a href="" class="">조호르바루(JHB)</a></li>
+                                            <li><a href="" class="nonselect" onclick="return false;">다카(DAC)</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OCE in_bl">
+                                        <h3>대양주</h3>
+                                        <ul>
+                                            <li><a href="" class="">괌(GUM)</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="USA in_bl">
+                                        <h3>미주</h3>
+                                        <ul>
+                                            <li><a href="" class="">하와이, 호놀룰루(HNL)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="arrive_select in_bl">
                                 <a href="#">
@@ -353,6 +460,72 @@
                                                 alt="드롭업"
                                             />
                                         </span>
+                                    </div>
+                                    <div class="arrive_layer">
+                                        <div class="KOR in_bl">
+                                            <h3>한국</h3>
+                                            <ul>
+                                                <li><a href="" class="">서울/인천(ICN)</a></li>
+                                                <li><a href="" class="">서울/김포(GMP)</a></li>
+                                                <li><a href="" class="">부산(PUS)</a></li>
+                                                <li><a href="" class="">제주(CJU)</a></li>
+                                                <li><a href="" class="">청주(CJJ)</a></li>
+                                                <li><a href="" class="">광주(KWJ)</a></li>
+                                                <li><a href="" class="">대구(TAE)</a></li>
+                                                <li><a href="" class="">여수(RSU)</a></li>
+                                                <li><a href="" class="">울산(USN)</a></li>
+                                                <li><a href="" class="">포항(KPO)</a></li>
+                                                <li><a href="" class="">원주(WJU)</a></li>
+                                                <li><a href="" class="">군산(KUV)</a></li>
+                                                <li><a href="" class="">사천(HIN)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ENA in_bl">
+                                            <h3>동북아</h3>
+                                            <ul>
+                                                <li><a href="" class="">도쿄/나리타(NRT)</a></li>
+                                                <li><a href="" class="">오사카/간사이(KIX)</a></li>
+                                                <li><a href="" class="">후쿠오카(FUK)</a></li>
+                                                <li><a href="" class="">삿포로(CTS)</a></li>
+                                                <li><a href="" class="">오키나와(OKA)</a></li>
+                                                <li><a href="" class="">기타큐슈(KKJ)</a></li>
+                                                <li><a href="" class="">상하이/푸동(PVG)</a></li>
+                                                <li><a href="" class="">시안(XIY)</a></li>
+                                                <li><a href="" class="">홍콩(HKG)</a></li>
+                                                <li><a href="" class="">마카오(MFM)</a></li>
+                                                <li><a href="" class="">타이베이/타오위안(TPE)</a></li>
+                                                <li><a href="" class="">칭다오(TAO)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ESA in_bl">
+                                            <h3>동남아</h3>
+                                            <ul>
+                                                <li><a href="" class="">방콕(BKK)</a></li>
+                                                <li><a href="" class="">푸껫(HKT)</a></li>
+                                                <li><a href="" class="">치앙마이(CNX)</a></li>
+                                                <li><a href="" class="">세부(CEB)</a></li>
+                                                <li><a href="" class="">클락(CRK)</a></li>
+                                                <li><a href="" class="">보라카이/칼리보(KLO)</a></li>
+                                                <li><a href="" class="">다낭(DAD)</a></li>
+                                                <li><a href="" class="">하노이(HAN)</a></li>
+                                                <li><a href="" class="">비엔티안(VTE)</a></li>
+                                                <li><a href="" class="">코타 키나발루(BKI)</a></li>
+                                                <li><a href="" class="">조호르바루(JHB)</a></li>
+                                                <li><a href="" class="nonselect" onclick="return false;">다카(DAC)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="OCE in_bl">
+                                            <h3>대양주</h3>
+                                            <ul>
+                                                <li><a href="" class="">괌(GUM)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="USA in_bl">
+                                            <h3>미주</h3>
+                                            <ul>
+                                                <li><a href="" class="">하와이, 호놀룰루(HNL)</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </a>
                             </div>

@@ -79,14 +79,38 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    
-    $('.email_modal').hide();
-    $('.confirm_email').on('click', function(){
-        $('.email_modal').fadeIn(200);
-    });
-
-    $('.btn_cancel').on('click', function(e){
-        $('.email_modal').fadeOut(200);
+    $("body").on('click', function (e) {
         e.stopPropagation();
-    });
+        $('.modal').fadeOut(200);
+    })
+
+    $('.old_booking_list').hide();
+    $(".now_booking").on('click', function () {
+        $(".old_booking_list").css("display","none");
+        $(".old_booking").css("background-color", "white");
+        $(".old_booking").css("color", "#444");
+        $(".now_booking").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".booking_list").css("display","block");
+    })
+    $(".old_booking").on('click', function () {
+        $(".booking_list").css("display","none");
+        $(".now_booking").css("background-color", "white");
+        $(".now_booking").css("color", "#444");
+        $(".old_booking").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".old_booking_list").css("display","block");
+    })
+    $('.pwcheck_modal').hide();
+    $('.edit').click(function(){
+        $('.pwcheck_modal').fadeIn(200);
+        
+        $('.btn_cancel').click(function(){
+            $('.pwcheck_modal').fadeOut(200);
+        })
+    })
 });

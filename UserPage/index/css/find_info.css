@@ -558,59 +558,65 @@ body{
     justify-content: center;
     align-items: center;
 }
-.modal > .email_modal{
-    width: 644px;
+.email_modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.modal > .email_modal > .modal_title{
-    width: 100%;
+.email_modal > .modal_title{
+    width: 645px;
     height: 70px;
     background-color: #661E43;
     text-indent: 20px;
     display: flex;
     align-items: center;
 }
-.modal > .email_modal > .modal_title p{
+.email_modal > .modal_title p{
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
 }
-.modal > .email_modal > .modal_main{
+.email_modal > .modal_main{
     padding: 30px;
     background-color: white;
     height: 450px;
 }
-.modal > .email_modal > .modal_main table{
+.email_modal > .modal_main table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.modal > .email_modal > .modal_main table th{
+.email_modal > .modal_main table th{
     margin-right: 30px;
     font-size: 0.8rem;
     padding-right: 15px;
     line-height: 25px;
     text-align: left;
 }
-.modal > .email_modal > .modal_main p{
+.email_modal > .modal_main p{
     margin-bottom: 20px;
 }
-.modal > .email_modal > .modal_main input[type="text"]{
+.email_modal > .modal_main input[type="text"]{
     border: 1px solid #EDEDED;
     background-color: #F7F7F7;
     width: 230px;
     height: 50px;
     text-indent: 20px;
 }
-.modal > .email_modal > .modal_main input[class="modal_input"]{
+.email_modal > .modal_main input[class="modal_input"]{
     width: 465px;
     margin-top: 20px;
 }
-.modal > .email_modal > .modal_main > .btn{
+.email_modal > .modal_main > .btn{
     margin: 20px;
     text-align: center;
 }
-.modal > .email_modal > .modal_main > .btn input[type="button"]{
+.email_modal > .modal_main > .btn input[type="button"]{
     width: 150px;
     height: 50px;
     background-color:#BDD600;
@@ -618,7 +624,7 @@ body{
     font-size: 1.1rem;
     font-weight: 700;
 }
-.modal > .email_modal > .modal_main > .btn input[type="button"]:last-child{
+.email_modal > .modal_main > .btn input[type="button"]:last-child{
     background-color:white;
     border: 2px solid #BDD600;
 }

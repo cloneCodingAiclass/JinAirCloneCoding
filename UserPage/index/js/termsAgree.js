@@ -97,11 +97,14 @@ $(function () {
         let term2 = $('#term02').is(':checked');
         let term3 = $('#term03').is(':checked');
         
-        if(term1 && term2 && term3 == true){
+        if(term1 && term2 && term3){
             //api로 넘기기
-            $('.confirm_phone, confirm_ipin').click(function(){
-                let url = "./joinForm.html";
-                $(location).prop('herf', url);
+            let url = "../join/joinForm.html";
+            $('.confirm_phone').click(function(){
+                $(location).attr('herf', url);
+            });
+            $('.confirm_ipin').click(function(){
+                $(location).attr('herf', url);
             });
         }else{
             $('.false_modal').fadeIn(200);
@@ -110,4 +113,28 @@ $(function () {
             })
         }
     })
+    $('.confirm_modal1').hide();
+    $('.term01').click(function(){
+        $('.confirm_modal1').fadeIn(200);
+        
+        $('.xbox').click(function(){
+            $('.confirm_modal1').fadeOut(200);
+        })
+    });
+    $('.confirm_modal2').hide();
+    $('.term02').click(function(){
+        $('.confirm_modal2').fadeIn(200);
+        
+        $('.xbox').click(function(){
+            $('.confirm_modal2').fadeOut(200);
+        })
+    });
+    $('.confirm_modal3').hide();
+    $('.term03').click(function(){
+        $('.confirm_modal3').fadeIn(200);
+        
+        $('.xbox').click(function(){
+            $('.confirm_modal3').fadeOut(200);
+        })
+    });
 });

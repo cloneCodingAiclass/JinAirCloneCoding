@@ -88,22 +88,17 @@ $(function () {
 
 // trip-layer
 $(() => {
-    $(".trip_select_opt").on("click", function (e) {
+    $(".trip_layerbtn").on("click", function (e) {
         e.stopPropagation();
+        $(".trip_layerbtn").addClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(145, 0, 70)" });
         $(".trip_down_img").css({ "display": "none" });
         $(".trip_up_img").css({ "display": "inline-block" });
         $(".trip_pop_layer").slideDown("fast");
     })
-    $(".trip_down_img").on("click", function (e) {
+    $(".close").on('click', function(e){
         e.stopPropagation();
-        $(".trip_layerbtn").css({ "color": "rgb(145, 0, 70)" });
-        $(".trip_down_img").css({ "display": "none" });
-        $(".trip_up_img").css({ "display": "inline-block" });
-        $(".trip_pop_layer").slideDown("fast");
-    })
-    $(".trip_up_img").on("click", function (e) {
-        e.stopPropagation();
+        $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
@@ -113,6 +108,7 @@ $(() => {
         e.stopPropagation();
         const text = $(".trip_type1").text();
         $(".trip_select_opt").text(text);
+        $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
@@ -122,6 +118,7 @@ $(() => {
         e.stopPropagation();
         const text = $(".trip_type2").text();
         $(".trip_select_opt").text(text);
+        $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
@@ -131,13 +128,15 @@ $(() => {
         e.stopPropagation();
         const text = $(".trip_type3").text();
         $(".trip_select_opt").text(text);
+        $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
     })
-    $("#container").on('click', function (e) {
+    $("#wrap").on('click', function (e) {
         e.stopPropagation();
+        $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({"color" : "rgb(0, 0, 0)"});
         $(".trip_down_img").css({"display" : "inline-block"});
         $(".trip_up_img").css({"display" : "none"});
@@ -145,58 +144,35 @@ $(() => {
     })
 })
 
-// person-layer
+//person-layer
 $(() => {
-    $(".person_select_opt").on("click", function (e) {
+    $(".person_layerbtn").on("click", function (e) {
         e.stopPropagation();
+        $(".person_layerbtn").addClass('close');
         $(".person_layerbtn").css({ "color": "rgb(145, 0, 70)" });
         $(".person_down_img").css({ "display": "none" });
         $(".person_up_img").css({ "display": "inline-block" });
         $(".person_pop_layer").slideDown("fast");
     })
-    $(".person_down_img").on("click", function (e) {
+    $(".close").on('click', function(e){
         e.stopPropagation();
-        $(".person_layerbtn").css({ "color": "rgb(145, 0, 70)" });
-        $(".person_down_img").css({ "display": "none" });
-        $(".person_up_img").css({ "display": "inline-block" });
-        $(".person_pop_layer").slideDown("fast");
-    })
-    $(".person_up_img").on("click", function (e) {
-        e.stopPropagation();
+        $(".person_layerbtn").removeClass('close');
         $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".person_down_img").css({ "display": "inline-block" });
         $(".person_up_img").css({ "display": "none" });
         $('.person_pop_layer').slideUp(50);
     })
-    $(".person_type1").on("click", function (e) {
+    $(".submit_btn > button").on('click', function (e) {
         e.stopPropagation();
-        const text = $(".person_type1").text();
-        $(".person_select_opt").text(text);
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
+        $(".person_layerbtn").removeClass('close');
+        $(".person_layerbtn").css({"color" : "rgb(0, 0, 0)"});
+        $(".person_down_img").css({"display" : "inline-block"});
+        $(".person_up_img").css({"display" : "none"});
         $('.person_pop_layer').slideUp(50);
     })
-    $(".person_type2").on("click", function (e) {
+    $("#wrap").on('click', function (e) {
         e.stopPropagation();
-        const text = $(".person_type2").text();
-        $(".person_select_opt").text(text);
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
-        $('.person_pop_layer').slideUp(50);
-    })
-    $(".person_type3").on("click", function (e) {
-        e.stopPropagation();
-        const text = $(".person_type3").text();
-        $(".person_select_opt").text(text);
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
-        $('.person_pop_layer').slideUp(50);
-    })
-    $("#container").on('click', function (e) {
-        e.stopPropagation();
+        $(".person_layerbtn").removeClass('close');
         $(".person_layerbtn").css({"color" : "rgb(0, 0, 0)"});
         $(".person_down_img").css({"display" : "inline-block"});
         $(".person_up_img").css({"display" : "none"});
