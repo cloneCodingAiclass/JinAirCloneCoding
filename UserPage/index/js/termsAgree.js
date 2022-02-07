@@ -97,11 +97,14 @@ $(function () {
         let term2 = $('#term02').is(':checked');
         let term3 = $('#term03').is(':checked');
         
-        if(term1 && term2 && term3 == true){
+        if(term1 && term2 && term3){
             //api로 넘기기
-            $('.confirm_phone, confirm_ipin').click(function(){
-                let url = "./joinForm.html";
-                $(location).prop('herf', url);
+            let url = "../join/joinForm.html";
+            $('.confirm_phone').click(function(){
+                $(location).attr('herf', url);
+            });
+            $('.confirm_ipin').click(function(){
+                $(location).attr('herf', url);
             });
         }else{
             $('.false_modal').fadeIn(200);

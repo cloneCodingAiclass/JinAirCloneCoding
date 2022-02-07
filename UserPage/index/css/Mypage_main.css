@@ -288,7 +288,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 700px;
+    height: 1000px;
 }
 
 /*푸터*/
@@ -558,7 +558,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.email_modal{
+
+.pwcheck_modal{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     left: 0; right: 0; top: 0; bottom: 0;
@@ -567,137 +568,200 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.email_modal > .modal_title{
-    width: 645px;
+.pwcheck_modal .pwcheck_title{
+    width: 500px;
     height: 70px;
     background-color: #661E43;
     text-indent: 20px;
     display: flex;
     align-items: center;
-}
-.email_modal > .modal_title p{
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
 }
-.email_modal > .modal_main{
-    padding: 30px;
+.pwcheck_modal .pwcheck_box{
     background-color: white;
-    height: 450px;
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #BDD600;
+    font-weight: 600;
 }
-.email_modal > .modal_main table{
+.pwcheck_modal .pwcheck_box p:nth-child(2){
+    width: 80%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.email_modal > .modal_main table th{
-    margin-right: 30px;
-    font-size: 0.8rem;
-    padding-right: 15px;
-    line-height: 25px;
+    padding: 15px 0;
+    margin: 15px 0;
+
     text-align: left;
-}
-.email_modal > .modal_main p{
-    margin-bottom: 20px;
-}
-.email_modal > .modal_main input[type="text"]{
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    width: 230px;
-    height: 50px;
     text-indent: 20px;
 }
-.email_modal > .modal_main input[class="modal_input"]{
-    width: 465px;
-    margin-top: 20px;
+.pwcheck_modal .pwcheck_box input[type="password"]{
+    width: 250px;
+    height: 50px;
+    text-indent: 20px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
+    margin-left: 20px;
 }
-.email_modal > .modal_main > .btn{
-    margin: 20px;
+/* 마이페이지 메인 */
+.mypage_main{
+    width: 1160px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.mypage_main .mypage_menu{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    display: flex;
+    height: 120px;
+    align-items: center;
     text-align: center;
 }
-.email_modal > .modal_main > .btn input[type="button"]{
+.mypage_main .mypage_menu p{
+    width: 100px;
+    border-right: 1px solid #5f5f5f65;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 25px 0;
+}
+.mypage_main .mypage_menu ul{
+    display: flex;
+}
+.mypage_main .mypage_menu ul li{
+    width: 200px;
+    font-size: 0.9rem;
+    color: #661E43;
+    font-weight: 600;
+    border-right: 1px solid #5f5f5f65;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mypage_main .mypage_menu ul li a:before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background:url(../index_img/ico_subNav.png) no-repeat 0 -40px;
+}
+.mypage_main .mypage_menu ul li.booking a:before{
+    background-position-x: 0;
+}
+.mypage_main .mypage_menu ul li.mypoint a:before{
+    background-position-x:-40px;
+}
+.mypage_main .mypage_menu ul li.coupon a:before{
+    background-position-x:-80px;
+}
+.mypage_main .mypage_menu ul li.qna a:before{
+    background-position-x:-160px;
+}
+.mypage_main .mypage_menu ul li.edit a:before{
+    background-position-x:-200px;
+}
+.menu_title{
+    font-size: 3rem;
+    color: #661E43;
+    margin: 40px 0;
+    font-weight: 600;
+    text-indent: 30px;
+}
+.sub_menu_check ul{
+    display: flex;
+    justify-content: center;
+}
+.sub_menu_check ul li{
+    width: 550px;
+    height: 50px;
+    border-top: 1px solid #661E43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    border-collapse: collapse;
+    margin: 0;
+    box-shadow: 5px 5px 10px -5px #444;
+}
+.sub_menu_check ul li.now_booking{
+    background-color: #661E43;
+    color: white;
+}
+.booking_list ul{
+    margin: 20px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 50px 0;
+}
+.booking_list ul li{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.old_booking_list ul{
+    margin: 20px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 50px 0;
+}
+.old_booking_list ul li{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.sub_text{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+.sub_text p{
+    margin-right: 15px;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+.sub_text a{
+    background-color: #BDD600;
+    width: 130px;
+    height: 40px;
+    margin-top: -10px;
+    padding-top: 13px;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.btn input[class="btn_agree"]{
     width: 150px;
     height: 50px;
     background-color:#BDD600;
     border: 0;
     font-size: 1.1rem;
     font-weight: 700;
+    margin-right: 20px;
+    cursor: pointer;
 }
-.email_modal > .modal_main > .btn input[type="button"]:last-child{
-    background-color:white;
+.btn input[class="btn_cancel"]{
+    width: 150px;
+    height: 50px;
     border: 2px solid #BDD600;
-}
-/* 아이디 비밀번호 찾기 */
-.find_container{
-    display: flex;
-    max-width: 550px;
-    height: 750px;
-    margin: 0 auto;
-    flex-direction: column;
-}
-.find_container > .find_top{
-    padding-top: 75px;
-    width: 100%;
-    height: 165px;
-    border-bottom: 2px solid #F5F5F5;
-}
-.find_container > .find_top p{
-    font-size: 3.5rem;
-    text-align: center;
-    color: #661E43;
-    font-weight: 600;
-}
-.find_container > .find_radio{
-    margin: 20px auto;
+    background-color: white;
     font-size: 1.1rem;
     font-weight: 700;
-}
-.find_container > .find_radio input[class="ckbox"]{
-    display: none;
-}
-.find_container > .find_radio input[class="ckbox"] + label{
-    display: inline-block;
-    margin-right: 40px;
-    background: url(../index_img/ico_radio.png) no-repeat 0 0;
+    margin-right: 20px;
     cursor: pointer;
-    vertical-align: middle;
-    padding-left: 20px !important;
-}
-.find_container > .find_radio input[type=radio].ckbox:checked + label{
-background-position: 0 -18px;
-}
-.find_container > .confirm_box .confirm_email{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 180px;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.find_container > .confirm_box .confirm_kakao{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 180px;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-}
-.find_container > .confirm_box .title_text{
-    color: #661E43;
-    margin: 10px auto;
-    font-size: 1.2rem;
-    font-weight: 800;
-}
-
-.find_container > .confirm_box .sub{
-    font-size: 0.9rem;
-    font-weight: 700;
 }

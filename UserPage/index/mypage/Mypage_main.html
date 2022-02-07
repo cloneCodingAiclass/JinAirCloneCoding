@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 | 진에어</title>
-    <link rel="stylesheet" href="../css/find_info.css">
+    <title>예약 | 진에어</title>
+    <link rel="stylesheet" href="../css/Mypage_main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../js/find_info.js"></script>
+    <script src="../js/Mypage_main.js"></script>
 </head>
 <body>
     <ul class="skipnavi"><!--책갈피 역할-->
@@ -20,9 +20,9 @@
             <!--상당 메뉴-->
             <div class="header_sub">
                 <div class="header_wrap">
-                    <h1 class="logo"><a href="./index.html"><img src="../index_img/logo_02.png" alt=""></a></h1>
+                    <h1 class="logo"><a href="."><img src="../index_img/logo_02.png" alt=""></a></h1>
                     <ul class="login">
-                        <li><a href="#">로그인</a><span>|</span><p class="lang">한국(한국어)<span>/ </span>KRW</p><p class="lang_img"></p></li>
+                        <li><a href="login.html">로그인</a><span>|</span><p class="lang">한국(한국어)<span>/ </span>KRW</p><p class="lang_img"></p></li>
                     </ul>
                     <nav>
                         <ul class="nav_all">
@@ -174,25 +174,40 @@
         <!--header 끝-->
         <!--container-->
         <div id="container">
-            <div class="find_container">
-                <div class="find_top">
-                    <p>아이디/비밀번호 찾기</p>
+            <div class="mypage_main">
+                <div class="mypage_menu">
+                    <p>마이<br>페이지</p>
+                    <ul>
+                        <li class="booking"><a href="./Mypage_main.html">예약조회/변경/취소</a></li>
+                        <li class="mypoint"><a href="#">나의 나비포인트</a></li>
+                        <li class="coupon"><a href="#">나의 할인쿠폰</a></li>
+                        <li class="qna"><a href="#">나의 Q&A</a></li>
+                        <li class="edit"><a href="#">회원정보 수정</a></li>
+                    </ul>
                 </div>
-                <div class="find_radio">
-                    <input type="radio" value="아이디 찾기" class="ckbox" id="id" name="find" checked><label for="id">아이디 찾기</label>
-                    <input type="radio" value="비밀번호 찾기" class="ckbox" id="pw" name="find"><label for="pw">비밀번호 찾기</label>
+                <div class="menu_title">
+                    <p>예약조회/변경/취소</p>
                 </div>
-                <div class="confirm_box">
-                    <div class="confirm_email">
-                        <p><img src="../index_img/ico_email.png" alt="이메일"></p>
-                        <p class="title_text">이메일 인증</p>
-                    </div>
-                    <div class="confirm_kakao">
-                        <p><img src="../index_img/ico_kakao.png" alt="이메일"></p>
-                        <p class="title_text">카카오 인증</p>
-                        <p class="sub">카카오 인증을 통해 진에어 계정 연동 후 본인 인증</p>
-                    </div>
+                <div class="sub_menu_check">
+                    <ul>
+                        <li class="now_booking">예약조회</li>
+                        <li class="old_booking">지난예약</li>
+                    </ul>
                 </div>
+                <div class="booking_list">
+                    <ul>
+                        <li>항공권 예약 내역이 없습니다.</li>
+                    </ul>
+                </div>
+                <div class="old_booking_list">
+                    <ul>
+                        <li>지난 항공권 예약 내역이 없습니다.</li>
+                    </ul>
+                </div>
+                <dir class="sub_text">
+                    <p>* 비회원/고객센터/여행사/외부채널 예약고객</p>
+                    <a herf="#">나의 예약</a>
+                </dir>
             </div>
         </div>
         <!--container 끝-->
@@ -298,30 +313,15 @@
     <!--퀵 메뉴 끝-->
     <div class="modal">
     </div>
-    <div class="email_modal">
-        <div class="modal_title">
-            <p>이메일 인증</p>
+    <div class="pwcheck_modal">
+        <div class="pwcheck_title">
+            <p>비밀번호 확인</p>
         </div>
-        <div class="modal_main">
-            <p>- 회원가입 시 기재한 이름/생년월일/이메일 정보를 입력해 주세요.</p>
-            <p>- 회원가입 여부 확인 시 마스킹 처리된 아이디를 확인하실 수 있습니다.</p>
-            <table>
-                <tr>
-                    <th>이름</th>
-                    <td><input type="text" placeholder="예) 홍">
-                    <input type="text" placeholder="예) 길동"></td>
-                </tr>
-                <tr>
-                    <th>생년월일</th>
-                    <td><input type="text" placeholder="예) 19820626" class="modal_input"></td>
-                </tr>
-                <tr>
-                    <th>이메일 또는 연락처</th>
-                    <td><input type="text" placeholder="예) abcde@gmail.com" class="modal_input"></td>
-                </tr>
-            </table>
+        <div class="pwcheck_box">
+            <p>고객님의 개인정보를 소중하게 보호하려고 노력하고 있으며,<br>회원님의 동의 없이는 회원정보를 제공하지 않습니다.</p>
+            <p>비밀번호 입력 <input type="password"></p>
             <div class="btn">
-                <input type="button" class="btn_confirm" value="확인">
+                <input type="button" class="btn_agree" value="확인">
                 <input type="button" class="btn_cancel" value="취소">
             </div>
         </div>
