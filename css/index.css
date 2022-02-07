@@ -162,7 +162,7 @@ body {
 }
 #header .login > li .lang_img {
     display: inline-block;
-    background: url(./index_img/down.png) no-repeat right;
+    background: url(../img/down.png) no-repeat right;
     background-size: 13px;
     width: 13px;
     height: 13px;
@@ -306,6 +306,9 @@ body {
     width: 1160px;
     margin: 0 auto;
 }
+.w_180 {
+    width: 200px;
+}
 #container .in_bl {
     display: inline-block;
 }
@@ -337,6 +340,9 @@ body {
 #container #reservation .trip_layerbtn {
     text-align: center;
     cursor: pointer;
+    width: 100px;
+    margin-left: 35px;
+    text-align: left;
 }
 #container #reservation .trip_layerbtn span {
     font-weight: bold;
@@ -400,7 +406,7 @@ body {
     margin-bottom: 4px;
 }
 #container #reservation .person_pop_layer {
-    width: 250px;
+    width: 300px;
     margin-left: 30px;
     display: none;
     position: absolute;
@@ -410,17 +416,90 @@ body {
     z-index: 10;
 }
 #container #reservation .person_pop_layer li {
-    text-align: center;
     width: 100%;
-    cursor: pointer;
+    border-bottom: 0.1px solid rgb(153, 153, 153, 0.2);
 }
 #container #reservation .person_pop_layer li span {
     width: 100%;
-    line-height: 2;
+    line-height: 3;
+    vertical-align: middle;
 }
-#container #reservation .person_pop_layer li:hover {
+#container #reservation .person_pop_layer li .num_font {
+    margin-left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #7e0049;
+}
+#container #reservation .person_pop_layer li .person_font {
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #7e0049;
+}
+#container #reservation .person_pop_layer li .child_info_btn,
+#container #reservation .person_pop_layer li .baby_info_btn {
+    border: none;
+    margin-top: 8px;
+    margin-left: 5px;
+    background-color: transparent;
+    vertical-align: middle;
+    text-align: center;
+}
+#container #reservation .person_pop_layer li .person_btn {
+    vertical-align: middle;
+    margin-left: -4px;
+    width: 90px;
+}
+#container #reservation .person_pop_layer li .person_btn button {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 25px;
+    background-color: transparent;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+#container #reservation .person_pop_layer li .person_btn .adult_minus:hover,
+#container #reservation .person_pop_layer li .person_btn .adult_plus:hover,
+#container #reservation .person_pop_layer li .person_btn .child_minus:hover,
+#container #reservation .person_pop_layer li .person_btn .child_plus:hover,
+#container #reservation .person_pop_layer li .person_btn .baby_minus:hover,
+#container #reservation .person_pop_layer li .person_btn .baby_plus:hover {
+    color: #7e0049;
+    border: 3px solid #7e0049;
+}
+#container #reservation .person_pop_layer li .submit_btn {
+    margin: 0 auto;
+    text-align: center;
+}
+#container #reservation .person_pop_layer li .submit_btn button {
+    margin: 8px auto;
+    padding: 10px;
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
     background-color: #bdd600;
-    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#container #reservation .person_pop_layer li .cnt_age {
+    padding: 24px 20px;
+    width: 100%;
+    height: 70px;
+    background-color: #f2f2f2;
+    text-align: center;
+    vertical-align: middle;
+}
+#container #reservation .person_pop_layer li .cnt_age a {
+    color: #7e0049;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid #7e0049;
+}
+#container #reservation .person_pop_layer li .cnt_age a img {
+    width: 15px;
+    vertical-align: middle;
 }
 /* bonus */
 #container #reservation .bonus {
@@ -487,6 +566,42 @@ body {
     margin-right: -30px;
     cursor: pointer;
 }
+#container #reservation .go_layer {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 155px;
+    left: 30px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+}
+#container #reservation .go_layer div {
+    width: 160px;
+    height: 100%;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-left: 3px;
+}
+#container #reservation .go_layer div h3 {
+    color: #7e0049;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#container #reservation .go_layer div li a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+}
+#container #reservation .go_layer div li a:hover {
+    color: #7e0049;
+}
+#container #reservation .go_layer div li a.nonselect {
+    color: #999;
+    cursor: default;
+}
 /* 도착지 */
 #container #reservation .arrive_layerbtn {
     display: flex;
@@ -514,6 +629,42 @@ body {
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
+}
+#container #reservation .arrive_layer {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 155px;
+    left: 30px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+}
+#container #reservation .arrive_layer div {
+    width: 160px;
+    height: 100%;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-left: 3px;
+}
+#container #reservation .arrive_layer div h3 {
+    color: #7e0049;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#container #reservation .arrive_layer div li a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+}
+#container #reservation .arrive_layer div li a:hover {
+    color: #7e0049;
+}
+#container #reservation .arrive_layer div li a.nonselect {
+    color: #999;
+    cursor: default;
 }
 
 /* 가는 날 */
