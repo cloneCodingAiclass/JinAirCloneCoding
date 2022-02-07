@@ -681,6 +681,7 @@ body{
 .sub_menu_check ul{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .sub_menu_check ul li{
     width: 550px;
@@ -700,7 +701,6 @@ body{
     color: white;
 }
 .booking_list ul{
-    margin: 20px 0;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 50px 0;
@@ -711,7 +711,6 @@ body{
     font-weight: 700;
 }
 .old_booking_list ul{
-    margin: 20px 0;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 50px 0;
@@ -724,11 +723,11 @@ body{
 .sub_text{
     display: flex;
     justify-content: right;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .sub_text p{
     margin-right: 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 3px;
 }
 .sub_text a{
@@ -764,4 +763,176 @@ body{
     font-weight: 700;
     margin-right: 20px;
     cursor: pointer;
+}
+.long .btn{
+    width: 130px;
+    height: 40px;
+    background-color:#BDD600;
+    border: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* ㅠㅠ */
+.detailTbl {
+    overflow:hidden; 
+    border-top:1px solid #000; 
+    border-bottom:1px solid #000;
+}
+.detailTbl p {
+    position:relative; 
+    float:left; 
+    box-sizing:border-box; 
+    width:50%; 
+    min-height:60px; 
+    padding:19px 0 19px 150px; 
+    margin-top:-1px; 
+    border-top:1px solid #e8e8e8; 
+    font-size:18px; 
+    color:#000; 
+    line-height:22px;
+}
+.detailTbl.multi_detailTbl p {
+    padding-left:220px;
+}
+.detailTbl p.btns {
+    padding:9px 0 9px 20px;
+}
+.detailTbl p >strong {
+    position:absolute; 
+    left:20px; 
+    top:19px; 
+    color:#555; 
+}
+.detailTbl p >strong span.fontTypeB {
+    display:block; margin-top:5px;
+}
+.detailTbl p >strong .tripType {
+    margin-top:5px;
+}
+.detailTbl p >span {
+    display:inline-block;
+}
+.detailTbl p .dib{
+    display:inline-block !important;
+}
+.detailTbl p .ico {
+    margin-left:12px; 
+    margin-right:12px;
+}
+.detailTbl p .date {
+    display:inline-block; 
+    margin-top:5px;
+    font-size:14px; 
+    color:#555;
+}
+.detailTbl p:nth-child(2) ~p {
+    border-top:1px solid #e8e8e8;
+}
+.detailTbl p.long {
+    width:100%; border-top:1px solid #e8e8e8;
+}
+.detailTbl p.long:first-child {
+    border-top:0;
+}
+.detailTbl p.short {
+    width:30%;
+}
+.detailTbl p.short:first-child {
+    width:40%;
+}
+.detailTbl p.short.ctar .cont {
+    float:right;
+    margin-right:150px;
+    white-space:nowrap;
+}
+.detailTbl p .btn {
+    float:right;
+    margin-right:150px;
+} 
+.detailTbl p .btn a {
+    min-width: 1px;
+    padding: 0 20px;
+    margin-top:-10px;
+    margin-bottom:-10px;
+}
+.detailTbl p .line.vm {
+    display:inline-block; 
+    margin:4px 0 -4px;
+}
+.detailTbl p .line >span,
+.detailTbl p .line .dib >span {
+    display:inline-block; 
+    vertical-align:top; 
+    font-size:14px; 
+    color:#555;
+}
+.detailTbl p .line strong {
+    display:block; 
+    margin-bottom:5px; 
+    font-size:18px; 
+    color:#000;
+}
+.detailTbl p .line em {
+    display:block;
+    margin-bottom:5px; 
+    font-size:18px; 
+    color:#000;
+}
+.detailTbl p .line .round {
+    display:inline-block;
+    margin-top:3px;
+}
+.detailTbl p .line .single {
+    display:inline-block; 
+    margin-top:7px;
+}
+.detailTbl p .line .tripType {
+    color:#fff;
+    margin-top:4px; 
+    font-size:12px;
+}
+.detailTbl p .line .tripType.vm {
+    margin:10px 6px -10px 0;
+}
+.detailTbl p .line .tit {
+    margin-right:20px;
+}
+.detailTbl p .line .tit strong {
+    margin:4px 0 0;
+    font-size:1em;
+}
+.detailTbl p .line .tit strong .pbr {
+    margin-top:-6px;
+}
+.detailTbl p .line ~.line {
+    display:block;
+    margin-top:10px;
+}
+.detailTbl p .btnTypeA {
+    min-width:1px; 
+    padding:0 20px; 
+    margin:-10px 0;
+}
+.detailTbl +.detailTbl {
+    margin-top:40px;
+}
+.detailTbl +.btnArea.ar {
+    margin-top:10px;
+}
+.detailTbl .long .infoTxt {
+    font-size:16px;
+    margin:27px 0 0 80px;
+    color:#de1616;
+}
+.detailTbl .long .btn_declaration {
+    position:absolute;
+    top:50%;
+    right:8%;
+    margin-top:-21px;
 }
