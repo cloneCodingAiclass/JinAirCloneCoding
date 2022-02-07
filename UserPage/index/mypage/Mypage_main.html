@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 | 진에어</title>
     <link rel="stylesheet" href="../css/Mypage_main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/Mypage_main.js"></script>
 </head>
+
 <body>
-    <ul class="skipnavi"><!--책갈피 역할-->
-        <li><a href="#container">본문내용</a></li> 
+    <ul class="skipnavi">
+        <!--책갈피 역할-->
+        <li><a href="#container">본문내용</a></li>
     </ul>
     <!--wrap-->
     <div id="wrap">
@@ -22,7 +26,10 @@
                 <div class="header_wrap">
                     <h1 class="logo"><a href="."><img src="../index_img/logo_02.png" alt=""></a></h1>
                     <ul class="login">
-                        <li><a href="login.html">로그인</a><span>|</span><p class="lang">한국(한국어)<span>/ </span>KRW</p><p class="lang_img"></p></li>
+                        <li><a href="login.html">로그인</a><span>|</span>
+                            <p class="lang">한국(한국어)<span>/ </span>KRW</p>
+                            <p class="lang_img"></p>
+                        </li>
                     </ul>
                     <nav>
                         <ul class="nav_all">
@@ -100,7 +107,7 @@
                         <a href="#">이벤트 플라잇</a>
                     </div>
                     <div>
-                        <a href="#"class="subNav_title">부가 서비스</a>
+                        <a href="#" class="subNav_title">부가 서비스</a>
                         <a href="#">번들 서비스</a>
                         <a href="#">사전좌석지정</a>
                         <a href="#">기내식</a>
@@ -169,7 +176,7 @@
                     </div>
                 </div>
             </div>
-        <!--상당 메뉴 끝-->
+            <!--상당 메뉴 끝-->
         </header>
         <!--header 끝-->
         <!--container-->
@@ -195,9 +202,38 @@
                     </ul>
                 </div>
                 <div class="booking_list">
-                    <ul>
-                        <li>항공권 예약 내역이 없습니다.</li>
-                    </ul>
+                    <div class="detailTbl">
+                        <p class="short"><strong>예약일</strong> <span class="cont">시간</span></p>
+                        <p class="short"><strong>예약번호</strong> <span class="cont"
+                                id="{{:pnrNumber}}">번호</span></p>
+                        <p class="short ctar"><strong>예약상태</strong> <span class="cont">진행중</span></p>
+                        <p class="long">
+                            <strong>여정<br><span class="tripType"></span></strong>
+                            <span class="cont line">
+                                <span class="tit">여정
+                                    <strong>LJ301</strong>
+                                </span>
+                                <span>
+                                    <strong>제주</strong>
+                                    <span id="bp{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}">[출발] 2022-10-25(화) 06:05</span>
+                                </span>
+                                <span class="ico single"></span>
+                                <span>
+                                    <strong>서울</strong>
+                                    <span id="op{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}">[도착] 2022-10-25(화) 06:05</span>
+                                </span>
+                                <span id="st{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}"
+                                    class="infoTxt"></span>
+                            </span>
+                        </p>
+                        <p class="long">
+                            <strong>탑승객수</strong>
+                            <span class="cont">1 명</span>
+                            <span class="btn">
+                                <a name="btnDetail" href="#">상세조회</a>
+                            </span>
+                        </p>
+                    </div>
                 </div>
                 <div class="old_booking_list">
                     <ul>
@@ -212,13 +248,19 @@
         </div>
         <!--container 끝-->
         <!-- 푸터-->
-        <div id="footerCont"><!--푸터-->
+        <div id="footerCont">
+            <!--푸터-->
             <div id="foot_topwraper">
-                <div id="foot_top"><!--위쪽 푸터-->
-                    <div id="top_menu"><!--상단메뉴 컨테이너-->
-                        <div class="menu_wrap"><!--첫번째 메뉴-->
-                            <p class="men_tit"><a href="">회사안내</a></p><!--메뉴 타이틀-->
-                            <ul class="horiz"><!--하위 메뉴 컨테이너-->
+                <div id="foot_top">
+                    <!--위쪽 푸터-->
+                    <div id="top_menu">
+                        <!--상단메뉴 컨테이너-->
+                        <div class="menu_wrap">
+                            <!--첫번째 메뉴-->
+                            <p class="men_tit"><a href="">회사안내</a></p>
+                            <!--메뉴 타이틀-->
+                            <ul class="horiz">
+                                <!--하위 메뉴 컨테이너-->
                                 <li><a href="">공지사항</a></li>
                                 <li><a href="">채용정보</a></li>
                                 <li><a href="">CEO인사말</a></li>
@@ -232,9 +274,12 @@
                                 <li><a href="">홍보센터</a></li>
                             </ul>
                         </div>
-                        <div class="menu_wrap"><!--두번째 메뉴-->
-                            <p class="men_tit"><a href="">약관 및 안내</a></p><!--메뉴 타이틀-->
-                            <ul class="horiz"><!--하위 메뉴 컨테이너-->
+                        <div class="menu_wrap">
+                            <!--두번째 메뉴-->
+                            <p class="men_tit"><a href="">약관 및 안내</a></p>
+                            <!--메뉴 타이틀-->
+                            <ul class="horiz">
+                                <!--하위 메뉴 컨테이너-->
                                 <li class="f_black"><a href=""><b>개인정보 처리방침</b></a></li>
                                 <li><a href="">홈페이지 이용약관</a></li>
                                 <li><a href="">여객운송약관 및 기타 고지사항</a></li>
@@ -244,39 +289,63 @@
                                 <li><a href="">사이트맵</a></li>
                             </ul>
                         </div>
-                        <div class="menu_wrap"><!--세번째 메뉴-->
-                            <p class="men_tit"><a href="">고객서비스</a></p><!--메뉴 타이틀-->
-                            <ul class="horiz"><!--하위 메뉴 컨테이너-->
+                        <div class="menu_wrap">
+                            <!--세번째 메뉴-->
+                            <p class="men_tit"><a href="">고객서비스</a></p>
+                            <!--메뉴 타이틀-->
+                            <ul class="horiz">
+                                <!--하위 메뉴 컨테이너-->
                                 <li><a href="">자주 묻는 질문(FAQ)</a></li>
                                 <li><a href="">고객의 말씀(Q&A)</a></li>
                                 <li><a href="">기내 유실물 찾기</a></li>
                             </ul>
                         </div>
-                    </div><!--상단메뉴 컨테이너 끝-->
-                </div><!--위쪽푸터 끝-->
+                    </div>
+                    <!--상단메뉴 컨테이너 끝-->
+                </div>
+                <!--위쪽푸터 끝-->
             </div>
             <div id="foot_bottwraper">
-                <div id="foot_bott"><!--아래쪽 푸터-->
-                    <div id="bott_menu"><!--하단메뉴 컨테이너-->
-                        <div id="app_ico"><!--apple icon-->
-                            <ul class="Sicon"><!--sns icon-->
-                                <li><a href=""><p class="twit circle">트위터</p></a></li>
-                                <li><a href=""><p class="faceb circle">페이스북</p></a></li>
-                                <li><a href=""><p class="youtub circle">유튜브</p></a></li>
-                                <li><a href=""><p class="insta circle">인스타</p></a></li>
-                                <li><a href=""><p class="blog circle">블로그</p></a></li>
+                <div id="foot_bott">
+                    <!--아래쪽 푸터-->
+                    <div id="bott_menu">
+                        <!--하단메뉴 컨테이너-->
+                        <div id="app_ico">
+                            <!--apple icon-->
+                            <ul class="Sicon">
+                                <!--sns icon-->
+                                <li><a href="">
+                                        <p class="twit circle">트위터</p>
+                                    </a></li>
+                                <li><a href="">
+                                        <p class="faceb circle">페이스북</p>
+                                    </a></li>
+                                <li><a href="">
+                                        <p class="youtub circle">유튜브</p>
+                                    </a></li>
+                                <li><a href="">
+                                        <p class="insta circle">인스타</p>
+                                    </a></li>
+                                <li><a href="">
+                                        <p class="blog circle">블로그</p>
+                                    </a></li>
                             </ul>
-                            <ul class="Aicon"><!--app icon-->
+                            <ul class="Aicon">
+                                <!--app icon-->
                                 <li class="Aicon_txt">APP 다운로드</li>
                                 <li><a href=""><img src="../index_img/ico_apple.png" alt=""></a></li>
                                 <li><a href=""><img src="../index_img/google.PNG" alt=""></a></li>
                             </ul>
                             <ul class="site">
-                                <li><a href="#"><p class="sit circle">대리점 사이트</p></a></li>
+                                <li><a href="#">
+                                        <p class="sit circle">대리점 사이트</p>
+                                    </a></li>
                                 <li class="Aicon_txt">대리점 사이트 바로가기</li>
                             </ul>
-                        </div><!--apple icon 끝-->
-                        <div id="news"><!--뉴스레터-->
+                        </div>
+                        <!--apple icon 끝-->
+                        <div id="news">
+                            <!--뉴스레터-->
                             <ul>
                                 <li class="sub_txt">뉴스레터 신청</li>
                             </ul>
@@ -287,8 +356,10 @@
                             <ul>
                                 <li><img src="../index_img/ico_isms.png" alt="인증"></li>
                             </ul>
-                        </div><!--뉴스레터 끝-->
-                        <div id="info"><!--정보-->
+                        </div>
+                        <!--뉴스레터 끝-->
+                        <div id="info">
+                            <!--정보-->
                             <ul>
                                 <li>
                                     <b>고객서비스센터 1600-6200, 02-6099-1200</b>
@@ -302,11 +373,15 @@
                                 <li class="small_txt">주소 : 서울시 강서구 공항대로 453<p class="pdiv"></p>개인정보보호책임자 : 이광</li>
                                 <li class="small_txt">Copyright © JIN AIR. All Rights Reserved.</li>
                             </ul>
-                        </div><!--정보 끝-->
-                    </div><!--하단메뉴 컨테이너 끝-->
-                </div><!--아래쪽 푸터 끝-->
-            </div> 
-        </div><!--푸터 끝-->
+                        </div>
+                        <!--정보 끝-->
+                    </div>
+                    <!--하단메뉴 컨테이너 끝-->
+                </div>
+                <!--아래쪽 푸터 끝-->
+            </div>
+        </div>
+        <!--푸터 끝-->
     </div>
     <!--wrap 끝-->
     <!--퀵 메뉴-->
@@ -327,4 +402,6 @@
         </div>
     </div>
 </body>
+
 </html>
+
