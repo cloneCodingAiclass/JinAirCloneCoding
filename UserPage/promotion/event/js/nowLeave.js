@@ -86,7 +86,7 @@ $(function () {
 
 
     $('.dis_ing').on('click', function () {
-        $('#container').css({"height":"2700px"});
+        $('#container').css({"height":"2150px"});
         $('.ing').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_end').css({"background-color":"white", "color": "#444"});
@@ -95,7 +95,7 @@ $(function () {
         $('.win').css({"display":"none"});
     })
     $('.dis_end').on('click', function () {
-        $('#container').css({"height":"2100px"});
+        $('#container').css({"height":"2250px"});
         $('.end').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_ing').css({"background-color":"white", "color": "#444"});
@@ -104,7 +104,7 @@ $(function () {
         $('.win').css({"display":"none"});
     })
     $('.dis_win').on('click', function () {
-        $('#container').css({"height":"1700px"});
+        $('#container').css({"height":"1800px"});
         $('.win').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_ing').css({"background-color":"white", "color": "#444"});
