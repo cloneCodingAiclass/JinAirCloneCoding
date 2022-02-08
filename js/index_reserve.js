@@ -41,13 +41,13 @@ $(() => {
         $(".go_up_img2").css({ "display": "inline-block" });
         $(".go_layer2").slideDown("fast");
 
-        // 도착지1 레이어 닫기
+        // 도착지2 레이어 닫기
         e.stopPropagation();
         $(".arrive_layerbtn2").removeClass('close');
         $(".arrive_layerbtn2").css({"color" : "rgb(0, 0, 0)"});
         $(".arrive_down_img2").css({"display" : "inline-block"});
         $(".arrive_up_img2").css({"display" : "none"});
-        $('.arrive_laye2r').slideUp(50);
+        $('.arrive_layer2').slideUp(50);
 
         // 옵션1 닫기
         e.stopPropagation();
