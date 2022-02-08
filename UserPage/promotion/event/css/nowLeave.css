@@ -293,7 +293,7 @@ body{
 #container {
     position: relative;
     top: 100px;
-    height: 2000px;
+    height: 2150px;
 }
 #container > .backgreen{
     width: 100%;
@@ -327,7 +327,7 @@ body{
 
 /* 슬라이드 */
 .swiper-slide img {
-    width: 100%;
+    width: 1180px;
 }
 .swiper-button-next {
     background: url("../img/next.png") no-repeat;
@@ -409,6 +409,92 @@ body{
     width: 100%;
     margin-top: 45px;
 }
+.ing .ing_wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+.ing .ing_wrapper ul {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.ing .ing_wrapper ul li{
+    display: inline-block;
+    width: 375px;
+    height: 550px;
+    margin: 7px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+}
+.ing .ing_wrapper .ing_event1_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img1.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing .ing_wrapper .ing_event2_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img2.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing .ing_wrapper .ing_event3_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img3.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing .ing_wrapper .ing_event4_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img4.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing .ing_wrapper .ing_event5_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img5.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing .ing_wrapper .ing_event6_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/img6.png) no-repeat top center;
+    background-size: 100%;
+}
+.ing_title{
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 70px;
+}
+.ing_title input{
+    font-size: 18px;
+    font-weight: bolder;
+    width: 310px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.ing_regdate{
+    text-align: left;
+    padding-left: 30px;
+}
+.ing_regdate input{
+    font-size: 12px;
+    font-weight: bolder;
+    width: 310px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 /* 환율 우대 */
 .end{
@@ -416,6 +502,136 @@ body{
     margin-top: 45px;
     display: none;
 }
+.end .end_wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+.end .end_wrapper ul {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.end .end_wrapper ul li{
+    display: inline-block;
+    width: 375px;
+    height: 550px;
+    margin: 7px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+}
+.end .end_wrapper .end_event1_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img1.png) no-repeat top center;
+    background-size: 100%;
+}
+.end .end_wrapper .end_event2_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img2.png) no-repeat top center;
+    background-size: 100%;
+}
+.end .end_wrapper .end_event3_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img3.png) no-repeat top center;
+    background-size: 100%;
+}
+.end .end_wrapper .end_event4_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img4.png) no-repeat top center;
+    background-size: 100%;
+}
+.end .end_wrapper .end_event5_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img5.png) no-repeat top center;
+    background-size: 100%;
+}
+.end .end_wrapper .end_event6_img{
+    width: 375px;
+    height: 375px;
+    background: url(../img/end_img6.png) no-repeat top center;
+    background-size: 100%;
+}
+.end_title{
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 70px;
+}
+.end_title input{
+    font-size: 18px;
+    font-weight: bolder;
+    width: 310px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.end_regdate{
+    text-align: left;
+    padding-left: 30px;
+}
+.end_regdate input{
+    font-size: 12px;
+    font-weight: bolder;
+    width: 310px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.footer{
+    margin: 20px auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+#container .end > .end_wrapper > .footer > .center > table{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    box-shadow: none;
+    border: none;
+    margin: 0 auto;
+}
+.footer > .center > table td{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(187, 187, 187);
+    padding-top: 3px;
+}
+.footer table td:nth-child(11){
+    background: url(../img/right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(12){
+    background: url(../img/double_right.png) center no-repeat;
+    background-size: 21px;
+    cursor: pointer;
+}
+.footer table td:nth-child(1){
+    background-color: rgb(124,0,72);
+}
+.footer table td:nth-child(1) > a{
+    color:white
+}
+.footer table td:hover{
+    background-color: #bdd600;
+}
+.footer table td:hover a{
+    color:white
+}
+
 
 /* 무이자 */
 .win{
@@ -423,7 +639,41 @@ body{
     margin-top: 45px;
     display: none;
 }
-
+#container .win > .win_wrapper > table{
+    margin: 25px 0px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: none;
+    margin-bottom: 50px;
+}
+#container .win > .win_wrapper > table tr{
+    height: 60px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+#container .win > .win_wrapper > table tr:last-child{
+    border-bottom: 1px solid black;
+}
+#container .win > .win_wrapper > table tr:nth-child(1){
+    background-color: #F2F2F2;
+}#container .win > .win_wrapper > table tr:nth-child(1) td:nth-child(2){
+    text-align: center;
+}
+#container .win > .win_wrapper > table td:nth-child(2){
+    text-align: left;
+}
+#container .win > .win_wrapper > .footer > .center > table{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    box-shadow: none;
+    border: none;
+    margin: 0 auto;
+}
 
 /*푸터*/
 #footerCont {
