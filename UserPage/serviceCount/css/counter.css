@@ -302,12 +302,13 @@ body {
 }
 /* 서브 네비 끝 */
 
-/* 컨테이너 */
+/* contents */
+
 #contents {
     position: relative;
     max-width: 1160px;
-    margin: 100px 0 0 0;
-    padding: 0 20px 190px;
+    margin: 0 auto;
+    padding: 100px 20px 190px;
     font-weight: bold;
     text-align: left;
 }
@@ -379,7 +380,9 @@ body {
     color: #000;
     vertical-align: middle;
 }
-
+.counter {
+    display: none;
+}
 /* pointInfo */
 .pointInfo {
     position: relative;
