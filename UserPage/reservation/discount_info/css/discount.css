@@ -303,6 +303,10 @@ body {
 /* 서브 네비 끝 */
 
 /* container */
+.in_bl {
+    display: inline-block !important;
+    width: 500px !important;
+}
 .cursor {
     cursor: pointer;
 }
@@ -325,14 +329,13 @@ body {
     letter-spacing: 1.2px;
     padding: 20px;
 }
-
-#container > .contentswrap > .discount > .discount_title {
+#container > .contentswrap > .discount .discount_title {
     font-size: 2.8em;
     font-weight: 600;
     color: rgb(102, 30, 67);
 }
 
-#container > .contentswrap > .discount > .title_sub {
+#container > .contentswrap > .discount .title_sub {
     font-size: 1.45em;
     font-weight: 600;
     margin-top: 25px;
@@ -340,8 +343,8 @@ body {
     letter-spacing: 1.2px;
 }
 
-#container > .contentswrap > .discount > .title_img {
-    margin-left: 300px;
+#container > .contentswrap > .discount img {
+    margin-left: 370px;
 }
 
 #container > .contentswrap table {
