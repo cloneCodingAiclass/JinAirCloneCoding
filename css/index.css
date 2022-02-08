@@ -473,7 +473,7 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-#container #reservation .person_pop_layer li .submit_btn input {
+#container #reservation .person_pop_layer li .submit_btn button {
     margin: 8px auto;
     padding: 10px;
     width: 90%;
