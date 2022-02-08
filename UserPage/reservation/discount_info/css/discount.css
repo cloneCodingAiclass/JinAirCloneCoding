@@ -1019,7 +1019,14 @@ body{
 }
 /*뉴스레터 끝*/
 /* 모달 */
-
+.modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #modal_isdate {
     position: absolute;
     width: 100%;
