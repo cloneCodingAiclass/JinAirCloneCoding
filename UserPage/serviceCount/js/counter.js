@@ -208,25 +208,59 @@ $(() => {
 /* 컨테이너 js */
 
 $(() => {
-    $("#domestic_tab").on('click', function (e){
-        $('#domestic').css({"display":"block"});
+    $("#domestic_tab").on('click', function (e) {
+        $('#domestic').css({ "display": "block" });
+        $('#international').css({ "display": "none" });
+        $('#city').css({ "display": "none" });
+    });
+    $(() => {
+        $("#international_tab").on('click', function (e) {
+            $('#international').css({ "display": "block" });
+            $('#international_tab').css({"background-color":"#661e43"});
+            $('#international_tab').css({"color" : "#f7f7f6"});
+            $('#domestic').css({ "display": "none" });
+            $('#city').css({ "display": "none" });
+        })
+    })
+    $(() => {
+        $("#city_tab").on('click', function (e) {
+            $('#city').css({ "display": "block" });
+            $('#city_tab').css({"background-color":"#661e43"});
+            $('#city_tab').css({"color" : "#f7f7f6"});
+            $('#international').css({ "display": "none" });
+            $('#domestic').css({ "display": "none" });
+        })
+    })
+})
+$(() => {
+    $("#domestic_tab").on('click', function (e) {
+        $('#domestic_tab').css({"background-color":"#661e43"});
+        $('#domestic_tab').css({"color" : "#f7f7f6"});
+        $('#city_tab').css({"background-color":"#f7f7f6"});
+        $('#city_tab').css({"color" : "#444"});
+        $('#international_tab').css({"background-color":"#f7f7f6"});
+        $('#international_tab').css({"color" : "#444"});
+    })
+    $("#international_tab").on('click', function (e) {
+        $('#international_tab').css({"background-color":"#661e43"});
+        $('#international_tab').css({"color" : "#f7f7f6"});
+        $('#city_tab').css({"background-color":"#f7f7f6"});
+        $('#city_tab').css({"color" : "#444"});
+        $('#domestic_tab').css({"background-color":"#f7f7f6"});
+        $('#domestic_tab').css({"color" : "#444"});
+    })
+    $("#city_tab").on('click', function (e) {
+        $('#city_tab').css({"background-color":"#661e43"});
+        $('#city_tab').css({"color" : "#f7f7f6"});
+        $('#international_tab').css({"background-color":"#f7f7f6"});
+        $('#international_tab').css({"color" : "#444"});
+        $('#domestic_tab').css({"background-color":"#f7f7f6"});
+        $('#domestic_tab').css({"color" : "#444"});
     })
 })
 
-$(() => {
-    $("#international_tab").on('click', function (e){
-        $('#international').css({"display":"block"});
-    })
-})  
 
-$(() => {
-    $("#city_tab").on('click', function (e){
-        $('#city').css({"display":"block"});
-    })
-})
-
-/* */
-/* */
+/* 메뉴 탭 js */
 function showCounterTab(obj) {
 	var $target = $(obj).parent();
 	$target.siblings("h3").find("a").removeClass("on");
@@ -241,4 +275,3 @@ function showCounterTab(obj) {
 		});
 	}, 110);
 }
-
