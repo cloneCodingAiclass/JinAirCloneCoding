@@ -341,9 +341,7 @@ body {
 }
 
 #container > .contentswrap > .discount > .title_img {
-    position: absolute;
-    top: 40px;
-    right: 400px;
+    margin-left: 300px;
 }
 
 #container > .contentswrap table {
