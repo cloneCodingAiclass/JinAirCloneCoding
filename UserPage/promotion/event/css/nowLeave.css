@@ -304,7 +304,7 @@ body{
 }
 #container > .contentswrap {
     width: 1180px;
-    margin: auto;
+    margin: 0px auto;
 }
 #container > .contentswrap > .contentstop{
     text-align: center;
@@ -326,6 +326,9 @@ body{
 }
 
 /* 슬라이드 */
+.swiper-slide img {
+    width: 100%;
+}
 .swiper-button-next {
     background: url("../img/next.png") no-repeat;
 }
