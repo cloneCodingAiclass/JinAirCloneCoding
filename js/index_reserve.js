@@ -16,6 +16,22 @@ $(() => {
         $(".arrive_up_img").css({"display" : "none"});
         $('.arrive_layer').slideUp(50);
     })
+    $(".go_layerbtn2").on("click", function (e) {
+        e.stopPropagation();
+        $(".go_layerbtn2").addClass('close');
+        $(".go_layerbtn2").css({ "color": "rgb(145, 0, 70)" });
+        $(".go_down_img2").css({ "display": "none" });
+        $(".go_up_img2").css({ "display": "inline-block" });
+        $(".go_layer2").slideDown("fast");
+
+        // 도착지 레이어 닫기
+        e.stopPropagation();
+        $(".arrive_layerbtn2").removeClass('close');
+        $(".arrive_layerbtn2").css({"color" : "rgb(0, 0, 0)"});
+        $(".arrive_down_img2").css({"display" : "inline-block"});
+        $(".arrive_up_img2").css({"display" : "none"});
+        $('.arrive_laye2r').slideUp(50);
+    })
     $(".close").on('click', function(e){
         e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
@@ -24,6 +40,14 @@ $(() => {
         $(".go_up_img").css({ "display": "none" });
         $('.go_layer').slideUp(50);
     })
+    $(".close").on('click', function(e){
+        e.stopPropagation();
+        $(".go_layerbtn2").removeClass('close');
+        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+        $(".go_down_img2").css({ "display": "inline-block" });
+        $(".go_up_img2").css({ "display": "none" });
+        $('.go_layer2').slideUp(50);
+    })
     $("#wrap").on('click', function (e) {
         e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
@@ -31,6 +55,13 @@ $(() => {
         $(".go_down_img").css({"display" : "inline-block"});
         $(".go_up_img").css({"display" : "none"});
         $('.go_layer').slideUp(50);
+
+        e.stopPropagation();
+        $(".go_layerbtn2").removeClass('close');
+        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+        $(".go_down_img2").css({ "display": "inline-block" });
+        $(".go_up_img2").css({ "display": "none" });
+        $('.go_layer2').slideUp(50);
     })
 })
 
@@ -52,6 +83,22 @@ $(() => {
         $(".go_up_img").css({"display" : "none"});
         $('.go_layer').slideUp(50);
     })
+    $(".arrive_layerbtn2").on("click", function (e) {
+        e.stopPropagation();
+        $(".arrive_layerbtn2").addClass('close');
+        $(".arrive_layerbtn2").css({ "color": "rgb(145, 0, 70)" });
+        $(".arrive_down_img2").css({ "display": "none" });
+        $(".arrive_up_img2").css({ "display": "inline-block" });
+        $(".arrive_layer2").slideDown("fast");
+
+        // 출발지 레이어 닫기
+        e.stopPropagation();
+        $(".go_layerbtn2").removeClass('close');
+        $(".go_layerbtn2").css({"color" : "rgb(0, 0, 0)"});
+        $(".go_down_img2").css({"display" : "inline-block"});
+        $(".go_up_img2").css({"display" : "none"});
+        $('.go_layer2').slideUp(50);
+    })
     $(".close").on('click', function(e){
         e.stopPropagation();
         $(".arrive_layerbtn").removeClass('close');
@@ -60,6 +107,14 @@ $(() => {
         $(".arrive_up_img").css({ "display": "none" });
         $('.arrive_layer').slideUp(50);
     })
+    $(".close").on('click', function(e){
+        e.stopPropagation();
+        $(".arrive_layerbtn2").removeClass('close');
+        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+        $(".arrive_down_img2").css({ "display": "inline-block" });
+        $(".arrive_up_img2").css({ "display": "none" });
+        $('.arrive_layer2').slideUp(50);
+    })
     $("#wrap").on('click', function (e) {
         e.stopPropagation();
         $(".arrive_layerbtn").removeClass('close');
@@ -67,5 +122,12 @@ $(() => {
         $(".arrive_down_img").css({"display" : "inline-block"});
         $(".arrive_up_img").css({"display" : "none"});
         $('.arrive_layer').slideUp(50);
+
+        e.stopPropagation();
+        $(".arrive_layerbtn2").removeClass('close');
+        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+        $(".arrive_down_img2").css({ "display": "inline-block" });
+        $(".arrive_up_img2").css({ "display": "none" });
+        $('.arrive_layer2').slideUp(50);
     })
 })

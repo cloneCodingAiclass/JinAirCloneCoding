@@ -113,6 +113,9 @@ $(() => {
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
+        $(".reserve_round").css({"display" : "block"});
+        $(".reserve_oneway").css({"display" : "none"});
+        $(".reserve_multi").css({"display" : "none"});
     })
     $(".trip_type2").on("click", function (e) {
         e.stopPropagation();
@@ -123,6 +126,9 @@ $(() => {
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
+        $(".reserve_round").css({"display" : "none"});
+        $(".reserve_oneway").css({"display" : "block"});
+        $(".reserve_multi").css({"display" : "none"});
     })
     $(".trip_type3").on("click", function (e) {
         e.stopPropagation();
@@ -133,6 +139,9 @@ $(() => {
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
+        $(".reserve_round").css({"display" : "none"});
+        $(".reserve_oneway").css({"display" : "none"});
+        $(".reserve_multi").css({"display" : "block"});
     })
     $("#wrap").on('click', function (e) {
         e.stopPropagation();

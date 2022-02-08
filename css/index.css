@@ -309,16 +309,16 @@ body {
 .w_180 {
     width: 200px;
 }
-#container .in_bl {
+.in_bl {
     display: inline-block;
 }
-#container .w_120 {
+.w_120 {
     width: 120px;
 }
-#container .w_1160 .visual {
+#container .visual {
     margin-top: 95px;
 }
-#container .w_1160 .visual img {
+#container .visual img {
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -473,7 +473,7 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-#container #reservation .person_pop_layer li .submit_btn button {
+#container #reservation .person_pop_layer li .submit_btn input {
     margin: 8px auto;
     padding: 10px;
     width: 90%;
@@ -519,54 +519,63 @@ body {
     color: #666;
 }
 
-/* reserve */
-#container #reservation .reserve {
+/* reserve_round */
+#container #reservation .reserve_round {
+    display: block;
     height: 100px;
-    vertical-align: middle;
     padding: 35px 25px;
 }
 /* 출발지 */
 #container #reservation .go_layerbtn,
 #container #reservation .arrive_layerbtn,
 #container #reservation .go_date_layerbtn,
-#container #reservation .come_date_layerbtn {
-    margin-right: 5px;
-    margin-left: 5px;
-    width: 210px;
+#container #reservation .come_date_layerbtn,
+#container #reservation .go_layerbtn2,
+#container #reservation .arrive_layerbtn2,
+#container #reservation .go_date_layerbtn2,
+#container #reservation .come_date_layerbtn2 {
+    margin-right: 2px;
+    margin-left: 2px;
+    width: 220px;
     height: 60px;
     background-color: #fff;
     border: 2px solid #e9e9e9;
     box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);
     vertical-align: middle;
 }
-#container #reservation .go_layerbtn {
+#container #reservation .go_layerbtn,
+#container #reservation .go_layerbtn2 {
     display: flex;
     text-align: center;
     cursor: pointer;
     justify-content: space-around;
     vertical-align: middle;
 }
-#container #reservation .go_layerbtn span {
+#container #reservation .go_layerbtn span,
+#container #reservation .go_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
     margin-left: -15px;
     line-height: 3;
 }
-#container #reservation .go_layerbtn .go_down_img {
+#container #reservation .go_layerbtn .go_down_img,
+#container #reservation .go_layerbtn2 .go_down_img2 {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
 }
-#container #reservation .go_layerbtn .go_up_img {
+#container #reservation .go_layerbtn .go_up_img,
+#container #reservation .go_layerbtn2 .go_up_img2 {
     display: none;
     height: 30px;
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
 }
-#container #reservation .go_layer {
+#container #reservation .go_layer,
+#container #reservation .go_layer2 {
     width: 880px;
     padding: 40px 20px;
     position: absolute;
@@ -578,59 +587,72 @@ body {
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
 }
-#container #reservation .go_layer div {
+#container #reservation .go_layer2 {
+    top: 225px;
+}
+#container #reservation .go_layer div,
+#container #reservation .go_layer2 div {
     width: 160px;
     height: 100%;
     vertical-align: top;
     margin: 0 auto;
     margin-left: 3px;
 }
-#container #reservation .go_layer div h3 {
+#container #reservation .go_layer div h3,
+#container #reservation .go_layer2 div h3 {
     color: #7e0049;
     font-weight: bold;
     margin-bottom: 20px;
 }
-#container #reservation .go_layer div li a {
+#container #reservation .go_layer div li a,
+#container #reservation .go_layer2 div li a {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
 }
-#container #reservation .go_layer div li a:hover {
+#container #reservation .go_layer div li a:hover,
+#container #reservation .go_layer2 div li a:hover {
     color: #7e0049;
 }
-#container #reservation .go_layer div li a.nonselect {
+#container #reservation .go_layer div li a.nonselect,
+#container #reservation .go_layer2 div li a.nonselect {
     color: #999;
     cursor: default;
 }
 /* 도착지 */
-#container #reservation .arrive_layerbtn {
+#container #reservation .arrive_layerbtn,
+#container #reservation .arrive_layerbtn2 {
     display: flex;
     text-align: center;
     cursor: pointer;
     justify-content: space-around;
     vertical-align: middle;
 }
-#container #reservation .arrive_layerbtn span {
+#container #reservation .arrive_layerbtn span,
+#container #reservation .arrive_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
     margin-left: -15px;
     line-height: 3;
 }
-#container #reservation .arrive_layerbtn .arrive_down_img {
+#container #reservation .arrive_layerbtn .arrive_down_img,
+#container #reservation .arrive_layerbtn2 .arrive_down_img2 {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
 }
-#container #reservation .arrive_layerbtn .arrive_up_img {
+#container #reservation .arrive_layerbtn .arrive_up_img,
+#container #reservation .arrive_layerbtn2 .arrive_up_img2 {
     display: none;
     height: 30px;
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
 }
-#container #reservation .arrive_layer {
+#container #reservation .arrive_layer,
+#container #reservation .arrive_layer2 {
     width: 880px;
     padding: 40px 20px;
     position: absolute;
@@ -642,52 +664,64 @@ body {
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
 }
-#container #reservation .arrive_layer div {
+#container #reservation .arrive_layer2 {
+    top: 225px;
+}
+#container #reservation .arrive_layer div,
+#container #reservation .arrive_layer2 div {
     width: 160px;
     height: 100%;
     vertical-align: top;
     margin: 0 auto;
     margin-left: 3px;
 }
-#container #reservation .arrive_layer div h3 {
+#container #reservation .arrive_layer div h3,
+#container #reservation .arrive_layer2 div h3 {
     color: #7e0049;
     font-weight: bold;
     margin-bottom: 20px;
 }
-#container #reservation .arrive_layer div li a {
+#container #reservation .arrive_layer div li a,
+#container #reservation .arrive_layer2 div li a {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
 }
-#container #reservation .arrive_layer div li a:hover {
+#container #reservation .arrive_layer div li a:hover,
+#container #reservation .arrive_layer2 div li a:hover {
     color: #7e0049;
 }
-#container #reservation .arrive_layer div li a.nonselect {
+#container #reservation .arrive_layer div li a.nonselect,
+#container #reservation .arrive_layer2 div li a.nonselect {
     color: #999;
     cursor: default;
 }
 
 /* 가는 날 */
-#container #reservation .go_date_layerbtn {
+#container #reservation .go_date_layerbtn,
+#container #reservation .go_date_layerbtn2 {
     display: flex;
     cursor: pointer;
     vertical-align: middle;
     justify-content: space-around;
 }
-#container #reservation .go_date_layerbtn span {
+#container #reservation .go_date_layerbtn span,
+#container #reservation .go_date_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
     margin-left: -15px;
     line-height: 3;
 }
-#container #reservation .go_date_layerbtn .go_date_down_img {
+#container #reservation .go_date_layerbtn .go_date_down_img,
+#container #reservation .go_date_layerbtn2 .go_date_down_img2 {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
     margin-right: -30px;
     cursor: pointer;
 }
-#container #reservation .go_date_layerbtn .go_date_up_img {
+#container #reservation .go_date_layerbtn .go_date_up_img,
+#container #reservation .go_date_layerbtn2 .go_date_up_img2 {
     display: none;
     height: 30px;
     vertical-align: middle;
@@ -723,13 +757,32 @@ body {
     cursor: pointer;
 }
 
+/* reserve_oneway */
+#container #reservation .reserve_oneway {
+    display: none;
+    height: 100px;
+    vertical-align: middle;
+    padding: 35px 25px;
+}
+
+/* reserve_multi */
+#container #reservation .reserve_multi {
+    display: none;
+    height: 100px;
+    vertical-align: middle;
+    padding: 35px 25px;
+}
+#container #reservation .reserve_multi .multi2 {
+    margin-top: 10px;
+}
+
 /* 예약 다음 버튼 */
 .reservate {
     margin-top: 0.5px;
-    margin-right: -10px;
+    margin-left: -20px;
     font-weight: bold;
     vertical-align: middle;
-    width: 130px;
+    width: 120px;
     height: 60px;
     border: none;
     background-color: #bdd600;
