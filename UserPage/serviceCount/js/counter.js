@@ -208,7 +208,19 @@ $(() => {
 /* counter js */
 
 $(() => {
-    $(".counter").on('click', function (e){
-        $('#domestic').addClass('show');
+    $("#domestic_tab").on('click', function (e){
+        $('#domestic').css({"display":"block"});
+    })
+})
+
+$(() => {
+    $("#international_tab").on('click', function (e){
+        $('#international').css({"display":"block"});
+    })
+})  
+
+$(() => {
+    $("#city_tab").on('click', function (e){
+        $('#city').css({"display":"block"});
     })
 })

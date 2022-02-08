@@ -304,7 +304,7 @@ body {
 
 /* contents */
 
-#contents {
+#container {
     position: relative;
     max-width: 1160px;
     margin: 0 auto;
@@ -419,6 +419,35 @@ body {
     cursor: pointer;
     background: #bdd600;
 }
+
+.counter h3 a.icoFold.on {
+    color: #661e43;
+    font-family: 'notob';
+}
+
+.counter h3 +.list {
+    margin: 20px 0 35px;
+}
+
+.counter .list >li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 20px 10px 0;
+    vertical-align: top;
+    letter-spacing: 0;
+}
+.counter .list >li .wrap {
+    position: relative;
+    padding-top: 70px;
+    border: 1px solid #e6e6e6;
+}
+.counter .list >li .thumb img {
+    max-width: 100%;    
+    border: 0;
+    vertical-align: top;
+}
+
 
 /* 컨테이너 끝 */
 
