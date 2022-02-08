@@ -306,7 +306,7 @@ body {
 
 #container {
     position: relative;
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px 190px;
     font-weight: bold;
@@ -420,34 +420,150 @@ body {
     background: #bdd600;
 }
 
-.counter h3 a.icoFold.on {
-    color: #661e43;
-    font-family: 'notob';
+/* counter */
+.counter {
+    max-width: 1200px;
+    margin: 0px auto;
 }
-
-.counter h3 +.list {
-    margin: 20px 0 35px;
+.counter .list {
+    overflow:hidden;
+    margin:-20px -10px 0;
+    letter-spacing:-1em;
 }
-
 .counter .list >li {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 50%;
-    padding: 20px 10px 0;
-    vertical-align: top;
-    letter-spacing: 0;
+    display:inline-block;
+    box-sizing:border-box;
+    width:50%;
+    padding:20px 10px 0;
+    vertical-align:top;
+    letter-spacing:0;
 }
-.counter .list >li .wrap {
+.counter .list > li .wrap {
     position: relative;
     padding-top: 70px;
     border: 1px solid #e6e6e6;
 }
-.counter .list >li .thumb img {
-    max-width: 100%;    
-    border: 0;
+.counter .list > li .tit {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+}
+.counter .list > li .tit span {
+    font-size: 16px;
+}
+.counter .list > li .thumb {
+    text-align: center;
+}
+.counter .list > li .thumb img {
+    max-width: 100%;
+}
+.counter .list > li h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000;
+}
+.counter .list > li .caution {
+    margin: 5px 0 0;
+}
+.counter h3 {
+    padding-top: 5px;
+}
+.counter h3 a {
+    display: block;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+    background: #f8f8f8;
+}
+.counter h3 a.icoFold:before {
+    right: 40px;
+}
+.counter h3 a.icoFold:after {
+    right: 47px;
+}
+.counter h3 a.icoFold.on {
+    color: #661e43;
+    font-family: 'notob';
+}
+.counter h3 +.list {
+    margin: 20px 0 35px;
+}
+.counter .countryRule h2.typeA {
+    margin-left: 0;
+}
+.counter .countryRule .txtdesc {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.counter .countryRule .txtdesc + [class*="btn"] {
+    min-width: 270px;
+    margin-top: 5px;
+}
+.counter .countryRule table {
+    margin-top: 20px;
+}
+.counter .srmy {
+    margin: 70px 0 10px;
+    font-size: 20px;
+    color: #000;
+    line-height: 1.4em;
+}
+.counter h3.typeA {
+    padding-left: 0;
+    font-size: 24px;
+    font-family: 'notob';
+    color: #000;
+    line-height: 1em;
+}
+.counter .use_list {
+    overflow: hidden;
+}
+.counter .use_list li {
+    position: relative;
+    display: inline-block;
+    width: 189px;
     vertical-align: top;
+    box-sizing: border-box;
+}
+.counter .use_list li:first-child:before {
+    display: none;
+}
+.counter .use_list li:before {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: -1px;
+    background: #000;
+    content: '';
+}
+.counter .use_list li div {
+    position: relative;
+    display: table;
+    width: 170px;
+    height: 170px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    background: #fff;
+    z-index: 1;
+}
+.counter .use_list li span {
+    display: table-cell;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+    word-break: keep-all;
 }
 
+/* counter 끝 */
 
 /* 컨테이너 끝 */
 
