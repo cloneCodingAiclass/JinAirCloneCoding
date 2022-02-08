@@ -619,13 +619,14 @@ body{
     margin: 0 auto;
 }
 .mypage_main .mypage_menu{
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     background-color: #f2f2f2;
     display: flex;
     height: 120px;
     align-items: center;
     text-align: center;
+    z-index: 9999;
 }
 .mypage_main .mypage_menu p{
     width: 100px;
@@ -674,7 +675,7 @@ body{
 .menu_title{
     font-size: 3rem;
     color: #661E43;
-    margin: 40px 0;
+    margin: 140px 0 50px 0;
     font-weight: 600;
     text-indent: 30px;
 }
@@ -935,4 +936,37 @@ body{
     top:50%;
     right:8%;
     margin-top:-21px;
+}
+
+.footer_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #F7F7F7;
+    padding: 0 40px;
+}
+
+.footer_info p:first-child{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.footer_info .footer_text .subtext{
+    font-size: 1rem;
+    line-height: 25px;
+    font-weight: 600;
+}
+.footer_info .point_info{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
 }
