@@ -369,7 +369,6 @@ body {
     width: 100%;
     padding: 12px 0;
     color: #000;
-    vertical-align: middle;
 }
 
 /* pointInfo */
@@ -427,7 +426,6 @@ body {
     padding: 10px 5px 0; 
     vertical-align: top;
     letter-spacing: 0;
-    float: left;
     margin-left: 10px;
 
 }
