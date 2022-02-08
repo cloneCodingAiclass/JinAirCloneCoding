@@ -99,7 +99,7 @@ $(function () {
         
         if(term1 && term2 && term3){
             //api로 넘기기
-            let url = "../join/joinForm.html";
+            let url = "joinForm.html";
             $('.confirm_phone').click(function(){
                 $(location).attr('herf', url);
             });
