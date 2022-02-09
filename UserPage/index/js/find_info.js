@@ -83,10 +83,18 @@ $(function () {
     $('.email_modal').hide();
     $('.confirm_email').on('click', function(){
         $('.email_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
     });
 
     $('.btn_cancel').on('click', function(e){
         $('.email_modal').fadeOut(200);
+        $('body').css('overflow', '');
         e.stopPropagation();
     });
+
 });
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+}

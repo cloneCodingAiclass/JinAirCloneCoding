@@ -86,9 +86,17 @@ $(function () {
     $('.policy_box').hide();
     $('.btnTypeB').click(function(){
         $('.policy_box').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+
         $('.btn_agree').click(function(){
             $('.policy_box').fadeOut(200);
+            $('body').css('overflow', '');
         })
     })
 
 });
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+}

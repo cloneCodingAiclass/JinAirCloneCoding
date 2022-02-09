@@ -83,9 +83,29 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-
+    $('.pwcheck_modal').hide();
+    $('.edit').click(function(){
+        $('.pwcheck_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+        
+        $('.btn_cancel').click(function(e){
+            $('.pwcheck_modal').fadeOut(200);
+            $('body').css('overflow', '');
+            e.stopPropagation();
+        });
+    });
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 90) {
+            $(".mypage_menu").css("position", "fixed");
+            $(".mypage_menu").css("top", "0px");
+            $("#header").css("position", "relative");
+        } else {
+            $(".mypage_menu").css("position", "relative");
+            $(".mypage_menu").css("top", "90px");
+            $("#header").css("position", "absolute");
+        }
+    });
 });
-
 
 function hidePopupLayer(){
     $('.confirm_modal1', parent.document).fadeOut(200);

@@ -84,8 +84,51 @@ $(function () {
         $('.modal').fadeOut(200);
     })
 
+    $('.bonus_ticket_main').hide();
+    $(".coupons").on('click', function () {
+        $('.coupon_main').show();
+        $(".bonus_ticket_main").css("display","none");
+        $(".bonus_ticket").css("background-color", "white");
+        $(".bonus_ticket").css("color", "#444");
+        $(".coupons").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".coupons_main").css("display","block");
+    });
+    $(".bonus_ticket").on('click', function () {
+        $('.coupon_main').hide();
+        $(".coupons").css("background-color", "white");
+        $(".coupons").css("color", "#444");
+        $(".bonus_ticket").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".bonus_ticket_main").css("display","flex");
+    })
+    $('.pwcheck_modal').hide();
+    $('.edit').click(function(){
+        $('.pwcheck_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+        
+        $('.btn_cancel').click(function(e){
+            $('.pwcheck_modal').fadeOut(200);
+            $('body').css('overflow', '');
+            e.stopPropagation();
+        });
+    });
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 90) {
+            $(".mypage_menu").css("position", "fixed");
+            $(".mypage_menu").css("top", "0px");
+            $("#header").css("position", "relative");
+        } else {
+            $(".mypage_menu").css("position", "relative");
+            $(".mypage_menu").css("top", "90px");
+            $("#header").css("position", "absolute");
+        }
+    });
 });
-
 
 function hidePopupLayer(){
     $('.confirm_modal1', parent.document).fadeOut(200);

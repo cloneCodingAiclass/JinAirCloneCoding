@@ -108,10 +108,12 @@ $(function () {
     $('.pwcheck_modal').hide();
     $('.edit').click(function(){
         $('.pwcheck_modal').fadeIn(200);
-        
+        $('body').css('overflow', 'hidden');
+
         $('.btn_cancel').click(function(e){
-            $('.pwcheck_modal').fadeOut(200);
-            e.stopPropagation();
+            $('.pwcheck_modal').fadeOut(200);  
+            $('body').css('overflow', '');        
+            e.stopPropagation();  
         });
     });
     $(window).scroll(function() {
@@ -126,3 +128,8 @@ $(function () {
         }
     });
 });
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+}

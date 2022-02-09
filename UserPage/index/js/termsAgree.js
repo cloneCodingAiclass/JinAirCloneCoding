@@ -116,25 +116,38 @@ $(function () {
     $('.confirm_modal1').hide();
     $('.term01').click(function(){
         $('.confirm_modal1').fadeIn(200);
+        $('body').css('overflow', 'hidden');
         
         $('.xbox').click(function(){
             $('.confirm_modal1').fadeOut(200);
+            $('body').css('overflow', '');
         })
     });
     $('.confirm_modal2').hide();
     $('.term02').click(function(){
         $('.confirm_modal2').fadeIn(200);
+        $('body').css('overflow', 'hidden');
         
         $('.xbox').click(function(){
             $('.confirm_modal2').fadeOut(200);
+            $('body').css('overflow', '');
         })
     });
     $('.confirm_modal3').hide();
     $('.term03').click(function(){
         $('.confirm_modal3').fadeIn(200);
+        $('body').css('overflow', 'hidden');
         
         $('.xbox').click(function(){
             $('.confirm_modal3').fadeOut(200);
+            $('body').css('overflow', '');
         })
     });
 });
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('.confirm_modal2', parent.document).fadeOut(200);
+    $('.confirm_modal3', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+}

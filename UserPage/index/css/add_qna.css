@@ -288,9 +288,10 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
-
 /*푸터*/
 #footerCont {
     width: 100%;
@@ -559,7 +560,7 @@ body{
     align-items: center;
 }
 
-.pwcheck_modal{
+.covid_info{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     left: 0; right: 0; top: 0; bottom: 0;
@@ -569,8 +570,8 @@ body{
     flex-direction: column;
     z-index: 9999;
 }
-.pwcheck_modal .pwcheck_title{
-    width: 500px;
+.covid_info .info_title{
+    width: 700px;
     height: 70px;
     background-color: #661E43;
     text-indent: 20px;
@@ -580,101 +581,28 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
 }
-.pwcheck_modal .pwcheck_box{
+.covid_info .info_box{
     background-color: white;
-    width: 500px;
-    height: 250px;
-    text-align: center;
+    width: 700px;
+    height: 300px;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border: 2px solid #BDD600;
     font-weight: 600;
+    padding: 50px 50px 10px 50px;
 }
-.pwcheck_modal .pwcheck_box p:nth-child(2){
-    width: 80%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 15px 0;
-    margin: 15px 0;
+.covid_info .info_box p{
+    margin-bottom: 10px;
+}
 
-    text-align: left;
-    text-indent: 20px;
-}
-.pwcheck_modal .pwcheck_box input[type="password"]{
-    width: 250px;
-    height: 50px;
-    text-indent: 20px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    font-weight: 600;
-    margin-left: 20px;
-}
-/* 마이페이지 메인 */
-/* 서브타이틀 시작 */
+/* qna 메인 */
 .mypage_main{
     width: 1160px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
-.mypage_main .mypage_menu{
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #f2f2f2;
-    display: flex;
-    height: 120px;
-    align-items: center;
-    text-align: center;
-    z-index: 101;
-}
-.mypage_main .mypage_menu p{
-    width: 100px;
-    border-right: 1px solid #5f5f5f65;
-    font-size: 1.3rem;
-    font-weight: 700;
-    padding: 25px 0;
-}
-.mypage_main .mypage_menu ul{
-    display: flex;
-}
-.mypage_main .mypage_menu ul li{
-    width: 200px;
-    font-size: 0.9rem;
-    color: #661E43;
-    font-weight: 600;
-    border-right: 1px solid #5f5f5f65;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.mypage_main .mypage_menu ul li a:before{
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    background:url(../index_img/ico_subNav.png) no-repeat 0 -40px;
-}
-.mypage_main .mypage_menu ul li.booking a:before{
-    background-position-x: 0;
-}
-.mypage_main .mypage_menu ul li.mypoint a:before{
-    background-position-x:-40px;
-}
-.mypage_main .mypage_menu ul li.coupon a:before{
-    background-position-x:-80px;
-}
-.mypage_main .mypage_menu ul li.qna a:before{
-    background-position-x:-160px;
-}
-.mypage_main .mypage_menu ul li.edit a:before{
-    background-position-x:-200px;
-}
-/* 서브타이틀 끝 */
 .menu_title{
     font-size: 3rem;
     color: #661E43;
@@ -682,72 +610,6 @@ body{
     font-weight: 600;
     text-indent: 30px;
 }
-.sub_menu_check ul{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.sub_menu_check ul li{
-    width: 550px;
-    height: 50px;
-    border-top: 1px solid #661E43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
-    border-collapse: collapse;
-    margin: 0;
-    box-shadow: 5px 5px 10px -5px #444;
-}
-.sub_menu_check ul li.now_booking{
-    background-color: #661E43;
-    color: white;
-}
-.booking_list ul{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-}
-.booking_list ul li{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-.old_booking_list ul{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-}
-.old_booking_list ul li{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-.sub_text{
-    display: flex;
-    justify-content: right;
-    margin: 20px 0;
-}
-.sub_text p{
-    margin-right: 15px;
-    font-size: 0.9rem;
-    margin-top: 3px;
-}
-.sub_text a{
-    background-color: #BDD600;
-    width: 130px;
-    height: 40px;
-    margin-top: -10px;
-    padding-top: 13px;
-    display: flex;
-    font-size: 0.8rem;
-    font-weight: 600;
-    justify-content: center;
-    align-content: center;
-    cursor: pointer;
-}
-
 .btn input[class="btn_agree"]{
     width: 150px;
     height: 50px;
@@ -768,180 +630,12 @@ body{
     margin-right: 20px;
     cursor: pointer;
 }
-.long .btn{
-    width: 130px;
-    height: 40px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 0.9rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.menu_title p:last-child{
+    color: #444;
+    font-size: 1.6rem;
+    padding-top: 20px;
 }
-
-
-/* ㅠㅠ */
-.detailTbl {
-    overflow:hidden; 
-    border-top:1px solid #000; 
-    border-bottom:1px solid #000;
-}
-.detailTbl p {
-    position:relative; 
-    float:left; 
-    box-sizing:border-box; 
-    width:50%; 
-    min-height:60px; 
-    padding:19px 0 19px 150px; 
-    margin-top:-1px; 
-    border-top:1px solid #e8e8e8; 
-    font-size:18px; 
-    color:#000; 
-    line-height:22px;
-}
-.detailTbl.multi_detailTbl p {
-    padding-left:220px;
-}
-.detailTbl p.btns {
-    padding:9px 0 9px 20px;
-}
-.detailTbl p >strong {
-    position:absolute; 
-    left:20px; 
-    top:19px; 
-    color:#555; 
-}
-.detailTbl p >strong span.fontTypeB {
-    display:block; margin-top:5px;
-}
-.detailTbl p >strong .tripType {
-    margin-top:5px;
-}
-.detailTbl p >span {
-    display:inline-block;
-}
-.detailTbl p .dib{
-    display:inline-block !important;
-}
-.detailTbl p .ico {
-    margin-left:12px; 
-    margin-right:12px;
-}
-.detailTbl p .date {
-    display:inline-block; 
-    margin-top:5px;
-    font-size:14px; 
-    color:#555;
-}
-.detailTbl p:nth-child(2) ~p {
-    border-top:1px solid #e8e8e8;
-}
-.detailTbl p.long {
-    width:100%; border-top:1px solid #e8e8e8;
-}
-.detailTbl p.long:first-child {
-    border-top:0;
-}
-.detailTbl p.short {
-    width:30%;
-}
-.detailTbl p.short:first-child {
-    width:40%;
-}
-.detailTbl p.short.ctar .cont {
-    float:right;
-    margin-right:150px;
-    white-space:no-wrap;
-}
-.detailTbl p .btn {
-    float:right;
-    margin-right:150px;
-} 
-.detailTbl p .btn a {
-    min-width: 1px;
-    padding: 0 20px;
-    margin-top:-10px;
-    margin-bottom:-10px;
-}
-.detailTbl p .line.vm {
-    display:inline-block; 
-    margin:4px 0 -4px;
-}
-.detailTbl p .line >span,
-.detailTbl p .line .dib >span {
-    display:inline-block; 
-    vertical-align:top; 
-    font-size:14px; 
-    color:#555;
-}
-.detailTbl p .line strong {
-    display:block; 
-    margin-bottom:5px; 
-    font-size:18px; 
-    color:#000;
-}
-.detailTbl p .line em {
-    display:block;
-    margin-bottom:5px; 
-    font-size:18px; 
-    color:#000;
-}
-.detailTbl p .line .round {
-    display:inline-block;
-    margin-top:3px;
-}
-.detailTbl p .line .single {
-    display:inline-block; 
-    margin-top:7px;
-}
-.detailTbl p .line .tripType {
-    color:#fff;
-    margin-top:4px; 
-    font-size:12px;
-}
-.detailTbl p .line .tripType.vm {
-    margin:10px 6px -10px 0;
-}
-.detailTbl p .line .tit {
-    margin-right:20px;
-}
-.detailTbl p .line .tit strong {
-    margin:4px 0 0;
-    font-size:1em;
-}
-.detailTbl p .line .tit strong .pbr {
-    margin-top:-6px;
-}
-.detailTbl p .line ~.line {
-    display:block;
-    margin-top:10px;
-}
-.detailTbl p .btnTypeA {
-    min-width:1px; 
-    padding:0 20px; 
-    margin:-10px 0;
-}
-.detailTbl +.detailTbl {
-    margin-top:40px;
-}
-.detailTbl +.btnArea.ar {
-    margin-top:10px;
-}
-.detailTbl .long .infoTxt {
-    font-size:16px;
-    margin:27px 0 0 80px;
-    color:#de1616;
-}
-.detailTbl .long .btn_declaration {
-    position:absolute;
-    top:50%;
-    right:8%;
-    margin-top:-21px;
-}
-
-.footer_info{
+.info_main{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -949,18 +643,20 @@ body{
     background-color: #F7F7F7;
     padding: 0 40px;
 }
-
-.footer_info p:first-child{
+.info_main{
+    margin-bottom: 30px;
+}
+.info_main p:first-child{
     margin-bottom: 13px;
     font-size: 1.4rem;
     font-weight: 700;
 }
-.footer_info .footer_text .subtext{
+.info_main .footer_text .subtext{
     font-size: 1rem;
     line-height: 25px;
     font-weight: 600;
 }
-.footer_info .point_info{
+.info_main .point_info{
     width: 150px;
     height: 40px;
     background-color:#BDD600;
@@ -972,4 +668,80 @@ body{
     font-weight: 700;
     margin-right: 10px;
     cursor: pointer;
+}
+.info_main .qna_info{
+    display: flex;
+    align-items: center;
+}
+.info_main .qna_info a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    margin-right: 30px;
+    background-color:#BDD600;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.info_text p, ul li{
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px;
+    line-height: 20px;
+}
+.info_text ul li span{
+    margin-left: 15px;
+}
+.info_text{
+    border-top: 1px solid #F7F7F7;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.qna_date{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+}
+.qna_date table {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.qna_date table th{
+    width: 160px;
+    height: 80px;
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: 1px solid #F7F7F7;
+}
+.qna_date table td{
+    width: 1000px;
+    border-bottom: 1px solid #F7F7F7;
+}
+.qna_date input[type="text"], input[type="email"], input[type="date"], select{
+    width: 470px;
+    height: 50px;
+    text-indent: 20px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
+}
+.qna_date textarea{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    vertical-align: top;
+}
+.btn{
+    text-align: center;
+    margin: 30px 0;
 }

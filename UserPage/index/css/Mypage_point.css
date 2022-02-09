@@ -612,6 +612,7 @@ body{
     margin-left: 20px;
 }
 /* 마이페이지 메인 */
+/* 서브타이틀 시작 */
 .mypage_main{
     width: 1160px;
     display: flex;
@@ -673,6 +674,7 @@ body{
 .mypage_main .mypage_menu ul li.edit a:before{
     background-position-x:-200px;
 }
+/* 서브타이틀 끝 */
 .menu_title{
     margin: 140px 0 50px 0;
     font-size: 3rem;
@@ -803,7 +805,6 @@ table.bbsList{
     border-collapse: collapse;
     font-weight: 600;
 }
-
 table.bbsList tr{
     height: 60px;
 }
@@ -865,6 +866,7 @@ table.bbsList td:last-child, thead tr th:last-child{
     font-weight: 700;
     cursor: pointer;
 }
+/* 나비포인트 이용 방법 */
 .none_point{
     margin: 30px 0;
     padding: 60px 0;
@@ -885,8 +887,8 @@ table.bbsList td:last-child, thead tr th:last-child{
 }
 
 .footer_info p:first-child{
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    margin-bottom: 13px;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 .footer_info .footer_text .subtext{

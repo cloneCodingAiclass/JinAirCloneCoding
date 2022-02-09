@@ -84,10 +84,21 @@ $(function () {
         $('.modal').fadeOut(200);
     })
 
+    $('.btn_agree').click(function(e){
+        $('.covid_info').fadeOut(200);  
+        $('body').css('overflow', '');        
+        e.stopPropagation();  
+    });
+    
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 90) {
+            $(".mypage_menu").css("position", "fixed");
+            $(".mypage_menu").css("top", "0px");
+            $("#header").css("position", "relative");
+        } else {
+            $(".mypage_menu").css("position", "relative");
+            $(".mypage_menu").css("top", "90px");
+            $("#header").css("position", "absolute");
+        }
+    });
 });
-
-
-function hidePopupLayer(){
-    $('.confirm_modal1', parent.document).fadeOut(200);
-    $('body', parent.document).css('overflow', '');
-}

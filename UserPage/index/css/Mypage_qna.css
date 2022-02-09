@@ -288,7 +288,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 1000px;
+    height: auto;
 }
 
 /*푸터*/
@@ -567,7 +567,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 9999;
 }
 .pwcheck_modal .pwcheck_title{
     width: 500px;
@@ -622,13 +621,14 @@ body{
 }
 .mypage_main .mypage_menu{
     width: 1200px;
+    height: 120px;
     margin: 0 auto;
     background-color: #f2f2f2;
     display: flex;
-    height: 120px;
+    position: fixed;
+    top: 91px;
     align-items: center;
     text-align: center;
-    z-index: 101;
 }
 .mypage_main .mypage_menu p{
     width: 100px;
@@ -676,271 +676,46 @@ body{
 }
 /* 서브타이틀 끝 */
 .menu_title{
+    margin: 140px 0 50px 0;
     font-size: 3rem;
     color: #661E43;
-    margin: 140px 0 50px 0;
     font-weight: 600;
     text-indent: 30px;
 }
-.sub_menu_check ul{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.sub_menu_check ul li{
-    width: 550px;
-    height: 50px;
-    border-top: 1px solid #661E43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
+
+table.bbsList{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     border-collapse: collapse;
-    margin: 0;
-    box-shadow: 5px 5px 10px -5px #444;
-}
-.sub_menu_check ul li.now_booking{
-    background-color: #661E43;
-    color: white;
-}
-.booking_list ul{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-}
-.booking_list ul li{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-.old_booking_list ul{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-}
-.old_booking_list ul li{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-.sub_text{
-    display: flex;
-    justify-content: right;
-    margin: 20px 0;
-}
-.sub_text p{
-    margin-right: 15px;
-    font-size: 0.9rem;
-    margin-top: 3px;
-}
-.sub_text a{
-    background-color: #BDD600;
-    width: 130px;
-    height: 40px;
-    margin-top: -10px;
-    padding-top: 13px;
-    display: flex;
-    font-size: 0.8rem;
     font-weight: 600;
-    justify-content: center;
-    align-content: center;
-    cursor: pointer;
 }
-
-.btn input[class="btn_agree"]{
-    width: 150px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
+table.bbsList tr{
+    height: 60px;
+}
+table.bbsList thead th{
+    border-bottom: 1px solid lightgray;
+    background-color: #f2f2f2;
+    border-right: 1px solid lightgray;
+}
+table.bbsList td, tbody th{
+    border-right: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+}
+table.bbsList td:last-child, thead tr th:last-child{
+    border-right: 0;
+}
+/* 문의하기 */
+.none_point{
+    margin: 30px 0;
+    padding: 60px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
     font-size: 1.1rem;
     font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
 }
-.btn input[class="btn_cancel"]{
-    width: 150px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.long .btn{
-    width: 130px;
-    height: 40px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 0.9rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-
-/* ㅠㅠ */
-.detailTbl {
-    overflow:hidden; 
-    border-top:1px solid #000; 
-    border-bottom:1px solid #000;
-}
-.detailTbl p {
-    position:relative; 
-    float:left; 
-    box-sizing:border-box; 
-    width:50%; 
-    min-height:60px; 
-    padding:19px 0 19px 150px; 
-    margin-top:-1px; 
-    border-top:1px solid #e8e8e8; 
-    font-size:18px; 
-    color:#000; 
-    line-height:22px;
-}
-.detailTbl.multi_detailTbl p {
-    padding-left:220px;
-}
-.detailTbl p.btns {
-    padding:9px 0 9px 20px;
-}
-.detailTbl p >strong {
-    position:absolute; 
-    left:20px; 
-    top:19px; 
-    color:#555; 
-}
-.detailTbl p >strong span.fontTypeB {
-    display:block; margin-top:5px;
-}
-.detailTbl p >strong .tripType {
-    margin-top:5px;
-}
-.detailTbl p >span {
-    display:inline-block;
-}
-.detailTbl p .dib{
-    display:inline-block !important;
-}
-.detailTbl p .ico {
-    margin-left:12px; 
-    margin-right:12px;
-}
-.detailTbl p .date {
-    display:inline-block; 
-    margin-top:5px;
-    font-size:14px; 
-    color:#555;
-}
-.detailTbl p:nth-child(2) ~p {
-    border-top:1px solid #e8e8e8;
-}
-.detailTbl p.long {
-    width:100%; border-top:1px solid #e8e8e8;
-}
-.detailTbl p.long:first-child {
-    border-top:0;
-}
-.detailTbl p.short {
-    width:30%;
-}
-.detailTbl p.short:first-child {
-    width:40%;
-}
-.detailTbl p.short.ctar .cont {
-    float:right;
-    margin-right:150px;
-    white-space:no-wrap;
-}
-.detailTbl p .btn {
-    float:right;
-    margin-right:150px;
-} 
-.detailTbl p .btn a {
-    min-width: 1px;
-    padding: 0 20px;
-    margin-top:-10px;
-    margin-bottom:-10px;
-}
-.detailTbl p .line.vm {
-    display:inline-block; 
-    margin:4px 0 -4px;
-}
-.detailTbl p .line >span,
-.detailTbl p .line .dib >span {
-    display:inline-block; 
-    vertical-align:top; 
-    font-size:14px; 
-    color:#555;
-}
-.detailTbl p .line strong {
-    display:block; 
-    margin-bottom:5px; 
-    font-size:18px; 
-    color:#000;
-}
-.detailTbl p .line em {
-    display:block;
-    margin-bottom:5px; 
-    font-size:18px; 
-    color:#000;
-}
-.detailTbl p .line .round {
-    display:inline-block;
-    margin-top:3px;
-}
-.detailTbl p .line .single {
-    display:inline-block; 
-    margin-top:7px;
-}
-.detailTbl p .line .tripType {
-    color:#fff;
-    margin-top:4px; 
-    font-size:12px;
-}
-.detailTbl p .line .tripType.vm {
-    margin:10px 6px -10px 0;
-}
-.detailTbl p .line .tit {
-    margin-right:20px;
-}
-.detailTbl p .line .tit strong {
-    margin:4px 0 0;
-    font-size:1em;
-}
-.detailTbl p .line .tit strong .pbr {
-    margin-top:-6px;
-}
-.detailTbl p .line ~.line {
-    display:block;
-    margin-top:10px;
-}
-.detailTbl p .btnTypeA {
-    min-width:1px; 
-    padding:0 20px; 
-    margin:-10px 0;
-}
-.detailTbl +.detailTbl {
-    margin-top:40px;
-}
-.detailTbl +.btnArea.ar {
-    margin-top:10px;
-}
-.detailTbl .long .infoTxt {
-    font-size:16px;
-    margin:27px 0 0 80px;
-    color:#de1616;
-}
-.detailTbl .long .btn_declaration {
-    position:absolute;
-    top:50%;
-    right:8%;
-    margin-top:-21px;
-}
-
 .footer_info{
     display: flex;
     justify-content: space-between;
@@ -948,8 +723,12 @@ body{
     height: 150px;
     background-color: #F7F7F7;
     padding: 0 40px;
+    margin: 40px 0;
 }
 
+.footer_info .btn{
+    display: flex;
+}
 .footer_info p:first-child{
     margin-bottom: 13px;
     font-size: 1.4rem;
@@ -960,7 +739,7 @@ body{
     line-height: 25px;
     font-weight: 600;
 }
-.footer_info .point_info{
+.footer_info a{
     width: 150px;
     height: 40px;
     background-color:#BDD600;
