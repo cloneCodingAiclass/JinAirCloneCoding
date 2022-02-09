@@ -83,17 +83,13 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    $('.pwcheck_modal').hide();
-    $('.edit').click(function(){
-        $('.pwcheck_modal').fadeIn(200);
-        $('body').css('overflow', 'hidden');
-        
-        $('.btn_cancel').click(function(e){
-            $('.pwcheck_modal').fadeOut(200);
-            $('body').css('overflow', '');
-            e.stopPropagation();
-        });
+
+    $('.btn_agree').click(function(e){
+        $('.covid_info').fadeOut(200);  
+        $('body').css('overflow', '');        
+        e.stopPropagation();  
     });
+    
     $(window).scroll(function() {
         if($(this).scrollTop() > 90) {
             $(".mypage_menu").css("position", "fixed");
@@ -106,8 +102,3 @@ $(function () {
         }
     });
 });
-
-function hidePopupLayer(){
-    $('.confirm_modal1', parent.document).fadeOut(200);
-    $('body', parent.document).css('overflow', '');
-}

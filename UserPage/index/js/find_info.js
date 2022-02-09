@@ -95,5 +95,6 @@ $(function () {
 });
 
 function hidePopupLayer(){
-    $('.confirm_modal1', parent.document).hide();
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
 }

@@ -149,4 +149,5 @@ function hidePopupLayer(){
     $('.confirm_modal1', parent.document).fadeOut(200);
     $('.confirm_modal2', parent.document).fadeOut(200);
     $('.confirm_modal3', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
 }
