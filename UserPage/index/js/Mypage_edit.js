@@ -86,18 +86,26 @@ $(function () {
     $('.pwcheck_modal').hide();
     $('.edit').click(function(){
         $('.pwcheck_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
         
         $('.btn_cancel').click(function(e){
             $('.pwcheck_modal').fadeOut(200);
+            $('body').css('overflow', '');
             e.stopPropagation();
         });
     });
     $('.confirm_modal1').hide();
     $('.btnTypeA').click(function(){
         $('.confirm_modal1').fadeIn(200);
+        $('body').css('overflow', 'hidden');
         
         $('.xbox').click(function(){
             $('.confirm_modal1').fadeOut(200);
+            $('body').css('overflow', '');
         })
     });
 });
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+}

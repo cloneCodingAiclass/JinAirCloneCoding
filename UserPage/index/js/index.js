@@ -85,3 +85,8 @@ $(function () {
     })
 
 });
+
+
+function hidePopupLayer(){
+    $('.confirm_modal1', parent.document).hide();
+}

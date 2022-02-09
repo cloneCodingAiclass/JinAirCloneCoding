@@ -775,10 +775,6 @@ body{
     font-weight: 600;
     font-size: 0.8rem;
 }
-.termsAgree_container .btn{
-    text-align: center;
-    margin-top: 40px;
-}
 .termsAgree_container > .btn input[type="button"]{
     width: 200px;
     height: 50px;
@@ -788,14 +784,36 @@ body{
     font-weight: 700;
     margin-right: 20px;
 }
-.joinAgree .btnTypeB{
-    border: 2px solid #BDD600;
-    height: 40px;
-    font-weight: 700;
-    padding: 15px;
-    cursor: pointer;
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.btnTypeA{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 160px;
+    margin-top: 10px;
+    height: 50px;
+    text-align: center;
+    background-color: #BDD600;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btnTypeB{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #BDD600;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 /* 약관 레이아웃 */

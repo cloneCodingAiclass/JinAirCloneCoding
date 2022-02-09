@@ -567,6 +567,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 9999;
 }
 .pwcheck_modal .pwcheck_title{
     width: 500px;
@@ -627,7 +628,7 @@ body{
     height: 120px;
     align-items: center;
     text-align: center;
-    z-index: 9999;
+    z-index: 101;
 }
 .mypage_main .mypage_menu p{
     width: 100px;
