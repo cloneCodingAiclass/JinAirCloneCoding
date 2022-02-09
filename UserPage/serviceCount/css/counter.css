@@ -316,7 +316,6 @@ body {
 .count_bn{
     position: relative;
     height: 225px;
-    padding-left: 30px;
 }
 .count_bn h1.typeA{
     height: 78px;
@@ -337,6 +336,9 @@ body {
 }
 .count_bn img {
     float: right;
+    position: relative;
+    bottom: 10px;
+    right: 90px;
 }
 /* count_bn 끝 */
 
@@ -351,6 +353,7 @@ body {
     margin-bottom: 40px;
     table-layout: fixed;
 }
+
 .tabTypeA li {
     display: table-cell;
     text-align: center;
@@ -361,28 +364,13 @@ body {
 .tabTypeA li.choice {
     background: #661e43;
 }
-.desc {
-    position: absolute;
-    left: 0;
-    top: -10000px;
-    overflow: hidden;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 1px !important;
-    line-height: 1px !important;
-}
 .tabTypeA li a {
     display: block;
     width: 100%;
     padding: 12px 0;
     color: #000;
-    vertical-align: middle;
 }
-.counter {
-    display: none;
-}
+
 /* pointInfo */
 .pointInfo {
     position: relative;
@@ -422,21 +410,24 @@ body {
 
 /* counter */
 .counter {
-    max-width: 1200px;
-    margin: 0px auto;
+    display: none;
 }
 .counter .list {
-    overflow:hidden;
-    margin:-20px -10px 0;
-    letter-spacing:-1em;
+    width: 100%;
+    overflow: hidden;
+    margin: -20px 0;
+    letter-spacing: -1em;
 }
-.counter .list >li {
-    display:inline-block;
-    box-sizing:border-box;
-    width:50%;
-    padding:20px 10px 0;
-    vertical-align:top;
-    letter-spacing:0;
+.counter .list > li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 550px;
+    height: 380px;  
+    padding: 10px 5px 0; 
+    vertical-align: top;
+    letter-spacing: 0;
+    margin-left: 10px;
+
 }
 .counter .list > li .wrap {
     position: relative;
@@ -562,8 +553,224 @@ body {
     text-align: center;
     word-break: keep-all;
 }
-
 /* counter 끝 */
+
+/* 도심공항 */
+.desc {
+    position: absolute;
+    left: 0;
+    top: -10000px;
+    overflow: hidden;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 1px !important;
+    line-height: 1px !important;
+}
+.prohibit h3,
+.prohibit.tabCont h3 {
+    padding: 70px 20px 20px 50px;
+    margin-left: 0;
+    margin-right: 0;
+    border-top: 1px solid #f0f0f0;
+}
+.prohibit h3 .fontTypeD,
+.prohibit.tabCont h3 .fontTypeD {
+    font-family: 'noto';
+}
+.prohibit .text {
+    margin: -5px 20px 10px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000;
+}
+.prohibit .list {
+    overflow: hidden;
+    margin-left: -10px;
+}
+.prohibit .list li {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    margin: 30px -4px 0 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #661e43;
+    word-break: keep-all;
+    vertical-align: top;
+}
+.prohibit .list li:before {
+    content: "";
+    display: block;
+    width: 148px;
+    height: 148px;
+    margin-bottom: 5px;
+    border: 1px solid #000;
+}
+.prohibit .list li:after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 100px;
+    height: 100px;
+    background: url("/index_img/down.png") no-repeat 0 0;
+}
+.prohibit .list li.no1:after {
+    background-position-x: 0;
+}
+.prohibit .list li.no2:after {
+    background-position-x: -100px;
+}
+.prohibit .list li.no3:after {
+    background-position-x: -200px;
+}
+.prohibit .list li.no4:after {
+    background-position-x: -300px;
+}
+.prohibit .list li.no5:after {
+    background-position-x: -400px;
+}
+.prohibit .list li.no6:after {
+    background-position-x: -500px;
+}
+.prohibit .plane li:after {
+    background-position-y: -100px;
+}
+.baggage .pointBox {
+    margin-top: 20px;
+    padding: 20px 0;
+    border: 1px solid #e6e6e6;
+}
+.baggage .btnTypeA.btn {
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+    line-height: normal;
+    height: auto;
+    padding: 7px 20px;
+}
+
+/* bbsList css */
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    
+}
+colgroup {
+    display: table-column-group;
+}
+col {
+    display: table-column;
+}
+.bbsList {
+    width: 100%;
+    table-layout: fixed;
+}
+table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0 !important;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    font-weight: normal;
+    padding: 0;
+}
+.bbsList tbody tr:last-child th, .bbsList tbody tr:last-child td {
+    border-bottom: 1px solid #000;
+}
+.bbsList thead th {
+    height: 60px;
+    border: 1px solid #eaeaea;
+    border-right: 0;
+    border-top-color: #000;
+    border-bottom: 0;
+    font-size: 18px;
+    background: #f7f7f6;
+    word-wrap: break-word;
+    text-align: center;
+}
+.bbsList tbody td {
+    height: 28px;
+    padding: 16px 0;
+    border: 1px solid #eaeaea;
+    border-right: 0;
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.counter .use_list li {
+    position: relative;
+    display: inline-block;
+    width: 175px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+/* bbsList css 끝 */
+
+/* pointInfo_modal */
+.pointInfo_modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.pointInfo_modal > .modal_content{
+    width:645px; height:762px;
+    background:#fff; border-radius:10px;
+    position:relative; top:20%; left:10%;
+    margin-top: -80px; margin-left: 400px;
+    box-sizing:border-box; padding:74px 0;
+    line-height:23px; cursor:pointer;
+    max-height: 100%;
+    overflow-y: auto;
+}
+.modal_content > table {
+    border-bottom: 1px solid #000;
+}
+.modal_content >.title {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100px;
+    background-color: #661e43;
+}
+.modal_content > .title > h2 {
+    color: #f7f7f6;
+    line-height: 100px;
+    margin-left: 30px;
+}
+.modal_content > table{
+    margin: 50px 10px 10px 10px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.modal_content > table trth{
+    font-weight: bold;
+}
+.modal_content > table td{
+    border: 1px solid #000;
+}
+
+/* pointInfo_modal 끝 */
+/* 도심공항 끝 */
 
 /* 컨테이너 끝 */
 
