@@ -86,14 +86,14 @@ $(function () {
 
 
     $('.dis_save').on('click', function () {
-        $('#container').css({"height":"2700px"});
+        $('#container').css({"height":"4150px"});
         $('.save').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_useinfo').css({"background-color":"white", "color": "#444"});
         $('.useinfo').css({"display":"none"});
     })
     $('.dis_useinfo').on('click', function () {
-        $('#container').css({"height":"2100px"});
+        $('#container').css({"height":"3300px"});
         $('.useinfo').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_save').css({"background-color":"white", "color": "#444"});
