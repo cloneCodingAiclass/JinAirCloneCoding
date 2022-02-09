@@ -688,7 +688,7 @@ body{
     margin-bottom: 20px;
 }
 .sub_menu_check ul li{
-    width: 400px;
+    width: 550px;
     height: 50px;
     border-top: 1px solid #661E43;
     display: flex;
@@ -700,9 +700,114 @@ body{
     margin: 0;
     box-shadow: 5px 5px 10px -5px #444;
 }
-.sub_menu_check ul li.point_srh{
+.sub_menu_check ul li.coupons{
     background-color: #661E43;
     color: white;
+}
+.coupon_main{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    align-items: center;
+    border-left: 8px solid #661e43;
+    margin-bottom: 20px;
+}
+.coupon_main .my_coupon{
+    width: 400px;
+    height: 300px;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-right: 4px dotted #EDEDED;
+    border-top: 4px solid #EDEDED;
+    border-bottom: 4px solid #EDEDED;
+}
+.coupon_main .my_coupon p:last-child{
+    text-align: right;
+    margin-top: 50px;
+}
+.bonus_ticket_main .my_coupon p:last-child span{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #661e43;
+    margin-right: 10px;
+}
+.bonus_ticket_main{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    align-items: center;
+    border-left: 8px solid #661e43;
+    margin-bottom: 20px;
+}
+.bonus_ticket_main .my_coupon{
+    width: 400px;
+    height: 300px;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-right: 4px dotted #EDEDED;
+    border-top: 4px solid #EDEDED;
+    border-bottom: 4px solid #EDEDED;
+}
+.bonus_ticket_main .my_coupon p:last-child{
+    text-align: right;
+    margin-top: 50px;
+}
+.add_coupon{
+    font-size: 1.3rem;
+    font-weight: 700;
+    width: 695px;
+    height: 300px;
+    border-right: 4px solid #EDEDED;
+    border-top: 4px solid #EDEDED;
+    border-bottom: 4px solid #EDEDED;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    line-height: 25px;
+}
+.add_coupon form{
+    margin: 20px 0;
+}
+.add_coupon input[type="text"]{
+    width: 450px;
+    height: 50px;
+    text-indent: 20px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
+}
+.add_coupon input[type="submit"]{
+    width: 130px;
+    height: 50px;
+    border: 2px solid #BDD600;
+    background-color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.add_coupon li{
+    font-size: 1rem;
+}
+.srh_container .srh_box{
+    height: 120px;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 50px;
 }
 .btn input[class="btn_agree"]{
     width: 150px;
@@ -725,118 +830,6 @@ body{
     cursor: pointer;
 }
 
-.save_container{
-    margin: 0 auto;
-    height: 300px;
-}
-.save_container > p{
-    text-align: left;
-    margin-top: 20px;
-    text-indent: 80px;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-.save_box{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.save_box p{
-    font-size: 1.1rem;
-    text-align: left;
-    margin-right: 30px;
-    font-weight: 700;
-}
-.save_box input[type="text"]{
-    width: 250px;
-    height: 50px;
-    text-indent: 20px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    font-weight: 600;
-}
-.save_box input[type="submit"]{
-    width: 130px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-left: 20px;
-    cursor: pointer;
-}
-.flex_container > h2{
-    text-indent: 20px;
-    margin: 90px 0 20px 0;
-}
-.flex_container .point_box{
-    height: 120px;
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-    margin-bottom: 40px;
-}
-.flex_container input[type="submit"]{
-    width: 200px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-.srh_container .srh_box{
-    height: 120px;
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 50px;
-}
-table.bbsList{
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-collapse: collapse;
-    font-weight: 600;
-}
-table.bbsList tr{
-    height: 60px;
-}
-table.bbsList thead th{
-    border-bottom: 1px solid lightgray;
-    background-color: #f2f2f2;
-    border-right: 1px solid lightgray;
-}
-table.bbsList td, tbody th{
-    border-right: 1px solid lightgray;
-    border-top: 1px solid lightgray;
-}
-table.bbsList td:last-child, thead tr th:last-child{
-    border-right: 0;
-}
-.flex_info{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-    text-indent: 20px;
-}
-.flex_info ul{
-    font-size: 1rem;
-    line-height: 22px;
-    font-weight: 600;
-}
-.flex_info ul ul{
-    font-size: 0.8rem;
-}
-.srh_container .srh_box p{
-    margin-left: 10px;
-}
 .srh_container .srh_box select, input[type="date"]{
     width: 170px;
     height: 50px;
@@ -866,7 +859,7 @@ table.bbsList td:last-child, thead tr th:last-child{
     font-weight: 700;
     cursor: pointer;
 }
-/* 나비포인트 이용 방법 */
+/* 쿠폰 사용 안내 */
 .none_point{
     margin: 30px 0;
     padding: 60px 0;
@@ -885,7 +878,6 @@ table.bbsList td:last-child, thead tr th:last-child{
     padding: 0 40px;
     margin: 40px 0;
 }
-
 .footer_info p:first-child{
     margin-bottom: 13px;
     font-size: 1.4rem;
@@ -896,7 +888,7 @@ table.bbsList td:last-child, thead tr th:last-child{
     line-height: 25px;
     font-weight: 600;
 }
-.footer_info .point_info{
+.footer_info input[type="button"]{
     width: 150px;
     height: 40px;
     background-color:#BDD600;

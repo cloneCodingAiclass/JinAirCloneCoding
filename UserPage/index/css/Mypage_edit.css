@@ -558,50 +558,92 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-.pwcheck_modal{
+.policy_box{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     left: 0; right: 0; top: 0; bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
-.pwcheck_modal .pwcheck_title{
-    width: 500px;
-    height: 70px;
-    background-color: #661E43;
-    text-indent: 20px;
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.pwcheck_modal .pwcheck_box{
+.policy_box .policy_main{
+    width: 600px;
+    height: 300px;
     background-color: white;
-    width: 500px;
-    height: 250px;
-    text-align: center;
+    border: 2px solid #BDD600;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid #BDD600;
-    font-weight: 600;
+    flex-direction: column;
+    text-align: center;
 }
-.pwcheck_modal .pwcheck_box p:nth-child(2){
-    width: 80%;
+.policy_box .policy_main .policy_text{
+    margin: 15px;
+    text-align: left;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.policy_box .policy_main .policy_text p{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+/* 회원 정보 수정 */
+
+.edit_container{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.menu_title p{
+    margin-top: 150px;
+    font-size: 3rem;
+    text-align: center;
+    color: #661E43;
+    font-weight: 500;
+}
+.sub_title{
+    height: 70px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 25px;
+}
+.edit_container h2{
+    margin: 30px 0;
+}
+.edit_container h2 span{
+    font-size: 0.8rem;
+    margin-left: 20px;
+}
+.edit_container table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 15px 0;
-    margin: 15px 0;
-
-    text-align: left;
-    text-indent: 20px;
+    margin-bottom: 20px;
 }
-.pwcheck_modal .pwcheck_box input[type="password"]{
+.edit_container table tr{
+    display: flex;
+    height: auto;
+    margin: 20px 0;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 20px;
+}
+.edit_container table tr:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.edit_container table tr:nth-child(5) th{
+    width: 220px;
+}
+.edit_container table th{
+    width: 150px;
+    text-align: left;
+}
+.edit_container table td{
+    margin-left: 40px;
+}
+.edit_container input[type="text"], select{
     width: 250px;
     height: 50px;
     text-indent: 20px;
@@ -609,100 +651,47 @@ body{
     border: 1px solid #EDEDED;
     background-color: #F7F7F7;
     font-weight: 600;
-    margin-left: 20px;
+    cursor: pointer;
 }
-/* 마이페이지 메인 */
-/* 서브타이틀 시작 */
-.mypage_main{
-    width: 1160px;
+.edit_container .idField, .zipcodeField{
+    display: flex;
+}
+.edit_container .sizeL{
+    display: block;
+    width: 100px;
+    margin-left: 20px;
+    padding: 17px 0;
+    height: 50px;
+    text-align: center;
+    background-color: #BDD600;
+    font-weight: 700;
+}
+.edit_container table p{
+    font-size: 0.8rem;
+    line-height: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.edit_container table tr:nth-child(2){
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.edit_container table tr:nth-child(3) td{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
-.mypage_main .mypage_menu{
-    width: 1200px;
-    height: 120px;
-    margin: 0 auto;
-    background-color: #f2f2f2;
-    display: flex;
-    position: fixed;
-    top: 91px;
-    align-items: center;
+.edit_container #bthDt, #ntnltyCd, #residenceIataCountryCode, #emAdr{
+    width: 500px;
+}
+.edit_container #pstNo, #adr1, #adr2{
+    width: 380px;
+    margin-bottom: 10px;
+}
+/* 버튼타입 */
+.btn{
     text-align: center;
-}
-.mypage_main .mypage_menu p{
-    width: 100px;
-    border-right: 1px solid #5f5f5f65;
-    font-size: 1.3rem;
-    font-weight: 700;
-    padding: 25px 0;
-}
-.mypage_main .mypage_menu ul{
+    margin: 30px 0;
     display: flex;
-}
-.mypage_main .mypage_menu ul li{
-    width: 200px;
-    font-size: 0.9rem;
-    color: #661E43;
-    font-weight: 600;
-    border-right: 1px solid #5f5f5f65;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.mypage_main .mypage_menu ul li a:before{
-    content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    background:url(../index_img/ico_subNav.png) no-repeat 0 -40px;
-}
-.mypage_main .mypage_menu ul li.booking a:before{
-    background-position-x: 0;
-}
-.mypage_main .mypage_menu ul li.mypoint a:before{
-    background-position-x:-40px;
-}
-.mypage_main .mypage_menu ul li.coupon a:before{
-    background-position-x:-80px;
-}
-.mypage_main .mypage_menu ul li.qna a:before{
-    background-position-x:-160px;
-}
-.mypage_main .mypage_menu ul li.edit a:before{
-    background-position-x:-200px;
-}
-/* 서브타이틀 끝 */
-.menu_title{
-    margin: 140px 0 50px 0;
-    font-size: 3rem;
-    color: #661E43;
-    font-weight: 600;
-    text-indent: 30px;
-}
-.sub_menu_check ul{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.sub_menu_check ul li{
-    width: 400px;
-    height: 50px;
-    border-top: 1px solid #661E43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
-    border-collapse: collapse;
-    margin: 0;
-    box-shadow: 5px 5px 10px -5px #444;
-}
-.sub_menu_check ul li.point_srh{
-    background-color: #661E43;
-    color: white;
 }
 .btn input[class="btn_agree"]{
     width: 150px;
@@ -724,188 +713,157 @@ body{
     margin-right: 20px;
     cursor: pointer;
 }
-
-.save_container{
-    margin: 0 auto;
-    height: 300px;
-}
-.save_container > p{
-    text-align: left;
-    margin-top: 20px;
-    text-indent: 80px;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-.save_box{
-    margin-top: 40px;
+.btnTypeA{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.save_box p{
-    font-size: 1.1rem;
-    text-align: left;
-    margin-right: 30px;
+    width: 160px;
+    margin-top: 10px;
+    height: 50px;
+    text-align: center;
+    background-color: #BDD600;
     font-weight: 700;
 }
-.save_box input[type="text"]{
-    width: 250px;
-    height: 50px;
-    text-indent: 20px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    font-weight: 600;
-}
-.save_box input[type="submit"]{
-    width: 130px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-left: 20px;
-    cursor: pointer;
-}
-.flex_container > h2{
-    text-indent: 20px;
-    margin: 90px 0 20px 0;
-}
-.flex_container .point_box{
-    height: 120px;
-    background-color: #F7F7F7;
+.btnTypeB{
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-    margin-bottom: 40px;
-}
-.flex_container input[type="submit"]{
-    width: 200px;
+    width: 160px;
     height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-.srh_container .srh_box{
-    height: 120px;
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 50px;
-}
-table.bbsList{
-    width: 100%;
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #BDD600;
+    font-size: 0.9rem;
     font-weight: 600;
 }
-table.bbsList tr{
-    height: 60px;
+.fieldArea{
+    width: 500px;
 }
-table.bbsList thead th{
-    border-bottom: 1px solid lightgray;
-    background-color: #f2f2f2;
-    border-right: 1px solid lightgray;
-}
-table.bbsList td, tbody th{
-    border-right: 1px solid lightgray;
-    border-top: 1px solid lightgray;
-}
-table.bbsList td:last-child, thead tr th:last-child{
-    border-right: 0;
-}
-.flex_info{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-    text-indent: 20px;
-}
-.flex_info ul{
-    font-size: 1rem;
-    line-height: 22px;
-    font-weight: 600;
-}
-.flex_info ul ul{
-    font-size: 0.8rem;
-}
-.srh_container .srh_box p{
-    margin-left: 10px;
-}
-.srh_container .srh_box select, input[type="date"]{
-    width: 170px;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: white;
-    font-weight: 600;
-    margin-left: 20px;
-}
-.srh_container .srh_box .btn input[type="submit"]{
-    width: 150px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.srh_container .srh_box .btn input[class="btn_cancel"]{
-    width: 150px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-/* 나비포인트 이용 방법 */
-.none_point{
-    margin: 30px 0;
-    padding: 60px 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-.footer_info{
+.fieldArea .field_gender{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 150px;
-    background-color: #F7F7F7;
-    padding: 0 40px;
-    margin: 40px 0;
 }
-
-.footer_info p:first-child{
-    margin-bottom: 13px;
-    font-size: 1.4rem;
-    font-weight: 700;
+.fieldArea .field_gender .field input[type="radio"]{
+    display: none;
 }
-.footer_info .footer_text .subtext{
-    font-size: 1rem;
-    line-height: 25px;
-    font-weight: 600;
-}
-.footer_info .point_info{
-    width: 150px;
-    height: 40px;
-    background-color:#BDD600;
-    border: 0;
+.fieldArea .field_gender .field label{
     display: flex;
+    width: 250px;
+    height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-right: 10px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
     cursor: pointer;
+}
+.fieldArea .field_gender .field input[type=radio]:checked + label{
+    background-color: #661E43;
+    color: white;
+}
+
+/* 모달 */
+.confirm_modal1{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.confirm_modal_box{
+    background-color: white;
+    width: 700px;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #BDD600;
+    font-weight: 600;
+}
+.confirm_modal_box iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.confirm_modal_box .popTitle{
+    width: 700px;
+    height: 100px;
+    background-color: #661E43;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+.confirm_modal_box .popTitle .xbox{
+    cursor: pointer;
+}
+.edit_container .btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+#popWrap{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+    line-height: 25px;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    width: 630px;
+}
+#popWrap table.fieldForm{
+    border-collapse: collapse;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 30px 0;
+}
+#popWrap table.fieldForm th{
+    width: 300px;
+    height: 60px;
+
+}
+#popWrap table.fieldForm td{
+    width: 250px;
+}
+#popWrap table.fieldForm tr, td, th{
+    border: 0;
+}
+#popWrap table.fieldForm td:last-child{
+    border-right: 0;
+}
+#popCont .text{
+    font-weight: 600;
+    text-align: center;
+}
+#popCont p{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+#popWrap [type="password"]{
+    width: 300px;
+    height: 50px;
+    text-indent: 20px;
+    font-size: 1rem;
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    font-weight: 600;
+    margin: 10px 0;
+}
+#popCont .btn .btnTypeA{
+    margin-right: 20px;
+}
+#popCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

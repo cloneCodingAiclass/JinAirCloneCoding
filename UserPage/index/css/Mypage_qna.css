@@ -682,121 +682,7 @@ body{
     font-weight: 600;
     text-indent: 30px;
 }
-.sub_menu_check ul{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.sub_menu_check ul li{
-    width: 400px;
-    height: 50px;
-    border-top: 1px solid #661E43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
-    border-collapse: collapse;
-    margin: 0;
-    box-shadow: 5px 5px 10px -5px #444;
-}
-.sub_menu_check ul li.point_srh{
-    background-color: #661E43;
-    color: white;
-}
-.btn input[class="btn_agree"]{
-    width: 150px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.btn input[class="btn_cancel"]{
-    width: 150px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
-}
 
-.save_container{
-    margin: 0 auto;
-    height: 300px;
-}
-.save_container > p{
-    text-align: left;
-    margin-top: 20px;
-    text-indent: 80px;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-.save_box{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.save_box p{
-    font-size: 1.1rem;
-    text-align: left;
-    margin-right: 30px;
-    font-weight: 700;
-}
-.save_box input[type="text"]{
-    width: 250px;
-    height: 50px;
-    text-indent: 20px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    font-weight: 600;
-}
-.save_box input[type="submit"]{
-    width: 130px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-left: 20px;
-    cursor: pointer;
-}
-.flex_container > h2{
-    text-indent: 20px;
-    margin: 90px 0 20px 0;
-}
-.flex_container .point_box{
-    height: 120px;
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
-    margin-bottom: 40px;
-}
-.flex_container input[type="submit"]{
-    width: 200px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-.srh_container .srh_box{
-    height: 120px;
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 50px;
-}
 table.bbsList{
     width: 100%;
     text-align: center;
@@ -820,53 +706,7 @@ table.bbsList td, tbody th{
 table.bbsList td:last-child, thead tr th:last-child{
     border-right: 0;
 }
-.flex_info{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 50px 0;
-    text-indent: 20px;
-}
-.flex_info ul{
-    font-size: 1rem;
-    line-height: 22px;
-    font-weight: 600;
-}
-.flex_info ul ul{
-    font-size: 0.8rem;
-}
-.srh_container .srh_box p{
-    margin-left: 10px;
-}
-.srh_container .srh_box select, input[type="date"]{
-    width: 170px;
-    height: 50px;
-    text-indent: 10px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: white;
-    font-weight: 600;
-    margin-left: 20px;
-}
-.srh_container .srh_box .btn input[type="submit"]{
-    width: 150px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.srh_container .srh_box .btn input[class="btn_cancel"]{
-    width: 150px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-}
-/* 나비포인트 이용 방법 */
+/* 문의하기 */
 .none_point{
     margin: 30px 0;
     padding: 60px 0;
@@ -886,6 +726,9 @@ table.bbsList td:last-child, thead tr th:last-child{
     margin: 40px 0;
 }
 
+.footer_info .btn{
+    display: flex;
+}
 .footer_info p:first-child{
     margin-bottom: 13px;
     font-size: 1.4rem;
@@ -896,7 +739,7 @@ table.bbsList td:last-child, thead tr th:last-child{
     line-height: 25px;
     font-weight: 600;
 }
-.footer_info .point_info{
+.footer_info input[type="button"]{
     width: 150px;
     height: 40px;
     background-color:#BDD600;

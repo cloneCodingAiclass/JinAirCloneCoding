@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 나비포인트 | 진에어</title>
-    <link rel="stylesheet" href="../css/Mypage_main.css">
+    <link rel="stylesheet" href="../css/Mypage_qna.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../js/Mypage_main.js"></script>
+    <script src="../js/Mypage_qna.js"></script>
 </head>
 
 <body>
@@ -79,8 +79,8 @@
                         <a href="#">비즈니스 운임</a>
                     </div>
                     <div>
-                        <a href="#" class="subNav_title">할인안내</a>
-                        <a href="#">가족운임 할인제도</a>
+                        <a href="../../reservation/discount_info/discount.html" class="subNav_title">할인안내</a>
+                        <a href="../../reservation/discount_info/discount.html">가족운임 할인제도</a>
                         <a href="#">사용우대 프로그램</a>
                         <a href="#">제주도민 할인제도</a>
                         <a href="#">제외/명예도민 할인제도</a>
@@ -146,7 +146,7 @@
             <div class="sub_nav optional">
                 <div class="subnav_warp">
                     <div>
-                        <a href="#" class="subNav_title">지니스토어</a>
+                        <a href="https://jinistore.jinair.com/main.do" class="subNav_title">지니스토어</a>
                     </div>
                     <div>
                         <a href="#" class="subNav_title">보딩패스 할인</a>
@@ -193,67 +193,43 @@
                     </ul>
                 </div>
                 <div class="menu_title">
-                    <p>예약조회/변경/취소</p>
+                    <p>나의 Q&A</p>
                 </div>
-                <div class="sub_menu_check">
-                    <ul>
-                        <li class="now_booking">예약조회</li>
-                        <li class="old_booking">지난예약</li>
-                    </ul>
+                <div class="qna_main">                    
+				<table class="bbsList">
+                    <colgroup>
+                        <col width="10%"><col width="8.5%"><col width=""><col width="14%"><col width="10%"><col width="14%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">유형</th>
+                            <th scope="col">구분</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">답변</th>
+                            <th scope="col">답변일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6">+++ 문의 내역이 없습니다. +++</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="paging">
+                    <li></li>
+                </ul>
                 </div>
-                <div class="booking_list">
-                    <div class="detailTbl">
-                        <p class="short"><strong>예약일</strong> <span class="cont">시간</span></p>
-                        <p class="short"><strong>예약번호</strong> <span class="cont"
-                                id="{{:pnrNumber}}">번호</span></p>
-                        <p class="short ctar"><strong>예약상태</strong> <span class="cont">진행중</span></p>
-                        <p class="long">
-                            <strong>여정<br><span class="tripType"></span></strong>
-                            <span class="cont line">
-                                <span class="tit">여정
-                                    <strong>LJ301</strong>
-                                </span>
-                                <span>
-                                    <strong>제주</strong>
-                                    <span id="bp{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}">[출발] 2022-10-25(화) 06:05</span>
-                                </span>
-                                <span class="ico single"></span>
-                                <span>
-                                    <strong>서울</strong>
-                                    <span id="op{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}">[도착] 2022-10-25(화) 06:05</span>
-                                </span>
-                                <span id="st{{:depSegment.pnrNumber}}{{:depSegment.flightSegmentGroupID}}"
-                                    class="infoTxt"></span>
-                            </span>
-                        </p>
-                        <p class="long">
-                            <strong>탑승객수</strong>
-                            <span class="cont">1 명</span>
-                            <span class="btn">
-                                <a name="btnDetail" href="#">상세조회</a>
-                            </span>
-                        </p>
+                <div class="footer_info">
+                    <div class="footer_text">
+                        <p>문의하기</p>
+                        <p class="subtext">- 진에어에 궁금한 점이 있으신가요?</p>
+                    </div>
+                    <div class="btn">
+                        <input type="button" value="고객의 말씀(Q&A)" onclick="">
+                        <input type="button" value="FAQ 바로가기" onclick="">
                     </div>
                 </div>
-                <div class="old_booking_list">
-                    <ul>
-                        <li>지난 항공권 예약 내역이 없습니다.</li>
-                    </ul>
-                </div>
-                <dir class="sub_text">
-                    <p>* 비회원/고객센터/여행사/외부채널 예약고객</p>
-                    <a herf="#">나의 예약</a>
-                </dir>
-            <div class="footer_info">
-                <div class="footer_text">
-                    <p>나비포인트 이용방법</p>
-                    <p class="subtext">1.항공기 탑승 후 30일 이내 진에어 홈페이지에서 포인트를 적립하세요.
-                    <p class="subtext">2.누적 포인트를 이용하여 국내선 보너스 항공권을 예약하세요.</p>
-                </div>
-                <div class="point_info">
-                    <a href="#">나비포인트 안내</a>
-                </div>
-            </div>
             </div>
         </div>
         <!--container 끝-->
@@ -414,4 +390,3 @@
 </body>
 
 </html>
-

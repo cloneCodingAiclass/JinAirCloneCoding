@@ -612,6 +612,7 @@ body{
     margin-left: 20px;
 }
 /* 마이페이지 메인 */
+/* 서브타이틀 시작 */
 .mypage_main{
     width: 1160px;
     display: flex;
@@ -672,6 +673,7 @@ body{
 .mypage_main .mypage_menu ul li.edit a:before{
     background-position-x:-200px;
 }
+/* 서브타이틀 끝 */
 .menu_title{
     font-size: 3rem;
     color: #661E43;
@@ -948,8 +950,8 @@ body{
 }
 
 .footer_info p:first-child{
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    margin-bottom: 13px;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 .footer_info .footer_text .subtext{
