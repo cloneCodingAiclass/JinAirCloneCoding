@@ -261,17 +261,15 @@ $(() => {
 
 
 /* 메뉴 탭 js */
-function showCounterTab(obj) {
-	var $target = $(obj).parent();
-	$target.siblings("h3").find("a").removeClass("on");
-	$target.siblings(".list").not($target.next(".list")).stop().slideUp(100);
-	$(obj).toggleClass("on");
-	setTimeout(function() {
-		var contentTop = $target.offset().top - $("#gnb").height();
-		$target.next(".list").stop().slideToggle(100, function() {
-			if($(obj).hasClass('on')) {
-				$("html, body").stop().animate({scrollTop:contentTop}, 200);
-			}
-		});
-	}, 110);
-}
+$(function() {
+    $(".btnTypeA").click(function(){
+        $('.pointInfo_modal').fadeIn();
+    });
+    $(".modal_content").click(function(){
+        $('.pointInfo_modal').fadeOut();
+    });
+
+    $('body').css("overflow", "hidden");
+    $('body').css("overflow", "scroll");
+
+});
