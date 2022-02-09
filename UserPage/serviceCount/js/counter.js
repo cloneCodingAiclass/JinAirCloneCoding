@@ -262,14 +262,10 @@ $(() => {
 
 /* 메뉴 탭 js */
 $(function() {
-    $(".btnTypeA").click(function(){
+    $("#pointInfo_btn").click(function(){
         $('.pointInfo_modal').fadeIn();
     });
     $(".modal_content").click(function(){
         $('.pointInfo_modal').fadeOut();
     });
-
-    $('body').css("overflow", "hidden");
-    $('body').css("overflow", "scroll");
-
 });

@@ -728,16 +728,15 @@ tr {
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 }
 .pointInfo_modal > .modal_content{
-    width:645px; height:662px;
+    width:645px; height:762px;
     background:#fff; border-radius:10px;
     position:relative; top:20%; left:10%;
-    margin-top:-300px; margin-left:-500px;
+    margin-top: -80px; margin-left: 400px;
     box-sizing:border-box; padding:74px 0;
     line-height:23px; cursor:pointer;
     max-height: 100%;
@@ -763,7 +762,7 @@ tr {
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
 }
-.modal_content > table tr th{
+.modal_content > table trth{
     font-weight: bold;
 }
 .modal_content > table td{
