@@ -264,8 +264,10 @@ $(() => {
 $(function() {
     $("#pointInfo_btn").click(function(){
         $('.pointInfo_modal').fadeIn();
+        $('body').css('overflow', 'hidden');
     });
     $(".modal_content").click(function(){
         $('.pointInfo_modal').fadeOut();
+        $('body').css('overflow', '');
     });
 });
