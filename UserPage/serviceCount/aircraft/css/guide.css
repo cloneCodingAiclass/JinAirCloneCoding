@@ -529,7 +529,6 @@ body{
     margin-top: 80px;
     width: 100%;
     height: 500px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 .mobile_box4 p{
     margin-bottom: 8px;
@@ -544,7 +543,7 @@ p.mobile_title{
 p.mobile4_subtitle{
     font-size: 16px;
     font-weight: 600;
-    margin: 20px 0 13px;
+    margin: 30px 0 15px;
 }
 .mobile4_content::before{
     content: "- ";
@@ -552,6 +551,32 @@ p.mobile4_subtitle{
 .mobile4_content1{
     padding-left: 14px;
 }
+p.mobile4_subcontent{
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+p.mobile4_subinnercontent{
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 28px;
+}
+p.mobile4_subinnercontent::before{
+    content: "· ";
+}
+p.mobile4_notice{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
 
 /* 기내 서비스 */
 .guide{
