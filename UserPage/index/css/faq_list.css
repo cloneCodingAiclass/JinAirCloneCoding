@@ -581,6 +581,7 @@ body{
     padding-top: 20px;
 }
 .quick_faq ul{
+    box-shadow: 3px 5px 3px rgb(185, 185, 185);
     display: flex;
     justify-content: center;
     align-content: center;
