@@ -317,27 +317,28 @@ body {
 #container > .contentswrap {
     width: 1180px;
     padding: 30px;
+    padding-top: 100px;
     margin: auto;
     height: 50px;
     letter-spacing: .8px;
 }
-#container > .contentswrap > .baggage {
+#container > .contentswrap > .help {
     letter-spacing: 1.2px;
     padding: 20px;
 }
-#container > .contentswrap > .baggage > .baggage_title {
+#container > .contentswrap > .help > .help_title {
     font-size: 2.8em;
     font-weight: 600;
     color: rgb(102, 30, 67);
 }
-#container > .contentswrap > .baggage > .title_sub {
+#container > .contentswrap > .help > .title_sub {
     font-size: 1.45em;
     font-weight: 600;
     margin-top: 25px;
     line-height: 30px;
     letter-spacing: 1.2px;
 }
-#container > .contentswrap > .baggage > .title_img {
+#container > .contentswrap > .help > .title_img {
     background: url(../img/baggage_img.PNG) no-repeat center;
     background-size: 88%;
     display: inline;
@@ -358,10 +359,10 @@ body {
     color: #444;
     border-top: 1px solid rgb(102, 30, 67);
 }
-#container > .contentswrap > .baggage_kind .cursor {
+#container > .contentswrap > .help_kind .cursor {
     cursor:pointer;
 }
-#container > .contentswrap > .baggage_kind th {
+#container > .contentswrap > .help_kind th {
     border-spacing: 0px;
     padding: 10px;
     height: 100%;
@@ -370,12 +371,193 @@ body {
     width: 250px;
     text-align: center;
 }
-#container > .contentswrap .baggage_kind th.bag_save {
+#container > .contentswrap .help_kind th.help_child {
     color: #fff;
     background-color: rgb(102, 30, 67);
 }
 
 /* help css */
+.tabCont {
+    position: relative;
+    top: 200px;
+    left: 30px;
+    margin-bottom: 100px;
+}
+.tabCont h3.typeA {
+    margin: 70px 0 20px 0;
+    font-size: 24px;
+    font-family: 'notob';
+    line-height: 1em;
+    color: #000;
+}
+
+.caution {
+    margin-top: 20px;
+}
+table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.help > .desc{
+    display: none;
+}
+.help .srmy {
+    margin: 70px 20px 10px;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: #000;
+}
+.bbsList > caption{
+    display: none;
+}
+
+/* 유아 동반 고객 */
+.keywordList >li {
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 220px;
+    padding: 70px 20px 0 20px;
+    margin-top: 100px;
+    border-top: 1px solid #f0f0f0;
+    height: 1px;
+}
+.keywordList >li .ico {
+    position: absolute;
+    left: 10px;
+    top: 140px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 60px;
+    color: #661e43;
+    line-height: 150px;
+}
+.keywordList >li .cont {
+    position: relative;
+    right: -200px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.btnTypeA {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 135px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #000 !important;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #bdd600;
+}
+.keywordList >li .ico span {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 24px;
+}
+.keywordList >li .ico.typeC {
+    font-size: 50px;
+}
+/* 반려동물 */
+.bbsList +.bbsList, .caution +.bbsList, .bbsForm +.bbsList, .bbsList +.caution {
+    margin-top: 20px;
+}
+table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.bbsList tbody th {
+    height: 28px;
+    padding: 16px 0;
+    border: 1px solid #eaeaea;
+    border-right: 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.bbsList td.al {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.bbsList tbody td {
+    height: 28px;
+    padding: 16px 0;
+    border: 1px solid #eaeaea;
+    border-right: 0;
+    color: #000;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    word-wrap: break-word;
+}
+.bbsList_tr{
+    height: 80px;
+    text-align: center;
+}
+
+.bbsList{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.tabCont h3.typeA span {
+    font-size: 16px;
+}
+.fontTypeF {
+    color: #de1616 !important;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.tblScroll{
+    text-align: center;
+}
+
+
 
 
 

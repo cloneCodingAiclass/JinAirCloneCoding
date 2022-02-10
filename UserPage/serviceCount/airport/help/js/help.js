@@ -70,4 +70,66 @@ $(function () {
         $("li[class *= 'open']").css({"border-bottom":"none"});
     })
 
+    $('.help_child').on('click', function () {
+        $('#help1').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.help_pet').css({"background-color":"white", "color": "#444"});
+        $('#help2').css({"display":"none"});
+        $('.help_pw').css({"background-color":"white", "color": "#444"});
+        $('#help3').css({"display":"none"});
+        $('.help_dsbd').css({"background-color":"white", "color": "#444"});
+        $('#help4').css({"display":"none"});
+        $('.help_vt').css({"background-color":"white", "color": "#444"});
+        $('#help5').css({"display":"none"});
+    })
+    $('.help_pet').on('click', function () {
+        $('#help2').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.help_child').css({"background-color":"white", "color": "#444"});
+        $('#help1').css({"display":"none"});
+        $('.help_pw').css({"background-color":"white", "color": "#444"});
+        $('#help3').css({"display":"none"});
+        $('.help_dsbd').css({"background-color":"white", "color": "#444"});
+        $('#help4').css({"display":"none"});
+        $('.help_vt').css({"background-color":"white", "color": "#444"});
+        $('#help5').css({"display":"none"});
+    })
+    $('.help_pw').on('click', function () {
+        $('#help3').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.help_child').css({"background-color":"white", "color": "#444"});
+        $('#help1').css({"display":"none"});
+        $('.help_pet').css({"background-color":"white", "color": "#444"});
+        $('#help2').css({"display":"none"});
+        $('.help_dsbd').css({"background-color":"white", "color": "#444"});
+        $('#help4').css({"display":"none"});
+        $('.help_vt').css({"background-color":"white", "color": "#444"});
+        $('#help5').css({"display":"none"});
+    })
+    $('.help_dsbd').on('click', function () {
+        $('#help4').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.help_child').css({"background-color":"white", "color": "#444"});
+        $('#help1').css({"display":"none"});
+        $('.help_pet').css({"background-color":"white", "color": "#444"});
+        $('#help2').css({"display":"none"});
+        $('.help_pw').css({"background-color":"white", "color": "#444"});
+        $('#help3').css({"display":"none"});
+        $('.help_vt').css({"background-color":"white", "color": "#444"});
+        $('#help5').css({"display":"none"});
+    })
+    $('.help_vt').on('click', function () {
+        $('#help5').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.help_child').css({"background-color":"white", "color": "#444"});
+        $('#help1').css({"display":"none"});
+        $('.help_pet').css({"background-color":"white", "color": "#444"});
+        $('#help2').css({"display":"none"});
+        $('.help_pw').css({"background-color":"white", "color": "#444"});
+        $('#help3').css({"display":"none"});
+        $('.help_dsbd').css({"background-color":"white", "color": "#444"});
+        $('#help4').css({"display":"none"});
+    })
+
+
 });
