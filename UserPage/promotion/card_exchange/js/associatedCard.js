@@ -113,4 +113,11 @@ $(function () {
         $('.exchange').css({"display":"none"});
     })
 
+    let currentPosition = parseInt($('.quickmanu').css('top'));
+    $(window).scroll(function () {
+        let position = $(window).scrollTop() * 0.023; // 현재 스크롤바의 위치값 반환
+        $('.quickmanu').stop().animate({ 'top': + position + currentPosition + 'px' }, 1000);
+    });
+
 });
+
