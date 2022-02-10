@@ -317,6 +317,7 @@ body {
 #container > .contentswrap {
     width: 1180px;
     padding: 30px;
+    padding-top: 100px;
     margin: auto;
     height: 50px;
     letter-spacing: .8px;
