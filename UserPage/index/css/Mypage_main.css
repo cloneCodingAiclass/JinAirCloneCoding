@@ -698,7 +698,7 @@ body{
     font-weight: 600;
     border-collapse: collapse;
     margin: 0;
-    box-shadow: 5px 5px 10px -5px #444;
+    box-shadow: 3px 5px 3px rgb(185, 185, 185);
 }
 .sub_menu_check ul li.now_booking{
     background-color: #661E43;

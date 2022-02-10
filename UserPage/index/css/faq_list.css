@@ -74,7 +74,7 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    position: relative;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
@@ -157,6 +157,7 @@ body{
     top: 3px;
 }
 #header nav{
+    position: fixed;
     top: 47px;
     box-sizing: border-box;
     margin: 0;
@@ -560,43 +561,7 @@ body{
     align-items: center;
 }
 
-.covid_info{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0; right: 0; top: 0; bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 9999;
-}
-.covid_info .info_title{
-    width: 700px;
-    height: 70px;
-    background-color: #661E43;
-    text-indent: 20px;
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.covid_info .info_box{
-    background-color: white;
-    width: 700px;
-    height: 300px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: 600;
-    padding: 50px 50px 10px 50px;
-}
-.covid_info .info_box p{
-    margin-bottom: 10px;
-}
-
-/* qna 메인 */
+/* FAQ 메인 */
 .mypage_main{
     width: 1160px;
     display: flex;
@@ -606,205 +571,122 @@ body{
 .menu_title{
     font-size: 3rem;
     color: #661E43;
-    margin: 140px 0 50px 0;
+    margin: 150px 0 50px 0;
     font-weight: 600;
     text-indent: 30px;
-}
-.btn input[class="btn_agree"]{
-    width: 150px;
-    height: 50px;
-    background-color:#BDD600;
-    border: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.btn input[class="btn_cancel"]{
-    width: 150px;
-    height: 50px;
-    border: 2px solid #BDD600;
-    background-color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;
 }
 .menu_title p:last-child{
     color: #444;
     font-size: 1.6rem;
     padding-top: 20px;
 }
-.info_main{
+.quick_faq ul{
+    box-shadow: 3px 5px 3px rgb(185, 185, 185);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+}
+.quick_faq ul li{
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    border-top: 1px solid #661E43;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 150px;
-    background-color: #F7F7F7;
-    padding: 0 40px;
-}
-.info_main{
-    margin-bottom: 30px;
-}
-.info_main p:first-child{
-    margin-bottom: 13px;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-.info_main .footer_text .subtext{
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: 0.9rem;
     font-weight: 600;
+    cursor: pointer;
 }
-.info_main .point_info{
+.srh_faq{
+    width: 100%;
+    height: 80px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+}
+.srh_faq input[type="text"]{
+    width: 500px;
+    height: 40px;
+    text-indent: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.srh_faq input[type="submit"]{
     width: 150px;
     height: 40px;
     background-color:#BDD600;
     border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-right: 10px;
+    margin-left: 20px;
     cursor: pointer;
 }
-.info_main .qna_info{
-    display: flex;
-    align-items: center;
-}
-.info_main .qna_info a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 40px;
-    margin-right: 30px;
-    background-color:#BDD600;
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-.info_text p, .info_text > ul li{
-    font-weight: 600;
-    font-size: 1rem;
-    margin: 10px;
-    line-height: 20px;
-}
-.info_text ul li span{
-    margin-left: 15px;
-}
-.info_text{
-    border-top: 1px solid #F7F7F7;
-    padding-top: 40px;
-    margin-bottom: 40px;
-}
-.qna_date{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 30px 0;
-}
-.qna_date table {
+table {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    border-collapse: collapse;
+    font-weight: 600;
 }
-.qna_date table th{
+table th{
     width: 160px;
+    height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+}
+table td{
+    text-align: center;
     height: 80px;
-    text-align: left;
-    padding-left: 20px;
     border-bottom: 1px solid #F7F7F7;
 }
-.qna_date table tr:last-child th, tr:last-child td{
-    border-bottom: 0 !important;
+table .question{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: url(../index_img/faq.png) 0 15px no-repeat;
 }
-.qna_date table td{
-    width: 1000px;
-    border-bottom: 1px solid #F7F7F7;
+table .question a{
+    padding-left: 60px;
+}
+table .tr_answer{
+    display: none;
+    height: auto;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
 }
 
-.qna_date input[type="text"], input[type="email"], input[type="date"], select{
-    width: 470px;
-    height: 50px;
-    text-indent: 20px;
-    font-size: 1rem;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    font-weight: 600;
-}
-.qna_date textarea{
+.info_main{
     width: 100%;
-    height: 200px;
-    border: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    line-height: 20px;
-    padding-top: 10px;
-    padding-left: 20px;
-    margin: 15px 0;
-    font-size: 1rem;
-    font-weight: 600;
-    vertical-align: top;
-}
-.btn{
-    text-align: center;
+    height: 80px;
     margin: 30px 0;
-}
-input[type="file"]{
-    display: none;
-}
-.qna_date table tr td p.file_box{
-    height: 60px;
+    padding: 0 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 40px;
-    border: 2px dotted slateblue;
-    margin-top: 10px;
+    background-color: #EDEDED;
 }
-.qna_date table tr td p.file_box label{
-    display: inline-block;
-    box-sizing: border-box;
-    min-width: 80px;
-    height: 30px;
-    border: 1px solid #009fda;
-    line-height: 27px;
-    padding: 0 12px;
+.info_main label{
+    width: 200px;
+    height: 100px;
+    padding: 15px;
     text-align: center;
-    color: #009fda;
-    white-space: no-wrap;
-    background: #fff;
-    margin-right: 20px;
-    cursor: pointer;    
-}
-.qna_date table tr td p.file_box span{
+    background-color:#BDD600;
+    font-size: 0.8rem;
     font-weight: 700;
-}
-.qna_date table tr td ul{
-    margin-top: 20px;
-    border-top: 1px solid #F7F7F7;
-}
-.qna_date input[type="checkbox"]{
-    display: none;
-}
-.qna_date input[type="checkbox"] + label{
-    display: inline-block;
-    height: 20px;
-    background: url(../index_img/ico_check.png) no-repeat 0 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    font-weight: 600;
+    margin-right: 20px;
 }
-.qna_date input[type="checkbox"]:checked + label{
-    background-position: 0 -20px;
-}
-.qna_date table .last_text{
-    border: 1px solid gray;
-    margin: 20px 0;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 25px;
+/* 퀵 faq 선택용 */
+.check{
+    background-color:#661E43;
+    color: white;
 }
