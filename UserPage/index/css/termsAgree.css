@@ -586,7 +586,6 @@ body{
     font-size: 1.1rem;
     font-weight: 700;
     margin-right: 20px;
-    margin-top: 20px;
 }
 /* 회원 가입 */
 .termsAgree_container{
@@ -623,6 +622,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .termsAgree_container > .join_step .step1::after{
     content: "";
@@ -641,6 +641,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .termsAgree_container > .join_step .step2::after{
     content: "";
@@ -660,6 +661,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .termsAgree_container > .join_step .step3::after{
     content: "";
@@ -726,6 +728,7 @@ body{
     min-width: 1px; 
     padding: 0 20px;
     margin-top: -20px;
+    background-color: white;
 }
 
 .confirm_box .confirm_main{

@@ -612,6 +612,25 @@ body{
     font-weight: 600;
     margin-left: 20px;
 }
+
+.pwcheck_modal .pwcheck_box .btn input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    background-color:#BDD600;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.pwcheck_modal .pwcheck_box .btn input[type="button"]{
+    width: 150px;
+    height: 50px;
+    background-color:white;
+    border: 2px solid #BDD600;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
 /* 마이페이지 메인 */
 /* 서브타이틀 시작 */
 .mypage_main{

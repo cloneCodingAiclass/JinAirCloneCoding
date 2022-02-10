@@ -621,6 +621,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .joinForm_step .step1::after{
     content: "";
@@ -639,6 +640,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .joinForm_step .step2::after{
     content: "";
@@ -658,6 +660,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 .joinForm_step .step3::after{
     content: "";

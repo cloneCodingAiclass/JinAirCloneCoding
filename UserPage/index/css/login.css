@@ -582,14 +582,16 @@ body{
 }
 
 .login_container > .login_main{
-    position: relative;
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .login_container > .login_main input[type="text"]{
-    height: 77px;
+    width: 100%;
+    height: 70px;
     margin-top: 10px;
     text-indent: 20px;
     font-size: 1rem;
@@ -597,31 +599,36 @@ body{
     background-color: #F7F7F7;
     font-weight: 600;
 }
-.login_container > .login_main a{
-    margin: 40px auto;
-}
-.login_container > .login_main input[type="button"]{
-    width: 220px;
+.login_container > .login_main input[type="submit"]{
+    width: 250px;
     height: 60px;
     background-color:#BDD600;
     border: 0;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
+    margin: 40px 150px;
+    text-align: center;
 }
-.login_container > .login_main > .find{
-    margin: 0 auto;
+.login_container > .login_main .find{
     font-size: 0.9rem;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 30px;
+    text-align: center;
 }
-.login_container > .login_main > .btn_sns{
-    margin: 20px auto;
+.login_container > .login_main .btn_sns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.login_container > .login_main > .btn_sns a{
+.login_container > .login_main .btn_sns a{
     width: 56px;
     height: 56px;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -10px;
+
 }
 .login_container > .login_footer input[id*="slide"]{
     display: none;
