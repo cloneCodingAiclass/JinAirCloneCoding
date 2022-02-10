@@ -95,6 +95,7 @@ $(function () {
 });
 
 function showFaq(obj){
+    $('.tr_answer').css("display", "");
     let target = $(obj).attr("href");
     $(target).add($(target).find("td")).toggle();
 }
