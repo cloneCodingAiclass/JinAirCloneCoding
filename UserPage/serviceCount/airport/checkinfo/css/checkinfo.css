@@ -518,7 +518,6 @@ h1.typeA, h1.typeB, h1.typeC, h2.typeA, h3.typeA {
     font-weight: bold;
 }
 .checkinIndex h2 {
-    font-family: 'noto';
     font-size: 34px;
     margin: 70px -20px 0;
     padding: 70px 20px 35px;
@@ -1039,6 +1038,8 @@ table {
 .fontTypeA {
     color: #661e43 !important;
 }
+
+
 
 
 
