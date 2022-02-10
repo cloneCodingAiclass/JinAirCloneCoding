@@ -101,4 +101,29 @@ $(function () {
             $("#header").css("position", "absolute");
         }
     });
+
+    let filebox = document.querySelector('.file_box');
+    filebox.addEventListener('dragenter', function(e){
+    })
+    filebox.addEventListener('dragover', function(e){
+        e.preventDefault;
+        let vaild = e.dataTransfer.types.indexOf('Files') >= 0;
+        if(!vaild){        
+            this.style.backgroundColor = 'lightred';
+        }else{
+            this.style.backgroundColor = 'lightgray';
+        }
+});
+    filebox.addEventListener('dragleave', function(e){
+        this.style.backgroundColor = 'white';
+    })
+    filebox.addEventListener('drop', function(e){
+        e.preventDefault;
+        this.style.backgroundColor = 'white';
+
+        console.dir(e.dataTransfer);
+
+        let data = e.dataTransfer.files[0];
+        console.dir(data);        
+    })
 });
