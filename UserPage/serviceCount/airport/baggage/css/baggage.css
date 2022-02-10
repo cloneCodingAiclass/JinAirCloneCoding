@@ -308,7 +308,7 @@ body {
 }
 #container {
     position: relative;
-    max-width: 1160psx;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 0 20px 190px;
     font-weight: bold;
@@ -504,7 +504,24 @@ tr {
     cursor: pointer;
     background: #bdd600;
 }
-
+/* 운송 제한 품목 css */
+.prohibit .list li {
+    position: relative;
+    display: inline-block;
+    width: 155px;
+    margin: 30px -4px 0 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #661e43;
+    word-break: keep-all;
+    vertical-align: top;
+}
+.al {
+    text-align: left !important;
+}
+div .ps{
+    margin-top: 20px;
+}
 
 
 /*푸터*/
