@@ -70,48 +70,4 @@ $(function () {
         $("li[class *= 'open']").css({"border-bottom":"none"});
     })
 
-
-    $('.bag_save').on('click', function () {
-        $('#baggage1').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.bag_limit').css({"background-color":"white", "color": "#444"});
-        $('#baggage2').css({"display":"none"});
-        $('.bag_compensation').css({"background-color":"white", "color": "#444"});
-        $('#baggage3').css({"display":"none"});
-        $('.bag_find').css({"background-color":"white", "color": "#444"});
-        $('#baggage4').css({"display":"none"});
-    })
-    $('.bag_limit').on('click', function () {
-        $('#baggage2').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.bag_save').css({"background-color":"white", "color": "#444"});
-        $('#baggage1').css({"display":"none"});
-        $('.bag_compensation').css({"background-color":"white", "color": "#444"});
-        $('#baggage3').css({"display":"none"});
-        $('.bag_find').css({"background-color":"white", "color": "#444"});
-        $('#baggage4').css({"display":"none"});
-    })
-    $('.bag_compensation').on('click', function () {
-        $('#baggage3').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.bag_save').css({"background-color":"white", "color": "#444"});
-        $('#baggage1').css({"display":"none"});
-        $('.bag_limit').css({"background-color":"white", "color": "#444"});
-        $('#baggage2').css({"display":"none"});
-        $('.bag_find').css({"background-color":"white", "color": "#444"});
-        $('#baggage4').css({"display":"none"});
-    })
-    $('.bag_find').on('click', function () {
-        $('#baggage4').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.bag_save').css({"background-color":"white", "color": "#444"});
-        $('#baggage1').css({"display":"none"});
-        $('.bag_limit').css({"background-color":"white", "color": "#444"});
-        $('#baggage2').css({"display":"none"});
-        $('.bag_compensation').css({"background-color":"white", "color": "#444"});
-        $('#baggage3').css({"display":"none"});
-    })
-    
-    
-
 });
