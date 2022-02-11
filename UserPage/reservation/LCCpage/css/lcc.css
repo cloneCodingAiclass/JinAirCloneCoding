@@ -762,11 +762,9 @@ body {
     border: none;
     background-color: #bdd600;
     font-weight: bold;
+    cursor: pointer;
 }
-.lcc_contents .search_box .submit_btn input:hover {
-    background-color: #7e0049;
-    color: #fff;
-}
+
 
 /* 
 *******************************************
@@ -899,10 +897,7 @@ body {
     border-radius: 4px;
     background-color: #7e0049;
     color: #fff;
-}
-.custom_search .search_box .search_form .budge button:hover {
-    background-color: #bdd600;
-    color: #000;
+    cursor: pointer;
 }
 
 .to__{
@@ -1050,6 +1045,7 @@ body {
     width: 15%;
     vertical-align: middle;
     text-align: center;
+    cursor: pointer;
 }
 .domestic .button span a,
 .oversea .button span a {
@@ -1060,11 +1056,7 @@ body {
     width: 80%;
     height: 52px;
     font-weight: bold;
-}
-.domestic .button span a:hover,
-.oversea .button span a:hover {
-    background-color: #7e0049;
-    color: #fff !important;
+    cursor: pointer;
 }
 /*푸터*/
 #footerCont {
