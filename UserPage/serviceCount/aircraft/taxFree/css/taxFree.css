@@ -487,15 +487,19 @@ p.jini_store_titlesub{
     width: 30%;
     border-right: 1px solid rgba(128, 128, 128, 0.3);
 }
-.jini_notice2 > table tr:nth-child(1) td:nth-child(2){
-    text-align: center;
+.jini_notice2 > table tr:nth-child(2) td:nth-child(2){
+    padding: 10px 10px 10px 20px;
 }
 .jini_notice2 > table input[type="button"]{
-    width: 130px;
+    width: 120px;
     height: 42px;
+    outline: none;
+    border: none;
+    background-color: #BDD600;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
 }
-
-
 
 /*푸터*/
 #footerCont {
