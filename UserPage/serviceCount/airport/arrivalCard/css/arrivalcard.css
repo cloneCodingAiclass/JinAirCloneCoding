@@ -377,9 +377,10 @@ body {
 }
 
 /* arrivalcard css */
+/* 일본 */
 .tabCont {
     position: relative;
-    top: 200px;
+    top: 300px;
     left: 30px;
     margin-bottom: 100px;
 }
@@ -433,6 +434,313 @@ tr {
     height: 120px;
     background: url(../img/icon_top.png) no-repeat 0 0;
 }
+
+/* arvCont1 */
+.landingCardInfo {
+    position: relative;
+    margin-top: 30px;
+    padding: 30px;
+    background: #f7f7f6;
+}
+.landingCardInfo .formWrite {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.landingCardInfo .photo {
+    float: left;
+    max-width: 770px;
+}
+.landingCardInfo .formWrite .photo img {
+    max-width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+
+.landingCardInfo .formWrite .guide li {
+    font-size: 17px;
+    margin-top: 20px;
+    text-align: left;
+    vertical-align: top;
+    color: #000;
+}
+.landingCardInfo .formWrite .guide {
+    display: table;
+    text-align: left;
+}
+#arvCont1 .formWrite .guide {
+    float: left;
+    width: 220px;
+    margin: -20px 0 0 70px;
+}
+.num {
+    font-size: 13px;
+    line-height: 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100%;
+    background: #661e43;
+}
+li {
+    margin: 0.5%;
+}
+
+/* 중국 */
+#arvCont2 .formWrite .guide li {
+    display: inline-block;
+    min-width: 140px;
+}
+
+.landingCardInfo .formWrite .guide {
+    display: table;
+    text-align: left;
+}
+#arvCont2 .formWrite .photo {
+    max-width: 1070px;
+}
+.landingCardInfo .formWrite .photo {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 홍콩 */
+#arvCont3 .formWrite .photo {
+    float: left;
+    max-width: 523px;
+}
+#arvCont3 .formWrite .guide {
+    float: left;
+    width: 470px;
+    margin: -30px 0 0 60px;
+}
+#arvCont3 .formWrite .guide li {
+    display: inline-block;
+    width: 40%;
+    margin-top: 30px;
+}
+
+/* 괌 */
+p.caution.typeC {
+    padding-left: 17px;
+}
+p.caution {
+    position: relative;
+    padding-left: 9px;
+    font-size: 16px;
+    line-height: 26px;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+#arvCont4 .formWrite .photo {
+    max-width: 1060px;
+}
+#arvCont4 .formWrite .guide li {
+    display: inline-block;
+    min-width: 150px;
+}
+
+/* 태국 */
+
+#arvCont5 .formWrite .photo {
+    max-width: 1070px;
+}
+#arvCont5 .formWrite .guide li {
+    display: inline-block;
+    min-width: 160px;
+}
+
+
+/* 필리핀 */
+
+#arvCont6 .formWrite .photo {
+    float: left;
+    max-width: 540px;
+}
+#arvCont6 .formWrite .guide {
+    float: left;
+    width: 450px;
+    margin: -20px 0 0 70px;
+}
+#arvCont6 .formWrite .guide li {
+    display: inline-block;
+    width: 40%;
+    margin-top: 30px;
+}
+
+/* 라오스 */
+#arvCont7 .formWrite .photo {
+    width: 100%;
+    max-width: 1000px;
+}
+#arvCont7 .formWrite .guide li {
+    display: inline-block;
+    width: 18%;
+}
+
+/* 기타 지역 */
+html:lang(ko) .keywordList >li {
+    padding-left: 230px;
+}
+.keywordList >li {
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 220px;
+    padding: 70px 20px 0 20px;
+    margin-top: 70px;
+    border-top: 1px solid #f0f0f0;
+    height: 1px;
+}
+.landingCard .keywordList >li .ico {
+    font-size: 50px;
+}
+.keywordList > li .ico {
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 60px;
+    color: #661e43;
+    line-height: 150px;
+}
+.tabCont .keywordList >li h3.typeA:first-child, .keywordList >li h2.typeA:first-child {
+    margin-top: 0;
+}
+.tabCont .keywordList >li h3.typeA, .keywordList >li h2.typeA {
+    margin: 30px 200px 15px;
+}
+.keywordList >li .cont >.caution {
+    margin: 10px 200px 0;
+}
+.keywordList >li .cont {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+
+/* 입국 신고서 미리보기 */
+.landingCard_guide {
+    position: relative;
+    width: 100%;
+    margin-top: 400px;
+}
+.landingCard_guide h2 {
+    margin-left: 0;
+}
+.landingCard_guide .caution {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+}
+.landingCard_guide .btn {
+    display: table-cell;
+    vertical-align: middle;
+}
+.sizeL {
+    min-width: 220px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+}
+.btnTypeA {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 135px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #000 !important;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #bdd600;
+}
+.landingCard_step {
+    display: table;
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px 0 25px;
+    table-layout: fixed;
+    background: #f7f7f6;
+}
+.landingCard_step li {
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    display: table-cell;
+    padding: 0;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #000;
+}
+.landingCard_step li em {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #7e0049;
+}
+.landingCard_step li:first-child:before {
+    background-position: 0 0;
+}
+.landingCard_step li:before {
+    display: block;
+    clear: both;
+    width: 100px;
+    height: 84px;
+    margin: 0 auto;
+    content: '';
+    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+}
+.landingCard_step li:after {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    display: block;
+    clear: both;
+    width: 100px;
+    height: 84px;
+    margin-right: -50px;
+    content: '';
+    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+    background-position: 0 -84px;
+}
+.landingCard_step li:nth-child(2):before {
+    background-position: -100px 0;
+}
+.landingCard_step li:before {
+    display: block;
+    clear: both;
+    width: 100px;
+    height: 84px;
+    margin: 0 auto;
+    content: '';
+    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+}
+.landingCard_step li:last-child:before {
+    background-position: -200px 0px;
+}
+.landingCard_step li:before {
+    display: block;
+    clear: both;
+    width: 100px;
+    height: 84px;
+    margin: 0 auto;
+    content: '';
+    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+}
+
 
 
 

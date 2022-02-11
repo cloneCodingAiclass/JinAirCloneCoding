@@ -72,32 +72,155 @@ $(function () {
 
 
 /* 수평탭 */
-    $('.checkinfo1').on('click', function () {
-        $('#checkinCont01').css({"display":"block"});
+    $('.arv1').on('click', function () {
+        $('#arvCont1').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.checkinfo2').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont02').css({"display":"none"});
-        $('.checkinfo3').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont03').css({"display":"none"});
-
-    })
-    $('.checkinfo2').on('click', function () {
-        $('#checkinCont02').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.checkinfo1').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont01').css({"display":"none"});
-        $('.checkinfo3').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont03').css({"display":"none"});
-
-    })
-    $('.checkinfo3').on('click', function () {
-        $('#checkinCont03').css({"display":"block"});
-        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
-        $('.checkinfo1').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont01').css({"display":"none"});
-        $('.checkinfo2').css({"background-color":"white", "color": "#444"});
-        $('#checkinCont02').css({"display":"none"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
     })
 
+    $('.arv2').on('click', function () {
+        $('#arvCont2').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv3').on('click', function () {
+        $('#arvCont3').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv4').on('click', function () {
+        $('#arvCont4').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv5').on('click', function () {
+        $('#arvCont5').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv6').on('click', function () {
+        $('#arvCont6').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv7').on('click', function () {
+        $('#arvCont7').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+        $('.arv8').css({"background-color":"white", "color": "#444"});
+        $('#arvCont8').css({"display":"none"});
+    })
+    $('.arv8').on('click', function () {
+        $('#arvCont8').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.arv2').css({"background-color":"white", "color": "#444"});
+        $('#arvCont2').css({"display":"none"});
+        $('.arv3').css({"background-color":"white", "color": "#444"});
+        $('#arvCont3').css({"display":"none"});
+        $('.arv4').css({"background-color":"white", "color": "#444"});
+        $('#arvCont4').css({"display":"none"});
+        $('.arv5').css({"background-color":"white", "color": "#444"});
+        $('#arvCont5').css({"display":"none"});
+        $('.arv6').css({"background-color":"white", "color": "#444"});
+        $('#arvCont6').css({"display":"none"});
+        $('.arv7').css({"background-color":"white", "color": "#444"});
+        $('#arvCont7').css({"display":"none"});
+        $('.arv1').css({"background-color":"white", "color": "#444"});
+        $('#arvCont1').css({"display":"none"});
+    })
+    
 
+
+
+
+    
 });
