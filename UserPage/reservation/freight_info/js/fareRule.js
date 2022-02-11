@@ -89,7 +89,32 @@ $(function () {
         $('.quick_menu > ul > li').click(function(e){
             $(this).addClass('check');
             $('.quick_menu > ul > li').not(this).removeClass('check');
+            $('.quick_menu > ul > li').not(this).fint('a').css('color', '');
         });
+    });
+    $('.faq1').click(function(){
+        $('#fareRules1').css('display', 'block');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'none');
+    });
+    $('.faq2').click(function(){
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'block');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'none');
+    });
+    $('.faq3').click(function(){
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'block');
+        $('#fareRules4').css('display', 'none');
+    });
+    $('.faq4').click(function(){
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'block');
     });
 
     

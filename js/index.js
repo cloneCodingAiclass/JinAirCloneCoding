@@ -8,8 +8,8 @@ $(function () {
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
         $('.reservation').slideDown("fast");
-        $(this).siblings().css({"border-bottom":"none"});
-        $(this).css({"border-bottom":"3px solid #652043"});
+        $(this).siblings().css({ "border-bottom": "none" });
+        $(this).css({ "border-bottom": "3px solid #652043" });
     })
     $('.open2').on('click', function (e) {
         e.stopPropagation();
@@ -18,8 +18,8 @@ $(function () {
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
         $('.service').slideDown("fast");
-        $(this).siblings().css({"border-bottom":"none"});
-        $(this).css({"border-bottom":"3px solid #652043"});
+        $(this).siblings().css({ "border-bottom": "none" });
+        $(this).css({ "border-bottom": "3px solid #652043" });
     })
     $('.open3').on('click', function (e) {
         e.stopPropagation();
@@ -28,8 +28,8 @@ $(function () {
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
         $('.benefit').slideDown("fast");
-        $(this).siblings().css({"border-bottom":"none"});
-        $(this).css({"border-bottom":"3px solid #652043"});
+        $(this).siblings().css({ "border-bottom": "none" });
+        $(this).css({ "border-bottom": "3px solid #652043" });
     })
     $('.open4').on('click', function (e) {
         e.stopPropagation();
@@ -38,8 +38,8 @@ $(function () {
         $('.benefit').slideUp(50);
         $('.optional').slideUp(50);
         $('.point').slideDown("fast");
-        $(this).siblings().css({"border-bottom":"none"});
-        $(this).css({"border-bottom":"3px solid #652043"});
+        $(this).siblings().css({ "border-bottom": "none" });
+        $(this).css({ "border-bottom": "3px solid #652043" });
     })
     $('.open5').on('click', function (e) {
         e.stopPropagation();
@@ -48,8 +48,8 @@ $(function () {
         $('.benefit').slideUp(50);
         $('.point').slideUp(50);
         $('.optional').slideDown("fast");
-        $(this).siblings().css({"border-bottom":"none"});
-        $(this).css({"border-bottom":"3px solid #652043"});
+        $(this).siblings().css({ "border-bottom": "none" });
+        $(this).css({ "border-bottom": "3px solid #652043" });
     })
     $('.nav_all').on('click', function (e) {
         e.stopPropagation();
@@ -58,7 +58,7 @@ $(function () {
         $('.benefit').slideUp(50);
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
-        $("li[class *= 'open']").css({"border-bottom":"none"});
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
     $('body').on('click', function (e) {
         e.stopPropagation();
@@ -67,7 +67,7 @@ $(function () {
         $('.benefit').slideUp(50);
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
-        $("li[class *= 'open']").css({"border-bottom":"none"});
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
 
     $('.modal').hide();
@@ -86,240 +86,6 @@ $(function () {
 
 });
 
-// trip-layer
-$(() => {
-    $(".trip_layerbtn").on("click", function (e) {
-        e.stopPropagation();
-        $(".trip_layerbtn").addClass('close');
-        $(".trip_layerbtn").css({ "color": "rgb(145, 0, 70)" });
-        $(".trip_down_img").css({ "display": "none" });
-        $(".trip_up_img").css({ "display": "inline-block" });
-        $(".trip_pop_layer").slideDown("fast");
-    })
-    $(".trip_type1").on("click", function (e) {
-        e.stopPropagation();
-        const text = $(".trip_type1").text();
-        $(".trip_select_opt").text(text);
-        $(".trip_layerbtn").removeClass('close');
-        $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".trip_down_img").css({ "display": "inline-block" });
-        $(".trip_up_img").css({ "display": "none" });
-        $('.trip_pop_layer').slideUp(50);
-        $(".reserve_round").css({"display" : "block"});
-        $(".reserve_oneway").css({"display" : "none"});
-        $(".reserve_multi").css({"display" : "none"});
-
-
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".go_down_img").css({"display" : "inline-block"});
-        $(".go_up_img").css({"display" : "none"});
-        $('.go_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
-        
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".arrive_down_img").css({"display" : "inline-block"});
-        $(".arrive_up_img").css({"display" : "none"});
-        $('.arrive_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
-    $(".trip_type2").on("click", function (e) {
-        e.stopPropagation();
-        const text = $(".trip_type2").text();
-        $(".trip_select_opt").text(text);
-        $(".trip_layerbtn").removeClass('close');
-        $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".trip_down_img").css({ "display": "inline-block" });
-        $(".trip_up_img").css({ "display": "none" });
-        $('.trip_pop_layer').slideUp(50);
-        $(".reserve_round").css({"display" : "none"});
-        $(".reserve_oneway").css({"display" : "block"});
-        $(".reserve_multi").css({"display" : "none"});
-
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".go_down_img").css({"display" : "inline-block"});
-        $(".go_up_img").css({"display" : "none"});
-        $('.go_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
-        
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".arrive_down_img").css({"display" : "inline-block"});
-        $(".arrive_up_img").css({"display" : "none"});
-        $('.arrive_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
-    $(".trip_type3").on("click", function (e) {
-        e.stopPropagation();
-        const text = $(".trip_type3").text();
-        $(".trip_select_opt").text(text);
-        $(".trip_layerbtn").removeClass('close');
-        $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".trip_down_img").css({ "display": "inline-block" });
-        $(".trip_up_img").css({ "display": "none" });
-        $('.trip_pop_layer').slideUp(50);
-        $(".reserve_round").css({"display" : "none"});
-        $(".reserve_oneway").css({"display" : "none"});
-        $(".reserve_multi").css({"display" : "block"});
-
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".go_down_img").css({"display" : "inline-block"});
-        $(".go_up_img").css({"display" : "none"});
-        $('.go_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
-        
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".arrive_down_img").css({"display" : "inline-block"});
-        $(".arrive_up_img").css({"display" : "none"});
-        $('.arrive_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
-    $("#wrap").on('click', function (e) {
-        e.stopPropagation();
-        $(".trip_layerbtn").removeClass('close');
-        $(".trip_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".trip_down_img").css({"display" : "inline-block"});
-        $(".trip_up_img").css({"display" : "none"});
-        $('.trip_pop_layer').slideUp(50);
-    })
-})
-
-//person-layer
-$(() => {
-    $(".person_layerbtn").on("click", function (e) {
-        e.stopPropagation();
-        $(".person_layerbtn").addClass('close');
-        $(".person_layerbtn").css({ "color": "rgb(145, 0, 70)" });
-        $(".person_down_img").css({ "display": "none" });
-        $(".person_up_img").css({ "display": "inline-block" });
-        $(".person_pop_layer").slideDown("fast");
-
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".go_down_img").css({"display" : "inline-block"});
-        $(".go_up_img").css({"display" : "none"});
-        $('.go_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
-        
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".arrive_down_img").css({"display" : "inline-block"});
-        $(".arrive_up_img").css({"display" : "none"});
-        $('.arrive_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
-
-    // 완료버튼
-    $(".submit_btn > button").on('click', function (e) {
-        e.stopPropagation();
-        $(".person_layerbtn").removeClass('close');
-        $(".person_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".person_down_img").css({"display" : "inline-block"});
-        $(".person_up_img").css({"display" : "none"});
-        $('.person_pop_layer').slideUp(50);
-
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".go_down_img").css({"display" : "inline-block"});
-        $(".go_up_img").css({"display" : "none"});
-        $('.go_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
-        
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".arrive_down_img").css({"display" : "inline-block"});
-        $(".arrive_up_img").css({"display" : "none"});
-        $('.arrive_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
-    $("#wrap").on('click', function (e) {
-        e.stopPropagation();
-        $(".person_layerbtn").removeClass('close');
-        $(".person_layerbtn").css({"color" : "rgb(0, 0, 0)"});
-        $(".person_down_img").css({"display" : "inline-block"});
-        $(".person_up_img").css({"display" : "none"});
-        $('.person_pop_layer').slideUp(50);
-    })
-})
 
 $(() => {
     let thisSlide, autoPlayBtn, autoPlayState;
@@ -328,9 +94,9 @@ $(() => {
         observer: true,
         observeParents: true,
         loop: true,
-        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-            delay : 3000,   // 시간 설정
-            disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        autoplay: {  // 자동 슬라이드 설정 , 비 활성화 시 false
+            delay: 3000,   // 시간 설정
+            disableOnInteraction: false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
         },
         navigation: {
             nextEl: ".swiper-button-next",
@@ -354,6 +120,6 @@ $(() => {
                     };
                 });
             },
-        },    
+        },
     });
 });
