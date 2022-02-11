@@ -89,6 +89,7 @@ $(function () {
         $('.quick_menu > ul > li').click(function(e){
             $(this).addClass('check');
             $('.quick_menu > ul > li').not(this).removeClass('check');
+            $('.quick_menu > ul > li').not(this).fint('a').css('color', '');
         });
     });
 
