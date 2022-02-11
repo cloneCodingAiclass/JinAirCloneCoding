@@ -665,7 +665,6 @@ ul li{
 }
 #fareRules2 .basic_box ul li p{
     font-weight: 500;
-    border-right: 1px solid gray;
 }
 #fareRules2 .basic_box ul li:before{
     content: "";
@@ -673,7 +672,6 @@ ul li{
     display: block;
     width: 130px;
     height: 100px;
-    margin: 0 auto;
     background:url(../index_img/person.png) no-repeat;
 }
 #fareRules2 .basic_box ul li.second:before{
@@ -686,9 +684,6 @@ ul li{
     background:url(../index_img/bagage.png) no-repeat;
 }
 
-#fareRules2 .basic_box ul li.fourth{
-    border-right: 0;
-}
 #fareRules2 .bundle_wrap{
     width: 100%;
 }
