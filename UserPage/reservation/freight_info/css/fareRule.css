@@ -566,7 +566,7 @@ body{
     width: 1150px;
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
+    margin: 20px auto 100px;
     font-weight: 500;
     line-height: 20px;
 }
@@ -641,7 +641,121 @@ body{
     text-align: right;
     margin: 20px 0;
 }
+ul li{
+    font-weight: 600;
+}
+#fareRules2 ul li.bold_text{
+    margin: 30px 0 10px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+#fareRules2 .basic_box ul{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    align-items: center;
+}
+#fareRules2 .basic_box ul li{
+    width: 25%;
+    padding: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+}
+#fareRules2 .basic_box ul li p{
+    font-weight: 500;
+    border-right: 1px solid gray;
+}
+#fareRules2 .basic_box ul li:before{
+    content: "";
+    object-fit: cover;
+    display: block;
+    width: 130px;
+    height: 100px;
+    margin: 0 auto;
+    background:url(../index_img/person.png) no-repeat;
+}
+#fareRules2 .basic_box ul li.second:before{
+    background:url(../index_img/bagage.png) no-repeat;
+}
+#fareRules2 .basic_box ul li.thrid:before{
+    background:url(../index_img/count.png) no-repeat;
+}
+#fareRules2 .basic_box ul li.fourth:before{
+    background:url(../index_img/bagage.png) no-repeat;
+}
 
+#fareRules2 .basic_box ul li.fourth{
+    border-right: 0;
+}
+#fareRules2 .bundle_wrap{
+    width: 100%;
+}
+#fareRules2 .bundle_wrap .bundle_step li{
+    float: left;
+    margin: 20px 20px;
+    text-align: center;
+}
+#fareRules2 .bundle_wrap .bundle_step li .img_wrap{
+    width: 500px;
+}
+.keywordList{
+    clear: both;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.keywordList > li{
+    display: flex;
+    align-content: center;
+    padding: 50px 0;
+    border-bottom: 1px solid #EDEDED;
+}
+.keywordList li p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-right: 30px;
+    margin-top: 10px;
+    color:#661E43;
+}
+.keywordList li .cont{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    line-height: 20px;
+}
+.ico{
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+.innerTab{
+    display: flex;
+    width: 400px;
+    border-bottom: 1px solid #F7F7F7;
+    margin-bottom: 30px;
+}
+.innerTab > li{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.m_innerTab{
+    display: none;
+}
+.bbsList tbody{
+    border-bottom: 1px solid black;
+}
+.fare_country{
+    display: flex;
+}
 /* 퀵 faq 선택용 */
 .check{
     background-color:#661E43;
