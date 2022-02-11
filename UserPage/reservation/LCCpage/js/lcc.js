@@ -86,40 +86,51 @@ $(function () {
 
 });
 
-
 $(() => {
-    let thisSlide, autoPlayBtn, autoPlayState;
-    let swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        observer: true,
-        observeParents: true,
-        loop: true,
-        autoplay: {  // 자동 슬라이드 설정 , 비 활성화 시 false
-            delay: 3000,   // 시간 설정
-            disableOnInteraction: false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        on: {
-            init: function () {
-                thisSlide = this;
-                autoPlayBtn = document.querySelector('.wrap-autoplay-control button');
-                autoPlayBtn.addEventListener('click', (e) => {
-                    autoPlayState = autoPlayBtn.getAttribute('aria-pressed');
-                    if (autoPlayState === 'false') {
-                        autoPlayBtn.setAttribute('aria-pressed', 'true');
-                        thisSlide.autoplay.stop();
-                    } else if (autoPlayState === 'true') {
-                        autoPlayBtn.setAttribute('aria-pressed', 'false');
-                        thisSlide.autoplay.start();
-                    };
-                });
-            },
-        },
-    });
-});
+    //최저가
+    $(".lcc_search_btn").on('click', function () {
+        $(".custom_search, .now_lcc").css("display", "none");
+        $(".custom_search_btn, .now_lcc_btn").css({
+            "background-color": "white",
+            "color": "#444"
+        });
+        $(".lcc_search_btn").css({
+            "background-color": "rgb(102, 30, 67)",
+            "color": "white"
+        });
+        $(".lcc_search").css("display", "block");
+    })
+
+    //맞춤
+    $(".custom_search_btn").on('click', function () {
+        $(".lcc_search, .now_lcc").css("display", "none");
+        $(".lcc_search_btn, .now_lcc_btn").css({
+            "background-color": "white",
+            "color": "#444"
+        });
+        $(".lcc_search, now_lcc").css("display", "none");
+        $(".custom_search").css("display", "block");
+        $(".custom_search_btn").css({
+            "background-color": "rgb(102, 30, 67)",
+            "color": "white"
+        });
+
+    })
+
+    //지금 이순간
+    $(".now_lcc_btn").on('click', function () {
+        $(".custom_search, .lcc_search").css("display", "none");
+        $(".lcc_search_btn, .custom_search_btn").css({
+            "background-color": "white",
+            "color": "#444"
+        });
+        $(".lcc_search, .custom_search").css("display", "none");
+        $(".now_lcc").css("display", "block");
+        $(".now_lcc_btn").css({
+            "background-color": "rgb(102, 30, 67)",
+            "color": "white"
+        });
+
+    })
+})
+

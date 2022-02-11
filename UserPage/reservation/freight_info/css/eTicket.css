@@ -551,124 +551,23 @@ body{
     margin-top: 16px;
 }
 /*뉴스레터 끝*/
-/* 모달 */
-.modal{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0; right: 0; top: 0; bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+h1, h2{
+    margin: 20px 0;
 }
 
-/* fareRules main */
-.fareRule_container{
-    width: 1150px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    font-weight: 500;
-    line-height: 20px;
+.con_box{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid black;
 }
+
 .menu_title{
     font-size: 3rem;
     color: #661E43;
-    margin: 150px 0 50px 0;
+    margin: 150px 0 60px 130px;
     font-weight: 600;
     text-indent: 30px;
-}
-.menu_title p:last-child{
-    color: #444;
-    font-size: 1.6rem;
-    padding-top: 20px;
-}
-.quick_menu ul{
-    box-shadow: 3px 5px 3px rgb(185, 185, 185);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.quick_menu ul li{
-    width: 100%;
-    height: 50px;
-    margin: 0;
-    border-top: 1px solid #661E43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-.fareRule_container h2, h3{
-    margin: 20px 0;
-    color: black;
-}
-.fareRules{
-    margin: 30px;
-}
-.fareRules table {
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-.fareRules table th{
-    width: 160px;
-    height: 60px;
-    text-align: center;
-    border-bottom: 1px solid #EDEDED;
-    border-right: 1px solid #EDEDED;
-    background-color: #F7F7F7;
-    border-top: 1px solid black;
-}
-.fareRules table td{
-    text-align: center;
-    height: 80px;
-    border-bottom: 1px solid #F7F7F7;
-    border-right: 1px solid #EDEDED;
-}
-.fareRules table thead th:last-child, tbody td:last-child{
-    border-right: 0;
-}
-.caution{
-    font-size: 0.9rem;
-}
-.bb{
-    border-bottom: 1px solid black !important;
-}
-.bbs_guide{
-    text-align: right;
-    margin: 20px 0;
-}
-
-/* 퀵 faq 선택용 */
-.check{
-    background-color:#661E43;
-}
-.check > a{
-    color: white;
-}
-.btnTypeB{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 160px;
-    height: 50px;
-    text-align: center;
-    margin-top: 10px;
-    border: 1px solid #BDD600;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-.btnTypeA{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    background-color: #BDD600;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
