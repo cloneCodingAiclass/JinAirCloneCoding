@@ -193,7 +193,9 @@
                     </div>
                 </div>
                 <h3>약관동의</h3>
+                <form action="" name="termsAgree_OK">
                 <div class="termsAgree_main">
+                    <input type="hidden" name="ischeck" id="ischeck" value="n">
                     <p><input type="checkbox" name="agreeAll" id="agreeAll"><label for="agreeAll">아래 약관 및 개인정보 수집, 이용 등에 모두 동의 합니다.</label></p>
                     <ul class="joinAgree">
                         <li>
@@ -226,7 +228,8 @@
                             <h3>본인인증</h3>
                         <div class="confirm_main">
                             <div class="confirm_phone">
-                                <p><a href="./joinForm.html"><img src="../index_img/ico_phone.png" alt="휴대폰 인증"></p>
+                                <p>
+                                    <input type="submit" value="phone" onclick=phonecheck()><img src="../index_img/ico_phone.png" alt="휴대폰 인증"></p>
                                 <span>휴대폰 본인인증</span><br>본인 명의로 가입된 핸드폰 번호를 통해 인증</a></p>
                             </div>
                             <div class="confirm_ipin">
@@ -243,6 +246,7 @@
                     <div class="btn">
                         <input type="button" class="btn_cancel" value="취소" onclick="location.href='joinGate.html'">
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

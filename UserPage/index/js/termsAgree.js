@@ -92,27 +92,7 @@ $(function () {
         }
     })
     $('.false_modal').hide();
-    $('.confirm_phone, .confirm_ipin').click(function(){
-        let term1 = $('#term01').is(':checked');
-        let term2 = $('#term02').is(':checked');
-        let term3 = $('#term03').is(':checked');
-        
-        if(term1 && term2 && term3){
-            //api로 넘기기
-            let url = "joinForm.html";
-            $('.confirm_phone').click(function(){
-                $(location).attr('herf', url);
-            });
-            $('.confirm_ipin').click(function(){
-                $(location).attr('herf', url);
-            });
-        }else{
-            $('.false_modal').fadeIn(200);
-            $('.btn_cancel').click(function(){
-                $('.false_modal').fadeOut(200);
-            })
-        }
-    })
+
     $('.confirm_modal1').hide();
     $('.term01').click(function(){
         $('.confirm_modal1').fadeIn(200);
@@ -150,4 +130,21 @@ function hidePopupLayer(){
     $('.confirm_modal2', parent.document).fadeOut(200);
     $('.confirm_modal3', parent.document).fadeOut(200);
     $('body', parent.document).css('overflow', '');
+}
+function phonecheck(){
+        let term1 = $('#term01').is(':checked');
+        let term2 = $('#term02').is(':checked');
+        let term3 = $('#term03').is(':checked');
+        let form = $('form');
+
+        if(term1 && term2 && term3){
+            ischeck.value = 'y' ;
+                //api로 넘기기
+            form.prop('action', './joinForm.html');
+        }else{
+            $('.false_modal').fadeIn(200);
+            $('.btn_cancel').click(function(){
+                $('.false_modal').fadeOut(200);
+            })
+        }
 }
