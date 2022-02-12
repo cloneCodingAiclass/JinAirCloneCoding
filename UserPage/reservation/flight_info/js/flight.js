@@ -84,7 +84,6 @@ $(function () {
         $('.modal').fadeOut(200);
     })
 
-
     $('.dis_schedule').on('click', function () {
         $('#container').css({"height":"1100px"});
         $('.schedule').css({"display":"block"});
@@ -199,5 +198,6 @@ $(function () {
     })
     $('.calscroll').find('a').on('click', function () {
         $('.cal').css({"display":"none"});
-    })
+    });
+
 });

@@ -1014,3 +1014,10 @@ iframe{
     font-size: 70px;
     color: #661e43;
 }
+
+.choice{
+    display: block !important;
+}
+.hide{
+    display: none;
+}
