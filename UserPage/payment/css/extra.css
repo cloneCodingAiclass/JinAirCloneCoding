@@ -293,6 +293,7 @@ body{
     height: 1800px;
 }
 
+
 .cursor {
     cursor: pointer;
 }
@@ -476,285 +477,6 @@ body{
     border-top: 1px solid rgba(168, 165, 165, 0.3);
 }
 
-/*탑승객정보*/
-
-.pass_info_wrap {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 33px;
-}
-
-.pass_info_wrap .pass_info_title {
-    width: 100%;
-    border-top: 1px solid rgba(168, 165, 165, 0.3);
-    padding: 20px;
-    padding-top: 70px;
-    font-weight: bold;
-    color: black;
-}
-
-.pass_info_wrap > .pass_info_title > p{
-    font-size: 20px;
-    display: inline
-}
-
-.pass_info_wrap table {
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid #444;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.pass_info_wrap table.required_table {
-    border-top: 1px solid #444;
-    border-bottom: none;
-    padding-top: 40px;
-}
-
-.pass_info_wrap table.required_table th {
-    line-height: 60px;
-}
-
-.pass_info_wrap table.options_table {
-    padding-top: 0px;
-    padding-bottom: 40px;
-}
-
-.pass_info_wrap table .nop {
-    color:rgb(102, 30, 67);
-    font-size: 22px;
-    display: inline;
-    margin-right: 10px;
-}
-
-.check_txt {
-    display: inline-block;
-    font-size: 14px;
-    vertical-align: top;
-    padding-left: 5px;
-}
-
-table td {
-    height: 60px;
-}
-
-table input {
-    background-color: rgb(248, 248, 248);
-    height: 90%;
-    border: none;
-    border: 1px solid rgba(168, 168, 168, 0.7);
-    font-size: 16px;
-    font-weight: 600;
-    padding: 5px;
-    padding-left: 15px;
-}
-
-table input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-}
-
-table .required::before {/*반드시 작성 앞에 기호*/
-    content: "* ";
-}
-
-table .p90 {
-    width: 80%;
-    height: 90%;
-    background-color: rgb(248, 248, 248);
-    padding-left: 15px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #444;
-    border: 1px solid rgba(168, 168, 168, 0.7);
-}
-
-select.p90 {
-    -webkit-appearance:none; /* for chrome */
-    -moz-appearance:none; /*for firefox*/
-    appearance:none;
-}
-
-select.p90::-ms-expand{
-    display:none;/*for IE10,11*/
-}
-
-select.p90 {
-    background:url('../img/down.png');
-    background-repeat:  no-repeat;
-    background-size: 5%;
-    background-position: 95% 50%;
-    background-color: rgb(248, 248, 248);
-    margin-right: 10px;
-    border: 1px solid rgba(168, 165, 165, 0.5);
-}
-
-.pass_info_wrap table .name1 {
-    width: 40%;
-    border-right: none;
-}
-
-.pass_info_wrap table .name2 {
-    width: 40%;
-    border-left: none;
-}
-
-.pass_info_wrap table .id {
-    width: 64%;
-}
-
-.pass_info_wrap table .discount {
-    position: relative;
-    top: 5px;
-    width: 25px;
-    margin-top: 3px;
-}
-
-.pass_info_wrap table .butt_edit {
-    width: 70px;
-    margin-left: 8px;
-    background-color: #BDD600;
-    text-align: center;
-}
-
-.radio_wrap input[type="radio"]{
-    display:none;
-}
-
-.radio_wrap input[type="radio"] + span{
-    display: inline-block;
-    background: rgb(248, 248, 248);
-    border: 1px solid rgba(168, 168, 168, 0.7); 
-    padding-top: 18px;
-    text-align: center;
-    width: 38.6%;
-    height: 90%;
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.radio_wrap input[type="radio"]:checked + span{
-    background:rgb(102, 30, 67);
-    color:#fff;
-}
-
-label.men {
-    margin-right: 10px;
-}
-
-/*탑승객 정보 끝*/
-
-/*공지사항*/
-.noti_wrap {
-    position: relative;
-    top: 30px;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    text-indent: -13px;
-}
-
-.noti_wrap > .noti > li {
-    line-height: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.noti_wrap > .noti > li::before {
-    content: " - ";
-}
-
-.noti_wrap > .noti > li a {
-    font-weight: bold;
-    color: black;
-}
-
-.noti_wrap > .noti > li a:hover {
-    color:rgb(102, 30, 67);
-}
-
-.noti_wrap .discount {
-    position: relative;
-    top: 5px;
-    width: 25px;
-    margin-top: 3px;
-}
-
-/*공지사항 끝*/
-
-.buyer_wrap {
-    position: relative;
-    top: 50px;
-}
-
-.pass_info_title {
-    width: 100%;
-    padding: 20px;
-    padding-top: 70px;
-    font-weight: bold;
-    color: black;
-}
-
-.buyer_table_wrap {
-    width: 100%;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
-}
-
-.buyer_wrap .pass_info_title > p{
-    font-size: 20px;
-    display: inline
-}
-
-.buyer_wrap table {
-    width: 70%;
-    margin: 20px 0;
-}
-
-.input_email {
-    width: 65.5%;
-}
-
-.input_phone {
-    width: 39%;
-}
-
-.buyer_wrap .p90 {
-    width: 170px;
-    margin-right: 10px;
-}
-
-.buyer_wrap select.p90 {
-    -webkit-appearance:none; /* for chrome */
-    -moz-appearance:none; /*for firefox*/
-    appearance:none;
-}
-
-.buyer_wrap select.p90::-ms-expand{
-    display:none;/*for IE10,11*/
-}
-
-.buyer_wrap select.p90 {
-    background:url('../img/down.png');
-    background-repeat:  no-repeat;
-    background-size: 13%;
-    background-position: 95% 50%;
-    background-color: rgb(248, 248, 248);
-    margin-right: 10px;
-    border: 1px solid rgba(168, 165, 165, 0.5);
-}
-
-.buyer_wrap .noti {
-    margin-top: 10px;
-    line-height: 25px;
-    letter-spacing: 0.5px;
-}
-
-.buyer_wrap .noti > li::before {
-    content: " - ";
-}
-
 /*fix총액 확인*/
 
 .fix_bott_wrap {
@@ -857,7 +579,6 @@ label.men {
     height: 100%;
     top: 800px;
     z-index: 500;
-    display: none;
 }
 
 .modal_con_wrap {
@@ -1170,7 +891,6 @@ td.cur::before {
 
 /*총액 확인 모달*/
 
-
 /*푸터*/
 #footerCont {
     width: 100%;
@@ -1438,3 +1158,4 @@ td.cur::before {
     justify-content: center;
     align-items: center;
 }
+
