@@ -735,15 +735,18 @@ tr {
     align-items: center;
     flex-direction: column;
     z-index: 101;
+    display: none;
 }
 .pointInfo_modal > .modal_content{
-    width:645px; height:600px;
+    width:645px; height:700px;
     background:#fff;
     position: relative;
     box-sizing:border-box; 
     line-height:23px; cursor:pointer;
     max-height: 100%;
     overflow-y: auto;
+    top: 30px;
+    left: 400px;
 }
 .modal_content > table {
     border-bottom: 1px solid #000;
@@ -774,6 +777,7 @@ tr {
 }
 .modal_content > table td{
     border: 1px solid #000;
+    text-align: center;
 }
 
 /* pointInfo_modal 끝 */
