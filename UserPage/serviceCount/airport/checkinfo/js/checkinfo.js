@@ -121,5 +121,5 @@ $(function() {
     $("#popWrap2").click(function(){
         $('#popWrap2').css({"display":"none"});
         $('body').css('overflow', '');
-});
+    });
 });

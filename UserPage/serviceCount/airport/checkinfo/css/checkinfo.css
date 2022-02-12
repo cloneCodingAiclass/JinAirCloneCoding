@@ -1074,15 +1074,6 @@ table {
     z-index: 100;
 }
 
-#popCont {
-    position:relative;
-    width: 1000px;
-    top: 5%; left:10%;
-    margin-top: -80px; margin-left: 80px;
-    box-sizing:border-box; padding:74px 0;
-    line-height:23px; cursor:pointer;
-    max-height: 100%;
-}
 #popCont p{
     height: 20px;
     background-color: #661e43;
