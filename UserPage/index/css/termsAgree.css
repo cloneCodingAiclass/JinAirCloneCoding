@@ -682,17 +682,18 @@ body{
     font-weight: 500;
     margin-bottom: 10px;
 }
-.termsAgree_container > .termsAgree_main{
+.termsAgree_container > 
+form > .termsAgree_main{
     margin: 20px 0;
 }
-.termsAgree_container > .termsAgree_main label{
+.termsAgree_container > 
+form > .termsAgree_main label{
     padding-left: 30px;
     font-size: 1rem;
     position: relative; 
     display: inline-block; 
 }
-
-.joinAgree li {
+form .joinAgree li {
     position: relative;
     padding: 30px 150px 22px 20px;
     margin-top: 10px;
@@ -702,16 +703,16 @@ body{
     display: flex;
     align-items: center;
 }
-.joinAgree li span{
+form .joinAgree li span{
     font-weight: 700;
     color: #661E43;
     margin-left: 10px;
     margin-right: 5px;
 }
-.termsAgree_main input[type="checkbox"]{
+form .termsAgree_main input[type="checkbox"]{
     display: none;
 }
-.termsAgree_main input[type="checkbox"] + label{
+form .termsAgree_main input[type="checkbox"] + label{
     display: inline-block;
     height: 20px;
     background: url(../index_img/ico_check.png) no-repeat 0 0;
@@ -719,7 +720,7 @@ body{
     display: flex;
     align-items: center;
 }
-.termsAgree_main input[type="checkbox"]:checked + label{
+form .termsAgree_main input[type="checkbox"]:checked + label{
     background-position: 0 -20px;
 }
 .joinAgree li .btnTypeB {
@@ -731,7 +732,7 @@ body{
     background-color: white;
 }
 
-.confirm_box .confirm_main{
+form .confirm_box .confirm_main{
     margin-top: 20px;
     text-align: center;
 }
@@ -778,7 +779,8 @@ body{
     font-weight: 600;
     font-size: 0.8rem;
 }
-.termsAgree_container > .btn input[type="button"]{
+.termsAgree_container > 
+form .btn input[type="button"]{
     width: 200px;
     height: 50px;
     background-color:#BDD600;
