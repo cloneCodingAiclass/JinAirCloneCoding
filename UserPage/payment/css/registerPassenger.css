@@ -148,7 +148,7 @@ body{
 }
 #header .login > li .lang_img{
     display: inline-block;
-    background: url(./index_img/down.png) no-repeat right;
+    background: url("../img/down.png") no-repeat right;
     background-size: 13px;
     width: 13px;
     height: 13px;
@@ -289,7 +289,8 @@ body{
 /* 서브 네비 끝 */
 /* container */
 #container{
-    height: 4200px;
+    width: 100%;
+    height: 1800px;
 }
 
 .cursor {
@@ -306,11 +307,6 @@ body{
 
 .bb {
     border-bottom: 1px solid rgb(102, 30, 67);
-}
-
-#container {
-    width: 100%;
-    height: 3000px;
 }
 
 .cursor {
@@ -384,7 +380,7 @@ body{
     top: 15px;
     width: 25px;
     height: 25px;
-    background-image: url("../../../img/down.png");
+    background-image: url("../img/down.png");
     background-size: 130%;
     background-repeat: no-repeat;
     background-position: center;
@@ -392,7 +388,7 @@ body{
 
 .trip_info > .schedule > .arrow_up_img {
     display: none;
-    background-image: url("../../../img/up.png");
+    background-image: url("../img/up.png");
 }
 
 .trip_info > .trip_area, .trip_info2 > .trip_area {
@@ -585,7 +581,7 @@ select.p90::-ms-expand{
 }
 
 select.p90 {
-    background:url('../../../img/down.png');
+    background:url('../img/down.png');
     background-repeat:  no-repeat;
     background-size: 5%;
     background-position: 95% 50%;
@@ -740,7 +736,7 @@ label.men {
 }
 
 .buyer_wrap select.p90 {
-    background:url('../../../img/down.png');
+    background:url('../img/down.png');
     background-repeat:  no-repeat;
     background-size: 13%;
     background-position: 95% 50%;
@@ -792,7 +788,7 @@ label.men {
 }
 
 .fix_bott table td.img {
-    background-image: url("../../../img/up.png");
+    background-image: url("../img/up.png");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -801,7 +797,7 @@ label.men {
 }
 
 .fix_bott table td.img2 {
-    background-image: url("../../../img/down.png");
+    background-image: url("../img/down.png");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -812,6 +808,7 @@ label.men {
 .price_tit {
     font-weight: bold;
     background-color: #fff;
+    padding: 3px;
 }
 
 .price_tit span {
@@ -858,9 +855,8 @@ label.men {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 820px;
+    top: 800px;
     z-index: 500;
-    /* background-color: yellow */
 }
 
 .modal_con_wrap {
@@ -868,7 +864,7 @@ label.men {
     box-sizing: border-box;
     width: 1180px;
     height: 480px;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%);
     padding-top: 40px;
@@ -905,6 +901,7 @@ label.men {
     margin-top: 8px;
     font-size: 16px;
     width: 500px;
+    height: 20px !important;
 }
 
 .jour1 .jour_info_wrap {
@@ -912,7 +909,8 @@ label.men {
 }
 
 .jour_info_wrap td {
-    padding: 3px
+    padding: 3px;
+    height: 15px;
 }
 
 .jour_info_wrap .area {
@@ -928,15 +926,49 @@ label.men {
     justify-content: center;
     margin-top: 8px;
     font-size: 13px;
+    width: 100%;
+    height: 403px;
+}
+
+.info {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin-right: 60px;
+}
+
+#info_table_wrap {
+    margin-top: 0px;
+    width: 500px;
+    height: 240px;
+    overflow: none;
+    background-color: rgb(248, 248, 248);
+}
+
+.App {
+    position: relative;
+    width: 500px;
+    height: 300px;
 }
 
 .info_wrap .price_info_wrap {
-    display: flex;
-    width: 500px;
+    /* display: flex; */
+    width: 490px;
     font-size: 16px;
-    height: 280px;
+    height: 100px;
     padding: 10px;
-    background-color: rgb(248, 248, 248);
+    margin-bottom: 50px;
+    /* background-color: rgb(248, 248, 248); */
+}
+
+
+.info_wrap .price_info_wrap td {
+    width: 100%;
+    height: 30px;
+}
+
+.info_wrap .price_info_wrap .price {
+    text-align: right;
 }
 
 
@@ -946,19 +978,19 @@ label.men {
     padding: 0px;
 }
 
+.table_title {
+    width: 100%;
+}
+
 .table_title .tit {
     text-align: left;
-    padding: 0px
 }
 
 
 .table_title .curr {
     text-align: right;
+    padding-right: 15px;
     font-size: 12px;
-}
-
-.info_wrap .info {
-    margin-right: 60px;
 }
 
 
@@ -967,33 +999,173 @@ label.men {
 }
 
 .plus {
-    position: absolute;
-    bottom: 35px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 20px;
     color:rgb(102, 30, 67);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 80px;
+    margin-left: 200px;
 }
 
 .plus_1 {
-    left: 23%;
+    display: inline-block;
+    width: 34px;
+}
+
+.minus_1 {
+    width: 30px;
+    display: none;
+    margin-left: 2px;
 }
 
 .plus_2 {
-    left: 73%;
+    display: inline-block;
+    width: 34px;
 }
 
-.plus img {
-    position: relative;
-    top: 15px;
-    width: 40px;
+.minus_2 {
+    width: 30px;
+    display: none;
+    margin-left: 2px;
 }
+
 
 
 .close {
     position: absolute;
     font-size: 2.3em;
-    top: 190px;
-    right: 190px;
+    top: 220px;
+    right: 120px;
 }
 
+/*더보기*/
+.modal_price_info_wrap {
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+}
+
+.modal_price_info_wrap table {
+    width: 100%;
+    position: relative;
+    background-color: rgb(248, 248, 248);
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+.modal_price_info_wrap th {
+    background-color: rgb(102, 30, 67);
+    text-align: left;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.modal_price_info_wrap td {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+    height: 45px;
+}
+
+.modal_price_info_wrap td:first-child {
+    padding:  0px 18px;
+}
+
+.modal_price_info_wrap td.seb {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.modal_price_info_wrap td.per {
+    padding-left: 8px;
+}
+
+.modal_price_info_wrap td span.det {
+    float: right;
+}
+
+.modal_price_info_wrap td.per::before {
+    content: ' · ';
+}
+
+.modal_price_info_wrap p {
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+
+.modal_price_info_wrap p.title {
+    float: left;
+}
+
+
+.modal_price_info_wrap th span {
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+.modal_price_info_wrap tr:last-child {
+    font-weight: lighter;
+}
+
+.modal_price_info_wrap td > span.det {
+    font-size: 13px;
+    text-decoration: underline;
+    margin-left: 65px;
+    color: #444;
+}
+
+.modal_price_info_wrap td span > span {
+    text-decoration: none;
+}
+
+.ar {
+    text-decoration: none;
+}
+
+.ar::before {
+    font-size: 10px;
+    content: ' ∧ ';
+    text-decoration: none;
+}
+
+td.cur {
+    height: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+td.cur::before {
+    content: ' * ';
+}
+
+
+.detD1 {
+    width: 100%;
+    padding: 0px;
+    background-image: url("../img/det.PNG");
+    background-size: 100%;
+    background-repeat: none;
+    background-color: rgb(248, 248, 248);
+    display: none;
+}
+
+.detD2 {
+    width: 100%;
+    padding: 0px;
+    background-image: url("../img/det.PNG");
+    background-size: 100%;
+    background-repeat: none;
+    background-color: rgb(248, 248, 248);
+    display: none;
+}
+
+/*더보기*/
 
 /*총액 확인 모달*/
 
