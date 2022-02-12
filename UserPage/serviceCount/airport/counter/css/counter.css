@@ -343,6 +343,10 @@ body {
 /* count_bn 끝 */
 
 /* tabArea */
+.tabTypeA > li #domestic_tab {
+    color: #fff;
+    background-color: rgb(102, 30, 67);
+}
 .tabArea {
     border-top: 1px solid #661e43;
     box-shadow: 5px 8px 5px rgb(150 150 150 / 40%);
