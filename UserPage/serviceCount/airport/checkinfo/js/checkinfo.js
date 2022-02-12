@@ -100,4 +100,26 @@ $(function () {
     })
 
 
+
+
+});
+
+ /* 체크인 후 절차 */
+$(function() {
+    $('.checkinEX_1').on('click', function(){
+        $('#popWrap').css({"display":"block"});
+        $('body').css('overflow', 'hidden');
+    });
+    $("#popWrap").click(function(){
+        $('#popWrap').css({"display":"none"});
+        $('body').css('overflow', '');
+    });
+    $('.checkinEX_2').on('click', function(){
+        $('#popWrap2').css({"display":"block"});
+        $('body').css('overflow', 'hidden');
+    });
+    $("#popWrap2").click(function(){
+        $('#popWrap2').css({"display":"none"});
+        $('body').css('overflow', '');
+    });
 });
