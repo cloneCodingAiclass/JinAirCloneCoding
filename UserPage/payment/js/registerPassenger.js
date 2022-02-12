@@ -122,7 +122,11 @@ $(function () {
         }
     });
 
+    /*하단 총액 모달창 */
     
+    $("#info_table_wrap").css("overflow", "hidden");
+    $("#info_table_wrap").css("overflow-x", "none");
+
     $(".img").on('click', () => {
         $(".img").css("display","none");
         $(".img2").css("display","block");
@@ -142,6 +146,7 @@ $(function () {
         $(".fix_modal").fadeOut();
     })
 
+    /*자세히 보기 */
     $(".det1").on('click', () => {
         $(".detD1").css("display", "inline-block");
     })
@@ -153,7 +158,7 @@ $(function () {
     $(".plus_1").on('click', () => {
         $("#info_table_wrap").css("overflow", "scroll");
         $("#info_table_wrap").css("overflow-x", "hidden");
-        $(".info_table_wrap").animate({scrollTop:$(".modal_price_info_wrap").offset.top},2000);
+        $("#info_table_wrap").animate({scrollTop:300},600);
         $(".plus_1").css("display", "none");
         $(".minus_1").css("display", "inline-block");
     })
@@ -177,7 +182,7 @@ $(function () {
         } else {
             $(".fix_bott").css("position", "absolute");
             $("#modal_totP_wrap").css("position", "absolute");
-            $("#modal_totP_wrap").css("top", y-30);
+            $("#modal_totP_wrap").css("top", y-280);
             $(".fix_trip_info").css("position", "absolute");
         }
     });

@@ -162,7 +162,7 @@ body {
 }
 #header .login > li .lang_img {
     display: inline-block;
-    background: url(./index_img/down.png) no-repeat right;
+    background: url(../img/down.png) no-repeat right;
     background-size: 13px;
     width: 13px;
     height: 13px;
@@ -301,484 +301,170 @@ body {
     width: 16.6%;
 }
 /* 서브 네비 끝 */
-
 /* contents */
-
+.w_1160 {
+    width: 1160px;
+}
+.w_180 {
+    width: 200px;
+}
+.in_bl {
+    display: inline-block;
+}
+.w_120 {
+    width: 120px;
+}
 #container {
-    position: relative;
-    max-width: 1200px;
+    margin-top: 100px;
+}
+#container .wrap {
     margin: 0 auto;
-    padding: 100px 20px 190px;
+    text-align: center;
+}
+#container .wrap .title{
+    margin-top: 150px;
+}
+#container .wrap .title h2 {
+    font-size: 38px;
     font-weight: bold;
+    color: #7e0049;
+}
+
+/* 예약 정보 테이블 */
+#container .wrap .reserve_info{
+    margin-top: 50px;
+}
+#container .wrap .reserve_info h3 {
     text-align: left;
-}
-/* count_bn */
-.count_bn{
-    position: relative;
-    height: 225px;
-}
-.count_bn h1.typeA{
-    height: 78px;
-    padding-left: 0;
-    border-bottom: none;
+    padding: 15px;
     font-weight: bold;
-    font-size: 46px;
-    line-height: 1em;
-    color: #661e43;
-    padding: 48px 0 0 20px;
 }
-.count_bn .typeA_sub{
-    padding: 40px 0 0 20px;
-    font-size: 24px;
-    line-height: 1.4em;
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-.count_bn img {
-    float: right;
-    position: relative;
-    bottom: 10px;
-    right: 90px;
-}
-/* count_bn 끝 */
-
-/* tabArea */
-.tabTypeA > li #domestic_tab {
-    color: #fff;
-    background-color: rgb(102, 30, 67);
-}
-.tabArea {
-    border-top: 1px solid #661e43;
-    box-shadow: 5px 8px 5px rgb(150 150 150 / 40%);
-}
-.tabTypeA {
-    display: table;
+#container .wrap .reserve_info table {
+    border-top: 2px solid rgb(102, 102, 102, 0.5);
+    border-bottom: 2px solid rgb(102, 102, 102, 0.5);
     width: 100%;
-    margin-bottom: 40px;
-    table-layout: fixed;
-}
-
-.tabTypeA li {
-    display: table-cell;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.4em;
-    vertical-align: middle;
-}
-.tabTypeA li.choice {
-    background: #661e43;
-}
-.tabTypeA li a {
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-    color: #000;
-}
-
-/* pointInfo */
-.pointInfo {
-    position: relative;
-    padding: 40px 40px 35px;
-    margin-top: 120px;
-    background: #f7f7f6;
-}
-.pointInfo h2 {
-    font-size: 24px;
-    color: #000;
-    line-height: 1em;
-}
-.pointInfo h2 + p {
-    margin-top: 15px;
-}
-.pointInfo >a {
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    margin-top: -21px;
-}
-.btnTypeA {
-    display: inline-block;
-    box-sizing: border-box;
-    min-width: 135px;
-    height: 42px;
-    line-height: 42px;
-    padding: 0 30px;
-    border: 0;
-    text-align: center;
-    font-size: 14px;
-    color: #000 !important;
-    white-space: nowrap;
-    cursor: pointer;
-    background: #bdd600;
-}
-
-/* counter */
-.counter {
-    display: none;
-}
-.counter .list {
-    width: 100%;
-    overflow: hidden;
-    margin: -20px 0;
-    letter-spacing: -1em;
-}
-.counter .list > li {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 550px;
-    height: 380px;  
-    padding: 10px 5px 0; 
-    vertical-align: top;
-    letter-spacing: 0;
-    margin-left: 10px;
-
-}
-.counter .list > li .wrap {
-    position: relative;
-    padding-top: 70px;
-    border: 1px solid #e6e6e6;
-}
-.counter .list > li .tit {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 18px;
-    line-height: 26px;
-}
-.counter .list > li .tit span {
-    font-size: 16px;
-}
-.counter .list > li .thumb {
-    text-align: center;
-}
-.counter .list > li .thumb img {
-    max-width: 100%;
-}
-.counter .list > li h3 {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000;
-}
-.counter .list > li .caution {
-    margin: 5px 0 0;
-}
-.counter h3 {
-    padding-top: 5px;
-}
-.counter h3 a {
-    display: block;
-    height: 70px;
-    text-align: center;
-    line-height: 70px;
-    font-size: 18px;
-    background: #f8f8f8;
-}
-.counter h3 a.icoFold:before {
-    right: 40px;
-}
-.counter h3 a.icoFold:after {
-    right: 47px;
-}
-.counter h3 a.icoFold.on {
-    color: #661e43;
-    font-family: 'notob';
-}
-.counter h3 +.list {
-    margin: 20px 0 35px;
-}
-.counter .countryRule h2.typeA {
-    margin-left: 0;
-}
-.counter .countryRule .txtdesc {
-    margin-top: 20px;
-    font-size: 16px;
-}
-.counter .countryRule .txtdesc + [class*="btn"] {
-    min-width: 270px;
-    margin-top: 5px;
-}
-.counter .countryRule table {
-    margin-top: 20px;
-}
-.counter .srmy {
-    margin: 70px 0 10px;
-    font-size: 20px;
-    color: #000;
-    line-height: 1.4em;
-}
-.counter h3.typeA {
-    padding-left: 0;
-    font-size: 24px;
-    font-family: 'notob';
-    color: #000;
-    line-height: 1em;
-}
-.counter .use_list {
-    overflow: hidden;
-}
-.counter .use_list li {
-    position: relative;
-    display: inline-block;
-    width: 189px;
-    vertical-align: top;
-    box-sizing: border-box;
-}
-.counter .use_list li:first-child:before {
-    display: none;
-}
-.counter .use_list li:before {
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: -1px;
-    background: #000;
-    content: '';
-}
-.counter .use_list li div {
-    position: relative;
-    display: table;
-    width: 170px;
-    height: 170px;
-    border: 1px solid #000;
-    border-radius: 100%;
-    background: #fff;
-    z-index: 1;
-}
-.counter .use_list li span {
-    display: table-cell;
-    padding: 0 25px;
-    font-size: 16px;
-    color: #000;
-    vertical-align: middle;
-    text-align: center;
-    word-break: keep-all;
-}
-/* counter 끝 */
-
-/* 도심공항 */
-.desc {
-    position: absolute;
-    left: 0;
-    top: -10000px;
-    overflow: hidden;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 1px !important;
-    line-height: 1px !important;
-}
-.prohibit h3,
-.prohibit.tabCont h3 {
-    padding: 70px 20px 20px 50px;
-    margin-left: 0;
-    margin-right: 0;
-    border-top: 1px solid #f0f0f0;
-}
-.prohibit h3 .fontTypeD,
-.prohibit.tabCont h3 .fontTypeD {
-    font-family: 'noto';
-}
-.prohibit .text {
-    margin: -5px 20px 10px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000;
-}
-.prohibit .list {
-    overflow: hidden;
-    margin-left: -10px;
-}
-.prohibit .list li {
-    position: relative;
-    display: inline-block;
-    width: 150px;
-    margin: 30px -4px 0 30px;
-    text-align: center;
-    font-size: 16px;
-    color: #661e43;
-    word-break: keep-all;
-    vertical-align: top;
-}
-.prohibit .list li:before {
-    content: "";
-    display: block;
-    width: 148px;
-    height: 148px;
-    margin-bottom: 5px;
-    border: 1px solid #000;
-}
-.prohibit .list li:after {
-    content: "";
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    width: 100px;
-    height: 100px;
-    background: url("/index_img/down.png") no-repeat 0 0;
-}
-.prohibit .list li.no1:after {
-    background-position-x: 0;
-}
-.prohibit .list li.no2:after {
-    background-position-x: -100px;
-}
-.prohibit .list li.no3:after {
-    background-position-x: -200px;
-}
-.prohibit .list li.no4:after {
-    background-position-x: -300px;
-}
-.prohibit .list li.no5:after {
-    background-position-x: -400px;
-}
-.prohibit .list li.no6:after {
-    background-position-x: -500px;
-}
-.prohibit .plane li:after {
-    background-position-y: -100px;
-}
-.baggage .pointBox {
-    margin-top: 20px;
-    padding: 20px 0;
-    border: 1px solid #e6e6e6;
-}
-.baggage .btnTypeA.btn {
-    margin: 0 0 0 10px;
-    vertical-align: middle;
-    line-height: normal;
-    height: auto;
-    padding: 7px 20px;
-}
-
-/* bbsList css */
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-    
-}
-colgroup {
-    display: table-column-group;
-}
-col {
-    display: table-column;
-}
-.bbsList {
-    width: 100%;
-    table-layout: fixed;
-}
-table {
-    display: table;
     border-collapse: collapse;
-    border-spacing: 0 !important;
 }
-thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    font-weight: normal;
-    padding: 0;
-}
-.bbsList tbody tr:last-child th, .bbsList tbody tr:last-child td {
-    border-bottom: 1px solid #000;
-}
-.bbsList thead th {
+#container .wrap .reserve_info table th,
+#container .wrap .reserve_info table td{
+    border-bottom: 1px solid rgb(153, 153, 153, 0.2)t;
     height: 60px;
-    border: 1px solid #eaeaea;
-    border-right: 0;
-    border-top-color: #000;
-    border-bottom: 0;
-    font-size: 18px;
-    background: #f7f7f6;
-    word-wrap: break-word;
-    text-align: center;
 }
-.bbsList tbody td {
-    height: 28px;
-    padding: 16px 0;
-    border: 1px solid #eaeaea;
-    border-right: 0;
+#container .wrap .reserve_info table th{
+    font-size: 18px;
+    color: #666;
+}
+#container .wrap .reserve_info table th p {
     color: #000;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: bold !important;
+}
+#container .wrap .reserve_info table td {
+    text-align: left;
+    padding-left: 80px;
     font-weight: bold;
+    color: #000;
 }
-.counter .use_list li {
-    position: relative;
-    display: inline-block;
-    width: 175px;
-    vertical-align: top;
-    box-sizing: border-box;
-}
-/* bbsList css 끝 */
-
-/* pointInfo_modal */
-.pointInfo_modal{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-.pointInfo_modal > .modal_content{
-    width:645px; height:762px;
-    background:#fff; border-radius:10px;
-    position:relative; top:20%; left:10%;
-    margin-top: -80px; margin-left: 400px;
-    box-sizing:border-box; padding:74px 0;
-    line-height:23px; cursor:pointer;
-    max-height: 100%;
-    overflow-y: auto;
-}
-.modal_content > table {
-    border-bottom: 1px solid #000;
-}
-.modal_content >.title {
-    position: absolute;
-    top: 0%;
-    width: 100%;
+#container .wrap .reserve_info table .info {
     height: 100px;
-    background-color: #661e43;
 }
-.modal_content > .title > h2 {
-    color: #f7f7f6;
-    line-height: 100px;
-    margin-left: 30px;
+#container .wrap .reserve_info table .info .arrow img {
+    position: relative;
+    top: -20px;
+    width: 40px;
+    margin: 0 40px;
 }
-.modal_content > table{
-    margin: 50px 10px 10px 10px;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+#container .wrap .reserve_info table .info .in_bl p {
+    font-size: 14px;
+    color: #666;
+    line-height: 2;
 }
-.modal_content > table trth{
+/* 탑승객 정보 테이블 */
+#container .wrap .user_info {
+    margin-top: 100px;
+}
+#container .wrap .user_info h3 {
+    text-align: left;
+    padding: 15px;
     font-weight: bold;
 }
-.modal_content > table td{
-    border: 1px solid #000;
+#container .wrap .user_info table {
+    border-top: 2px solid rgb(102, 102, 102, 0.5);
+    border-bottom: 2px solid rgb(102, 102, 102, 0.5);
+    width: 100%;
+    border-collapse: collapse;
 }
-
-/* pointInfo_modal 끝 */
-/* 도심공항 끝 */
-
-/* 컨테이너 끝 */
-
-
+#container .wrap .user_info table th,
+#container .wrap .user_info table td {
+    height: 60px;
+    border-right: 1px solid rgb(153, 153, 153, 0.2);
+}
+#container .wrap .user_info table th:first-child,
+#container .wrap .user_info table td:first-child{
+    width: 200px;
+}
+#container .wrap .user_info table th:last-child,
+#container .wrap .user_info table td:last-child{
+    border: none;
+}
+#container .wrap .user_info table th {
+    background-color: #f7f7f6;
+}
+#container .wrap .user_info table td {
+    font-weight: bold;
+    font-size: 18px;
+}
+/* 결제정보테이블 */
+#container .wrap .pay_info{
+    margin-top: 100px;
+}
+#container .wrap .pay_info h3{
+    text-align: left;
+    padding: 15px;
+    font-weight: bold;
+}
+#container .wrap .pay_info table{
+    border-top: 2px solid rgb(102, 102, 102, 0.5);
+    border-bottom: 2px solid rgb(102, 102, 102, 0.5);
+    width: 100%;
+    border-collapse: collapse;
+}
+#container .wrap .pay_info table tr{
+    height: 60px;
+    border-bottom: 1px solid rgb(153, 153, 153, 0.2);
+}
+#container .wrap .pay_info table th{
+    color: #666;
+    font-weight: bold;
+}
+#container .wrap .pay_info table td {
+    text-align: left;
+    font-weight: bold;
+}
+#container .wrap .pay_info table td button {
+    margin-left: 55px;
+    border: 1px solid #bdd600;
+    background-color: #fff;
+    width: 160px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 16px;
+}
+#container .wrap .pay_info table td button img {
+    width: 25px;
+    vertical-align: middle;
+}
+/* 메인 이동 버튼 */
+#container .wrap .to_main {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+#container .wrap .to_main a{
+    background-color: #bdd600;
+    padding: 18px 70px;
+    vertical-align: middle;
+}
 /*푸터*/
 #footerCont {
     width: 100%;
@@ -897,31 +583,31 @@ tr {
     background-color: rgb(248, 248, 248);
 }
 .Sicon .twit {
-    background-image: url("/index_img/twitter.png");
+    background-image: url("../index_img/twitter.png");
     background-size: 70%;
     opacity: 0.7;
     margin-left: 10px !important;
 }
 .Sicon .faceb {
-    background-image: url("/index_img/face.png");
+    background-image: url("../index_img/face.png");
     background-size: 50%;
     opacity: 0.8;
     margin-left: 4px;
 }
 .Sicon .youtub {
-    background-image: url("/index_img/youtube.png");
+    background-image: url("../index_img/youtube.png");
     background-size: 45%;
     opacity: 0.6;
     margin-left: 4px;
 }
 .Sicon .insta {
-    background-image: url("/index_img/insta.png");
+    background-image: url("../index_img/insta.png");
     background-size: 60%;
     opacity: 0.8;
     margin-left: 4px;
 }
 .Sicon .blog {
-    background-image: url("/index_img/blog.PNG");
+    background-image: url("../index_img/blog.PNG");
     background-size: 140%;
     margin-left: 4px;
 }
@@ -941,7 +627,7 @@ tr {
 }
 .sit {
     margin-left: 10px;
-    background-image: url("/index_img/site.PNG");
+    background-image: url("../index_img/site.PNG");
     background-size: 140%;
 }
 .Aicon img {
@@ -1026,7 +712,7 @@ tr {
     height: 45px;
     padding: 13px;
     left: -15px;
-    background-image: url("/index_img/btn_srch.gif");
+    background-image: url("../index_img/btn_srch.gif");
     background-position: center;
     padding-top: 20px;
     border: none;

@@ -557,6 +557,14 @@ thead {
     text-align: center;
 }
 
+a:link {
+    color: #555;
+    text-decoration: none;
+}
+.fontTypeE {
+    color: #008ae0 !important;
+}
+
 
 
 
