@@ -811,26 +811,62 @@
                                     <td class="curr">(통화:KRW)</td>
                                 </tr>
                             </table>
-                            <table class="price_info_wrap">
-                                <colgroup>
-                                    <col width="80%">
-                                    <col width="20%">
-                                </colgroup>
-                                <tr>
-                                    <td class="mark price_tit">항공운임</td>
-                                    <td class="price">210,600</td>
-                                </tr>
-                                <tr>
-                                    <td class="mark price_tit">유류할증료</td>
-                                    <td class="price">11,000</td>
-                                </tr>
-                                <tr>
-                                    <td class="mark price_tit">세금</td>
-                                    <td class="price">8,000</td>
-                                </tr>
-                            </table>
-                            <div class="plus plus_1">
-                                더보기<span><img src="./img/curr.PNG" alt=""></span>
+                            <div id="info_table_wrap">
+                                <table class="price_info_wrap price_info_wrap1">
+                                    <colgroup>
+                                        <col width="75%">
+                                        <col width="25%">
+                                    </colgroup>
+                                    <tr>
+                                        <td class="mark price_tit">항공운임</td>
+                                        <td class="price">210,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mark price_tit">유류할증료</td>
+                                        <td class="price">11,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mark price_tit">세금</td>
+                                        <td class="price">8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="plus cursor">
+                                                더보기<img src="./img/curr.PNG" alt="" class="plus_1"><img src="./img/min.PNG" alt="" class="minus_1">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="modal_price_info_wrap">
+                                    <table class="move">
+                                        <colgroup>
+                                            <col width="60%">
+                                            <col width="40%">
+                                        </colgroup>
+                                        <tr><th colspan="2"><p class="title">항공운임</p><p><span>KRW</span>215,000</p></th></tr>
+                                        <tr><td colspan="2">구간 1 : GMP-CJU</td><td></td></tr>
+                                        <tr><td class="per">성인 1</td><td>70,000</td></tr>
+                                        <tr><td colspan="2">구간 2 : CJU-GMP</td></tr>
+                                        <tr><td class="per">성인 1</td><td>145,000</td></tr>
+                                        <tr><th colspan="2"><p class="title">유류할증료</p><p><span>KRW</span>11,000</p></th></tr>
+                                        <tr><td colspan="2">구간 1 : GMP-CJU</td><td></td></tr>
+                                        <tr><td class="per">성인 1</td><td>5,500</td></tr>
+                                        <tr><td colspan="2">구간 2 : CJU-GMP</td></tr>
+                                        <tr><td class="per">성인 1</td><td>5,500</td></tr>
+                                        <tr><th colspan="2"><p class="title">세금</p><p><span>KRW</span>8,000</p></th></tr>
+                                        <tr><td colspan="2">구간 1 : GMP-CJU</td><td></td></tr>
+                                        <tr><td class="per">성인 1<span class="cursor det det1">자세히 보기<span class="ar"></span></span></td><td class="seb">4,000</td></tr>
+                                        <tr>
+                                            <td class="detD detD1" colspan="2"></td>
+                                        </tr>
+                                        <tr><td colspan="2">구간 2 : CJU-GMP</td></tr>
+                                        <tr><td class="per">성인 1<span class="cursor det det2">자세히 보기<span class="ar"></span></span></td><td class="seb">4,000</td></tr>
+                                        <tr>
+                                            <td class="detD detD2" colspan="2"></td>
+                                        </tr>
+                                        <tr><td colspan="2" class="cur">국제선 한국 출발 세금(BP)에는 국제여객공항이용료, 출국납부금,<br/>국제빈곤퇴치기여금이 포함되어 있습니다.</td></tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div class="App">
@@ -844,28 +880,40 @@
                                     <td class="curr">(통화:KRW)</td>
                                 </tr>
                             </table>
-                            <table class="price_info_wrap">
-                                <colgroup>
-                                    <col width="80%">
-                                    <col width="20%">
-                                </colgroup>
-                                <tr>
-                                    <td class="price_tit"></td>
-                                    <td class="price"></td>
-                                </tr>
-                                <tr>
-                                    <td class="price_tit"></td>
-                                    <td class="price"></td>
-                                </tr>
-                            </table>
-                            <div class="plus plus_2">
-                                더보기<span><img src="./img/curr.PNG" alt=""></span>
+                            <div id="info_table_wrap">
+                                <table class="price_info_wrap">
+                                    <colgroup>
+                                        <col width="80%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr>
+                                        <td class="price_tit"></td>
+                                        <td class="price"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="price_tit"></td>
+                                        <td class="price"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="price_tit"></td>
+                                        <td class="price"></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <p class="plus cursor">
+                                                더보기<img src="./img/curr.PNG" alt="" class="plus_2"><img src="./img/min.PNG" alt="" class="minus_2">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
+                    <span class="close">⨉</span>
                 </div>
-                <span class="close cursor">⨉</span>
             </div>
+                <!--총액 모달창 끝-->
             <!--총액 모달창-->
             <!--fix_bott 총액 확인-->
             <div class="fix_bott_wrap">
