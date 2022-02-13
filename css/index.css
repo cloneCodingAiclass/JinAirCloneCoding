@@ -889,47 +889,6 @@ body {
     margin: 90px auto;
 }
 
-/* 공지사항 리스트 */
-#container .notice_box {
-    margin-bottom: 150px;
-}
-#container .notice_box h3 {
-    font-size: 45px;
-    text-align: center;
-    margin: 30px auto;
-}
-#container .notice_box .notice_list {
-    border-top: 1.5px solid #000;
-}
-#container .notice_box .notice_list li {
-    padding: 15px 25px;
-    border-bottom: 0.1px solid rgb(153, 153, 153, 0.2);
-}
-#container .notice_box .notice_list li .notice_ico {
-    font-size: 20px;
-    color: #bdd600;
-}
-#container .notice_box .notice_list li .notice_title {
-    padding-left: 25px;
-    font-size: 16px;
-    font-weight: bold;
-}
-#container .notice_box .notice_list li .notice_regdate {
-    padding-right: 20px;
-    font-size: 16px;
-    float: right;
-}
-#container .notice_box .notice_more {
-    margin-top: 50px;
-    text-align: center;
-}
-#container .notice_box .notice_more a {
-    font-size: 14px;
-    display: inline-block;
-    padding: 10px 45px;
-    color: #fff;
-    background: #7e0049;
-}
 /*푸터*/
 #footerCont {
     width: 100%;

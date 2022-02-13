@@ -725,36 +725,42 @@ tr {
 /* bbsList css 끝 */
 
 /* pointInfo_modal */
+
 .pointInfo_modal{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    z-index: 101;
+    display: none;
 }
 .pointInfo_modal > .modal_content{
-    width:645px; height:762px;
-    background:#fff; border-radius:10px;
-    position:relative; top:20%; left:10%;
-    margin-top: -80px; margin-left: 400px;
-    box-sizing:border-box; padding:74px 0;
+    width:645px; height:700px;
+    background:#fff;
+    position: relative;
+    box-sizing:border-box; 
     line-height:23px; cursor:pointer;
     max-height: 100%;
     overflow-y: auto;
+    top: 30px;
+    left: 400px;
 }
 .modal_content > table {
     border-bottom: 1px solid #000;
 }
 .modal_content >.title {
-    position: absolute;
-    top: 0%;
     width: 100%;
-    height: 100px;
-    background-color: #661e43;
+    height: 70px;
+    background-color: #661E43;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .modal_content > .title > h2 {
     color: #f7f7f6;
@@ -771,6 +777,7 @@ tr {
 }
 .modal_content > table td{
     border: 1px solid #000;
+    text-align: center;
 }
 
 /* pointInfo_modal 끝 */

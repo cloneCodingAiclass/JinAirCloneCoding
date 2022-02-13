@@ -288,7 +288,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: auto;
+    height: 2200px;
 }
 
 /*푸터*/
@@ -693,6 +693,12 @@ body{
     border-bottom: 1px solid black;
     margin-bottom: 20px;
 }
+.joinForm_container table em{
+    position: relative;
+    bottom: 3px;
+    right: 2px;
+    font-size: 13px;
+}
 .joinForm_container table tr{
     display: flex;
     height: auto;
@@ -832,4 +838,10 @@ body{
 .fieldArea .field_gender .field input[type=radio]:checked + label{
     background-color: #661E43;
     color: white;
+}
+.radio_class input[type=radio]{
+    margin-right: 2px;
+}
+.radio_class label{
+    margin-right: 10px;
 }
