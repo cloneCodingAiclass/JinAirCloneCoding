@@ -106,9 +106,6 @@ $(function () {
         $(".list2_wrap").focus();
     })
 
-    $(".plus_1").on("click", function() {
-        $("iframe").css("display", "block");
-    })
 
 
     $(window).scroll(  function() {
