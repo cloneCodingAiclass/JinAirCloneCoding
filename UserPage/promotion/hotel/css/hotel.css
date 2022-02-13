@@ -296,7 +296,7 @@ body{
 #container {
     position: relative;
     top: 100px;
-    height: 1800px;
+    height: 1300px;
 }
 #container > .contentswrap {
     width: 1180px;
@@ -323,14 +323,14 @@ body{
 }
 #container > .contentswrap > .discount > .title_img {
     background: url(../img/icon_top.png) no-repeat center;
-    background-size: 100%;
+    background-size: 80%;
     display: inline;
     width: 170px;
     height: 170px;
     float: right;
     position: relative;
-    right: 26px;
-    bottom: 27px;
+    right: 28px;
+    bottom: 24px;
 }
 #container > .contentswrap .discount_kind .bundlebox_title{
     margin-top: 70px;
@@ -338,7 +338,7 @@ body{
 .img_jinitv{
     width: 100%;
     height: 375px;
-    background: url(../img/activity01.png) no-repeat top;
+    background: url(../img/hotel01.png) no-repeat top;
 }
 .activity_wrap{
     width: 100%;
@@ -363,20 +363,28 @@ body{
     border: none;
     cursor: pointer;
 }
-.img_klook{
+.img_booking{
     width: 100%;
     height: 100px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-    background: url(../img/activity02.png) no-repeat center;
-    background-size: 100%;
+    background: url(../img/hotel02.png) no-repeat center;
+    background-size: 90%;
     margin-bottom: 20px;
 }
-.img_donki{
+.img_hotels{
     width: 100%;
     height: 100px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-    background: url(../img/activity03.png) no-repeat center;
-    background-size: 100%;
+    background: url(../img/hotel03.png) no-repeat center;
+    background-size: 90%;
+    margin-bottom: 20px;
+}
+.img_trip{
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    background: url(../img/hotel04.png) no-repeat center;
+    background-size: 77%;
     margin-bottom: 20px;
 }
 .korea, .oversee{
@@ -391,20 +399,6 @@ body{
     width: 57px;
     padding-top: 6px;
     height: 20px;
-}
-.oversee_jp{
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    bottom: 20px;
-    right: 21px;
-    font-size: 11px;
-    font-weight: 900;
-    color: white;
-    width: 74px;
-    padding-top: 6px;
-    height: 20px;
-    background-color: rgb(0, 124, 173);
 }
 .korea{
     background-color: rgb(102, 30, 67);
@@ -421,7 +415,13 @@ body{
     font-size: 13px;
     font-weight: 900;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+.notice_box2{
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.6;
+    margin-bottom: 18px;
 }
 
 /*푸터*/
