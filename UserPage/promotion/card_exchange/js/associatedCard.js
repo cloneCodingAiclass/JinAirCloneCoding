@@ -119,5 +119,40 @@ $(function () {
         $('.quickmanu').stop().animate({ 'top': + position + currentPosition + 'px' }, 1000);
     });
 
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'associatedCard1'){
+        $('#container').css({"height":"2700px"});
+        $('.card').css({"display":"block"});
+        $('.dis_card').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_exchange').css({"background-color":"white", "color": "#444"});
+        $('.dis_no').css({"background-color":"white", "color": "#444"});
+        $('.exchange').css({"display":"none"});
+        $('.no_interest').css({"display":"none"});
+    }else if(directId == 'associatedCard2'){
+        $('#container').css({"height":"2100px"});
+        $('.exchange').css({"display":"block"});
+        $('.dis_exchange').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_card').css({"background-color":"white", "color": "#444"});
+        $('.dis_no').css({"background-color":"white", "color": "#444"});
+        $('.card').css({"display":"none"});
+        $('.no_interest').css({"display":"none"});
+    }else if(directId == 'associatedCard3'){
+        $('#container').css({"height":"1700px"});
+        $('.no_interest').css({"display":"block"});
+        $('.dis_no').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_card').css({"background-color":"white", "color": "#444"});
+        $('.dis_exchange').css({"background-color":"white", "color": "#444"});
+        $('.card').css({"display":"none"});
+        $('.exchange').css({"display":"none"});
+    }else{
+        $('#container').css({"height":"2700px"});
+        $('.card').css({"display":"block"});
+        $('.dis_card').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_exchange').css({"background-color":"white", "color": "#444"});
+        $('.dis_no').css({"background-color":"white", "color": "#444"});
+        $('.exchange').css({"display":"none"});
+        $('.no_interest').css({"display":"none"});
+    }
 });
 
