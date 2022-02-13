@@ -915,6 +915,7 @@ body{
     justify-content: space-around;
 }
 
+
 .select_seat_wrap .select_seat .seat p {
     display: inline-block;
     width: 45px;
@@ -925,6 +926,7 @@ body{
 .select_seat_wrap .select_seat .seat_column {
     margin-top: 50px;
 }
+
 
 .select_seat_wrap .select_seat .seat_column p {
     border: none;
@@ -981,6 +983,9 @@ body{
     top: 25px;
 }
 
+.select_seat_wrap2 .select_seat .seat_column {
+    margin-bottom: 20px;
+}
 /*좌석 선택 랩 끝*/
 
 /*따라다니는 지도*/
