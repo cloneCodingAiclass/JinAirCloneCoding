@@ -121,6 +121,8 @@ $(function () {
     $(".service_content_wrap1").css("display", "blcok");
     $(".service_content_wrap2").css("display", "none");    
     $(".service_content_wrap3").css("display", "none");
+    $("service_content_wrap3 section1").css("background", "")
+    $("service_content_wrap3 section1")
 
     $(".service_menu .menu1").on("click", function() {
         $(".service_content_wrap1").css("display", "block");
@@ -472,7 +474,7 @@ $(function () {
             $("#header").css("position", "absolute");
         } else {
             $(".fix_trip_info").css("position", "absolute");
-            $(".fix_trip_info").css("top", "80px");
+            $(".fix_trip_info").css("top", "0px");
             $("#header").css("position", "fixed");
         }
     })

@@ -1154,6 +1154,11 @@ body{
     display: block;
 }
 
+.service_content_wrap3 .service_title1 .section1 {
+    background-color: #661e43 !important;
+    color: #fff !important;
+}
+
 .service_content_wrap3 .service_title1 .section2 {
     background-color: #661e43;
     color: #fff;
