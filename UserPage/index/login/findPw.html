@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아이디/비밀번호 찾기 | 진에어</title>
-    <link rel="stylesheet" href="../css/resultId.css">
+    <link rel="stylesheet" href="../css/findIdPw.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
 </head>
@@ -179,21 +179,28 @@
                     <p>아이디/비밀번호 찾기</p>
                 </div>
                 <div class="result_main">
-                    <p>입력하신 정보와 일치하는<br>아이디 정보는 다음과 같습니다.</p>
+                    <p>회원님의 임시 비밀번호를<br>등록된 이메일 주소로 발송하였습니다.</p>
+                    <p class="subtext">개인정보 보호를 위해 로그인 후 새로운 비밀번호로 변경하여 주시기 바랍니다.</p>
+                </div>
+                <div>
                     <table>
-                        <tr>
+                        <tr class="bb">
                             <th>이름</th>
                             <td>라승*</td>
                         </tr>
-                        <tr>
+                        <tr class="bb">
                             <th>아이디</th>
                             <td>SEUNGHYUN**</td>
+                        </tr>
+                        <tr>
+                            <th>E-Mail</th>
+                            <td>xx***@daum.net</td>
                         </tr>
                     </table>
                 </div>
                 <div class="btn">
-                    <input type="button" class="btn_confirm" value="로그인" onclick="location.href='login.html'">
-                    <input type="button" class="btn_cancel" value="메인" onclick="location.href='../../../index.html'">
+                    <input type="button" value="로그인" onclick="location.href='login.html'">
+                    <input type="button" value="메인" onclick="location.href='../../../index.html'">
                 </div>
             </div>
         </div>

@@ -77,7 +77,6 @@ body{
     position: relative;
     left: 0;
     top: 0;
-    z-index: 100;
 }
 #header .header_sub{
     border-bottom: 1px solid rgba(128, 128, 128, 0.190);
@@ -567,7 +566,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.email_modal > .modal_title{
+.modal_title{
     width: 645px;
     height: 70px;
     background-color: #661E43;
@@ -575,48 +574,48 @@ body{
     display: flex;
     align-items: center;
 }
-.email_modal > .modal_title p{
+.modal_title p{
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
 }
-.email_modal > .modal_main{
+.modal_main_id{
     padding: 30px;
     background-color: white;
     height: 450px;
 }
-.email_modal > .modal_main table{
+.modal_main_id table{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.email_modal > .modal_main table th{
+.modal_main_id table th{
     margin-right: 30px;
     font-size: 0.8rem;
     padding-right: 15px;
     line-height: 25px;
     text-align: left;
 }
-.email_modal > .modal_main p{
+.modal_main_id p{
     margin-bottom: 20px;
 }
-.email_modal > .modal_main input[type="text"]{
+.modal_main_id input[type="text"]{
     border: 1px solid #EDEDED;
     background-color: #F7F7F7;
     width: 230px;
     height: 50px;
     text-indent: 20px;
 }
-.email_modal > .modal_main input[class="modal_input"]{
+.modal_main_id input[class="modal_input"]{
     width: 465px;
     margin-top: 20px;
 }
-.email_modal > .modal_main .btn{
+.modal_main_id .btn{
     margin: 20px;
     text-align: center;
 }
-.email_modal > .modal_main .btn input[type="submit"]{
+.modal_main_id .btn input[type="submit"]{
     width: 150px;
     height: 50px;
     background-color:#BDD600;
@@ -625,7 +624,65 @@ body{
     font-weight: 700;
     cursor: pointer;
 }
-.email_modal > .modal_main .btn input[type="button"]{
+.modal_main_id .btn input[type="button"]{
+    width: 150px;
+    height: 50px;
+    background-color:white;
+    border: 2px solid #BDD600;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal_main_pw{
+    padding: 30px;
+    background-color: white;
+    height: 530px;
+}
+.modal_main_pw table{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.modal_main_pw table th{
+    margin-right: 30px;
+    font-size: 0.8rem;
+    padding-right: 15px;
+    line-height: 25px;
+    text-align: left;
+}
+.idtextbox > input[type="text"]{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.modal_main_pw p{
+    margin-bottom: 20px;
+}
+.modal_main_pw input[type="text"]{
+    border: 1px solid #EDEDED;
+    background-color: #F7F7F7;
+    width: 230px;
+    height: 50px;
+    text-indent: 20px;
+}
+.modal_main_pw input[class="modal_input"]{
+    width: 465px;
+    margin-top: 20px;
+}
+.modal_main_pw .btn{
+    margin: 20px;
+    text-align: center;
+}
+.modal_main_pw .btn input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    background-color:#BDD600;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal_main_pw .btn input[type="button"]{
     width: 150px;
     height: 50px;
     background-color:white;
@@ -659,10 +716,10 @@ body{
     font-size: 1.1rem;
     font-weight: 700;
 }
-.find_container > .find_radio input[class="ckbox"]{
+.find_container > .find_radio input[type="radio"]{
     display: none;
 }
-.find_container > .find_radio input[class="ckbox"] + label{
+.find_container > .find_radio input[type="radio"] + label{
     display: inline-block;
     margin-right: 40px;
     background: url(../index_img/ico_radio.png) no-repeat 0 0;
@@ -670,7 +727,7 @@ body{
     vertical-align: middle;
     padding-left: 20px !important;
 }
-.find_container > .find_radio input[type=radio].ckbox:checked + label{
+.find_container > .find_radio input[type="radio"].ckbox:checked + label{
 background-position: 0 -18px;
 }
 .find_container > .confirm_box .confirm_email{

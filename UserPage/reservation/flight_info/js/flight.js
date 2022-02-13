@@ -199,5 +199,4 @@ $(function () {
     $('.calscroll').find('a').on('click', function () {
         $('.cal').css({"display":"none"});
     });
-
 });

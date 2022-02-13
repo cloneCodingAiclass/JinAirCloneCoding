@@ -79,22 +79,42 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    
+
     $('.email_modal').hide();
-    $('.confirm_email').on('click', function(){
+    $("input:radio[name='find']").click(function(){
+        let check = $("input:radio[name='find']:checked").val();
+
+        if(check == '아이디 찾기'){
+            $('.modal_main_id').css('display', 'block');
+            $('.modal_main_pw').css('display', 'none');
+        }else if(check == '비밀번호 찾기'){
+            $('.modal_main_id').css('display', 'none');
+            $('.modal_main_pw').css('display', 'block');
+        }
+    });
+    
+    $('.confirm_email').click(function(){
         $('.email_modal').fadeIn(200);
         $('body').css('overflow', 'hidden');
+        
+        $('.btn_cancel').click(function(){
+            $('.email_modal').fadeOut(200);
+            $('body').css('overflow', '');
+        })
     });
 
-    $('.btn_cancel').on('click', function(e){
-        $('.email_modal').fadeOut(200);
-        $('body').css('overflow', '');
-        e.stopPropagation();
-    });
-
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'findid'){
+        $("input:radio[name='find']:radio[value='아이디 찾기']").prop('checked', true);
+        $('.modal_main_id').css('display', 'block');
+        $('.modal_main_pw').css('display', 'none');
+    }else if(directId == 'findpw'){
+        $("input:radio[name='find']:radio[value='비밀번호 찾기']").prop('checked', true);
+        $('.modal_main_id').css('display', 'none');
+        $('.modal_main_pw').css('display', 'block');
+    }else{
+        $('.modal_main_id').css('display', 'block');
+        $('.modal_main_pw').css('display', 'none');
+    }
 });
-
-function hidePopupLayer(){
-    $('.confirm_modal1', parent.document).fadeOut(200);
-    $('body', parent.document).css('overflow', '');
-}
