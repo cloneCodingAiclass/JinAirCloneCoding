@@ -89,7 +89,7 @@ $(function () {
         $('.quick_menu > ul > li').click(function(e){
             $(this).addClass('check');
             $('.quick_menu > ul > li').not(this).removeClass('check');
-            $('.quick_menu > ul > li').not(this).fint('a').css('color', '');
+            $('.quick_menu > ul > li').not(this).find('a').css('color', '');
         });
     });
     $('.faq1').click(function(){
@@ -118,6 +118,55 @@ $(function () {
     });
 
     
+    
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'fareRule1'){
+        $('.faq1').addClass('check');
+        $('.faq2').removeClass('check');
+        $('.faq3').removeClass('check');
+        $('.faq4').removeClass('check');
+        $('#fareRules1').css('display', 'block');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'none');
+    }else if(directId == 'fareRule2'){
+        $('.faq2').addClass('check');
+        $('.faq1').removeClass('check');
+        $('.faq3').removeClass('check');
+        $('.faq4').removeClass('check');
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'block');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'none');
+    }else if(directId == 'fareRule3'){
+        $('.faq3').addClass('check');
+        $('.faq2').removeClass('check');
+        $('.faq1').removeClass('check');
+        $('.faq4').removeClass('check');
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'block');
+        $('#fareRules4').css('display', 'none');
+    }else if(directId == 'fareRule4'){
+        $('.faq4').addClass('check');
+        $('.faq2').removeClass('check');
+        $('.faq3').removeClass('check');
+        $('.faq1').removeClass('check');
+        $('#fareRules1').css('display', 'none');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'block');
+    }else{
+        $('.faq1').addClass('check');
+        $('.faq2').removeClass('check');
+        $('.faq3').removeClass('check');
+        $('.faq4').removeClass('check');
+        $('#fareRules1').css('display', 'block');
+        $('#fareRules2').css('display', 'none');
+        $('#fareRules3').css('display', 'none');
+        $('#fareRules4').css('display', 'none');
+    }
 });
 
 function showFaq(obj){

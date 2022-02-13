@@ -199,4 +199,46 @@ $(function () {
     $('.calscroll').find('a').on('click', function () {
         $('.cal').css({"display":"none"});
     });
+
+    
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'flightCont1'){
+        $('#container').css({"height":"1100px"});
+        $('.schedule').css({"display":"block"});
+        $('.dis_schedule').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_departure').css({"background-color":"white", "color": "#444"});
+        $('.dis_route').css({"background-color":"white", "color": "#444"});
+        $('.departure').css({"display":"none"});
+        $('.route').css({"display":"none"});
+        $('.de_result_wrap').css({"display":"none"});
+    }else if(directId == 'flightCont2'){
+        $('#container').css({"height":"1100px"});
+        $('.departure').css({"display":"block"});
+        $('.dis_departure').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_schedule').css({"background-color":"white", "color": "#444"});
+        $('.dis_route').css({"background-color":"white", "color": "#444"});
+        $('.schedule').css({"display":"none"});
+        $('.route').css({"display":"none"});
+        $('.result_wrapper').css({"display":"none"});
+    }else if(directId == 'flightCont3'){
+        $('#container').css({"height":"1500px"});
+        $('.route').css({"display":"block"});
+        $('.dis_route').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_schedule').css({"background-color":"white", "color": "#444"});
+        $('.dis_departure').css({"background-color":"white", "color": "#444"});
+        $('.schedule').css({"display":"none"});
+        $('.departure').css({"display":"none"});
+        $('.result_wrapper').css({"display":"none"});
+        $('.de_result_wrap').css({"display":"none"});
+    }else{
+        $('#container').css({"height":"1100px"});
+        $('.schedule').css({"display":"block"});
+        $('.dis_schedule').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_departure').css({"background-color":"white", "color": "#444"});
+        $('.dis_route').css({"background-color":"white", "color": "#444"});
+        $('.departure').css({"display":"none"});
+        $('.route').css({"display":"none"});
+        $('.de_result_wrap').css({"display":"none"});
+    }
 });
