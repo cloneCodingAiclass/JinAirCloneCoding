@@ -2,7 +2,7 @@
 .quickmanu{
     display: block;
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     top: 15%;
     right: 8px;
     width: 110px;
