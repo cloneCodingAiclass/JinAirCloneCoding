@@ -2,7 +2,7 @@
 .quickmanu{
     display: block;
     position: fixed;
-    z-index: 99;
+    z-index: 98;
     top: 15%;
     right: 8px;
     width: 110px;
@@ -75,4 +75,17 @@
     font-size: 14px;
     font-weight: bolder;
     color: #fff;
+}
+
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
