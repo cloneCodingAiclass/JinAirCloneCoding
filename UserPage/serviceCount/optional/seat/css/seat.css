@@ -984,6 +984,7 @@ table.B737_900price tr:nth-child(1){
 .modal {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
     left: 0;
     right: 0;
     top: 0;

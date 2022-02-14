@@ -829,6 +829,7 @@ p.jini_store_sub{
 .modal {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
     left: 0;
     right: 0;
     top: 0;

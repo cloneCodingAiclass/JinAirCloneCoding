@@ -82,6 +82,7 @@ $(function () {
     $(".modal").on('click', function (e) {
         e.stopPropagation();
         $('.modal').fadeOut(200);
+        $('.reservation').slideUp(50);
         $('.service').slideUp(50);
         $('.benefit').slideUp(50);
         $('.point').slideUp(50);
@@ -89,6 +90,7 @@ $(function () {
         $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
 
+    
 });
 
 
