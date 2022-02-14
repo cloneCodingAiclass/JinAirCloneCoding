@@ -921,12 +921,13 @@ iframe{
 }
 .x_box{
     z-index: 9999;
-    position: absolute;
-    top: 27px;
-    right: 330px;
+    position: relative;
+    bottom: 418px;
+    left: 1210px;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: #661e43;
 }
 .x_box img{
     width: 30px;
@@ -948,8 +949,8 @@ iframe{
 }
 .caltop p{
     display: inline-block;
-    font-size: 28px;
-    font-weight: 900;
+    font-size: 46px;
+    font-weight: 600 !important;
     margin-top: 30px;
 }
 .caltop p.cal_left, .caltop p.cal_right{
@@ -968,18 +969,25 @@ iframe{
     background-position: 95% 10%;
 }
 .calwrapper > table{
+    padding-top: 40px;
     text-align: center;
-    width: 1160px;
-    height: 40px;
-    border-bottom: 1px solid #ccc;
+    width: 1179px;
+    height: 60px;
+    box-shadow:  0px 2px 3px rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 600;
+}
+.calwrapper > table tr td:nth-child(1){
+    color: rgb(218, 0, 0);
 }
 .calinner{
     width: 100%;
     height: 781px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(204, 204, 204, 0.3);
     overflow: auto;
 }
 .calscroll{
+    height: 760px;
     overflow: auto;
 }
 .calscroll > table{
@@ -988,18 +996,22 @@ iframe{
     width: 1160px;
 }
 .calscroll > table tr{
-    height: 120px;
+    height: 110px;
 }
 .calscroll > table tr td{
     width: 165px;
 }
+.calscroll > table tr td:nth-child(1) p{
+    color: rgb(218, 0, 0);
+}
 .calscroll > table p{
-    width: 161px;
-    height: 120px;
-    border: 1px solid rgba(128, 128, 128, 0.3);
+    width: 152px;
+    height: 100px;
+    border: 1px solid rgba(128, 128, 128, 0.1);
     font-size: 36px;
-    font-weight: 600;
-    padding-top: 40px;
+    font-weight: 500 !important;
+    padding-top: 30px;
+    cursor: pointer;
 }
 .calscroll > table p.year_month{
     border: none;
