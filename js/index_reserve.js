@@ -1,8 +1,6 @@
 // trip-layer
 $(() => {
     $(".trip_layerbtn").on("click", function (e) {
-        
-
         e.stopPropagation();
         $(".trip_layerbtn").addClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(145, 0, 70)" });
@@ -10,8 +8,7 @@ $(() => {
         $(".trip_up_img").css({ "display": "inline-block" });
         $(".trip_pop_layer").slideDown("fast");
 
-        // 사람 수 선택 닫기
-        
+            // 사람 수 선택 닫기
         e.stopPropagation();
         $(".person_layerbtn").removeClass('close');
         $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
@@ -77,7 +74,7 @@ $(() => {
         $(".reserve_oneway").css({ "display": "none" });
         $(".reserve_multi").css({ "display": "none" });
 
-
+        
         // 예약 관련 레이어 닫기
         e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
@@ -204,15 +201,6 @@ $(() => {
         $(".person_up_img").css({ "display": "inline-block" });
         $(".person_pop_layer").slideDown("fast");
 
-        
-        $(".person_layerbtn").on("click", function (e) {
-            e.stopPropagation();
-            $(".person_layerbtn").removeClass('close');
-            $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-            $(".person_down_img").css({ "display": "inline-block" });
-            $(".person_up_img").css({ "display": "none" });
-            $('.person_pop_layer').slideUp(50);
-        })
         // 여행 타입 레이어 닫기
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
@@ -249,44 +237,44 @@ $(() => {
         $('.arrive_layer2').slideUp(50);
     })
 
-    // 완료버튼
-    $(".submit_btn > button").on('click', function (e) {
-        e.stopPropagation();
-        $(".person_layerbtn").removeClass('close');
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
-        $('.person_pop_layer').slideUp(50);
+    // // 완료버튼
+    // $(".submit_btn > button").on('click', function (e) {
+    //     e.stopPropagation();
+    //     $(".person_layerbtn").removeClass('close');
+    //     $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+    //     $(".person_down_img").css({ "display": "inline-block" });
+    //     $(".person_up_img").css({ "display": "none" });
+    //     $('.person_pop_layer').slideUp(50);
 
-        // 예약 관련 레이어 닫기
-        e.stopPropagation();
-        $(".go_layerbtn").removeClass('close');
-        $(".go_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img").css({ "display": "inline-block" });
-        $(".go_up_img").css({ "display": "none" });
-        $('.go_layer').slideUp(50);
+    //     // 예약 관련 레이어 닫기
+    //     e.stopPropagation();
+    //     $(".go_layerbtn").removeClass('close');
+    //     $(".go_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+    //     $(".go_down_img").css({ "display": "inline-block" });
+    //     $(".go_up_img").css({ "display": "none" });
+    //     $('.go_layer').slideUp(50);
 
-        e.stopPropagation();
-        $(".go_layerbtn2").removeClass('close');
-        $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".go_down_img2").css({ "display": "inline-block" });
-        $(".go_up_img2").css({ "display": "none" });
-        $('.go_layer2').slideUp(50);
+    //     e.stopPropagation();
+    //     $(".go_layerbtn2").removeClass('close');
+    //     $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+    //     $(".go_down_img2").css({ "display": "inline-block" });
+    //     $(".go_up_img2").css({ "display": "none" });
+    //     $('.go_layer2').slideUp(50);
 
-        e.stopPropagation();
-        $(".arrive_layerbtn").removeClass('close');
-        $(".arrive_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img").css({ "display": "inline-block" });
-        $(".arrive_up_img").css({ "display": "none" });
-        $('.arrive_layer').slideUp(50);
+    //     e.stopPropagation();
+    //     $(".arrive_layerbtn").removeClass('close');
+    //     $(".arrive_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+    //     $(".arrive_down_img").css({ "display": "inline-block" });
+    //     $(".arrive_up_img").css({ "display": "none" });
+    //     $('.arrive_layer').slideUp(50);
 
-        e.stopPropagation();
-        $(".arrive_layerbtn2").removeClass('close');
-        $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
-        $(".arrive_down_img2").css({ "display": "inline-block" });
-        $(".arrive_up_img2").css({ "display": "none" });
-        $('.arrive_layer2').slideUp(50);
-    })
+    //     e.stopPropagation();
+    //     $(".arrive_layerbtn2").removeClass('close');
+    //     $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+    //     $(".arrive_down_img2").css({ "display": "inline-block" });
+    //     $(".arrive_up_img2").css({ "display": "none" });
+    //     $('.arrive_layer2').slideUp(50);
+    // })
 })
 
 // go-layer
@@ -537,8 +525,6 @@ function fnSetPaxCountDown(strPaxType,obj) {
 			--iAdultCount;
 			if (iAdultCount >= 0) {
 				--iPaxCount;
-                alert('1명 이상 인원을 선택해주세요.');
-                iAdultCount = 1;
 			}
 
 			if (iInfantCount > iAdultCount) {
@@ -572,10 +558,6 @@ function fnSetPaxCountDown(strPaxType,obj) {
 			$("strong[name=infantPaxCnt]").text(iInfantCount);
 			break;
 	}
-    
-    console.log('성인 : ' + iAdultCount);
-    console.log('유아 : ' + iChildCount);
-    console.log('소아 : ' + iInfantCount);
 }
 
 function fnSetPaxCountUp(strPaxType,obj) {
@@ -608,11 +590,6 @@ function fnSetPaxCountUp(strPaxType,obj) {
 			$("strong[name=infantPaxCnt]").text(iInfantCount);
 			break;
 	}
-    
-    console.log('성인 : ' + iAdultCount);
-    console.log('유아 : ' + iChildCount);
-    console.log('소아 : ' + iInfantCount);
-    
 
 }
 
@@ -623,14 +600,16 @@ function submit(){
     iInfantCount = parseInt($('.person_pop_layer').find('strong[name=infantPaxCnt]').text())
     
     if(iAdultCount > 0 && iChildCount > 0 && iInfantCount >0){
-        $("strong[name=person_num]").text('성인 '+iAdultCount+'유아 '+iChildCount+'소아 '+iInfantCount);
+        $("strong[name=person_num]").text('성인 '+iAdultCount+' 유아 '+iChildCount+' 소아 '+iInfantCount);
     }else if(iAdultCount > 0 && iChildCount > 0){
-        $("strong[name=person_num]").text('성인 '+iAdultCount+'유아 '+iChildCount);
+        $("strong[name=person_num]").text('성인 '+iAdultCount+' 유아 '+iChildCount);
     }else if(iAdultCount > 0 && iInfantCount >0){
-        $("strong[name=person_num]").text('성인 '+iAdultCount+'소아 '+iInfantCount);
+        $("strong[name=person_num]").text('성인 '+iAdultCount+' 소아 '+iInfantCount);
     }else if(iAdultCount > 0){
         $("strong[name=person_num]").text('성인 '+iAdultCount);
     }else if(iChildCount > 0){
         $("strong[name=person_num]").text('유아 '+iChildCount);
     }
+
+    $('.person_pop_layer').slideUp(50);
 }
