@@ -320,23 +320,7 @@ $(function () {
     /*스크롤시 따라다니는 영역 끝*/
 
 
-    $('.edit').click(function(){
-        $('.pwcheck_modal').fadeIn(200);
-        $('body').css('overflow', 'hidden');
 
-        $('.btn_cancel').click(function(e){
-            $('.pwcheck_modal').fadeOut(200);  
-            $('body').css('overflow', '');        
-            e.stopPropagation();  
-        });
-    });
-    $(".service_title2 section1").click(function() {
-        $("#modal_free_wrap").fadeIn(200);
-
-        $(".modal_free_wrap").click(function() {
-            $("#modal_free_wrap").fadeOut(200);
-        })
-    })
 
     /*무료 수하물/기내식 안내*/
     $(".modal_content1").css("display", "block");
@@ -537,3 +521,35 @@ $(function () {
 $(() => {
     document.getElementById('end_date').valueAsDate = new Date('2022', '02', '20');
 });
+
+
+// $('.edit').click(function(){
+//     $('.pwcheck_modal').fadeIn(200);
+//     $('body').css('overflow', 'hidden');
+
+//     $('.btn_cancel').click(function(e){
+//         $('.pwcheck_modal').fadeOut(200);  
+//         $('body').css('overflow', '');        
+//         e.stopPropagation();  
+//     });
+// });
+
+// $(()=> {
+//     $('#modal_iscancel').hide();
+//     $(".cancbutt").on('click', () => {
+//         $("#modal_iscancel").fadeIn();
+//     })
+//     $(".uncomplete").on('click', () => {
+//         $("#modal_iscancel").fadeOut();
+//     })
+// })
+
+$(()=> {
+    $('#modal_free_wrap').hide();
+    $(".service_title2 .section1").on('click', () => {
+        $("##modal_free_wrap").fadeIn();
+    })
+    $(".modal_free_wrap .close").on('click', () => {
+        $("##modal_free_wrap").fadeOut();
+    })
+})

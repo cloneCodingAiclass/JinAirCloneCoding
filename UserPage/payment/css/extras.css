@@ -1664,24 +1664,26 @@ body{
 /*무료 수하물/기내식 안내*/
 #modal_free_wrap {
     position: absolute;
-    display: none;
-    top: 100px;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 800;
-    background-color: rgba(168, 168, 168, 0.5);
 }
 
 .modal_free_wrap {
-    position: relative;
     width: 650px;
-    height: 700px;
-    margin: 0 auto;
+    height: 90%;
+    margin: 0 auto 30px;
     background-color: #fff;
     z-index: 800;
 }
 
 .modal_free_wrap .modal_title {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1694,9 +1696,15 @@ body{
     font-weight: 600;
 }
 
+.modal_free_wrap .modal_title .close {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
 .modal_free_wrap .modal_content_wrap {
     width: 100%;
-    height: 600px;
+    height: 90%;
     overflow: scroll;
     overflow-x: hidden;
     padding: 20px;
@@ -1763,9 +1771,6 @@ body{
     border-bottom: 1px solid rgba(168, 168, 168, 0.3);
 }
 
-.modal_free_wrap .modal_content_wrap .modal_content1 table th.thick {
-
-}
 
 .modal_free_wrap .modal_content_wrap .modal_content1 table th.tit2 {
     border-top: none;
@@ -1838,7 +1843,12 @@ body{
     height: 100px;
     padding: 20px 10px;
     line-height: 20px;
-    border: 1px solid rgba(168, 168, 168, 0.3);
+    border-top: 1px solid rgba(168, 168, 168, 0.3);
+    border-right: 1px solid rgba(168, 168, 168, 0.3);;
+}
+
+.modal_free_wrap .modal_content_wrap .modal_content2 table td:last-child {
+    border-right: none;
 }
 
 .modal_free_wrap .modal_content_wrap .modal_content2 ul {
@@ -1877,6 +1887,26 @@ body{
     display: none;
 }
 /*무료 수하물/기내식 안내 끝*/
+
+/*비상구 좌석 지정 시 유의 사항 안내*/
+#modal_notice_wrap {
+    position: absolute;
+    display: none;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    background-color: rgba(168, 168, 168, 0.5);
+}
+
+#modal_notice_wrap .modal_notice_wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 800px;
+    background-color: #fff;
+}
+/*비상구 좌석 지정 시 유의 사항 안내 끝*/
 /*부가서비스 신청 끝*/
 
 
@@ -1900,7 +1930,7 @@ body{
     margin: 0 auto;
     height: 100px;
     padding: 20px;
-    background-color: rgba(248, 248, 248, 0.5);
+    background-color: rgba(248, 248, 248, 0.7);
     z-index: 500;
 }
 
