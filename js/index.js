@@ -89,6 +89,19 @@ $(function () {
         $('.optional').slideUp(50);
         $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
+    
+
+    $('.bonus_modal').hide();
+    $('.bonus').click(function(){
+        $('.bonus_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+
+        $('.btn_cancel').click(function(e){
+            $('.bonus_modal').fadeOut(200);  
+            $('body').css('overflow', '');        
+            e.stopPropagation();  
+        });
+    });
 
     
 });

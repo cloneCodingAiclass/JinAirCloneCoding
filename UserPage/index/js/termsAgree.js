@@ -131,37 +131,37 @@ function hidePopupLayer(){
     $('.confirm_modal3', parent.document).fadeOut(200);
     $('body', parent.document).css('overflow', '');
 }
-function phonecheck(){
-        let term1 = $('#term01').is(':checked');
-        let term2 = $('#term02').is(':checked');
-        let term3 = $('#term03').is(':checked');
-        let form = $('form');
 
+function phonecheck(){
+    let term1 = $('#term01').is(':checked');
+    let term2 = $('#term02').is(':checked');
+    let term3 = $('#term03').is(':checked');
+    
         if(term1 && term2 && term3){
             ischeck.value = 'y' ;
                 //api로 넘기기
-            form.prop('action', './joinForm.html');
+            location.href="./joinForm.html";
         }else{
-            ischeck.value = 'n' ;
             $('.false_modal').fadeIn(200);
             $('.btn_cancel').click(function(){
                 $('.false_modal').fadeOut(200);
+                $('body').css('overflow', '');
             })
         }
 }
 function ipincheck(){
-        let term1 = $('#term01').is(':checked');
-        let term2 = $('#term02').is(':checked');
-        let term3 = $('#term03').is(':checked');
-        let form = $('form');
+    let term1 = $('#term01').is(':checked');
+    let term2 = $('#term02').is(':checked');
+    let term3 = $('#term03').is(':checked');
 
         if(term1 && term2 && term3){
             ischeck.value = 'y' ;
                 //api로 넘기기
-            form.prop('action', './joinForm.html');
+            location.href="./joinForm.html";
         }else{
             ischeck.value = 'n' ;
             $('.false_modal').fadeIn(200);
+            $('body').css('overflow', 'hidden');
             $('.btn_cancel').click(function(){
                 $('.false_modal').fadeOut(200);
             })

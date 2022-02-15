@@ -682,18 +682,16 @@ body{
     font-weight: 500;
     margin-bottom: 10px;
 }
-.termsAgree_container > 
-form > .termsAgree_main{
+.termsAgree_container > .termsAgree_main{
     margin: 20px 0;
 }
-.termsAgree_container > 
-form > .termsAgree_main label{
+.termsAgree_container >  .termsAgree_main label{
     padding-left: 30px;
     font-size: 1rem;
     position: relative; 
     display: inline-block; 
 }
-form .joinAgree li {
+.joinAgree li {
     position: relative;
     padding: 30px 150px 22px 20px;
     margin-top: 10px;
@@ -703,16 +701,16 @@ form .joinAgree li {
     display: flex;
     align-items: center;
 }
-form .joinAgree li span{
+.joinAgree li span{
     font-weight: 700;
     color: #661E43;
     margin-left: 10px;
     margin-right: 5px;
 }
-form .termsAgree_main input[type="checkbox"]{
+.termsAgree_main input[type="checkbox"]{
     display: none;
 }
-form .termsAgree_main input[type="checkbox"] + label{
+.termsAgree_main input[type="checkbox"] + label{
     display: inline-block;
     height: 20px;
     background: url(../index_img/ico_check.png) no-repeat 0 0;
@@ -720,7 +718,7 @@ form .termsAgree_main input[type="checkbox"] + label{
     display: flex;
     align-items: center;
 }
-form .termsAgree_main input[type="checkbox"]:checked + label{
+.termsAgree_main input[type="checkbox"]:checked + label{
     background-position: 0 -20px;
 }
 .joinAgree li .btnTypeB {
@@ -732,18 +730,18 @@ form .termsAgree_main input[type="checkbox"]:checked + label{
     background-color: white;
 }
 
-form .confirm_box .confirm_main{
+.confirm_box .confirm_main{
     margin-top: 20px;
     text-align: center;
 }
-form .confirm_box .confirm_main .confirm_phone{
+.confirm_box .confirm_main .confirm_phone{
     height: 180px;
     margin-bottom: 20px;
     border: 1px solid #EDEDED;
     background-color: #F7F7F7;
 }
 
-form .confirm_box input[class="phone"]{
+.confirm_box input[class="phone"]{
     display: flex;
     border: 0;
     flex-direction: column;
@@ -775,7 +773,7 @@ form .confirm_box input[class="phone"]{
     align-items: center;
     margin-bottom: 10px;
 }
-form .confirm_box input[class="ipin"]{
+.confirm_box input[class="ipin"]{
     display: flex;
     border: 0;
     flex-direction: column;
@@ -805,8 +803,7 @@ form .confirm_box input[class="ipin"]{
     font-weight: 600;
     font-size: 0.8rem;
 }
-.termsAgree_container > 
-form .btn input[type="button"]{
+.termsAgree_container > .btn input[type="button"]{
     width: 200px;
     height: 50px;
     background-color:#BDD600;
