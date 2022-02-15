@@ -83,7 +83,6 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-
 });
 
 
