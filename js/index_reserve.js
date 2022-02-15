@@ -1,6 +1,8 @@
 // trip-layer
 $(() => {
     $(".trip_layerbtn").on("click", function (e) {
+        
+
         e.stopPropagation();
         $(".trip_layerbtn").addClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(145, 0, 70)" });
@@ -9,6 +11,7 @@ $(() => {
         $(".trip_pop_layer").slideDown("fast");
 
         // 사람 수 선택 닫기
+        
         e.stopPropagation();
         $(".person_layerbtn").removeClass('close');
         $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
@@ -59,6 +62,7 @@ $(() => {
         $(".arrive_down_img2").css({ "display": "inline-block" });
         $(".arrive_up_img2").css({ "display": "none" });
         $('.arrive_layer2').slideUp(50);
+
     })
     $(".trip_type1").on("click", function (e) {
         e.stopPropagation();
@@ -200,6 +204,15 @@ $(() => {
         $(".person_up_img").css({ "display": "inline-block" });
         $(".person_pop_layer").slideDown("fast");
 
+        
+        $(".person_layerbtn").on("click", function (e) {
+            e.stopPropagation();
+            $(".person_layerbtn").removeClass('close');
+            $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+            $(".person_down_img").css({ "display": "inline-block" });
+            $(".person_up_img").css({ "display": "none" });
+            $('.person_pop_layer').slideUp(50);
+        })
         // 여행 타입 레이어 닫기
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
@@ -469,20 +482,13 @@ $(() => {
 
 // 화면 클릭
 $(() => {
-    $("#wrap").on('click', function (e) {
+    $("body").on('click', function (e) {
         e.stopPropagation();
         $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
-
-        e.stopPropagation();
-        $(".person_layerbtn").removeClass('close');
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
-        $('.person_pop_layer').slideUp(50);
 
         e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
@@ -523,12 +529,16 @@ function fnSetPaxCountDown(strPaxType,obj) {
 		iChildCount = parseInt($(btnParent).find('strong[name=childPaxCnt]').text()),
 		iInfantCount = parseInt($(btnParent).find('strong[name=infantPaxCnt]').text()),
 		iPaxCount = iAdultCount + iChildCount;
-
+        
+        iAdultCount = 1;
+        
 	switch (strPaxType) {
 		case "ADULT":
-			iAdultCount--;
+			--iAdultCount;
 			if (iAdultCount >= 0) {
-				iPaxCount--;
+				--iPaxCount;
+                alert('1명 이상 인원을 선택해주세요.');
+                iAdultCount = 1;
 			}
 
 			if (iInfantCount > iAdultCount) {
@@ -538,45 +548,34 @@ function fnSetPaxCountDown(strPaxType,obj) {
 			if (iAdultCount <= 0) {
 				iAdultCount = 0;
 				iInfantCount = 0;
-				fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntDown]', false);
 			}
-			if (iInfantCount == iAdultCount) {
-				fnSetEnableButtonUp('a[name=infantPaxCntUp]', false);
-			}
-
 			$("strong[name=adultPaxCnt]").text(iAdultCount);
 			$("strong[name=infantPaxCnt]").text(iInfantCount);
 			break;
 		case "CHILD":
-			iChildCount--;
+			--iChildCount;
 			if (iChildCount >= 0) {
-				iPaxCount--;
+				--iPaxCount;
 			}
 			if (iChildCount <= 0) {
 				iChildCount = 0;
-				fnSetEnableButtonUp('a[name=childPaxCntDown]', false);
 			}
 
 			$("strong[name=childPaxCnt]").text(iChildCount);
 			break;
 		case "INFANT":
-			iInfantCount--;
+			--iInfantCount;
 			if (iInfantCount <= 0) {
 				iInfantCount = 0;
-				fnSetEnableButtonUp('a[name=infantPaxCntDown]', false);
-			}
-
-			if (iAdultCount > iInfantCount) {
-				fnSetEnableButtonUp('a[name=infantPaxCntUp]', true);
 			}
 
 			$("strong[name=infantPaxCnt]").text(iInfantCount);
 			break;
 	}
-
-	if (iPaxCount < maxPaxCnt) {
-		fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', true);
-	}
+    
+    console.log('성인 : ' + iAdultCount);
+    console.log('유아 : ' + iChildCount);
+    console.log('소아 : ' + iInfantCount);
 }
 
 function fnSetPaxCountUp(strPaxType,obj) {
@@ -584,54 +583,54 @@ function fnSetPaxCountUp(strPaxType,obj) {
 
 	var //
 		iAdultCount = parseInt($(btnParent).find('strong[name=adultPaxCnt]').text()),
-		iChildCount = parseInt($(btnParent).find(
-			'strong[name=childPaxCnt]').text()),
-		iInfantCount = parseInt($(btnParent).find(
-			'strong[name=infantPaxCnt]').text()),
+		iChildCount = parseInt($(btnParent).find('strong[name=childPaxCnt]').text()),
+		iInfantCount = parseInt($(btnParent).find('strong[name=infantPaxCnt]').text()),
 		iPaxCount = iAdultCount + iChildCount;
 
 	// Count 증감
 	switch (strPaxType) {
 		case "ADULT":
-			if (iPaxCount < maxPaxCnt) {
-				iAdultCount++;
-				iPaxCount++;
+            ++iAdultCount;
+            ++iPaxCount;
 				$("strong[name=adultPaxCnt]").text(iAdultCount);
-				//fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntDown], a[name=infantPaxCntUp]',true);
-				fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntUp]',true);
-			} else {
-				// 성인,소아 비활성처리
-				fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
-			}
 			break;
 		case "CHILD":
-			if (iPaxCount < maxPaxCnt) {
-				iChildCount++;
-				iPaxCount++;
+            ++iChildCount;
+            ++iPaxCount;
 				$("strong[name=childPaxCnt]").text(iChildCount);
-				fnSetEnableButtonUp('a[name=childPaxCntDown]',true);
-			} else {
-				// 성인,소아 비활성처리
-				fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
-			}
 			break;
 		case "INFANT":
-			iInfantCount++;
-			if (iAdultCount <= iInfantCount) {
-				iInfantCount = iAdultCount;
-				fnSetEnableButtonUp('a[name=infantPaxCntUp]', false);
-			}
-
-			if (iInfantCount > 0) {
-				fnSetEnableButtonUp('a[name=infantPaxCntDown]', true);
-			}
-
+			++iInfantCount;
+            if(iInfantCount > iAdultCount){
+                alert('소아는 성인을 넘을 수 없음')
+                break;
+            }
 			$("strong[name=infantPaxCnt]").text(iInfantCount);
 			break;
 	}
+    
+    console.log('성인 : ' + iAdultCount);
+    console.log('유아 : ' + iChildCount);
+    console.log('소아 : ' + iInfantCount);
+    
 
-	if (iPaxCount == maxPaxCnt) {
-		fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
-	}
+}
 
+function submit(){
+
+    iAdultCount = parseInt($('.person_pop_layer').find('strong[name=adultPaxCnt]').text()),
+    iChildCount = parseInt($('.person_pop_layer').find('strong[name=childPaxCnt]').text()),
+    iInfantCount = parseInt($('.person_pop_layer').find('strong[name=infantPaxCnt]').text())
+    
+    if(iAdultCount > 0 && iChildCount > 0 && iInfantCount >0){
+        $("strong[name=person_num]").text('성인 '+iAdultCount+'유아 '+iChildCount+'소아 '+iInfantCount);
+    }else if(iAdultCount > 0 && iChildCount > 0){
+        $("strong[name=person_num]").text('성인 '+iAdultCount+'유아 '+iChildCount);
+    }else if(iAdultCount > 0 && iInfantCount >0){
+        $("strong[name=person_num]").text('성인 '+iAdultCount+'소아 '+iInfantCount);
+    }else if(iAdultCount > 0){
+        $("strong[name=person_num]").text('성인 '+iAdultCount);
+    }else if(iChildCount > 0){
+        $("strong[name=person_num]").text('유아 '+iChildCount);
+    }
 }

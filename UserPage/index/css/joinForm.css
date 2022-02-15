@@ -712,17 +712,17 @@ body{
     padding-bottom: 0;
 }
 .joinForm_container table tr:last-child th{
-    width: 235px;
+    width: 220px;
 }
 .joinForm_container table th{
     width: 150px;
     text-align: left;
 }
-.joinForm_container table td{
-    margin-left: 40px;
-}
 .joinForm_container table .bor_tn th{
-    width: 280px;
+    width: 250px;
+}
+#emAdr, #ntnltyCd, #residenceIataCountryCode, #bthDt{
+    width: 500px;
 }
 .joinForm_container input[type="text"], [type="password"], select{
     width: 250px;
@@ -737,7 +737,7 @@ body{
     display: flex;
 }
 .joinForm_container .idField input[type="text"]{
-    width: 380px;    
+    width: 360px;    
 }
 .joinForm_container .sizeL{
     display: block;
@@ -782,13 +782,26 @@ body{
     display: flex;
     flex-direction: column;
 }
-.joinForm_container #bthDt, #ntnltyCd, #residenceIataCountryCode, #emAdr{
-    width: 500px;
+.zipcodeField, #sample6_address, #sample6_detailAddress{
+    margin-left: 65px;
 }
-.joinForm_container #pstNo, #adr1, #adr2{
-    width: 380px;
-    margin-bottom: 10px;
+input[id="sample6_extraAddress"]{
+    width: 290px !important;
+    margin-left: 10px;
 }
+input[id="sample6_detailAddress"]{
+    width: 505px !important;
+}
+#sample6_extraAddress, #sample6_address{
+    width: 200px;
+}
+#sample6_postcode, #sample6_address, #sample6_extraAddress{
+    margin-bottom: 20px;
+}
+#emailY{
+    margin-left : 5px;
+}
+
 .btn{
     text-align: center;
     margin: 30px 0;
