@@ -1,6 +1,7 @@
 'use strict';
 
-let ccc = 'n'
+let ccc = 'n';
+let bbb = 'n';
 
 
 $(function () {
@@ -191,22 +192,36 @@ $(function () {
 
 
 
-    // 달력 모달
+    // 왕복 달력 모달
     $('.go_date_select_opt').on('click', function () {
-        if(ccc == 'n'){
+        if(bbb == 'n' || ccc == 'n'){
+            departure();
             $('.cal').css({"display":"none"});
+        }else if(bbb == 'y' && ccc == 'n'){
+            arrive();
         }else{
             $('.cal').css({"display":"flex"});
             $('.whatday').html('가는날');
         }
     })
     $('.come_date_select_opt').on('click', function () {
-        $('.cal').css({"display":"flex"});
-        $('.whatday').html('오는날');
+        if(bbb == 'n' || ccc == 'n'){
+            departure();
+            $('.cal').css({"display":"none"});
+        }else if(bbb == 'y' && ccc == 'n'){
+            arrive();
+        }else{
+            $('.cal').css({"display":"flex"});
+            $('.whatday').html('오는날');
+        }
     })
+
+    // 달력 X 버튼
     $('.x_box').on('click', function () {
         $('.cal').css({"display":"none"});
     })
+
+    // 모달모음 확인 버튼
     $('.btn_cancel').on('click', function () {
         $('.modal_container').fadeOut(200);
     })
@@ -219,26 +234,17 @@ $(function () {
         $('.go_select_opt').html(str);
         $('.go_layer').slideUp(50);
         $('.go_layer1').slideDown(100);
+        bbb = 'y';
     })
     // 도착지 지정
     $('.go_layer1').find('li').on('click', function () {
         let str = '';
         str = $(this).html();
         $('.arrive_select_opt').html(str);
-        ccc='y'
+        ccc='y';
     })
 
-
-
-
-
-
-
-
-
-
-
-    
+    // 탭 메뉴 
     let directId = $(location).attr('search').split('=')[1];
     
     if(directId == 'flightCont1'){
@@ -305,7 +311,17 @@ function comewhatdaydd(str){
 
 function minday(){
     $('.modal_container').fadeIn(200);
+    $('.moditext').html('출발일보다 이전 날짜를 선택할 수 없습니다.');
 }
+function departure(){
+    $('.modal_container').fadeIn(200);
+    $('.moditext').html('출발지 항목을 입력하세요.');
+}
+function arrive(){
+    $('.modal_container').fadeIn(200);
+    $('.moditext').html('도착지 항목을 입력하세요.');
+}
+
 
 function twochoice(){
 $('.cal').css({"display":"none"});
