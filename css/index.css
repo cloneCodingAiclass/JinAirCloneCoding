@@ -1262,8 +1262,29 @@ body {
     }
 }
 
-a:link		{color:#555; text-decoration:none;}
-a:visited	{color:#555; text-decoration:none;}
-a:hover 	{color:#661e43; text-decoration:none;}
-a:focus 	{color:#661e43; text-decoration:none;}
-a:active	{color:#555; text-decoration:none;}
+.infant_modal, .child_modal{
+    width: 328px;
+    height: auto;
+    border: 1px solid #661E43;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.infant_modal p, .child_modal p{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #661E43;
+    display: flex;
+    flex-direction: column;
+}
+.infant_modal ul li, .child_modal ul li{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.infant_modal .des, .child_modal span.des{
+    font-size: 0.8rem;
+    color:#666;
+}

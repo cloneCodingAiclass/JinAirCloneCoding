@@ -610,3 +610,22 @@ function submit(){
     $(".person_up_img").css({ "display": "none" });
     $('.person_pop_layer').slideUp(50);
 }
+
+
+$(function () {
+    $('.infant_modal').hide();
+    $('.baby_info_btn').click(function(){
+        $('.infant_modal').fadeIn(200);
+        $(body).click(function(){
+            $('.infant_modal').fadeOut(200);
+        })
+    });
+
+    $('.child_modal').hide();
+    $('.child_info_btn').click(function(){
+        $('.child_modal').fadeIn(200);
+        $(body).click(function(){
+            $('.child_modal').fadeOut(200);
+        })
+    });
+})
