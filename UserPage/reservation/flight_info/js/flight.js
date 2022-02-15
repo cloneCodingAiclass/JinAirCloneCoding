@@ -1,5 +1,8 @@
 'use strict';
 
+let ccc = 'n'
+
+
 $(function () {
     $('.open1').on('click', function (e) {
         e.stopPropagation();
@@ -186,19 +189,54 @@ $(function () {
         $('.go').css({"display":"none"});
     })
 
+
+
     // 달력 모달
     $('.go_date_select_opt').on('click', function () {
-        $('.cal').css({"display":"flex"});
+        if(ccc == 'n'){
+            $('.cal').css({"display":"none"});
+        }else{
+            $('.cal').css({"display":"flex"});
+            $('.whatday').html('가는날');
+        }
     })
     $('.come_date_select_opt').on('click', function () {
         $('.cal').css({"display":"flex"});
+        $('.whatday').html('오는날');
     })
     $('.x_box').on('click', function () {
         $('.cal').css({"display":"none"});
     })
-    $('.calscroll').find('a').on('click', function () {
-        $('.cal').css({"display":"none"});
-    });
+    $('.btn_cancel').on('click', function () {
+        $('.modal_container').fadeOut(200);
+    })
+
+
+    // 출발지 지정
+    $('.go_layer').find('li').on('click', function () {
+        let str = '';
+        str = $(this).html();
+        $('.go_select_opt').html(str);
+        $('.go_layer').slideUp(50);
+        $('.go_layer1').slideDown(100);
+    })
+    // 도착지 지정
+    $('.go_layer1').find('li').on('click', function () {
+        let str = '';
+        str = $(this).html();
+        $('.arrive_select_opt').html(str);
+        ccc='y'
+    })
+
+
+
+
+
+
+
+
+
+
 
     
     let directId = $(location).attr('search').split('=')[1];
@@ -242,3 +280,33 @@ $(function () {
         $('.de_result_wrap').css({"display":"none"});
     }
 });
+
+
+function comewhatday(){
+    $('.whatday').html('오는날');
+}
+function gowhatday(){
+    $('.whatday').html('가는날');
+}
+
+function gowhatdaydd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.go_date_select_opt').html(`${str1}-${str2}-${str3}`);
+}
+function comewhatdaydd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.come_date_select_opt').html(`${str1}-${str2}-${str3}`);
+}
+
+
+function minday(){
+    $('.modal_container').fadeIn(200);
+}
+
+function twochoice(){
+$('.cal').css({"display":"none"});
+}

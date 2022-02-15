@@ -493,6 +493,9 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
+.go_layer div li{
+    cursor: pointer;
+}
 .go_layer div li a, .go_layer1 div li a{
     font-size: 14px;
     font-weight: 700;
@@ -921,21 +924,23 @@ iframe{
 }
 .x_box{
     z-index: 9999;
-    position: relative;
-    bottom: 418px;
-    left: 1210px;
     cursor: pointer;
     width: 55px;
     height: 55px;
     background-color: #661e43;
+    position: relative;
+    left: 1235px;
+    bottom: 412px;
 }
 .x_box img{
-    width: 30px;
-    height: 30px;
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: auto;
 }
 .calwrapper{
     width: 1180px;
-    height: 95%;
+    height: 880px;
     background-color: #fff;
     border: none;
     text-align: center;
@@ -944,8 +949,6 @@ iframe{
     width: 1180px;
     height: 70px;
     display: block;
-    display: flex;
-    justify-content: space-between;
 }
 .caltop p{
     display: inline-block;
@@ -953,18 +956,18 @@ iframe{
     font-weight: 600 !important;
     margin-top: 30px;
 }
-.caltop p.cal_left, .caltop p.cal_right{
+.caltop p.whatday{
+    position: relative;
+    left: 63px;
+}
+.caltop p.cal_right{
     font-size: 16px;
     cursor: pointer;
     padding: 6px 30px 0;
-} 
-.caltop p.cal_left{
-    background: url(../img/left.png) no-repeat;
-    background-size: 15%;
-    background-position: 5% 10%;
-}
-.caltop p.cal_right{
-    background: url(../img/right.png) no-repeat;
+    position: relative;
+    bottom: 20px;
+    left: 450px;
+    background: url(../img/down.png) no-repeat;
     background-size: 15%;
     background-position: 95% 10%;
 }
@@ -982,55 +985,57 @@ iframe{
 }
 .calinner{
     width: 100%;
-    height: 781px;
+    height: 939px;
     border-bottom: 1px solid rgb(204, 204, 204, 0.3);
-    overflow: auto;
+    overflow: hidden;
 }
 .calscroll{
-    height: 760px;
-    overflow: auto;
+    height: 750px;
+    overflow: hidden;
 }
-.calscroll > table{
-    margin: 0 auto;
-    text-align: center;
-    width: 1160px;
+.calscroll > iframe{
+    height: 100%;
 }
-.calscroll > table tr{
-    height: 110px;
-}
-.calscroll > table tr td{
-    width: 165px;
-}
-.calscroll > table tr td:nth-child(1) p{
-    color: rgb(218, 0, 0);
-}
-.calscroll > table p{
-    width: 152px;
-    height: 100px;
-    border: 1px solid rgba(128, 128, 128, 0.1);
-    font-size: 36px;
-    font-weight: 500 !important;
-    padding-top: 30px;
-    cursor: pointer;
-}
-.calscroll > table p.year_month{
-    border: none;
-    padding-top: 25px;
-}
-.yearrr{
-    display: block;
-    font-size: 16px;
-
-}
-.calscroll > table p.year_month > .monthhh{
-    display: block;
-    font-size: 70px;
-    color: #661e43;
-}
-
-.choice{
-    display: block !important;
-}
-.hide{
+/* 임시 모달 */
+.modal_container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    left: 0; right: 0; top: 0; bottom: 0;
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modal_container > .modals p{
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.modal_container > .modals{
+    width: 290px;
+    height: 180px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    border-radius: 1px;
+    border: 1px solid #BDD600;
+    display: flex;
+    margin: 300px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal_container > .modals form{
+    display: flex;
+    justify-content: center;
+}
+.modal_container > .modals input{
+    font-size: 14px;
+    font-weight: 900;
+    width: 80px;
+    height: 40px;
+    background-color:#BDD600;
+    border: none;
+    margin: 40px 10px 0;
+    cursor: pointer;
 }
