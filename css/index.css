@@ -383,6 +383,9 @@ body {
     background-color: #bdd600;
     color: #fff;
 }
+.person_pop_layer img:hover{
+    object-position: 0 bottom;
+}
 #container #reservation .trip_pop_layer .trip_type1, .trip_pop_layer .trip_type2, .trip_pop_layer .trip_type3{
     font-weight: 700;
 }
