@@ -91,7 +91,6 @@ $(function () {
             $('.quick_faq > ul > li').not(this).removeClass('check');
         });
     });
-
     
 });
 

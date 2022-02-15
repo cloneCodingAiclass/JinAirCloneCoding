@@ -79,11 +79,31 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    $("body").on('click', function (e) {
+    $(".modal").on('click', function (e) {
         e.stopPropagation();
         $('.modal').fadeOut(200);
+        $('.reservation').slideUp(50);
+        $('.service').slideUp(50);
+        $('.benefit').slideUp(50);
+        $('.point').slideUp(50);
+        $('.optional').slideUp(50);
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
+    
 
+    $('.bonus_modal').hide();
+    $('.bonus').click(function(){
+        $('.bonus_modal').fadeIn(200);
+        $('body').css('overflow', 'hidden');
+
+        $('.btn_cancel').click(function(e){
+            $('.bonus_modal').fadeOut(200);  
+            $('body').css('overflow', '');        
+            e.stopPropagation();  
+        });
+    });
+
+    
 });
 
 

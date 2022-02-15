@@ -956,6 +956,7 @@ p.mobile4_notice{
 .modal {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
     left: 0;
     right: 0;
     top: 0;
@@ -968,7 +969,6 @@ p.mobile4_notice{
 .quickmanu{
     display: block;
     position: fixed;
-    z-index: 100;
     top: 15%;
     right: 8px;
     width: 110px;

@@ -79,11 +79,20 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    $("body").on('click', function (e) {
+    $(".modal").on('click', function (e) {
         e.stopPropagation();
         $('.modal').fadeOut(200);
+        $('.reservation').slideUp(50);
+        $('.service').slideUp(50);
+        $('.benefit').slideUp(50);
+        $('.point').slideUp(50);
+        $('.optional').slideUp(50);
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
 
+
+
+    
     $(".dis_family").on('click', function () {//가족
         $("#container").css("height", "2000px");
         $(".discount_commercial, .discount_live_jeju, .discount_addr_jeju, .discount_addr_gunsan").css("display","none");

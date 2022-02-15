@@ -60,6 +60,7 @@ $(function () {
         $('.optional').slideUp(50);
         $("li[class *= 'open']").css({"border-bottom":"none"});
     })
+    
     $('body').on('click', function (e) {
         e.stopPropagation();
         $('.reservation').slideUp(50);
@@ -67,8 +68,29 @@ $(function () {
         $('.benefit').slideUp(50);
         $('.point').slideUp(50);
         $('.optional').slideUp(50);
-        $("li[class *= 'open']").css({"border-bottom":"none"});
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
     })
+
+    $('.modal').hide();
+    $("li[class *= 'open']").on('click', function (e) {
+        e.stopPropagation();
+        $('.modal').fadeIn(200);
+    })
+    $(".nav_all").on('click', function (e) {
+        e.stopPropagation();
+        $('.modal').fadeOut(200);
+    })
+    $(".modal").on('click', function (e) {
+        e.stopPropagation();
+        $('.modal').fadeOut(200);
+        $('.reservation').slideUp(50);
+        $('.service').slideUp(50);
+        $('.benefit').slideUp(50);
+        $('.point').slideUp(50);
+        $('.optional').slideUp(50);
+        $("li[class *= 'open']").css({ "border-bottom": "none" });
+    })
+    
 
 
     $('.bag_save').on('click', function () {
