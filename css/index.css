@@ -465,12 +465,12 @@ body {
 #container #reservation .person_pop_layer li .person_btn a img{
     width: 40px;
     height: 40px;
-    border: 1px solid #000;
     border-radius: 25px;
     background-color: transparent;
     font-size: 35px;
     cursor: pointer;
     vertical-align: top;
+    object-fit: cover;
 }
 #container #reservation .person_pop_layer li .person_btn .adult_minus:hover,
 #container #reservation .person_pop_layer li .person_btn .adult_plus:hover,
@@ -516,6 +516,7 @@ body {
 /* bonus */
 #container #reservation .bonus {
     vertical-align: bottom;
+    width: 200px;
 }
 #container #reservation .bonus img {
     vertical-align: middle;
