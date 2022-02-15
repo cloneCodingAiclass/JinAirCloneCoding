@@ -402,15 +402,12 @@ $(function () {
         $(".select_seat_num").text("");
         $('.seat_sel').css('pointer-events', 'visible');
     });
-    
     $(".select_seat .box1").on("click", function() {
         $(".select_seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
         $(this).toggleClass('background1');
         $("p.select_seat_num span.close").css("visibility", "visible");
     })
-
-
     $(".select_seat .box2").on("click", function() {
         $(".seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
@@ -441,8 +438,6 @@ $(function () {
         $('.seat_sel').not(this).css('pointer-events', 'none');
         $("p.select_seat_num span.close").css("visibility", "visible");
     })
-
-
     /*좌석 선택 불가 끝 */
     
 
