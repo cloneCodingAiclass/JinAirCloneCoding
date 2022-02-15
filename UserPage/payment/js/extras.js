@@ -265,6 +265,7 @@ $(function () {
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
+                $(".seat_info").css("z-index", "20");
             })
         }
 
@@ -274,12 +275,14 @@ $(function () {
                 $(".seat_info").css("position", "fixed");
                 $(".seat_info").css("top", ($(".seat_info_wrap").offset().top)/2);
                 $(".seat_info").css("left", x);
+                $(".seat_info").css("z-index", "20");
             } else if ($(window).scrollTop() > 1895) {
                 $(".move_map").css("position", "absolute");
                 $(".move_map").css("top", "1680px");
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "1680px");
                 $(".seat_info").css("left", "30px");
+                $(".seat_info").css("z-index", "20");
             }
             else {
                 $(".move_map").css("position", "absolute");
@@ -287,6 +290,7 @@ $(function () {
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
+                $(".seat_info").css("z-index", "20");
             }
     })
 
@@ -408,6 +412,54 @@ $(function () {
     })
     /*보험가입 페이지 끝 */
 
+    /*좌석 선택 불가 */
+
+    $("p.select_seat_num span.close").on('click', function() {
+        $(".select_seat_num").text("");
+        $('.seat_sel').css('pointer-events', 'visible');
+    });
+    
+    $(".select_seat .box1").on("click", function() {
+        $(".select_seat_num").text($(this).text());
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(this).toggleClass('background1');
+        $("p.select_seat_num span.close").css("visibility", "visible");
+    })
+
+
+    $(".select_seat .box2").on("click", function() {
+        $(".seat_num").text($(this).text());
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(this).toggleClass('background2');
+        $("p.select_seat_num span.close").css("visibility", "visible")
+    })
+    $(".select_seat .box3").on("click", function() {
+        $(".seat_num").text($(this).text());
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(this).toggleClass('background3');
+        $("p.select_seat_num span.close").css("visibility", "visible");
+    })
+    $(".select_seat .box4").on("click", function() {
+        $(".seat_num").text($(this).text());
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(this).toggleClass('background4');
+        $("p.select_seat_num span.close").css("visibility", "visible");
+    })
+    $(".select_seat .box5").on("click", function() {
+        $(".seat_num").text($(this).text());
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(this).toggleClass('background5');
+        $("p.select_seat_num span.close").css("visibility", "visible");
+    })
+    $(".select_seat .box6").on("click", function() {
+        $(".seat_num").text($(this).text());
+        $(this).toggleClass('background6');
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $("p.select_seat_num span.close").css("visibility", "visible");
+    })
+
+
+    /*좌석 선택 불가 끝 */
     
 
     /*하단 총액 모달창 */
