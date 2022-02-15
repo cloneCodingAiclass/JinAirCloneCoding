@@ -803,6 +803,20 @@ body{
     margin-right: 20px;
     cursor: pointer;
 }
+input[class="btn_agree"]{
+    width: 150px;
+    height: 50px;
+    background-color:#BDD600;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.subaddress{
+    width: 500px;
+}
 .btn input[class="btn_cancel"]{
     width: 150px;
     height: 50px;

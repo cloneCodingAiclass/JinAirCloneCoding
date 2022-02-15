@@ -241,26 +241,24 @@
                                         <strong class="person_num">1</strong>
                                         <span>
                                             <img class="person_down_img" src="./index_img/down.png" alt="드롭다운" />
-                                            <img class="person_up_img" src="./index_img/up.png" alt="드롭업" />
+                                            <img class="person_up_img" src="./index_img/up.png" alt="드롭업"/>
                                         </span>
                                     </div>
                                     <ul class="person_pop_layer in_bl">
                                         <li>
                                             <div class="w_180 in_bl">
-                                                <strong class="num_font" name="adultCnt">1</strong>
+                                                <strong class="num_font" name="adultPaxCnt">1</strong>
                                                 <span role="person-type-option" class="person_type1 person_font">성인
                                                 </span>
                                             </div>
                                             <div class="person_btn in_bl">
-                                                <button class="adult_minus"
-                                                    onclick="personCount('adult', 'minus')">-</button>
-                                                <button class="adult_plus"
-                                                    onclick="personCount('adult', 'plut')">+</button>
+                                                <a href="javascript://" name="adultPaxCntDown" onclick="fnSetPaxCountDown('ADULT', this);"><img src="//images.jinair.com/images/btn/btn_minus.png" alt="-"></a>
+                                                <a href="javascript://" name="adultPaxCntUp" onclick="fnSetPaxCountUp('ADULT', this);"><img src="//images.jinair.com/images/btn/btn_plus.png" alt="+"></a>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="w_180 in_bl">
-                                                <strong class="num_font" name="childCnt">0</strong>
+                                                <strong class="num_font" name="childPaxCnt">0</strong>
                                                 <span role="person-type-option" class="person_type2 person_font">소아
                                                 </span>
                                                 <button class="child_info_btn">
@@ -268,15 +266,13 @@
                                                 </button>
                                             </div>
                                             <div class="person_btn in_bl">
-                                                <button class="child_minus"
-                                                    onclick="personCount('child', 'minus')">-</button>
-                                                <button class="child_plus"
-                                                    onclick="personCount('child', 'plut')">+</button>
+                                                <a href="javascript://" onclick="fnSetPaxCountDown('CHILD',this);" class="disable"><img src="//images.jinair.com/images/btn/btn_minus.png" alt="-"></a>
+                                                <a href="javascript://" onclick="fnSetPaxCountUp('CHILD',this);"><img src="//images.jinair.com/images/btn/btn_plus.png" alt="+"></a>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="w_180 in_bl">
-                                                <strong class="num_font" name="babyCnt">0</strong>
+                                                <strong class="num_font" name="infantPaxCnt">0</strong>
                                                 <span role="person-type-option" class="person_type3 person_font">유아
                                                 </span>
                                                 <button class="baby_info_btn">
@@ -284,10 +280,8 @@
                                                 </button>
                                             </div>
                                             <div class="person_btn in_bl">
-                                                <button class="baby_minus"
-                                                    onclick="personCount('baby', 'minus')">-</button>
-                                                <button class="baby_plus"
-                                                    onclick="personCount('baby', 'plut')">+</button>
+                                                <a href="javascript://" name="infantPaxCntDown" onclick="fnSetPaxCountDown('INFANT',this);" class="disable"><img src="//images.jinair.com/images/btn/btn_minus.png" alt="-"></a>
+                                                <a href="javascript://" name="infantPaxCntUp" onclick="fnSetPaxCountUp('INFANT',this);"><img src="//images.jinair.com/images/btn/btn_plus.png" alt="+"></a>
                                             </div>
                                         </li>
                                         <li>

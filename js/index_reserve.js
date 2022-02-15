@@ -192,6 +192,7 @@ $(() => {
 //person-layer
 $(() => {
     $(".person_layerbtn").on("click", function (e) {
+
         e.stopPropagation();
         $(".person_layerbtn").addClass('close');
         $(".person_layerbtn").css({ "color": "rgb(145, 0, 70)" });
@@ -512,3 +513,125 @@ $(() => {
         $('.arrive_layer2').slideUp(50);
     })
 })
+
+        
+function fnSetPaxCountDown(strPaxType,obj) {
+	var btnParent = $(obj).parents("ul");
+
+	var //
+		iAdultCount = parseInt($(btnParent).find('strong[name=adultPaxCnt]').text()),
+		iChildCount = parseInt($(btnParent).find('strong[name=childPaxCnt]').text()),
+		iInfantCount = parseInt($(btnParent).find('strong[name=infantPaxCnt]').text()),
+		iPaxCount = iAdultCount + iChildCount;
+
+	switch (strPaxType) {
+		case "ADULT":
+			iAdultCount--;
+			if (iAdultCount >= 0) {
+				iPaxCount--;
+			}
+
+			if (iInfantCount > iAdultCount) {
+				iInfantCount = iAdultCount;
+			}
+
+			if (iAdultCount <= 0) {
+				iAdultCount = 0;
+				iInfantCount = 0;
+				fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntDown]', false);
+			}
+			if (iInfantCount == iAdultCount) {
+				fnSetEnableButtonUp('a[name=infantPaxCntUp]', false);
+			}
+
+			$("strong[name=adultPaxCnt]").text(iAdultCount);
+			$("strong[name=infantPaxCnt]").text(iInfantCount);
+			break;
+		case "CHILD":
+			iChildCount--;
+			if (iChildCount >= 0) {
+				iPaxCount--;
+			}
+			if (iChildCount <= 0) {
+				iChildCount = 0;
+				fnSetEnableButtonUp('a[name=childPaxCntDown]', false);
+			}
+
+			$("strong[name=childPaxCnt]").text(iChildCount);
+			break;
+		case "INFANT":
+			iInfantCount--;
+			if (iInfantCount <= 0) {
+				iInfantCount = 0;
+				fnSetEnableButtonUp('a[name=infantPaxCntDown]', false);
+			}
+
+			if (iAdultCount > iInfantCount) {
+				fnSetEnableButtonUp('a[name=infantPaxCntUp]', true);
+			}
+
+			$("strong[name=infantPaxCnt]").text(iInfantCount);
+			break;
+	}
+
+	if (iPaxCount < maxPaxCnt) {
+		fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', true);
+	}
+}
+
+function fnSetPaxCountUp(strPaxType,obj) {
+	var btnParent = $(obj).parents("ul");
+
+	var //
+		iAdultCount = parseInt($(btnParent).find('strong[name=adultPaxCnt]').text()),
+		iChildCount = parseInt($(btnParent).find(
+			'strong[name=childPaxCnt]').text()),
+		iInfantCount = parseInt($(btnParent).find(
+			'strong[name=infantPaxCnt]').text()),
+		iPaxCount = iAdultCount + iChildCount;
+
+	// Count 증감
+	switch (strPaxType) {
+		case "ADULT":
+			if (iPaxCount < maxPaxCnt) {
+				iAdultCount++;
+				iPaxCount++;
+				$("strong[name=adultPaxCnt]").text(iAdultCount);
+				//fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntDown], a[name=infantPaxCntUp]',true);
+				fnSetEnableButtonUp('a[name=adultPaxCntDown], a[name=infantPaxCntUp]',true);
+			} else {
+				// 성인,소아 비활성처리
+				fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
+			}
+			break;
+		case "CHILD":
+			if (iPaxCount < maxPaxCnt) {
+				iChildCount++;
+				iPaxCount++;
+				$("strong[name=childPaxCnt]").text(iChildCount);
+				fnSetEnableButtonUp('a[name=childPaxCntDown]',true);
+			} else {
+				// 성인,소아 비활성처리
+				fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
+			}
+			break;
+		case "INFANT":
+			iInfantCount++;
+			if (iAdultCount <= iInfantCount) {
+				iInfantCount = iAdultCount;
+				fnSetEnableButtonUp('a[name=infantPaxCntUp]', false);
+			}
+
+			if (iInfantCount > 0) {
+				fnSetEnableButtonUp('a[name=infantPaxCntDown]', true);
+			}
+
+			$("strong[name=infantPaxCnt]").text(iInfantCount);
+			break;
+	}
+
+	if (iPaxCount == maxPaxCnt) {
+		fnSetEnableButtonUp('a[name=adultPaxCntUp], a[name=childPaxCntUp]', false);
+	}
+
+}

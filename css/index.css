@@ -462,16 +462,15 @@ body {
     margin-left: -4px;
     width: 90px;
 }
-#container #reservation .person_pop_layer li .person_btn button {
+#container #reservation .person_pop_layer li .person_btn a img{
     width: 40px;
     height: 40px;
-    border: 3px solid #000;
+    border: 1px solid #000;
     border-radius: 25px;
     background-color: transparent;
     font-size: 35px;
-    text-align: center;
-    font-weight: bold;
     cursor: pointer;
+    vertical-align: top;
 }
 #container #reservation .person_pop_layer li .person_btn .adult_minus:hover,
 #container #reservation .person_pop_layer li .person_btn .adult_plus:hover,
@@ -1251,3 +1250,9 @@ body {
         margin: 0 auto;
     }
 }
+
+a:link		{color:#555; text-decoration:none;}
+a:visited	{color:#555; text-decoration:none;}
+a:hover 	{color:#661e43; text-decoration:none;}
+a:focus 	{color:#661e43; text-decoration:none;}
+a:active	{color:#555; text-decoration:none;}
