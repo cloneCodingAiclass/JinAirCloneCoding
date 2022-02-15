@@ -493,9 +493,6 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
-.go_layer div li{
-    cursor: pointer;
-}
 .go_layer div li a, .go_layer1 div li a{
     font-size: 14px;
     font-weight: 700;
@@ -999,7 +996,7 @@ iframe{
 /* 임시 모달 */
 .modal_container{
     position: fixed;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     left: 0; right: 0; top: 0; bottom: 0;
     display: none;
     justify-content: center;
