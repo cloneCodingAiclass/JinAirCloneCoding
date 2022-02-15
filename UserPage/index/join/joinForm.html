@@ -11,55 +11,55 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/joinForm.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
-    function sample6_execDaumPostcode() {
-        new daum.Postcode({
-            oncomplete: function(data) {
-                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                var addr = ''; // 주소 변수
-                var extraAddr = ''; // 참고항목 변수
-
-                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                    addr = data.roadAddress;
-                } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                    addr = data.jibunAddress;
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+    
+                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    var addr = ''; // 주소 변수
+                    var extraAddr = ''; // 참고항목 변수
+    
+                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                        addr = data.roadAddress;
+                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                        addr = data.jibunAddress;
+                    }
+    
+                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                    if(data.userSelectedType === 'R'){
+                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                            extraAddr += data.bname;
+                        }
+                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                        if(extraAddr !== ''){
+                            extraAddr = ' (' + extraAddr + ')';
+                        }
+                        // 조합된 참고항목을 해당 필드에 넣는다.
+                        document.getElementById("sample6_extraAddress").value = extraAddr;
+                    
+                    } else {
+                        document.getElementById("sample6_extraAddress").value = '';
+                    }
+    
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('sample6_postcode').value = data.zonecode;
+                    document.getElementById("sample6_address").value = addr;
+                    // 커서를 상세주소 필드로 이동한다.
+                    document.getElementById("sample6_detailAddress").focus();
                 }
-
-                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-                if(data.userSelectedType === 'R'){
-                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                        extraAddr += data.bname;
-                    }
-                    // 건물명이 있고, 공동주택일 경우 추가한다.
-                    if(data.buildingName !== '' && data.apartment === 'Y'){
-                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                    }
-                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                    if(extraAddr !== ''){
-                        extraAddr = ' (' + extraAddr + ')';
-                    }
-                    // 조합된 참고항목을 해당 필드에 넣는다.
-                    document.getElementById("sample6_extraAddress").value = extraAddr;
-                
-                } else {
-                    document.getElementById("sample6_extraAddress").value = '';
-                }
-
-                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('sample6_postcode').value = data.zonecode;
-                document.getElementById("sample6_address").value = addr;
-                // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("sample6_detailAddress").focus();
-            }
-        }).open();
-    }
-</script>
+            }).open();
+        }
+    </script>
 </head>
 <body>
     <ul class="skipnavi">
@@ -2586,17 +2586,14 @@
                             <th scope="row">주소</th>
                             <td>
                                 <p class="zipcodeField">
-                                    <input type="text" id="pstNo" name="pstNo" maxlength="10"
-                                        onclick="showPopupLayer('/member/jusoSearchLayer'); return false"
-                                        readonly="readonly" title="우편번호">
-                                    <a href="javascript://"
-                                        onclick="showPopupLayer('/member/jusoSearchLayer'); return false"
-                                        class="btnTypeA sizeL"> 우편번호 검색</a>
+                                    <input type="text" id="sample6_postcode" name="zipcode" maxlength="10" readonly="readonly" title="우편번호">
+                                        <input type="button" class="btn_agree"value="우편번호 검색" onclick="sample6_execDaumPostcode()">
                                 </p>
-                                <input type="text" id="adr1" name="adr1" maxlength="100" readonly="readonly"
-                                    title="주소"><br>
-                                <input type="text" id="adr2" name="adr2" maxlength="150" readonly="readonly"
+                                <input type="text" id="sample6_address" name="adress1" maxlength="100" readonly="readonly"
+                                    title="주소">
+                                <input type="text" id="sample6_extraAddress" name="adress2" maxlength="150" readonly="readonly"
                                     title="상세주소">
+                                <input type="text" name="adress3" id="sample6_detailAddress" class="subaddress" title="참고항목"></p>
                             </td>
                         </tr>
                         <tr>
@@ -2606,242 +2603,123 @@
                                     <span class="field">
                                         <select id="mblFonCtrCd" name="mblFonCtrCd" title="국가번호 선택">
                                             <option value="">선택</option>
-
-
                                             <option value="KOR" selected>
                                                 한국 (+82)
                                             </option>
-
-
-
                                             <option value="JPN">
                                                 일본 (+81)
                                             </option>
-
-
-
                                             <option value="GHA">
                                                 가나 (+233)
                                             </option>
-
-
-
                                             <option value="GAB">
                                                 가봉 (+241)
                                             </option>
-
-
-
                                             <option value="GUY">
                                                 가이아나 (+592)
                                             </option>
-
-
-
                                             <option value="GMB">
                                                 감비아 (+220)
                                             </option>
-
-
-
                                             <option value="GLP">
                                                 과들루프 (+590)
                                             </option>
-
-
-
                                             <option value="GTM">
                                                 과테말라 (+502)
                                             </option>
-
-
-
                                             <option value="GUM">
                                                 괌 (+1671)
                                             </option>
-
-
-
                                             <option value="GRD">
                                                 그레나다 (+1473)
                                             </option>
-
-
-
                                             <option value="GEO">
                                                 그루지아 (+995)
                                             </option>
-
-
-
                                             <option value="GRC">
                                                 그리스 (+30)
                                             </option>
-
-
-
                                             <option value="GRL">
                                                 그린란드 (+299)
                                             </option>
-
-
-
                                             <option value="GIN">
                                                 기니 (+224)
                                             </option>
-
-
-
                                             <option value="GNB">
                                                 기니 (+245)
                                             </option>
-
-
-
                                             <option value="GUF">
                                                 기아나(프) (+594)
                                             </option>
-
-
-
                                             <option value="NAM">
                                                 나미비아 (+264)
                                             </option>
-
-
-
                                             <option value="NRU">
                                                 나우루 (+674)
                                             </option>
-
-
-
                                             <option value="NGA">
                                                 나이지리아 (+234)
                                             </option>
-
-
-
                                             <option value="ZAF">
                                                 남아프리카공화국 (+27)
                                             </option>
-
-
-
                                             <option value="NLD">
                                                 네덜란드 (+31)
                                             </option>
-
-
-
                                             <option value="NPL">
                                                 네팔 (+977)
                                             </option>
-
-
-
                                             <option value="NOR">
                                                 노르웨이 (+47)
                                             </option>
-
-
-
                                             <option value="NFK">
                                                 노퍽 (+)
                                             </option>
-
-
-
                                             <option value="NCL">
                                                 누벨칼레도니 (+687)
                                             </option>
-
-
-
                                             <option value="NZL">
                                                 뉴질랜드 (+64)
                                             </option>
-
-
-
                                             <option value="NIU">
                                                 니우에 (+683)
                                             </option>
-
-
-
                                             <option value="NER">
                                                 니제르 (+227)
                                             </option>
-
-
-
                                             <option value="NIC">
                                                 니카라과 (+505)
                                             </option>
-
-
-
                                             <option value="TWN">
                                                 대만 (+886)
                                             </option>
-
-
-
                                             <option value="DNK">
                                                 덴마크 (+45)
                                             </option>
-
-
-
                                             <option value="DOM">
                                                 도미니카공화국 (+1809)
                                             </option>
-
-
-
                                             <option value="DMA">
                                                 도미니카연방 (+1767)
                                             </option>
-
-
-
                                             <option value="DEU">
                                                 독일 (+49)
                                             </option>
-
-
-
                                             <option value="TLS">
                                                 동티모르 (+670)
                                             </option>
-
-
-
                                             <option value="LAO">
                                                 라오스 (+856)
                                             </option>
-
-
-
                                             <option value="LVA">
                                                 라트비아 (+371)
                                             </option>
-
-
-
                                             <option value="RUS">
                                                 러시아 (+7)
                                             </option>
-
-
-
                                             <option value="LBN">
                                                 레바논 (+961)
                                             </option>
-
-
-
                                             <option value="LSO">
                                                 레소토 (+266)
                                             </option>
@@ -3781,69 +3659,36 @@
                                             <option value="TCA">
                                                 터크스 케이커스제도 (+1649)
                                             </option>
-
-
-
                                             <option value="TUR">
                                                 터키 (+90)
                                             </option>
-
-
-
                                             <option value="TGO">
                                                 토고 (+228)
                                             </option>
-
-
-
                                             <option value="TON">
                                                 통가 (+676)
                                             </option>
-
-
-
                                             <option value="TKM">
                                                 투르크메니스탄 (+993)
                                             </option>
-
-
-
                                             <option value="TUV">
                                                 투발루 (+688)
                                             </option>
-
-
-
                                             <option value="TUN">
                                                 튀니지 (+216)
                                             </option>
-
-
-
                                             <option value="TTO">
                                                 트리니다드토바고 (+1868)
                                             </option>
-
-
-
                                             <option value="PAN">
                                                 파나마 (+507)
                                             </option>
-
-
-
                                             <option value="PRY">
                                                 파라과이 (+595)
                                             </option>
-
-
-
                                             <option value="FRO">
                                                 파로제도 (+298)
                                             </option>
-
-
-
                                             <option value="PAK">
                                                 파키스탄 (+92)
                                             </option>
