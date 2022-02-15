@@ -392,11 +392,15 @@ body {
     margin-left: 20px;
 }
 #container #reservation .pc_select{
-    display: flex;
+    width: 300px;
 }
 #container #reservation .person_layerbtn {
-    text-align: center;
+    text-align: left;
     cursor: pointer;
+    width: 200px;
+}
+#container #reservation .person_layerbtn .person_num {
+    font-size: 1.2rem;
 }
 #container #reservation .person_layerbtn span {
     font-weight: bold;
@@ -482,18 +486,21 @@ body {
     border: 3px solid #7e0049;
 }
 #container #reservation .person_pop_layer li .submit_btn {
-    margin: 0 auto;
     text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
 }
-#container #reservation .person_pop_layer li .submit_btn button {
-    margin: 8px auto;
-    padding: 10px;
+#container #reservation .person_pop_layer li .submit_btn a {
     width: 90%;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: #bdd600;
-    border: none;
     cursor: pointer;
+    height: 100%;
+    padding: 10px;
 }
 #container #reservation .person_pop_layer li .cnt_age {
     padding: 24px 20px;
