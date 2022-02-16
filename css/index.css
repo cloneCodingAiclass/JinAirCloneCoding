@@ -437,6 +437,11 @@ body {
     width: 100%;
     border-bottom: 0.1px solid rgb(153, 153, 153, 0.2);
 }
+
+#container #reservation .person_pop_layer li .child_modal span, .infant_modal span{
+    line-height: 2 !important;
+    margin-left: 0 !important;
+}
 #container #reservation .person_pop_layer li span {
     width: 100%;
     line-height: 3;
@@ -1238,6 +1243,7 @@ body {
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    padding: 20px 0;
 }
 .w_180 .infant_modal p, .w_180 .child_modal p{
     font-size: 1.1rem;
@@ -1249,6 +1255,7 @@ body {
 .w_180 .infant_modal ul li, .w_180 .child_modal ul li{
     font-size: 0.9rem;
     font-weight: 700;
+    border: 0;
 }
 .w_180 .infant_modal .des, .w_180 .child_modal span.des{
     font-size: 0.8rem;

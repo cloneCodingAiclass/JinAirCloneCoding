@@ -483,11 +483,6 @@ $(() => {
         $(".arrive_select_opt2").removeClass('on');
         $('.arrive_layer2').slideUp(50);
 
-        $(".person_layerbtn").removeClass('close');
-        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-        $(".person_down_img").css({ "display": "inline-block" });
-        $(".person_up_img").css({ "display": "none" });
-        $('.person_pop_layer').slideUp(50);
     })
 })
 
@@ -603,6 +598,7 @@ function submit(){
 $(function () {
     $('.infant_modal').hide();
     $('.baby_info_btn').click(function(){
+        $('.child_modal').hide();
         $('.infant_modal').fadeIn(200);
         $('.infant_modal').click(function(){
             $('.infant_modal').fadeOut(200);
@@ -610,6 +606,7 @@ $(function () {
     });
 
     $('.child_modal').hide();
+    $('.infant_modal').hide();
     $('.child_info_btn').click(function(){
         $('.child_modal').fadeIn(200);
         $('.child_modal').click(function(){

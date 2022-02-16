@@ -292,6 +292,7 @@ function submit(){
 $(function () {
     $('.infant_modal').hide();
     $('.baby_info_btn').click(function(){
+        $('.child_modal').hide();
         $('.infant_modal').fadeIn(200);
         $('.infant_modal').click(function(){
             $('.infant_modal').fadeOut(200);
@@ -300,6 +301,7 @@ $(function () {
 
     $('.child_modal').hide();
     $('.child_info_btn').click(function(){
+        $('.infant_modal').hide();
         $('.child_modal').fadeIn(200);
         $('.child_modal').click(function(){
             $('.child_modal').fadeOut(200);

@@ -626,6 +626,10 @@ body {
     padding: 10px;
 }
 
+.person_pop_layer li .child_modal span, .infant_modal span{
+    line-height: 2 !important;
+    margin-left: 0 !important;
+}
 /* 출발지 */
 /* 레이어 버튼 모음 */
 .lcc_contents .search_box .search_form .go_layerbtn,
