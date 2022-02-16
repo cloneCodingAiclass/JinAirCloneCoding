@@ -301,6 +301,44 @@ $(function () {
     });
 })
 
+
+function comewhatday(){
+    $('.whatday').html('오는날');
+}
+function gowhatday(){
+    $('.whatday').html('가는날');
+}
+
+// 왕복에 넣어주기
+function gowhatdaydd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.go_date_select_optt').val(`${str1}-${str2}-${str3}`);
+}
+function comewhatdaydd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.come_date_select_optt').val(`${str1}-${str2}-${str3}`);
+}
+
+function minday(){
+    $('.modal_container').fadeIn(200);
+    $('.moditext').html('출발일보다 이전 날짜를 선택할 수 없습니다.');
+}
+function departure(){
+    $('.modal_container').fadeIn(200);
+    $('.moditext').html('출발지 항목을 입력하세요.');
+}
+
+
+
+function twochoice(){
+$('.cal').css({"display":"none"});
+}
+
+let bbb = 'n';
 $(() => {
     // 왕복, 편도 출발지 지정
     $('.go_layer').find('li').find('a').on('click', function (e) {
@@ -312,6 +350,7 @@ $(() => {
         $('.arrive_layer').slideDown(100);
         $(".go_select_opt").removeClass('on');
         $(".arrive_select_opt").addClass('on');
+        bbb = 'y';
     })
     // 왕복, 편도 도착지 지정
     $('.arrive_layer').find('li').find('a').on('click', function () {
@@ -320,4 +359,33 @@ $(() => {
         $('.arrive_select_optt').val(str);
     })
 
+    // 왕복 달력 모달
+    $('.start_date').on('click', function () {
+        if(bbb == 'n'){
+            departure();
+            $('.cal').css({"display":"none"});
+        }else{
+            $('.cal').css({"display":"flex"});
+            $('.whatday').html('가는날');
+        }
+    })
+    $('.end_date').on('click', function () {
+        if(bbb == 'n' && ccc == 'n'){
+            departure();
+            $('.cal').css({"display":"none"});
+        }else{
+            $('.cal').css({"display":"flex"});
+            $('.whatday').html('오는날');
+        }
+    })
+
+    // 달력 X 버튼
+    $('.x_box').on('click', function () {
+        $('.cal').css({"display":"none"});
+    })
+
+    // 모달모음 확인 버튼
+    $('.btn_cancel').on('click', function () {
+        $('.modal_container').fadeOut(200);
+    })
 })

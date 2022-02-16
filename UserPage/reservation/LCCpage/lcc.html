@@ -606,7 +606,7 @@
                                 <div class="full_box">
                                     <div class="custom_box">
                                         <div class="go_select in_bl">
-                                            <div class="go_layerbtn">
+                                            <div class="go_layerbtn topcontrol">
                                                 <span class="go_select_opt">
                                                     <input type="text" value="출발지" readonly class="go_select_optt">
                                                 </span>
@@ -1112,6 +1112,41 @@
     <!--퀵 메뉴 끝-->
 
     <div class="modal"></div>
+    
+    <!-- 모달 모음 -->
+    <div class="modal_container">
+        <div class="modals">
+            <p class="moditext"></p>
+            <input type="button" value="확인" class="btn_cancel">
+        </div>
+    </div>
+
+    <!-- 달력 -->
+    <div class="cal"> 
+        <div class="calwrapper">
+            <div class="caltop">
+                <p class="whatday">가는날</p>
+                <p class="cal_right">다음 3개월</p>
+            </div>
+            <table>
+                <tr>
+                    <td>일</td>
+                    <td>월</td>
+                    <td>화</td>
+                    <td>수</td>
+                    <td>목</td>
+                    <td>금</td>
+                    <td>토</td>
+                </tr>
+            </table>
+            <div class="calinner">
+                <div class="calscroll">
+                    <iframe src="./cal.html" frameborder="0" id="ifm"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="x_box"><img src="./img/image-removebg-preview.png" alt=""></div>
+    </div>
 </body>
 
 </html>

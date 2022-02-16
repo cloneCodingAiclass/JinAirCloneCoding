@@ -449,6 +449,7 @@ body {
     padding: 50px 150px;
     margin-top: 10px;
     background-color: #f7f7f6;
+    height: 220px;
 }
 /* lcc_content - person layer */
 .lcc_contents .search_box .search_form .person_layerbtn {
@@ -628,14 +629,14 @@ body {
     text-align: center;
     cursor: pointer;
     position: relative;
-    top: 15px;
+    top: 20px;
 }
 .lcc_contents .lcc_search .search_box .search_form .go_layer {
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 570px !important;
+    top: 563px !important;
     left: 180px;
     height: auto;
     background-color: #fff;
@@ -674,7 +675,7 @@ body {
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 570px !important;
+    top: 563px !important;
     left: 180px;
     height: auto;
     background-color: #fff;
@@ -736,8 +737,8 @@ body {
 
 .go_select_opt,
 .arrive_select_opt,
-.go_date_select_opt,
-.come_date_select_opt{
+.start_date_select_opt,
+.end_date_select_opt{
     width: 100%;
     text-align: center;
     background: url(../img/down2.png) no-repeat;
@@ -746,8 +747,8 @@ body {
 }
 .go_select_opt.on,
 .arrive_select_opt.on,
-.go_date_select_opt.on,
-.come_date_select_opt.on{
+.start_date_select_opt.on,
+.end_date_select_opt.on{
     width: 100%;
     text-align: center;
     background: url(../img/up.png) no-repeat;
@@ -852,7 +853,7 @@ body {
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 525px !important;
+    top: 520px !important;
     left: 80px;
     height: auto;
     background-color: #fff;
@@ -884,16 +885,22 @@ body {
     display: flex;
     margin-top: 40px;
     font-weight: 600;
+    margin-left: 15px;
 }
 .custom_search .search_box .search_form .budge input {
-    width: 200px;
+    width: 235px;
     height: 55px;
     text-align: center;
     background-color: #fff;
     border: 2px solid #e9e9e9;
-    box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);    font-size: 1rem;
+    box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);
+    font-size: 18px;
     margin-left: 10px;
     font-weight: 600;
+    outline: none;
+    margin-right: 10px;
+    position: relative;
+    top: 20px;
 }
 .custom_search .search_box .search_form .budge input:focus {
     border: none;
@@ -910,7 +917,7 @@ body {
 
 .lcc_contents .search_box .search_form .start_date_layerbtn,
 .lcc_contents .search_box .search_form .end_date_layerbtn {
-    margin-right: 2px;
+    margin-right: 10px;
     width: 235px;
     height: 55px;
     margin-top: 20px;
@@ -925,7 +932,6 @@ body {
     font-weight: bold;
     line-height: 3;
     font-size: 1rem;
-    padding: 0 10px;
     font-weight: 600;
 }
 .lcc_contents .search_box .search_form .start_date_layerbtn .start_date_down_img,
@@ -1332,4 +1338,134 @@ body {
 
 .person_pop_layer img:hover{
     object-position: 0 bottom;
+}
+
+/* 모달 */
+.modal_container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modal_container > .modals p{
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.modal_container > .modals{
+    width: 290px;
+    height: 180px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    border-radius: 1px;
+    border: 1px solid #BDD600;
+    display: flex;
+    margin: 300px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal_container > .modals form{
+    display: flex;
+    justify-content: center;
+}
+.modal_container > .modals input{
+    font-size: 14px;
+    font-weight: 900;
+    width: 80px;
+    height: 40px;
+    background-color:#BDD600;
+    border: none;
+    margin: 40px 10px 0;
+    cursor: pointer;
+}
+
+
+/* 달력 모달 */
+.cal{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    justify-content: center;
+    display: none;
+    padding: 20px 0 0 0;
+}
+.x_box{
+    display: inline-block;
+    z-index: 9999;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    background-color: #661e43;
+}
+.x_box img{
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: auto;
+}
+.calwrapper{
+    display: inline-block;
+    width: 1180px;
+    height: 97%;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+}
+.caltop{
+    width: 1180px;
+    height: 70px;
+    display: block;
+}
+.caltop p{
+    display: inline-block;
+    font-size: 46px;
+    font-weight: 600 !important;
+    margin-top: 30px;
+}
+.caltop p.whatday{
+    position: relative;
+    left: 63px;
+}
+.caltop p.cal_right{
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 30px 0;
+    position: relative;
+    bottom: 20px;
+    left: 450px;
+    background: url(../img/down.png) no-repeat;
+    background-size: 15%;
+    background-position: 95% 10%;
+}
+.calwrapper > table{
+    padding-top: 40px;
+    text-align: center;
+    width: 1179px;
+    height: 60px;
+    box-shadow:  0px 2px 3px rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 600;
+}
+.calwrapper > table tr td:nth-child(1){
+    color: rgb(218, 0, 0);
+}
+.calinner{
+    width: 100%;
+    height: 81%;
+    border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+    overflow: hidden;
+}
+.calscroll{
+    height: 100%;
+    overflow: hidden;
+}
+.calscroll > iframe{
+    width: 100%;
+    height: 100%;
 }
