@@ -122,14 +122,12 @@ $(function () {
 
     // 왕복 편도 번환
     $('#oneway').on('change', function(){
-        $('.come_date_select_opt').css({"visibility":"hidden"});
-        $('.dis_back').css({"display":"none"});
+        $('.sc_search_bw').css({"display":"none"});
+        $('.sc_search_oneway').css({"display":"block"});
     })
     $('#between').on('change', function(){
-        $('.come_date_select_opt').css({"visibility":"visible"});
-        $('.dis_go').css('width','590px');
-        $('.dis_back').css({"display":"block"});
-        $('.dis_back').css('width','590px');
+        $('.sc_search_oneway').css({"display":"none"});
+        $('.sc_search_bw').css({"display":"block"});
     })
 
     // 출발지, 도착지
@@ -216,9 +214,23 @@ $(function () {
         }
     })
 
+    // 편도 달력 모달
+    $('.go_date_select_opt2').on('click', function () {
+        if(bbb == 'n' && ccc == 'n'){
+            departure();
+            $('.cal2').css({"display":"none"});
+        }else if(bbb == 'y' && ccc == 'n'){
+            arrive();
+        }else{
+            $('.cal2').css({"display":"flex"});
+            $('.whatday').html('가는날');
+        }
+    })
+
     // 달력 X 버튼
     $('.x_box').on('click', function () {
         $('.cal').css({"display":"none"});
+        $('.cal2').css({"display":"none"});
     })
 
     // 모달모음 확인 버튼
@@ -307,6 +319,12 @@ function comewhatdaydd(str){
     let str3 = str.substr(6,2);
     $('.come_date_select_opt').html(`${str1}-${str2}-${str3}`);
 }
+function gowhatdayddd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.go_date_select_opt2').html(`${str1}-${str2}-${str3}`);
+}
 
 
 function minday(){
@@ -325,4 +343,5 @@ function arrive(){
 
 function twochoice(){
 $('.cal').css({"display":"none"});
+$('.cal2').css({"display":"none"});
 }
