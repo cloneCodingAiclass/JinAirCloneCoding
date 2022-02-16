@@ -85,7 +85,7 @@ $(function () {
     })
 
     $('.dis_kor').on('click', function () {
-        $('#container').css({"height":"2400px"});
+        $('#container').css({"height":"1650px"});
         $('.kor').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_eastnorth').css({"background-color":"white", "color": "#444"});
@@ -98,7 +98,7 @@ $(function () {
         $('.usa').css({"display":"none"});
     })
     $('.dis_eastnorth').on('click', function () {
-        $('#container').css({"height":"2400px"});
+        $('#container').css({"height":"1650px"});
         $('.eastnorth').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
@@ -111,7 +111,7 @@ $(function () {
         $('.usa').css({"display":"none"});
     })
     $('.dis_eastsouth').on('click', function () {
-        $('#container').css({"height":"2400px"});
+        $('#container').css({"height":"1650px"});
         $('.eastsouth').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
@@ -124,7 +124,7 @@ $(function () {
         $('.usa').css({"display":"none"});
     })
     $('.dis_poli').on('click', function () {
-        $('#container').css({"height":"2400px"});
+        $('#container').css({"height":"1650px"});
         $('.poli').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
@@ -137,7 +137,7 @@ $(function () {
         $('.usa').css({"display":"none"});
     })
     $('.dis_usa').on('click', function () {
-        $('#container').css({"height":"2400px"});
+        $('#container').css({"height":"1650px"});
         $('.usa').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
