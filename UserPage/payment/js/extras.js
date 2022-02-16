@@ -144,6 +144,14 @@ $(function () {
     
         $(".service_menu .menu3img").css("display", "block");
         $(".service_menu .menu3_invert").css("display", "none");
+
+        $(".move_map").css("position", "absolute");
+        $(".move_map").css("top", "80px");
+        $(".seat_info").css("position", "absolute");
+        $(".seat_info").css("top", "95px");
+        $(".seat_info").css("left", "30px");
+        $(".seat_info").css("z-index", "20");
+
     })
     $(".service_menu .menu2").on("click", function() {
         $(".service_content_wrap1").css("display", "none");
@@ -220,6 +228,13 @@ $(function () {
 
     /*구간선택1 */
     $(".service_content_wrap1 .service_title1 .section1").on('click', function() {
+        $(".move_map").css("position", "absolute");
+        $(".move_map").css("top", "80px");
+        $(".seat_info").css("position", "absolute");
+        $(".seat_info").css("top", "95px");
+        $(".seat_info").css("left", "30px");
+        $(".seat_info").css("z-index", "20");
+
         $(this).css("background-color", "#661e43");
         $(this).css("color", "#fff");
         $(".service_content_wrap1 .service_title1 .section2").css("background-color", "#EBEBEB");
@@ -232,11 +247,21 @@ $(function () {
 
         $(".select_seat_wrap1").css("display", "flex");
         $(".select_seat_wrap2").css("display", "none");
+        $(".passenger_info_wrap1").css("display", "block");
+        $(".passenger_info_wrap2").css("display", "none");
+        $(".seat_info_wrap1").css("display", "block");
+        $(".seat_info_wrap2").css("display", "none");
     })
     /*구간선택1 끝*/
 
      /*구간선택2 */
     $(".service_content_wrap1 .service_title1 .section2").on('click', function() {
+        $(".move_map").css("position", "absolute");
+        $(".move_map").css("top", "80px");
+        $(".seat_info").css("position", "absolute");
+        $(".seat_info").css("top", "95px");
+        $(".seat_info").css("left", "30px");
+
         $(this).css("background-color", "#661e43");
         $(this).css("color", "#fff");
         $(".service_title1 .section1").css("background-color", "#EBEBEB");
@@ -248,32 +273,26 @@ $(function () {
         $(".service_content_wrap1 .service_title1 .section1 .checkBox_2").css("display", "inline-block");
         $(".select_seat_wrap1").css("display", "none");
         $(".select_seat_wrap2").css("display", "flex");
+        $(".passenger_info_wrap1").css("display", "none");
+        $(".passenger_info_wrap2").css("display", "block");
+        $(".seat_info_wrap1").css("display", "none");
+        $(".seat_info_wrap2").css("display", "block");
+
     })
     /*구간선택2 */
     /*구간선택 끝 */
 
     /*스크롤시 따라다니는 영역 */
-
-
     $(window).scroll(function(){ 
         let x = $(".seat_info_wrap").offset().left+30;
 
-        if($(window).scrollTop() <  $(".seat_map").offset().top-115) {
-            $("service_title1 section2").on("click", function(){
-                $(".move_map").css("position", "absolute");
-                $(".move_map").css("top", "80px");
-                $(".seat_info").css("position", "absolute");
-                $(".seat_info").css("top", "95px");
-                $(".seat_info").css("left", "30px");
-                $(".seat_info").css("z-index", "20");
-            })
-        }
-
-            if ($(window).scrollTop() > $(".seat_map").offset().top-115 && $(window).scrollTop() < 1900) { 
+        $(".seat_map").css("top", "0px");
+        $(".seat_info_wrap").css("top", "0px");
+            if ($(window).scrollTop() > $(".service_title1").offset().top-115 && $(window).scrollTop() < 1900) { 
                 $(".move_map").css("position", "fixed");
-                $(".move_map").css("top", ($(".seat_map").offset().top)/2);
+                $(".move_map").css("top", ($(".select_seat ").offset().top)/2);
                 $(".seat_info").css("position", "fixed");
-                $(".seat_info").css("top", ($(".seat_info_wrap").offset().top)/2);
+                $(".seat_info").css("top", ($(".select_seat ").offset().top)/2);
                 $(".seat_info").css("left", x);
                 $(".seat_info").css("z-index", "20");
             } else if ($(window).scrollTop() > 1895) {
@@ -282,7 +301,6 @@ $(function () {
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "1680px");
                 $(".seat_info").css("left", "30px");
-                $(".seat_info").css("z-index", "20");
             }
             else {
                 $(".move_map").css("position", "absolute");
@@ -290,7 +308,6 @@ $(function () {
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
-                $(".seat_info").css("z-index", "20");
             }
     })
 
@@ -304,23 +321,87 @@ $(function () {
         //지도 가르키는 영역 높이 : 160px
 
         let x = $(".move_map").height();
-        if($(window).scrollTop() >  $(".seat_map").offset().top+5) {
-            $(".location").css("height", "160px");
-        } else {
-            $(".location").css("heigth", "100px");
-        }
-
+        // if($(window).scrollTop() >  $(".seat_map").offset().top+5) {
+        //     $(".location").css("height", "160px");
+        // } else {
+        //     $(".location").css("heigth", "100px");
+        // }
         if($(window).scrollTop() < 1900) {
             if(a/($(".location").height()*b < 400)) {
                 $(".location").css("top", a/(2250/x));
             }
         }
-    })  
+    })
     /*스크롤시 미니맵 이동 끝*/
     /*스크롤시 따라다니는 영역 끝*/
+    /*수하물 선택 구간 */
 
+    $(".bot_bagg_price1 .cur").css("display", "none");
+    $(".bot_bagg_price1 .price").text(" ");
+    $(".bot_bagg_price2 .cur").css("display", "none");
+    $(".bot_bagg_price2 .price").text(" ");
 
+    $('#bagg1').change(function() {
+        $(".select_bagg_price1 .select_bagg").text($(this).val());
+        $(".bot_bagg_price1 .cur").css("display", "inline-block");
+        $(".bot_bagg_price1 .price").text(" ");
+        if($(this).val() == "5KG(+KRW 8,000)"){
+            $(".bot_bagg_price1 .price").text("8,000");
+        } else if($(this).val() == "10KG(+KRW 16,000)"){
+            $(".bot_bagg_price1 .price").text("16,000");
+        } else if($(this).val() == "15KG(+KRW 24,000)"){
+            $(".bot_bagg_price1 .price").text("24,000");
+        } else if($(this).val() == "20KG(+KRW 32,000)"){
+            $(".bot_bagg_price1 .price").text("32,000");
+        } else {
+            $(".bot_bagg_price1 .cur").css("display", "none");
+            $(".bot_bagg_price1 .price").text(" ");
+        }
+    });
 
+    $('#bagg2').change(function() {
+        $(".select_bagg_price2 .select_bagg").text($(this).val());
+        $(".bot_bagg_price2 .cur").css("display", "inline-block");
+        $(".bot_bagg_price2 .price").text(" ");
+        if($(this).val() == "5KG(+KRW 8,000)"){
+            $(".bot_bagg_price2 .price").text("8,000");
+        } else if($(this).val() == "10KG(+KRW 16,000)"){
+            $(".bot_bagg_price2 .price").text("16,000");
+        } else if($(this).val() == "15KG(+KRW 24,000)"){
+            $(".bot_bagg_price2 .price").text("24,000");
+        } else if($(this).val() == "20KG(+KRW 32,000)"){
+            $(".bot_bagg_price2 .cur").css("display", "inline-block");
+            $(".bot_bagg_price2 .price").text("32,000");
+        } else {
+            $(".bot_bagg_price2 .cur").css("display", "none");
+            $(".bot_bagg_price2 .price").text(" ");
+        }
+    });
+
+    /*수하물 선택 구간 끝 */
+
+    /*보험 선택 구간 */
+    $('#select_product').change(function() {
+        $(".bot_bagg_price2 .price").text(" ");
+        if($(this).val() == "실속형"){
+            $(".insurance_price .price").text("1,970");
+        } else if($(this).val() == "표준형"){
+            $(".insurance_price .price").text("3,660");
+        } else if($(this).val() == "고급형"){
+            $(".insurance_price .price").text("7,040");
+        }
+    });
+
+    $("#check_ins").change(function(){
+        if($("#check_ins").is(":checked")){
+            $("select#select_product").prop("disabled",  false);
+        }
+        else{
+            $("select#select_product").prop("disabled", true);
+        }
+    });
+
+    /*보험 선택 구간 끝*/
 
     /*무료 수하물/기내식 안내*/
     $(".modal_content1").css("display", "block");
@@ -396,49 +477,100 @@ $(function () {
     })
     /*보험가입 페이지 끝 */
 
-    /*좌석 선택 불가 */
+    /*좌석 선택 */
 
+    $(".seat_P").css("display", "none");
     $("p.select_seat_num span.close").on('click', function() {
-        $(".select_seat_num").text("");
-        $('.seat_sel').css('pointer-events', 'visible');
+        $(".seat_num").text("");
+        $(".select_seat_price .price").text("");
+        $(".seat_P").css("display", "none");
+        $('.seat_sel').css('pointer-events', 'auto');
     });
-    $(".select_seat .box1").on("click", function() {
-        $(".select_seat_num").text($(this).text());
+
+    $(".select_seat1 .box1").on("click", function() {
         $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
         $(this).toggleClass('background1');
-        $("p.select_seat_num span.close").css("visibility", "visible");
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
+        })
     })
+
+
     $(".select_seat .box2").on("click", function() {
-        $(".seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".seat_num").text($(this).text());
         $(this).toggleClass('background2');
-        $("p.select_seat_num span.close").css("visibility", "visible")
+        $(".select_seat_price .price").text("5,000");
+        $(".seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').not(this).css('pointer-events', 'auto');
+            $(".seat_num").text("");
+            $(".select_seat_price .price").text("");
+            $(".seat_P").css("display", "none");
+        })
     })
     $(".select_seat .box3").on("click", function() {
-        $(".seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".seat_num").text($(this).text());
         $(this).toggleClass('background3');
-        $("p.select_seat_num span.close").css("visibility", "visible");
+        $(".select_seat_price .price").text("9,000");
+        $(".seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').not(this).css('pointer-events', 'auto');
+            $(".seat_num").text("");
+            $(".select_seat_price .price").text("");
+            $(".seat_P").css("display", "none");
+        })
+
     })
     $(".select_seat .box4").on("click", function() {
-        $(".seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".seat_num").text($(this).text());
         $(this).toggleClass('background4');
-        $("p.select_seat_num span.close").css("visibility", "visible");
+        $(".select_seat_price .price").text("7,000");
+        $(".seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').not(this).css('pointer-events', 'auto');
+            $(".seat_num").text("");
+            $(".select_seat_price .price").text("");
+            $(".seat_P").css("display", "none");
+        })
     })
     $(".select_seat .box5").on("click", function() {
-        $(".seat_num").text($(this).text());
         $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".seat_num").text($(this).text());
         $(this).toggleClass('background5');
-        $("p.select_seat_num span.close").css("visibility", "visible");
+        $(".select_seat_price .price").text("3,000");
+        $(".seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').not(this).css('pointer-events', 'auto');
+            $(".seat_num").text("");
+            $(".select_seat_price .price").text("");
+            $(".seat_P").css("display", "none");
+        })
     })
+    
     $(".select_seat .box6").on("click", function() {
         $(".seat_num").text($(this).text());
         $(this).toggleClass('background6');
-        $('.seat_sel').not(this).css('pointer-events', 'none');
-        $("p.select_seat_num span.close").css("visibility", "visible");
+        $(".select_seat_price .price").text("1,000");
+        $(".seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').not(this).css('pointer-events', 'auto');
+            $(".seat_num").text("");
+            $(".select_seat_price .price").text("");
+            $(".seat_P").css("display", "none");
+        })
     })
-    /*좌석 선택 불가 끝 */
+
+
+    /*좌석 선택 끝 */
     
 
     /*하단 총액 모달창 */
@@ -510,7 +642,7 @@ $(function () {
         }
     })
    /*하단 총액 모달창 끝 */
-})
+});
 
 
 $(() => {
@@ -529,22 +661,35 @@ $(() => {
 //     });
 // });
 
-// $(()=> {
-//     $('#modal_iscancel').hide();
-//     $(".cancbutt").on('click', () => {
-//         $("#modal_iscancel").fadeIn();
-//     })
-//     $(".uncomplete").on('click', () => {
-//         $("#modal_iscancel").fadeOut();
-//     })
-// })
-
 $(()=> {
     $('#modal_free_wrap').hide();
     $(".service_title2 .section1").on('click', () => {
-        $("##modal_free_wrap").fadeIn();
+        $("#modal_free_wrap").fadeIn();
     })
     $(".modal_free_wrap .close").on('click', () => {
-        $("##modal_free_wrap").fadeOut();
+        $("#modal_free_wrap").fadeOut();
+    })
+})
+
+
+$(()=> {
+    $('#modal_notice_wrap').hide();
+    $(".select_seat .box3").on('click', () => {
+        if($(".box3").hasClass("background3") === true) {
+            $("#modal_notice_wrap").fadeIn();
+        }
+    })
+    $(".modal_notice_wrap .close").on('click', () => {
+        $("#modal_notice_wrap").fadeOut();
+    })
+    $(".bott .checkbox").change(function(){
+        if($(".checkbox").is(":checked") === false){
+            $(".butt_ok").off('click');
+        }else{
+            $(".butt_ok").on('click');
+        }
+    })
+    $("#modal_notice_wrap .butt_ok").on('click', () => {
+        $("#modal_notice_wrap").fadeOut();
     })
 })
