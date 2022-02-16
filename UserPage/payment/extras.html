@@ -1464,7 +1464,7 @@
                                                 <td class="normal">3,660</td>
                                                 <td class="normal">1억원</td>
                                                 <td class="normal">7,040</td>
-                                                <td class="normal sel_pro"><select name="product" id="select_product">
+                                                <td class="normal sel_pro"><select name="product" id="select_product" disabled>
                                                     <option value="실속형">실속형</option>
                                                     <option value="표준형" selected>표준형</option>
                                                     <option value="고급형">고급형</option>
@@ -1482,17 +1482,25 @@
                                                         <li>가입 연령에 따라 담보 및 가입금액의 변경 또는 제한이 있을 수 있습니다. 플랜 구성 및 세부 보장내역을 확인 하세요.</li>
                                                         <li>유아 탑승객의 여행자보험 가입은 불가합니다.</li>
                                                     </ul>
-                                                    <div class="coverage cursor">가입연령따른 플랜 및 보장 내역</div>
+                                                    <div class="coverage cursor"><a href="https://ec.aceinsurance.co.kr/jsp/b2cEZSponsor/contractplan/ContractPlanSHanaCoverageList.jsp?groupId=701241JAIR&productCode=DTA" target="_blank">가입연령따른 플랜 및 보장 내역</a></div>
                                                     <input type="button" value="다음" class="next_butt cursor">
+                                                    <div id="modal_agree_wrap">
+                                                        <div class="modal_agree_confirm">
+                                                        보험가입을 희망하시는 경우 여행 기간, 가입자명, 가입플랜을 모두 선택해주세요.
+                                                        <div class="butt">
+                                                            <input type="button" value="확인" class="cursor">
+                                                        </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="insContent2 insContent">
                                         <ul>
-                                            <li><input type="checkbox"><span>본인은 본 보험계약의 피보험자로 되는 것에 동의하며, 만일 본인이 타 여행객을 대신하여 보험 가입 절차를 이행하는 경우 본인은 여행 계약 체결에 대하여 타 여행객으로부터 적법하게 대리권을 수여 받았음을 확인합니다. 만약 대리권이 존재하지 않는 경우, 그 범위 내에서 단체보험계약이 일부 무효로 되거나 보험 사고시 보험금 지급이 거절될 수 있다는 점을 충분히 이해하였습니다.</span></li>
-                                            <li><input type="checkbox"><span>가입 전 보험계약 중요 안내 사항을 확인하였습니다.</span><div class="noti cursor">보험계약 중요 안내 사항</div></li>
-                                            <li><input type="checkbox"><span>여행보험 가입규약 및 개인정보 제 3자 제공 동의를 확인하였습니다.</span><div class="agree cursor">가입 규약 및 제 3자 제공 동의</div></li>
+                                            <li><input type="checkbox" id="agree_check0"><span>본인은 본 보험계약의 피보험자로 되는 것에 동의하며, 만일 본인이 타 여행객을 대신하여 보험 가입 절차를 이행하는 경우 본인은 여행 계약 체결에 대하여 타 여행객으로부터 적법하게 대리권을 수여 받았음을 확인합니다. 만약 대리권이 존재하지 않는 경우, 그 범위 내에서 단체보험계약이 일부 무효로 되거나 보험 사고시 보험금 지급이 거절될 수 있다는 점을 충분히 이해하였습니다.</span></li>
+                                            <li><input type="checkbox" id="agree_check1"><span>가입 전 보험계약 중요 안내 사항을 확인하였습니다.</span><div class="noti cursor">보험계약 중요 안내 사항</div></li>
+                                            <li><input type="checkbox" id="agree_check2"><span>여행보험 가입규약 및 개인정보 제 3자 제공 동의를 확인하였습니다.</span><div class="agree cursor">가입 규약 및 제 3자 제공 동의</div></li>
                                         </ul>
                                         <h2>유의사항</h2>
                                             <ul class="ins_noti">
@@ -1509,8 +1517,14 @@
                                                 (평일 업무시간: 9:00~18:00 / 주말, 공휴일 제외)</li>
                                             </ul>
                                         <div class="ins_butt_wrap">
-                                            <input type="button" class="ins_before_butt cursor" value="이전"/>
-                                            <intput type="submit" class="ins_join_butt cursor" value="여행보험 가입하기"/>
+                                            <input type="button" class="ins_before_butt cursor" value="이전">
+                                            <input type="submit" class="ins_join_butt cursor" value="여행보험 가입하기"/>
+                                        </div>
+                                        <div class="modal_join_ins modal_agree2">
+                                            보험 가입 요청이 완료되었습니다.
+                                            <div class="butt">
+                                                <input type="button" value="확인">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1518,7 +1532,7 @@
                                 <div id="modal_insurance_info_wrap">
                                     <div class="modal_insurance_info_wrap">
                                         <div class="title">
-                                            <span>보험계약 중요 안내사항</span><span class="close"><img src="./img/close.png" alt=""></span>
+                                            <span>보험계약 중요 안내사항</span><span class="close cursor"><img src="./img/close.png" alt=""></span>
                                         </div>
                                         <div class="content">
                                             <table class="product_int">
@@ -1555,93 +1569,169 @@
                                                     <th class="borderT">보험료</th>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행중 상해사망후유장해<span class="cursor"></span></td>
+                                                    <td class="left">국내여행중 상해사망후유장해<span class="cursor cursor1"><p class="detail detail1">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>7,000만원</td>
                                                     <td>419</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해 급여 실손의료비(입원_기본)<span class="cursor"></span></td>
+                                                    <td class="left">상해 급여 실손의료비(입원_기본)
+                                                        <span class="cursor cursor2">
+                                                            <p class="detail detail2 defualt">
+                                                                <span class="txt">국내여행중 상해사망후유장해</span>
+                                                                <span class="close pointer">x</span>
+                                                                국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                            </p>
+                                                        </span>
+                                                    </td>
                                                     <td>1,000만원</td>
                                                     <td>84</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해 급여 실손의료비(통원_기본)<span class="cursor"></span></td>
+                                                    <td class="left">상해 급여 실손의료비(통원_기본)<span class="cursor cursor3"><p class="detail detail3 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>10만원</td>
                                                     <td>31</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해 비급여 실손의료비(입원_특약)<span class="cursor"></span></td>
+                                                    <td class="left">상해 비급여 실손의료비(입원_특약)<span class="cursor cursor4"><p class="detail detail4 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>1,000만원</td>
                                                     <td>80</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해 비급여 실손의료비(통원_특약)<span class="cursor"></span></td>
+                                                    <td class="left">상해 비급여 실손의료비(통원_특약)<span class="cursor cursor5"><p class="detail detail5 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>10만원</td>
                                                     <td>24</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해질병 3대 비급여 실손의료비(도수,체외충격파,증식치료_특약)<span class="cursor"></span></td>
+                                                    <td class="left">상해질병 3대 비급여 실손의료비(도수,체외충격파,증식치료_특약)<span class="cursor cursor6"><p class="detail detail6 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>350만원</td>
                                                     <td>452</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해질병 3대 비급여 실손의료비(주사치료_특약)<span class="cursor"></span></td>
+                                                    <td class="left">상해질병 3대 비급여 실손의료비(주사치료_특약)<span class="cursor cursor7"><p class="detail detail7 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>250만원</td>
                                                     <td>183</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">상해질병 3대 비급여 실손의료비(자기공명영상진단_특약)<span class="cursor"></span></td>
+                                                    <td class="left">상해질병 3대 비급여 실손의료비(자기공명영상진단_특약)<span class="cursor cursor8"><p class="detail detail8 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>300만원</td>
                                                     <td>448</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행중 배상책임(자기부담금 1만원)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행중 배상책임(자기부담금 1만원)<span class="cursor cursor9"><p class="detail detail9 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>100만원</td>
                                                     <td>11</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행중 휴대품손해(분실제외, 자기부담금1만원, 이동통신단말기 보상제외)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행중 휴대품손해(분실제외, 자기부담금1만원, 이동통신단말기 보상제외)<span class="cursor cursor10"><p class="detail detail10 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>20만원</td>
                                                     <td>3</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 골절(치아파절제외)진단비<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 골절(치아파절제외)진단비<span class="cursor cursor11"><p class="detail detail11 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>10만원</td>
                                                     <td>107</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 화상진단비<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 화상진단비<span class="cursor cursor12"><p class="detail detail12 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>10만원</td>
                                                     <td>16</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 상해입원일당(4일이상 30일한도)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 상해입원일당(4일이상 30일한도)<span class="cursor cursor13"><p class="detail detail13 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>2만원</td>
                                                     <td>281</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 상해응급실내원(응급)치료비<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 상해응급실내원(응급)치료비<span class="cursor cursor14"><p class="detail detail14 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>3만원</td>
                                                     <td>82</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 상해응급실내원(비응급)치료비<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 상해응급실내원(비응급)치료비<span class="cursor cursor15"><p class="detail detail15 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>1만원</td>
                                                     <td>6</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 골절수술비(동일사고당 1회한)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 골절수술비(동일사고당 1회한)<span class="cursor cursor16"><p class="detail detail16 defualt">
+                                                        <span class="txt">국내여행중 상해사망후유장해</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 중 급격하고도 우연한 외래의 사고로 피보험자가 사망하거나 후유장해가 발생하였을 경우, 사망시에는 가입금액 전액, 후유장해시에는 약관상의 후유장해지급율표에 따라 가입금액의 3％~100％를 지급
+                                                    </p></span></td>
                                                     <td>20만원</td>
                                                     <td>56
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 상해수술비(동일사고당 1회한)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 상해수술비(동일사고당 1회한)<span class="cursor cursor17"><p class="detail detail17 defualt">
+                                                        <span class="txt">국내여행 상해수술비(동일사고당 1회한)</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 도중에 상해로 인하여 수술을 받은 경우 1사고당 특약가입금액 지급(동일사고당 1회한) ※ 하나의 사고로 인하여 두 종류 이상의 상해수술을 받은 경우에는 하나의 상해수술비 보험금만을 지급
+                                                    </p></span></td>
                                                     <td>20만원</td>
                                                     <td>165</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left">국내여행 깁스치료비(동일사고 또는 질병당 1회한)<span class="cursor"></span></td>
+                                                    <td class="left">국내여행 깁스치료비(동일사고 또는 질병당 1회한)<span class="cursor cursor18"><p class="detail detail18 defualt">
+                                                        <span class="txt">국내여행 깁스치료비</span>
+                                                        <span class="close pointer">x</span>
+                                                        국내여행 도중에 상해 또는 질병으로 인하여 깁스(Cast)치료를 받은 경우 매사고시마다 특약가입금액 지급 ※ 동일한 상해 또는 질병으로 인하여 깁스치료를 2회 이상 받은 경우, 또는 동시에 서로 다른 신체부위에 깁스치료를 받은 경우에는 1회에 한하여 깁스치료비 보험금을 지급 ※ 상해라 함은 국내여행 도중에 발생한 급격하고도 우연한 외래의 사고로 신체(의수, 의족, 의안, 의치 등 신체보조장구는 제외하나, 인공장기나 부분 의치 등 신체에 이식되어 그 기능을 대신할 경우는 포함합니다)에 입은 상해를 말합니다.
+                                                    </p></span></td>
                                                     <td>20만원</td>
                                                     <td>162</td>
                                                 </tr>
@@ -1743,7 +1833,7 @@
                                                     <ul>
                                                         <li>- 의료급여 수급권자에 해당하는 피보험자가 실손의료보험(담보) 가입시 보험료 10%할인 적용됩니다.
                                                         </li>
-                                                        <li>* 단, 의료급여 수급권자를 증명할 수 있는 서류를 제출한 경우에 한함<</li>
+                                                        <li>* 단, 의료급여 수급권자를 증명할 수 있는 서류를 제출한 경우에 한함</li>
                                                     </ul>
                                                 </li>
                                                 <li>14. 전환 계약 시 유의사항
@@ -1769,10 +1859,57 @@
                                                 </li>
                                             </ul>
                                             <p>※ 위 사항은 약관 내용을 요약 발췌한 것으로 세부 내용은 약관을 참조하시기 바랍니다.</p>
-                                        </div>
+                                            <input type="button" class="butt_ok cursor" value="확인">
+                                            <div class="modal_agree2">
+                                                보험 가입자 모두 체크해 주시기 바랍니다.
+                                                <div class="butt">
+                                                    <input type="button" value="확인">
+                                                </div>
+                                            </div>
+                                        </div>            
                                     </div>
                                 </div>
                                 <!--보험계약 안내사항 모달창 끝-->
+                                <!--여행자보험 가입규약 및 개인정보 제3자 제공 동의 모달창-->
+                                <div id="modal_agreement_wrap">
+                                    <div class="modal_agreement_wrap">
+                                        <div class="title">
+                                            <span class="txt">여행자보험 가입규약 및 개인정보 제3자 제공 동의</span>
+                                            <span class="close cursor"><img src="./img/close.png" alt="닫기"></span>
+                                        </div>
+                                        <div class="content">
+                                            <h2>단체(취급)여행보험 가입규약</h2>
+                                            <div class="rule rule1">
+                                                <ul>
+                                                    <li>1. 진에어는 보험 계약자를 진에어로, 피보험자 및 보험 수익자를 여객 탑승객 혹은 진에어 온라인회원으로 하는 단체(취급) 여행보험계약을 체결할 수 있습니다. 단, 보험금의 종류가 사망보험금인 경우에는 그 보험수익자를 피보험자의 법적 상속인으로 합니다.</li>
+                                                    <li>2. 탑승객은 제1항의 보험계약에 따른 담보항목 및 내용을 진에어가 제공하는 정보를 통해 확인할 수 있으며 보험료는 진에어를 통해 보험회사에 납부됩니다.</li>
+                                                    <li>3. 제2항에 따라 보험료를 납부한 회원은 피보험자의 권리를 행사할 수 있습니다.</li>
+                                                    <li>4. 보험 계약에 관한 세부 내용은 보험사가 제공하는 보험 약관에 따릅니다.</li>
+                                                </ul>
+                                            </div>
+                                            <label for="agree1"><input type="checkbox" name="agree1" id="agree1">동의</label>
+                                            <h2>단체 여행보험계약의 체결 및 이행을 위한 개인정보 제3자 제공</h2>
+                                            <div class="rule rule2">
+                                                <ul>
+                                                    <li>제공받는자: 에이스아메리칸화재해상보험주식회사 한국지점</li>
+                                                    <li>제공목적: 단체 여행보험계약의 체결 및 이행</li>
+                                                    <li>제공항목: 예약번호, 여행일, 여행지, 영문 성함, 생년월일, 성별, 전화번호, 이메일</li>
+                                                    <li>보유기간: 개인정보를 제공받는 자의 이용목적을 달성할 때까지(최대 거래종료 후 5년까지)</li>
+                                                </ul>
+                                            </div>
+                                            <label for="agree2"><input type="checkbox" name="agree2" id="agree2">동의</label>
+                                        </div>
+                                        <div class="butt_wrap">
+                                        <input type="button" value="동의" class="butt_agree cursor"><input type="button" value="취소" class="butt_canc cursor"></div>
+                                        <div class="modal_agree2" id="modal_agree">
+                                            모든 사항에 동의해주셔야 여행보험 가입이 가능합니다.
+                                            <div class="butt">
+                                                <input type="button" value="확인">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--여행자보험 가입규약 및 개인정보 제3자 제공 동의 모달창 끝-->
                             </div>
                             <!--보험 선택 랩 끝-->
                         </div>

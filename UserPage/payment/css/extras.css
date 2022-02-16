@@ -2043,11 +2043,10 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 800;
-    /* display: none; */
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap {
-    width: 50%;
+    width: 60%;
     height: 800px;
 }
 
@@ -2082,6 +2081,7 @@ body{
     padding: 20px;
     overflow: scroll;
     overflow-x: hidden;
+    position: relative;
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .content table {
@@ -2129,28 +2129,44 @@ body{
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .nameBox {
     display: flex;
-    padding: 10px;
+    padding: 10px 20px;
     align-items: center;
-    width: 160px;
-    height: 40px;
-    border: 2px solid rgb(0, 173, 209);
+    width: 230px;
+    height: 50px;
+    border: 3px solid rgb(0, 173, 239);
     margin: 30px 40px 15px;
+    color: rgb(0, 173, 239);
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .nameBox .checkbox {
     margin-right: 10px;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed th {
     background-color: #f7f7f6;
     line-height: 40px;
+    border-right: 1px solid rgba(173, 173, 173, 0.5);
+    border-bottom: 1px solid rgba(173, 173, 173, 0.5);
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed th:last-child {
+    border-right: none;
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td {
     padding: 20px;
     text-align: center;
+    border-right: 1px solid rgba(173, 173, 173, 0.5);
+    border-bottom: 1px solid rgba(173, 173, 173, 0.5);
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td:last-child {
+    border-right: none;
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left {
@@ -2160,20 +2176,285 @@ body{
     align-items: center;
 }
 
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left span.cursor {
+    position: relative;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left span.cursor::before {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0 0 10px;
+    content: " ";
+    background: url("../img/ico_ins.png");
+    background-size: 100%;
+}
+
 #modal_insurance_info_wrap .modal_insurance_info_wrap .content li {
     text-indent: -20px;
     padding-left: 10px;
     line-height: 25px;
 }
 
-#modal_insurance_info_wrap .modal_insurance_info_wrap .content ul + p {
-    margin-top: 35px;
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content li > ul > li {
+    text-indent: 0;
+    padding-left: 0px;
 }
 
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content ul + p {
+    margin-top: 35px;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 70px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .butt_ok {
+    position: fixed;
+    width: 150px;
+    bottom: 75px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 45px;
+    border: none;
+    background-color: #BDD600;
+}
+
+table .detail {
+    position: absolute;
+    width: 280px;
+    left: 40px;
+    padding: 10px 20px;
+    bottom: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    display: none;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.detail .txt {
+    color: #661e43;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.detail .close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+table .defualt {
+    cursor: default;
+}
+
+table .pointer {
+    cursor: pointer;
+    margin-left: 15px;
+}
 
 /*보험계약 안내사항 모달창 끝*/
 
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의*/
+#modal_agreement_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
 
+#modal_agreement_wrap .modal_agreement_wrap {
+    width: 58%;
+    height: 800px;
+    background-color: #fff;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .title {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #661e43;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-left: 8px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .title img {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 30px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .content {
+    padding: 20px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule {
+    margin: 20px 0;
+    width: 100%;
+    height: 200px;
+    padding: 20px 25px;
+    border: 1px solid rgba(173, 173, 173, 0.5);
+    line-height: 23px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label+h2 {
+    margin-top: 20px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule2 {
+    height: 160px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule2 li::before {
+    content: " - ";
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input {
+    width: 150px;
+    height: 45px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input.butt_agree {
+    background-color: #BDD600;
+    border: none;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input.butt_canc {
+    background-color: #fff;
+    border: 1px solid #BDD600;
+}
+
+
+.modal_agree2 {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #661e43;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+.modal_agree2 .butt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_agree2 .butt input {
+    width: 100px;
+    height: 45px;
+    margin-top: 30px;
+    background-color: #BDD600;
+    border: none;
+    font-weight: bold;
+}
+
+
+#modal_insurance_info_wrap .modal_agree2 {
+    top: 250px;
+    text-align: center;
+    height: 150px;
+}
+
+#modal_insurance_info_wrap .modal_agree2 .butt input{
+    margin-top: 20px;
+}
+
+#modal_agree_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_agree_wrap .modal_agree_confirm {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #661e43;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.modal_agree_confirm .butt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_agree_confirm .butt input {
+    width: 100px;
+    height: 45px;
+    margin-top: 30px;
+    background-color: #BDD600;
+    border: none;
+    font-weight: bold;
+}
+
+
+
+
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의 끝*/
 
 /*부가서비스 신청 끝*/
 
