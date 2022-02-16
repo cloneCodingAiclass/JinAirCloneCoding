@@ -348,23 +348,16 @@ body {
 #container > .contentswrap > .lcc {
     letter-spacing: 1.2px;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #container > .contentswrap > .lcc .lcc_title {
     font-size: 2.8em;
     font-weight: 600;
     color: rgb(102, 30, 67);
-}
-
-#container > .contentswrap > .lcc .title_sub {
-    font-size: 1.45em;
-    font-weight: 600;
-    margin-top: 25px;
-    line-height: 30px;
-    letter-spacing: 1.2px;
-}
-#container > .contentswrap > .lcc img {
-    margin-left: 250px;
+    align-content: center;
+    margin-top: 50px;
 }
 
 #container > .contentswrap .lcc_kind table {
@@ -409,7 +402,7 @@ body {
 }
 #container > .contentswrap .lcc_contents .search_box {
     margin-top: 50px;
-    padding: 50px;
+    padding: 50px 0;
 }
 #container > .contentswrap .lcc_contents .search_list{
     margin: 0 50px;
@@ -421,13 +414,33 @@ body {
 #container > .contentswrap .lcc_contents .search_box h3,
 #container > .contentswrap .lcc_contents .search_list h3 {
     margin-bottom: 15px;
-    font-size: 28px;
+    font-size: 1.17rem;
     font-weight: bold;
 }
-#container > .contentswrap .lcc_contents .search_box span,
-#container > .contentswrap .lcc_contents .search_list .subtitle {
-    font-size: 18px;
+.go_select > div, .arrive_select > div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.go_select > div p, .arrive_select > div p{
+    margin-top: 35px;
+    display: flex;
+    font-size: 1.17rem;
+    margin-right: 20px;
+    font-weight: 600;
+}
+#container > .contentswrap .lcc_contents .search_box .go_select_opt{
+    font-size: 1rem;
     margin-left: 10px;
+    font-weight: 600;
+}
+#container > .contentswrap .lcc_contents .search_list .subtitle {
+    font-size: 0.9rem !important;
+    margin-left: 10px;
+    font-weight: 600;
+}
+#container > .contentswrap .lcc_contents .search_box .sub_title{
+    font-size: 1.5rem;
 }
 #container > .contentswrap .lcc_contents .search_list span {
     font-weight: bold;
@@ -440,16 +453,16 @@ body {
 }
 /* lcc_content - person layer */
 .lcc_contents .search_box .search_form .person_layerbtn {
-    height: 40px;
+    height: auto;
     text-align: center;
     cursor: pointer;
-    background-color: #fff;
-    border: 2px solid #e9e9e9;
-    box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);
 }
 .lcc_contents .search_box .search_form .person_layerbtn span {
-    line-height: 1.9;
     font-weight: bold;
+    font-size: 1.2rem;
+}
+.lcc_contents .search_box .search_form .person_layerbtn .person_num {
+    font-size: 1.2rem;
 }
 
 .lcc_contents .search_box .search_form .person_layerbtn .person_down_img {
@@ -469,6 +482,7 @@ body {
 }
 .lcc_contents .search_box .search_form .person_pop_layer {
     width: 300px;
+    padding-top: 20px;
     display: none;
     position: absolute;
     height: auto;
@@ -485,7 +499,6 @@ body {
     line-height: 3;
     vertical-align: middle;
 }
-
 .lcc_contents .search_box .search_form .person_pop_layer li .num_font {
     margin-left: 20px;
     font-size: 26px;
@@ -495,10 +508,11 @@ body {
 
 .lcc_contents .search_box .search_form .person_pop_layer li .person_font {
     margin-left: 10px;
+    font-size: 1.3rem !important;
     vertical-align: middle;
     color: #7e0049;
+    font-weight: 600;
 }
-
 .lcc_contents .search_box .search_form .person_pop_layer li .child_info_btn,
 .lcc_contents .search_box .search_form .person_pop_layer li .baby_info_btn {
     border: none;
@@ -508,19 +522,29 @@ body {
     vertical-align: middle;
     text-align: center;
 }
-
-.lcc_contents .search_box .search_form .person_pop_layer li .cnt_person_btn {
+.lcc_contents .search_box .search_form .person_pop_layer li .person_btn {
     vertical-align: middle;
     margin-left: -4px;
     width: 90px;
 }
+.lcc_contents .search_box .search_form .person_pop_layer li .person_btn a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    vertical-align: top;
+    object-fit: cover;
+}
+
 
 .lcc_contents
     .search_box
     .search_form
     .person_pop_layer
     li
-    .cnt_person_btn
+    .person_btn
     > button {
     width: 40px;
     height: 40px;
@@ -540,20 +564,6 @@ body {
 .baby_plus:hover {
     color: #7e0049;
     border: 2px solid #7e0049;
-}
-.lcc_contents .search_box .search_form .person_pop_layer li .person_btn {
-    margin: 0 auto;
-    text-align: center;
-}
-.lcc_contents .search_box .search_form .person_pop_layer li .person_btn button {
-    margin: 8px auto;
-    padding: 10px;
-    width: 90%;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #bdd600;
-    border: none;
-    cursor: pointer;
 }
 .lcc_contents .search_box .search_form .person_pop_layer li .cnt_age {
     padding: 24px 20px;
@@ -591,12 +601,36 @@ body {
     color: transparent;
     cursor: pointer;
 }
+.form1{
+    margin-left: 50px;
+}
+.form2{
+    display: flex;
+    justify-content: space-around;
+}
+.lcc_contents .search_box .search_form .person_pop_layer .modal_submit_btn{
+    height: 40px;;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+}
+.lcc_contents .search_box .search_form .person_pop_layer .modal_submit_btn a {
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #bdd600;
+    cursor: pointer;
+    height: 100%;
+    padding: 10px;
+}
 
 /* 출발지 */
 /* 레이어 버튼 모음 */
 .lcc_contents .search_box .search_form .go_layerbtn,
 .lcc_contents .search_box .search_form .arrive_layerbtn,
-.lcc_contents .search_box .search_form .go_date_layerbtn {
+.lcc_contents .search_box .search_form input[type="text"] {
     margin-right: 2px;
     width: 235px;
     height: 55px;
@@ -608,52 +642,55 @@ body {
     display: flex;
     text-align: center;
     cursor: pointer;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
+.arrive_layerbtn{
+    margin-right: 20px;
+}
 .lcc_contents .search_box .search_form .go_layerbtn span {
     font-weight: bold;
-    line-height: 2;
-    margin-left: -15px;
     line-height: 3;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .go_layerbtn .go_down_img {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .go_layerbtn .go_up_img {
     display: none;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 .lcc_contents .lcc_search .search_box .search_form .go_layer {
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 600px !important;
-    left: 230px;
+    top: 570px !important;
+    left: 180px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 .lcc_contents .search_box .search_form .go_layer div {
     width: 160px;
     height: 100%;
     vertical-align: top;
     margin: 0 auto;
-    margin-left: 3px;
 }
 .lcc_contents .search_box .search_form .go_layer div h3 {
     color: #7e0049;
     font-weight: bold;
     margin-bottom: 20px;
+    font-feature-settings: 14px;
+    
 }
 .lcc_contents .search_box .search_form .go_layer div li a {
     font-size: 14px;
@@ -670,35 +707,35 @@ body {
 /* 도착지 */
 .lcc_contents .search_box .search_form .arrive_layerbtn span {
     font-weight: bold;
-    line-height: 2;
-    margin-left: -15px;
     line-height: 3;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .arrive_layerbtn .arrive_down_img {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .arrive_layerbtn .arrive_up_img {
     display: none;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 #container .contentswrap .arrive_layer {
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 600px;
-    left: 230px;
+    top: 570px !important;
+    left: 180px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 .lcc_contents .search_box .search_form .arrive_layer div {
     width: 160px;
@@ -729,26 +766,25 @@ body {
     display: flex;
     cursor: pointer;
     vertical-align: middle;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .lcc_contents .search_box .search_form .go_date_layerbtn span {
     font-weight: bold;
-    line-height: 2;
-    margin-left: -15px;
     line-height: 3;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .go_date_layerbtn .go_date_down_img {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
+    padding: 0 10px;
     cursor: pointer;
 }
 .lcc_contents .search_box .search_form .go_date_layerbtn .go_date_up_img {
     display: none;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
+    padding: 0 10px;
     cursor: pointer;
 }
 /* 조회 버튼 */
@@ -763,6 +799,7 @@ body {
     background-color: #bdd600;
     font-weight: bold;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 
@@ -862,21 +899,38 @@ body {
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 600px;
-    left: 230px;
+    top: 525px !important;
+    left: 80px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
 }
-.custom_search .search_box .search_form .budge {
-    margin-left: 110px;
-    font-weight: bold;
+.custom_search .search_form{
+    padding: 50px !important;
 }
-.custom_search .search_box .search_form p {
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 5px;
+.custom_search .search_box .search_form .full_box{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.custom_search .search_box .search_form .full_box .custom_box{
+    display: flex;
+    align-content: center;
+}
+.custom_search .search_box .search_form .full_box .term{
+    display: flex;
+    align-content: center;
+}
+.custom_search .search_box .search_form .budge {
+    display: flex;
+    align-content: center;
+
+}
+.custom_search .search_box .search_form .budge span{
+    display: flex;
+    margin-top: 40px;
+    font-weight: 600;
 }
 .custom_search .search_box .search_form .budge input {
     width: 200px;
@@ -884,8 +938,9 @@ body {
     text-align: center;
     background-color: #fff;
     border: 2px solid #e9e9e9;
-    box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);
-    font-weight: bold;
+    box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);    font-size: 1rem;
+    margin-left: 10px;
+    font-weight: 600;
 }
 .custom_search .search_box .search_form .budge input:focus {
     border: none;
@@ -900,14 +955,10 @@ body {
     cursor: pointer;
 }
 
-.to__{
-    margin-left: 95px !important;
-    margin-right: 95px;
-}
 .lcc_contents .search_box .search_form .start_date_layerbtn,
 .lcc_contents .search_box .search_form .end_date_layerbtn {
     margin-right: 2px;
-    width: 250px;
+    width: 235px;
     height: 55px;
     margin-top: 20px;
     background-color: #fff;
@@ -917,21 +968,20 @@ body {
     display: flex;
     text-align: center;
     cursor: pointer;
-    justify-content: space-around;
-}
-.lcc_contents .search_box .search_form .start_date_layerbtn,
-.lcc_contents .search_box .search_form .end_date_layerbtn{
+    justify-content: space-between;
     font-weight: bold;
-    line-height: 2;
     line-height: 3;
+    font-size: 1rem;
+    padding: 0 10px;
+    font-weight: 600;
 }
 .lcc_contents .search_box .search_form .start_date_layerbtn .start_date_down_img,
 .lcc_contents .search_box .search_form .end_date_layerbtn .end_date_down_img {
     display: inline-block;
     height: 30px;
     vertical-align: middle;
-    margin-right: -30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 .lcc_contents .search_box .search_form .start_date_layerbtn .start_date_up_img,
 .lcc_contents .search_box .search_form .end_date_layerbtn .end_date_up_img {
@@ -941,15 +991,19 @@ body {
     margin-right: -30px;
     cursor: pointer;
 }
-.custom_search .search_box .search_form .term {
-    margin-top: 30px;
-    border-top: 0.5px solid rgb(153, 153, 153, 0.3);
+.submit_btn{
+    display: flex;
+    justify-content: center;
 }
-.custom_search .search_box .search_form .term h4 {
-    margin-top: 20px;
-    text-align: center;
+.submit_btn input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #bdd600;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
-
 
 /* 지금 이순간 */
 .domestic,
@@ -1327,4 +1381,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.person_pop_layer img:hover{
+    object-position: 0 bottom;
 }
