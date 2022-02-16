@@ -576,30 +576,13 @@ body {
 #container #reservation .go_layerbtn span,
 #container #reservation .go_layerbtn2 span {
     font-weight: bold;
-    margin-left: -30px;
     line-height: 3;
 }
 #container #reservation .go_layerbtn .go_select_opt,
 #container #reservation .arrive_layerbtn .arrive_select_opt,
 #container #reservation .go_date_layerbtn .go_date_select_opt,
 #container #reservation .come_date_layerbtn .come_date_select_opt{
-    font-size: 1.2rem;
-}
-#container #reservation .go_layerbtn .go_down_img,
-#container #reservation .go_layerbtn2 .go_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .go_layerbtn .go_up_img,
-#container #reservation .go_layerbtn2 .go_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
+    font-size: 18px;
 }
 #container #reservation .go_layer,
 #container #reservation .go_layer2 {
@@ -615,6 +598,7 @@ body {
     z-index: 10;
 }
 #container #reservation .go_layer2 {
+    position: absolute;
     top: 225px;
 }
 #container #reservation .go_layer div,
@@ -659,24 +643,7 @@ body {
 #container #reservation .arrive_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .arrive_layerbtn .arrive_down_img,
-#container #reservation .arrive_layerbtn2 .arrive_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .arrive_layerbtn .arrive_up_img,
-#container #reservation .arrive_layerbtn2 .arrive_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 #container #reservation .arrive_layer,
 #container #reservation .arrive_layer2 {
@@ -736,24 +703,7 @@ body {
 #container #reservation .go_date_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .go_date_layerbtn .go_date_down_img,
-#container #reservation .go_date_layerbtn2 .go_date_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .go_date_layerbtn .go_date_up_img,
-#container #reservation .go_date_layerbtn2 .go_date_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 
 /* 오는날 */
@@ -766,22 +716,7 @@ body {
 #container #reservation .come_date_layerbtn span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .come_date_layerbtn .come_date_down_img {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .come_date_layerbtn .come_date_up_img {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 
 /* reserve_oneway */
@@ -801,7 +736,37 @@ body {
 }
 #container #reservation .reserve_multi .multi2 {
     margin-top: 10px;
+    font-size: 18px;
 }
+
+.go_select_opt,
+.arrive_select_opt,
+.go_date_select_opt,
+.come_date_select_opt,
+.go_select_opt2,
+.arrive_select_opt2,
+.go_date_select_opt2{
+    width: 100%;
+    text-align: center;
+    padding-right: 30px;
+    background: url(../img/down2.png) no-repeat;
+    background-size: 10%;
+    background-position: 95% 45%;
+}
+.go_select_opt.on,
+.arrive_select_opt.on,
+.go_date_select_opt.on,
+.come_date_select_opt.on,
+.go_select_opt2.on,
+.arrive_select_opt2.on,
+.go_date_select_opt2.on{
+    width: 100%;
+    text-align: center;
+    background: url(../index_img/up.png) no-repeat;
+    background-size: 10%;
+    background-position: 95% 45%;
+}
+
 
 /* 예약 다음 버튼 */
 .reservate {
@@ -1290,5 +1255,154 @@ body {
     color:#666;
 }
 .child_info_btn, .baby_info_btn{
+    cursor: pointer;
+}
+/* 달력 모달 */
+.cal{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.cal2{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.cal3{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.x_box{
+    z-index: 9999;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    background-color: #661e43;
+    position: relative;
+    left: 1235px;
+    bottom: 412px;
+}
+.x_box img{
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: auto;
+}
+.calwrapper{
+    width: 1180px;
+    height: 880px;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+}
+.caltop{
+    width: 1180px;
+    height: 70px;
+    display: block;
+}
+.caltop p{
+    display: inline-block;
+    font-size: 46px;
+    font-weight: 600 !important;
+    margin-top: 30px;
+}
+.caltop p.whatday{
+    position: relative;
+    left: 63px;
+}
+.caltop p.cal_right{
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 30px 0;
+    position: relative;
+    bottom: 20px;
+    left: 450px;
+    background: url(../img/down.png) no-repeat;
+    background-size: 15%;
+    background-position: 95% 10%;
+}
+.calwrapper > table{
+    padding-top: 40px;
+    text-align: center;
+    width: 1179px;
+    height: 60px;
+    box-shadow:  0px 2px 3px rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 600;
+}
+.calwrapper > table tr td:nth-child(1){
+    color: rgb(218, 0, 0);
+}
+.calinner{
+    width: 100%;
+    height: 939px;
+    border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+    overflow: hidden;
+}
+.calscroll{
+    height: 750px;
+    overflow: hidden;
+}
+.calscroll > iframe{
+    width: 100%;
+    height: 100%;
+}
+/* 모달 */
+.modal_container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modal_container > .modals p{
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.modal_container > .modals{
+    width: 290px;
+    height: 180px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    border-radius: 1px;
+    border: 1px solid #BDD600;
+    display: flex;
+    margin: 300px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal_container > .modals form{
+    display: flex;
+    justify-content: center;
+}
+.modal_container > .modals input{
+    font-size: 14px;
+    font-weight: 900;
+    width: 80px;
+    height: 40px;
+    background-color:#BDD600;
+    border: none;
+    margin: 40px 10px 0;
     cursor: pointer;
 }

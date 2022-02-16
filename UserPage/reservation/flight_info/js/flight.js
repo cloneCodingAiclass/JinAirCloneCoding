@@ -194,7 +194,7 @@ $(function () {
 
     // 왕복 달력 모달
     $('.go_date_select_opt').on('click', function () {
-        if(bbb == 'n' || ccc == 'n'){
+        if(bbb == 'n' && ccc == 'n'){
             departure();
             $('.cal').css({"display":"none"});
         }else if(bbb == 'y' && ccc == 'n'){
@@ -205,7 +205,7 @@ $(function () {
         }
     })
     $('.come_date_select_opt').on('click', function () {
-        if(bbb == 'n' || ccc == 'n'){
+        if(bbb == 'n' && ccc == 'n'){
             departure();
             $('.cal').css({"display":"none"});
         }else if(bbb == 'y' && ccc == 'n'){
