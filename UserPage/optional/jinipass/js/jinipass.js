@@ -125,7 +125,7 @@ $(function () {
     })
     $('.dis_poli').on('click', function () {
         $('#container').css({"height":"2400px"});
-        $('.meal').css({"display":"block"});
+        $('.poli').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
         $('.dis_eastnorth').css({"background-color":"white", "color": "#444"});
@@ -138,7 +138,7 @@ $(function () {
     })
     $('.dis_usa').on('click', function () {
         $('#container').css({"height":"2400px"});
-        $('.meal').css({"display":"block"});
+        $('.usa').css({"display":"block"});
         $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
         $('.dis_kor').css({"background-color":"white", "color": "#444"});
         $('.dis_eastnorth').css({"background-color":"white", "color": "#444"});
