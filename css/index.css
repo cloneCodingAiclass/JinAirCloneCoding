@@ -577,6 +577,7 @@ body {
     text-align: center;
     cursor: pointer;
     justify-content: space-around;
+    
 }
 #container #reservation .go_layerbtn span,
 #container #reservation .go_layerbtn2 span {
@@ -588,6 +589,7 @@ body {
 #container #reservation .go_date_layerbtn .go_date_select_opt,
 #container #reservation .come_date_layerbtn .come_date_select_opt{
     font-size: 18px;
+    text-align: center;
 }
 #container #reservation .go_layer,
 #container #reservation .go_layer2 {
@@ -601,6 +603,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 #container #reservation .go_layer2 {
     position: absolute;
@@ -662,6 +665,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 #container #reservation .arrive_layer2 {
     top: 225px;
