@@ -1262,7 +1262,7 @@ body {
     }
 }
 
-.infant_modal, .child_modal{
+.w_180 .infant_modal,.w_180 .child_modal{
     width: 328px;
     height: auto;
     border: 1px solid #661E43;
@@ -1272,19 +1272,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
-.infant_modal p, .child_modal p{
+.w_180 .infant_modal p, .w_180 .child_modal p{
     font-size: 1.1rem;
     font-weight: 700;
     color: #661E43;
     display: flex;
     flex-direction: column;
 }
-.infant_modal ul li, .child_modal ul li{
+.w_180 .infant_modal ul li, .w_180 .child_modal ul li{
     font-size: 0.9rem;
     font-weight: 700;
 }
-.infant_modal .des, .child_modal span.des{
+.w_180 .infant_modal .des, .w_180 .child_modal span.des{
     font-size: 0.8rem;
     color:#666;
+}
+.child_info_btn, .baby_info_btn{
+    cursor: pointer;
 }
