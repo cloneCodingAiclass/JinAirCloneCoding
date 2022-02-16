@@ -688,6 +688,7 @@ body {
     height: 100%;
     vertical-align: top;
     margin: 0 auto;
+    text-align: center;
 }
 .lcc_contents .search_box .search_form .go_layer div h3 {
     color: #7e0049;
