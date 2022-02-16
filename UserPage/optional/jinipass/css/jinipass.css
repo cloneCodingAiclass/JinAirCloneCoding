@@ -373,413 +373,69 @@ body{
     background-color: rgb(102, 30, 67);
 }
 
-/* meal */
-.meal{
+/* kor */
+.kor{
     width: 100%;
-    margin-top: 60px;
+    margin-top: 30px;
 }
-.mealwrap{
+.korwrap{
     padding: 20px;
 }
-.meal_tit{
-    font-size: 24px;
-    font-weight: 900;
-}
-.meal_wrap{
-    margin-top: 20px;
-    height: 940px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-.meal_fir, .meal_sec, .meal_thi, .meal_for, .meal_fiv{
-    width: 100%;
-    height: 170px;
-}
-.meal_fir > div, .meal_sec > div, .meal_thi > div, .meal_for > div, .meal_fiv > div{
-    display: inline-block;
-}
-.meal_fir_le{
-    width: 49%;
-}
-.meal_fir_ri{
-    width: 49%;
-    
-}
-/* 1층 */
-.meal_fir_le > div{
-    vertical-align: middle;
-    display: inline-block;
-}
-.meal_fir_ri > div{
-    vertical-align: middle;
-    display: inline-block;
-}
-.meal_fir_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal01.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_fir_le_ri{
-    width: 59%;
-    height: 130px;
-}
-.meal_fir_ri_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal02.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_fir_ri_ri{
-    width: 59%;
-    height: 130px;
-}
-/* 2층 */
-.meal_sec_le > div{
-    display: inline-block;
-}
-.meal_sec_ri > div{
-    display: inline-block;
-}
-.meal_sec_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal03.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_sec_le_ri{
-    width: 59%;
-    height: 130px;
-}
-.meal_sec_ri_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal04.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_sec_ri_ri{
-    width: 59%;
-    height: 130px;
-}
-/* 3층 */
-.meal_thi_le > div{
-    display: inline-block;
-}
-.meal_thi_ri > div{
-    display: inline-block;
-}
-.meal_thi_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal05.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_thi_le_ri{
-    width: 59%;
-    height: 130px;
-}
-.meal_thi_ri_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal06.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_thi_ri_ri{
-    width: 59%;
-    height: 130px;
-}
-/* 4층 */
-.meal_for_le > div{
-    display: inline-block;
-}
-.meal_for_ri > div{
-    display: inline-block;
-}
-.meal_for_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal07.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_for_le_ri{
-    width: 59%;
-    height: 130px;
-}
-.meal_for_ri_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal08.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_for_ri_ri{
-    width: 59%;
-    height: 130px;
-}
-/* 5층 */
-.meal_fiv_le > div{
-    display: inline-block;
-}
-.meal_fiv_ri > div{
-    display: inline-block;
-}
-.meal_fiv_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/meal09.jpg) no-repeat center;
-    background-size: 100%;
-}
-.meal_fiv_le_ri{
-    width: 59%;
-    height: 130px;
-}
-.meal_name{
-    font-size: 18px;
-    font-weight: 900;
-    color: rgb(102, 30, 67);
-    margin-left: 14px;
-    margin-bottom: 5px;
-}
-.meal_kind{
-    font-size: 13px;
-    font-weight: 600;
-    margin-left: 14px;
-    margin-bottom: 5px;
-}
-.meal_price{
-    font-size: 13px;
-    font-weight: 600;
-    margin-left: 14px;
-    margin-bottom: 20px;
-}
-.meal_notice1{
-    font-size: 13px;
-    font-weight: 600;
-    margin-left: 14px;
-    margin-bottom: 5px;
-}
-.meal_notice2{
-    margin-top: 7px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-left: 14px;
-    margin-bottom: 5px;
-}
-.meal_notice2::before{
-    content: "! ";
-}
-
-.bundlebox2{
-    margin-top: 70px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-.bundlebox2 > div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.jini_left{
-    width: 20%;
-    height: 280px;
-}
-.jini_right{
-    width: 79%;
-    height: 280px;
-}
-.jini_box_left p{
-    width: 160px;
-    height: 160px;
-    border: 1.5px solid #444;
-    color: rgb(126, 0, 73);
-    font-size: 50px;
-    font-weight: bolder;
-    text-align: center;
-    padding-top: 55px; 
-    margin-left: 30px;
-}
-.jini_right > p{
-    line-height: 1.6;
-    font-size: 15px;
-    font-weight: 600;
-    margin-left: 14px;
-}
-p.jini_store_title{
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-p.jini_store_content::before{
+.textcontent::before{
     content: "- ";
 }
-p.jini_store_content_sub{
-    margin-left: 26px;
-}
-.bundlebox3{
-    margin-top: 70px;
-}
-.bundlebox3 > div{
-    display: inline-block;
-    vertical-align: middle;
-}
-.jini_store_sub::before{
-    content: "* ";
-}
-p.jini_store_sub{
-    margin-left: 28px;
-    font-size: 13px;
-    font-weight: 600;
-}
-p.jini_store_subs{
-    margin-left: 39px;
-    font-size: 13px;
-    font-weight: 600;
-}
-.haccp{
-    position: relative;
-    left: 750px;
-    bottom: 60px;
-}
-
-
-
-
-/* kidsmeal */
-.kidsmeal{
-    width: 100%;
-    margin-top: 60px;
-    display: none;
-}
-.mealwrap{
-    padding: 20px;
-}
-.meal_tit{
-    font-size: 24px;
-    font-weight: 900;
-}
-.kidsmeal_wrap{
-    margin-top: 20px;
-    height: 270px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-/* 1층 */
-.kidsmeal_fir_le_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/kidsmeal01.jpg) no-repeat center;
-    background-size: 100%;
-}
-.kidsmeal_fir_ri_le{
-    width: 40%;
-    height: 130px;
-    background: url(../img/kidsmeal02.jpg) no-repeat center;
-    background-size: 100%;
-}
-
-/* freemeal */
-.freemeal{
-    width: 100%;
-    margin-top: 60px;
-    display: none;
-}
-.freemealwrapper{
-    padding: 20px;
-}
-.short_tit{
-    margin-top: 50px;
-    font-size: 16px;
-    font-weight: 900;
-}
-#container > .contentswrap .freemeal table{
-    margin: 0px 0px 20px;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid black;
-    border-collapse: collapse;
+.textcontent{
     font-size: 17px;
-    font-weight: bold;
-    box-shadow: none;
-}
-.freemeal table tr{
-    height: 60px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-.freemeal table tr:last-child{
-    border-bottom: 1px solid black;
-}
-.freemeal table tr:nth-child(1){
-    text-align: center;
-    background-color: #F2F2F2;
-}
-.freemeal table tr:nth-child(2) td:nth-child(1){
-    text-align: left;
-}
-.freemeal table td{
-    padding: 15px;
-    border-right: 1px solid rgba(128, 128, 128, 0.3);
-}
-.freemeal table td:last-child{
-    border-right: none;
-}
-.freemeal table .freemeal_img1{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals01.jpg) no-repeat center;
-    background-size: 100%;
-}
-.freemeal table .freemeal_img2{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals10.jpg) no-repeat center;
-    background-size: 100%;
-}
-.free_notice{
-    font-size: 15px;
     font-weight: 600;
+    margin-bottom: 6px;
 }
-.free_notice::before{
-    content: "※ ";
+.textcontent2{
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-left: 14px;
 }
-.freemeal table .freemeal_img3{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals04.jpg) no-repeat center;
-    background-size: 100%;
+
+/* eastnorth */
+.eastnorth{
+    width: 100%;
+    margin-top: 30px;
+    display: none;
 }
-.freemeal table .freemeal_img4{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals09.jpg) no-repeat center;
-    background-size: 100%;
+.eastnorthwrap{
+    padding: 20px;
 }
-.freemeal table .freemeal_img5{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals05.jpg) no-repeat center;
-    background-size: 100%;
+
+/* eastsouth */
+.eastsouth{
+    width: 100%;
+    margin-top: 30px;
+    display: none;
 }
-.freemeal table .freemeal_img6{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals07.jpg) no-repeat center;
-    background-size: 100%;
+.eastsouthwrap{
+    padding: 20px;
 }
-.freemeal table .freemeal_img7{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals06.jpg) no-repeat center;
-    background-size: 100%;
+
+/* poli */
+.poli{
+    width: 100%;
+    margin-top: 30px;
+    display: none;
 }
-.freemeal table .freemeal_img8{
-    margin: 0 auto;
-    width: 380px;
-    height: 250px;
-    background: url(../img/free_meals08.jpg) no-repeat center;
-    background-size: 100%;
+.poliwrap{
+    padding: 20px;
 }
+
+/* usa */
+.usa{
+    width: 100%;
+    margin-top: 30px;
+    display: none;
+}
+.usawrap{
+    padding: 20px;
+}
+
 
 
 
