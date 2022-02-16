@@ -471,35 +471,30 @@ $(() => {
 // 화면 클릭
 $(() => {
     $("body").on('click', function (e) {
-        e.stopPropagation();
         $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
         $(".trip_up_img").css({ "display": "none" });
         $('.trip_pop_layer').slideUp(50);
 
-        e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
         $(".go_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".go_down_img").css({ "display": "inline-block" });
         $(".go_up_img").css({ "display": "none" });
         $('.go_layer').slideUp(50);
 
-        e.stopPropagation();
         $(".go_layerbtn2").removeClass('close');
         $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
         $(".go_down_img2").css({ "display": "inline-block" });
         $(".go_up_img2").css({ "display": "none" });
         $('.go_layer2').slideUp(50);
 
-        e.stopPropagation();
         $(".arrive_layerbtn").removeClass('close');
         $(".arrive_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".arrive_down_img").css({ "display": "inline-block" });
         $(".arrive_up_img").css({ "display": "none" });
         $('.arrive_layer').slideUp(50);
 
-        e.stopPropagation();
         $(".arrive_layerbtn2").removeClass('close');
         $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
         $(".arrive_down_img2").css({ "display": "inline-block" });
@@ -517,8 +512,6 @@ function fnSetPaxCountDown(strPaxType,obj) {
 		iChildCount = parseInt($(btnParent).find('strong[name=childPaxCnt]').text()),
 		iInfantCount = parseInt($(btnParent).find('strong[name=infantPaxCnt]').text()),
 		iPaxCount = iAdultCount + iChildCount;
-        
-        iAdultCount = 1;
         
 	switch (strPaxType) {
 		case "ADULT":
@@ -611,5 +604,28 @@ function submit(){
         $("strong[name=person_num]").text('유아 '+iChildCount);
     }
 
+    $(".person_layerbtn").removeClass('close');
+    $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+    $(".person_down_img").css({ "display": "inline-block" });
+    $(".person_up_img").css({ "display": "none" });
     $('.person_pop_layer').slideUp(50);
 }
+
+
+$(function () {
+    $('.infant_modal').hide();
+    $('.baby_info_btn').click(function(){
+        $('.infant_modal').fadeIn(200);
+        $(body).click(function(){
+            $('.infant_modal').fadeOut(200);
+        })
+    });
+
+    $('.child_modal').hide();
+    $('.child_info_btn').click(function(){
+        $('.child_modal').fadeIn(200);
+        $(body).click(function(){
+            $('.child_modal').fadeOut(200);
+        })
+    });
+})
