@@ -134,6 +134,18 @@ $(function () {
         $('#baggage3').css({"display":"none"});
     })
     
-    
 
+    // 탭 메뉴 
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'findbaggage'){
+        $('#baggage4').css({"display":"block"});
+        $('.bag_find').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.bag_save').css({"background-color":"white", "color": "#444"});
+        $('#baggage1').css({"display":"none"});
+        $('.bag_limit').css({"background-color":"white", "color": "#444"});
+        $('#baggage2').css({"display":"none"});
+        $('.bag_compensation').css({"background-color":"white", "color": "#444"});
+        $('#baggage3').css({"display":"none"});
+    }
 });
