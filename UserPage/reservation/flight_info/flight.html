@@ -199,15 +199,43 @@
                             <label for="between">왕복</label>
                             <input type="radio" id="oneway" name="howWay" value="">
                             <label for="oneway">편도</label>
-                            <div class="sc_search_between">
+                            <!-- 왕복 -->
+                            <div class="sc_search_between sc_search_bw">
                                 <form action="#">
                                     <div class="go_back_airport">
-                                        <div class="go_select_opt">출발지</div>
-                                        <div class="arrive_select_opt">도착지</div>
+                                        <div class="go_select_opt">
+                                            <input type="text" value="출발지" readonly class="go_select_optt">
+                                        </div>
+                                        <div class="arrive_select_opt">
+                                            <input type="text" value="도착지" readonly class="arrive_select_optt">
+                                        </div>
                                     </div>
                                     <div class="go_back_date">
-                                        <div class="go_date_select_opt">가는날</div>
-                                        <div class="come_date_select_opt">오는날</div>
+                                        <div class="go_date_select_opt">
+                                            <input type="text" value="가는날" readonly class="go_date_select_optt">
+                                        </div>
+                                        <div class="come_date_select_opt">
+                                            <input type="text" value="오는날" readonly class="come_date_select_optt">
+                                        </div>
+                                    </div>
+                                    <span><input type="submit" value="조회" class="search_btn"></span>
+                                </form>
+                            </div>
+                            <div class="sc_search_between sc_search_oneway">
+                                <!-- 편도 -->
+                                <form action="#">
+                                    <div class="go_back_airport">
+                                        <div class="go_select_opt">
+                                            <input type="text" value="출발지" readonly class="go_select_optt">
+                                        </div>
+                                        <div class="arrive_select_opt">
+                                            <input type="text" value="도착지" readonly class="arrive_select_optt">
+                                        </div>
+                                    </div>
+                                    <div class="go_back_date2">
+                                        <div class="go_date_select_opt2">
+                                            <input type="text" value="가는날" readonly class="go_date_select_optt2">
+                                        </div>
                                     </div>
                                     <span><input type="submit" value="조회" class="search_btn"></span>
                                 </form>
@@ -371,11 +399,17 @@
                             <div class="sc_search_between">
                                 <form action="#">
                                     <div class="go_back_airport">
-                                        <div class="go_select_opt">출발지</div>
-                                        <div class="arrive_select_opt">도착지</div>
+                                        <div class="go_select_opt">
+                                            <input type="text" value="출발지" readonly class="go_select_optt">
+                                        </div>
+                                        <div class="arrive_select_opt">
+                                            <input type="text" value="도착지" readonly class="arrive_select_optt">
+                                        </div>
                                     </div>
                                     <div class="go_back_date">
-                                        <div class="go_date_select_opt go_date_select_opt1">가는날</div>
+                                        <div class="go_date_select_opt2">
+                                            <input type="text" value="가는날" readonly class="go_date_select_optt2">
+                                        </div>
                                     </div>
                                     <span><input type="submit" value="조회" class="de_result_btn"></span>
                                 </form>
@@ -753,7 +787,6 @@
     <!--퀵 메뉴 끝-->
     <div class="modal"></div>
     <div class="cal">
-        <div class="x_box"><img src="./img/image-removebg-preview.png" alt=""></div>
         <div class="calwrapper">
             <div class="caltop">
                 <p class="whatday">가는날</p>
@@ -770,13 +803,38 @@
                     <td>토</td>
                 </tr>
             </table>
-
             <div class="calinner">
                 <div class="calscroll">
-                    <iframe src="./cal.html" frameborder="0" id="ifm"></iframe>
+                    <iframe src="/cal/cal.html" frameborder="0" id="ifm"></iframe>
                 </div>
             </div>
         </div>
+        <div class="x_box"><img src="./img/image-removebg-preview.png" alt=""></div>
+    </div>
+    <div class="cal2">
+        <div class="calwrapper">
+            <div class="caltop">
+                <p class="whatday">가는날</p>
+                <p class="cal_right">다음 3개월</p>
+            </div>
+            <table>
+                <tr>
+                    <td>일</td>
+                    <td>월</td>
+                    <td>화</td>
+                    <td>수</td>
+                    <td>목</td>
+                    <td>금</td>
+                    <td>토</td>
+                </tr>
+            </table>
+            <div class="calinner">
+                <div class="calscroll">
+                    <iframe src="/cal/onewaycal.html" frameborder="0" id="ifm"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="x_box"><img src="./img/image-removebg-preview.png" alt=""></div>
     </div>
     <div class="modal_container">
         <div class="modals">

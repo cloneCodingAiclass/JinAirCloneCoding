@@ -627,13 +627,13 @@ function gowhatdaydd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.go_date_select_opt').html(`${str1}-${str2}-${str3}`);
+    $('.go_date_select_optt').val(`${str1}-${str2}-${str3}`);
 }
 function comewhatdaydd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.come_date_select_opt').html(`${str1}-${str2}-${str3}`);
+    $('.come_date_select_optt').val(`${str1}-${str2}-${str3}`);
 }
 
 // 편도에 넣어주기
@@ -641,7 +641,7 @@ function gowhatdayddd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.go_date_select_opt').html(`${str1}-${str2}-${str3}`);
+    $('.go_date_select_optt').val(`${str1}-${str2}-${str3}`);
 }
 
 // 다구간에 넣어주기
@@ -649,7 +649,7 @@ function gowhatdaydddd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.go_date_select_opt2').html(`${str1}-${str2}-${str3}`);
+    $('.go_date_select_optt2').val(`${str1}-${str2}-${str3}`);
 }
 
 
@@ -677,11 +677,11 @@ let bbb = 'n';
 let ccc = 'n';
 $(() => {
     // 왕복, 편도 출발지 지정
-    $('.go_layer').find('li').on('click', function (e) {
+    $('.go_layer').find('li').find('a').on('click', function (e) {
         e.stopPropagation();
         let str = '';
         str = $(this).html();
-        $('.go_select_opt').html(str);
+        $('.go_select_optt').val(str);
         $('.go_layer').slideUp(50);
         $('.arrive_layer').slideDown(100);
         $(".go_select_opt").removeClass('on');
@@ -689,10 +689,10 @@ $(() => {
         bbb = 'y';
     })
     // 왕복, 편도 도착지 지정
-    $('.arrive_layer').find('li').on('click', function () {
+    $('.arrive_layer').find('li').find('a').on('click', function () {
         let str = '';
         str = $(this).html();
-        $('.arrive_select_opt').html(str);
+        $('.arrive_select_optt').val(str);
         ccc='y';
     })
     // 왕복 달력 모달
@@ -735,11 +735,11 @@ $(() => {
 
 
     // 다구간 출발지 지정
-    $('.go_layer2').find('li').on('click', function (e) {
+    $('.go_layer2').find('li').find('a').on('click', function (e) {
         e.stopPropagation();
         let str = '';
         str = $(this).html();
-        $('.go_select_opt2').html(str);
+        $('.go_select_optt2').val(str);
         $('.go_layer2').slideUp(50);
         $('.arrive_layer2').slideDown(100);
         $(".go_select_opt2").removeClass('on');
@@ -747,10 +747,10 @@ $(() => {
         bbb = 'y';
     })
     // 다구간 도착지 지정
-    $('.arrive_layer2').find('li').on('click', function () {
+    $('.arrive_layer2').find('li').find('a').on('click', function () {
         let str = '';
         str = $(this).html();
-        $('.arrive_select_opt2').html(str);
+        $('.arrive_select_optt2').val(str);
         ccc='y';
     })
     // 다구간1 달력 모달
