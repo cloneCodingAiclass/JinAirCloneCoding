@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>프로모션 | 진에어</title>
     <link rel="stylesheet" href="./css/lcc.css" />
-    <link rel="stylesheet" href="../../../css/index.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -356,9 +355,6 @@
                                                 </li> -->
                                             </ul>
                                         </div>
-                                        <div class="refresh_btn in_bl">
-                                            <input type="reset" value="취소" />
-                                        </div>
                                     </div>
                                     <div class="form2">
                                         <!-- 출발지 -->
@@ -367,12 +363,7 @@
                                                 <p>출발지</p>
                                                 <div class="go_layerbtn">
                                                     <span class="go_select_opt">
-                                                        출발지
-                                                    </span>
-                                                    <span>
-                                                        <img class="go_down_img" src="./index_img/down.png"
-                                                            alt="드롭다운" />
-                                                        <img class="go_up_img" src="./index_img/up.png" alt="드롭업" />
+                                                        <input type="text" value="출발지" readonly class="go_select_optt">
                                                     </span>
                                                 </div>
                                             </div>
@@ -380,146 +371,65 @@
                                                 <div class="KOR in_bl">
                                                     <h3>한국</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">서울/인천(ICN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">서울/김포(GMP)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">부산(PUS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">제주(CJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">청주(CJJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">광주(KWJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">대구(TAE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">여수(RSU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">울산(USN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">포항(KPO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">원주(WJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">군산(KUV)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">사천(HIN)</a>
-                                                        </li>
+                                                        <li><a>서울/인천(ICN)</a></li>
+                                                        <li><a>서울/김포(GMP)</a></li>
+                                                        <li><a>부산(PUS)</a></li>
+                                                        <li><a>제주(CJU)</a></li>
+                                                        <li><a>청주(CJJ)</a></li>
+                                                        <li><a>광주(KWJ)</a></li>
+                                                        <li><a>대구(TAE)</a></li>
+                                                        <li><a>여수(RSU)</a></li>
+                                                        <li><a>울산(USN)</a></li>
+                                                        <li><a>포항(KPO)</a></li>
+                                                        <li><a>원주(WJU)</a></li>
+                                                        <li><a>군산(KUV)</a></li>
+                                                        <li><a>사천(HIN)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ENA in_bl">
                                                     <h3>동북아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">도쿄/나리타(NRT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오사카/간사이(KIX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">후쿠오카(FUK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">삿포로(CTS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오키나와(OKA)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">기타큐슈(KKJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">상하이/푸동(PVG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">시안(XIY)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">홍콩(HKG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">마카오(MFM)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">타이베이/타오위안(TPE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">칭다오(TAO)</a>
-                                                        </li>
+                                                        <li><a>도쿄/나리타(NRT)</a></li>
+                                                        <li><a>오사카/간사이(KIX)</a></li>
+                                                        <li><a>후쿠오카(FUK)</a></li>
+                                                        <li><a>삿포로(CTS)</a></li>
+                                                        <li><a>오키나와(OKA)</a></li>
+                                                        <li><a>기타큐슈(KKJ)</a></li>
+                                                        <li><a>상하이/푸동(PVG)</a></li>
+                                                        <li><a>시안(XIY)</a></li>
+                                                        <li><a>홍콩(HKG)</a></li>
+                                                        <li><a>마카오(MFM)</a></li>
+                                                        <li><a>타이베이/타오위안(TPE)</a></li>
+                                                        <li><a>칭다오(TAO)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ESA in_bl">
                                                     <h3>동남아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">방콕(BKK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">푸껫(HKT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">치앙마이(CNX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">세부(CEB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">클락(CRK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">보라카이/칼리보(KLO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">다낭(DAD)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">하노이(HAN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">비엔티안(VTE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">코타
-                                                                키나발루(BKI)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">조호르바루(JHB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="nonselect"
-                                                                onclick="return false;">다카(DAC)</a>
-                                                        </li>
+                                                        <li><a>방콕(BKK)</a></li>
+                                                        <li><a>푸껫(HKT)</a></li>
+                                                        <li><a>치앙마이(CNX)</a></li>
+                                                        <li><a>세부(CEB)</a></li>
+                                                        <li><a>클락(CRK)</a></li>
+                                                        <li><a>보라카이/칼리보(KLO)</a></li>
+                                                        <li><a>다낭(DAD)</a></li>
+                                                        <li><a>하노이(HAN)</a></li>
+                                                        <li><a>비엔티안(VTE)</a></li>
+                                                        <li><a>코타 키나발루(BKI)</a></li>
+                                                        <li><a>조호르바루(JHB)</a></li>
+                                                        <li><a class="nonselect" onclick="return false;">다카(DAC)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="OCE in_bl">
                                                     <h3>대양주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">괌(GUM)</a>
-                                                        </li>
+                                                        <li><a>괌(GUM)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="USA in_bl">
                                                     <h3>미주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">하와이,
-                                                                호놀룰루(HNL)</a>
-                                                        </li>
+                                                        <li><a>하와이, 호놀룰루(HNL)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -530,12 +440,7 @@
                                                 <p>도착지</p>
                                                 <div class="arrive_layerbtn">
                                                     <span class="arrive_select_opt">
-                                                        도착지
-                                                    </span>
-                                                    <span>
-                                                        <img class="arrive_down_img" src="./index_img/down.png"
-                                                            alt="드롭다운" />
-                                                        <img class="arrive_up_img" src="./index_img/up.png" alt="드롭업" />
+                                                        <input type="text" value="도착지" readonly class="arrive_select_optt">
                                                     </span>
                                                 </div>
                                             </div>
@@ -543,146 +448,65 @@
                                                 <div class="KOR in_bl">
                                                     <h3>한국</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">서울/인천(ICN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">서울/김포(GMP)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">부산(PUS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">제주(CJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">청주(CJJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">광주(KWJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">대구(TAE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">여수(RSU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">울산(USN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">포항(KPO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">원주(WJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">군산(KUV)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">사천(HIN)</a>
-                                                        </li>
+                                                        <li><a>서울/인천(ICN)</a></li>
+                                                        <li><a>서울/김포(GMP)</a></li>
+                                                        <li><a>부산(PUS)</a></li>
+                                                        <li><a>제주(CJU)</a></li>
+                                                        <li><a>청주(CJJ)</a></li>
+                                                        <li><a>광주(KWJ)</a></li>
+                                                        <li><a>대구(TAE)</a></li>
+                                                        <li><a>여수(RSU)</a></li>
+                                                        <li><a>울산(USN)</a></li>
+                                                        <li><a>포항(KPO)</a></li>
+                                                        <li><a>원주(WJU)</a></li>
+                                                        <li><a>군산(KUV)</a></li>
+                                                        <li><a>사천(HIN)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ENA in_bl">
                                                     <h3>동북아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">도쿄/나리타(NRT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오사카/간사이(KIX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">후쿠오카(FUK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">삿포로(CTS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오키나와(OKA)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">기타큐슈(KKJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">상하이/푸동(PVG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">시안(XIY)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">홍콩(HKG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">마카오(MFM)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">타이베이/타오위안(TPE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">칭다오(TAO)</a>
-                                                        </li>
+                                                        <li><a>도쿄/나리타(NRT)</a></li>
+                                                        <li><a>오사카/간사이(KIX)</a></li>
+                                                        <li><a>후쿠오카(FUK)</a></li>
+                                                        <li><a>삿포로(CTS)</a></li>
+                                                        <li><a>오키나와(OKA)</a></li>
+                                                        <li><a>기타큐슈(KKJ)</a></li>
+                                                        <li><a>상하이/푸동(PVG)</a></li>
+                                                        <li><a>시안(XIY)</a></li>
+                                                        <li><a>홍콩(HKG)</a></li>
+                                                        <li><a>마카오(MFM)</a></li>
+                                                        <li><a>타이베이/타오위안(TPE)</a></li>
+                                                        <li><a>칭다오(TAO)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ESA in_bl">
                                                     <h3>동남아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">방콕(BKK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">푸껫(HKT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">치앙마이(CNX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">세부(CEB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">클락(CRK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">보라카이/칼리보(KLO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">다낭(DAD)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">하노이(HAN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">비엔티안(VTE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">코타
-                                                                키나발루(BKI)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">조호르바루(JHB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="nonselect"
-                                                                onclick="return false;">다카(DAC)</a>
-                                                        </li>
+                                                        <li><a>방콕(BKK)</a></li>
+                                                        <li><a>푸껫(HKT)</a></li>
+                                                        <li><a>치앙마이(CNX)</a></li>
+                                                        <li><a>세부(CEB)</a></li>
+                                                        <li><a>클락(CRK)</a></li>
+                                                        <li><a>보라카이/칼리보(KLO)</a></li>
+                                                        <li><a>다낭(DAD)</a></li>
+                                                        <li><a>하노이(HAN)</a></li>
+                                                        <li><a>비엔티안(VTE)</a></li>
+                                                        <li><a>코타 키나발루(BKI)</a></li>
+                                                        <li><a>조호르바루(JHB)</a></li>
+                                                        <li><a class="nonselect" onclick="return false;">다카(DAC)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="OCE in_bl">
                                                     <h3>대양주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">괌(GUM)</a>
-                                                        </li>
+                                                        <li><a>괌(GUM)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="USA in_bl">
                                                     <h3>미주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">하와이,
-                                                                호놀룰루(HNL)</a>
-                                                        </li>
+                                                        <li><a>하와이, 호놀룰루(HNL)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -784,157 +608,72 @@
                                         <div class="go_select in_bl">
                                             <div class="go_layerbtn">
                                                 <span class="go_select_opt">
-                                                    출발지
-                                                </span>
-                                                <span>
-                                                    <img class="go_down_img" src="./index_img/down.png" alt="드롭다운" />
-                                                    <img class="go_up_img" src="./index_img/up.png" alt="드롭업" />
+                                                    <input type="text" value="출발지" readonly class="go_select_optt">
                                                 </span>
                                             </div>
                                             <div class="go_layer">
                                                 <div class="KOR in_bl">
                                                     <h3>한국</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">서울/인천(ICN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">서울/김포(GMP)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">부산(PUS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">제주(CJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">청주(CJJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">광주(KWJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">대구(TAE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">여수(RSU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">울산(USN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">포항(KPO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">원주(WJU)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">군산(KUV)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">사천(HIN)</a>
-                                                        </li>
+                                                        <li><a>서울/인천(ICN)</a></li>
+                                                        <li><a>서울/김포(GMP)</a></li>
+                                                        <li><a>부산(PUS)</a></li>
+                                                        <li><a>제주(CJU)</a></li>
+                                                        <li><a>청주(CJJ)</a></li>
+                                                        <li><a>광주(KWJ)</a></li>
+                                                        <li><a>대구(TAE)</a></li>
+                                                        <li><a>여수(RSU)</a></li>
+                                                        <li><a>울산(USN)</a></li>
+                                                        <li><a>포항(KPO)</a></li>
+                                                        <li><a>원주(WJU)</a></li>
+                                                        <li><a>군산(KUV)</a></li>
+                                                        <li><a>사천(HIN)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ENA in_bl">
                                                     <h3>동북아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">도쿄/나리타(NRT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오사카/간사이(KIX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">후쿠오카(FUK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">삿포로(CTS)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">오키나와(OKA)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">기타큐슈(KKJ)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">상하이/푸동(PVG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">시안(XIY)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">홍콩(HKG)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">마카오(MFM)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">타이베이/타오위안(TPE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">칭다오(TAO)</a>
-                                                        </li>
+                                                        <li><a>도쿄/나리타(NRT)</a></li>
+                                                        <li><a>오사카/간사이(KIX)</a></li>
+                                                        <li><a>후쿠오카(FUK)</a></li>
+                                                        <li><a>삿포로(CTS)</a></li>
+                                                        <li><a>오키나와(OKA)</a></li>
+                                                        <li><a>기타큐슈(KKJ)</a></li>
+                                                        <li><a>상하이/푸동(PVG)</a></li>
+                                                        <li><a>시안(XIY)</a></li>
+                                                        <li><a>홍콩(HKG)</a></li>
+                                                        <li><a>마카오(MFM)</a></li>
+                                                        <li><a>타이베이/타오위안(TPE)</a></li>
+                                                        <li><a>칭다오(TAO)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="ESA in_bl">
                                                     <h3>동남아</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">방콕(BKK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">푸껫(HKT)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">치앙마이(CNX)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">세부(CEB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">클락(CRK)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">보라카이/칼리보(KLO)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">다낭(DAD)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">하노이(HAN)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">비엔티안(VTE)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">코타
-                                                                키나발루(BKI)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="">조호르바루(JHB)</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" class="nonselect"
-                                                                onclick="return false;">다카(DAC)</a>
-                                                        </li>
+                                                        <li><a>방콕(BKK)</a></li>
+                                                        <li><a>푸껫(HKT)</a></li>
+                                                        <li><a>치앙마이(CNX)</a></li>
+                                                        <li><a>세부(CEB)</a></li>
+                                                        <li><a>클락(CRK)</a></li>
+                                                        <li><a>보라카이/칼리보(KLO)</a></li>
+                                                        <li><a>다낭(DAD)</a></li>
+                                                        <li><a>하노이(HAN)</a></li>
+                                                        <li><a>비엔티안(VTE)</a></li>
+                                                        <li><a>코타 키나발루(BKI)</a></li>
+                                                        <li><a>조호르바루(JHB)</a></li>
+                                                        <li><a class="nonselect" onclick="return false;">다카(DAC)</a></li>
                                                     </ul>
-                                                </div>
+                                                <</div>
                                                 <div class="OCE in_bl">
                                                     <h3>대양주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">괌(GUM)</a>
-                                                        </li>
+                                                        <li><a>괌(GUM)</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="USA in_bl">
                                                     <h3>미주</h3>
                                                     <ul>
-                                                        <li>
-                                                            <a href="" class="">하와이,
-                                                                호놀룰루(HNL)</a>
-                                                        </li>
+                                                        <li><a>하와이, 호놀룰루(HNL)</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -946,29 +685,17 @@
                                                 <input type="text" name="budge_cnt" value="100,000">
                                             </div>
                                         </div>
-                                    </div>
-                                            <div class="start_date in_bl">
-                                                <div class="start_date_layerbtn">
-                                                    <span class="start_date_select_opt">
-                                                        시작 일자
-                                                    </span>
-                                                    <span>
-                                                        <img class="start_date_down_img" src="./index_img/down.png"
-                                                            alt="드롭다운" />
-                                                        <img class="start_date_up_img" src="./index_img/up.png"
-                                                            alt="드롭업" />
-                                                    </span>
-                                                </div>
+                                        <div class="start_date in_bl">
+                                            <div class="start_date_layerbtn">
+                                                <span class="start_date_select_opt">
+                                                    <input type="text" value="가는날" readonly class="go_date_select_optt">
+                                                </span>
                                             </div>
+                                        </div>
                                         <div class="end_date in_bl">
                                             <div class="end_date_layerbtn">
                                                 <span class="end_date_select_opt">
-                                                    종료 일자
-                                                </span>
-                                                <span>
-                                                    <img class="end_date_down_img" src="./index_img/down.png"
-                                                        alt="드롭다운" />
-                                                    <img class="end_date_up_img" src="./index_img/up.png" alt="드롭업" />
+                                                    <input type="text" value="오는날" readonly class="come_date_select_optt">
                                                 </span>
                                             </div>
                                         </div>

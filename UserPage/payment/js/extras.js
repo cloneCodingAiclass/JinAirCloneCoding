@@ -175,11 +175,13 @@ $(function () {
         $(".service_menu .menu3_invert").css("display", "none");
     })
     $(".service_menu .menu3").on("click", function() {
+        $("#modal_agree_wrap").hide();
         $(".service_content_wrap1").css("display", "none");
         $(".service_content_wrap2").css("display", "none");
         $(".service_content_wrap3").css("display", "block");
         $(this).css("color", "white");
         $(this).css("background-color", "#661e43");
+        $("table .detail").css("display", "none");
 
         $(".service_menu .menu1").css("color", "#444");
         $(".service_menu .menu1").css("background-color", "#EBEBEB");
@@ -284,15 +286,40 @@ $(function () {
 
     /*스크롤시 따라다니는 영역 */
     $(window).scroll(function(){ 
-        let x = $(".seat_info_wrap").offset().left+30;
+        let x = $(".seat_info_wrap1").offset().left+30;
+        let i = $(".seat_info_wrap2").offset().left+30;
 
+        if( x == 30){
         $(".seat_map").css("top", "0px");
         $(".seat_info_wrap").css("top", "0px");
             if ($(window).scrollTop() > $(".service_title1").offset().top-115 && $(window).scrollTop() < 1900) { 
                 $(".move_map").css("position", "fixed");
-                $(".move_map").css("top", ($(".select_seat ").offset().top)/2);
+                $(".move_map").css("top", "239px");
                 $(".seat_info").css("position", "fixed");
-                $(".seat_info").css("top", ($(".select_seat ").offset().top)/2);
+                $(".seat_info").css("top", "239px");
+                $(".seat_info").css("left", i);
+                $(".seat_info").css("z-index", "20");
+            } else if ($(window).scrollTop() > 1895) {
+                $(".move_map").css("position", "absolute");
+                $(".move_map").css("top", "1680px");
+                $(".seat_info").css("position", "absolute");
+                $(".seat_info").css("top", "1680px");
+                $(".seat_info").css("left", "30px");
+            }else {
+                $(".move_map").css("position", "absolute");
+                $(".move_map").css("top", "80px");
+                $(".seat_info").css("position", "absolute");
+                $(".seat_info").css("top", "95px");
+                $(".seat_info").css("left", "30px");
+            }
+        }else{
+        $(".seat_map").css("top", "0px");
+        $(".seat_info_wrap").css("top", "0px");
+            if ($(window).scrollTop() > $(".service_title1").offset().top-115 && $(window).scrollTop() < 1900) { 
+                $(".move_map").css("position", "fixed");
+                $(".move_map").css("top", "239px");
+                $(".seat_info").css("position", "fixed");
+                $(".seat_info").css("top", "239px");
                 $(".seat_info").css("left", x);
                 $(".seat_info").css("z-index", "20");
             } else if ($(window).scrollTop() > 1895) {
@@ -309,7 +336,8 @@ $(function () {
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
             }
-    })
+        }
+    });
 
     /*스크롤시 미니맵 이동 */
     $(window).scroll(function(){ 
@@ -381,10 +409,17 @@ $(function () {
     /*수하물 선택 구간 끝 */
 
     /*보험 선택 구간 */
+    // if($(".check_ins").change()(":checked")) {
+    //     ('#select_product').attr('disabled', false);
+    // } else {
+    //     ('#select_product').attr('disabled',true);
+    //     $(".insurance_price .price").text("0");
+    // }
+
     $('#select_product').change(function() {
         $(".bot_bagg_price2 .price").text(" ");
         if($(this).val() == "실속형"){
-            $(".insurance_price .price").text("1,970");
+                $(".insurance_price .price").text("1,970");
         } else if($(this).val() == "표준형"){
             $(".insurance_price .price").text("3,660");
         } else if($(this).val() == "고급형"){
@@ -392,12 +427,12 @@ $(function () {
         }
     });
 
-    $("#check_ins").change(function(){
-        if($("#check_ins").is(":checked")){
-            $("select#select_product").prop("disabled",  false);
+    $(".ins_join_butt").on("click", function() {
+        if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
+            $(".modal_join_ins").fadeIn();
         }
         else{
-            $("select#select_product").prop("disabled", true);
+
         }
     });
 
@@ -451,16 +486,20 @@ $(function () {
     $(".insContent2").css("display", "none");
 
     $(".insurance_price .next_butt").on("click", function() {
-        $(".insurance_menu_wrap .ins_menu1").css("background-color", "#fff");
-        $(".insurance_menu_wrap .ins_menu2").css("background-color", "#661e43");
-        $(".insurance_menu_wrap .ins_menu1").css("color", "#444");
-        $(".insurance_menu_wrap .ins_menu2").css("color", "#fff");
-    
-        $(".insContent1").css("display", "none");
-        $(".insContent2").css("display", "block");
-
-
-        // $(".service_content_wrap3").animate({scrollTop:10},300);
+        if($(".check_ins").is(":checked")) {
+            $(".insurance_menu_wrap .ins_menu1").css("background-color", "#fff");
+            $(".insurance_menu_wrap .ins_menu2").css("background-color", "#661e43");
+            $(".insurance_menu_wrap .ins_menu1").css("color", "#444");
+            $(".insurance_menu_wrap .ins_menu2").css("color", "#fff");
+        
+            $(".insContent1").css("display", "none");
+            $(".insContent2").css("display", "block");
+        } else {
+            $("#modal_agree_wrap").fadeIn();
+        }
+    })
+    $("#modal_agree_wrap input").on("click", function() {
+        $("#modal_agree_wrap").fadeOut();
     })
 
     $(".insContent2 .ins_before_butt").on("click", function() {
@@ -475,6 +514,10 @@ $(function () {
         $(".insContent1").css("display", "block");
         $(".insContent2").css("display", "none");
     })
+
+
+
+
     /*보험가입 페이지 끝 */
 
     /*좌석 선택 */
@@ -649,18 +692,6 @@ $(() => {
     document.getElementById('end_date').valueAsDate = new Date('2022', '02', '20');
 });
 
-
-// $('.edit').click(function(){
-//     $('.pwcheck_modal').fadeIn(200);
-//     $('body').css('overflow', 'hidden');
-
-//     $('.btn_cancel').click(function(e){
-//         $('.pwcheck_modal').fadeOut(200);  
-//         $('body').css('overflow', '');        
-//         e.stopPropagation();  
-//     });
-// });
-
 $(()=> {
     $('#modal_free_wrap').hide();
     $(".service_title2 .section1").on('click', () => {
@@ -693,3 +724,190 @@ $(()=> {
         $("#modal_notice_wrap").fadeOut();
     })
 })
+
+
+$(()=> {
+    $(".detail .close").on('click', () => {
+        $("table .detail").fadeOut();
+    })
+})
+
+
+    /*보험 가입 모달창 */
+
+$(()=> {
+    $("#modal_insurance_info_wrap").hide();
+
+    $("#agree_check1").on("click", function() {
+        $("#modal_insurance_info_wrap").fadeIn();
+        if($(".nameBox .checkbox").is(":checked")) {
+            $(this).prop("checked", true);
+        } else {
+            $(this).prop("checked", false);
+        }
+    })
+
+
+    $(".insContent2 .noti").on("click", function() {
+        $("#modal_insurance_info_wrap").fadeIn();
+    })
+    $("#modal_insurance_info_wrap .title .close").on("click", function() {
+        $("#modal_insurance_info_wrap").fadeOut();
+    })
+
+    $("#modal_insurance_info_wrap .butt_ok").on("click", function() {
+        if($(".nameBox .checkbox").is(":checked")) {
+            $("#modal_insurance_info_wrap").fadeOut();
+            $("#agree_check1").prop("checked", true);
+        } else {
+            $("#modal_insurance_info_wrap .modal_agree2").fadeIn();
+        }
+    })
+
+    $(".detail .close").on("click", function() {
+        $("table .detail").css("display", "none");
+    })
+
+    $("table .cursor1").on("click", function() {
+        $("table .detail1").css("display", "block");
+        $("table .detail").not("table .detail1").css("display", "none");
+    })
+
+    $("table .cursor2").on("click", function() {
+        $("table .detail2").css("display", "block");
+        $("table .detail").not("table .detail2").css("display", "none");
+    })
+
+    $("table .cursor3").on("click", function() {
+        $("table .detail3").css("display", "block");
+        $("table .detail").not("table .detail3").css("display", "none");
+    })
+    
+    $("table .cursor4").on("click", function() {
+        $("table .detail4").css("display", "block");
+        $("table .detail").not("table .detail4").css("display", "none");
+    })
+
+    $("table .cursor5").on("click", function() {
+        $("table .detail5").css("display", "block");
+        $("table .detail").not("table .detail5").css("display", "none");
+    })
+
+    $("table .cursor6").on("click", function() {
+        $("table .detail6").css("display", "block");
+        $("table .detail").not("table .detail6").css("display", "none");
+    })
+
+    $("table .cursor7").on("click", function() {
+        $("table .detail7").css("display", "block");
+        $("table .detail").not("table .detail7").css("display", "none");
+    })
+
+    
+    $("table .cursor8").on("click", function() {
+        $("table .detail8").css("display", "block");
+        $("table .detail").not("table .detail8").css("display", "none");
+    })
+
+    $("table .cursor9").on("click", function() {
+        $("table .detail9").css("display", "block");
+        $("table .detail").not("table .detail9").css("display", "none");
+    })
+
+    $("table .cursor10").on("click", function() {
+        $("table .detail10").css("display", "block");
+        $("table .detail").not("table .detail10").css("display", "none");
+    })
+
+    $("table .cursor11").on("click", function() {
+        $("table .detail11").css("display", "block");
+        $("table .detail").not("table .detail11").css("display", "none");
+    })
+
+    $("table .cursor12").on("click", function() {
+        $("table .detail12").css("display", "block");
+        $("table .detail").not("table .detail12").css("display", "none");
+    })
+
+    $("table .cursor13").on("click", function() {
+        $("table .detail13").css("display", "block");
+        $("table .detail").not("table .detail13").css("display", "none");
+    })
+
+    $("table .cursor14").on("click", function() {
+        $("table .detail14").css("display", "block");
+        $("table .detail").not("table .detail14").css("display", "none");
+    })
+
+    $("table .cursor15").on("click", function() {
+        $("table .detail15").css("display", "block");
+        $("table .detail").not("table .detail15").css("display", "none");
+    })
+
+    $("table .cursor16").on("click", function() {
+        $("table .detail16").css("display", "block");
+        $("table .detail").not("table .detail16").css("display", "none");
+    })
+
+    $("table .cursor17").on("click", function() {
+        $("table .detail17").css("display", "block");
+        $("table .detail").not("table .detail17").css("display", "none");
+    })
+
+    $("table .cursor18").on("click", function() {
+        $("table .detail18").css("display", "block");
+        $("table .detail").not("table .detail18").css("display", "none");
+    })
+
+    $(".nameBox .checkbox").change(function(){
+        if($(".nameBox .checkbox").is(':checked')) {
+            $(".nameBox").css("background-color", "rgb(0, 173, 239)");
+            $(".nameBox").css("color", "#fff");
+        } else {
+            $(".nameBox").css("background-color", "#fff");
+            $(".nameBox").css("color", "rgb(0, 173, 239)");
+        }
+    })
+})
+
+    
+/*보험 가입 모달창 끝 */
+
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의 모달창*/
+$(()=> {
+    $("#modal_agreement_wrap").hide();
+    $(".modal_agree2").hide();
+    
+    $("#agree_check2").on("click", function() {
+        $("#modal_agreement_wrap").fadeIn();
+        if($("#agree1").is(":checked") && $("#agree2").is(":checked")) {
+            $(this).prop("checked", true);
+        } else {
+            $(this).prop("checked", false);
+        }
+    })
+    $(".insContent2 .agree").on("click", function() {
+        $("#modal_agreement_wrap").fadeIn();
+    })
+    $("#modal_agreement_wrap .close").on("click", function() {
+        $("#modal_agreement_wrap").fadeOut();
+    })
+
+    
+    $(".butt_agree").on("click", function() {
+        if($("#agree1").is(":checked") && $("#agree2").is(":checked")) {
+            $("#modal_agreement_wrap").fadeOut();
+            $("#agree_check2").prop("checked", true);
+        } else {
+            $("#modal_agreement_wrap #modal_agree").fadeIn();
+        }
+    })
+    $(".modal_agree2 .butt").on("click", function(){
+        $("#modal_agree").fadeOut();
+    })
+    $(".butt_canc, title close").on("click", function(){
+        $("#modal_agreement_wrap").fadeOut();
+    })
+
+})
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의 모달창 끝*/
