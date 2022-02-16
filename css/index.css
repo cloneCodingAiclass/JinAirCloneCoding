@@ -584,6 +584,19 @@ body {
     font-weight: bold;
     line-height: 3;
 }
+.go_select_optt, .arrive_select_optt, .go_date_select_optt, .come_date_select_optt, 
+.go_select_optt2, .arrive_select_optt2, .go_date_select_optt2{
+    width: 220px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+    padding-right: 25px;
+    cursor: pointer;
+}
 #container #reservation .go_layerbtn .go_select_opt,
 #container #reservation .arrive_layerbtn .arrive_select_opt,
 #container #reservation .go_date_layerbtn .go_date_select_opt,
