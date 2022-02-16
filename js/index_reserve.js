@@ -470,7 +470,7 @@ $(() => {
 
 // 화면 클릭
 $(() => {
-    $("body").on('click', function (e) {
+    $("body").on('click', function () {
         $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
@@ -500,6 +500,12 @@ $(() => {
         $(".arrive_down_img2").css({ "display": "inline-block" });
         $(".arrive_up_img2").css({ "display": "none" });
         $('.arrive_layer2').slideUp(50);
+
+        $(".person_layerbtn").removeClass('close');
+        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+        $(".person_down_img").css({ "display": "inline-block" });
+        $(".person_up_img").css({ "display": "none" });
+        $('.person_pop_layer').slideUp(50);
     })
 })
 
@@ -616,7 +622,7 @@ $(function () {
     $('.infant_modal').hide();
     $('.baby_info_btn').click(function(){
         $('.infant_modal').fadeIn(200);
-        $(body).click(function(){
+        $('.infant_modal').click(function(){
             $('.infant_modal').fadeOut(200);
         })
     });
@@ -624,7 +630,7 @@ $(function () {
     $('.child_modal').hide();
     $('.child_info_btn').click(function(){
         $('.child_modal').fadeIn(200);
-        $(body).click(function(){
+        $('.child_modal').click(function(){
             $('.child_modal').fadeOut(200);
         })
     });
