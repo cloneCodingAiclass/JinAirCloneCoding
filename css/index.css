@@ -587,8 +587,9 @@ body {
 .go_select_optt, .arrive_select_optt, .go_date_select_optt, .come_date_select_optt, 
 .go_select_optt2, .arrive_select_optt2, .go_date_select_optt2{
     width: 220px;
-    font-size: 18px;
-    text-align: center;
+    font-size: 17px;
+    text-align: left;
+    text-indent: 20px;
     font-weight: bold;
     line-height: 3;
     background-color: rgba(255, 255, 255, 0);
@@ -616,7 +617,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
-    text-align: center;
+    text-align: left;
 }
 #container #reservation .go_layer2 {
     position: absolute;

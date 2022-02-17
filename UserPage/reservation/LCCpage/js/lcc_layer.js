@@ -370,7 +370,7 @@ $(() => {
         }
     })
     $('.end_date').on('click', function () {
-        if(bbb == 'n' && ccc == 'n'){
+        if(bbb == 'n'){
             departure();
             $('.cal').css({"display":"none"});
         }else{
