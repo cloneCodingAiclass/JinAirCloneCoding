@@ -186,6 +186,7 @@ $(function () {
             $("#modal_totP_wrap").css("top", y);
             
         }
+        
     });
 
 
@@ -265,6 +266,23 @@ $(function () {
         set_day(res);
     });
 
+    
+    let click = 'n';
+    let click2 = 'n';
+    // 운항편 선택시 스타일 변경
+    $(".price_wrap").on("click", function() {
+        if(click=='n'){
+            click='y';
+            $(this).toggleClass('click');
+            $(this).val('y');
+        }else{
+            if($(this).val() == 'y'){
+                click='n';
+                $(this).toggleClass('click');
+                $(this).val('');
+            }
+        }
+    });
 
 
 
