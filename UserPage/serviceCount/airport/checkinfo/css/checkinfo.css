@@ -775,7 +775,6 @@ ul.caution li {
 }
 .bbsList {
     width: 100%;
-    table-layout: fixed;
 }
 .bbsList colgroup +thead tr:first-child th, .bbsList colgroup +thead tr:first-child td {
     border-top: 1px solid #000;
@@ -794,6 +793,7 @@ ul.caution li {
     text-align: center;
 }
 .bbsList tbody td{
+    padding-left: 30px;
     font-weight: bold;
 }
 .bbsList tbody td b{
@@ -816,7 +816,7 @@ ul.caution li {
     background: #f7f7f6;
 }
 .checkin_step li {
-    font-size: 16px;
+    font-size: 0.8rem;
     line-height: 20px;
     position: relative;
     display: table-cell;
@@ -854,6 +854,10 @@ ul.caution li {
     content: '';
     background: url(../img/ico_checkin_step.png) no-repeat left top;
     background-position: 0 -200px;
+}
+
+.checkin_step li:last-child::after{
+    background: none;
 }
 .checkin_step li:nth-child(2):before {
     background-position: -100px 0;
@@ -1041,13 +1045,10 @@ table {
 
 /* popWrap */
 #popCont {
-    position:relative;
     width: 1000px;
-    top: 5%; left:10%;
-    margin-top: -80px; margin-left: 80px;
-    box-sizing:border-box; padding:74px 0;
-    line-height:23px; cursor:pointer;
-    max-height: 100%;
+    box-sizing:border-box;
+    line-height:23px;
+    cursor:pointer;
 }
 #popCont p{
     height: 20px;
@@ -1072,6 +1073,7 @@ table {
     display: none;
     justify-content: center;
     z-index: 100;
+    padding: 5% 25%;
 }
 
 #popCont p{
@@ -1080,7 +1082,7 @@ table {
 }
 #popCont h1 {
     min-height: 40px;
-    padding: 50px 50px 20px 30px;
+    padding: 10px 50px 10px 30px;
     font-size: 32px;
     line-height: 1em;
     color: #fff;
@@ -1092,12 +1094,8 @@ table {
     position:relative;
     width: 700px;
     height: 612px;
-    top: 5%; left:10%;
-    margin-top: -80px; margin-left: 200px;
-    box-sizing:border-box; padding:74px 0;
+    box-sizing:border-box; 
     line-height:23px; cursor:pointer;
-    max-height: 100%;
-    overflow-y: scroll;
 }
 #popCont2 p{
     height: 20px;
@@ -1105,15 +1103,16 @@ table {
 }
 #popCont2 h1 {
     min-height: 40px;
-    padding: 30px 50px 20px 30px;
+    padding: 10px 50px 10px 30px;
     font-size: 32px;
     line-height: 1em;
     color: #fff;
     word-break: keep-all;
     background: #661e43;
 }
-#popCont2 img {
+#popCont2 p.img {
     overflow-y: scroll;
+    height: 700px;
 }
 #popWrap2 {
     position: fixed;
@@ -1125,6 +1124,7 @@ table {
     display: none;
     justify-content: center;
     z-index: 100;
+    padding: 5% 25%;
 }
 
 

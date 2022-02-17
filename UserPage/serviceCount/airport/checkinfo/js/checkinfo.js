@@ -156,4 +156,10 @@ $(function() {
         $('#popWrap2').css({"display":"none"});
         $('body').css('overflow', '');
     });
+
+    $("input[type=date].placeholder").on("change", (e) => {
+      const target = $(e.target);
+      if (target.val() == "") target.addClass("date_empty");
+      else target.removeClass("date_empty");
+    });
 });

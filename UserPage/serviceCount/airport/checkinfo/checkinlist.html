@@ -194,25 +194,18 @@
             <!-- containet -->
             <div id="container" class="memberWrap">
                 <h1 class="typeC">로그인</h1>
-            
                 <div class="loginArea">
-                    
-                    
                         <div class="tabArea">
                             <ul class="tabTypeA">
                                 <li class="choice1">예약번호로 확인</a></li>
                                 <li class="choice2">회원 로그인</a></li>
                             </ul>
                         </div>
-                    
-            
-                    
                     <div id="member" class="member" style="display: block;">
                         <form id="easy-pnr-login-form" method="post" autocomplete="off">
                             <input type="hidden" name="_csrf" value="05ef738a-d801-4b10-91cb-0bb7c095b7ee">
                             <input type="hidden" name="accessFrom" value="06">
                             <input type="hidden" name="returnUrl" id="returnUrl" value="/checkin/checkinList">
-            
                             <fieldset>
                                 <span id="pnr-number">
                                     <input type="text" name="pnrNumber" title="예약번호(숫자와 영문으로 조합된 6자리 예약번호)" class="placeholder" placeholder="예약번호(숫자와 영문으로 조합된 6자리 예약번호)" autocomplete="off" maxlength="6" style="text-transform: uppercase;">
@@ -225,16 +218,14 @@
                                     <input type="text" name="lastName" title="성(Last Name)" class="placeholder" placeholder="성(Last Name)" autocomplete="off" style="text-transform: uppercase;">
                                     <input type="text" name="firstName" title="이름(First Name)" class="placeholder" placeholder="이름(First Name)" autocomplete="off" style="text-transform: uppercase;">
                                 </span>
-                                <span><input type="text" name="departureDate" title="출발일" class="btn_calendar" placeholder="출발일" maxlength="10" readonly="readonly" style="background:#f7f7f7 url('//images.jinair.com/images/bo/ico_calendar.png') no-repeat 97% 50%;" autocomplete="off"></span>
-                                
-                                    <p class="txt" data-target="pnr-number"><a href="javascript:switchForm('#', 'ticket-number');">코드쉐어 승객께서는 여기 를 클릭하여 주세요.</a></p>
-                                
-                                <div class="btn"><a href="javascript://" role="login-button" class="btnTypeA" data-click-area="Gnb-체크인" data-click-name="확인">확인</a></div>
+                                <label for="departureDate"><span class="btn_calendar">
+                                    <input type="date" name="departureDate" title="출발일" class="btn_calendar placeholder" id="departureDate" data-placeholder="출발일" maxlength="10" style="background:#f7f7f7" autocomplete="off"></span></label>
+                                <div class="btn">
+                                    <input type="submit" value="확인">
+                                </div>
                             </fieldset>
                         </form>
                     </div>
-            
-                    
                     <div id="nonmember" class="member" style="display: none;">
                         <fieldset>
                             <div class="member_reserve">
@@ -242,27 +233,26 @@
                                     <input type="hidden" name="_csrf" value="05ef738a-d801-4b10-91cb-0bb7c095b7ee">
                                     <input type="hidden" name="accessFrom" value="01">
                                     <input type="hidden" name="returnUrl" value="/checkin/checkinList">
-            
                                     <span><input type="text" name="id" id="member-login-form-id" maxlength="20" placeholder="아이디" style="text-transform: uppercase;"></span>
                                     <span><label for="member-login-form-pw"></label><input type="password" name="pw" id="member-login-form-pw" maxlength="20" placeholder="비밀번호"></span>
                                     <p id="capsLockWarning" style="display: none;"><font color="red"><br/>Caps Lock이 켜져 있습니다.</font></p>
-                                    <a href="javascript://" role="login-button" class="btnTypeA sizeL">확인</a>
+                                    
+                                <div class="btn">
+                                    <input type="submit" value="확인"></input>
+                                </div>
                                 </form>            
             <p class="find">
                 <a href="javascript://" data-click-area="로그인" data-click-name="회원가입" onclick="top.location.href='/member/joinGate';">회원가입</a>
                 <a href="javascript://" data-click-area="로그인" data-click-name="아이디찾기" onclick="top.location.href='/login/findIdPw';">아이디 찾기</a>
                 <a href="javascript://" data-click-area="로그인" data-click-name="비밀번호 찾기" onclick="top.location.href='/login/findIdPw?find=findPw';">비밀번호 찾기</a>
             </p>
-            
             <p class="btnSns">
-                
                     <a href="javascript://" class="kakao choice" role="btn-sns" data-sns-type-code="08" data-state="SNS_LOGIN">카카오 계정으로 로그인</a>
                 
                 <a href="javascript://" class="facebook choice" role="btn-sns" data-sns-type-code="01" data-state="SNS_LOGIN">페이스북 계정으로 로그인</a>
                 <a href="javascript://" class="naver choice" role="btn-sns" data-sns-type-code="02" data-state="SNS_LOGIN">네이버 계정으로 로그인</a>
                 <a href="javascript://" class="google choice" role="btn-sns" data-sns-type-code="05" data-state="SNS_LOGIN">구글 계정으로 로그인</a>
                 <a href="javascript://" class="intra choice" role="btn-sns" data-sns-type-code="06" data-state="SNS_LOGIN">링크드인 계정으로 로그인</a>
-                <a href="javascript://" class="apple choice" role="btn-sns" data-sns-type-code="09" data-state="SNS_LOGIN">애플 계정으로 로그인</a>
             </p>
             
             <div class="phone_login">
@@ -514,6 +504,6 @@
             </div>
         </div>
         <!--퀵 메뉴 끝-->
-<div class="modal"></div>    
+<div class="modal"></div>
 </body>
 </html>

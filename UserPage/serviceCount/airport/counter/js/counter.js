@@ -136,25 +136,25 @@ $(() => {
     $("#domestic_tab").on('click', function (e) {
         $('#domestic_tab').css({"background-color":"#661e43"});
         $('#domestic_tab').css({"color" : "#f7f7f6"});
-        $('#city_tab').css({"background-color":"#f7f7f6"});
+        $('#city_tab').css({"background-color":"white"});
         $('#city_tab').css({"color" : "#444"});
-        $('#international_tab').css({"background-color":"#f7f7f6"});
+        $('#international_tab').css({"background-color":"white"});
         $('#international_tab').css({"color" : "#444"});
     })
     $("#international_tab").on('click', function (e) {
         $('#international_tab').css({"background-color":"#661e43"});
         $('#international_tab').css({"color" : "#f7f7f6"});
-        $('#city_tab').css({"background-color":"#f7f7f6"});
+        $('#city_tab').css({"background-color":"white"});
         $('#city_tab').css({"color" : "#444"});
-        $('#domestic_tab').css({"background-color":"#f7f7f6"});
+        $('#domestic_tab').css({"background-color":"white"});
         $('#domestic_tab').css({"color" : "#444"});
     })
     $("#city_tab").on('click', function (e) {
         $('#city_tab').css({"background-color":"#661e43"});
         $('#city_tab').css({"color" : "#f7f7f6"});
-        $('#international_tab').css({"background-color":"#f7f7f6"});
+        $('#international_tab').css({"background-color":"white"});
         $('#international_tab').css({"color" : "#444"});
-        $('#domestic_tab').css({"background-color":"#f7f7f6"});
+        $('#domestic_tab').css({"background-color":"white"});
         $('#domestic_tab').css({"color" : "#444"});
     })
 })

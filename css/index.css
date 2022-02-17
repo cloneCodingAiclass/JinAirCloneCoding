@@ -499,7 +499,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 5px;
+    margin: 15px 0;
 }
 #container #reservation .person_pop_layer li .submit_btn a {
     width: 90%;

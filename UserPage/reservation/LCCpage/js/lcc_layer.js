@@ -36,6 +36,7 @@ $(() => {
         $(".arrive_down_img2").css({ "display": "inline-block" });
         $(".arrive_up_img2").css({ "display": "none" });
         $('.arrive_layer2').slideUp(50);
+        
     })
 
     // // 완료버튼
@@ -144,7 +145,7 @@ $(() => {
 
 // 화면 클릭
 $(() => {
-    $("#wrap").on('click', function (e) {
+    $("body").on('click', function (e) {
         e.stopPropagation();
         $(".go_layerbtn").removeClass('close');
         $(".go_layerbtn").css({ "color": "rgb(0, 0, 0)" });
@@ -168,6 +169,17 @@ $(() => {
         $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
         $(".arrive_select_opt2").removeClass('on');
         $('.arrive_layer2').slideUp(50);
+
+        $(".person_layerbtn").removeClass('close');
+        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+        $(".person_down_img").css({ "display": "inline-block" });
+        $(".person_up_img").css({ "display": "none" });
+        $('.person_pop_layer').slideUp(50);
+
+    })
+    
+    $(".person_pop_layer").on("click", function (e) {
+        e.stopPropagation();
     })
 })
 
