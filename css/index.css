@@ -437,6 +437,11 @@ body {
     width: 100%;
     border-bottom: 0.1px solid rgb(153, 153, 153, 0.2);
 }
+
+#container #reservation .person_pop_layer li .child_modal span, .infant_modal span{
+    line-height: 2 !important;
+    margin-left: 0 !important;
+}
 #container #reservation .person_pop_layer li span {
     width: 100%;
     line-height: 3;
@@ -572,34 +577,32 @@ body {
     text-align: center;
     cursor: pointer;
     justify-content: space-around;
+    
 }
 #container #reservation .go_layerbtn span,
 #container #reservation .go_layerbtn2 span {
     font-weight: bold;
-    margin-left: -30px;
     line-height: 3;
+}
+.go_select_optt, .arrive_select_optt, .go_date_select_optt, .come_date_select_optt, 
+.go_select_optt2, .arrive_select_optt2, .go_date_select_optt2{
+    width: 220px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+    padding-right: 25px;
+    cursor: pointer;
 }
 #container #reservation .go_layerbtn .go_select_opt,
 #container #reservation .arrive_layerbtn .arrive_select_opt,
 #container #reservation .go_date_layerbtn .go_date_select_opt,
 #container #reservation .come_date_layerbtn .come_date_select_opt{
-    font-size: 1.2rem;
-}
-#container #reservation .go_layerbtn .go_down_img,
-#container #reservation .go_layerbtn2 .go_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .go_layerbtn .go_up_img,
-#container #reservation .go_layerbtn2 .go_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
 }
 #container #reservation .go_layer,
 #container #reservation .go_layer2 {
@@ -613,8 +616,10 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 #container #reservation .go_layer2 {
+    position: absolute;
     top: 225px;
 }
 #container #reservation .go_layer div,
@@ -636,6 +641,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
+    cursor: pointer;
 }
 #container #reservation .go_layer div li a:hover,
 #container #reservation .go_layer2 div li a:hover {
@@ -659,24 +665,7 @@ body {
 #container #reservation .arrive_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .arrive_layerbtn .arrive_down_img,
-#container #reservation .arrive_layerbtn2 .arrive_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .arrive_layerbtn .arrive_up_img,
-#container #reservation .arrive_layerbtn2 .arrive_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 #container #reservation .arrive_layer,
 #container #reservation .arrive_layer2 {
@@ -690,6 +679,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
+    text-align: center;
 }
 #container #reservation .arrive_layer2 {
     top: 225px;
@@ -713,6 +703,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
+    cursor: pointer;
 }
 #container #reservation .arrive_layer div li a:hover,
 #container #reservation .arrive_layer2 div li a:hover {
@@ -736,24 +727,7 @@ body {
 #container #reservation .go_date_layerbtn2 span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .go_date_layerbtn .go_date_down_img,
-#container #reservation .go_date_layerbtn2 .go_date_down_img2 {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .go_date_layerbtn .go_date_up_img,
-#container #reservation .go_date_layerbtn2 .go_date_up_img2 {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 
 /* 오는날 */
@@ -766,22 +740,7 @@ body {
 #container #reservation .come_date_layerbtn span {
     font-weight: bold;
     line-height: 2;
-    margin-left: -15px;
     line-height: 3;
-}
-#container #reservation .come_date_layerbtn .come_date_down_img {
-    display: inline-block;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
-}
-#container #reservation .come_date_layerbtn .come_date_up_img {
-    display: none;
-    height: 30px;
-    vertical-align: middle;
-    margin-right: -30px;
-    cursor: pointer;
 }
 
 /* reserve_oneway */
@@ -801,7 +760,37 @@ body {
 }
 #container #reservation .reserve_multi .multi2 {
     margin-top: 10px;
+    font-size: 18px;
 }
+
+.go_select_opt,
+.arrive_select_opt,
+.go_date_select_opt,
+.come_date_select_opt,
+.go_select_opt2,
+.arrive_select_opt2,
+.go_date_select_opt2{
+    width: 100%;
+    text-align: center;
+    padding-right: 30px;
+    background: url(../img/down2.png) no-repeat;
+    background-size: 10%;
+    background-position: 95% 45%;
+}
+.go_select_opt.on,
+.arrive_select_opt.on,
+.go_date_select_opt.on,
+.come_date_select_opt.on,
+.go_select_opt2.on,
+.arrive_select_opt2.on,
+.go_date_select_opt2.on{
+    width: 100%;
+    text-align: center;
+    background: url(../index_img/up.png) no-repeat;
+    background-size: 10%;
+    background-position: 95% 45%;
+}
+
 
 /* 예약 다음 버튼 */
 .reservate {
@@ -1262,7 +1251,7 @@ body {
     }
 }
 
-.infant_modal, .child_modal{
+.w_180 .infant_modal,.w_180 .child_modal{
     width: 328px;
     height: auto;
     border: 1px solid #661E43;
@@ -1272,19 +1261,172 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
+    padding: 20px 0;
 }
-.infant_modal p, .child_modal p{
+.w_180 .infant_modal p, .w_180 .child_modal p{
     font-size: 1.1rem;
     font-weight: 700;
     color: #661E43;
     display: flex;
     flex-direction: column;
 }
-.infant_modal ul li, .child_modal ul li{
+.w_180 .infant_modal ul li, .w_180 .child_modal ul li{
     font-size: 0.9rem;
     font-weight: 700;
+    border: 0;
 }
-.infant_modal .des, .child_modal span.des{
+.w_180 .infant_modal .des, .w_180 .child_modal span.des{
     font-size: 0.8rem;
     color:#666;
+}
+.child_info_btn, .baby_info_btn{
+    cursor: pointer;
+}
+/* 달력 모달 */
+.cal{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    justify-content: center;
+    display: none;
+    padding: 20px 0 0 0;
+}
+.cal2{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+    padding: 20px 0 0 0;
+}
+.cal3{
+    z-index: 9998;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+    padding: 20px 0 0 0;
+}
+.x_box{
+    display: inline-block;
+    z-index: 9999;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    background-color: #661e43;
+}
+.x_box img{
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: auto;
+}
+.calwrapper{
+    display: inline-block;
+    width: 1180px;
+    height: 97%;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+}
+.caltop{
+    width: 1180px;
+    height: 70px;
+    display: block;
+}
+.caltop p{
+    display: inline-block;
+    font-size: 46px;
+    font-weight: 600 !important;
+    margin-top: 30px;
+}
+.caltop p.whatday{
+    position: relative;
+    left: 63px;
+}
+.caltop p.cal_right{
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 30px 0;
+    position: relative;
+    bottom: 20px;
+    left: 450px;
+    background: url(../img/down.png) no-repeat;
+    background-size: 15%;
+    background-position: 95% 10%;
+}
+.calwrapper > table{
+    padding-top: 40px;
+    text-align: center;
+    width: 1179px;
+    height: 60px;
+    box-shadow:  0px 2px 3px rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 600;
+}
+.calwrapper > table tr td:nth-child(1){
+    color: rgb(218, 0, 0);
+}
+.calinner{
+    width: 100%;
+    height: 81%;
+    border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+    overflow: hidden;
+}
+.calscroll{
+    height: 100%;
+    overflow: hidden;
+}
+.calscroll > iframe{
+    width: 100%;
+    height: 100%;
+}
+/* 모달 */
+.modal_container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.modal_container > .modals p{
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.modal_container > .modals{
+    width: 290px;
+    height: 180px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    border-radius: 1px;
+    border: 1px solid #BDD600;
+    display: flex;
+    margin: 300px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal_container > .modals form{
+    display: flex;
+    justify-content: center;
+}
+.modal_container > .modals input{
+    font-size: 14px;
+    font-weight: 900;
+    width: 80px;
+    height: 40px;
+    background-color:#BDD600;
+    border: none;
+    margin: 40px 10px 0;
+    cursor: pointer;
 }

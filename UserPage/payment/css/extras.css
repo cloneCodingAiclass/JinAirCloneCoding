@@ -406,7 +406,7 @@ body{
 }
 
 .trip_info > .trip_area span, .trip_info2 > .trip_area span {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .trip_info > .schedule > p > span, .trip_info2 > .schedule > p > span {
@@ -476,6 +476,25 @@ body{
     border-top: 1px solid rgba(168, 165, 165, 0.3);
 }
 
+/*토글 클래스 */
+.none {
+    visibility: visible;
+    /* text-indent: 0px; */
+}
+
+.no {
+    display: none;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/*토글 클래스 끝*/
 
 /*부가서비스 신청*/
 #optionS_wrap {
@@ -484,9 +503,11 @@ body{
     width: 1180px;
     height: 2700px;
     margin: 0 auto;
-    margin-top: 310px;
+    margin-top: 254px;
     display: flex;
     flex-wrap: wrap;
+    border-top: 1px solid rgba(168, 165, 165, 0.5);
+    padding-top: 50px;
 }
 
 /*서비스 메뉴*/
@@ -695,13 +716,13 @@ body{
 }
 
 .service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num {
+    font-size: 0px;
     width: 60px;
     height: 40px;
     background-color: #BDD600;
 }
 
 .service_content .passenger_info_wrap .passenger_info p.select_seat_num span.close {
-    visibility: hidden;
     width: 25px;
     height: 25px;
     position: absolute;
@@ -727,7 +748,8 @@ body{
     font-weight: bold;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.select_seat_price > span {
+.service_content .passenger_info_wrap .passenger_info p.select_seat_price > span.seat_P {
+    display: none;
     font-size: 10px;
     margin-right: 5px;
     color: #444;
@@ -739,8 +761,14 @@ body{
 /*좌석정보 랩*/
 .service_content .seat_info_wrap {
     position: relative;
+    top: 0px;
+    left: 0px;
     width: 170px;
     background-color: #fff;
+}
+
+.seat_info_wrap2 {
+    display: none;
 }
 
 .service_content .seat_info_wrap .seat_info {
@@ -749,6 +777,7 @@ body{
     left: 30px;
     width: 140px;
     height: 440px;
+    z-index: 20;
 }
 
 .service_content .seat_info_wrap .seat_info .info {
@@ -867,7 +896,9 @@ body{
     background-image: url("../img/check.png");
     background-color: #737373;
 }
-
+.passenger_info_wrap2 {
+    display: none;
+}
 
 .service_content .box7 {
     padding: 0px;
@@ -1019,8 +1050,10 @@ body{
 }
 
 .select_seat_wrap .select_comp {
-    position: absolute;
+    position: fixed;
     display: flex;
+    bottom: 100px;
+    left: 56%;
     align-items: center;
     justify-content: center;
     width: 230px;
@@ -1029,13 +1062,12 @@ body{
     border: none;
     font-size: 20px;
     font-weight: bold;
-    bottom: 10px;
-    left: 120px;
     box-shadow: 3px 3px 8px rgba(32, 32, 32, 0.5);
 }
 
 .select_seat_wrap .seat_map {
     position: relative;
+    top: 0px;
     width: 105px;
     height: 100%;
 }
@@ -1140,47 +1172,46 @@ body{
 
 
 .service_content_wrap2 .service_content .passenger_info_wrap .passenger_info .select_bagg_price {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 40px;
     margin: 0 auto;
     background-color: #fff;
-    border: 3px solid #661e43;
+    /* border: 3px solid #661e43; */
     padding-left: 10px;
+    color: black;
+    padding: 12px;
 }
 
 
+
 .service_content_wrap2 .service_content .passenger_info_wrap .passenger_info p.select_bagg_price span.close {
-    /* display: none; */
-    position: relative;
+    display: none;
+    position: absolute;
     font-size: 25px;
-    top: 0px;
-    left: -5px;
+    top: 3px;
+    right: 5px;
     color: rgba(168, 165, 165, 0.5);
     font-weight: 400;
 }
 
-
-.service_content .passenger_info_wrap .passenger_info p.select_bagg_price {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    margin: 0 auto;
-    margin-top: 3px;
-    margin-left: 15px;
-    color: black;
+.service_content .passenger_info_wrap .passenger_info p.select_bagg_price .select_bagg {
+    width: 90%;
+    height: 100%;
 }
 
 .service_content .passenger_info_wrap .passenger_info p.bot_bagg_price {
+    display: flex;
+    align-items: center;
     font-size: 20px;
     margin: 10px 12px;
     color: black;
     font-weight: bold;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.bot_bagg_price > span {
+.service_content .passenger_info_wrap .passenger_info p.bot_bagg_price > span.cur {
     font-size: 10px;
     margin-right: 5px;
     color: #444;
@@ -1206,6 +1237,7 @@ body{
     margin-left: -18px;
 }
 
+
 .service_content .select_baggage_wrap .baggage_1 select, .baggage_2 select {
     width: 250px;
     height: 45px;
@@ -1215,6 +1247,10 @@ body{
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: none;
+}
+
+.service_content_wrap2 .service_content .passenger_info .section1 {
+    margin-top: 30px !important;
 }
 
 .service_content .select_baggage_wrap .baggage_wrap img {
@@ -1477,7 +1513,7 @@ body{
     font-weight: 600;
 }
 
-.service_content_wrap3 .service_content .join_insurance_wrap table.insurance_price .tit span {
+.service_content_wrap3 .service_content .join_insurance_wrap table.insurance_price .tit span.cul {
     margin-left: 55%;
     font-size: 13px;
     margin-right: 5px;
@@ -1888,25 +1924,538 @@ body{
 }
 /*무료 수하물/기내식 안내 끝*/
 
-/*비상구 좌석 지정 시 유의 사항 안내*/
+/*비상구 좌석 지정 시 유의 사항 안내 모달창*/
 #modal_notice_wrap {
-    position: absolute;
-    display: none;
-    top: 100px;
+    position: fixed;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 800;
-    background-color: rgba(168, 168, 168, 0.5);
+    display: none;
 }
 
 #modal_notice_wrap .modal_notice_wrap {
-    position: relative;
+    font-weight: 600;
     margin: 0 auto;
-    width: 600px;
+    width: 40%;
+    height: 800px;
+    background-color: #fff;
+    margin: 0 auto 30px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_title {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #661e43;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_title .tit_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+#modal_notice_wrap .modal_notice_wrap .modal_title .close {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    width: 30px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_title .close img {
+    width: 30px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap {
+    width: 100%;
+    height: 720px;
+    padding: 20px;
+    overflow: scroll;
+}
+
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .content {
+    margin:20px;
+    padding: 20px;
+    border: 1px solid rgba(168, 168, 168, 0.3);
+    line-height: 30px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .content .red {
+    color: red;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .content ul {
+    margin-top: 30px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .content ul li {
+    margin-top: 30px;
+    text-indent: -20px;
+    padding-left: 10px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .bott {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .checkbox {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+#modal_notice_wrap .modal_notice_wrap .modal_content_wrap .butt_ok {
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 130px;
+    height: 45px;
+    border: none;
+    font-weight: bold;
+    background-color: #BDD600;
+}
+
+
+/*비상구 좌석 지정 시 유의 사항 안내 모달창 끝*/
+
+/*보험계약 안내사항 모달창*/
+#modal_insurance_info_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap {
+    width: 60%;
+    height: 800px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .title {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #661e43;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .title .close {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    width: 30px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .title .close img {
+    width: 100%;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content {
+    background-color: #fff;
+    height: 720px;
+    padding: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table th {
+    background-color: #F7F7F6;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.product_int {
+    text-align: left;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.product_int th {
+    padding: 20px;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.product_int td {
+    height: 40px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.5);
+}
+
+.borderT {
+    border-top: 1px solid black !important;
+}
+
+.borderB {
+    border-bottom: 1px solid black !important;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.product_int+p {
+    color: black;
+    font-weight: bold;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.product_int+p::before {
+    content: "※"
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .nameBox {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    width: 230px;
+    height: 50px;
+    border: 3px solid rgb(0, 173, 239);
+    margin: 30px 40px 15px;
+    color: rgb(0, 173, 239);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .nameBox .checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed th {
+    background-color: #f7f7f6;
+    line-height: 40px;
+    border-right: 1px solid rgba(173, 173, 173, 0.5);
+    border-bottom: 1px solid rgba(173, 173, 173, 0.5);
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed th:last-child {
+    border-right: none;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td {
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid rgba(173, 173, 173, 0.5);
+    border-bottom: 1px solid rgba(173, 173, 173, 0.5);
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td:last-child {
+    border-right: none;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left {
+    display: flex;
+    position: relative;
+    text-align: left;
+    align-items: center;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left span.cursor {
+    position: relative;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content table.Guaranteed td.left span.cursor::before {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0 0 10px;
+    content: " ";
+    background: url("../img/ico_ins.png");
+    background-size: 100%;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content li {
+    text-indent: -20px;
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content li > ul > li {
+    text-indent: 0;
+    padding-left: 0px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .content ul + p {
+    margin-top: 35px;
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 70px;
+}
+
+#modal_insurance_info_wrap .modal_insurance_info_wrap .butt_ok {
+    position: fixed;
+    width: 150px;
+    bottom: 75px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 45px;
+    border: none;
+    background-color: #BDD600;
+}
+
+table .detail {
+    position: absolute;
+    width: 280px;
+    left: 40px;
+    padding: 10px 20px;
+    bottom: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    display: none;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.detail .txt {
+    color: #661e43;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.detail .close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+table .defualt {
+    cursor: default;
+}
+
+table .pointer {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/*보험계약 안내사항 모달창 끝*/
+
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의*/
+#modal_agreement_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap {
+    width: 58%;
     height: 800px;
     background-color: #fff;
 }
-/*비상구 좌석 지정 시 유의 사항 안내 끝*/
+
+#modal_agreement_wrap .modal_agreement_wrap .title {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #661e43;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-left: 8px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .title img {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 30px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .content {
+    padding: 20px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule {
+    margin: 20px 0;
+    width: 100%;
+    height: 200px;
+    padding: 20px 25px;
+    border: 1px solid rgba(173, 173, 173, 0.5);
+    line-height: 23px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap label+h2 {
+    margin-top: 20px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule2 {
+    height: 160px;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .rule2 li::before {
+    content: " - ";
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input {
+    width: 150px;
+    height: 45px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input.butt_agree {
+    background-color: #BDD600;
+    border: none;
+}
+
+#modal_agreement_wrap .modal_agreement_wrap .butt_wrap input.butt_canc {
+    background-color: #fff;
+    border: 1px solid #BDD600;
+}
+
+
+.modal_agree2 {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #661e43;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+.modal_agree2 .butt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_agree2 .butt input {
+    width: 100px;
+    height: 45px;
+    margin-top: 30px;
+    background-color: #BDD600;
+    border: none;
+    font-weight: bold;
+}
+
+
+#modal_insurance_info_wrap .modal_agree2 {
+    top: 250px;
+    text-align: center;
+    height: 150px;
+}
+
+#modal_insurance_info_wrap .modal_agree2 .butt input{
+    margin-top: 20px;
+}
+
+#modal_agree_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_agree_wrap .modal_agree_confirm {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #661e43;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.modal_agree_confirm .butt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_agree_confirm .butt input {
+    width: 100px;
+    height: 45px;
+    margin-top: 30px;
+    background-color: #BDD600;
+    border: none;
+    font-weight: bold;
+}
+
+
+
+
+/*여행자보험 가입규약 및 개인정보 제3자 제공 동의 끝*/
+
 /*부가서비스 신청 끝*/
 
 
@@ -1949,11 +2498,11 @@ body{
 } 
 
 .fix_bott .fix_img {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: #fff;
-    margin-right: 20px;
+    margin-right: 25px;
     background-repeat: no-repeat;
     background-position: center;
 }

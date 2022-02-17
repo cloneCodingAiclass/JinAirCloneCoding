@@ -716,7 +716,7 @@ body{
 .noti_wrap {
     position: relative;
     top: 200px;
-    width: 80%;
+    width: 1180px;
     padding: 20px;
     margin: 0 auto;
     text-indent: -13px;
@@ -747,7 +747,7 @@ body{
 .fare_wrap {
     position: relative;
     top: 250px;
-    width: 80%;
+    width: 1180px;
     margin: 0 auto;
     padding: 20px;
 }

@@ -122,14 +122,12 @@ $(function () {
 
     // 왕복 편도 번환
     $('#oneway').on('change', function(){
-        $('.come_date_select_opt').css({"visibility":"hidden"});
-        $('.dis_back').css({"display":"none"});
+        $('.sc_search_bw').css({"display":"none"});
+        $('.sc_search_oneway').css({"display":"block"});
     })
     $('#between').on('change', function(){
-        $('.come_date_select_opt').css({"visibility":"visible"});
-        $('.dis_go').css('width','590px');
-        $('.dis_back').css({"display":"block"});
-        $('.dis_back').css('width','590px');
+        $('.sc_search_oneway').css({"display":"none"});
+        $('.sc_search_bw').css({"display":"block"});
     })
 
     // 출발지, 도착지
@@ -194,7 +192,7 @@ $(function () {
 
     // 왕복 달력 모달
     $('.go_date_select_opt').on('click', function () {
-        if(bbb == 'n' || ccc == 'n'){
+        if(bbb == 'n' && ccc == 'n'){
             departure();
             $('.cal').css({"display":"none"});
         }else if(bbb == 'y' && ccc == 'n'){
@@ -205,7 +203,7 @@ $(function () {
         }
     })
     $('.come_date_select_opt').on('click', function () {
-        if(bbb == 'n' || ccc == 'n'){
+        if(bbb == 'n' && ccc == 'n'){
             departure();
             $('.cal').css({"display":"none"});
         }else if(bbb == 'y' && ccc == 'n'){
@@ -216,9 +214,23 @@ $(function () {
         }
     })
 
+    // 편도 달력 모달
+    $('.go_date_select_opt2').on('click', function () {
+        if(bbb == 'n' && ccc == 'n'){
+            departure();
+            $('.cal2').css({"display":"none"});
+        }else if(bbb == 'y' && ccc == 'n'){
+            arrive();
+        }else{
+            $('.cal2').css({"display":"flex"});
+            $('.whatday').html('가는날');
+        }
+    })
+
     // 달력 X 버튼
     $('.x_box').on('click', function () {
         $('.cal').css({"display":"none"});
+        $('.cal2').css({"display":"none"});
     })
 
     // 모달모음 확인 버튼
@@ -228,19 +240,21 @@ $(function () {
 
 
     // 출발지 지정
-    $('.go_layer').find('li').on('click', function () {
+    $('.go_layer').find('li').find('a').on('click', function () {
         let str = '';
         str = $(this).html();
-        $('.go_select_opt').html(str);
+        $('.go_select_optt').val(str);
         $('.go_layer').slideUp(50);
         $('.go_layer1').slideDown(100);
+        $('.go_select_opt').removeClass("on");
+        $('.arrive_select_opt').addClass("on");
         bbb = 'y';
     })
     // 도착지 지정
-    $('.go_layer1').find('li').on('click', function () {
+    $('.go_layer1').find('li').find('a').on('click', function () {
         let str = '';
         str = $(this).html();
-        $('.arrive_select_opt').html(str);
+        $('.arrive_select_optt').val(str);
         ccc='y';
     })
 
@@ -299,13 +313,19 @@ function gowhatdaydd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.go_date_select_opt').html(`${str1}-${str2}-${str3}`);
+    $('.go_date_select_optt').val(`${str1}-${str2}-${str3}`);
 }
 function comewhatdaydd(str){
     let str1 = str.substr(0,4);
     let str2 = str.substr(4,2);
     let str3 = str.substr(6,2);
-    $('.come_date_select_opt').html(`${str1}-${str2}-${str3}`);
+    $('.come_date_select_optt').val(`${str1}-${str2}-${str3}`);
+}
+function gowhatdayddd(str){
+    let str1 = str.substr(0,4);
+    let str2 = str.substr(4,2);
+    let str3 = str.substr(6,2);
+    $('.go_date_select_optt2').val(`${str1}-${str2}-${str3}`);
 }
 
 
@@ -325,4 +345,5 @@ function arrive(){
 
 function twochoice(){
 $('.cal').css({"display":"none"});
+$('.cal2').css({"display":"none"});
 }
