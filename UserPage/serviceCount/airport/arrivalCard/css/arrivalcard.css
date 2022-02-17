@@ -686,7 +686,7 @@ html:lang(ko) .keywordList >li {
     color: #000;
 }
 .landingCard_step li em {
-    font-size: 16px;
+    font-size: 1rem;
     display: block;
     margin-bottom: 5px;
     color: #7e0049;
@@ -701,9 +701,9 @@ html:lang(ko) .keywordList >li {
     height: 84px;
     margin: 0 auto;
     content: '';
-    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+    background: url(../img/ico_landing_card_100x84.png) no-repeat;
 }
-.landingCard_step li:after {
+.landingCard_step li:nth-child(1):after,.landingCard_step li:nth-child(2):after {
     position: absolute;
     top: 12%;
     right: 0;
@@ -711,36 +711,10 @@ html:lang(ko) .keywordList >li {
     clear: both;
     width: 100px;
     height: 84px;
-    margin-right: -50px;
     content: '';
-    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
+    background: url(../img/ico_landing_card_100x84.png) no-repeat;
     background-position: 0 -84px;
 }
-.landingCard_step li:nth-child(2):before {
-    background-position: -100px 0;
-}
-.landingCard_step li:before {
-    display: block;
-    clear: both;
-    width: 100px;
-    height: 84px;
-    margin: 0 auto;
-    content: '';
-    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
-}
-.landingCard_step li:last-child:before {
-    background-position: -200px 0px;
-}
-.landingCard_step li:before {
-    display: block;
-    clear: both;
-    width: 100px;
-    height: 84px;
-    margin: 0 auto;
-    content: '';
-    background: url(../img/ico_landing_card_100x84.png) no-repeat left top;
-}
-
 /* 예약 정보 불러오기 */
 legend { display: none;}
 #popCont {

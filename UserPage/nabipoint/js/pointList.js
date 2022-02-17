@@ -84,7 +84,6 @@ $(function () {
         $('.modal').fadeOut(200);
     })
 
-
     $('.dis_save').on('click', function () {
         $('#container').css({"height":"4150px"});
         $('.save').css({"display":"block"});
@@ -100,4 +99,20 @@ $(function () {
         $('.save').css({"display":"none"});
     })
 
+    // 탭 메뉴 
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'flexinfo'){
+            $('#container').css({"height":"3300px"});
+            $('.useinfo').css({"display":"block"});
+            $('.dis_useinfo').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+            $('.dis_save').css({"background-color":"white", "color": "#444"});
+            $('.save').css({"display":"none"});
+    }else{
+        $('#container').css({"height":"4150px"});
+        $('.save').css({"display":"block"});
+        $('.dis_save').css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.dis_useinfo').css({"background-color":"white", "color": "#444"});
+        $('.useinfo').css({"display":"none"});
+    }
 });
