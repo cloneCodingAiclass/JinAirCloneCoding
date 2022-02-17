@@ -94,6 +94,7 @@ $(function () {
 
 
     $('.covidInfo1').click(function () {
+        $('#container').css({"height":"1600px"});
         $(this).addClass('check');
         $('.covidInfo2, .covidInfo3, .covidInfo4, .covidInfo5').removeClass('check');
         $('.korea').css('display', 'block');
@@ -103,6 +104,7 @@ $(function () {
         $('.taipei').css('display', 'none');
     });
     $('.covidInfo2').on('click', function () {
+        $('#container').css({"height":"1600px"});
         $(this).addClass('check');
         $('.covidInfo1, .covidInfo3, .covidInfo4, .covidInfo5').removeClass('check');
         $('.korea').css('display', 'none');
@@ -112,6 +114,7 @@ $(function () {
         $('.taipei').css('display', 'none');
     });
     $('.covidInfo3').on('click', function () {
+        $('#container').css({"height":"1600px"});
         $(this).addClass('check');
         $('.covidInfo1, .covidInfo2, .covidInfo4, .covidInfo5').removeClass('check');
         $('.korea').css('display', 'none');
@@ -121,6 +124,7 @@ $(function () {
         $('.taipei').css('display', 'none');
     });
     $('.covidInfo4').on('click', function () {
+        $('#container').css({"height":"3400px"});
         $(this).addClass('check');
         $('.covidInfo1, .covidInfo2, .covidInfo3, .covidInfo5').removeClass('check');
         $('.korea').css('display', 'none');
@@ -130,6 +134,7 @@ $(function () {
         $('.taipei').css('display', 'none');
     });
     $('.covidInfo5').on('click', function () {
+        $('#container').css({"height":"3400px"});
         $(this).addClass('check');
         $('.covidInfo1, .covidInfo3, .covidInfo4, .covidInfo2').removeClass('check');
         $('.korea').css('display', 'none');

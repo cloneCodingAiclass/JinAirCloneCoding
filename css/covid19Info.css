@@ -310,7 +310,7 @@ body {
 #container {
     position: relative;
     top: 100px;
-    height: auto;
+    height: 1600px;
     width: 1180px;
     margin: 0 auto;
 }
@@ -319,7 +319,7 @@ body {
     letter-spacing: .8px;
 }
 #container > .contentswrap > .covidInfo_title{
-    margin: 20px 0;
+    margin: 50px 0 20px;
 }
 #container > .contentswrap > .covidInfo_title > .covidInfo_title_text {
     font-size: 2.8em;
@@ -330,26 +330,49 @@ body {
     font-size: 1.45em;
     font-weight: 600;
     margin-top: 25px;
+    margin-bottom: 25px;
     line-height: 30px;
     letter-spacing: 1.2px;
 }
+#container > .contentswrap > .covidInfo_title > .covidInfo_title_ul > li::before{
+    content: "- ";
+}
+#container > .contentswrap > .covidInfo_title > .covidInfo_title_ul > li.covidInfo_title_li{
+    padding-left: 14px;
+}
+#container > .contentswrap > .covidInfo_title > .covidInfo_title_ul > li.covidInfo_title_li::before{
+    content: "";
+}
 #container > .contentswrap > .covidInfo_title > ul li{
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
 }
 #container > .contentswrap > .covidInfo_line table{
     border-collapse: collapse;
     border-top: 1px solid #661E43;
     margin-bottom: 30px;
+    margin-top: 40px;
 }
 #container > .contentswrap > .covidInfo_line table tr{
     text-align: center;
-    height: 50px;
+    height: 43px;
 }
 #container > .contentswrap > .covidInfo_line table tr td{
     width: 250px;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 14px;
+}
+#container > .contentswrap .covidInfo_title .title_img {
+    background: url(../index_img/icon_top.PNG) no-repeat center;
+    background-size: 106%;
+    display: inline;
+    width: 180px;
+    height: 150px;
+    float: right;
+    position: relative;
+    right: 70px;
+    bottom: 30px;
 }
 /* 한국 */
 
@@ -374,6 +397,29 @@ body {
     font-weight: 600;
     margin: 20px 0;
 }
+#container ol > li > ol > li{
+    padding-left: 12px;
+}
+.caution li{
+    padding-left: 14px;
+}
+.caution li::before{
+    content: "- ";
+}
+#container > .korea > ol > .blt{
+    margin-bottom: -20px;
+}
+.blt_sub{
+    padding-left: 17px;
+}
+#container > .china > ol > .blt_sub{
+    padding-left: 17px;
+    margin-bottom: 50px;
+}
+#container > .taipei > ol > .blt_sub{
+    padding-left: 17px;
+    margin-bottom: 50px;
+}
 /* 미국 */
 #container > .usa{
     display: none;
@@ -389,6 +435,9 @@ body {
 #container > .usa > ol > li{
     font-weight: 600;
     margin: 20px 0;
+}
+#container > .usa > ol > .blt{
+    margin-bottom: -20px;
 }
 /* 일본 */
 #container > .japan{
@@ -406,7 +455,14 @@ body {
     font-weight: 600;
     margin: 20px 0;
 }
+#container > .japan > ol > .blt{
+    margin-bottom: -20px;
+}
 /* 동북아 */
+#container > .covidInfo_tab .ft_type{
+    font-size: 28px;
+    font-weight: 900;
+}
 #container > .china{
     display: none;
     height: 1000px;
@@ -421,6 +477,13 @@ body {
 #container > .china > ol > li{
     font-weight: 600;
     margin: 20px 0;
+}
+#container > .china > ol > .blt{
+    margin-bottom: -20px;
+}
+#container > .china > ol > .blt_sub1{
+    padding-left: 17px;
+    margin-bottom: -20px;
 }
 /* 동남아 */
 #container > .taipei{
@@ -437,6 +500,9 @@ body {
 #container > .taipei > ol > li{
     font-weight: 600;
     margin: 20px 0;
+}
+#container > .taipei > ol > .blt{
+    margin-bottom: -20px;
 }
 
 /*푸터*/
