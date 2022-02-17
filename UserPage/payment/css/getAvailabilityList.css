@@ -652,12 +652,11 @@ body{
     font-size: 12px;
 }
 
-.list_wrap .price_wrap1 {
+.list_wrap .price_wrap {
     width: 120px;
     height: 110px;
     border: 1px solid #f2f2f2;
     padding-top: 30px;
-    cursor: pointer;
 }
 
 .list_wrap table.list1_table .price_wrap {
@@ -666,7 +665,6 @@ body{
     border: 1px solid #f2f2f2;
     padding-top: 30px;
 }
-
 
 .list_wrap .price_wrap p {
     display: block;
@@ -677,11 +675,7 @@ body{
     font-size: 23px;
     margin: 5px;
     margin-bottom: 10px;
-}
-.list_wrap .price_wrap1 .date_price {
-    font-size: 23px;
-    margin: 5px;
-    margin-bottom: 10px;
+    color: black
 }
 
 .list_wrap .curr {
@@ -692,6 +686,7 @@ body{
 
 .list_wrap .seats {
     font-size: 14px;
+    color:rgb(102, 30, 67);
 }
 
 .list_wrap div.none_seat {
@@ -701,16 +696,6 @@ body{
 .list_wrap div.none_seat, div.none_seat p {
     color: #444 !important;
     font-size: 20px !important;
-}
-
-
-.price_wrap.click{
-    background-color: rgb(102, 30, 67);
-    color: #fff;
-}
-.price_wrap1.click{
-    background-color: rgb(102, 30, 67);
-    color: #fff;
 }
 
 /*항공편 리스트 1*/
