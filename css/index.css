@@ -680,7 +680,7 @@ body {
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
-    text-align: center;
+    text-align: left;
 }
 #container #reservation .arrive_layer2 {
     top: 225px;

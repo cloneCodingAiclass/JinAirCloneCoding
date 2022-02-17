@@ -602,6 +602,11 @@ function submit(){
     $(".person_down_img").css({ "display": "inline-block" });
     $(".person_up_img").css({ "display": "none" });
     $('.person_pop_layer').slideUp(50);
+
+    $(".go_layerbtn").addClass('close');
+    $(".go_layerbtn").css({ "color": "rgb(145, 0, 70)" });
+    $(".go_select_opt").addClass('on');
+    $(".go_layer").slideDown("fast");
 }
 
 
