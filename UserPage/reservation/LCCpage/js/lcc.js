@@ -99,6 +99,11 @@ $(() => {
             "color": "white"
         });
         $(".lcc_search").css("display", "block");
+        $('.search_list').css('display','none');
+    })
+    // 최저가 조회
+    $('.submit_btn').on('click', function () {
+        $('.search_list').css('display','block');
     })
 
     //맞춤
@@ -114,7 +119,11 @@ $(() => {
             "background-color": "rgb(102, 30, 67)",
             "color": "white"
         });
-
+        $('.search_list').css('display','none');
+    })
+    //맞춤
+    $('.submit_btn').on('click', function () {
+        $('.search_list').css('display','block');
     })
 
     //지금 이순간
