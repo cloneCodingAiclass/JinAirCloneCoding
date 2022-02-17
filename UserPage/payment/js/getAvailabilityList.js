@@ -279,7 +279,7 @@ $(function () {
             if($(this).val() == 'y'){
                 click='n';
                 $(this).toggleClass('click');
-                $(this).val('0');
+                $(this).val('');
             }
         }
     });
@@ -293,7 +293,7 @@ $(function () {
             if($(this).val() == 'y'){
                 click2='n';
                 $(this).toggleClass('click');
-                $(this).val('0');
+                $(this).val('');
             }
         }
     });
