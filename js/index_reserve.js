@@ -451,12 +451,22 @@ $(() => {
         $(".person_up_img").css({ "display": "none" });
         $('.person_pop_layer').slideUp(50);
     })
+
+    $(".person_pop_layer").on("click", function (e) {
+        e.stopPropagation();
+    })
 })
 
 // 화면 클릭
 $(() => {
     $("body").on('click', function (e) {
         e.stopPropagation();
+        $(".person_layerbtn").removeClass('close');
+        $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+        $(".person_down_img").css({ "display": "inline-block" });
+        $(".person_up_img").css({ "display": "none" });
+        $('.person_pop_layer').slideUp(50);
+
         $(".trip_layerbtn").removeClass('close');
         $(".trip_layerbtn").css({ "color": "rgb(0, 0, 0)" });
         $(".trip_down_img").css({ "display": "inline-block" });
