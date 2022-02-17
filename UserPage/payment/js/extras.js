@@ -531,7 +531,7 @@ $(function () {
     });
 
     $(".select_seat1 .box1").on("click", function() {
-        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $('.select_seat1 .seat_sel').not(this).css('pointer-events', 'none');
         $(".passenger_info_wrap1 .seat_num").html($(this).html());
         $(this).toggleClass('background1');
         $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
@@ -544,71 +544,158 @@ $(function () {
         })
     })
 
+    $(".select_seat2 .box1").on("click", function() {
+        $('.select_seat1 .seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background1');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
+        })
+    })
 
-    $(".select_seat .box2").on("click", function() {
+
+
+
+    $(".select_seat1 .box2").on("click", function() {
         $('.seat_sel').not(this).css('pointer-events', 'none');
-        $(".seat_num").text($(this).text());
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
         $(this).toggleClass('background2');
-        $(".select_seat_price .price").text("5,000");
-        $(".seat_P").css("display", "block");
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
         $(this).on('click', function() {
-            $('.seat_sel').not(this).css('pointer-events', 'auto');
-            $(".seat_num").text("");
-            $(".select_seat_price .price").text("");
-            $(".seat_P").css("display", "none");
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
         })
     })
-    $(".select_seat .box3").on("click", function() {
+    $(".select_seat2 .box2").on("click", function() {
         $('.seat_sel').not(this).css('pointer-events', 'none');
-        $(".seat_num").text($(this).text());
-        $(this).toggleClass('background3');
-        $(".select_seat_price .price").text("9,000");
-        $(".seat_P").css("display", "block");
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background2');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
         $(this).on('click', function() {
-            $('.seat_sel').not(this).css('pointer-events', 'auto');
-            $(".seat_num").text("");
-            $(".select_seat_price .price").text("");
-            $(".seat_P").css("display", "none");
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
         })
+    })
 
-    })
-    $(".select_seat .box4").on("click", function() {
+
+    $(".select_seat1 .box3").on("click", function() {
         $('.seat_sel').not(this).css('pointer-events', 'none');
-        $(".seat_num").text($(this).text());
-        $(this).toggleClass('background4');
-        $(".select_seat_price .price").text("7,000");
-        $(".seat_P").css("display", "block");
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
+        $(this).toggleClass('background3');
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
         $(this).on('click', function() {
-            $('.seat_sel').not(this).css('pointer-events', 'auto');
-            $(".seat_num").text("");
-            $(".select_seat_price .price").text("");
-            $(".seat_P").css("display", "none");
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
         })
     })
-    $(".select_seat .box5").on("click", function() {
+    $(".select_seat2 .box3").on("click", function() {
         $('.seat_sel').not(this).css('pointer-events', 'none');
-        $(".seat_num").text($(this).text());
-        $(this).toggleClass('background5');
-        $(".select_seat_price .price").text("3,000");
-        $(".seat_P").css("display", "block");
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background3');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
         $(this).on('click', function() {
-            $('.seat_sel').not(this).css('pointer-events', 'auto');
-            $(".seat_num").text("");
-            $(".select_seat_price .price").text("");
-            $(".seat_P").css("display", "none");
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
+        })
+    })
+
+
+
+    $(".select_seat1 .box4").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
+        $(this).toggleClass('background4');
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
+        })
+    })
+    $(".select_seat2 .box4").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background4');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
+        })
+    })
+
+    $(".select_seat1 .box5").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
+        $(this).toggleClass('background5');
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
+        })
+    })
+    $(".select_seat2 .box5").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background5');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
         })
     })
     
-    $(".select_seat .box6").on("click", function() {
-        $(".seat_num").text($(this).text());
+    $(".select_seat1 .box6").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap1 .seat_num").html($(this).html());
         $(this).toggleClass('background6');
-        $(".select_seat_price .price").text("1,000");
-        $(".seat_P").css("display", "block");
+        $(".passenger_info_wrap1 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap1 .seat_P").css("display", "block");
         $(this).on('click', function() {
-            $('.seat_sel').not(this).css('pointer-events', 'auto');
-            $(".seat_num").text("");
-            $(".select_seat_price .price").text("");
-            $(".seat_P").css("display", "none");
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap1 .select_seat_price .price").html("");
+            $(".passenger_info_wrap1 .seat_num").html("");
+            $(".passenger_info_wrap1 .seat_P").css("display", "none");
+        })
+    })
+    $(".select_seat2 .box6").on("click", function() {
+        $('.seat_sel').not(this).css('pointer-events', 'none');
+        $(".passenger_info_wrap2 .seat_num").html($(this).html());
+        $(this).toggleClass('background6');
+        $(".passenger_info_wrap2 .select_seat_price .price").html("9,000");
+        $(".passenger_info_wrap2 .seat_P").css("display", "block");
+        $(this).on('click', function() {
+            $('.seat_sel').css('pointer-events', 'auto');
+            $(".passenger_info_wrap2 .select_seat_price .price").html("");
+            $(".passenger_info_wrap2 .seat_num").html("");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
         })
     })
 
