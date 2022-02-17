@@ -560,14 +560,17 @@ h1, h2{
 .con_box{
     width: 1200px;
     margin: 0 auto;
-    padding: 30px;
-    border: 1px solid #f2f2f2;
+    line-height: 2;
 }
+.agreeText{
+    border: 1px solid #f2f2f2;
+    padding: 30px;
 
+}
 .menu_title{
     font-size: 3rem;
     color: #661E43;
-    margin: 150px 0 60px 130px;
+    margin: 150px 0 60px 0;
     font-weight: 600;
     text-indent: 30px;
 }

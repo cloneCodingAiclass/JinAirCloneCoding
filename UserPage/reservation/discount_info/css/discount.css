@@ -566,6 +566,7 @@ div.standard {
     border: none;
     padding: 0 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #container > .contentswrap > .discount_commercial div h3 {

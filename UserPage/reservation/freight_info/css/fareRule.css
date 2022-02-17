@@ -733,10 +733,18 @@ ul li{
 .innerTab{
     display: flex;
     width: 400px;
-    border-bottom: 1px solid #F7F7F7;
     margin-bottom: 30px;
 }
 .innerTab > li{
+    border-bottom: 1px solid #F7F7F7;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.innerTab > li:first-child{
+    border-bottom: 1px solid #661E43;
     width: 200px;
     height: 30px;
     text-align: center;

@@ -131,26 +131,26 @@ $(function () {
         $('#fareRules3').css('display', 'none');
         $('#fareRules4').css('display', 'none');
     }else if(directId == 'fareRule2'){
-        $('.faq2').addClass('check');
+        $('.faq3').addClass('check');
         $('.faq1').removeClass('check');
-        $('.faq3').removeClass('check');
         $('.faq4').removeClass('check');
+        $('.faq2').removeClass('check');
         $('#fareRules1').css('display', 'none');
         $('#fareRules2').css('display', 'block');
         $('#fareRules3').css('display', 'none');
         $('#fareRules4').css('display', 'none');
     }else if(directId == 'fareRule3'){
-        $('.faq3').addClass('check');
+        $('.faq4').addClass('check');
         $('.faq2').removeClass('check');
         $('.faq1').removeClass('check');
-        $('.faq4').removeClass('check');
+        $('.faq3').removeClass('check');
         $('#fareRules1').css('display', 'none');
         $('#fareRules2').css('display', 'none');
         $('#fareRules3').css('display', 'block');
         $('#fareRules4').css('display', 'none');
     }else if(directId == 'fareRule4'){
-        $('.faq4').addClass('check');
-        $('.faq2').removeClass('check');
+        $('.faq2').addClass('check');
+        $('.faq4').removeClass('check');
         $('.faq3').removeClass('check');
         $('.faq1').removeClass('check');
         $('#fareRules1').css('display', 'none');
@@ -167,6 +167,20 @@ $(function () {
         $('#fareRules3').css('display', 'none');
         $('#fareRules4').css('display', 'none');
     }
+
+    $('#cont02').hide();
+    $('.line2').click(function(){
+        $('#cont02').show();
+        $('#cont01').hide();
+        $('.line2').css('border-bottom', '1px solid #661E43');
+        $('.line1').css('border-bottom', '1px solid #F7F7F7');
+    })
+    $('.line1').click(function(){
+        $('#cont01').show();
+        $('#cont02').hide();
+        $('.line1').css('border-bottom', '1px solid #661E43');
+        $('.line2').css('border-bottom', '1px solid #F7F7F7');
+    })
 });
 
 function showFaq(obj){
