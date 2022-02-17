@@ -269,7 +269,7 @@ $(function () {
     
     let click = 'n';
     let click2 = 'n';
-    // 운항편 선택시 스타일 변경
+    // 운항편(가는편) 선택시 스타일 변경
     $(".price_wrap").on("click", function() {
         if(click=='n'){
             click='y';
@@ -279,7 +279,21 @@ $(function () {
             if($(this).val() == 'y'){
                 click='n';
                 $(this).toggleClass('click');
-                $(this).val('');
+                $(this).val('0');
+            }
+        }
+    });
+    // 운항편(오는편) 선택시 스타일 변경
+    $(".price_wrap1").on("click", function() {
+        if(click2=='n'){
+            click2='y';
+            $(this).toggleClass('click');
+            $(this).val('y');
+        }else{
+            if($(this).val() == 'y'){
+                click2='n';
+                $(this).toggleClass('click');
+                $(this).val('0');
             }
         }
     });
