@@ -119,6 +119,20 @@ $(function () {
         $('#checkinCont02').css({"display":"none"});
     })
 
+/* 체크인 리스트 */
+    $('.choice1').on('click', function () {
+        $('#member').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.choice2').css({"background-color":"white", "color": "#444"});
+        $('#nonmember').css({"display":"none"});
+
+    })
+    $('.choice2').on('click', function () {
+        $('#nonmember').css({"display":"block"});
+        $(this).css({"color": "#fff", "background-color": "rgb(102, 30, 67)"});
+        $('.choice1').css({"background-color":"white", "color": "#444"});
+        $('#member').css({"display":"none"});
+    })
 
 
 
