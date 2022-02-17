@@ -597,6 +597,12 @@ function submit(){
         $("strong[name=person_num]").text('유아 '+iChildCount);
     }
 
+    // 중요. 확인 버튼 누를 때 성인, 소아, 유아의 수를 input:hidden에 넣음
+    // 아무것도 선택 안할 경우 .adultPaxCnt의 default값 : 1로 지정
+    $('.adultPaxCnt').val(iAdultCount);
+    $('.childPaxCnt').val(iChildCount);
+    $('.infantPaxCnt').val(iInfantCount);
+
     $(".person_layerbtn").removeClass('close');
     $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
     $(".person_down_img").css({ "display": "inline-block" });
