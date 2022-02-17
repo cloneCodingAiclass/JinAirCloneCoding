@@ -384,6 +384,7 @@ body {
     height: 1000px;
     padding: 20px;
     line-height: 1.5;
+    margin-bottom: 150px;
 }
 #container a.fontTypeE{
     color: blue;
@@ -426,6 +427,7 @@ body {
     height: 1000px;
     padding: 20px;
     line-height: 1.5;
+    margin-bottom: 150px;
 }
 #container > .usa > h3{
     font-size: 1.5rem;
@@ -442,9 +444,10 @@ body {
 /* 일본 */
 #container > .japan{
     display: none;
-    height: 1000px;
+    height: 100%;
     padding: 20px;
     line-height: 1.5;
+    margin-bottom: 150px;
 }
 #container > .japan > h3{
     font-size: 1.5rem;
@@ -465,9 +468,10 @@ body {
 }
 #container > .china{
     display: none;
-    height: 1000px;
+    height: 100%;
     padding: 20px;
     line-height: 1.5;
+    margin-bottom: 150px;
 }
 #container > .china > h3{
     font-size: 1.5rem;
@@ -488,9 +492,10 @@ body {
 /* 동남아 */
 #container > .taipei{
     display: none;
-    height: 1000px;
+    height: 100%;
     padding: 20px;
     line-height: 1.5;
+    margin-bottom: 150px;
 }
 #container > .taipei > h3{
     font-size: 1.5rem;
