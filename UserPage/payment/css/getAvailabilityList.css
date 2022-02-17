@@ -652,7 +652,7 @@ body{
     font-size: 12px;
 }
 
-.list_wrap .price_wrap {
+.list_wrap .price_wrap1 {
     width: 120px;
     height: 110px;
     border: 1px solid #f2f2f2;
@@ -674,6 +674,11 @@ body{
 }
 
 .list_wrap .price_wrap .date_price {
+    font-size: 23px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+.list_wrap .price_wrap1 .date_price {
     font-size: 23px;
     margin: 5px;
     margin-bottom: 10px;
@@ -700,6 +705,10 @@ body{
 
 
 .price_wrap.click{
+    background-color: rgb(102, 30, 67);
+    color: #fff;
+}
+.price_wrap1.click{
     background-color: rgb(102, 30, 67);
     color: #fff;
 }
