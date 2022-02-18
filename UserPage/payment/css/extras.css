@@ -2029,8 +2029,47 @@ body{
     background-color: #BDD600;
 }
 
-
 /*비상구 좌석 지정 시 유의 사항 안내 모달창 끝*/
+/*체크 확인 모달*/
+#modal_conf_check {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_conf_check .modal_conf_check {
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #661e43
+}
+
+#modal_conf_check  .modal_conf_check .txt{
+    width: 100%;
+}
+
+#modal_conf_check  .modal_conf_check .button_wrap {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#modal_conf_check  .modal_conf_check .button_wrap input {
+    width: 80px;
+    height: 40px;
+    background-color: #BDD600;
+    border: none;
+}
+/*체크 확인 모달 끝*/
 
 /*보험계약 안내사항 모달창*/
 #modal_insurance_info_wrap {
@@ -2308,7 +2347,7 @@ h2 {
 #modal_agreement_wrap .modal_agreement_wrap .rule {
     margin: 20px 0;
     width: 100%;
-    height: 200px;
+    height: 220px;
     padding: 20px 25px;
     border: 1px solid rgba(173, 173, 173, 0.5);
     line-height: 23px;
@@ -2333,7 +2372,7 @@ h2 {
 }
 
 #modal_agreement_wrap .modal_agreement_wrap .rule2 {
-    height: 160px;
+    height: 140px;
 }
 
 #modal_agreement_wrap .modal_agreement_wrap .rule2 li::before {
@@ -2452,9 +2491,313 @@ h2 {
 }
 
 
-
-
 /*여행자보험 가입규약 및 개인정보 제3자 제공 동의 끝*/
+
+
+/*부가서비스 신청내역 모달창*/
+#modal_service_app_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap {
+    width: 1000px;
+    height: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_title {
+    position: relative;
+    padding: 20px;
+    font-size: 34px;
+    background-color: #661e43;
+    height: 80px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents {
+    padding: 30px 20px;
+    font-weight: 600;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 720px;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table th {
+    background-color: rgb(247, 247, 246);
+    line-height: 50px;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table td {
+    text-align: center;
+    height: 80px;
+    border-top: 1px solid rgba(168, 165, 165, 0.3);
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table td.left {
+    text-align: left;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .item_wrap1 {
+    display: flex;
+    align-items: center;
+}
+
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .txt {
+    display: inline;
+    text-align: left;
+}
+
+.none_b_t {
+    border-top: none !important;
+}
+
+.b_r {
+    border-right: 1px solid rgba(168, 165, 165, 0.3);
+}
+
+.cell {
+    height: 65px !important;
+}
+
+.left > p {
+    display: inline;
+    width: 200px;
+    font-size: 14px;
+    padding: 15px 25px;
+    margin-left: 15px;
+    border: 1px solid #BDD600;
+    background-color: #fff;
+    margin-left: 60px;
+}
+
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #00103F;
+    margin-right: 15px;
+    margin-left: 100px;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .img_seat {
+    background: url(../img/menu1.png);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247, 247, 246);
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .img_bagg {
+    background: url(../img/menu2.PNG);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247, 247, 246);
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .modal_contents table .img_ins {
+    background: url(../img/menu3.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(247, 247, 246);
+}
+
+.li_wrap {
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.li_wrap ul > li {
+    font-size: 15px;
+    line-height: 22px;
+    text-indent: -10px;
+    padding-left: 10px;
+}
+
+.li_wrap ul > li::before {
+    content: " - ";
+}
+
+.li_wrap ul > li > ul > li {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.li_wrap ul > li > ul > li::before {
+    content: " * ";
+}
+
+.li_wrap p {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.c_p {
+    color: #661e43;
+}
+
+label.checkbox_wrap {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.add_modal {
+    color: #661e43 !important;
+    text-decoration: underline;
+    font-size: 15px;
+    cursor: pointer
+}
+
+
+#modal_service_app_wrap .modal_service_app_wrap .butt_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .butt_wrap input {
+    width: 150px;
+    height: 45px;
+    margin-right: 10px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #BDD600;
+}
+
+#modal_service_app_wrap .modal_service_app_wrap .butt_wrap input.modal_butt_ok {
+    background-color: #BDD600;
+    border: none;
+}
+/* 
+#modal_service_app_wrap .modal_agreemmodal_service_app_wrapent_wrap .butt_wrap input.modal_butt_canc {
+} */
+
+
+/*자동 체크인 서비스 유의사항*/
+#addmodal_autoCheck_noti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 800;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti {
+    width: 1000px;
+    height: 650px;
+    margin: 30px auto;
+    background-color: #fff;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_title {
+    position: relative;
+    padding: 20px;
+    font-size: 34px;
+    background-color: #661e43;
+    height: 80px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents {
+    padding: 20px;
+    font-weight: 600;
+    width: 100%;
+    height: 570px;
+    font-weight: 400;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .top {
+    width: 100%;
+    height: 100px;
+    padding: 10px 20px;
+    line-height: 25px;
+    background-color: rgb(247, 247, 246);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .bott {
+    padding: 10px 20px;
+    border: 1px solid rgba(168, 165, 165, 0.3);
+    margin-top: 30px;
+}
+
+.bott .con {
+    width: 100%;
+    line-height: 22px;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.con2 {
+    border-top: 1px solid rgba(168, 165, 165, 0.3);
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .bott > .con > p {
+    font-size: 14px;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .butt_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .butt_wrap input {
+    width: 130px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #BDD600;
+}
+
+#addmodal_autoCheck_noti .addmodal_autoCheck_noti .modal_contents .butt_wrap input.add_modal_butt_ok {
+    background-color: #BDD600;
+    margin-right: 10px;
+}
+
+
+
+
+/*자동 체크인 서비스 유의사항 끝*/
+
+
+/*부가서비스 신청내역 모달창 끝*/
 
 /*부가서비스 신청 끝*/
 

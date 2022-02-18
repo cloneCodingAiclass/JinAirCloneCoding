@@ -427,14 +427,15 @@ $(function () {
         }
     });
 
-    $(".ins_join_butt").on("click", function() {
-        if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
-            $(".modal_join_ins").fadeIn();
-        }
-        else{
+    // $(".ins_join_butt").on("click", function() {
+    //     if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
+    //         $("#modal_service_app_wrap").fadeIn();
+    //         $(".modal_join_ins").fadeIn();
+    //     }
+    //     else{
 
-        }
-    });
+    //     }
+    // });
 
     /*보험 선택 구간 끝*/
 
@@ -486,7 +487,7 @@ $(function () {
     $(".insContent2").css("display", "none");
 
     $(".insurance_price .next_butt").on("click", function() {
-        if($(".check_ins").is(":checked")) {
+        if($("#check_ins").is(":checked")) {
             $(".insurance_menu_wrap .ins_menu1").css("background-color", "#fff");
             $(".insurance_menu_wrap .ins_menu2").css("background-color", "#661e43");
             $(".insurance_menu_wrap .ins_menu1").css("color", "#444");
@@ -851,6 +852,10 @@ $(()=> {
         }
     })
 
+    $("#modal_insurance_info_wrap .modal_agree2 .butt input").on("click", function() {
+        $("#modal_insurance_info_wrap .modal_agree2").fadeOut();
+    })
+
     $(".detail .close").on("click", function() {
         $("table .detail").css("display", "none");
     })
@@ -980,7 +985,6 @@ $(()=> {
         $("#modal_agreement_wrap").fadeOut();
     })
 
-    
     $(".butt_agree").on("click", function() {
         if($("#agree1").is(":checked") && $("#agree2").is(":checked")) {
             $("#modal_agreement_wrap").fadeOut();
@@ -998,3 +1002,51 @@ $(()=> {
 
 })
 /*여행자보험 가입규약 및 개인정보 제3자 제공 동의 모달창 끝*/
+
+$(()=> {
+    $("#modal_service_app_wrap").hide();
+    $(".modal_join_ins").hide();
+    $("#addmodal_autoCheck_noti").hide();
+    $("#modal_conf_check").hide();
+    $(".ins_join_butt").on("click", () => {
+        if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
+            $("#modal_service_app_wrap").fadeIn();
+        }
+        else{
+            $("#modal_conf_check").fadeIn();
+        }
+    });
+    $("#modal_conf_check input.cursor").on("click", () => {
+        $("#modal_conf_check").fadeOut();
+    })
+    $("#modal_service_app_wrap .add_modal").on("click", () => {
+        $("#addmodal_autoCheck_noti").fadeIn();
+        $("#modal_service_app_wrap").fadeOut();
+    })
+
+    $("#addmodal_autoCheck_noti .add_modal_butt_ok, #addmodal_autoCheck_noti .add_modal_butt_canc, #addmodal_autoCheck_noti .tit_close").on("click", () => {
+        $("#addmodal_autoCheck_noti").fadeOut();
+        $("#modal_service_app_wrap").fadeIn();
+    })
+
+    $("#modal_service_app_wrap .modal_butt_ok").on("click", () => {
+        if ($(".auto_check").is(":checked")) {
+            $("#modal_service_app_wrap").fadeOut();
+            $(".modal_join_ins").fadeIn();
+        } else {
+
+        }
+    })
+
+    $(".modal_join_ins .butt input").on("click", () => {
+        $(".modal_join_ins").fadeOut();
+    });
+
+    $("#modal_service_app_wrap .modal_butt_canc, #modal_service_app_wrap .tit_close").on("click", () => {
+        $("#modal_service_app_wrap").fadeOut();
+    })
+
+    $("#modal_service_app_wrap .modal_butt_ok").on("click", () => {
+        $("#modal_service_app_wrap").fadeOut();
+    })
+})
