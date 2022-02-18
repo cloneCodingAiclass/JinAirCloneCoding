@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../css/Mypage_getReservationDetail.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../js/Mypage_main.js"></script>
+        <script src="../js/Mypage_main.js"></script>
+    <script src="../js/Mypage_getReservationDetail.js"></script>
 </head>
 
 <body>
@@ -300,7 +301,7 @@
                             <col width="85%">
                             <col width="15%">
                         </colgroup>
-                        <tr>
+                        <tr class="borderB">
                             <td>항공운임</td>
                             <td>
                                 <div class="td_wrap">
@@ -347,8 +348,8 @@
                                 </table>
                             </td>
                         </tr>
-                        <tr>
-                            <td>유류할증료</td>
+                        <tr class="borderB">
+                            <td class="borderB">유류할증료</td>
                             <td>
                                 <div class="td_wrap">
                                     <span class="cul">KRW</span>
@@ -394,7 +395,7 @@
                                 </table>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="borderB">
                             <td>세금</td>
                             <td>
                                 <div class="td_wrap">
@@ -444,13 +445,81 @@
                     </table>
                 </div>
                 <!-- 운임 규정-->
-                <div>
-
+                <div class="infobox">
+                    <ul>
+                        <li class="infoboxli1">
+                            여정 1 : GMP - CJU
+                        </li>
+                        <li class="infoboxli2">
+                            여정 2 : CJU - GMP
+                        </li>
+                    </ul>
+                    <div class="bbsbox1">
+                    <table class="bbsList1">
+                        <colgroup>
+                            <col width="20%"><col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="al">운임종류</th>
+                            <td class="al">지니</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="al">예약변경</th>
+                            <td class="al">~ 61일 전 : 편도 당 KRW 1,000 징수<br>
+                                60일 전 ~ 31일 전 : 편도 당 KRW 3,000 징수<br>
+                                30일 전 ~ 15일 전 : 편도 당 KRW 4,000 징수<br>
+                                14일 전 ~ 2일 전 : 편도 당 KRW 8,000 징수<br>
+                                1일 전 ~ 출발시간 전 : 편도 당 KRW 10,000 징수<br>
+                                출발시간 이후(NO-SHOW) : 편도 당 KRW 15,000 징수<br> (예약부도 위약금 포함)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="al">환불</th>
+                            <td class="al">~ 61일 전 : 편도 당 KRW 1,000 징수<br>
+                                60일 전 ~ 31일 전 : 편도 당 KRW 3,000 징수<br>
+                                30일 전 ~ 15일 전 : 편도 당 KRW 4,000 징수<br>
+                                14일 전 ~ 2일 전 : 편도 당 KRW 8,000 징수<br>
+                                1일 전 ~ 출발시간 전 : 편도 당 KRW 10,000 징수<br>
+                                출발시간 이후(NO-SHOW) : 편도 당 KRW 15,000 징수<br> (예약부도 위약금 포함)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="bbsbox2">
+                    <table class="bbsList2">
+                        <colgroup>
+                            <col width="20%"><col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="al">운임종류</th>
+                            <td class="al">지니</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="al">예약변경</th>
+                            <td class="al">~ 61일 전 : 편도 당 KRW 1,000 징수<br>
+                                60일 전 ~ 31일 전 : 편도 당 KRW 3,000 징수<br>
+                                30일 전 ~ 15일 전 : 편도 당 KRW 4,000 징수<br>
+                                14일 전 ~ 2일 전 : 편도 당 KRW 8,000 징수<br>
+                                1일 전 ~ 출발시간 전 : 편도 당 KRW 10,000 징수<br>
+                                출발시간 이후(NO-SHOW) : 편도 당 KRW 15,000 징수<br> (예약부도 위약금 포함)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="al">환불</th>
+                            <td class="al">~ 61일 전 : 편도 당 KRW 1,000 징수<br>
+                                60일 전 ~ 31일 전 : 편도 당 KRW 3,000 징수<br>
+                                30일 전 ~ 15일 전 : 편도 당 KRW 4,000 징수<br>
+                                14일 전 ~ 2일 전 : 편도 당 KRW 8,000 징수<br>
+                                1일 전 ~ 출발시간 전 : 편도 당 KRW 10,000 징수<br>
+                                출발시간 이후(NO-SHOW) : 편도 당 KRW 15,000 징수<br> (예약부도 위약금 포함)</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <!-- 운임 규정 끝 -->
                 <!--부가서비스 확인-->
                 <div class="service_wrap">
-                    <h2>부가서비스 구매/취소</h2>
+                    <h2>부가서비스</h2>
                     <table class="service_T">
                         <colgroup>
                             <col width="85%">
@@ -623,9 +692,11 @@
                     </table>
                 </div>
                 <div class="to_main">
-                    <a href="../../../index.html">
-                        메인
-                    </a>
+                    <p class="modal_text reser_change_btn">항공권 변경</p>
+                    <p class="modal_text">항공권 취소/환불</p>
+                    <p class="modal_text">부가서비스 구매/취소</p>
+                    <p class="modal_text">여행보험 가입</p>
+                    <p><a href="./Mypage_main.html">처음으로</a></p>
                 </div>
             </div>
         </div>
@@ -787,6 +858,58 @@
             </div>
         </form>
     </div>
+    <div class="reser_change">
+        <div class="modal_title">
+            <p>예약 변경 안내</p>
+        </div>
+        <div class="main_box">
+            <ul>
+                <li>- 예약 변경 시 운임 규정에 따라 수수료가 발생할 수 있습니다.</li>
+                <li>초과수하물을 제외한 부가서비스는 자동 취소되오니 다시 구매하여 주시기 바랍니다. (취소 기한 내에만 환불 가능)</li>
+                <li>여정 변경 시 기존에 신청한 자동체크인 서비스도 함께 취소됩니다.</li>
+                <li>가족할인/기업우대 등의 추가할인을 받으신 이후 예약을 분리하는 경우에는 할인 조건 미충족으로 인해 예약변경이 불가하거나 수속 시 추가 금액이 징수 될 수 있습니다.</li>
+                <li>일부 승객 선택 시 예약이 분리되어 진행됩니다.</li>
+            </ul>
+            <p>* 예약을 변경하고자 하는 인원 및 여정을 선택해주십시오.</p>
+        <div class="modal_table">
+            <table class="bbsList">
+				<thead>
+				<tr>
+					<th scope="col"><input type="checkbox" name="people" id="peopleAll"></th>
+					<th scope="col"><label for="peopleAll">승객명</label></th>
+					<th scope="col"><input type="checkbox" name="trip" id="tripAll" onClick="showCancelGuide('N');"></th>
+					<th scope="col"><label for="tripAll">여정</label></th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row"><input type="checkbox" class="people_name"></th>
+						<td scope="col">라/승현</td>
+						<th scope="row"><input type="checkbox" class="trip_name"></th>
+						<td scope="col">서울/김포(GMP) - 제주(CJU)</td>
+					</tr>
+					<tr>
+						<th scope="row"><input type="checkbox" class="people_name"></th>
+						<td scope="col"></td>
+						<th scope="row"><input type="checkbox" class="trip_name"></th>
+						<td scope="col">제주(CJU) - 서울/김포(GMP)</td>
+					</tr>
+				</tbody>
+			</table>
+            <div class="modal_btn">
+                <p class="change_ticket">항공권 변경</p>
+                <p class="btn_cancel">취소</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="false_modal">
+        <div class="false_modal_box">
+            <p>예약변경 및 취소할 탑승객 및 여정을 선택하십시오.</p>
+            <div class="modal_btn">
+                <p class="confirm_btn">확인</p>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
