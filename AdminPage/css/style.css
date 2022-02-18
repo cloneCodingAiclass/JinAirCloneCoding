@@ -135,15 +135,16 @@ header{
 }
 #container > .contents{
     position: fixed;
-    top: 70px;
-    right: -230px;
-    float: right;
-    width: 100%;
-    height: 100%;
+    margin-top: 70px;
+    left: 220px;
+    float: left;
+    width: 88%;
+    height: 90%;
     align-items: stretch;
     /* 배경 입시 선정 */
     background-color: white;
     padding: 10px;
+    overflow: auto;
 }
 #container > .sidebar > nav li{
     display: none;
