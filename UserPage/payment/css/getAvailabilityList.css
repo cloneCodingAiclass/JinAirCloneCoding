@@ -1201,6 +1201,200 @@ body{
 /*여행일정 수정 모달 끝*/
 
 
+/* 운임규정 모달 */
+.crr_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    display: none;
+}
+.crr_modal .crr_box {
+    background-color: #fff;
+    width: 645px;
+    height: 660px;
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+.crr_modal .crr_box h3{
+    display: inline-block;
+}
+.crr_modal .crr_box button.close_img {
+    margin-left: 390px;
+    vertical-align: middle;
+    background-color: transparent;
+    border: none;
+}
+.crr_modal .crr_box button img {
+    width: 26px;
+    height: 26px;
+}
+.crr_modal .crr_box .crr_title {
+    height: 80px;
+    background-color: #661e43;
+}
+.crr_modal .crr_box .crr_title h3 {
+    color: #fff;
+    font-size: 32px;
+    padding: 30px 50px 20px 30px;
+}
+.crr_contents{
+    overflow-y: scroll !important;
+}
+.crr_modal .crr_box .crr_kind > table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    margin-top: 15px;
+    line-height: 1.2;
+    font-size: 14px;
+    color: #444;
+    box-shadow: 5px 8px 5px rgb(150 150 150 / 40%);
+    border-top: 1px solid rgb(102, 30, 67);
+}
+.crr_modal .crr_box .crr_kind > table th {
+    border-spacing: 0px;
+    padding: 10px;
+    height: 100%;
+    width: 116px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+.crr_modal .crr_box .crr_kind > table th.kind_btn{
+    color: #fff;
+    background-color: #661e43;
+}
+.crr_modal .crr_box .crr_kind > table th.superlow_btn{
+    background-color: #fff;
+}
+.crr_modal .crr_box .crr_kind > table th.flex_btn{
+    background-color: #fff;
+}
+.crr_modal .crr_box .crr_kind > table th.jini_btn{
+    background-color: #fff;
+}
+.crr_modal .crr_box .crr_kind > table th.biz_btn{
+    background-color: #fff;
+}
+/* 운임종류 */
+.crr_modal .crr_box .crr_index{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.crr_modal .crr_box .crr_index .text{
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+    padding: 10px;
+    margin-right: 20px;
+}
+.crr_modal .crr_box .crr_index .crr_table {
+    text-align: center;
+}
+.crr_modal .crr_box .crr_index .crr_table table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #555;
+    width: 90%;
+    white-space: nowrap;
+}
+.crr_modal .crr_box .crr_index .crr_table table th {
+    background-color: #f2f2f2;
+    width: 90px;
+    height: 51px;
+    font-size: 16px;
+    border-top: 1px solid #000 !important;
+}
+.crr_modal .crr_box .crr_index .crr_table table th,
+.crr_modal .crr_box .crr_index .crr_table table td{
+    border: 0.5px solid rgb(153, 153, 153, 0.2);
+    vertical-align: middle;
+    padding: 5px;
+}
+.crr_modal .crr_box .crr_index .crr_table table th:first-child,
+.crr_modal .crr_box .crr_index .crr_table table td:first-child{
+    border-left: none;
+}
+.crr_modal .crr_box .crr_index .crr_table table th:last-child,
+.crr_modal .crr_box .crr_index .crr_table table td:last-child{
+    border-right: none;
+}
+.crr_modal .crr_box .crr_index .crr_table table td{
+    font-weight: bold;
+    height: 50px;
+}
+.crr_modal .crr_box .crr_index .crr_table table td.sub_tit{
+    font-size: 14px;
+}
+.crr_modal .crr_box .crr_index .crr_table table td p {
+    font-size: 13px;
+}
+.h_80{
+    height: 80px !important;
+}
+/* 슈퍼 로우 */
+.crr_modal .crr_box .crr_superlow {
+    display: none;
+}
+/* 플렉스 */
+.crr_modal .crr_box .crr_flex {
+    display: none;
+}
+/* 지니 */
+.crr_modal .crr_box .crr_jini {
+    display: none;
+}
+/* 지니비즈 */
+.crr_modal .crr_box .crr_biz {
+    display: none;
+}
+/* 상세 내용 테이블 */
+.crr_box .detail_table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #555;
+    width: 90%;
+    margin-top: 30px;
+}
+.crr_box .detail_table tr:first-child {
+    border-top: 1px solid #000;
+}
+.crr_box .detail_table th {
+    text-align: left;
+    padding-left: 20px;
+    width: 25%;
+    font-size: 17px;
+    background-color: #f2f2f2;
+    border-bottom: 0.5px solid rgb(153, 153, 153, 0.2);
+}
+.crr_box .detail_table td {
+    width: 75%;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 2;
+    border-bottom: 0.5px solid rgb(153, 153, 153, 0.2);
+}
+/* 닫기 버튼 */
+.crr_modal .crr_box .close_btn{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.crr_modal .crr_box .close_btn button {
+    width: 135px;
+    height: 42px;
+    background-color: #fff;
+    border: 2px solid #BDD600;
+}
+/* 운임규정 모달 끝 */
+
+
 
 /*푸터*/
 #footerCont {
