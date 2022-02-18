@@ -9,7 +9,6 @@ $(function () {
         $(this).find('a').css({"color":"#BDD600"});
         $(this).siblings('li').css({"display":"block"});
         $(this).parent().siblings().find('li').css({"display":"none"});
-        $('.nav1').siblings('li').eq(0).find('a').css({"color":"rgb(124,0,72)"});
     });
     $('.nav2').on('mouseover', function(e){
         e.stopPropagation();
