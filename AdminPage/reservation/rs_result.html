@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 조회 | 운항 별 예약자 조회</title>
     <link rel="stylesheet" href="./css/rs_result.css">
+    <link rel="stylesheet" href="/AdminPage/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/rs_index.js"></script>
 </head>
@@ -77,31 +78,43 @@
                     </div>
                     <div class="searchwrap">
                         <form action="./rs_result.html">
-                            <div class="searchwrap_t">
-                                <p>항공편 명 <input type="text" class="searchbox yelgcolor" placeholder="(예)001, 세자리"></p>
-                                <p><select name="from_place" class="searchbox">
-                                    <option value="">출발지</option>
-                                    <option value="GMP">GMP</option>
-                                    <option value="CJU">CJU</option>
-                                    <option value="USN">USN</option>
-                                    <option value="TAE">TAE</option>
-                                    <option value="ICN">ICN</option>
-                                </select></p>
-                                <p><select value="to_place" class="searchbox">
-                                    <option>도착지</option>
-                                    <option value="GMP">GMP</option>
-                                    <option value="CJU">CJU</option>
-                                    <option value="USN">USN</option>
-                                    <option value="TAE">TAE</option>
-                                    <option value="ICN">ICN</option>
-                                </select></p>
-                            </div>
-                            <div class="searchwrap_b">
-                                <p>검색기간</p>
-                                <p><input type="date" name="start_date" id="end_date" class="searchbox yelgcolor" required>
-                                <input type="date" name="end_date" id="end_date" class="searchbox yelgcolor" required/></p>
-                            </div>
-                            <p><input type="submit" value="검색" class="searchbox yelgback searchbutt" onclick="location.href='rs_result.html'"></p>
+                            <table>
+                                <tr>
+                                    <th>항공편 명</th>
+                                    <th>출발일</th>
+                                    <th>도착일</th>
+                                    <th>출발지</th>
+                                    <th>도착지</th>
+                                    <th rowspan="2">
+                                        <input type="submit" value="검색" class="yelgback searchbutt">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="searchbox yelgcolor" placeholder="(예)001, 세자리"></td>
+                                    <td><input type="date" name="start_date" id="start_date" class="searchbox yelgcolor" required></td>
+                                    <td><input type="date" name="end_date" id="end_date" class="searchbox yelgcolor" required/></td>
+                                    <td>
+                                        <select name="from_place" class="searchbox">
+                                            <option value="">선택</option>
+                                            <option value="GMP">GMP</option>
+                                            <option value="CJU">CJU</option>
+                                            <option value="USN">USN</option>
+                                            <option value="TAE">TAE</option>
+                                            <option value="ICN">ICN</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select value="to_place" class="searchbox">
+                                            <option>선택</option>
+                                            <option value="GMP">GMP</option>
+                                            <option value="CJU">CJU</option>
+                                            <option value="USN">USN</option>
+                                            <option value="TAE">TAE</option>
+                                            <option value="ICN">ICN</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
                         </form>
                     </div>
                 <!-- 예약자 리스트 -->
