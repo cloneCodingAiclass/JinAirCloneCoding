@@ -83,8 +83,8 @@ $(function () {
         e.stopPropagation();
         $('.modal').fadeOut(200);
     })
-    $('.pwcheck_modal').hide();
     $('.edit').click(function(){
+        $('.pwcheck_modal').css('display', 'flex');
         $('.pwcheck_modal').fadeIn(200);
         $('body').css('overflow', 'hidden');
         
@@ -94,8 +94,8 @@ $(function () {
             e.stopPropagation();
         });
     });
-    $('.confirm_modal1').hide();
     $('.btnTypeA').click(function(){
+        $('.confirm_modal1').css('display', 'flex');
         $('.confirm_modal1').fadeIn(200);
         $('body').css('overflow', 'hidden');
         

@@ -106,8 +106,8 @@ $(function () {
         });
         $(".bonus_ticket_main").css("display","flex");
     })
-    $('.pwcheck_modal').hide();
     $('.edit').click(function(){
+        $('.pwcheck_modal').css('display', 'flex');
         $('.pwcheck_modal').fadeIn(200);
         $('body').css('overflow', 'hidden');
         
