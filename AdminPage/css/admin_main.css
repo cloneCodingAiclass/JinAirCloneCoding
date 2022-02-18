@@ -2,7 +2,6 @@
 .contents > .contwrap{
     width: 100%;
     height: 100%;
-    border: 1px solid grey;
     padding: 10px;
 }
 .contents > .contwrap > .topcont{
@@ -12,18 +11,7 @@
     align-content: space-between;
     margin-bottom: 10px;
 }
-/* 날씨 */
-.contents > .contwrap .weather{
-    width: 100%;
-    height: 450px;
-    border: 1px solid grey;
-    border-radius: 3px;
-    margin-left: 5px;
-}
-.contents > .contwrap .weather img{
-    width: 100%;
-    height: 450px;
-}
+
 
 .contents > .contwrap .korea{
     width: 20%;
@@ -31,22 +19,27 @@
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
-    margin-left: 10pxpx;
+    
+}
+.contents > .contwrap .korea p{
+    line-height: 30px;
 }
 .contents > .contwrap .korea .korea_name{
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
     width: 100%;
-    height: 10px;
+    height: 30px;
     border-bottom: 1px solid grey;
     background-color: rgb(147, 201, 252);
+    line-height: 10px;
 }
 .contents > .contwrap .korea #korea_time{
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
-    margin-top: 20px;
+    padding-top: 20px;
+    line-height: 14px;
 
 }
 
@@ -64,7 +57,7 @@
     font-size: 15px;
     font-weight: bolder;
     width: 100%;
-    height: 10px;
+    height: 30px;
     border-bottom: 1px solid grey;
     background-color: rgb(147, 201, 252);
 }
@@ -72,7 +65,7 @@
     text-align: center;
     font-size: 15px;
     font-weight: bolder;
-    padding-top: 15px;
+    padding-top: 5px;
     width: 240px;
     border: none;
     outline: none;
@@ -96,18 +89,19 @@
 
 
 .contents > .contwrap > .bottcont{
-    width: 1250px;
+    width: 100%;
     height: 300px;
     display: flex;
     align-content: space-between;
 }
 .contents > .contwrap .QnA{
-    width: 600px;
-    height: 270px;
+    width: 50%;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 3px;
-    display: inline-block;
+    display: block;
     text-align: center;
+    margin-right: 10px;
 }
 .contents > .contwrap .QnA a{
     color: #444;
@@ -117,12 +111,12 @@
     font-size: 18px;
     font-weight: 900;
     padding: 1px 0 1px 0;
-    background-color: rgb(255, 140, 140);
+    background-color: rgb(147, 201, 252);
 }
 .contents > .contwrap .QnA p:nth-child(2){
     font-size: 13px;
     font-weight: 900;
-    padding: 1px 0 1px 0;
+    padding: 3px 0 1px 0;
 }
 .contents > .contwrap .QnA table{
     width: 90%;
@@ -167,7 +161,6 @@
 .contents > .contwrap .QnA p:last-child{
     font-size: 14px;
     font-weight: 900;
-    margin: 10px auto;
 }
 .contents > .contwrap .QnA p:last-child:hover{
     text-decoration: underline; 
@@ -366,44 +359,98 @@
 }
 .contents > .contwrap .notice{
     text-align: center;
-    width: 505px;
+    width: 50%;
     height: 250px;
     border: 1px solid grey;
     border-radius: 3px;
-    display: inline-block;
-    margin-left: 5px;
+    display: block;
+    margin-right: 10px;
     white-space: nowrap;
+}
+.contents > .contwrap .notice table{
+    width: 90%;
+    font-size: 13px;
+    font-weight: 900;
+    margin: 5px auto 5px;
+    border-collapse: collapse;
+    border-bottom: 1px solid #e2e2e2;
+}
+.contents > .contwrap .notice a{
+    color: #444;
+    font-weight: bold;
 }
 .contents > .contwrap .notice p:nth-child(1){
     font-size: 18px;
     font-weight: 900;
     padding: 1px 0 1px 0;
-    background-color: rgb(255, 140, 140);
+    background-color: rgb(147, 201, 252);
 }
+.contents > .contwrap .notice table td:nth-child(1){
+    width: 180px;
+}
+.contents > .contwrap .notice table td:nth-child(2){
+    width: 80px;
+    text-align: center;
+    white-space: nowrap;
+}
+.contents > .contwrap .notice > table a{
+    text-indent: 5px;
+    width: 170px;
+    display: block;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    color: #444;
+    text-align: center;
+}
+.contents > .contwrap .notice > table a :visited{
+    color:#444;
+}
+.contents > .contwrap .notice > table a :link{
+    color:rgb(56, 245, 204);
+}
+.contents > .contwrap .notice > table a:hover{
+    text-decoration: underline; 
+    color: #737373;
+}
+.contents > .contwrap .notice p:last-child{
+    font-size: 14px;
+    font-weight: 900;
+    margin: 10px auto;
+}
+.contents > .contwrap .notice p:last-child:hover{
+    text-decoration: underline; 
+    color: #737373;
+}
+
 .contents > .contwrap .itemmd{
     text-align: center;
-    width: 304px;
-    height: 350px;
+    width: 50%;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 3px;
-    display: inline-block;
-    margin-left: 5px;
+    display: block;
     white-space: nowrap;
 }
 .contents > .contwrap .itemmd p{
-    font-size: 13px;
+    width: 100%;
+    font-size: 15px;
     font-weight: 900;
-    text-align: left;
-    padding-top: 25px;
+    text-align: center;
+}
+.contents > .contwrap .itemmd a{
+    color: #444;
 }
 .contents > .contwrap .itemmd .item_md{
+    width: 100%;
     text-align: center;
     font-size: 18px;
     font-weight: 900;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(147, 201, 252);
 }
 .contents > .contwrap .itemmd table{
     width: 90%;
+    height: 20px;
     font-size: 13px;
     font-weight: 900;
     margin: 5px auto 5px;
@@ -417,7 +464,7 @@
 .contents > .contwrap .itemmd table tr:nth-child(1){
     background-color: #F2F2F2;
     border-top: 1px solid #e2e2e2;
-    height: 18px;
+    height: 10px;
 }
 .contents > .contwrap .itemmd table td:nth-child(1){
     width: 120px;
@@ -437,7 +484,7 @@
 
 /* 그래프 */
 #data{
-    width: 800px;
+    width: 100%;
     height: 350px;
     margin-left: 5px;
     padding: 10px;

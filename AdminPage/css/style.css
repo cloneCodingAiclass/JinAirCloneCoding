@@ -126,6 +126,7 @@ header{
     width: 225px;
     height: 100%;
     align-items: stretch;
+    border-right: 1px solid rgb(240, 240, 240);
     /* background-color: rgb(33, 37, 41)
     ; */
     /* background-color: #661e43; */
@@ -164,5 +165,4 @@ header{
 #container > .sidebar > nav li a{
     font-size: 15px;
     margin-left: 15px;
-
 }
