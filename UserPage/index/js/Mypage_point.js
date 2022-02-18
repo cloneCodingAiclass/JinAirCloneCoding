@@ -84,7 +84,7 @@ $(function () {
         $('.modal').fadeOut(200);
     })
 
-    $('.save_container').hide();
+    $('.srh_container').hide();
     $('.flex_container').hide();
     $(".point_save").on('click', function () {
         $(".flex_container, .srh_container").css("display","none");
@@ -137,7 +137,49 @@ $(function () {
             $("#header").css("position", "absolute");
         }
     });
+    
+    // 탭 메뉴 
+    let directId = $(location).attr('search').split('=')[1];
+    
+    if(directId == 'navipoint1'){
+        $(".flex_container, .srh_container").css("display","none");
+        $(".point_flex, .point_srh").css("background-color", "white");
+        $(".point_flex, .point_srh").css("color", "#444");
+        $(".point_save").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".save_container").css("display","block");
+    }else if(directId == 'navipoint2'){
+        $(".save_container, .srh_container").css("display","none");
+        $(".point_save, .point_srh").css("background-color", "white");
+        $(".point_save, .point_srh").css("color", "#444");
+        $(".point_flex").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".flex_container").css("display","block");
+    }else if(directId == 'navipoint3'){
+        $(".save_container, .flex_container").css("display","none");
+        $(".point_save, .point_flex").css("background-color", "white");
+        $(".point_save, .point_flex").css("color", "#444");
+        $(".point_srh").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".srh_container").css("display","block");
+    }else{
+        $(".flex_container, .srh_container").css("display","none");
+        $(".point_flex, .point_srh").css("background-color", "white");
+        $(".point_flex, .point_srh").css("color", "#444");
+        $(".point_save").css({
+            "background-color" : "rgb(102, 30, 67)",
+            "color" : "white"
+        });
+        $(".save_container").css("display","block");
+    }
 });
+
 
 function hidePopupLayer(){
     $('.confirm_modal1', parent.document).fadeOut(200);
