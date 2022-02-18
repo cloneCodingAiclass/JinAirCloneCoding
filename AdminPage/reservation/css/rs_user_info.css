@@ -1,190 +1,43 @@
-@font-face {
-    font-family: 'NanumBarunGothic';
-    font-style: normal;
-    font-weight:normal;
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
-}
-/*전체 페이지*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'NanumBarunGothic';
-    word-break: keep-all;
-}
-ul, li {
-    list-style: none;
-    text-decoration: none;
-    word-break: keep-all;
-    /* white-space: nowrap; */
-}
-ul {
-    margin-bottom: 2px;
-}
-li {
-    margin: 0.5%;
-}
-a{text-decoration: none;}
-a:link{color:#444;}
-a:visited{color:#444;}
-
-::selection {
-    background-color: #BDD600;
-}
-body{
-    height: 1; 
-    color: #444;
-    white-space: normal; 
-    word-wrap: break-word; 
-    line-height: 1;
-}
-#wrap{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display:table;
-}
-
-.yelgcolor {
-    color: #BDD600;
-}
-
-.yelgback {
-    background-color: #BDD600;
-    border: none;
-}
-
-/* 헤더 */
-header{
-    width: 100%;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-.header_inner{
-    background-color: rgb(240, 240, 240);
-    border-bottom: 1px solid rgb(240, 240, 240);
-}
-.header_inner{
-    display: inline-block;
-    display: flex;
-    align-items: center;
-}
-.header_inner .img{
-    background: url(../../img/logo_02.png) no-repeat center;
-    background-size: 100%;
-    width: 120px;
-    height: 40px;
-    margin-left: 13px;
-}
-.header_inner span{
-    padding-top: 3px;
-    margin-left: 20px;
-    font-size: 17px;
-    font-weight: 900;
-}
-.header_inner .logout{
-    display: flex;
-    position: fixed;
-    right: 130px;
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout p{
-    padding-top: 6px;
-    margin-right: 3px;
-}
-.header_inner .logout .nim{
-    width: 20px;
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout input[type="button"]{
-    width: 100px;
-    height: 25px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #BDD600;
-    color: white;
-    border: none;
-    letter-spacing: 1px;
-}
-
-/* 사이드 메뉴 */
-#container{
-    display: flex;
-}
-#container > .sidebar{
-    position: fixed;
-    top: 40px;
-    float: left;
-    width: 12%;
-    height: 100%;
-    align-items: stretch;
-    background-color: rgb(240, 240, 240);
-}
-#container > .contents{
-    position: fixed;
-    top: 40px;
-    right: 0;
-    float: right;
-    width: 88%;
-    height: 100%;
-    align-items: stretch;
-    /* 배경 입시 선정 */
-    background-color: white;
-    padding-top : 80px; padding-left: 100px;
-}
-#container > .sidebar > nav li{
-    display: none;
-}
-#container > .sidebar > nav{
-    padding-top: 20px;
-}
-#container > .sidebar > nav ul{
-    width: 80px;
-    margin: 25px 0px 25px 20px;
-    font-size: 16px;
-    font-weight: 900;
-}
-#container > .sidebar > nav li{
-    font-size: 11px;
-    margin: 5px 0;
-    padding-left: 5px;
-    width: 125px;
-}
-
 #container > .contents > .contwrap{
-    width: 1000px;
+    width: 88%;
+    margin-left: 50px;
+    margin-top: 50px;
+    
 }
 .contents > .contwrap > .search{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 35px;
-    margin-bottom: 3px;
 }
 .contents > .contwrap > .search > .title{
-    font-size: 1.1rem; 
+    font-size: 1.4rem; 
     font-weight: 700;
     display: inline;
-    align-self:flex-start;
+    align-self: flex-start;
 }
-.contents > .contwrap > .searchwrap {
-    width: 100%;
+
+.searchName p {
+    margin-bottom: 5px;;
 }
+
+.search_butt {
+    width: 40px;
+    background-color: #fff;
+    border: 1px solid #BDD600;
+}
+
+.searchbox {
+    margin: 0 5px;
+    height: 20px;
+}
+
 .rs_list {
     width: 100%;
 }
 .rs_list > table {
     width: 100%;
+    margin-top: 20px;
     border-collapse: collapse;
     text-align: center;
     font-size: 14px;
@@ -193,12 +46,12 @@ header{
     border-bottom: 1px solid grey;
 }
 .rs_list > table th {
-    height: 30px;
+    height: 50px;
     font-weight: bold;
     background-color: #f2f2f2;
 }
 .rs_list > table td {
-    height: 30px;
+    height: 40px;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
 }
@@ -232,8 +85,9 @@ header{
 .rs_list > table:nth-child(2) td input[type=radio] {
     margin: 5px;
 }
+
 .rs_list > .btnarea{
-    width: 1000px;
+    width: 100%;
     height: 40px;
     text-align: right;
 }
@@ -249,9 +103,8 @@ header{
     cursor: pointer;
 }
 .rs_list .golist{
-    width: 80px;
     background-color: white;
-    border: 3px solid #BDD600;
+    border: 1px solid #BDD600;
 }
 
 

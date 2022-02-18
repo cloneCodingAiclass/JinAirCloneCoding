@@ -1,204 +1,80 @@
-@font-face {
-    font-family: 'NanumBarunGothic';
-    font-style: normal;
-    font-weight:normal;
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
-}
-/*전체 페이지*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'NanumBarunGothic';
-    word-break: keep-all;
-}
-ul, li {
-    list-style: none;
-    text-decoration: none;
-    word-break: keep-all;
-    /* white-space: nowrap; */
-}
-ul {
-    margin-bottom: 2px;
-}
-li {
-    margin: 0.5%;
-}
-a{text-decoration: none;}
-a:link{color:#444;}
-a:visited{color:#444;}
-
-::selection {
-    background-color: #BDD600;
-}
-body{
-    height: 1; 
-    color: #444;
-    white-space: normal; 
-    word-wrap: break-word; 
-    line-height: 1;
-}
-#wrap{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display:table;
-}
-
-.yelgcolor {
-    color: #BDD600;
-}
-
-.yelgback {
-    background-color: #BDD600;
-    border: none;
-}
-
-/* 헤더 */
-header{
-    width: 100%;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-.header_inner{
-    background-color: rgb(240, 240, 240);
-    border-bottom: 1px solid rgb(240, 240, 240);
-}
-.header_inner{
-    display: inline-block;
-    display: flex;
-    align-items: center;
-}
-.header_inner .img{
-    background: url(../../img/logo_02.png) no-repeat center;
-    background-size: 100%;
-    width: 120px;
-    height: 40px;
-    margin-left: 13px;
-}
-.header_inner span{
-    padding-top: 3px;
-    margin-left: 20px;
-    font-size: 17px;
-    font-weight: 900;
-}
-.header_inner .logout{
-    display: flex;
-    position: fixed;
-    right: 130px;
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout p{
-    padding-top: 6px;
-    margin-right: 3px;
-}
-.header_inner .logout .nim{
-    width: 20px;
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout input[type="button"]{
-    width: 100px;
-    height: 25px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #BDD600;
-    color: white;
-    border: none;
-    letter-spacing: 1px;
-}
-
-/* 사이드 메뉴 */
-#container{
-    display: flex;
-}
-#container > .sidebar{
-    position: fixed;
-    top: 40px;
-    float: left;
-    width: 12%;
-    height: 100%;
-    align-items: stretch;
-    background-color: rgb(240, 240, 240);
-}
-#container > .contents{
-    position: fixed;
-    top: 40px;
-    right: 0;
-    float: right;
-    width: 88%;
-    height: 100%;
-    align-items: stretch;
-    /* 배경 입시 선정 */
-    background-color: white;
-    padding-top : 80px; padding-left: 100px;
-}
-#container > .sidebar > nav li{
-    display: none;
-}
-#container > .sidebar > nav{
-    padding-top: 20px;
-}
-#container > .sidebar > nav ul{
-    width: 80px;
-    margin: 25px 0px 25px 20px;
-    font-size: 16px;
-    font-weight: 900;
-}
-#container > .sidebar > nav li{
-    font-size: 11px;
-    margin: 5px 0;
-    padding-left: 5px;
-    width: 125px;
-}
-
 #container > .contents > .contwrap{
-    width: 1000px;
+    width: 88%;
+    margin-left: 50px;
+    margin-top: 50px;
+    
 }
 .contents > .contwrap > .search{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 35px;
 }
 .contents > .contwrap > .search > .title{
-    font-size: 1.1rem; 
+    font-size: 1.4rem; 
     font-weight: 700;
     display: inline;
-    align-self:flex-start;
+    align-self: flex-start;
 }
 .contents > .contwrap > .searchwrap {
+    position: relative;
     background-color: #f2f2f2;
-    padding: 15px;
-    width: 1000px;
-    height: 200px;
+    /* border-radius: 10px; */
+    padding: 15px 0;
+    width: 100%;
+    height: 90px;
     text-align: center;
     font-size: 14px;
     font-weight: bolder;
+    margin: 0 auto;
+    border-top: 1px solid grey;;
+    border-bottom: 1px solid grey;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t, .searchwrap_b {
+
+.contents > .contwrap > .searchwrap table {
+    width: 60%;
+    height: 100%;
+    border-collapse: collapse;
     margin: 0 auto;
 }
-.contents > .contwrap input{
+
+
+.contents > .contwrap > .searchwrap table th {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.contents > .contwrap > .searchwrap table td {
+    height: 30px;
+    padding: 5px;
+    text-align: left;
+}
+
+.contents > .contwrap input {
+    float: left;
+}
+
+.contents > .contwrap input+span {
+    display: inline-block;
+}
+
+
+.contents > .contwrap input.searchbutt{
     border-radius: 2px;
     outline: none;
-    width: 150px;
-    height: 30px;
+    width: 90px;
+    height: 40px;
     text-indent: 8px;
     font-size: 14px;
     font-weight: bolder;
     cursor: pointer;
+    background-color: #bdd600;
     border: none;
+    color: #fff;
+    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    margin-left: 10px;
 }
 .contents > .contwrap .searchbox {
     width: 150px; 
@@ -211,25 +87,18 @@ header{
     border: none;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t p{
+
+
+.contents > .contwrap >.searchwrap p{
     display: inline-block;
     margin: 0 10px;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t > p:nth-child(1) input[type="text"]{
+.contents > .contwrap >.searchwrap > p:nth-child(1) input[type="text"]{
     width: 150px;
     height: 30px;
-}
-.contents > .contwrap >.searchwrap .searchwrap_t {
-    margin: 20px;
-}
-.contents > .contwrap >.searchwrap .searchwrap_b p{
-    display: inline-block;
-    margin: 0 10px;
-}
-.contents > .contwrap >.searchwrap .searchwrap_b p input{
-    margin: 0 5px;
-    width: 180px;
 }
 .searchbox{
     color: #444;
@@ -244,7 +113,7 @@ header{
 }
 .rs_list {
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
 }
 .rs_list > table {
     margin: 0 auto;

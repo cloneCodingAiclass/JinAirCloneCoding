@@ -1,41 +1,76 @@
-
-
 #container > .contents > .contwrap{
-    width: 1000px;
+    width: 88%;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 .contents > .contwrap > .search{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 35px;
 }
 .contents > .contwrap > .search > .title{
-    font-size: 1.1rem; 
+    font-size: 1.4rem; 
     font-weight: 700;
     display: inline;
-    align-self:flex-start;
+    align-self: flex-start;
 }
 .contents > .contwrap > .searchwrap {
+    position: relative;
     background-color: #f2f2f2;
+    /* border-radius: 10px; */
     padding: 15px;
-    width: 1000px;
-    height: 200px;
+    width: 100%;
+    height: 90px;
     text-align: center;
     font-size: 14px;
     font-weight: bolder;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t, .searchwrap_b {
+
+.contents > .contwrap > .searchwrap table {
+    width: 60%;
+    height: 100%;
+    border-collapse: collapse;
     margin: 0 auto;
 }
-.contents > .contwrap input{
+
+
+.contents > .contwrap > .searchwrap table th {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.contents > .contwrap > .searchwrap table td {
+    height: 30px;
+    padding: 5px;
+    text-align: left;
+}
+
+.contents > .contwrap input {
+    float: left;
+}
+
+.contents > .contwrap input+span {
+    display: inline-block;
+}
+
+
+.contents > .contwrap input.searchbutt{
     border-radius: 2px;
     outline: none;
-    width: 150px;
-    height: 30px;
+    width: 90px;
+    height: 40px;
     text-indent: 8px;
     font-size: 14px;
     font-weight: bolder;
     cursor: pointer;
+    background-color: #bdd600;
     border: none;
+    color: #fff;
+    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 .contents > .contwrap .searchbox {
@@ -49,31 +84,20 @@
     border: none;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t p{
+
+
+.contents > .contwrap >.searchwrap p{
     display: inline-block;
     margin: 0 10px;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t > p:nth-child(1) input[type="text"]{
+.contents > .contwrap >.searchwrap > p:nth-child(1) input[type="text"]{
     width: 150px;
     height: 30px;
 }
-.contents > .contwrap >.searchwrap .searchwrap_t {
-    margin: 20px;
-}
-.contents > .contwrap >.searchwrap .searchwrap_b p{
-    display: inline-block;
-    margin: 0 10px;
-}
-.contents > .contwrap >.searchwrap .searchwrap_b p input{
-    margin: 0 5px;
-    width: 180px;
-}
+
 .searchbox{
     color: #444;
-}
-.contents > .contwrap >.searchwrap > form > p input{
-    margin-top: 20px;
-    text-indent: 0px;
-    height: 35px;
 }
