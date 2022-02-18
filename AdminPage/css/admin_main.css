@@ -1,159 +1,3 @@
-@font-face {
-    font-family: 'NanumBarunGothic';
-    font-style: normal;
-    font-weight:normal;
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
-}
-/*전체 페이지*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'NanumBarunGothic';
-    word-break: keep-all;
-}
-ul, li {
-    list-style: none;
-    text-decoration: none;
-    word-break: keep-all;
-    /* white-space: nowrap; */
-}
-ul {
-    margin-bottom: 2px;
-}
-li {
-    margin: 0.5%;
-}
-a{text-decoration: none;}
-a:link{color:#444;}
-a:visited{color:#444;}
-
-::selection {
-    background-color: #BDD600;
-}
-body{
-    height: 1; 
-    color: #444;
-    white-space: normal; 
-    word-wrap: break-word; 
-    line-height: 1;
-}
-#wrap{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display:table;
-}
-
-/* 헤더 */
-header{
-    width: 100%;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-.header_inner{
-    background-color: rgb(240, 240, 240);
-    border-bottom: 1px solid rgb(240, 240, 240);
-}
-.header_inner{
-    display: inline-block;
-    display: flex;
-    align-items: center;
-}
-.header_inner .img{
-    background: url(../img/logo_02.png) no-repeat center;
-    background-size: 100%;
-    width: 120px;
-    height: 40px;
-    margin-left: 13px;
-}
-.header_inner span{
-    padding-top: 3px;
-    margin-left: 20px;
-    font-size: 17px;
-    font-weight: 900;
-}
-.header_inner .logout{
-    display: flex;
-    position: fixed;
-    right: 130px;
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout p{
-    padding-top: 6px;
-    margin-right: 3px;
-}
-.header_inner .logout .nim{
-    width: 20px;
-    border: none;
-    outline: none;
-    background-color: rgb(240, 240, 240);
-    font-size: 14px;
-    font-weight: bolder;
-}
-.header_inner .logout input[type="button"]{
-    width: 100px;
-    height: 25px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #BDD600;
-    color: white;
-    border: none;
-    letter-spacing: 1px;
-}
-/* 사이드 메뉴 */
-#container{
-    display: flex;
-}
-#container > .sidebar{
-    position: fixed;
-    top: 40px;
-    float: left;
-    width: 12%;
-    height: 100%;
-    align-items: stretch;
-    background-color: rgb(240, 240, 240);
-}
-#container > .contents{
-    position: fixed;
-    top: 40px;
-    right: 0;
-    float: right;
-    width: 88%;
-    height: 100%;
-    align-items: stretch;
-    /* 배경 입시 선정 */
-    background-color: white;
-}
-#container > .sidebar > nav li{
-    display: none;
-}
-#container > .sidebar > nav{
-    padding-top: 20px;
-}
-#container > .sidebar > nav ul{
-    width: 80px;
-    margin: 25px 0px 25px 20px;
-    font-size: 16px;
-    font-weight: 900;
-}
-#container > .sidebar > nav li{
-    font-size: 11px;
-    margin: 5px 0;
-    padding-left: 5px;
-    width: 125px;
-}
-#container > .sidebar > nav > ul > .nav1 a{
-    color: rgb(124,0,72);
-}
-
 /* 내용 */
 .contents > .contwrap{
     width: 100%;
@@ -162,103 +6,123 @@ header{
     padding: 10px;
 }
 .contents > .contwrap > .topcont{
-    width: 1250px;
-    height: 250px;
+    width: 100%;
+    height: 100px;
     display: flex;
     align-content: space-between;
+    margin-bottom: 10px;
 }
 /* 날씨 */
 .contents > .contwrap .weather{
-    width: 700px;
-    height: 250px;
+    width: 100%;
+    height: 450px;
     border: 1px solid grey;
     border-radius: 3px;
+    margin-left: 5px;
+}
+.contents > .contwrap .weather img{
+    width: 100%;
+    height: 450px;
 }
 
 .contents > .contwrap .korea{
-    width: 260px;
-    height: 250px;
+    width: 20%;
+    height: 100px;
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10pxpx;
 }
 .contents > .contwrap .korea .korea_name{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
-    padding-top: 19px;
     width: 100%;
-    height: 50px;
+    height: 10px;
     border-bottom: 1px solid grey;
+    background-color: rgb(147, 201, 252);
 }
 .contents > .contwrap .korea #korea_time{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
-    padding-top: 50px;
+    margin-top: 20px;
+
 }
 
 
 .contents > .contwrap .other{
-    width: 260px;
-    height: 250px;
+    width: 20%;
+    height: 100px;
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .contents > .contwrap .other .other_name{
     text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
     width: 100%;
-    height: 50px;
+    height: 10px;
     border-bottom: 1px solid grey;
-    position: relative;
+    background-color: rgb(147, 201, 252);
 }
 .contents > .contwrap .other .other_select{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
     padding-top: 15px;
     width: 240px;
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.001);
 }
 .contents > .contwrap .other #other_time{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
-    padding-top: 50px;
+    padding-top: 20px;
+}
+
+.contents > .contwrap > .middlecont{
+    width: 1250px;
+    height: 450px;
+    display: flex;
+    align-content: space-between;
+    margin-bottom: 10px;
 }
 
 
 .contents > .contwrap > .bottcont{
     width: 1250px;
-    height: 350px;
+    height: 300px;
     display: flex;
     align-content: space-between;
-    margin-top: 10px;
 }
 .contents > .contwrap .QnA{
-    width: 304px;
-    height: 350px;
+    width: 600px;
+    height: 270px;
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
     text-align: center;
 }
+.contents > .contwrap .QnA a{
+    color: #444;
+    font-weight: bold;
+}
 .contents > .contwrap .QnA p:nth-child(1){
     font-size: 18px;
     font-weight: 900;
-    margin: 25px auto;
+    padding: 1px 0 1px 0;
+    background-color: rgb(255, 140, 140);
 }
 .contents > .contwrap .QnA p:nth-child(2){
     font-size: 13px;
     font-weight: 900;
-    margin: 25px auto 0px;
-    text-align: left;
-    margin-left: 25px;
+    padding: 1px 0 1px 0;
 }
 .contents > .contwrap .QnA table{
     width: 90%;
@@ -274,7 +138,6 @@ header{
 }
 .contents > .contwrap .QnA table td:nth-child(1){
     width: 180px;
-    text-align: left;
 }
 .contents > .contwrap .QnA table td:nth-child(2){
     width: 80px;
@@ -286,9 +149,16 @@ header{
     width: 170px;
     display: block;
     white-space: nowrap;
-    overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
+    color: #444;
+    text-align: center;
+}
+.contents > .contwrap .QnA > table a :visited{
+    color:#444;
+}
+.contents > .contwrap .QnA > table a :link{
+    color:rgb(56, 245, 204);
 }
 .contents > .contwrap .QnA > table a:hover{
     text-decoration: underline; 
@@ -305,18 +175,20 @@ header{
 }
 .contents > .contwrap .totalair{
     text-align: center;
-    width: 304px;
-    height: 350px;
+    width: 350px;
+    height: 100px;
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
     margin-left: 5px;
 }
 .contents > .contwrap .totalair > .totalair_top{
-    width: 304px;
-    height: 50px;
+    width: 350px;
+    height: 10px;
     display: inline-block;
-    margin-top: 18px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    
 }
 .contents > .contwrap .totalair > .totalair_top span{
     position: relative;
@@ -399,18 +271,19 @@ header{
 }
 .contents > .contwrap .totaluser{
     text-align: center;
-    width: 304px;
-    height: 350px;
+    width: 350px;
+    height: 100px;
     border: 1px solid grey;
     border-radius: 3px;
     display: inline-block;
     margin-left: 5px;
 }
 .contents > .contwrap .totaluser > .totalair_top{
-    width: 304px;
+    width: 350px;
     height: 50px;
     display: inline-block;
-    margin-top: 18px;
+    padding-top: 18px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 .contents > .contwrap .totaluser > .totalair_top span{
     position: relative;
@@ -491,7 +364,22 @@ header{
     padding-top: 5px;
     margin-left: 34px;
 }
-
+.contents > .contwrap .notice{
+    text-align: center;
+    width: 505px;
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    display: inline-block;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+.contents > .contwrap .notice p:nth-child(1){
+    font-size: 18px;
+    font-weight: 900;
+    padding: 1px 0 1px 0;
+    background-color: rgb(255, 140, 140);
+}
 .contents > .contwrap .itemmd{
     text-align: center;
     width: 304px;
@@ -505,15 +393,15 @@ header{
 .contents > .contwrap .itemmd p{
     font-size: 13px;
     font-weight: 900;
-    margin: 25px auto 0px;
     text-align: left;
-    margin-left: 25px;
+    padding-top: 25px;
 }
 .contents > .contwrap .itemmd .item_md{
     text-align: center;
     font-size: 18px;
     font-weight: 900;
-    margin: 25px auto;
+
+    background-color: rgba(0, 0, 0, 0.05);
 }
 .contents > .contwrap .itemmd table{
     width: 90%;
@@ -542,9 +430,32 @@ header{
     text-align: center;
     font-size: 14px;
     font-weight: 900;
-    margin: 10px auto;
 }
 .contents > .contwrap .itemmd p:last-child:hover{
     text-decoration: underline; 
     color: #737373;
+}
+
+/* 그래프 */
+#data{
+    width: 800px;
+    height: 350px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 5px solid #bdd600;
+    display: none;
+}
+#data caption{
+    background-color: #bdd600;
+    height: 30px;
+    line-height: 30px;
+    color: #f7f7f6;
+    font-weight: bold;
+}
+#data tbody{
+    width: 800px;
+    height: 350px;
+}
+#data thead{
+    width: 800px;
 }

@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>관리자 센터 | 메인</title>
     <link rel="stylesheet" href="./css/admin_main.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./js/admin_main.js"></script>
+
+
+    <script type="text/javascript" src="/chart/visualize.jQuery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/chart/visualize.css">
+
+    <link rel="stylesheet" href="/chart/visualize-light.css">
+    <script type="text/javascript">
+        $(function(){
+            $('#data').visualize({type: 'line',lineWeiget:2});
+        })
+    </script>
+
 </head>
 <body>
     <div id="wrap">
@@ -73,10 +86,9 @@
             <div class="contents">
                 <div class="contwrap">
                     <div class="topcont">
-                        <div class="weather">날씨 API가 동적 홈페이지에서 가능한가봐요.. 백단에서 해볼게요.. <br>세계시간도 동적하서 자바 활용해서... 하겠습니당.. 무리데쓰..</div>
                         <div class="korea">
-                            <div class="korea_name">대한민국</div>
-                            <div id="korea_time"></div>
+                            <div class="korea_name">대한민국<div id="korea_time"></div></div>
+                            
                         </div>
                         <div class="other">
                             <div class="other_name">
@@ -91,9 +103,124 @@
                                     <option value="런던">런던</option>
                                     <option value="뉴욕">뉴욕</option>
                                 </select>
+                                <div id="other_time"></div>
                             </div>
-                            <div id="other_time"></div>
+                            
                         </div>
+                        <div class="totalair">
+                            <div class="totalair_top">
+                                <p>날씨</p>
+                            </div>
+                        </div>
+                        <div class="totaluser">
+                            <div class="totalair_top">
+                                <a href="#" class="left"><img src="./img/left_cal.png" alt="왼쪽 버튼"></a>
+                                <span class="cal">2022-01-28</span>
+                                <a href="#" class="right"><img src="./img/right_cal.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middlecont">
+                        <table id="data">
+                            <caption>일일 이용객 수</caption>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <th>1일</th>
+                                    <th>2일</th>
+                                    <th>3일</th>
+                                    <th>4일</th>
+                                    <th>5일</th>
+                                    <th>6일</th>
+                                    <th>7일</th>
+                                    <th>8일</th>
+                                    <th>9일</th>
+                                    <th>10일</th>
+                                    <th>11일</th>
+                                    <th>12일</th>
+                                    <th>13일</th>
+                                    <th>14일</th>
+                                    <th>15일</th>
+                                    <th>16일</th>
+                                    <th>17일</th>
+                                    <th>18일</th>
+                                    <th>19일</th>
+                                    <th>20일</th>
+                                    <th>21일</th>
+                                    <th>22일</th>
+                                    <th>23일</th>
+                                    <th>24일</th>
+                                    <th>25일</th>
+                                    <th>26일</th>
+                                    <th>27일</th>
+                                    <th>28일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>입국</th>
+                                    <td>2000</td>
+                                    <td>500</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>600</td>
+                                    <td>800</td>
+                                    <td>1400</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>500</td>
+                                    <td>800</td>
+                                    <td>1200</td>
+                                    <td>2000</td>
+                                    <td>1000</td>
+                                    <td>1200</td>
+                                    <td>1200</td>
+                                    <td>3400</td>
+                                    <td>2300</td>
+                                    <td>1400</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>500</td>
+                                    <td>400</td>
+                                    <td>500</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>600</td>
+                                    <td>800</td>
+                                </tr>
+                                <tr>
+                                    <th>출국</th>
+                                    <td>2000</td>
+                                    <td>1200</td>
+                                    <td>2000</td>
+                                    <td>2100</td>
+                                    <td>1000</td>
+                                    <td>900</td>
+                                    <td>800</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>800</td>
+                                    <td>1600</td>
+                                    <td>777</td>
+                                    <td>2000</td>
+                                    <td>800</td>
+                                    <td>700</td>
+                                    <td>200</td>
+                                    <td>2400</td>
+                                    <td>1300</td>
+                                    <td>800</td>
+                                    <td>1250</td>
+                                    <td>1000</td>
+                                    <td>500</td>
+                                    <td>600</td>
+                                    <td>800</td>
+                                    <td>1250</td>
+                                    <td>1452</td>
+                                    <td>1500</td>
+                                    <td>300</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="bottcont">
                         <div class="QnA">
@@ -143,44 +270,55 @@
                             </table>
                             <p><a href="#">more</a></p>
                         </div>
-                        <div class="totalair">
-                            <div class="totalair_top">
-                                <a href="#" class="left"><img src="./img/left_cal.png" alt="왼쪽 버튼"></a>
-                                <span class="cal">2022-01-28</span>
-                                <a href="#" class="right"><img src="./img/right_cal.png" alt=""></a>
-                            </div>
-                            <div class="totalair_mib">
-                                <p>총 항공편</p>
-                                <p class="totcount">26</p>
-                                <div>
-                                    <p class="incount">18</p>
-                                    <p class="outcount">8</p>
-                                </div>
-                                <div>
-                                    <p class="inname">국내</p>
-                                    <p class="outname">국외</p>
-                                </div>
-                            </div>
+
+                        <div class="notice">
+                            <p><a href="#">공지사항</a></p>
+                            <p>등록된 공지사항 : (15)개</p>
+                            <table>
+                                <tr>
+                                    <td><a href="#">[한국발 외] 국제선 유류할증료(2022년 3월)</a></td>
+                                    <td>2022-02-17</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">문의</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">수하물관련 문의</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">부가서비스 신청하고싶습니다. 답변 바랍니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">공항 이용 불만 제언하고자합니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">항공권 관련 문의드립니다. 답변 바랍니다.</a></td>
+                                    <td>답변 불필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">항공권 관련 문의드립니다. 답변 바랍니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">예약 관련 문의드립니다.</a></td>
+                                    <td>답변 불필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">유실물 관련 문의드립니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">지니 포인트 관련 문의드립니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                            </table>
+                            <p><a href="#">more</a></p>
                         </div>
-                        <div class="totaluser">
-                            <div class="totalair_top">
-                                <a href="#" class="left"><img src="./img/left_cal.png" alt="왼쪽 버튼"></a>
-                                <span class="cal">2022-01-28</span>
-                                <a href="#" class="right"><img src="./img/right_cal.png" alt=""></a>
-                            </div>
-                            <div class="totalair_mib">
-                                <p>총 이용객</p>
-                                <p class="totcount">875</p>
-                                <div>
-                                    <p class="incount">683</p>
-                                    <p class="outcount">192</p>
-                                </div>
-                                <div>
-                                    <p class="inname">국내</p>
-                                    <p class="outname">국외</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="itemmd">
                             <div>
                                 <p class="item_md"><a href="#">유실물 관리</a></p> 
@@ -231,6 +369,7 @@
                                 <p><a href="#">more</a></p>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
