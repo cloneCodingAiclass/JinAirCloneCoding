@@ -102,7 +102,7 @@
     cursor: pointer;
 }
 .footer table td:nth-child(1){
-    background-color: rgb(124,0,72);
+    background-color: rgb(102, 30, 67);
 }
 .footer table td:nth-child(1) > a{
     color:white
