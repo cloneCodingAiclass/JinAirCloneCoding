@@ -1,6 +1,6 @@
 /* 내용 */
 .contents > .contwrap{
-    width: 100%;
+    width: 88%;
     height: 100%;
     padding: 10px;
 }
@@ -80,11 +80,11 @@
 }
 
 .contents > .contwrap > .middlecont{
-    width: 100%;
-    height: 350px;
+    width: 1250px;
+    height: 450px;
     display: flex;
     align-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 
@@ -95,7 +95,7 @@
     align-content: space-between;
 }
 .contents > .contwrap .QnA{
-    width: 60%;
+    width: 50%;
     height: 250px;
     border: 1px solid grey;
     border-radius: 3px;
@@ -359,7 +359,7 @@
 }
 .contents > .contwrap .notice{
     text-align: center;
-    width: 60%;
+    width: 50%;
     height: 250px;
     border: 1px solid grey;
     border-radius: 3px;
@@ -425,7 +425,7 @@
 
 .contents > .contwrap .itemmd{
     text-align: center;
-    width: 60%;
+    width: 50%;
     height: 250px;
     border: 1px solid grey;
     border-radius: 3px;

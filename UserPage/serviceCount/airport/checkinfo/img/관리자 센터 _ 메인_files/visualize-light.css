@@ -10,7 +10,7 @@ caption { font-size: 20px;  }
 
 /*visualize extension styles*/
 .visualize { margin: 1px 0 0 30px; padding: 70px 65px 90px; border: 1px solid #ddd; }
-.visualize canvas { border: 1px solid #aaa; margin: -1px; background: #fff; width: 96%; height: 350px;}
+.visualize canvas { border: 1px solid #aaa; margin: -1px; background: #fff; width: 1590px; height: 400px;}
 .visualize-labels-x, .visualize-labels-y { top: 10px; left: 65px; z-index: 100; }
 .visualize-pie .visualize-labels { position: absolute; top: 70px; left: 65px; }
 .visualize-labels-x li span.label, .visualize-labels-y li span.label { color: #444; padding-right: 5px; font-weight: bold;}
