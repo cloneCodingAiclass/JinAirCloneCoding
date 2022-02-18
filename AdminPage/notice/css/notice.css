@@ -1,6 +1,8 @@
 /* contents */
 #container > .contents > .con_wrap{
     width: 88%;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 .contents > .con_wrap > .search{
     width: 100%;
@@ -20,7 +22,7 @@
 }
 .contents > .con_wrap > .search > form > input[type="text"]{
     width: 350px;
-    height: 25px;
+    height: 30px;
     border-radius: 2px;
     border: 1px solid grey;
     text-indent: 10px;
@@ -32,7 +34,7 @@
 .contents > .con_wrap > .search > form > input[type="submit"]{
     text-align: center;
     width: 100px;
-    height: 26px;
+    height: 30px;
     border: none;
     border-radius: 2px;
     background-color: #BDD600;
@@ -42,16 +44,26 @@
 }
 .contents > .con_wrap > table{
     margin-top: 5px;
-    width: 1000px;
+    width: 100%;
     text-align: center;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    color: black !important;
 }
 .contents > .con_wrap > table tr{
     height: 40px;
+}
+.contents > .con_wrap > table td:nth-child(1){
+    width: 12%;
+}
+.contents > .con_wrap > table td:nth-child(2){
+    width: 68%;
+}
+.contents > .con_wrap > table td:nth-child(3){
+    width: 20%;
 }
 .contents > .con_wrap > table tr:nth-child(1){
     background-color: #F2F2F2;
@@ -60,7 +72,7 @@
 
 .footer{
     margin-top: 15px;
-    width: 1000px;
+    width: 100%;
     height: 30px;
 }
 .footer > .center{
@@ -102,10 +114,10 @@
     color:white
 }
 .footer > .notice_write{ 
-    display: inline-block;
+    display: inline;
+    float: right;
     position: relative;
     bottom: 30px;
-    left: 850px;
 }
 .footer > .notice_write > input{
     text-align: center;
