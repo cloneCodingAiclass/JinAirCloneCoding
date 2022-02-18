@@ -127,6 +127,86 @@ $(function () {
             $("#header").css("position", "absolute");
         }
     });
+    
+    /* 운임정보 */
+    $(".datail_add").hide();
+    $(".arr_top").css("display", "none");
+    $(".arr_bott").css("display", "block");
+    $(".datail_add").css("width", "100%");
+
+
+    $(".arr_bott1").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top1").css("display", "inline-block");
+        // $(".datail_add1").slideDown(200);
+        $(".datail_add1").toggle();
+    })
+    $(".arr_top1").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott1").css("display", "inline-block");
+        $(".datail_add1").slideUp(200);
+    })
+
+    $(".arr_bott2").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top2").css("display", "block");
+        $(".datail_add2").slideDown();
+    })
+    $(".arr_top2").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott2").css("display", "block");
+        $(".datail_add2").slideUp();
+    })
+
+    $(".arr_bott3").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top3").css("display", "block");
+        $(".datail_add3").slideDown();
+    })
+    $(".arr_top3").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott3").css("display", "block");
+        $(".datail_add3").slideUp();
+    })
+
+    /*여정 및 운임정보 끝*/
+
+    /*부가서비스 */
+    $(".arr_bott4").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top4").css("display", "block");
+        $(".datail_add4").slideDown();
+    })
+    $(".arr_top4").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott4").css("display", "block");
+        $(".datail_add4").slideUp();
+    })
+
+    $(".arr_bott5").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top5").css("display", "block");
+        $(".datail_add5").slideDown();
+    })
+    $(".arr_top5").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott5").css("display", "block");
+        $(".datail_add5").slideUp();
+    })
+
+
+    $(".arr_bott6").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_top6").css("display", "block");
+        $(".datail_add6").slideDown();
+    })
+    $(".arr_top6").on("click", function() {
+        $(this).css("display", "none");
+        $(".arr_bott6").css("display", "block");
+        $(".datail_add6").slideUp();
+    })
+    /*부가서비스 끝 */
+
 });
 
 function hidePopupLayer(){
