@@ -113,6 +113,57 @@ $(function () {
         $('.B737_800').css({"display":"none"});
     })
 
+    /*좌석배치도 모달창 */
+    
+    $("#modal_content1").css("display", "block");
+    $("#modal_content2").css("display", "none");
+    $("#modal_content3").css("display", "none");
+
+    $("#modal_menu1").css("background-color", "#661e43");
+    $("#modal_menu1").css("color", "#fff");
+    $("#modal_menu2").css("background-color", "#fff");
+    $("#modal_menu2").css("color", "#444");
+    $("#modal_menu3").css("background-color", "#fff");
+    $("#modal_menu3").css("color", "#444");
+
+    $("#modal_menu1").on("click", function() {
+        $("#modal_content1").css("display", "block");
+        $("#modal_content2").css("display", "none");
+        $("#modal_content3").css("display", "none");
+        $("#modal_menu1").css("background-color", "#661e43");
+        $("#modal_menu1").css("color", "#fff");
+        $(".modal_menu").not("#modal_menu1").css("background-color", "#FFF");
+        $(".modal_menu").not("#modal_menu1").css("color", "#444");
+    })
+    $("#modal_menu2").on("click", function() {
+        $("#modal_content1").css("display", "none");
+        $("#modal_content2").css("display", "block");
+        $("#modal_content3").css("display", "none");
+        $("#modal_menu2").css("background-color", "#661e43");
+        $("#modal_menu2").css("color", "#fff");
+        $(".modal_menu").not("#modal_menu2").css("background-color", "#FFF");
+        $(".modal_menu").not("#modal_menu2").css("color", "#444");
+    })
+    $("#modal_menu3").on("click", function() {
+        $("#modal_content1").css("display", "none");
+        $("#modal_content2").css("display", "none");
+        $("#modal_content3").css("display", "block");
+        $("#modal_menu3").css("background-color", "#661e43");
+        $("#modal_menu3").css("color", "#fff");
+        $(".modal_menu").not("#modal_menu3").css("background-color", "#FFF");
+        $(".modal_menu").not("#modal_menu3").css("color", "#444");
+    })
 
 });
 
+$(() => {
+    $("#modal_seatmap_wrap").hide();
+    $("#modal_seatmap_wrap").hide();
+    $(".seatmap_butt").on("click", () => {
+        $("#modal_seatmap_wrap").fadeIn();
+    })
+    $("#modal_seatmap_wrap .close").on("click", () => {
+        $("#modal_seatmap_wrap").fadeOut();
+    })
+    
+})
