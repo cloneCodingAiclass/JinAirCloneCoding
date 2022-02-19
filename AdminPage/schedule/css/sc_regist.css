@@ -8,24 +8,10 @@
 #container > .contents > .contwrap > .btn_top{
     display: flex;
     justify-content: right;
-    height: 35px;
+    height: 20px;
     width: 100%;
-    margin-bottom: 3px;
 }
-#container > .contents >.contwrap > .btn_top input[type="button"]{
-    width: 100px;
-    height: 26px;
-    background-color:#BDD600;
-    border-radius: 2px;
-    clear: both;
-    border: 0;
-    margin-right: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    top: 7px;
-}
+
 #container > .contents >.contwrap > .contents_main{
     width: 100%;
     text-align: center;
@@ -68,7 +54,7 @@
     clear: both;
     border: 0;
     font-size: 0.8rem;
-    margin-right: 20px;
+    margin: 0 5px;
     font-weight: 600;
     cursor: pointer;
 }

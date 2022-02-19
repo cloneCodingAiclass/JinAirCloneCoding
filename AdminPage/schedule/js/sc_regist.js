@@ -97,7 +97,7 @@ $(function () {
         $('.nav2').find('a').css({"color":"#BDD600"});
         $('.nav2').siblings('li').css({"display":"block"});
         $('.nav2').parent().siblings().find('li').css({"display":"none"});
-        $('.nav2').siblings('li').eq(1).find('a').css({"color":"#BDD600"});
+        $('.nav2').siblings('li').eq(2).find('a').css({"color":"#BDD600"});
     })
     $('.contents').on('mouseover', function (e) {
         e.stopPropagation();

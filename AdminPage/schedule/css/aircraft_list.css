@@ -9,18 +9,13 @@
     display: inline;
     align-self: flex-start;
 }
-#container > .contents > .contwrap > .btn_top input[type="button"]{
-    width: 150px;
-    height: 40px;
-    background-color:#BDD600;
-}
 #container > .contents > .contwrap > .contents_main{
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 #container > .contents >.contwrap > .contents_main table{
     border-collapse: collapse;
