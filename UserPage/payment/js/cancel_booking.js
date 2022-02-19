@@ -164,9 +164,46 @@ $(function () {
         }
     });
 
+
+    $('.confirm_btn').click(function(){
+        location.href="/UserPage/index/mypage/Mypage_main.html"
+    })
+    $('.cancl_btn').click(function(){
+        location.href="/UserPage/index/mypage/Mypage_main.html"
+    })
 });
 
 
+$(() => {
+    let a = $(".detail1").offset().top + 70;
+    let x = $(".detail1").offset().left + 30;
+    let b = $(".detail2").offset().top + 70;
+    let y = $(".detail2").offset().left + 30;
+    
+    $(".modal_flight_info1").css("top", a);
+    $(".modal_flight_info2").css("top", b);
+    $(".modal_flight_info1").css("left", x);
+    $(".modal_flight_info2").css("left", y);
+    
+    $(".modal_flight_info1").hide();
+    $(".modal_flight_info2").hide();
+
+    $("p.detail1").on("click", () => {
+        $(".modal_flight_info1").fadeIn();
+        $(".modal_flight_info2").hide();
+    })
+    $(".modal_flight_info1 .close1").on("click", () => {
+        $(".modal_flight_info1").fadeOut();
+    })
+
+    $("p.detail2").on("click", () => {
+        $(".modal_flight_info2").fadeIn();
+        $(".modal_flight_info1").hide();
+    })
+    $(".modal_flight_info2 .close2").on("click", () => {
+        $(".modal_flight_info2").fadeOut();
+    })
+});
 
 function hidePopupLayer(){
     $('.confirm_modal1', parent.document).fadeOut(200);
