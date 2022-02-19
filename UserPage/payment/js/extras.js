@@ -288,10 +288,12 @@ $(function () {
     $(window).scroll(function(){ 
         let x = $(".seat_info_wrap1").offset().left+30;
         let i = $(".seat_info_wrap2").offset().left+30;
+        console.log($(".select_comp").offset().left)
 
         if( x == 30){
         $(".seat_map").css("top", "0px");
         $(".seat_info_wrap").css("top", "0px");
+
             if ($(window).scrollTop() > $(".service_title1").offset().top-115 && $(window).scrollTop() < 1900) { 
                 $(".move_map").css("position", "fixed");
                 $(".move_map").css("top", "239px");
@@ -299,18 +301,29 @@ $(function () {
                 $(".seat_info").css("top", "239px");
                 $(".seat_info").css("left", i);
                 $(".seat_info").css("z-index", "20");
+                $(".select_comp").css("position", "fixed");
+                $(".select_comp").css("bottom", "100px");
+                $(".select_comp").css("left", "56%");
+
             } else if ($(window).scrollTop() > 1895) {
                 $(".move_map").css("position", "absolute");
                 $(".move_map").css("top", "1680px");
                 $(".seat_info").css("position", "absolute");
-                $(".seat_info").css("top", "1680px");
+                $(".seat_info").css("top", "5px");
                 $(".seat_info").css("left", "30px");
+                
+                $(".select_comp").css("position", "absolute");
+                $(".select_comp").css("left", "20%");
             }else {
                 $(".move_map").css("position", "absolute");
                 $(".move_map").css("top", "80px");
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
+
+                $(".select_comp").css("position", "fixed");
+                $(".select_comp").css("bottom", "100px");
+                $(".select_comp").css("left", "56%");
             }
         }else{
         $(".seat_map").css("top", "0px");
@@ -322,12 +335,18 @@ $(function () {
                 $(".seat_info").css("top", "239px");
                 $(".seat_info").css("left", x);
                 $(".seat_info").css("z-index", "20");
+                $(".select_comp").css("position", "fixed");
+                $(".select_comp").css("bottom", "100px");
+                $(".select_comp").css("left", "56%");
             } else if ($(window).scrollTop() > 1895) {
                 $(".move_map").css("position", "absolute");
                 $(".move_map").css("top", "1680px");
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "1680px");
                 $(".seat_info").css("left", "30px");
+                
+                $(".select_comp").css("position", "absolute");
+                $(".select_comp").css("left", "20%");
             }
             else {
                 $(".move_map").css("position", "absolute");
@@ -335,6 +354,10 @@ $(function () {
                 $(".seat_info").css("position", "absolute");
                 $(".seat_info").css("top", "95px");
                 $(".seat_info").css("left", "30px");
+
+                $(".select_comp").css("position", "fixed");
+                $(".select_comp").css("bottom", "100px");
+                $(".select_comp").css("left", "56%");
             }
         }
     });
