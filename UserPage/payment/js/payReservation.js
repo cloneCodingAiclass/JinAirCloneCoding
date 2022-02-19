@@ -154,8 +154,6 @@ $(function () {
     let b = $(".detail2").offset().top - 30;
     let y = $(".detail2").offset().left + 30;
 
-    console.log(a);
-    console.log(b);
     $(".modal_flight_info1").css("top", a);
     $(".modal_flight_info2").css("top", b);
     $(".modal_flight_info1").css("left", x);
@@ -642,8 +640,3 @@ $(() => {
         $(".modal_flight_info2").fadeOut();
     })
 })
-
-
-
-
-
