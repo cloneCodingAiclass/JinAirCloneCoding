@@ -437,6 +437,26 @@ body {
     color: #666;
     line-height: 2;
 }
+#container .mypage_main .reserve_info .page_top{
+    display: flex;
+    justify-content: space-between;
+}
+#container .mypage_main .reserve_info .page_top div{
+    display: flex;
+    align-items: center;
+}
+#container .mypage_main .reserve_info .page_top div p{
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    border: 1px solid #BDD600;
+    margin-right: 5px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 /* 탑승객 정보 테이블 */
 #container .mypage_main .user_info {
     margin: 50px 0;
@@ -1236,7 +1256,6 @@ body {
     padding: 10px 20px;
     font-weight: 600;
 }
-
 /* 푸터 모달*/
 
 .reser_change {
@@ -1274,7 +1293,21 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 101;
+}
+.trip_modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1316,6 +1349,11 @@ body {
     width: 950px;
     height: 500px;
     padding: 30px;
+    background-color: white;
+    overflow: scroll;
+}
+.main_box > ul{
+    margin: 10px 0;
     background-color: white;
 }
 .main_box ul li, .h1000 ul li{
@@ -1377,7 +1415,7 @@ body {
 }
 .modal_btn{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 20px;
 }
 .modal_btn .change_ticket, .modal_btn .confirm_btn, .modal_btn .next_ticket, .modal_btn .add_service, .modal_btn .cancel_service{
@@ -1388,6 +1426,7 @@ body {
     padding: 12px;
     justify-content: center;
     cursor: pointer;
+    margin-right: 20px;
 }
 .modal_btn .add_service, .modal_btn .cancel_service{
     margin-right: 20px;
@@ -1415,7 +1454,22 @@ body {
     overflow: hidden;
     z-index: 101;
 }
-.false_modal .false_modal_box{
+.trip_false_modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 101;
+}
+.false_modal .false_modal_box, 
+.trip_false_modal .false_modal_box{
     background-color: white ;
     border: 1px solid #661E43;
     width: 300px;
@@ -1425,12 +1479,44 @@ body {
     font-weight: 600;
     z-index: 103;
 }
+.trip_modal ul {
+    border: 1px solid #666;
+    padding: 15px;
+    margin: 20px 0;
+}
+.trip_modal input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: url(../index_img/ico_check.png) no-repeat 0 0;
+    margin-right: 10px;
+}
+.trip_modal input[type="checkbox"]:checked{
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: url(../index_img/ico_check.png) no-repeat 0 -20px;
+}
+.trip_modal input[type="checkbox"]+label{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.trip_modal h2{
+    margin: 20px 0;
+}
+.nth2h2{
+    margin: 20px 0;
+}
+.main_box .footer_text{
+    font-size: 1rem;
+    line-height: 600;
+}
 /* 메인 이동 버튼 */
 #container .mypage_main .to_main {
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 #container .mypage_main .to_main .modal_text{
     width: 160px;
@@ -1443,7 +1529,7 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
-#container .mypage_main .to_main p a{
+#container .mypage_main .to_main p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1452,6 +1538,7 @@ body {
     height: 50px;
     font-size: 1rem;
     font-weight: 600;
+    margin-right: 20px;
 }
 
 .pwcheck_modal{
@@ -1526,4 +1613,6 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
 /* 푸터 모달 끝*/
+
