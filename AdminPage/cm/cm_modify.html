@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>고객 관리 | 고객 상세정보 | 수정</title>
-        <link rel="stylesheet" href="./css/cm_modify.css" />
-        <link rel="stylesheet" href="/css/style.css">
-        <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"
-        ></script>
-        <script src="./js/cm_list.js"></script>
-    </head>
-    <body>
-        <div id="wrap">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객 관리 | 고객 상세정보 | 수정</title>
+    <link rel="stylesheet" href="./css/cm_modify.css" />
+    <link rel="stylesheet" href="/AdminPage/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/cm_list.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
             <div class="header_inner">
-                <a href="../admin_index.html"><div class="img"></div></a><a href="/AdminPage/admin_index.html"><span>관리자 센터</span></a>
+                <a href="./admin_index.html"><div class="img"></div></a><span>관리자 센터</span>
                 <div class="logout"><p class="myname">반하나</p><input type="text" value="님" class="nim"><input type="button" value="Logout" onclick="location.href='../admin_login.html'"></div>
             </div>
         </header>
@@ -132,15 +129,17 @@
                 </div>
                 <div class="contents">
                     <div id="cm_detail_box">
-                        <div id="cm_detail_title">고객 상세정보 수정</div>
+                        <div class="title_wrap">
+                            <p id="cm_detail_title">고객 상세정보 수정</p>
+                        </div>
                         <div id="cm_detail">
                             <form action="./cm_detail.html">
                                 <table>
                                     <colgroup>
-                                        <col width="160">
-                                        <col width="340">
-                                        <col width="160">
-                                        <col width="340">
+                                        <col width="20%">
+                                        <col width="30%">
+                                        <col width="20%">
+                                        <col width="30%">
                                     </colgroup>
                                     <tr>
                                         <th>고유번호</th>
