@@ -434,7 +434,9 @@ tr {
     height: 120px;
     background: url(../img/icon_top.png) no-repeat 0 0;
 }
-
+#arvCont1, #arvCont2, #arvCont3, #arvCont4, #arvCont5, #arvCont6, #arvCont7, #arvCont8{
+    margin-bottom: 200px;
+}
 /* arvCont1 */
 .landingCardInfo {
     position: relative;
@@ -585,14 +587,13 @@ p.caution {
 html:lang(ko) .keywordList >li {
     padding-left: 230px;
 }
-.keywordList >li {
+.keywordList > li {
     display: table;
     position: relative;
     box-sizing: border-box;
     width: 100%;
     min-height: 220px;
-    padding: 70px 20px 0 20px;
-    margin-top: 70px;
+    padding: 20px 20px 0 20px;
     border-top: 1px solid #f0f0f0;
     height: 1px;
 }
