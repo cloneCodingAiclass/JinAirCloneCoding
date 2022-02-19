@@ -93,13 +93,13 @@ body {
     top: 0;
     z-index: 100;
 }
-#header .header_sub {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.19);
+#header .header_sub{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.190);
     height: 91px;
     margin: 0 auto;
     background-color: white;
 }
-#header .header_sub .header_wrap {
+#header .header_sub .header_wrap{
     width: 1180px;
     margin: 0 auto;
 }
@@ -162,7 +162,7 @@ body {
 }
 #header .login > li .lang_img {
     display: inline-block;
-    background: url(../img/down.png) no-repeat right;
+    background: url("../img/down.png") no-repeat right;
     background-size: 13px;
     width: 13px;
     height: 13px;
@@ -171,6 +171,7 @@ body {
     top: 3px;
 }
 #header nav {
+    position: absolute;
     top: 47px;
     box-sizing: border-box;
     margin: 0;
@@ -314,7 +315,7 @@ body {
     width: 120px;
 }
 #container {
-    height: auto;
+    height: 1700px;
 }
 #container .mypage_main {
     margin: 0 auto;
@@ -438,7 +439,7 @@ body {
     line-height: 2;
 }
 /* 탑승객 정보 테이블 */
-#container .mypage_main .user_info {
+#container .user_info {
     margin: 50px 0;
 }
 #container .mypage_main .user_info table {
@@ -778,6 +779,44 @@ body {
     align-items: center;
 }
 
+.modal_flight_info {
+    position: absolute;
+    width: 350px;
+    top: 0px;
+    right: 0px;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 20px 30px;
+    z-index: 100;
+}
+
+.modal_flight_info .modal_flight_title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.modal_flight_info .modal_flight_title .tit {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.modal_flight_info .modal_flight_title img {
+    position: absolute;
+    filter: invert();
+    right: 15px;
+    top: 15px;
+}
+
+.modal_flight_info .modal_flight_content {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+
+
 
 /*운임확인*/
 
@@ -788,12 +827,9 @@ body {
 }
 .fare_wrap > .fare_info {
     width: 100%;
-    height: 100px;
-    padding: 0 30px;
-    background-color: rgb(247, 247, 246);
-    border-top: 1px solid rgb(102, 102, 102, 0.5);
-    border-bottom: 1px solid rgb(102, 102, 102, 0.5);
-    
+    height: 250px;
+    padding: 20px;
+    background-color: rgb(247, 247, 246);    
 }
 
 .fare_wrap > .fare_info p.tit {
@@ -853,12 +889,13 @@ body {
     text-decoration: underline;
 }
 .fare_wrap > .fare_info .jour_wrap .tot {
-    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 25px;
     font-weight: 600;
     display: flex;
     color:black;
-    justify-content: space-between;
-    align-content: center;
 }
 .fare_wrap > .fare_info .jour_wrap .tot .txt {
     margin-right: 30px;
@@ -932,7 +969,6 @@ body {
     padding: 0px !important;
     border-bottom: none;
 }
-
 .detail_T {
     width: 100%;
     background-color: rgb(247, 247, 246);
@@ -970,6 +1006,9 @@ body {
 
 /*운임확인 끝*/
 
+.cursor{
+    cursor: pointer;
+}
 /* 운임 규정 */
 .infobox ul{
     display: flex;
@@ -1042,14 +1081,12 @@ body {
 
 /* 운임 규정 끝 */
 
-/* 부가 서비스 */
-
+/*부가서비스 확인*/
 .service_wrap {
     width: 100%;
     margin-top: 100px;
     height: auto;
 }
-
 .service_wrap > .service_T {
     width: 100%;
     margin-top: 0px;
@@ -1057,33 +1094,25 @@ body {
     table-layout: fixed;
     text-align: left;
     font-size: 18px;
-    border-top: 1px solid rgb(102, 102, 102, 0.5);
 }
-
 .service_wrap > .service_T .borderT {
     height: 80px;
     background-color: rgb(247, 247, 246);
-    border-bottom: 1px solid rgb(102, 102, 102, 0.5);
     font-size: 20px;
     color: black;
 }
-
 .service_T .borderT .td_wrap {
     padding-right: 43px !important; 
 }
-
 .service_wrap > .service_T td {
     height: 60px;
     padding: 20px;
     border-right: none;
     border-bottom: 1px solid rgba(168, 165, 165, 0.3);
 }
-
 .service_wrap > .service_T td:last-child {
     text-align: right;
 }
-
-
 .service_wrap > .service_T td > .td_wrap {
     width: 100%;
     height: 100%;
@@ -1092,30 +1121,25 @@ body {
     text-align: right;
     justify-content: flex-end;
 }
-
 .service_wrap > .service_T > tr:last-child td {
     text-align: right;
 }
-
 .service_wrap > .service_T td .cul {
     font-size: 14px;
     margin-right: 15px;
     color: #444;
 }
-
 .service_wrap > .service_T td .price {
     color: black;
     font-size: 20px;
     margin-right: 5px;
 }
-
 .service_wrap > .service_T td img.arr_bott {
     width: 25px;
     height: 18px;
     padding: 0;
     margin: 0 10px;
 }
-
 .service_wrap > .service_T td img.arr_top {
     width: 30px;
     height: 25px;
@@ -1123,11 +1147,9 @@ body {
     padding: 0;
     margin: 0 10px;
 }
-
 .service_wrap > .service_T td span.arrow {
     display: flex;
 }
-
 .service_wrap > .service_T td.detail_td {
     width: 100%;
     padding: 0px !important;
@@ -1144,6 +1166,7 @@ body {
     color: #444;
     border-collapse: collapse;
 }
+
 .service_wrap .detail_T td {
     text-align: left;
     border-bottom: 1px solid rgba(168, 165, 165, 0.3)
@@ -1169,13 +1192,11 @@ body {
     padding-right: 43px;
 }
 
-
-/*부가서비스 확인 끝*/
-/*항공편 선택*/
+/*결제 헤더*/
 .select_wrap {
     position: relative;
     width: 100%;
-    top: 130px;
+    top: 100px;
     font-weight: 600;
 }
 
@@ -1211,207 +1232,94 @@ body {
     border-top: 1px solid rgba(168, 165, 165, 0.3);
 }
 
-.select_wrap > .setP > .code {
-    display: flex;
-    width: 160px;
-    height: 40px;
-    background-color: #BDD600;
-    padding: 12px;
-    margin-right: 10px;
+/*결제 랩*/
+
+select, input {
+    cursor: pointer;
 }
 
-.select_wrap > .setP > .code > img {
-    width: 30px;
-    margin-left: 3px;
-}
-
-.select_wrap > .setP > .code p {
-    margin-top: 2px;
-    font-size: 14px;
-    margin-left: 10px;
-}
-
-.select_wrap > .setP > #cul {
-    width: 140px;
-    padding: 10px 20px;
-    font-weight: 600;
-}
-
-/* 푸터 모달*/
-
-.reser_change {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 101;
-}
-.reser_cancel {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 101;
-}
-.modal_title{
-    background-color: #661E43;
-    width: 950px;
-    height: 50px;
-    padding: 40px 0;
-    color: white;
-    display: flex;
-    align-items: center;
+/* 싱딘 총 위약금 */
+.total_text{
+    margin-top: 150px;
+    text-align: left;
     text-indent: 30px;
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin-bottom: 30px;
 }
-.main_box{
-    width: 950px;
-    height: 500px;
-    padding: 30px;
-    background-color: white;
-}
-.main_box ul li{
-    font-weight: 600;
-    font-size: 0.9rem;
-    line-height: 1.3;
-}
-.main_box p{
-    margin: 20px 0;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-.modal_table table{
-    width: 100%;
-    border-collapse: collapse;
+.totalPrice_main{
+    height: 200px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: 30px;
+    align-items: center;
+    background-color: #f7f7f6;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-.modal_table table thead{
-    background-color: #f7f7f6;
-    color: rgb(85, 85, 85);
+.totalPrice_main .totalPrice_box > span{
+    font-size: 1.2rem;
+    display: flex;
+    font-weight: 600;
 }
-.modal_table table thead th{
-    border-top: 0;
+.totalPrice_main .totalPrice_box span.unit{
+    font-size: 0.8rem;
 }
-.modal_table table thead th:last-child{
-    border-right: 0;
+.totalPrice_main .totalPrice_box > p{
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
 }
-.modal_table tr th:first-child{
-    border-left: 0;
+.totalPrice_main .totalPrice_box p strong{
+    font-size: 1.8rem;
+    margin-left: 20px;
 }
-.modal_table tr th{
-    padding: 10px 20px;
-    height: 50px;
-    border-top: 1px solid #eaeaea;
-    border-right: 1px solid #eaeaea;
-    border-left: 1px solid #eaeaea;
+.totalPrice_main .totalPrice_box:nth-child(2), 
+.totalPrice_main .totalPrice_box:nth-child(3){
+    color: red;
 }
-.modal_table tr th input[type="checkbox"]{
+.cancel_check{
+    display: flex;
+    flex-direction: column;
+}
+.cancel_check > label{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+.cancel_check .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.cancel_check .btn > p{
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    margin-right: 20px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.cancel_check .btn > p.confirm_btn{
+    background-color: #bdd600;
+    align-items: center;
+}
+.cancel_check .btn > p.cancel_btn{
+    border: 2px solid #bdd600;
+    display: flex;
+    align-items: center;
+}
+.cancel_check label input[type="checkbox"]{
     width: 20px;
     height: 20px;
+    margin-right: 10px;
+    margin-top: -5px;
     appearance: none;
     background: url(../index_img/ico_check.png) no-repeat 0 0;
 }
-.modal_table tr th input[type="checkbox"]:checked{
+.cancel_check label input[type="checkbox"]:checked{
     width: 20px;
     height: 20px;
     appearance: none;
     background: url(../index_img/ico_check.png) no-repeat 0 -20px;
 }
-.modal_table tr td{
-    width: 50%;
-    text-align: center;
-    font-weight: 600;
-    border-top: 1px solid #eaeaea;
-}
-.modal_btn{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px;
-}
-.modal_btn .change_ticket, .modal_btn .confirm_btn, .modal_btn .next_ticket{
-    display: flex;
-    width: 160px;
-    height: 40px;
-    background-color: #BDD600;
-    padding: 12px;
-    justify-content: center;
-    cursor: pointer;
-}
-.modal_btn .btn_cancel{
-    display: flex;
-    width: 160px;
-    height: 40px;
-    border: 2px solid #BDD600;
-    padding: 12px;
-    justify-content: center;
-    cursor: pointer;
-}
-.false_modal{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 101;
-}
-.false_modal .false_modal_box{
-    background-color: white ;
-    border: 1px solid #661E43;
-    width: 300px;
-    height: 150px;
-    padding: 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    z-index: 103;
-}
-/* 메인 이동 버튼 */
-#container .mypage_main .to_main {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-around;
-}
-#container .mypage_main .to_main .modal_text{
-    width: 160px;
-    height: 50px;
-    background-color: #bdd600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-#container .mypage_main .to_main p a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #bdd600;
-    width: 160px;
-    height: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-}
-/* 푸터 모달 끝*/

@@ -651,24 +651,20 @@ table tr:last-child td {
     color: black;
     margin-bottom: 8px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.arrow {
     width: 50px;
     height: 15px;
     display: flex;
     align-items: flex-start;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.arrow img {
     width: 100%;
     height: 100%;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.detail {
     font-size: 14px;
     text-decoration: underline;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot {
     position: absolute;
     top: 0px;
@@ -678,22 +674,18 @@ table tr:last-child td {
     display: flex;
     color:black;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .txt {
     margin-right: 30px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .price_wrap {
     display: flex;
     align-items: center;
 }
-
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .cul {
     font-size: 14px;
     margin-right: 15px;
     color: #444;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T {
     width: 100%;
     margin-top: 0px;
@@ -702,17 +694,14 @@ table tr:last-child td {
     text-align: left;
     font-size: 18px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td {
     height: 60px;
     padding: 20px;
     border-right: none;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td:last-child {
     text-align: right;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td > .td_wrap {
     width: 100%;
     height: 100%;
@@ -721,31 +710,26 @@ table tr:last-child td {
     text-align: right;
     justify-content: flex-end;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T > tr:last-child td {
     border-bottom: none;
     text-align: right;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td .cul {
     font-size: 14px;
     margin-right: 15px;
     color: #444;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td .price {
     color: black;
     font-size: 20px;
     margin-right: 5px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td img.arr_bott {
     width: 25px;
     height: 18px;
     padding: 0;
     margin: 0 10px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td img.arr_top {
     width: 30px;
     height: 25px;
@@ -753,17 +737,14 @@ table tr:last-child td {
     padding: 0;
     margin: 0 10px;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td span.arrow {
     display: flex;
 }
-
 .pay_wrap > .fare_wrap > .fare_info_T td.detail_td {
     width: 100%;
     padding: 0px !important;
     border-bottom: none;
 }
-
 .detail_T {
     width: 100%;
     background-color: rgb(247, 247, 246);
