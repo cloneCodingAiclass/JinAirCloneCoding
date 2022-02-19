@@ -99,77 +99,7 @@ $(function () {
         $('.bbsbox1').css('display', 'none');
         $('.bbsbox2').css('display', 'block');
     });
-
-    $('.reser_change_btn').click(function(){
-        $('.reser_change').css('display', 'flex');
-        $('.reser_change').fadeIn(200);
-        $('.change_ticket').click(function(){
-            let tripcheck = $('.trip_name').is(':checked');
-            let peoplecheck = $('.people_name').is(':checked');
-
-            if(!tripcheck || !peoplecheck){
-                $('.false_modal').css('display', 'flex');
-                $('.confirm_btn').click(function(){
-                    $('.false_modal').css('display', 'none');
-                });
-            }else{
-                alert('넘어가자');
-
-            }
-            $('.btn_cancel').click(function(){
-                $('.reser_change').hide();
-            })
-        });
-    });
-    $('.reser_cancel_btn').click(function(){
-        $('.reser_cancel').css('display', 'flex');
-        $('.reser_cancel').fadeIn(200);
-        $('.next_ticket').click(function(){
-            let tripcheck = $('.trip_name').is(':checked');
-            let peoplecheck = $('.people_name').is(':checked');
-
-            if(!tripcheck || !peoplecheck){
-                $('.false_modal').css('display', 'flex');
-                $('.confirm_btn').click(function(){
-                    $('.false_modal').css('display', 'none');
-                });
-            }else{
-                location.href='/UserPage/payment/cancel_booking.html'
-            }
-        });
-    });
-    
-    $('.btn_cancel').click(function(){
-        $('.reser_change').hide();
-        
-        location.href='/UserPage/payment/extras.html'
-        $('.reser_cancel').hide();
+    $('.btn').click(function(){
+        location.href='/index.html'
     })
-    $('.peopleAll').click(function(){
-        let checked = $('.peopleAll').is(':checked');
-
-        if(checked){
-            $('.people_name').prop('checked', true);
-        }
-        else{
-            $('.people_name').prop('checked', false);
-        }
-    });
-    $('.tripAll').click(function(){
-        let checked = $('.tripAll').is(':checked');
-        if(checked){
-            $('.trip_name').prop('checked', true);
-        }
-        else{
-            $('.trip_name').prop('checked', false);
-        }
-    });
-
 });
-
-
-
-function hidePopupLayer(){
-    $('.confirm_modal1', parent.document).fadeOut(200);
-    $('body', parent.document).css('overflow', '');
-}

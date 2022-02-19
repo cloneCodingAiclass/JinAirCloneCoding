@@ -164,10 +164,14 @@ $(function () {
         }
     });
 
-
     $('.confirm_btn').click(function(){
-        location.href="/UserPage/index/mypage/Mypage_main.html"
-    })
+        let confirmcheck = $('#check').is(':checked');
+        if(confirmcheck){
+            location.href="/UserPage/payment/completePayment.html"
+    }else{
+        alert('didjidji');
+    }
+});
     $('.cancl_btn').click(function(){
         location.href="/UserPage/index/mypage/Mypage_main.html"
     })
