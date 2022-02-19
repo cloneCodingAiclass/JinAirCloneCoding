@@ -8,20 +8,8 @@
     <link rel="stylesheet" href="/AdminPage/css/admin_main.css">
     <link rel="stylesheet" href="/AdminPage/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js" integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/admin_main.js"></script>
-    <script type="text/javascript" src="./chart/visualize.jQuery.js"></script>
-    <link rel="stylesheet" type="text/css" href="./chart/visualize.css">
-    <link rel="stylesheet" href="./chart/visualize-light.css">
-    <script type="text/javascript">
-        $(function(){
-            $('#data').visualize({type: 'line', lineWeiget:2});
-            // $('#data').visualize({type: 'bar', lineWeiget:2});
-            // $('#data').visualize({type: 'pie', lineWeiget:2});
-            // $('#data').visualize({type: 'radar', lineWeiget:2});
-            // $('#data').visualize({type: 'polarArea', lineWeiget:2});
-            // $('#data').visualize({type: 'horizontalBar', lineWeiget:2});
-        })
-    </script>
 </head>
 <body>
     <div id="wrap">
@@ -121,107 +109,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="middlecont">
-                        <table id="data">
-                            <caption>일일 이용객 수</caption>
-                            <thead>
-                                <tr>
-                                    <td></td>
-                                    <th>1일</th>
-                                    <th>2일</th>
-                                    <th>3일</th>
-                                    <th>4일</th>
-                                    <th>5일</th>
-                                    <th>6일</th>
-                                    <th>7일</th>
-                                    <th>8일</th>
-                                    <th>9일</th>
-                                    <th>10일</th>
-                                    <th>11일</th>
-                                    <th>12일</th>
-                                    <th>13일</th>
-                                    <th>14일</th>
-                                    <th>15일</th>
-                                    <th>16일</th>
-                                    <th>17일</th>
-                                    <th>18일</th>
-                                    <th>19일</th>
-                                    <th>20일</th>
-                                    <th>21일</th>
-                                    <th>22일</th>
-                                    <th>23일</th>
-                                    <th>24일</th>
-                                    <th>25일</th>
-                                    <th>26일</th>
-                                    <th>27일</th>
-                                    <th>28일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>입국</th>
-                                    <td>2000</td>
-                                    <td>500</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>600</td>
-                                    <td>800</td>
-                                    <td>1400</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>500</td>
-                                    <td>800</td>
-                                    <td>1200</td>
-                                    <td>2000</td>
-                                    <td>1000</td>
-                                    <td>1200</td>
-                                    <td>1200</td>
-                                    <td>3400</td>
-                                    <td>2300</td>
-                                    <td>1400</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>500</td>
-                                    <td>400</td>
-                                    <td>500</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>600</td>
-                                    <td>800</td>
-                                </tr>
-                                <tr>
-                                    <th>출국</th>
-                                    <td>2000</td>
-                                    <td>1200</td>
-                                    <td>2000</td>
-                                    <td>2100</td>
-                                    <td>1000</td>
-                                    <td>900</td>
-                                    <td>800</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>800</td>
-                                    <td>1600</td>
-                                    <td>777</td>
-                                    <td>2000</td>
-                                    <td>800</td>
-                                    <td>700</td>
-                                    <td>200</td>
-                                    <td>2400</td>
-                                    <td>1300</td>
-                                    <td>800</td>
-                                    <td>1250</td>
-                                    <td>1000</td>
-                                    <td>500</td>
-                                    <td>600</td>
-                                    <td>800</td>
-                                    <td>1250</td>
-                                    <td>1452</td>
-                                    <td>1500</td>
-                                    <td>300</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="chartcontainer">  
+                        <canvas id="line-chart"></canvas>
                     </div>
                     <div class="bottcont">
                         <div class="QnA">
@@ -378,3 +267,4 @@
     </div>
 </body>
 </html>
+<script src="/AdminPage/js/chart.js"></script>

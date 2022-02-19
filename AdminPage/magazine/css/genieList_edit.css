@@ -1,3 +1,8 @@
+#container > .contents > .contwrap{
+    width: 88%;
+    margin-left: 50px;
+    margin-top: 50px;
+}
 .contents > .contwrap > .search{
     display: flex;
     justify-content: space-between;
