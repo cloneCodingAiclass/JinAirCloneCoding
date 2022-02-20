@@ -85,15 +85,26 @@ $(function () {
     })
 
     $('.icoFold1').click(function(){
+        $('.icoFold').css("color", "#444")
+        $('.list').css("display", "none");
+        $('.icoFold1').css("color", "#661e43")
         $('.list1').css("display", "block");
-        $('.icoFold1').click(function(){
-            $('.list1').css("display", "none");
-        })
+        $('.icoFold2').css("color", "#444")
+        $('.list2').css("display", "none");
+        $('.icoFold3').css("color", "#444")
+        $('.list3').css("display", "block");
+        $('.icoFold4').css("color", "#444")
+        $('.list4').css("display", "block");
     })
     $('.icoFold2').click(function(){
-        $('.list2').css("display", "block");
+        $('.list').css("display", "none");
+        $('.list1').css("display", "block");
+        $('.list2').css("display", "none");
+        $('.list3').css("display", "none");
         $('.icoFold2').click(function(){
-            $('.list2').css("display", "none");
+            $('.list1').css("display", "none");
+            $('.list3').css("display", "none");
+            $('.list4').css("display", "none");
         })
     })
     $('.icoFold3').click(function(){
