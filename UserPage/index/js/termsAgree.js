@@ -95,6 +95,7 @@ $(function () {
 
     $('.confirm_modal1').hide();
     $('.term01').click(function(){
+        $('.confirm_modal1').css('display', 'flex');
         $('.confirm_modal1').fadeIn(200);
         $('body').css('overflow', 'hidden');
         
@@ -105,6 +106,7 @@ $(function () {
     });
     $('.confirm_modal2').hide();
     $('.term02').click(function(){
+        $('.confirm_modal2').css('display', 'flex');
         $('.confirm_modal2').fadeIn(200);
         $('body').css('overflow', 'hidden');
         
@@ -115,6 +117,7 @@ $(function () {
     });
     $('.confirm_modal3').hide();
     $('.term03').click(function(){
+        $('.confirm_modal3').css('display', 'flex');
         $('.confirm_modal3').fadeIn(200);
         $('body').css('overflow', 'hidden');
         
@@ -160,6 +163,7 @@ function phonecheck(){
                 //api로 넘기기
             location.href="./joinForm.html";
         }else{
+            $('.false_modal').css('display', 'flex');
             $('.false_modal').fadeIn(200);
             $('.btn_cancel').click(function(){
                 $('.false_modal').fadeOut(200);
@@ -179,6 +183,7 @@ function ipincheck(){
         }else{
             ischeck.value = 'n' ;
             $('.false_modal').fadeIn(200);
+            $('.false_modal').css('display', 'flex');
             $('body').css('overflow', 'hidden');
             $('.btn_cancel').click(function(){
                 $('.false_modal').fadeOut(200);
