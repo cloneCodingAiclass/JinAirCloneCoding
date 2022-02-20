@@ -548,6 +548,8 @@ $(function () {
     $(".seat_P").css("display", "none");
     $("p.select_seat_num span.close").on('click', function() {
         $(".seat_num").text("");
+        $(".seat_number").text("");
+        $(".select_seat_price .price").text("");
         $(".select_seat_price .price").text("");
         $(".seat_P").css("display", "none");
         $('.seat_sel').css('pointer-events', 'auto');
@@ -598,16 +600,17 @@ $(function () {
     });
 
     $('.SSC2').click(function() {
-        console.log("dd");
-        if ($(".SSC2").is(':checked')) {
-            $(".passenger_info_wrap2 .select_seat_num2 .seat_num2").html($(this).val());
+        console.log($(this).val());
+        if ($('.SSC2').is(':checked')) {
+            let i = $(this).val();
+            $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html(i);
             $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
-            $(".passenger_info_wrap2 .seat_P").css("display", "block");
+            $(".passenger_info_wrap2 .seat_P2").css("display", "block");
             $('.passenger_info_wrap2 .seat_sel').css('pointer-events', 'auto');
-            $('.SSC').not(this).attr("disabled",true);
+            $('.SSC2').not(this).attr("disabled",true);
 
             if($('.SSC2').next().hasClass("box7") === true) {
-                $(".passenger_info_wrap2 .select_seat_num2 .seat_num2").html("");
+                $(".passenger_info_wrap2 .select_seat_num .seat_num").html("");
                 $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
                 $(".passenger_info_wrap2 .seat_P").css("display", "none");
                 $(this).css("disabled", false);
@@ -1170,3 +1173,5 @@ $(()=> {
         $("#modal_service_app_wrap").fadeOut();
     })
 })
+
+

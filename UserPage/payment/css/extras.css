@@ -715,11 +715,10 @@ body{
     border: 3px solid #661e43;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num {
+.service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num, .seat_number {
     font-size: 0px;
     width: 60px;
     height: 40px;
-    background-color: #BDD600;
 }
 
 .service_content .passenger_info_wrap .passenger_info p.select_seat_num span.close {
