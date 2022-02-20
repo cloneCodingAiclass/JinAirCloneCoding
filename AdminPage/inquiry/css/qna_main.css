@@ -20,6 +20,7 @@
     height: 30px;
     font-size: 14px;
     font-weight: 600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .contents_top .btn_top input[type="text"]{
     width: 350px;
@@ -32,6 +33,7 @@
     position: relative;
     bottom: 1px;
     font-weight: 600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .contents_top .btn_top input[type="button"]{
     text-align: center;
@@ -43,6 +45,7 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .contents_main{
     width: 100%;
@@ -52,18 +55,19 @@
     margin-top: 5px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-collapse: collapse;
     font-size: 15px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .contents_main table tr:first-child{
     background-color: #F2F2F2;
 }
 #container > .contents .contents_main table tr:first-child td{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ccc;
 }
 #container > .contents .contents_main table tr td{
     width: 125px;
@@ -101,17 +105,19 @@
     margin-top: 5px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .qustion_table table tr:first-child{
     background-color: #F2F2F2;
 }
 #container > .contents .qustion_table table tr:first-child td{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ccc;
     height: 40px;
 }
 #container > .contents .qustion_table table tr:nth-child(1) td:first-child{
@@ -144,17 +150,19 @@
     margin-top: 5px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .answer_table table tr:first-child{
     background-color: #F2F2F2;
 }
 #container > .contents .answer_table table tr:first-child td{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ccc;
     height: 40px;
 }
 #container > .contents .answer_table table tr:nth-child(1) td:first-child{
@@ -194,12 +202,14 @@
     font-weight: 600;
     cursor: pointer;
     margin: 0 4px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container .list > input{
     width: 80px;
     height: 30px;
     border: 3px solid #BDD600;
     background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 /* 모달창 시작 */
 .btn_user_container{

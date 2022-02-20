@@ -12,12 +12,13 @@
 } 
 .contents_main > .contents_sch{
     width: 100%;
-    border-top: 1px solid grey;
+    border-top: 1px solid #ccc;
     background-color: #F2F2F2;
     height: 50px;
     text-align: center;
     line-height: 50px;
     margin-top: 20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents_sch form input{
     font-size: 14px;
@@ -74,18 +75,19 @@
 .contents_main > .coupon_tb{
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents_main > .coupon_tb tr{
     height: 40px;
 }
 .contents_main > .coupon_tb tr:nth-child(1){
     background-color: #F2F2F2;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
 }
 
 .footer{
@@ -109,6 +111,7 @@
     border: 1px solid rgb(187, 187, 187);
     background-color: #fff;
     padding-top: 2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .footer table td:nth-child(11){
     background: url(../../img/right.png) center no-repeat;

@@ -13,15 +13,17 @@
     margin-top: 20px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
+    background-color: #fff;
 }
 #container > .contents .contents_main tr:first-child{
     background-color: #F2F2F2;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ccc;
     height: 40px;
 }
 #container > .contents .contents_main table tr td{
@@ -64,11 +66,13 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .contents_bottom .faq_btn_add input[type="button"]:nth-child(1){
     width: 80px;
     border: 3px solid #BDD600;
     background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 /* faq_view 끝 */
 /* faq_view 시작(모달창) */
