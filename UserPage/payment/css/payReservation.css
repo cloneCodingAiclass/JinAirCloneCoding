@@ -87,7 +87,7 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  position: relative;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
@@ -170,6 +170,7 @@ body {
   top: 3px;
 }
 #header nav {
+  position: absolute;
   top: 47px;
   box-sizing: border-box;
   margin: 0;
@@ -615,7 +616,7 @@ table tr:last-child td {
 
 .pay_wrap > .fare_wrap > .fare_info {
   width: 100%;
-  height: 250px;
+  height: 200px;
   padding: 20px;
   background-color: rgb(247, 247, 246);
 }
@@ -640,7 +641,6 @@ table tr:last-child td {
   display: flex;
   align-items: center;
   height: 60px;
-  padding: 50px 0;
 }
 
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div p.flight {
@@ -663,25 +663,29 @@ table tr:last-child td {
 }
 
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > div p.area {
-  font-size: 1.3rem;
+  font-size: 25px;
   font-weight: bold;
   color: black;
   margin-bottom: 8px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.arrow {
   width: 50px;
   height: 15px;
   display: flex;
   align-items: flex-start;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.arrow img {
   width: 100%;
   height: 100%;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap div .area_wrap > p.detail {
   font-size: 14px;
   text-decoration: underline;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot {
   position: absolute;
   top: 0px;
@@ -691,18 +695,22 @@ table tr:last-child td {
   display: flex;
   color: black;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .txt {
   margin-right: 30px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .price_wrap {
   display: flex;
   align-items: center;
 }
+
 .pay_wrap > .fare_wrap > .fare_info .jour_wrap .tot .cul {
   font-size: 14px;
   margin-right: 15px;
   color: #444;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T {
   width: 100%;
   margin-top: 0px;
@@ -711,14 +719,17 @@ table tr:last-child td {
   text-align: left;
   font-size: 18px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td {
   height: 60px;
   padding: 20px;
   border-right: none;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td:last-child {
   text-align: right;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td > .td_wrap {
   width: 100%;
   height: 100%;
@@ -727,26 +738,31 @@ table tr:last-child td {
   text-align: right;
   justify-content: flex-end;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T > tr:last-child td {
   border-bottom: none;
   text-align: right;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td .cul {
   font-size: 14px;
   margin-right: 15px;
   color: #444;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td .price {
   color: black;
   font-size: 20px;
   margin-right: 5px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td img.arr_bott {
   width: 25px;
   height: 18px;
   padding: 0;
   margin: 0 10px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td img.arr_top {
   width: 30px;
   height: 25px;
@@ -754,9 +770,11 @@ table tr:last-child td {
   padding: 0;
   margin: 0 10px;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td span.arrow {
   display: flex;
 }
+
 .pay_wrap > .fare_wrap > .fare_info_T td.detail_td {
   width: 100%;
   padding: 0px !important;
@@ -793,9 +811,10 @@ table tr:last-child td {
   justify-content: flex-end;
 }
 
-.detail_T td:last-child > .td_wrap {
-  /* padding-right: 43px; */
-}
+/* .detail_T td:last-child> .td_wrap {
+    padding-right: 43px;
+} 
+*/
 
 /*운임규정 끝*/
 
@@ -1538,21 +1557,21 @@ td > ul > li::before {
   text-align: center;
 }
 
-.modal_contents table {
+.modal_contents > table {
   border: none !important;
   width: 100%;
   height: 80%;
   padding: 10px;
 }
 
-.list table td {
+.list > table td {
   border: none !important;
   text-align: center;
   word-break: keep-all;
   vertical-align: top;
 }
 
-.list table td p {
+.list > table td p {
   font-size: 15px;
   line-height: 20px;
 }
@@ -1706,20 +1725,20 @@ td > ul > li::before {
   font-size: 16px;
 }
 
-#modal_fare_rules .modal_fare_rules .modal_contents table {
+#modal_fare_rules .modal_fare_rules .modal_contents > table {
   border-top: 1px solid black !important;
   border-bottom: 1px solid black !important;
   border-collapse: collapse;
 }
 
-#modal_fare_rules .modal_fare_rules .modal_contents table th {
+#modal_fare_rules .modal_fare_rules .modal_contents > table th {
   padding: 5px;
   text-align: left;
   border-right: 1px solid rgba(168, 165, 165, 0.3) !important;
   border-bottom: 1px solid rgba(168, 165, 165, 0.3) !important;
 }
 
-#modal_fare_rules .modal_fare_rules .modal_contents table td {
+#modal_fare_rules .modal_fare_rules .modal_contents > table td {
   padding: 5px;
   border-right: 1px solid rgba(168, 165, 165, 0.3) !important;
   border-bottom: 1px solid rgba(168, 165, 165, 0.3) !important;
@@ -2405,10 +2424,16 @@ td:last-child {
 }
 
 /* 출발지, 도착지, 가는날, 오는날 */
-.round_wrap table,
-.oneway_wrap table,
-.multi_wrap table {
+.round_wrap table.modal_table,
+.oneway_wrap table.modal_table,
+.multi_wrap table.modal_table {
   margin: 30px auto 0;
+}
+.round_wrap table.modal_table td,
+.oneway_wrap table.modal_table td,
+.multi_wrap table.modal_table td {
+  border: none;
+  padding: 10px 5px;
 }
 
 .go_layerbtn,

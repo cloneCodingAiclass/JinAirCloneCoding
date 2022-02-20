@@ -151,6 +151,8 @@ $(function () {
   let b = $(".detail2").offset().top - 30;
   let y = $(".detail2").offset().left + 30;
 
+  console.log(a);
+  console.log(b);
   $(".modal_flight_info1").css("top", a);
   $(".modal_flight_info2").css("top", b);
   $(".modal_flight_info1").css("left", x);
@@ -1182,9 +1184,11 @@ function updateTrip() {
   let arr1 = $("#arr_area1").text();
   let godate = $("#godate").text();
 
+  let sub = godate.substr(5, 14);
+
   console.log(person, go1, arr1, godate);
   $(".person_num").text(person);
   $(".go_default").attr("value", go1);
   $(".arrive_default").attr("value", arr1);
-  $(".go_date_default").attr("value", godate);
+  $(".go_date_default").attr("value", sub);
 }
