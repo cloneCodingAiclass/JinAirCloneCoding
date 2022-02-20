@@ -23,30 +23,20 @@ const data = {
     labels: labels,
     datasets: [
         {
-            label: '출국',
+            label: '이용객 수',
             pointRadius:5,
             pointHoverRadius:10,
-            backgroundColor: 'rgb(102, 30, 67)',
-            hoverBackgroundColor:'rgb(102, 30, 67)',
-            borderColor: 'rgb(102, 30, 67)',
-            borderDash:[20,5],
-            data: [0, 1, 2, 4, 2, 3, 15,0, 10, 5, 2, 20, 0, 15,0, 10, 5, 2, 20, 30, 20, 0, 10, 5, 2, 20, 30, 10],
-        },
-        {
-            label: '입국',
-            pointRadius:5,
-            pointHoverRadius:10,
-            backgroundColor: '#bdd600',
-            hoverBackgroundColor:'#bdd600',
-            borderColor: '#bdd600',
-            borderDash:[20,5],
-            borderWidth:1,
-            data: [5, 2, 17, 5, 3, 4,0, 10, 5, 2, 20, 30, 4,0, 10, 5, 2, 20, 30, 5, 0, 10, 5, 2, 20, 10, 20, 25],
+            backgroundColor: 'rgb(102, 30, 67, 0.5)',
+            hoverBackgroundColor:'rgb(102, 30, 67, 0.5)',
+            borderColor: 'rgb(102, 30, 67, 0.5)',
+            borderDash:[0,0],
+            fill: true,
+            data: [6, 1, 2, 4, 2, 3, 15,10, 10, 5, 2, 20, 7, 15, 4, 10, 5, 2, 20, 30, 20, 2, 10, 5, 2, 20, 30, 10],
         }
     ]
 };
 const config = {
-    type: 'bar',
+    type: 'line',
     data: data,
     options: {
         maintainAspectRatio:false
