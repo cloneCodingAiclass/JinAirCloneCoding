@@ -201,6 +201,7 @@ $(function () {
 
     /*좌석안내 모달창 */
     $(".seat_info_wrap .info").click(function() {
+        $(".modal_seat_info_wrap").css('display', 'absolute');
         $(".modal_seat_info_wrap").fadeIn(200);
 
         $(".modal_seat_info_wrap .close").click(function() {
@@ -605,7 +606,7 @@ $(function () {
             let i = $(this).val();
             $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html(i);
             $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
-            $(".passenger_info_wrap2 .seat_P2").css("display", "block");
+            $(".passenger_info_wrap2 .seat_P").css("display", "block");
             $('.passenger_info_wrap2 .seat_sel').css('pointer-events', 'auto');
             $('.SSC2').not(this).attr("disabled",true);
 
@@ -616,7 +617,7 @@ $(function () {
                 $(this).css("disabled", false);
             }
         } else {
-            $(".passenger_info_wrap2 .select_seat_num2 .seat_num2").html("");
+            $(".passenger_info_wrap2 .select_seat_num .seat_number").html("");
             $(".passenger_info_wrap2 .select_seat_price .price").html("");
             $(".passenger_info_wrap2 .seat_P").css("display", "none");
 
@@ -894,6 +895,7 @@ $(() => {
 $(()=> {
     $('#modal_free_wrap').hide();
     $(".service_title2 .section1").on('click', () => {
+        $("#modal_free_wrap").css('display', 'absolute');
         $("#modal_free_wrap").fadeIn();
         $("body").css("overflow", "hidden");
     })

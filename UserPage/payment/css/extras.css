@@ -715,7 +715,7 @@ body{
     border: 3px solid #661e43;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num, .seat_number {
+.service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num, .service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_number {
     font-size: 0px;
     width: 60px;
     height: 40px;
@@ -1819,7 +1819,7 @@ body{
     width: 450px;
     height: 600px;
     padding: 20px;
-    position: absolute;
+    position: none;
     top: 0px;
     left: 0px;
     background-color: #fff;
@@ -1885,7 +1885,7 @@ body{
 
 /*무료 수하물/기내식 안내*/
 #modal_free_wrap {
-    position: absolute;
+    position: none;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -2112,7 +2112,7 @@ body{
 
 /*비상구 좌석 지정 시 유의 사항 안내 모달창*/
 #modal_notice_wrap {
-    position: fixed;
+    position: none;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
