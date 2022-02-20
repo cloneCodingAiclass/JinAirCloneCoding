@@ -450,15 +450,20 @@ $(function () {
         }
     });
 
-    // $(".ins_join_butt").on("click", function() {
-    //     if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
-    //         $("#modal_service_app_wrap").fadeIn();
-    //         $(".modal_join_ins").fadeIn();
-    //     }
-    //     else{
+    $(".ins_join_butt").on("click", function() {
+        if($("#agree_check0").is(":checked") && $("#agree_check1").is(":checked") && $("#agree_check2").is(":checked")){
+            $("#modal_service_app_wrap").fadeIn();
+            $(".modal_join_ins").fadeIn();
+        }
+        else{
 
-    //     }
-    // });
+        }
+    });
+    
+    $(".menu4, .fix_next_butt").click(function(){        
+        $("#modal_service_app_wrap").fadeIn(200);
+        $(".modal_join_ins").fadeIn(200);
+    });
 
     /*보험 선택 구간 끝*/
 
