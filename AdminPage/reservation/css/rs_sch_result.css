@@ -2,7 +2,7 @@
     width: 88%;
     margin-left: 50px;
     margin-top: 50px;
-    
+    height: 800px;
 }
 .contents > .contwrap > .search{
     width: 100%;
@@ -28,6 +28,7 @@
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
+    background-color: #fff;
 }
 .rs_list > table th {
     height: 50px;
@@ -79,7 +80,7 @@
     margin-top: 5px;
     right: 0px;
     width: 120px;
-    height: 40px;
+    height: 35px;
     border: none;
     border-radius: 2px;
     font-weight: 900;
