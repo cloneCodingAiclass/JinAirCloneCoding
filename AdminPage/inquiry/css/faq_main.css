@@ -31,6 +31,10 @@
     font-size: 14px;
     font-weight: 600;
 }
+#container > .contents .faq_check_box li:nth-child(1){
+    background-color: white;
+    border: 3px solid #BDD600;
+}
 #container > .contents .contents_top .btn_top input[type="text"]{
     width: 350px;
     height: 30px;
@@ -60,6 +64,7 @@
     text-align: center;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    background-color: #fff;
     border-collapse: collapse;
     font-size: 15px;
     font-weight: bold;

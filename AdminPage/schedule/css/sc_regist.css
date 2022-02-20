@@ -12,8 +12,20 @@
 #container > .contents > .contwrap > .btn_top{
     display: flex;
     justify-content: right;
-    height: 20px;
+    height: 30px;
     width: 100%;
+    margin-bottom: 5px;
+}
+#container > .contents > .contwrap > .btn_top input{
+    width: 100px;
+    height: 30px;
+    background-color:#BDD600;
+    border-radius: 2px;
+    border: 0;
+    font-size: 0.8rem;
+    margin-right: 15px;
+    margin-bottom: 120px;
+    font-weight: 600;
 }
 
 #container > .contents >.contwrap > .contents_main{
@@ -27,6 +39,7 @@
     border-collapse: collapse;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    background-color: #fff;
 }
 #container > .contents >.contwrap > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;

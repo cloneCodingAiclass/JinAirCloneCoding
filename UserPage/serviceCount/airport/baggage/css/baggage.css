@@ -576,6 +576,9 @@ p.caution {
     display: table-cell;
     vertical-align: middle;
 }
+.keywordList >li .cont .bgn::before{
+    content: "";
+}
 
 /* 기내 유실물 찾기 css */
 .qnaHead h2 {
