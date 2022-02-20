@@ -57,6 +57,7 @@ ul {
 }
 li {
     margin: 0.5%;
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
@@ -419,6 +420,10 @@ tr {
 .bbsList > caption{
     display: none;
 }
+.help > .bbsList{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
 
 /* 유아 동반 고객 */
 .keywordList >li {
@@ -430,9 +435,6 @@ tr {
     padding: 10px 20px 0 20px;
     margin-top: 30px;
     height: 1px;
-}
-.keywordList >li:nth-child(1){
-    border-top: 1px solid #f0f0f0;
 }
 .keywordList >li .ico {
     position: absolute;
@@ -503,6 +505,7 @@ tr {
     padding: 16px 0;
     border: 1px solid #eaeaea;
     border-right: 0;
+    border-left: 0;
     font-size: 18px;
     line-height: 28px;
     text-align: center;
@@ -518,6 +521,7 @@ tr {
     padding: 16px 0;
     border: 1px solid #eaeaea;
     border-right: 0;
+    border-left: 0;
     color: #000;
     font-size: 18px;
     line-height: 28px;
@@ -529,10 +533,6 @@ tr {
     text-align: center;
 }
 
-.bbsList{
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
 .tabCont h3.typeA span {
     font-size: 16px;
 }
@@ -554,9 +554,11 @@ thead {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
+    background-color: #f2f2f2;
 }
 .tblScroll{
     text-align: center;
+    border-top: 1px solid black;
 }
 
 a:link {
@@ -566,16 +568,6 @@ a:link {
 .fontTypeE {
     color: #008ae0 !important;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*푸터*/
 #footerCont {
