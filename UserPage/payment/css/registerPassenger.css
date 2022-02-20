@@ -1040,6 +1040,7 @@ label.men {
     font-size: 2.3em;
     top: 25px;
     right: 30px;
+    cursor: pointer;
 }
 
 /*더보기*/
