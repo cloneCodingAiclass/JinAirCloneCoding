@@ -1881,7 +1881,6 @@ td {
   width: 880px;
   padding: 40px 20px;
   display: none;
-  position: absolute;
   top: 292px;
   left: 272px;
   height: auto;
@@ -1929,6 +1928,7 @@ td {
 .arrive_layerbtn2 {
   display: flex;
   position: absolute;
+  flex-direction: column;
   top: 230px;
   left: 930px;
   text-align: center;
