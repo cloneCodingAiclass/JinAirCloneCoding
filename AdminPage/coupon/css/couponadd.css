@@ -107,15 +107,18 @@
     width: 25px;
     height: 25px;
     border: 1px solid rgb(187, 187, 187);
+    background-color: #fff;
     padding-top: 2px;
 }
 .footer table td:nth-child(11){
     background: url(../../img/right.png) center no-repeat;
+    background-color: #fff;
     background-size: 21px;
     cursor: pointer;
 }
 .footer table td:nth-child(12){
     background: url(../../img/double_right.png) center no-repeat;
+    background-color: #fff;
     background-size: 21px;
     cursor: pointer;
 }
