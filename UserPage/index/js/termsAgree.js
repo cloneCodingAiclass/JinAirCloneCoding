@@ -132,6 +132,24 @@ function hidePopupLayer(){
     $('body', parent.document).css('overflow', '');
 }
 
+function confirmbtn1(){
+    $('.confirm_modal1', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+    $('#term01', parent.document).prop('checked', true);
+}
+
+function confirmbtn2(){
+    $('.confirm_modal2', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+    $('#term02', parent.document).prop('checked', true);
+}
+
+function confirmbtn3(){
+    $('.confirm_modal3', parent.document).fadeOut(200);
+    $('body', parent.document).css('overflow', '');
+    $('#term03', parent.document).prop('checked', true);
+}
+
 function phonecheck(){
     let term1 = $('#term01').is(':checked');
     let term2 = $('#term02').is(':checked');
