@@ -24,6 +24,7 @@
     font-size: 14px;
     table-layout: fixed;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .contwrap > .event_wrap > .event_view th {
     height: 43px;
@@ -41,8 +42,8 @@
 }
 
 .contents > .contwrap > .event_wrap > .event_view th.botbor {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     text-indent: 5px;
 }
 
@@ -62,7 +63,7 @@
 }
 .contents > .contwrap > .event_wrap > .event_view td.content_txt {
     padding: 5px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
     padding: 5px;
 }
 .contents > .contwrap > .event_wrap > .event_view td.file > img {
@@ -86,10 +87,12 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .contwrap > .event_wrap > .event_view .canc_btn {
     background-color: #fff;
     border: 3px solid #BDD600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 
 /* 모달창 이벤트 삭제*/

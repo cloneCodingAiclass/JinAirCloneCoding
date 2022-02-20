@@ -212,6 +212,20 @@ $(function () {
 
   /*할인 끝*/
 
+  $(window).scroll(function() {
+    let y = $(".contentswrap").offset().top;
+    let h = $(document).scrollTop();
+
+    if(h > y) {
+        $(".fix_trip_info").css("position", "fixed");
+        $(".fix_trip_info").css("top", "0px");
+        $("#header").css("position", "absolute");
+    } else {
+        $(".fix_trip_info").css("position", "absolute");
+        $(".fix_trip_info").css("top", "0px");
+        $("#header").css("position", "fixed");
+    }
+})
   /*결제정보*/
   $(".card_wrap2").hide();
   $(".sel_easy_more").on("click", function () {
@@ -1012,6 +1026,7 @@ function submit() {
   $(".go_layerbtn").css({ color: "rgb(145, 0, 70)" });
   $(".go_select_opt").addClass("on");
   $(".go_layer").slideDown("fast");
+  
 }
 
 $(function () {

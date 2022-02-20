@@ -24,13 +24,14 @@
     width: 350px;
     height: 30px;
     border-radius: 2px;
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     text-indent: 10px;
     font-size: 14px;
     color: grey;
     position: relative;
     bottom: 1px;
     font-weight: 600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .con_wrap > .search > form > input[type="submit"]{
     text-align: center;
@@ -42,17 +43,19 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .con_wrap > table{
     margin-top: 5px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     border-collapse: collapse;
     font-size: 15px;
     font-weight: bold;
     background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 
 }
 .contents > .con_wrap > table tr{
@@ -69,7 +72,7 @@
 }
 .contents > .con_wrap > table tr:nth-child(1){
     background-color: #F2F2F2;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
 }
 
 .footer{
@@ -93,6 +96,7 @@
     border: 1px solid rgb(187, 187, 187);
     background-color: #fff;
     padding-top: 2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .footer table td:nth-child(11){
     background: url(../../img/right.png) center no-repeat;
@@ -134,4 +138,5 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }

@@ -19,12 +19,13 @@
 }
 #container > .contents >.contwrap > .contents_main table{
     border-collapse: collapse;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents > .contwrap > .contents_main tr:first-child{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #ccc;
     background-color: #F2F2F2;
     height: 40px;
 }
@@ -50,4 +51,5 @@
     font-weight: 600;
     margin-right: 20px;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }

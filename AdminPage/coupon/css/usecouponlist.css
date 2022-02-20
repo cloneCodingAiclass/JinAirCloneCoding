@@ -37,6 +37,7 @@
     position: relative;
     bottom: 1px;
     outline: none;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .contwrap > .search > form > input[type="submit"]{
     text-align: center;
@@ -48,23 +49,25 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 
 .contents > .contwrap > table{
     margin-top: 5px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-collapse: collapse;
     font-size: 15px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .contwrap > table tr{
     height: 40px;
 }
 .contents > .contwrap > table tr:nth-child(1){
     background-color: #F2F2F2;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
 }

@@ -27,9 +27,10 @@
     font-size: 14px;
     font-weight: bolder;
     margin: 0 auto;
-    border-top: 1px solid grey;;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 
 .contents > .contwrap > .searchwrap table {
@@ -66,7 +67,6 @@
     outline: none;
     width: 90px;
     height: 40px;
-    text-indent: 8px;
     font-size: 14px;
     font-weight: bolder;
     cursor: pointer;
@@ -123,13 +123,14 @@
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .rs_list > table tr:nth-child(1){
     height: 40px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
     background-color: #f2f2f2;
 }
 .rs_list > table td{
