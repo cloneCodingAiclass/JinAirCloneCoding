@@ -42,8 +42,9 @@
     text-align: center;
     font-size: 14px;
     font-weight: 600;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .rs_list > table th {
     height: 50px;
@@ -52,8 +53,9 @@
 }
 .rs_list > table td {
     height: 40px;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
 }
 .rs_list > table td > .firstN {
     padding: 0px;
@@ -73,14 +75,14 @@
 }
 .rs_list > table:nth-child(2) th {
     vertical-align: middle;
-    border-top: 1px solid grey;
+    border-top: 1px solid #ccc;
 }
 .rs_list > table:nth-child(2) td {
     height: 33px;
-    border-top: 1px solid grey;
+    border-top: 1px solid #ccc;
 }
 .rs_list > table:nth-child(2) .lefttd {
-    border-right: 1px solid grey;
+    border-right: 1px solid #ccc;
 }
 .rs_list > table:nth-child(2) td input[type=radio] {
     margin: 5px;
@@ -101,10 +103,12 @@
     font-weight: 900;
     background-color: #BDD600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .rs_list .golist{
     background-color: white;
     border: 1px solid #BDD600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 
 

@@ -17,23 +17,24 @@
 }
 #container > .contents > .contwrap .contents_main table{
     border-collapse: collapse;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents > .contwrap .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
 }
 #container > .contents > .contwrap .contents_main tr {
-    border-top: 1px solid gray;
+    border-top: 1px solid #ccc;
     height: 40px;
 }
 #container > .contents > .contwrap .contents_main tr:first-child td{
     width: 333px;
 }
 #container > .contents > .contwrap .contents_main tr:nth-child(3) td{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 #container > .contents > .contwrap .btn_box{
     width: 100%;
@@ -51,6 +52,7 @@
     margin-right: 10px;
     font-size: 0.8rem;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents > .contwrap .btn_box input[type="button"]:first-child{ 
     width: 80px;
@@ -64,4 +66,5 @@
     margin-right: 10px;
     font-size: 0.8rem;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }

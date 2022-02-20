@@ -27,12 +27,14 @@
     height: 150px;
     border: none;
     border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #item_search table {
     margin: 30px auto;
     width: 85%;
     font-size: 14px;
     font-weight: 900;
+    
 }
 #item_search table tr:nth-child(2){
     height: 70px;
@@ -101,19 +103,20 @@
     margin-top: 15px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-collapse: collapse;
     font-size: 15px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #item_list > table tr{
     height: 40px;
 }
 #item_list > table tr:nth-child(1){
     background-color: #F2F2F2;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
 }
 #item_list > table th {
     padding: 10px;
@@ -131,6 +134,7 @@
     font-weight: bolder;
     border-radius: 2px;
     background-color: #bdd600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #item_list > table td button:hover {
     color: #fff;
@@ -161,11 +165,13 @@
 .footer table td:nth-child(11){
     background: url(../../img/right.png) center no-repeat;
     background-size: 21px;
+    background-color: #fff;
     cursor: pointer;
 }
 .footer table td:nth-child(12){
     background: url(../../img/double_right.png) center no-repeat;
     background-size: 21px;
+    background-color: #fff;
     cursor: pointer;
 }
 .footer table td:nth-child(1){

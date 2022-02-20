@@ -23,6 +23,7 @@
     font-size: 14px;
     table-layout: fixed;
     background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents > .contwrap > .event_wrap > .event_edit th {
     height: 43px;
@@ -41,8 +42,8 @@
     outline: none;
 }
 .contents > .contwrap > .event_wrap > .event_edit th.botbor {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     text-indent: 5px;
 }
 .contents > .contwrap > .event_wrap > .event_edit td {
@@ -58,6 +59,7 @@
 .calevndate{
     display: inline-block;
     width: 70%;
+    text-indent: 10px;
 }
 .filediv{
     display: inline-block;
@@ -113,7 +115,7 @@
 .contents > .contwrap > .event_wrap > .event_edit td.content_txt {
     word-spacing: 4px;
     letter-spacing: 1px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #ccc;
     padding: 5px;
 }
 .contents > .contwrap > .event_wrap > .event_edit td.content_txt img {
@@ -127,7 +129,7 @@
     resize: none;
     margin-top: 5px;
     padding: 5px;
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     height: 120px;
     outline: none;
 }
@@ -147,10 +149,13 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
+    margin-left: 5px;
 }
 .contents > .contwrap > .event_wrap > .event_edit .canc_btn {
     background-color: #fff;
     border: 3px solid #BDD600;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 
 /* 모달창  수정 취소*/

@@ -27,9 +27,11 @@
     text-align: center;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    background-color: #fff;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .qustion_table table tr:first-child{
     background-color: #F2F2F2;
@@ -70,9 +72,11 @@
     text-align: center;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    background-color: #fff;
     border-collapse: collapse;
     font-size: 14px;
     font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container > .contents .answer_table table tr:first-child{
     background-color: #F2F2F2;
@@ -117,12 +121,14 @@
     font-weight: 600;
     cursor: pointer;
     margin: 0 4px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 #container .list > input{
     width: 80px;
     height: 30px;
     border: 3px solid #BDD600;
     background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 /* 모달창 시작 */
 .btn_user_container{

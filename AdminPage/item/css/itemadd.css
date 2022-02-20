@@ -21,6 +21,7 @@
     border-radius: 3px;
     font-size: 16px;
     font-weight: 900;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
 }
 .contents_box #itemadd_contents table tr:nth-child(1) td:nth-child(odd){
     padding-left: 50px;
