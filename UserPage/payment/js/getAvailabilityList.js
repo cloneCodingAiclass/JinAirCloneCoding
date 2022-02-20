@@ -268,6 +268,98 @@ $(function () {
   });
 });
 
+function set_day(res) {
+  let ress = res;
+  console.log(ress);
+  let sub_res;
+  console.log(ress.length);
+  if (ress.length == 13) {
+    sub_res = res.substring(0, 10);
+  } else if (ress.length == 12) {
+    sub_res = res.substring(0, 9);
+  } else {
+    sub_res = res.substring(0, 8);
+  }
+  let select_day = sub_res.split("-");
+
+  let yyyy = Number(select_day[0]);
+  let mm = Number(select_day[1]);
+  let dd = Number(select_day[2]);
+  let week = new Array("일", "월", "화", "수", "목", "금", "토"); //숫자로 추출한sel_day 문자로 변경할 배열;
+  let datearr = new Array(1, 2, 3, 4, 5, 6, 7);
+
+  let date0 = new Date(yyyy, mm, dd - 3);
+  let date1 = new Date(yyyy, mm, dd - 2);
+  let date2 = new Date(yyyy, mm, dd - 1);
+  let date3 = new Date(yyyy, mm, dd);
+  let date4 = new Date(yyyy, mm, dd + 1);
+  let date5 = new Date(yyyy, mm, dd + 2);
+  let date6 = new Date(yyyy, mm, dd + 3);
+
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
+    week[date0.getDay()]
+  })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
+    week[date1.getDay()]
+  })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
+    week[date2.getDay()]
+  })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
+    week[date3.getDay()]
+  })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
+    week[date4.getDay()]
+  })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
+    week[date5.getDay()]
+  })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
+    week[date6.getDay()]
+  })`;
+
+  $(".date0").html(sel_date0);
+  $(".date1").html(sel_date1);
+  $(".date2").html(sel_date2);
+  $(".date3").html(sel_date3);
+  $(".date4").html(sel_date4);
+  $(".date5").html(sel_date5);
+  $(".date6").html(sel_date6);
+}
+
+$(() => {
+  $(".code").on("click", () => {
+    $("#modal_input_code_wrap").fadeIn();
+    $("body").css("overflow", "hidden");
+  });
+  $(".input_ok").on("click", () => {
+    $("#modal_input_code_wrap").fadeOut();
+    $("body").css("overflow", "");
+  });
+  $(".close").on("click", () => {
+    $("#modal_input_code_wrap").fadeOut();
+    $("body").css("overflow", "");
+  });
+
+  // $(".img").on('click', () => {
+  //     $(".img").css("display","none");
+  //     $(".img2").css("display","block");
+  //     $("#modal_totP_wrap").fadeIn();
+  //     $("#modal_totP_wrap").css("position", "fixed");
+  //     $("#modal_totP_wrap").css("bottom", "10px");
+  // })
+  // $(".img2").on('click', () => {
+  //     $(".img2").css("display","none");
+  //     $(".img").css("display","block");
+  //     $("#modal_totP_wrap").fadeOut();
+  // })
+  // $(".close").on('click', () => {
+  //     $(".img2").css("display","none");
+  //     $(".img").css("display","block");
+  //     $("#modal_totP_wrap").fadeOut();
+  // })
+});
+
 // 운임 규정
 $(() => {
   // 모달 열기
@@ -383,94 +475,461 @@ $(() => {
   });
 });
 
-function set_day(res) {
-  let ress = res;
-  console.log(ress);
-  let sub_res;
-  console.log(ress.length);
-  if (ress.length == 13) {
-    sub_res = res.substring(0, 10);
-  } else if (ress.length == 12) {
-    sub_res = res.substring(0, 9);
-  } else {
-    sub_res = res.substring(0, 8);
-  }
-  let select_day = sub_res.split("-");
-
-  let yyyy = Number(select_day[0]);
-  let mm = Number(select_day[1]);
-  let dd = Number(select_day[2]);
-  let week = new Array("일", "월", "화", "수", "목", "금", "토"); //숫자로 추출한sel_day 문자로 변경할 배열;
-  let datearr = new Array(1, 2, 3, 4, 5, 6, 7);
-
-  let date0 = new Date(yyyy, mm, dd - 3);
-  let date1 = new Date(yyyy, mm, dd - 2);
-  let date2 = new Date(yyyy, mm, dd - 1);
-  let date3 = new Date(yyyy, mm, dd);
-  let date4 = new Date(yyyy, mm, dd + 1);
-  let date5 = new Date(yyyy, mm, dd + 2);
-  let date6 = new Date(yyyy, mm, dd + 3);
-
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
-    week[date0.getDay()]
-  })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
-    week[date1.getDay()]
-  })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
-    week[date2.getDay()]
-  })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
-    week[date3.getDay()]
-  })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
-    week[date4.getDay()]
-  })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
-    week[date5.getDay()]
-  })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
-    week[date6.getDay()]
-  })`;
-
-  $(".date0").html(sel_date0);
-  $(".date1").html(sel_date1);
-  $(".date2").html(sel_date2);
-  $(".date3").html(sel_date3);
-  $(".date4").html(sel_date4);
-  $(".date5").html(sel_date5);
-  $(".date6").html(sel_date6);
-}
-
+// 수정 모달 창 ***********************
 $(() => {
-  $(".code").on("click", () => {
-    $("#modal_input_code_wrap").fadeIn();
+  $(".trip_edit_butt").on("click", function () {
+    $("#modal_edit_jour_wrap").css("display", "block");
     $("body").css("overflow", "hidden");
   });
-  $(".input_ok").on("click", () => {
-    $("#modal_input_code_wrap").fadeOut();
+  $(".modal_edit_close_btn").on("click", function () {
+    $("#modal_edit_jour_wrap").css("display", "none");
     $("body").css("overflow", "");
   });
-  $(".close").on("click", () => {
-    $("#modal_input_code_wrap").fadeOut();
-    $("body").css("overflow", "");
+});
+
+//person-layer
+$(() => {
+  $(".person_layerbtn").on("click", function (e) {
+    e.stopPropagation();
+    $(".person_layerbtn").addClass("close");
+    $(".person_layerbtn").css({ color: "rgb(145, 0, 70)" });
+    $(".person_down_img").css({ display: "none" });
+    $(".person_up_img").css({ display: "inline-block" });
+    $(".person_pop_layer").slideDown("fast");
+
+    // 예약 관련 레이어 닫기
+    e.stopPropagation();
+    $(".go_layerbtn").removeClass("close");
+    $(".go_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".go_down_img").css({ display: "inline-block" });
+    $(".go_up_img").css({ display: "none" });
+    $(".go_layer").slideUp(50);
+
+    e.stopPropagation();
+    $(".go_layerbtn2").removeClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".go_down_img2").css({ display: "inline-block" });
+    $(".go_up_img2").css({ display: "none" });
+    $(".go_layer2").slideUp(50);
+
+    e.stopPropagation();
+    $(".arrive_layerbtn").removeClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_down_img").css({ display: "inline-block" });
+    $(".arrive_up_img").css({ display: "none" });
+    $(".arrive_layer").slideUp(50);
+
+    e.stopPropagation();
+    $(".arrive_layerbtn2").removeClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_down_img2").css({ display: "inline-block" });
+    $(".arrive_up_img2").css({ display: "none" });
+    $(".arrive_layer2").slideUp(50);
   });
 
-  // $(".img").on('click', () => {
-  //     $(".img").css("display","none");
-  //     $(".img2").css("display","block");
-  //     $("#modal_totP_wrap").fadeIn();
-  //     $("#modal_totP_wrap").css("position", "fixed");
-  //     $("#modal_totP_wrap").css("bottom", "10px");
+  // // 완료버튼
+  // $(".submit_btn > button").on('click', function (e) {
+  //     e.stopPropagation();
+  //     $(".person_layerbtn").removeClass('close');
+  //     $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+  //     $(".person_down_img").css({ "display": "inline-block" });
+  //     $(".person_up_img").css({ "display": "none" });
+  //     $('.person_pop_layer').slideUp(50);
+
+  //     // 예약 관련 레이어 닫기
+  //     e.stopPropagation();
+  //     $(".go_layerbtn").removeClass('close');
+  //     $(".go_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+  //     $(".go_down_img").css({ "display": "inline-block" });
+  //     $(".go_up_img").css({ "display": "none" });
+  //     $('.go_layer').slideUp(50);
+
+  //     e.stopPropagation();
+  //     $(".go_layerbtn2").removeClass('close');
+  //     $(".go_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+  //     $(".go_down_img2").css({ "display": "inline-block" });
+  //     $(".go_up_img2").css({ "display": "none" });
+  //     $('.go_layer2').slideUp(50);
+
+  //     e.stopPropagation();
+  //     $(".arrive_layerbtn").removeClass('close');
+  //     $(".arrive_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+  //     $(".arrive_down_img").css({ "display": "inline-block" });
+  //     $(".arrive_up_img").css({ "display": "none" });
+  //     $('.arrive_layer').slideUp(50);
+
+  //     e.stopPropagation();
+  //     $(".arrive_layerbtn2").removeClass('close');
+  //     $(".arrive_layerbtn2").css({ "color": "rgb(0, 0, 0)" });
+  //     $(".arrive_down_img2").css({ "display": "inline-block" });
+  //     $(".arrive_up_img2").css({ "display": "none" });
+  //     $('.arrive_layer2').slideUp(50);
   // })
-  // $(".img2").on('click', () => {
-  //     $(".img2").css("display","none");
-  //     $(".img").css("display","block");
-  //     $("#modal_totP_wrap").fadeOut();
-  // })
-  // $(".close").on('click', () => {
-  //     $(".img2").css("display","none");
-  //     $(".img").css("display","block");
-  //     $("#modal_totP_wrap").fadeOut();
-  // })
+});
+// go-layer
+$(() => {
+  // 옵션1
+  $(".go_layerbtn").on("click", function (e) {
+    e.stopPropagation();
+    $(".go_layerbtn").addClass("close");
+    $(".go_layerbtn").css({ color: "rgb(145, 0, 70)" });
+    $(".go_select_opt").addClass("on");
+    $(".go_layer").slideDown("fast");
+
+    // 사람 수 선택 닫기
+    e.stopPropagation();
+    $(".person_layerbtn").removeClass("close");
+    $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".person_down_img").css({ display: "inline-block" });
+    $(".person_up_img").css({ display: "none" });
+    $(".person_pop_layer").slideUp(50);
+
+    // 도착지1 레이어 닫기
+    e.stopPropagation();
+    $(".arrive_layerbtn").removeClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_down_img").css({ display: "inline-block" });
+    $(".arrive_select_opt").removeClass("on");
+    $(".arrive_layer").slideUp(50);
+
+    // 다구간 옵션2 닫기
+    e.stopPropagation();
+    $(".go_layerbtn2").removeClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt2").removeClass("on");
+    $(".go_layer2").slideUp(50);
+    e.stopPropagation();
+    $(".arrive_layerbtn2").removeClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt2").removeClass("on");
+    $(".arrive_layer2").slideUp(50);
+  });
+
+  // 옵션 2
+  $(".go_layerbtn2").on("click", function (e) {
+    e.stopPropagation();
+    $(".go_layerbtn2").addClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(145, 0, 70)" });
+    $(".go_select_opt2").addClass("on");
+    $(".go_layer2").slideDown("fast");
+
+    // 사람 수 선택 닫기
+    e.stopPropagation();
+    $(".person_layerbtn").removeClass("close");
+    $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".person_down_img").css({ display: "inline-block" });
+    $(".person_up_img").css({ display: "none" });
+    $(".person_pop_layer").slideUp(50);
+
+    // 도착지2 레이어 닫기
+    e.stopPropagation();
+    $(".arrive_layerbtn2").removeClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt2").removeClass("on");
+    $(".arrive_layer2").slideUp(50);
+
+    // 옵션1 닫기
+    e.stopPropagation();
+    $(".go_layerbtn").removeClass("close");
+    $(".go_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt").removeClass("on");
+    $(".go_layer").slideUp(50);
+    e.stopPropagation();
+    $(".arrive_layerbtn").removeClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt").removeClass("on");
+    $(".arrive_layer").slideUp(50);
+  });
+});
+
+// arrive-layer
+$(() => {
+  // 옵션 1
+  $(".arrive_layerbtn").on("click", function (e) {
+    e.stopPropagation();
+    $(".arrive_layerbtn").addClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(145, 0, 70)" });
+    $(".arrive_select_opt").addClass("on");
+    $(".arrive_layer").slideDown("fast");
+
+    // 사람 수 선택 닫기
+    e.stopPropagation();
+    $(".person_layerbtn").removeClass("close");
+    $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".person_down_img").css({ display: "inline-block" });
+    $(".person_up_img").css({ display: "none" });
+    $(".person_pop_layer").slideUp(50);
+
+    // 출발지1 레이어 닫기
+    e.stopPropagation();
+    $(".go_layerbtn").removeClass("close");
+    $(".go_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt").removeClass("on");
+    $(".go_layer").slideUp(50);
+
+    // 다구간 옵션2 닫기
+    e.stopPropagation();
+    $(".go_layerbtn2").removeClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt2").removeClass("on");
+    $(".go_layer2").slideUp(50);
+    e.stopPropagation();
+    $(".arrive_layerbtn2").removeClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt2").removeClass("on");
+    $(".arrive_layer2").slideUp(50);
+  });
+
+  // 옵션 2
+  $(".arrive_layerbtn2").on("click", function (e) {
+    e.stopPropagation();
+    $(".arrive_layerbtn2").addClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(145, 0, 70)" });
+    $(".arrive_select_opt2").addClass("on");
+    $(".arrive_layer2").slideDown("fast");
+
+    // 사람 수 선택 닫기
+    e.stopPropagation();
+    $(".person_layerbtn").removeClass("close");
+    $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".person_down_img").css({ display: "inline-block" });
+    $(".person_up_img").css({ display: "none" });
+    $(".person_pop_layer").slideUp(50);
+
+    // 출발지2 레이어 닫기
+    e.stopPropagation();
+    $(".go_layerbtn2").removeClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt2").removeClass("on");
+    $(".go_layer2").slideUp(50);
+
+    // 다구간 옵션1 닫기
+    e.stopPropagation();
+    $(".go_layerbtn").removeClass("close");
+    $(".go_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt").removeClass("on");
+    $(".go_layer").slideUp(50);
+    e.stopPropagation();
+    $(".arrive_layerbtn").removeClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt").removeClass("on");
+    $(".arrive_layer").slideUp(50);
+  });
+});
+
+// 화면 클릭
+$(() => {
+  $("body").on("click", function (e) {
+    $(".go_layerbtn").removeClass("close");
+    $(".go_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt").removeClass("on");
+    $(".go_layer").slideUp(50);
+
+    $(".go_layerbtn2").removeClass("close");
+    $(".go_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".go_select_opt2").removeClass("on");
+    $(".go_layer2").slideUp(50);
+
+    $(".arrive_layerbtn").removeClass("close");
+    $(".arrive_layerbtn").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt").removeClass("on");
+    $(".arrive_layer").slideUp(50);
+
+    $(".arrive_layerbtn2").removeClass("close");
+    $(".arrive_layerbtn2").css({ color: "rgb(0, 0, 0)" });
+    $(".arrive_select_opt2").removeClass("on");
+    $(".arrive_layer2").slideUp(50);
+  });
+});
+
+$(function () {
+  $(".infant_modal").hide();
+  $(".baby_info_btn").click(function () {
+    $(".child_modal").hide();
+    $(".infant_modal").fadeIn(200);
+    $(".infant_modal").click(function () {
+      $(".infant_modal").fadeOut(200);
+    });
+  });
+
+  $(".child_modal").hide();
+  $(".infant_modal").hide();
+  $(".child_info_btn").click(function () {
+    $(".child_modal").fadeIn(200);
+    $(".child_modal").click(function () {
+      $(".child_modal").fadeOut(200);
+    });
+  });
+});
+
+function comewhatday() {
+  $(".whatday").html("오는날");
+}
+function gowhatday() {
+  $(".whatday").html("가는날");
+}
+
+// 왕복에 넣어주기
+function gowhatdaydd(str) {
+  let str1 = str.substr(0, 4);
+  let str2 = str.substr(4, 2);
+  let str3 = str.substr(6, 2);
+  $(".go_date_select_optt").val(`${str1}-${str2}-${str3}`);
+}
+function comewhatdaydd(str) {
+  let str1 = str.substr(0, 4);
+  let str2 = str.substr(4, 2);
+  let str3 = str.substr(6, 2);
+  $(".come_date_select_optt").val(`${str1}-${str2}-${str3}`);
+}
+
+// 편도에 넣어주기
+function gowhatdayddd(str) {
+  let str1 = str.substr(0, 4);
+  let str2 = str.substr(4, 2);
+  let str3 = str.substr(6, 2);
+  $(".go_date_select_optt").val(`${str1}-${str2}-${str3}`);
+}
+
+// 다구간에 넣어주기
+function gowhatdaydddd(str) {
+  let str1 = str.substr(0, 4);
+  let str2 = str.substr(4, 2);
+  let str3 = str.substr(6, 2);
+  $(".go_date_select_optt2").val(`${str1}-${str2}-${str3}`);
+}
+
+function minday() {
+  $(".modal_container").fadeIn(200);
+  $(".moditext").html("출발일보다 이전 날짜를 선택할 수 없습니다.");
+}
+function departure() {
+  $(".modal_container").fadeIn(200);
+  $(".moditext").html("출발지 항목을 입력하세요.");
+}
+function arrive() {
+  $(".modal_container").fadeIn(200);
+  $(".moditext").html("도착지 항목을 입력하세요.");
+}
+
+function twochoice() {
+  $(".cal").css({ display: "none" });
+  $(".cal2").css({ display: "none" });
+  $(".cal3").css({ display: "none" });
+}
+
+let bbb = "n";
+let ccc = "n";
+$(() => {
+  // 왕복, 편도 출발지 지정
+  $(".go_layer")
+    .find("li")
+    .find("a")
+    .on("click", function (e) {
+      e.stopPropagation();
+      let str = "";
+      str = $(this).html();
+      $(".go_select_optt").val(str);
+      $(".go_layer").slideUp(50);
+      $(".arrive_layer").slideDown(100);
+      $(".go_select_opt").removeClass("on");
+      $(".arrive_select_opt").addClass("on");
+      bbb = "y";
+    });
+  // 왕복, 편도 도착지 지정
+  $(".arrive_layer")
+    .find("li")
+    .find("a")
+    .on("click", function () {
+      let str = "";
+      str = $(this).html();
+      $(".arrive_select_optt").val(str);
+      ccc = "y";
+    });
+  // 왕복 달력 모달
+  $(".go_date").on("click", function () {
+    if (bbb == "n" && ccc == "n") {
+      departure();
+      $(".cal").css({ display: "none" });
+    } else if (bbb == "y" && ccc == "n") {
+      arrive();
+    } else {
+      $(".cal").css({ display: "flex" });
+      $(".whatday").html("가는날");
+    }
+  });
+  $(".come_date").on("click", function () {
+    if (bbb == "n" && ccc == "n") {
+      departure();
+      $(".cal").css({ display: "none" });
+    } else if (bbb == "y" && ccc == "n") {
+      arrive();
+    } else {
+      $(".cal").css({ display: "flex" });
+      $(".whatday").html("오는날");
+    }
+  });
+
+  // 편도 달력 모달
+  $(".go_date2").on("click", function () {
+    if (bbb == "n" && ccc == "n") {
+      departure();
+      $(".cal2").css({ display: "none" });
+    } else if (bbb == "y" && ccc == "n") {
+      arrive();
+    } else {
+      $(".cal2").css({ display: "flex" });
+      $(".whatday").html("가는날");
+    }
+  });
+
+  // 다구간 출발지 지정
+  $(".go_layer2")
+    .find("li")
+    .find("a")
+    .on("click", function (e) {
+      e.stopPropagation();
+      let str = "";
+      str = $(this).html();
+      $(".go_select_optt2").val(str);
+      $(".go_layer2").slideUp(50);
+      $(".arrive_layer2").slideDown(100);
+      $(".go_select_opt2").removeClass("on");
+      $(".arrive_select_opt2").addClass("on");
+      bbb = "y";
+    });
+  // 다구간 도착지 지정
+  $(".arrive_layer2")
+    .find("li")
+    .find("a")
+    .on("click", function () {
+      let str = "";
+      str = $(this).html();
+      $(".arrive_select_optt2").val(str);
+      ccc = "y";
+    });
+  // 다구간1 달력 모달
+  $(".go_date3").on("click", function () {
+    if (bbb == "n" && ccc == "n") {
+      departure();
+      $(".cal3").css({ display: "none" });
+    } else if (bbb == "y" && ccc == "n") {
+      arrive();
+    } else {
+      $(".cal3").css({ display: "flex" });
+      $(".whatday").html("가는날");
+    }
+  });
+
+  // 달력 X 버튼
+  $(".x_box").on("click", function () {
+    $(".cal").css({ display: "none" });
+    $(".cal2").css({ display: "none" });
+    $(".cal3").css({ display: "none" });
+  });
+
+  // 모달모음 확인 버튼
+  $(".btn_cancel").on("click", function () {
+    $(".modal_container").fadeOut(200);
+  });
 });
