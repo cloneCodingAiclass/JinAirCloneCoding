@@ -169,7 +169,12 @@ $(function () {
         if(confirmcheck){
             location.href="/UserPage/payment/completePayment.html"
     }else{
-        alert('didjidji');
+        $('.false_modal').css('display', 'flex');
+        $('.false_modal').fadeIn(200);
+        $('.confirm_btn').click(function(){
+            $('.false_modal').fadeOut(200);
+            $('.false_modal').css('display', '');
+        })
     }
 });
     $('.cancl_btn').click(function(){

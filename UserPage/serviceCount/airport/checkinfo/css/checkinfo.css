@@ -1096,6 +1096,7 @@ table {
     height: 612px;
     box-sizing:border-box; 
     line-height:23px; cursor:pointer;
+    left: 200px;
 }
 #popCont2 p{
     height: 20px;
@@ -1109,6 +1110,16 @@ table {
     color: #fff;
     word-break: keep-all;
     background: #661e43;
+}
+#popCont .close{
+    position: absolute;
+    top: 105px;
+    right: 540px;
+    width: 26px;
+    height: 26px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-image: url(../img/btn_close3.png);
 }
 #popCont2 p.img {
     overflow-y: scroll;
@@ -1125,6 +1136,16 @@ table {
     justify-content: center;
     z-index: 100;
     padding: 5% 25%;
+}
+#popCont2 .close{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-image: url(../img/btn_close3.png);
 }
 
 

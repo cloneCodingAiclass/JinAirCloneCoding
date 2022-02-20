@@ -45,6 +45,7 @@
     font-weight: 600;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    background-color: #fff;
 }
 .rs_list > table th {
     height: 50px;
