@@ -1655,3 +1655,592 @@ td {
   margin-top: 16px;
 }
 /*뉴스레터 끝*/
+
+/* ******************
+    수정 모달 레이어 모음
+* *******************/
+.in_bl {
+  display: inline-block;
+}
+.modal_edit_close {
+  text-align: right;
+}
+.modal_edit_close img {
+  margin-top: 25px;
+  margin-right: 50px;
+  width: 25px;
+}
+.round_wrap,
+.oneway_wrap,
+.multi_wrap {
+  text-align: center;
+}
+.round_wrap table {
+  margin: 0 auto;
+}
+.round_wrap table td {
+  border: 1px solid black;
+  width: 320px;
+}
+/* 사람 수 */
+.person_layerbtn {
+  text-align: left;
+  cursor: pointer;
+  width: 200px;
+}
+.person_layerbtn .person_num {
+  font-size: 1.2rem;
+}
+.person_layerbtn span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.person_layerbtn .person_down_img {
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.person_layerbtn .person_up_img {
+  display: none;
+  height: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.person_pop_layer {
+  width: 300px;
+  padding-top: 20px;
+  display: none;
+  position: absolute;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.person_pop_layer li {
+  width: 100%;
+  border-bottom: 0.1px solid rgb(153, 153, 153, 0.2);
+}
+
+.person_pop_layer li .child_modal span,
+.infant_modal span {
+  line-height: 2 !important;
+  margin-left: 0 !important;
+}
+.person_pop_layer li span {
+  width: 100%;
+  line-height: 3;
+  vertical-align: middle;
+}
+.person_pop_layer li .num_font {
+  margin-left: 20px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #7e0049;
+}
+.person_pop_layer li .person_font {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  color: #7e0049;
+  font-weight: 600;
+}
+.person_pop_layer li .child_info_btn,
+.person_pop_layer li .baby_info_btn {
+  border: none;
+  margin-top: 8px;
+  margin-left: 5px;
+  background-color: transparent;
+  vertical-align: middle;
+  text-align: center;
+}
+.person_pop_layer li .person_btn {
+  vertical-align: middle;
+  margin-left: -4px;
+  width: 90px;
+}
+.person_pop_layer li .person_btn a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: transparent;
+  font-size: 35px;
+  cursor: pointer;
+  vertical-align: top;
+  object-fit: cover;
+}
+.person_pop_layer li .person_btn .adult_minus:hover,
+.person_pop_layer li .person_btn .adult_plus:hover,
+.person_pop_layer li .person_btn .child_minus:hover,
+.person_pop_layer li .person_btn .child_plus:hover,
+.person_pop_layer li .person_btn .baby_minus:hover,
+.person_pop_layer li .person_btn .baby_plus:hover {
+  color: #7e0049;
+  border: 3px solid #7e0049;
+}
+.person_pop_layer li .submit_btn {
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 15px 0;
+}
+.person_pop_layer li .submit_btn a {
+  width: 90%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #bdd600;
+  cursor: pointer;
+  height: 100%;
+  padding: 10px;
+}
+.person_pop_layer li .cnt_age {
+  padding: 24px 20px;
+  width: 100%;
+  height: 70px;
+  background-color: #f2f2f2;
+  text-align: center;
+  vertical-align: middle;
+}
+.person_pop_layer li .cnt_age a {
+  color: #7e0049;
+  font-size: 15px;
+  font-weight: 300;
+  border-bottom: 1px solid #7e0049;
+}
+.person_pop_layer li .cnt_age a img {
+  width: 15px;
+  vertical-align: middle;
+}
+
+/* 출발지, 도착지, 가는날, 오는날 */
+.go_layerbtn,
+.arrive_layerbtn,
+.go_date_layerbtn,
+.come_date_layerbtn,
+.go_layerbtn2,
+.arrive_layerbtn2,
+.go_date_layerbtn2,
+.come_date_layerbtn2 {
+  margin-right: 2px;
+  margin-left: 2px;
+  width: 220px;
+  height: 60px;
+  background-color: #fff;
+  border: 2px solid #e9e9e9;
+  box-shadow: 2px 2px 3px rgb(150 150 150 / 30%);
+  vertical-align: middle;
+}
+
+.go_layerbtn,
+.go_layerbtn2 {
+  display: flex;
+  position: absolute;
+  top: 230px;
+  left: 608px;
+  text-align: center;
+  cursor: pointer;
+  justify-content: space-around;
+}
+.go_layerbtn span,
+.go_layerbtn2 span {
+  font-weight: bold;
+  line-height: 3;
+}
+.go_select_optt,
+.arrive_select_optt,
+.go_date_select_optt,
+.come_date_select_optt,
+.go_select_optt2,
+.arrive_select_optt2,
+.go_date_select_optt2 {
+  width: 220px;
+  font-size: 17px;
+  text-align: left;
+  text-indent: 20px;
+  font-weight: bold;
+  line-height: 3;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  padding-right: 25px;
+  cursor: pointer;
+}
+.go_layerbtn .go_select_opt,
+.arrive_layerbtn .arrive_select_opt,
+.go_date_layerbtn .go_date_select_opt,
+.come_date_layerbtn .come_date_select_opt {
+  font-size: 18px;
+  text-align: center;
+}
+.go_layer,
+.go_layer2 {
+  width: 880px;
+  padding: 40px 20px;
+  display: none;
+  position: absolute;
+  top: 292px;
+  left: 272px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
+}
+.go_layer2 {
+  position: absolute;
+  top: 225px;
+}
+.go_layer div,
+.go_layer2 div {
+  width: 160px;
+  height: 100%;
+  vertical-align: top;
+  margin: 0 auto;
+  margin-left: 3px;
+}
+.go_layer div h3,
+.go_layer2 div h3 {
+  color: #7e0049;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.go_layer div li a,
+.go_layer2 div li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2;
+  cursor: pointer;
+}
+.go_layer div li a:hover,
+.go_layer2 div li a:hover {
+  color: #7e0049;
+}
+.go_layer div li a.nonselect,
+.go_layer2 div li a.nonselect {
+  color: #999;
+  cursor: default;
+}
+/* 도착지 */
+.arrive_layerbtn,
+.arrive_layerbtn2 {
+  display: flex;
+  position: absolute;
+  top: 230px;
+  left: 930px;
+  text-align: center;
+  cursor: pointer;
+  justify-content: space-around;
+  vertical-align: middle;
+}
+.arrive_layerbtn span,
+.arrive_layerbtn2 span {
+  font-weight: bold;
+  line-height: 2;
+  line-height: 3;
+}
+.arrive_layer,
+.arrive_layer2 {
+  width: 880px;
+  padding: 40px 20px;
+  position: absolute;
+  display: none;
+  top: 292px;
+  left: 272px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
+}
+.arrive_layer2 {
+  top: 225px;
+}
+.arrive_layer div,
+.arrive_layer2 div {
+  width: 160px;
+  height: 100%;
+  vertical-align: top;
+  margin: 0 auto;
+  margin-left: 3px;
+}
+.arrive_layer div h3,
+.arrive_layer2 div h3 {
+  color: #7e0049;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.arrive_layer div li a,
+.arrive_layer2 div li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2;
+  cursor: pointer;
+}
+.arrive_layer div li a:hover,
+.arrive_layer2 div li a:hover {
+  color: #7e0049;
+}
+.arrive_layer div li a.nonselect,
+.arrive_layer2 div li a.nonselect {
+  color: #999;
+  cursor: default;
+}
+
+/* 가는 날 */
+.go_date_layerbtn,
+.go_date_layerbtn2 {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  left: 608px;
+  top: 310px;
+  vertical-align: middle;
+  justify-content: space-around;
+}
+.go_date_layerbtn span,
+.go_date_layerbtn2 span {
+  font-weight: bold;
+  line-height: 2;
+  line-height: 3;
+}
+
+/* 오는날 */
+.come_date_layerbtn {
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  left: 930px;
+  top: 310px;
+  vertical-align: middle;
+  justify-content: space-around;
+}
+.come_date_layerbtn span {
+  font-weight: bold;
+  line-height: 2;
+  line-height: 3;
+}
+
+/* reserve_oneway */
+.reserve_oneway {
+  display: none;
+  height: 100px;
+  vertical-align: middle;
+  padding: 35px 25px;
+}
+
+/* reserve_multi */
+.reserve_multi {
+  display: none;
+  height: 100px;
+  vertical-align: middle;
+  padding: 35px 25px;
+}
+.reserve_multi .multi2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.go_select_opt,
+.arrive_select_opt,
+.go_date_select_opt,
+.come_date_select_opt,
+.go_select_opt2,
+.arrive_select_opt2,
+.go_date_select_opt2 {
+  width: 100%;
+  text-align: center;
+  padding-right: 30px;
+  background: url(../img/down2.png) no-repeat;
+  background-size: 10%;
+  background-position: 95% 45%;
+}
+.go_select_opt.on,
+.arrive_select_opt.on,
+.go_date_select_opt.on,
+.come_date_select_opt.on,
+.go_select_opt2.on,
+.arrive_select_opt2.on,
+.go_date_select_opt2.on {
+  width: 100%;
+  text-align: center;
+  background: url(../index_img/up.png) no-repeat;
+  background-size: 10%;
+  background-position: 95% 45%;
+}
+
+/* 예약 다음 버튼 */
+.reservate {
+  margin-top: 0.5px;
+  margin-left: -20px;
+  font-weight: bold;
+  vertical-align: middle;
+  width: 120px;
+  height: 60px;
+  border: none;
+  background-color: #bdd600;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* 달력 모달 */
+.cal {
+  z-index: 9998;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  justify-content: center;
+  display: none;
+  padding: 20px 0 0 0;
+}
+.cal2 {
+  z-index: 9998;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  display: none;
+  padding: 20px 0 0 0;
+}
+.cal3 {
+  z-index: 9998;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  display: none;
+  padding: 20px 0 0 0;
+}
+.x_box {
+  display: inline-block;
+  z-index: 9999;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-color: #661e43;
+}
+.x_box img {
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+}
+.calwrapper {
+  display: inline-block;
+  width: 1180px;
+  height: 97%;
+  background-color: #fff;
+  border: none;
+  text-align: center;
+}
+.caltop {
+  width: 1180px;
+  height: 70px;
+  display: block;
+}
+.caltop p {
+  display: inline-block;
+  font-size: 46px;
+  font-weight: 600 !important;
+  margin-top: 30px;
+}
+.caltop p.whatday {
+  position: relative;
+  left: 63px;
+}
+.caltop p.cal_right {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 30px 0;
+  position: relative;
+  bottom: 20px;
+  left: 450px;
+  background: url(../img/down.png) no-repeat;
+  background-size: 15%;
+  background-position: 95% 10%;
+}
+.calwrapper > table {
+  padding-top: 40px;
+  text-align: center;
+  width: 1179px;
+  height: 60px;
+  box-shadow: 0px 2px 3px rgb(185, 185, 185);
+  font-size: 16px;
+  font-weight: 600;
+}
+.calwrapper > table tr td:nth-child(1) {
+  color: rgb(218, 0, 0);
+}
+.calinner {
+  width: 100%;
+  height: 81%;
+  border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+  overflow: hidden;
+}
+.calscroll {
+  height: 100%;
+  overflow: hidden;
+}
+.calscroll > iframe {
+  width: 100%;
+  height: 100%;
+}
+/* 모달 */
+.modal_container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal_container > .modals p {
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 900;
+}
+.modal_container > .modals {
+  width: 290px;
+  height: 180px;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+  border-radius: 1px;
+  border: 1px solid #bdd600;
+  display: flex;
+  margin: 300px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal_container > .modals form {
+  display: flex;
+  justify-content: center;
+}
+.modal_container > .modals input {
+  font-size: 14px;
+  font-weight: 900;
+  width: 80px;
+  height: 40px;
+  background-color: #bdd600;
+  border: none;
+  margin: 40px 10px 0;
+  cursor: pointer;
+}
