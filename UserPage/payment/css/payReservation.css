@@ -87,7 +87,7 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   z-index: 100;
@@ -504,7 +504,7 @@ input {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
-  margin-top: 255px;
+  margin-top: 150px;
   border-top: 1px solid rgba(168, 165, 165, 0.3);
   padding: 20px 0;
 }

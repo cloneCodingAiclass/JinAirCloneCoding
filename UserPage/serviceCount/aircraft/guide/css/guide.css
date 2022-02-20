@@ -363,7 +363,7 @@ body{
     text-align: center;
 }
 
-#container > .contentswrap .discount_kind th.dis_guide {
+#container > .contentswrap .discount_kind th.dis_mobile {
     color: #fff;
     background-color: rgb(102, 30, 67);
 }
