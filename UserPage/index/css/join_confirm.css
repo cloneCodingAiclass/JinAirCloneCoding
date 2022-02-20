@@ -288,7 +288,7 @@ body{
 /* 서브 네비 끝 */
 /* contents */
 #container{
-    height: 2200px;
+    height: auto;
 }
 
 /*푸터*/
