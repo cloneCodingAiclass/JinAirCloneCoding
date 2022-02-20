@@ -267,7 +267,7 @@ $(function () {
     set_day(res);
   });
   
-  $(window).scroll(  function() {
+  $(window).scroll(function() {
     let y = $(".contentswrap").offset().top;
     let h = $(document).scrollTop();
 
