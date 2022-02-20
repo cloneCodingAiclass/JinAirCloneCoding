@@ -191,8 +191,8 @@
                                 <p class="cursor arrow_img arrow_up_img"></p>
                             </div>
                             <div class="trip_area fs20">
-                                <p class="dep_area">서울/김포(GMP)<span>[출발]</span></p>
-                                <p class="arr_area">제주(CJU)<span>[도착]</span></p>
+                                <p class="dep_area" id="go_area1">서울/김포(GMP)<span>[출발]</span></p>
+                                <p class="arr_area" id="arr_area1">제주(CJU)<span>[도착]</span></p>
                             </div>
                         </div>
                         <!--여정1 끝-->
@@ -210,7 +210,7 @@
                         <!--탑승객 수-->
                         <div class="nop">
                             <p>탑승객수</p>
-                            <p class="fs20">성인 1</p>
+                            <p class="fs20" id="person_cnt">성인 1</p>
                         </div>
                         <!--탑승객 수 끝-->
                         <!--수정버튼-->
@@ -272,7 +272,7 @@
                                         <div class="area1_wrap area_wrap">
                                             <div class="depart">
                                                 <p class="area">서울/김포(GMP)</p>
-                                                <p class="time">[출발] 2022-02-24(목) 09:40</p>
+                                                <p class="time" id="godate">[출발] 2022-02-24(목) 09:40</p>
                                             </div>
                                             <p class="arrow"><img src="./img/right_arrow.PNG" alt=""></p>
                                             <div class="arr">
@@ -1476,7 +1476,7 @@
             </div>
             <!-- 왕복 레이어 -->
             <div class="round_wrap">
-                <table>
+                <table class="modal_table">
                     <tr>
                         <td>
                             <div class="person_type w_120 in_bl">
@@ -1742,7 +1742,7 @@
             </div>
             <!-- 편도 레이어 -->
             <div class="oneway_wrap">
-                <table>
+                <table class="modal_table">
                     <tr>
                         <td>
                             <div class="person_type w_120 in_bl">
@@ -2002,7 +2002,7 @@
             </div>
             <!-- 다구간 레이어 -->
             <div class="multi_wrap">
-                <table>
+                <table class="modal_table">
                     <tr>
                         <td>
                             <div class="person_type w_120 in_bl">
