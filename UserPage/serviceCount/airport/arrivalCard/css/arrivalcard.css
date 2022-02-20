@@ -1101,7 +1101,7 @@ margin-bottom: 10px;
 
 .alertLayer  {
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 40%;
     z-index: 102;
     opacity: 0;
