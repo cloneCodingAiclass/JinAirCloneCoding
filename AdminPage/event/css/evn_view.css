@@ -23,6 +23,7 @@
     line-height: 1.2;
     font-size: 14px;
     table-layout: fixed;
+    background-color: #fff;
 }
 .contents > .contwrap > .event_wrap > .event_view th {
     height: 43px;

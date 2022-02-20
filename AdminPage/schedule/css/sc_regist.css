@@ -39,6 +39,7 @@
     border-collapse: collapse;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    background-color: #fff;
 }
 #container > .contents >.contwrap > .contents_main tr:nth-child(2n+1){
     background-color: #F2F2F2;
