@@ -217,6 +217,7 @@ $(function () {
         $('#arvCont1').css({"display":"none"});
         $('.arv8').css({"background-color":"white", "color": "#444"});
         $('#arvCont8').css({"display":"none"});
+        $('.landingCard_guide').css({"display":"block"});
     })
     $('.arv8').on('click', function () {
         $('#arvCont8').css({"display":"block"});
@@ -235,6 +236,7 @@ $(function () {
         $('#arvCont7').css({"display":"none"});
         $('.arv1').css({"background-color":"white", "color": "#444"});
         $('#arvCont1').css({"display":"none"});
+        $('.landingCard_guide').css({"display":"none"});
     })
     
     
@@ -246,12 +248,20 @@ $(function () {
 });
  /* 체크인 후 절차 */
 $(function() {
-    $('.sizeL').on('click', function(){
-        $('#popWrap').css({"display":"block"});
+    $('.sizeL').on('click', function(e){
+        e.stopPropagation()
+        $('.popup').css({"display":"block"});
         $('body').css('overflow', 'hidden');
     });
-    $("#popWrap").click(function(){
-        $('#popWrap').css({"display":"none"});
+    $(".close").click(function(){
+        $('.popup').css({"display":"none"});
         $('body').css('overflow', '');
+    });
+    $('#btn3').on('click', function(){
+        $('.modal').css({"display":"block"});
+    });
+    $('.btnTypeB').on('click', function(){
+        e.stopPropagation()
+        $('.modal').css({"display":"none"});
     });
 });
