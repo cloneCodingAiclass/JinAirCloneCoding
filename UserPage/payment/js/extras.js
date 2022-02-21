@@ -1238,6 +1238,7 @@ $(()=> {
     $("#addmodal_autoCheck_noti .add_modal_butt_ok, #addmodal_autoCheck_noti .add_modal_butt_canc, #addmodal_autoCheck_noti .tit_close").on("click", () => {
         $("#addmodal_autoCheck_noti").fadeOut();
         $("#modal_service_app_wrap").fadeIn();
+        $("auto_check").prop(":checked", false);
     })
 
     $("#modal_service_app_wrap .modal_butt_ok").on("click", () => {
