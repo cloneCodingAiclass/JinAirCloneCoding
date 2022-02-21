@@ -900,3 +900,37 @@ body{
     margin-right: 10px;
     cursor: pointer;
 }
+/* 포인트 */
+
+.mypoint{
+    display: flex;
+    flex-direction: column;
+}
+.mypoint_sum{
+    margin-top: 10px;
+    min-width: 48px;
+    height: 18px;
+    background-color: #661E43;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coupon{
+    display: flex;
+    flex-direction: column;
+}
+.mycoupon_sum{
+    margin-top: 10px;
+    min-width: 48px;
+    height: 18px;
+    background-color: #661E43;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
