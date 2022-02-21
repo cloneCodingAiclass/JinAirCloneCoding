@@ -201,7 +201,6 @@ $(function () {
 
     /*좌석안내 모달창 */
     $(".seat_info_wrap .info").click(function() {
-        $(".modal_seat_info_wrap").css('display', 'absolute');
         $(".modal_seat_info_wrap").fadeIn(200);
 
         $(".modal_seat_info_wrap .close").click(function() {
@@ -388,10 +387,11 @@ $(function () {
     /*스크롤시 따라다니는 영역 끝*/
     /*수하물 선택 구간 */
 
-    $(".bot_bagg_price1 .cur").css("display", "none");
-    $(".bot_bagg_price1 .price").text(" ");
-    $(".bot_bagg_price2 .cur").css("display", "none");
-    $(".bot_bagg_price2 .price").text(" ");
+    $(".bot_bagg_price1 .passenger_info_wrap .cur").css("display", "none");
+    $(".bot_bagg_price1 .passenger_info_wrap .price").text(" ");
+    $(".bot_bagg_price2 .passenger_info_wrap .cur").css("display", "none");
+    $(".bot_bagg_price2 .passenger_info_wrap .price").text(" ");
+    $(".seat_info_wrap .seat_box .cur, .seat_box .seat_name").css("display", "block");
 
     $('#bagg1').change(function() {
         $(".select_bagg_price1 .select_bagg").text($(this).val());
@@ -606,7 +606,7 @@ $(function () {
             let i = $(this).val();
             $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html(i);
             $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
-            $(".passenger_info_wrap2 .seat_P").css("display", "block");
+            $(".passenger_info_wrap2 .seat_P2").css("display", "block");
             $('.passenger_info_wrap2 .seat_sel').css('pointer-events', 'auto');
             $('.SSC2').not(this).attr("disabled",true);
 
@@ -617,7 +617,7 @@ $(function () {
                 $(this).css("disabled", false);
             }
         } else {
-            $(".passenger_info_wrap2 .select_seat_num .seat_number").html("");
+            $(".passenger_info_wrap2 .select_seat_num2 .seat_num2").html("");
             $(".passenger_info_wrap2 .select_seat_price .price").html("");
             $(".passenger_info_wrap2 .seat_P").css("display", "none");
 
@@ -895,7 +895,6 @@ $(() => {
 $(()=> {
     $('#modal_free_wrap').hide();
     $(".service_title2 .section1").on('click', () => {
-        $("#modal_free_wrap").css('display', 'absolute');
         $("#modal_free_wrap").fadeIn();
         $("body").css("overflow", "hidden");
     })
@@ -905,26 +904,35 @@ $(()=> {
     })
 })
 
-
+/* 비상구 좌석 유의사항안내 모달창 */
 $(()=> {
     $('#modal_notice_wrap').hide();
-    $(".select_seat .box3").on('click', () => {
-        if($(".box3").hasClass("background3") === true) {
+    $(".select_seat .exit_seat").on('click', () => {
+        if($(".exit_seat").is(":checked")) {
             $("#modal_notice_wrap").fadeIn();
+            $("body").css("overflow", "hidden");
+            $("#checkbox_m").prop("checked", false);
+            $('#modal_notice_wrap .modal_content_wrap').animate({//모달띄울 때 스크롤위치 위로 고정
+                scrollTop: 0
+            },50);
         }
     })
     $(".modal_notice_wrap .close").on('click', () => {
         $("#modal_notice_wrap").fadeOut();
+        $("body").css("overflow", "scroll");
+        $(".SSC, .SSC2").prop("checked", false);
+        
+        $(".passenger_info_wrap .select_seat_num .seat_num").html("");
+        $(".passenger_info_wrap .select_seat_price .price").html("");
+        $('.SSC, .SSC2').attr("disabled", false);
+
     })
-    $(".bott .checkbox").change(function(){
-        if($(".checkbox").is(":checked") === false){
-            $(".butt_ok").off('click');
-        }else{
-            $(".butt_ok").on('click');
-        }
-    })
+
     $("#modal_notice_wrap .butt_ok").on('click', () => {
-        $("#modal_notice_wrap").fadeOut();
+        if($("#checkbox_m").is(":checked")){
+            $("#modal_notice_wrap").fadeOut();
+        }
+        $("body").css("overflow", "scroll");
     })
 })
 

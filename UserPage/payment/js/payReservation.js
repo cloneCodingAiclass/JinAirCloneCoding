@@ -380,7 +380,7 @@ $(function () {
             $("#selectInstallment").css("display", "none");
         }
         if($("#payM6").is(":checked")) {
-            $(".cardImg_wrap6").css("background-color", "#282864");
+            $(".cardImg_wrap6").css("background-color", "#282260");
             $(".cardImg_wrap6 .text").css("color", "#fff");
             $("#cardImg6").removeClass("cardImg6");
             $("#cardImg6").addClass("cardImg6-2");
@@ -439,7 +439,7 @@ $(function () {
         }
 
         if($("#payM8").is(":checked")) {
-            $(".cardImg_wrap8").css("background-color", "#00C73C");
+            $(".cardImg_wrap8").css("background-color", "#00CD32");
             $(".cardImg_wrap8 .text").css("color", "#fff");
             $("#cardImg8").removeClass("cardImg8");
             $("#cardImg8").addClass("cardImg8-2");
@@ -469,7 +469,7 @@ $(function () {
         }
 
         if($("#payM9").is(":checked")) {
-            $(".cardImg_wrap9").css("background-color", "#E7181E");
+            $(".cardImg_wrap9").css("background-color", "#FA2829");
             $(".cardImg_wrap9 .text").css("color", "#fff");
             $("#cardImg9").removeClass("cardImg9");
             $("#cardImg9").addClass("cardImg9-2");
@@ -558,7 +558,12 @@ $(() => {
 
     $(".checkbox_wrap #checkbox").on("click", () => {
         $("#modal_restricted_items_wrap").fadeIn();
+        $('#modal_restricted_items_wrap .modal_contents').animate({//모달띄울 때 스크롤위치 위로 고정
+            scrollTop: 0
+        },50);
+        
         $('body').css("overflow", "hidden");
+        $("#modal_checkbox").prop("checked", false);
     })
     $("#modal_restricted_items_wrap .butt_canc, #modal_restricted_items_wrap .close").on("click", () => {
         $("#modal_restricted_items_wrap").fadeOut()
