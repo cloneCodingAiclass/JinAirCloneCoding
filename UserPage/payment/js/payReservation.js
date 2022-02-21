@@ -584,10 +584,27 @@ $(() => {
   $("#modal_fare_rules").hide();
   $("#modal_fare_rules #modal_conf_ok").hide();
 
+/* 운송제한품목 체크 후 결제 이동*/
+
   $(".butt_pay").on("click", () => {
-    $("#modal_fare_rules").fadeIn();
-    $("body").css("overflow", "hidden");
+    let checkbox_wrap = $('#checkbox').is(':checked');
+
+    if(checkbox_wrap){
+      $("#modal_fare_rules").css('display', 'flex');
+      $("#modal_fare_rules").fadeIn();
+      $("body").css("overflow", "hidden");
+    }else{
+      $('.false_modal').css('display', 'flex');
+      $('.false_modal').fadeIn(200);
+      $("body").css("overflow", "hidden");
+    }
   });
+
+  $('.confirm_btn').click(function(){
+    $('.false_modal').hide();
+    $("body").css("overflow", "");
+    
+})
   $("#modal_fare_rules .butt_canc, #modal_fare_rules .close").on(
     "click",
     () => {
@@ -1044,6 +1061,7 @@ $(function () {
       $(".child_modal").fadeOut(200);
     });
   });
+
 });
 
 function comewhatday() {
