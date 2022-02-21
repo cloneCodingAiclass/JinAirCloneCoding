@@ -266,21 +266,6 @@ $(function () {
     res = $(".date6").html();
     set_day(res);
   });
-  
-  $(window).scroll(function() {
-    let y = $(".contentswrap").offset().top;
-    let h = $(document).scrollTop();
-
-    if(h > y) {
-        $(".fix_trip_info").css("position", "fixed");
-        $(".fix_trip_info").css("top", "0px");
-        $("#header").css("position", "absolute");
-    } else {
-        $(".fix_trip_info").css("position", "absolute");
-        $(".fix_trip_info").css("top", "0px");
-        $("#header").css("position", "fixed");
-    }
-})
 });
 
 function set_day(res) {
