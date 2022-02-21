@@ -589,10 +589,18 @@ $(() => {
 $(() => {
     $("#modal_fare_rules").hide();
     $("#modal_fare_rules #modal_conf_ok").hide();
+    $("#modal_items_conf_ok").hide();
 
     $(".butt_pay").on("click", () => {
-        $("#modal_fare_rules").fadeIn();
-        $('body').css("overflow", "hidden");
+        if($(".checkbox").is(":checked")) {
+            $("#modal_fare_rules").fadeIn();
+            $('body').css("overflow", "hidden");
+        } else {
+            $("#modal_items_conf_ok").fadeIn();
+        }
+    })
+    $("#modal_items_conf_ok .butt_conf").on("click", () => {
+        $("#modal_items_conf_ok").fadeOut();
     })
     $("#modal_fare_rules .butt_canc, #modal_fare_rules .close").on("click", () => {
         $("#modal_fare_rules").fadeOut();
