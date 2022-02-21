@@ -715,9 +715,8 @@ body{
     border: 3px solid #661e43;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_num, .service_content .passenger_info_wrap .passenger_info p.select_seat_num span .seat_number {
-    font-size: 0px;
-    width: 60px;
+.service_content .passenger_info_wrap .passenger_info p.select_seat_num1 span .seat_num, .service_content .passenger_info_wrap .passenger_info p.select_seat_num2 span .seat_number {
+    width: 80px;
     height: 40px;
 }
 
@@ -747,8 +746,17 @@ body{
     font-weight: bold;
 }
 
-.service_content .passenger_info_wrap .passenger_info p.select_seat_price > span.seat_P {
-    display: none;
+.passenger_info_wrap1 .passenger_info p.select_seat_price >.seat_P1 {
+    visibility: hidden;
+    display: block;
+    font-size: 10px;
+    margin-right: 5px;
+    color: #444;
+}
+
+.passenger_info_wrap2 .passenger_info p.select_seat_price >.seat_P2{
+    visibility: hidden;
+    display: block !important;
     font-size: 10px;
     margin-right: 5px;
     color: #444;
