@@ -524,7 +524,7 @@ $(function () {
     }
   });
   /*결제정보 끝*/
-  
+
 });
 
 $(() => {
@@ -537,17 +537,17 @@ $(() => {
   });
 });
 
-  /* 상단 fixed */
-  $(window).scroll(function () {
-    let y = $(".contentswrap").offset().top; //고정할 메뉴
-    if (window.pageYOffset <= $(".contentswrap").offset().top) {
-      $(".fix_trip_info").css("position", "fixed");
-      $(".fix_trip_info").css("top", y);
-    } else {
-      $(".fix_trip_info").css("top", "0px");
-      $("#header").css("position", "absolute");
-    }
-  });
+/* 상단 fixed */
+$(window).scroll(function () {
+  let y = $(".contentswrap").offset().top; //고정할 메뉴
+  if (window.pageYOffset <= $(".contentswrap").offset().top) {
+    $(".fix_trip_info").css("position", "fixed");
+    $(".fix_trip_info").css("top", y);
+  } else {
+    $(".fix_trip_info").css("top", "0px");
+    $("#header").css("position", "absolute");
+  }
+});
 /* 항공기 위험물 안내 모달창 */
 $(() => {
   $("#modal_restricted_items_wrap").hide();
@@ -584,10 +584,27 @@ $(() => {
   $("#modal_fare_rules").hide();
   $("#modal_fare_rules #modal_conf_ok").hide();
 
+  /* 운송제한품목 체크 후 결제 이동*/
+
   $(".butt_pay").on("click", () => {
-    $("#modal_fare_rules").fadeIn();
-    $("body").css("overflow", "hidden");
+    let checkbox_wrap = $('#checkbox').is(':checked');
+
+    if (checkbox_wrap) {
+      $("#modal_fare_rules").css('display', 'flex');
+      $("#modal_fare_rules").fadeIn();
+      $("body").css("overflow", "hidden");
+    } else {
+      $('.false_modal').css('display', 'flex');
+      $('.false_modal').fadeIn(200);
+      $("body").css("overflow", "hidden");
+    }
   });
+
+  $('.confirm_btn').click(function () {
+    $('.false_modal').hide();
+    $("body").css("overflow", "");
+
+  })
   $("#modal_fare_rules .butt_canc, #modal_fare_rules .close").on(
     "click",
     () => {
@@ -981,48 +998,43 @@ function fnSetPaxCountUp(strPaxType, obj) {
 }
 
 function submit() {
-  console.log("작동");
-  var iAdultCount = parseInt(
-      $(".person_pop_layer").find("strong[name=adultPaxCnt]").text()
-    ),
-    iChildCount = parseInt(
-      $(".person_pop_layer").find("strong[name=childPaxCnt]").text()
-    ),
-    iInfantCount = parseInt(
-      $(".person_pop_layer").find("strong[name=infantPaxCnt]").text()
-    );
+
+  var
+    iAdultCount = parseInt($('.round_wrap').find('strong[name=adultPaxCnt]').text()), // 성인
+    iChildCount = parseInt($('.oneway_wrap').find('strong[name=childPaxCnt]').text()), // 소아
+    iInfantCount = parseInt($('.multi_wrap').find('strong[name=infantPaxCnt]').text()); // 유아
+
+  console.log(iAdultCount);
+  console.log(iChildCount);
+  console.log(iInfantCount)
 
   if (iAdultCount > 0 && iChildCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 유아 " + iChildCount + " 소아 " + iInfantCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount + ' 유아 ' + iInfantCount);
   } else if (iAdultCount > 0 && iChildCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 유아 " + iChildCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount);
   } else if (iAdultCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 소아 " + iInfantCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 유아 ' + iInfantCount);
   } else if (iAdultCount > 0) {
-    $("strong[name=person_num]").text("성인 " + iAdultCount);
+    $("strong[name=person_num]").text('성인 ' + iAdultCount);
   } else if (iChildCount > 0) {
-    $("strong[name=person_num]").text("유아 " + iChildCount);
+    $("strong[name=person_num]").text('소아 ' + iChildCount);
   }
 
   // 중요. 확인 버튼 누를 때 성인, 소아, 유아의 수를 input:hidden에 넣음
   // 아무것도 선택 안할 경우 .adultPaxCnt의 default값 : 1로 지정
-  $(".adultPaxCnt").val(iAdultCount);
-  $(".childPaxCnt").val(iChildCount);
-  $(".infantPaxCnt").val(iInfantCount);
+  $('.adultPaxCnt').val(iAdultCount);
+  $('.childPaxCnt').val(iChildCount);
+  $('.infantPaxCnt').val(iInfantCount);
 
-  $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
-  $(".person_down_img").css({ display: "inline-block" });
-  $(".person_up_img").css({ display: "none" });
-  $(".person_pop_layer").slideUp(50);
+  $(".person_layerbtn").removeClass('close');
+  $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+  $(".person_down_img").css({ "display": "inline-block" });
+  $(".person_up_img").css({ "display": "none" });
+  $('.person_pop_layer').slideUp(50);
 
-  $(".go_layerbtn").css({ color: "rgb(145, 0, 70)" });
-  $(".go_select_opt").addClass("on");
+  $(".go_layerbtn").addClass('close');
+  $(".go_layerbtn").css({ "color": "rgb(145, 0, 70)" });
+  $(".go_select_opt").addClass('on');
   $(".go_layer").slideDown("fast");
 }
 
@@ -1044,6 +1056,7 @@ $(function () {
       $(".child_modal").fadeOut(200);
     });
   });
+
 });
 
 function comewhatday() {

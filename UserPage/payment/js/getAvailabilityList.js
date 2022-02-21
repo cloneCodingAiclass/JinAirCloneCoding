@@ -208,27 +208,20 @@ $(function () {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
-    week[date0.getDay()]
-  })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
-    week[date1.getDay()]
-  })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
-    week[date2.getDay()]
-  })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
-    week[date3.getDay()]
-  })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
-    week[date4.getDay()]
-  })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
-    week[date5.getDay()]
-  })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
-    week[date6.getDay()]
-  })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
+    })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
+    })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
+    })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
+    })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
+    })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
+    })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
+    })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -296,27 +289,20 @@ function set_day(res) {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
-    week[date0.getDay()]
-  })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
-    week[date1.getDay()]
-  })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
-    week[date2.getDay()]
-  })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
-    week[date3.getDay()]
-  })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
-    week[date4.getDay()]
-  })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
-    week[date5.getDay()]
-  })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
-    week[date6.getDay()]
-  })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
+    })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
+    })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
+    })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
+    })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
+    })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
+    })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
+    })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -810,48 +796,43 @@ function fnSetPaxCountUp(strPaxType, obj) {
 }
 
 function submit() {
-  console.log("작동");
-  var iAdultCount = parseInt(
-      $(".person_pop_layer").find("strong[name=adultPaxCnt]").text()
-    ),
-    iChildCount = parseInt(
-      $(".person_pop_layer").find("strong[name=childPaxCnt]").text()
-    ),
-    iInfantCount = parseInt(
-      $(".person_pop_layer").find("strong[name=infantPaxCnt]").text()
-    );
+
+  var
+    iAdultCount = parseInt($('.round_wrap').find('strong[name=adultPaxCnt]').text()), // 성인
+    iChildCount = parseInt($('.oneway_wrap').find('strong[name=childPaxCnt]').text()), // 소아
+    iInfantCount = parseInt($('.multi_wrap').find('strong[name=infantPaxCnt]').text()); // 유아
+
+  console.log(iAdultCount);
+  console.log(iChildCount);
+  console.log(iInfantCount)
 
   if (iAdultCount > 0 && iChildCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 소아 " + iChildCount + " 유아 " + iInfantCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount + ' 유아 ' + iInfantCount);
   } else if (iAdultCount > 0 && iChildCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 소아 " + iChildCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount);
   } else if (iAdultCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 소아 " + iInfantCount
-    );
+    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 유아 ' + iInfantCount);
   } else if (iAdultCount > 0) {
-    $("strong[name=person_num]").text("성인 " + iAdultCount);
+    $("strong[name=person_num]").text('성인 ' + iAdultCount);
   } else if (iChildCount > 0) {
-    $("strong[name=person_num]").text("소아 " + iChildCount);
+    $("strong[name=person_num]").text('소아 ' + iChildCount);
   }
 
   // 중요. 확인 버튼 누를 때 성인, 소아, 유아의 수를 input:hidden에 넣음
   // 아무것도 선택 안할 경우 .adultPaxCnt의 default값 : 1로 지정
-  $(".adultPaxCnt").val(iAdultCount);
-  $(".childPaxCnt").val(iChildCount);
-  $(".infantPaxCnt").val(iInfantCount);
+  $('.adultPaxCnt').val(iAdultCount);
+  $('.childPaxCnt').val(iChildCount);
+  $('.infantPaxCnt').val(iInfantCount);
 
-  $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
-  $(".person_down_img").css({ display: "inline-block" });
-  $(".person_up_img").css({ display: "none" });
-  $(".person_pop_layer").slideUp(50);
+  $(".person_layerbtn").removeClass('close');
+  $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
+  $(".person_down_img").css({ "display": "inline-block" });
+  $(".person_up_img").css({ "display": "none" });
+  $('.person_pop_layer').slideUp(50);
 
-  $(".go_layerbtn").css({ color: "rgb(145, 0, 70)" });
-  $(".go_select_opt").addClass("on");
+  $(".go_layerbtn").addClass('close');
+  $(".go_layerbtn").css({ "color": "rgb(145, 0, 70)" });
+  $(".go_select_opt").addClass('on');
   $(".go_layer").slideDown("fast");
 }
 
