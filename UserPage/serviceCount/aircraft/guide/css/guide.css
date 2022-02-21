@@ -372,7 +372,7 @@ body{
 .mobile{
     width: 100%;
     margin-top: 60px;
-    display: none;
+    display: block;
 }
 .mobilewrapper{
     padding: 0px 10px;
@@ -574,6 +574,7 @@ p.mobile4_notice{
 .guide{
     width: 100%;
     margin-top: 45px;
+    display: none;
 }
 .guidewrapper{
     padding: 0px 10px;

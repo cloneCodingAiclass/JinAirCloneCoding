@@ -752,7 +752,7 @@ tr {
     padding-top: 5%;
 }
 .pointInfo_modal > .modal_content{
-    width:600px; height:500px;
+    width:600px; height:700px;
     background:#fff;
     position: relative;
     box-sizing:border-box; 
@@ -770,6 +770,15 @@ tr {
     font-size: 1.2rem;
     font-weight: 700;
     text-align: left;
+    padding-top: 30px;
+}
+.pointInfo_modal > .title .close{
+    background-image: url(/img/btn_close3.png);
+    width: 26px;
+    height: 26px;
+    position: relative;
+    top: -30px;
+    left: 560px;
 }
 .modal_content > .title > h2 {
     color: #f7f7f6;
