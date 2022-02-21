@@ -374,7 +374,7 @@ $(function () {
       $("#selectInstallment").css("display", "none");
     }
     if ($("#payM6").is(":checked")) {
-      $(".cardImg_wrap6").css("background-color", "#282864");
+      $(".cardImg_wrap6").css("background-color", "#282260");
       $(".cardImg_wrap6 .text").css("color", "#fff");
       $("#cardImg6").removeClass("cardImg6");
       $("#cardImg6").addClass("cardImg6-2");
@@ -587,7 +587,7 @@ $(() => {
   /* 운송제한품목 체크 후 결제 이동*/
 
   $(".butt_pay").on("click", () => {
-    let checkbox_wrap = $('#checkbox').is(':checked');
+    let checkbox_wrap = $('#modal_checkbox').is(':checked');
 
     if (checkbox_wrap) {
       $("#modal_fare_rules").css('display', 'flex');
@@ -599,6 +599,8 @@ $(() => {
       $("body").css("overflow", "hidden");
     }
   });
+  $("#modal_fare_rules").on("click", () => {
+  })
 
   $('.confirm_btn').click(function () {
     $('.false_modal').hide();
@@ -615,6 +617,7 @@ $(() => {
 
   $("#modal_fare_rules .butt_ok").on("click", () => {
     if ($("#modal_fare_rules #checkBox").is(":checked")) {
+      $(location).attr("href", "/UserPage/payment/paymemt_complete/complete.html");
       $("#modal_fare_rules").fadeOut();
       $("body").css("overflow", "scroll");
     } else {
