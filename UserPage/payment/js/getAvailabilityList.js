@@ -360,6 +360,154 @@ $(() => {
   // })
 });
 
+// 찬영 라인
+
+$(() => {
+  let strrr1 = 0;
+  let strrr2 = 0;
+
+  $('.price_wrap').on('click', function(){
+    $('.price_wrap').removeClass('on');
+    $(this).addClass('on');
+    let str = $(this).children('.date_price').html().split(',');
+    strrr1 = '';
+    for(let i = 0 ; i < str.length ; i++){
+      strrr1 = strrr1 + str[i];
+    }
+    let totprice = Number(strrr1) + Number(strrr2);
+
+    let totpricecom = '';
+
+    if(String(totprice).length == 5){
+      totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
+    }else if(String(totprice).length == 6){
+      totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
+    }
+
+    $('.tot_price_wrap').find('.tot_price1').html(totpricecom);
+
+    let taxprice = totprice*0.01; // 세금
+    if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
+      let backtaxpricecom = '';
+
+      if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
+        backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
+        console.log(backtaxpricecom);
+      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
+        if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
+          backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
+          console.log(backtaxpricecom);
+        }else{
+          backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+          console.log(backtaxpricecom);
+        }
+      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
+        backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+        console.log(backtaxpricecom);
+      }
+      let forwardtaxpricecom=''
+      if(String(taxprice).length == 4){
+        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
+      }else if(String(taxprice).length == 5){
+        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+      }
+      let taxpricecom = forwardtaxpricecom + backtaxpricecom;      
+      $('.tot_price_wrap').find('.tot_price3').html(taxpricecom);
+    }else{ // 세금이 3자리수 이하일때
+      $('.tot_price_wrap').find('.tot_price3').html(taxprice);
+    }
+
+    let totalprice = totprice + 10000 + totprice*0.01;
+    let finaltotalprice = '';
+    if(String(totalprice).length == 5){
+      finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
+    }else if(String(totalprice).length == 6){
+      finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
+    }
+
+    $('.total_price_wrap').find('.total_price').html(finaltotalprice);
+    $('.finaltotalprice').html(finaltotalprice);
+
+    $('.price_wrap1').on('click', function(){
+      $('.price_wrap1').removeClass('on1');
+      $(this).addClass('on1');
+      let str = $(this).children('.date_price').html().split(',');
+      strrr2 = '';
+      for(let i = 0 ; i < str.length ; i++){
+        strrr2 = strrr2 + str[i];
+      }
+      let totprice = Number(strrr1) + Number(strrr2);
+
+      let totpricecom = '';
+
+      if(String(totprice).length == 5){
+        totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
+      }else if(String(totprice).length == 6){
+        totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
+      }
+
+      $('.tot_price_wrap').find('.tot_price1').html(totpricecom);
+
+      let taxprice = totprice*0.01; // 세금
+      if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
+        let backtaxpricecom = '';
+
+        if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
+          backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
+          console.log(backtaxpricecom);
+        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
+          if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
+            backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
+            console.log(backtaxpricecom);
+          }else{
+            backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+            console.log(backtaxpricecom);
+          }
+        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
+          backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+          console.log(backtaxpricecom);
+        }
+        let forwardtaxpricecom=''
+        if(String(taxprice).length == 4){
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
+        }else if(String(taxprice).length == 5){
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+        }
+        let taxpricecom = forwardtaxpricecom + backtaxpricecom;      
+        $('.tot_price_wrap').find('.tot_price3').html(taxpricecom);
+      }else{ // 세금이 3자리수 이하일때
+        $('.tot_price_wrap').find('.tot_price3').html(taxprice);
+      }
+
+      let totalprice = totprice + 10000 + totprice*0.01;
+      let finaltotalprice = '';
+      if(String(totalprice).length == 5){
+        finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
+      }else if(String(totalprice).length == 6){
+        finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
+      }
+
+      $('.total_price_wrap').find('.total_price').html(finaltotalprice);
+      $('.finaltotalprice').html(finaltotalprice);
+    })
+
+  })
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 운임 규정
 $(() => {
   // 모달 열기

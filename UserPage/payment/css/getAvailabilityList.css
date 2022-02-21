@@ -665,48 +665,60 @@ body {
   background-color: #bdd600;
   font-size: 12px;
 }
-
-.list_wrap .price_wrap {
-  width: 120px;
-  height: 110px;
-  border: 1px solid #f2f2f2;
-  padding-top: 30px;
-}
-
+/* 경로1 */
 .list_wrap table.list1_table .price_wrap {
   width: 150px;
   height: 110px;
   border: 1px solid #f2f2f2;
   padding-top: 30px;
+  cursor: pointer;
+}
+/* 경로2 */
+.list_wrap .price_wrap1 { 
+  width: 120px;
+  height: 110px;
+  border: 1px solid #f2f2f2;
+  padding-top: 30px;
+  cursor: pointer;
+}
+.price_wrap.on {
+  background-color: #661e43;
+  color: white;
+}
+.price_wrap1.on1 {
+  background-color: #661e43;
+  color: white;
 }
 
 .list_wrap .price_wrap p {
   display: block;
   /* height: 15px; */
 }
-
+.list_wrap .price_wrap1 p {
+  display: block;
+  /* height: 15px; */
+}
 .list_wrap .price_wrap .date_price {
   font-size: 23px;
   margin: 5px;
   margin-bottom: 10px;
-  color: black;
 }
-
+.list_wrap .price_wrap1 .date_price {
+  font-size: 23px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
 .list_wrap .curr {
   font-size: 12px;
   margin: 1px;
   height: 10px;
 }
-
 .list_wrap .seats {
   font-size: 14px;
-  color: rgb(102, 30, 67);
 }
-
 .list_wrap div.none_seat {
   background-color: rgba(168, 165, 165, 0.2);
 }
-
 .list_wrap div.none_seat,
 div.none_seat p {
   color: #444 !important;
