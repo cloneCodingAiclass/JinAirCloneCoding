@@ -679,25 +679,23 @@ $(function () {
     });
 
     $('.SSC2').click(function() {
-        console.log($(this).val());
         if ($('.SSC2').is(':checked')) {
-            let i = $(this).val();
-            $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html(i);
+            $(".passenger_info_wrap2 .select_seat_num .seat_number").html($(this).val());
             $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
-            $(".passenger_info_wrap2 .seat_P2").css("display", "block");
+            $(".passenger_info_wrap2 .seat_P").css("display", "block");
             $('.passenger_info_wrap2 .seat_sel').css('pointer-events', 'auto');
             $('.SSC2').not(this).attr("disabled", true);
 
             if($('.SSC2').next().hasClass("box7") === true) {
-                $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html("");
+                $(".passenger_info_wrap2 .select_seat_num .seat_number").html("");
                 $(".passenger_info_wrap2 .select_seat_price .price").html($(this).next().text());
-                $(".passenger_info_wrap2 .seat_P2").css("display", "none");
+                $(".passenger_info_wrap2 .seat_P").css("display", "none");
                 $(this).css("disabled", false);
             }
         } else {
-            $(".passenger_info_wrap2 .select_seat_num2 .seat_number").html("");
+            $(".passenger_info_wrap2 .select_seat_num .seat_number").html("");
             $(".passenger_info_wrap2 .select_seat_price .price").html("");
-            $(".passenger_info_wrap2 .seat_P2").css("display", "none");
+            $(".passenger_info_wrap2 .seat_P").css("display", "none");
 
             $('.SSC2').not(this).attr("disabled", false);
         }
