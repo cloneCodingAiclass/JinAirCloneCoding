@@ -1149,6 +1149,7 @@ td.cur::before {
 
 .detD1 {
     width: 100%;
+    height: 60px;
     padding: 0px;
     background-image: url("../img/det.PNG");
     background-size: 100%;
@@ -1159,6 +1160,7 @@ td.cur::before {
 
 .detD2 {
     width: 100%;
+    height: 60px;
     padding: 0px;
     background-image: url("../img/det.PNG");
     background-size: 100%;

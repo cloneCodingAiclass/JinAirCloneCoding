@@ -190,7 +190,7 @@ $(function () {
   $("#a").click(function () {
     $("#div").unbind("click");
   });
-  let res = $(".date3").text();
+  let res = $(".date3").text(); // 나중에 jsp할 때 선택된 날짜 받아와서 넣어주기
   console.log(res);
   let sub_res = res.substring(0, 10);
   let select_day = sub_res.split("-");
