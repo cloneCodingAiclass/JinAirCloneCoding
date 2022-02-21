@@ -292,6 +292,7 @@ body{
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-bottom: 100px;
 }
 /*푸터*/
 #footerCont {
