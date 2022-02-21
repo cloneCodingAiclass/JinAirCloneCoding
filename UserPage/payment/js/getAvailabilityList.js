@@ -124,63 +124,64 @@ $(function () {
   $("#info_table_wrap").css("overflow", "hidden");
   $("#info_table_wrap").css("overflow-x", "none");
 
-  $(".img").on("click", () => {
-    $(".img").css("display", "none");
-    $(".img2").css("display", "block");
-    $("#modal_totP_wrap").fadeIn();
-    $(".fix_modal").fadeIn();
-  });
-  $(".close").on("click", () => {
-    $(".img2").css("display", "none");
-    $(".img").css("display", "block");
-    $("#modal_totP_wrap").fadeOut();
-    $(".fix_modal").fadeOut();
-  });
-  $(".img2").on("click", () => {
-    $(".img2").css("display", "none");
-    $(".img").css("display", "block");
-    $("#modal_totP_wrap").fadeOut();
-    $(".fix_modal").fadeOut();
-  });
+  $(".img").on('click', () => {
+      $(".img").css("display", "none");
+      $(".img2").css("display", "block");
+      $("#modal_totP_wrap").fadeIn();
+      $(".fix_modal").fadeIn();
+  })
+  $(".close").on('click', () => {
+      $(".img2").css("display", "none");
+      $(".img").css("display", "block");
+      $("#modal_totP_wrap").fadeOut();
+      $(".fix_modal").fadeOut();
+  })
+  $(".img2").on('click', () => {
+      $(".img2").css("display", "none");
+      $(".img").css("display", "block");
+      $("#modal_totP_wrap").fadeOut();
+      $(".fix_modal").fadeOut();
+  })
 
   /*자세히 보기 */
-  $(".det1").on("click", () => {
-    $(".detD1").css("display", "inline-block");
-  });
+  $(".det1").on('click', () => {
+      $(".detD1").css("display", "inline-block");
+  })
 
-  $(".det2").on("click", () => {
-    $(".detD2").css("display", "inline-block");
-  });
+  $(".det2").on('click', () => {
+      $(".detD2").css("display", "inline-block");
+  })
 
-  let offset = $(".modal_price_info_wrap").offset();
-  $(".plus_1").on("click", () => {
-    $("#info_table_wrap").css("overflow", "scroll");
-    $("#info_table_wrap").css("overflow-x", "hidden");
-    $("#info_table_wrap").animate({ scrollTop: 260 }, 600);
-    $(".plus_1").css("display", "none");
-    console.log(offset);
-    $(".minus_1").css("display", "inline-block");
-  });
-  $(".minus_1").on("click", () => {
-    $("#info_table_wrap").css("overflow", "hidden");
-    $("#info_table_wrap").css("overflow-x", "none");
-    $(".plus_1").css("display", "inline-block");
-    $(".minus_1").css("display", "none");
-  });
+  $(".plus_1").on('click', () => {
+      $("#info_table_wrap").css("overflow", "scroll");
+      $("#info_table_wrap").css("overflow-x", "hidden");
+      $("#info_table_wrap").animate({ scrollTop: 300 }, 600);
+      $(".plus_1").css("display", "none");
+      $(".minus_1").css("display", "inline-block");
+  })
+  $(".minus_1").on('click', () => {
+      $("#info_table_wrap").css("overflow", "hidden");
+      $("#info_table_wrap").css("overflow-x", "none");
+      $(".plus_1").css("display", "inline-block");
+      $(".minus_1").css("display", "none");
+  })
+
 
   $(window).scroll(function () {
-    let y = $(".fix_bott_wrap").offset().top - 650;
-    if (window.pageYOffset <= y) {
-      $(".fix_bott").css("position", "fixed");
-      $(".fix_bott").css("bottom", "0px");
-      $("#modal_totP_wrap").css("position", "fixed");
-      $("#modal_totP_wrap").css("top", "175px");
-      $(".fix_trip_info").css("position", "fixed");
-    } else {
-      $(".fix_bott").css("position", "absolute");
-      $("#modal_totP_wrap").css("position", "absolute");
-      $("#modal_totP_wrap").css("top", y);
-    }
+      let y = $(".fix_bott_wrap").offset().top - 650;
+      let h = $(document).scrollTop();
+      if (window.pageYOffset <= y) {
+          $(".fix_bott").css("position", "fixed");
+          $(".fix_bott").css("bottom", "0px");
+          $("#modal_totP_wrap").css("position", "fixed");
+          $("#modal_totP_wrap").css("top", "-100px");
+          $(".fix_trip_info").css("position", "fixed");
+      } else {
+          $(".fix_bott").css("position", "absolute");
+          $("#modal_totP_wrap").css("position", "absolute");
+          $("#modal_totP_wrap").css("top", y - 280);
+          $(".fix_trip_info").css("position", "absolute");
+      }
   });
 
   /*날짜 설정 */
