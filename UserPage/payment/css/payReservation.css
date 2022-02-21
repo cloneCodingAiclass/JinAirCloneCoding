@@ -504,7 +504,7 @@ input {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
-  margin-top: 255px;
+  margin-top: 134px;
   border-top: 1px solid rgba(168, 165, 165, 0.3);
   padding: 20px 0;
 }
@@ -1185,7 +1185,7 @@ td p.link a {
 .cardImg2-2 {
   width: 60%;
   height: 80px;
-  background: url("../img/card2-2.png");
+  background: url("../img/card-2.22.png.png");
   background-size: 100%;
   background-repeat: no-repeat;
   margin: auto auto;
@@ -1294,7 +1294,7 @@ td p.link a {
 .cardImg6-2 {
   width: 90%;
   height: 120px;
-  background: url("../img/card6-2.png");
+  background: url("../img/card-6.22.png.png");
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1338,8 +1338,8 @@ td p.link a {
 .cardImg8-2 {
   width: 70%;
   height: 80px;
-  background: url("../img/card8-2.png");
-  background-size: 85%;
+  background: url("../img/card-8.22.png.png");
+  background-size: 91%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin: auto auto;
@@ -1360,8 +1360,8 @@ td p.link a {
 .cardImg9-2 {
   width: 70%;
   height: 80px;
-  background: url("../img/card9-2.png");
-  background-size: 85%;
+  background: url("../img/card-9-22.png.png");
+  background-size: 93%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin: auto auto;

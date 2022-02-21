@@ -374,7 +374,7 @@ $(function () {
       $("#selectInstallment").css("display", "none");
     }
     if ($("#payM6").is(":checked")) {
-      $(".cardImg_wrap6").css("background-color", "#282864");
+      $(".cardImg_wrap6").css("background-color", "#282260");
       $(".cardImg_wrap6 .text").css("color", "#fff");
       $("#cardImg6").removeClass("cardImg6");
       $("#cardImg6").addClass("cardImg6-2");
@@ -433,7 +433,7 @@ $(function () {
     }
 
     if ($("#payM8").is(":checked")) {
-      $(".cardImg_wrap8").css("background-color", "#00C73C");
+      $(".cardImg_wrap8").css("background-color", "#00CD32");
       $(".cardImg_wrap8 .text").css("color", "#fff");
       $("#cardImg8").removeClass("cardImg8");
       $("#cardImg8").addClass("cardImg8-2");
@@ -463,7 +463,7 @@ $(function () {
     }
 
     if ($("#payM9").is(":checked")) {
-      $(".cardImg_wrap9").css("background-color", "#E7181E");
+      $(".cardImg_wrap9").css("background-color", "#FA2829");
       $(".cardImg_wrap9 .text").css("color", "#fff");
       $("#cardImg9").removeClass("cardImg9");
       $("#cardImg9").addClass("cardImg9-2");
@@ -587,7 +587,7 @@ $(() => {
   /* 운송제한품목 체크 후 결제 이동*/
 
   $(".butt_pay").on("click", () => {
-    let checkbox_wrap = $('#checkbox').is(':checked');
+    let checkbox_wrap = $('#modal_checkbox').is(':checked');
 
     if (checkbox_wrap) {
       $("#modal_fare_rules").css('display', 'flex');
@@ -599,6 +599,8 @@ $(() => {
       $("body").css("overflow", "hidden");
     }
   });
+  $("#modal_fare_rules").on("click", () => {
+  })
 
   $('.confirm_btn').click(function () {
     $('.false_modal').hide();
@@ -615,6 +617,7 @@ $(() => {
 
   $("#modal_fare_rules .butt_ok").on("click", () => {
     if ($("#modal_fare_rules #checkBox").is(":checked")) {
+      $(location).attr("href", "/UserPage/payment/paymemt_complete/complete.html");
       $("#modal_fare_rules").fadeOut();
       $("body").css("overflow", "scroll");
     } else {
