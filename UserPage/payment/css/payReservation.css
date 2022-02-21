@@ -1272,7 +1272,7 @@ td p.link a {
 .cardImg5-2 {
   width: 70%;
   height: 80px;
-  background: url("../img/card5-2.png");
+  background: url("../img/card-5.22.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1316,7 +1316,7 @@ td p.link a {
 .cardImg7-2 {
   width: 70%;
   height: 100px;
-  background: url("../img/card7-2.png");
+  background: url("../img/card-7.22.png");
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1339,7 +1339,7 @@ td p.link a {
   width: 70%;
   height: 80px;
   background: url("../img/card-8.22.png.png");
-  background-size: 91%;
+  background-size: 85%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin: auto auto;
@@ -1361,7 +1361,7 @@ td p.link a {
   width: 70%;
   height: 80px;
   background: url("../img/card-9-22.png.png");
-  background-size: 93%;
+  background-size: 85%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin: auto auto;
@@ -1382,11 +1382,11 @@ td p.link a {
   width: 70%;
   height: 80px;
   background: url("../img/card10-2.png");
-  background-size: 85%;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin: auto auto;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 .easy td {
