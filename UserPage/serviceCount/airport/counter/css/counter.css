@@ -416,13 +416,13 @@ body {
 .counter {
     display: none;
 }
-.counter .list {
+.counter .lists {
     width: 100%;
     overflow: hidden;
     margin: -20px 0;
     letter-spacing: -1em;
 }
-.counter .list > li {
+.counter .lists > li {
     display: inline-block;
     box-sizing: border-box;
     width: 550px;
@@ -433,35 +433,36 @@ body {
     margin-left: 10px;
 
 }
-.counter .list > li .wrap {
+.counter .lists > li .wrap {
     position: relative;
     padding-top: 70px;
     border: 1px solid #e6e6e6;
 }
-.counter .list > li .tit {
+.counter .lists > li .tit {
     position: absolute;
     left: 20px;
     top: 20px;
     font-size: 18px;
     line-height: 26px;
 }
-.counter .list > li .tit span {
+.counter .lists > li .tit span {
     font-size: 16px;
 }
-.counter .list > li .thumb {
+.counter .lists > li .thumb {
     text-align: center;
 }
-.counter .list > li .thumb img {
+.counter .lists > li .thumb img {
     max-width: 100%;
 }
-.counter .list > li h3 {
+.counter .lists > li h3 {
     margin-top: 10px;
     font-size: 16px;
     line-height: 26px;
     color: #000;
 }
-.counter .list > li .caution {
+.counter .lists > li .caution {
     margin: 5px 0 0;
+    
 }
 .counter h3 {
     padding-top: 5px;
@@ -482,9 +483,9 @@ body {
 }
 .counter h3 a.icoFold.on {
     color: #661e43;
-    font-family: 'notob';
+    font-weight: bold;
 }
-.counter h3 +.list {
+.counter h3 +.lists {
     margin: 20px 0 35px;
 }
 .counter .countryRule h2.typeA {
@@ -555,6 +556,17 @@ body {
     color: #000;
     vertical-align: middle;
     text-align: center;
+    word-break: keep-all;
+}
+.hk{
+    height: 600px !important;
+}
+p.caution {
+    position: relative;
+    padding-left: 9px;
+    font-size: 16px;
+    line-height: 26px;
+    word-wrap: break-word;
     word-break: keep-all;
 }
 /* counter 끝 */
