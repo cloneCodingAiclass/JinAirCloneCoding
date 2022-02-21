@@ -331,10 +331,12 @@ body {
     margin: 0 auto;
 }
 #container #reservation .trip_layerbtn,
-#container #reservation .person_layerbtn,
 #container #reservation .bonus {
     margin-top: 30px;
-    width: 100%;
+    width: auto;
+}
+#container #reservation .person_layerbtn{
+    min-width: 90px;
 }
 /* trip layer */
 #container #reservation .trip_layerbtn {
@@ -395,12 +397,11 @@ body {
     margin-left: 20px;
 }
 #container #reservation .pc_select{
-    width: 300px;
+    width: 100%;
 }
 #container #reservation .person_layerbtn {
     text-align: left;
     cursor: pointer;
-    width: 200px;
 }
 #container #reservation .person_layerbtn .person_num {
     font-size: 1.2rem;
