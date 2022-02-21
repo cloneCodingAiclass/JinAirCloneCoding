@@ -186,8 +186,8 @@
                     <p>마이<br>페이지</p>
                     <ul>
                         <li class="booking"><a href="./Mypage_main.html">예약조회/변경/취소</a></li>
-                        <li class="mypoint"><a href="./Mypage_point.html">나의 나비포인트</a></li>
-                        <li class="coupon"><a href="./Mypage_coupons.html">나의 할인쿠폰</a></li>
+                        <li class="mypoint"><a href="./Mypage_point.html">나의 나비포인트</a><div class="mypoint_sum"><span>0p</span></div></li>
+<li class="coupon"><a href="./Mypage_coupons.html">나의 할인쿠폰</a><div class="mycoupon_sum"><span>0</span></div></li>
                         <li class="qna"><a href="./Mypage_qna.html">나의 Q&A</a></li>
                         <li class="edit"><a href="#">회원정보 수정</a></li>
                     </ul>
@@ -318,9 +318,11 @@
                             <!--메뉴 타이틀-->
                             <ul class="horiz">
                                 <!--하위 메뉴 컨테이너-->
-                                <li><a href="">자주 묻는 질문(FAQ)</a></li>
-                                <li><a href="">고객의 말씀(Q&A)</a></li>
-                                <li><a href="/UserPage/serviceCount/airport/baggage/baggage.html?directId=findbaggage">기내 유실물 찾기</a></li>
+                                <li><a href="/UserPage/index/mypage/faq_list.html">자주 묻는 질문(FAQ)</a></li>
+                                <li><a href="/UserPage/index/mypage/add_qna.html">고객의 말씀(Q&A)</a></li>
+                                <li><a
+                                        href="/UserPage/serviceCount/airport/baggage/baggage.html?directId=findbaggage">기내
+                                        유실물 찾기</a></li>
                             </ul>
                         </div>
                     </div>
@@ -420,7 +422,7 @@
             <p>고객님의 개인정보를 소중하게 보호하려고 노력하고 있으며,<br>회원님의 동의 없이는 회원정보를 제공하지 않습니다.</p>
             <p>비밀번호 입력 <input type="password"></p>
             <div class="btn">
-                <input type="submit" class="btn_agree" value="확인">
+                <input type="button" class="btn_agree" value="확인" onclick="location.href='/UserPage/index/mypage/Mypage_edit.html'">
                 <input type="button" class="btn_cancel" value="취소">
             </div>
         </div>
