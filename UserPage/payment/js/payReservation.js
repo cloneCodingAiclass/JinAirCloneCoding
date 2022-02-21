@@ -524,6 +524,7 @@ $(function () {
     }
   });
   /*결제정보 끝*/
+  
 });
 
 $(() => {
@@ -536,6 +537,17 @@ $(() => {
   });
 });
 
+  /* 상단 fixed */
+  $(window).scroll(function () {
+    let y = $(".contentswrap").offset().top; //고정할 메뉴
+    if (window.pageYOffset <= $(".contentswrap").offset().top) {
+      $(".fix_trip_info").css("position", "fixed");
+      $(".fix_trip_info").css("top", y);
+    } else {
+      $(".fix_trip_info").css("top", "0px");
+      $("#header").css("position", "absolute");
+    }
+  });
 /* 항공기 위험물 안내 모달창 */
 $(() => {
   $("#modal_restricted_items_wrap").hide();
