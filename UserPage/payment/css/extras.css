@@ -1051,7 +1051,6 @@ body{
 .service_content .seat_info_wrap .seat_info .seat_box .txt .price {
     font-size: 16px;
     margin-left: 3px;
-    background-color: #636363;
 }
 
 .service_content .seat_info_wrap .seat_info .seat_box .txt .cur {
@@ -1085,7 +1084,6 @@ body{
 
 .service_content .seat_info_wrap .seat_info .seat_box .cur {
     font-size: 12px;
-    background-color: #007074;
 }
 
 .seat .left_seat label, .seat .right_seat label {

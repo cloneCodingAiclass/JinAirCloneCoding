@@ -502,12 +502,12 @@ $(function () {
     /*수하물 선택 구간 끝 */
 
     /*보험 선택 구간 */
-    // if($(".check_ins").change()(":checked")) {
-    //     ('#select_product').attr('disabled', false);
-    // } else {
-    //     ('#select_product').attr('disabled',true);
-    //     $(".insurance_price .price").text("0");
-    // }
+    if($(".service_content_wrap3 .check_ins").change()(":checked")) {
+        ('#select_product').attr('disabled', false);
+    } else {
+        ('#select_product').attr('disabled',true);
+        $(".insurance_price .price").text("0");
+    }
 
     $('#select_product').change(function() {
         $(".bot_bagg_price2 .price").text(" ");
