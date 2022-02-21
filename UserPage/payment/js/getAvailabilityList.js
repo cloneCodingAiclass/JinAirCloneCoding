@@ -823,11 +823,11 @@ function submit() {
 
   if (iAdultCount > 0 && iChildCount > 0 && iInfantCount > 0) {
     $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 유아 " + iChildCount + " 소아 " + iInfantCount
+      "성인 " + iAdultCount + " 소아 " + iChildCount + " 유아 " + iInfantCount
     );
   } else if (iAdultCount > 0 && iChildCount > 0) {
     $("strong[name=person_num]").text(
-      "성인 " + iAdultCount + " 유아 " + iChildCount
+      "성인 " + iAdultCount + " 소아 " + iChildCount
     );
   } else if (iAdultCount > 0 && iInfantCount > 0) {
     $("strong[name=person_num]").text(
@@ -836,7 +836,7 @@ function submit() {
   } else if (iAdultCount > 0) {
     $("strong[name=person_num]").text("성인 " + iAdultCount);
   } else if (iChildCount > 0) {
-    $("strong[name=person_num]").text("유아 " + iChildCount);
+    $("strong[name=person_num]").text("소아 " + iChildCount);
   }
 
   // 중요. 확인 버튼 누를 때 성인, 소아, 유아의 수를 input:hidden에 넣음
