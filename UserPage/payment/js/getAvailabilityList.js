@@ -208,20 +208,27 @@ $(function () {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
-    })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
-    })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
-    })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
-    })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
-    })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
-    })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
-    })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
+    week[date0.getDay()]
+  })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
+    week[date1.getDay()]
+  })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
+    week[date2.getDay()]
+  })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
+    week[date3.getDay()]
+  })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
+    week[date4.getDay()]
+  })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
+    week[date5.getDay()]
+  })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
+    week[date6.getDay()]
+  })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -289,20 +296,27 @@ function set_day(res) {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
-    })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
-    })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
-    })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
-    })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
-    })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
-    })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
-    })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
+    week[date0.getDay()]
+  })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
+    week[date1.getDay()]
+  })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
+    week[date2.getDay()]
+  })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
+    week[date3.getDay()]
+  })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
+    week[date4.getDay()]
+  })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
+    week[date5.getDay()]
+  })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
+    week[date6.getDay()]
+  })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -360,72 +374,21 @@ $(() => {
     for(let i = 0 ; i < str.length ; i++){
       strrr1 = strrr1 + str[i];
     }
+    // 확인점1
     let totprice = Number(strrr1) + Number(strrr2);
-
-    let totpricecom = '';
-
-    if(String(totprice).length == 5){
-      totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
-    }else if(String(totprice).length == 6){
-      totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
-    }
-
-    $('.tot_price_wrap').find('.tot_price1').html(totpricecom);
-
-    let taxprice = totprice*0.01; // 세금
-    if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
-      let backtaxpricecom = '';
-
-      if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
-        backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
-        console.log(backtaxpricecom);
-      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
-        if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
-          backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
-          console.log(backtaxpricecom);
-        }else{
-          backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
-          console.log(backtaxpricecom);
-        }
-      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
-        backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
-        console.log(backtaxpricecom);
+      if(strrr1.length == 5){
+        $('.strrr1').html(`${strrr1.substr(-5,2)},${strrr1.substr(-3,3)}`);
+      }else if(strrr1.length == 6){
+        $('.strrr1').html(`${strrr1.substr(-6,3)},${strrr1.substr(-3,3)}`);
       }
-      let forwardtaxpricecom=''
-      if(String(taxprice).length == 4){
-        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
-      }else if(String(taxprice).length == 5){
-        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+      if(strrr2.length == 5){
+        $('.strrr2').html(`${strrr2.substr(-5,2)},${strrr2.substr(-3,3)}`);
+      }else if(strrr2.length == 6){
+        $('.strrr2').html(`${strrr2.substr(-6,3)},${strrr2.substr(-3,3)}`);
       }
-      let taxpricecom = forwardtaxpricecom + backtaxpricecom;      
-      $('.tot_price_wrap').find('.tot_price3').html(taxpricecom);
-    }else{ // 세금이 3자리수 이하일때
-      $('.tot_price_wrap').find('.tot_price3').html(taxprice);
-    }
 
-    let totalprice = totprice + 10000 + totprice*0.01;
-    let finaltotalprice = '';
-    if(String(totalprice).length == 5){
-      finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
-    }else if(String(totalprice).length == 6){
-      finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
-    }
-
-    $('.total_price_wrap').find('.total_price').html(finaltotalprice);
-    $('.finaltotalprice').html(finaltotalprice);
-
-    $('.price_wrap1').on('click', function(){
-      $('.price_wrap1').removeClass('on1');
-      $(this).addClass('on1');
-      let str = $(this).children('.date_price').html().split(',');
-      strrr2 = '';
-      for(let i = 0 ; i < str.length ; i++){
-        strrr2 = strrr2 + str[i];
-      }
-      let totprice = Number(strrr1) + Number(strrr2);
 
       let totpricecom = '';
-
       if(String(totprice).length == 5){
         totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
       }else if(String(totprice).length == 6){
@@ -433,6 +396,7 @@ $(() => {
       }
 
       $('.tot_price_wrap').find('.tot_price1').html(totpricecom);
+      $('.tot_price11').html(totpricecom);
 
       let taxprice = totprice*0.01; // 세금
       if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
@@ -461,8 +425,12 @@ $(() => {
         }
         let taxpricecom = forwardtaxpricecom + backtaxpricecom;      
         $('.tot_price_wrap').find('.tot_price3').html(taxpricecom);
+        $('.tot_price33').html(taxpricecom);
+        $('.taxpriceprint').html(taxpricecom);
       }else{ // 세금이 3자리수 이하일때
         $('.tot_price_wrap').find('.tot_price3').html(taxprice);
+        $('.tot_price33').html(taxprice);
+        $('.taxpriceprint').html(taxprice);
       }
 
       let totalprice = totprice + 10000 + totprice*0.01;
@@ -475,6 +443,87 @@ $(() => {
 
       $('.total_price_wrap').find('.total_price').html(finaltotalprice);
       $('.finaltotalprice').html(finaltotalprice);
+      $('.finaltotalpricee').html(finaltotalprice);
+    
+    // 확인점2
+    $('.price_wrap1').on('click', function(){
+      $('.price_wrap1').removeClass('on1');
+      $(this).addClass('on1');
+      let str = $(this).children('.date_price').html().split(',');
+      strrr2 = '';
+      for(let i = 0 ; i < str.length ; i++){
+        strrr2 = strrr2 + str[i];
+      }
+      // 확인점3
+      let totprice = Number(strrr1) + Number(strrr2);
+      if(strrr1.length == 5){
+        $('.strrr1').html(`${strrr1.substr(-5,2)},${strrr1.substr(-3,3)}`);
+      }else if(strrr1.length == 6){
+        $('.strrr1').html(`${strrr1.substr(-6,3)},${strrr1.substr(-3,3)}`);
+      }
+      if(strrr2.length == 5){
+        $('.strrr2').html(`${strrr2.substr(-5,2)},${strrr2.substr(-3,3)}`);
+      }else if(strrr2.length == 6){
+        $('.strrr2').html(`${strrr2.substr(-6,3)},${strrr2.substr(-3,3)}`);
+      }
+
+
+      let totpricecom = '';
+      if(String(totprice).length == 5){
+        totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
+      }else if(String(totprice).length == 6){
+        totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
+      }
+
+      $('.tot_price_wrap').find('.tot_price1').html(totpricecom);
+      $('.tot_price11').html(totpricecom);
+
+      let taxprice = totprice*0.01; // 세금
+      if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
+        let backtaxpricecom = '';
+
+        if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
+          backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
+          console.log(backtaxpricecom);
+        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
+          if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
+            backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
+            console.log(backtaxpricecom);
+          }else{
+            backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+            console.log(backtaxpricecom);
+          }
+        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
+          backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+          console.log(backtaxpricecom);
+        }
+        let forwardtaxpricecom=''
+        if(String(taxprice).length == 4){
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
+        }else if(String(taxprice).length == 5){
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+        }
+        let taxpricecom = forwardtaxpricecom + backtaxpricecom;      
+        $('.tot_price_wrap').find('.tot_price3').html(taxpricecom);
+        $('.tot_price33').html(taxpricecom);
+        $('.taxpriceprint').html(taxpricecom);
+      }else{ // 세금이 3자리수 이하일때
+        $('.tot_price_wrap').find('.tot_price3').html(taxprice);
+        $('.tot_price33').html(taxprice);
+        $('.taxpriceprint').html(taxprice);
+      }
+
+      let totalprice = totprice + 10000 + totprice*0.01;
+      let finaltotalprice = '';
+      if(String(totalprice).length == 5){
+        finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
+      }else if(String(totalprice).length == 6){
+        finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
+      }
+
+      $('.total_price_wrap').find('.total_price').html(finaltotalprice);
+      $('.finaltotalprice').html(finaltotalprice);
+      $('.finaltotalpricee').html(finaltotalprice);
     })
 
   })
@@ -944,43 +993,48 @@ function fnSetPaxCountUp(strPaxType, obj) {
 }
 
 function submit() {
-
-  var
-    iAdultCount = parseInt($('.round_wrap').find('strong[name=adultPaxCnt]').text()), // 성인
-    iChildCount = parseInt($('.oneway_wrap').find('strong[name=childPaxCnt]').text()), // 소아
-    iInfantCount = parseInt($('.multi_wrap').find('strong[name=infantPaxCnt]').text()); // 유아
-
-  console.log(iAdultCount);
-  console.log(iChildCount);
-  console.log(iInfantCount)
+  console.log("작동");
+  var iAdultCount = parseInt(
+      $(".person_pop_layer").find("strong[name=adultPaxCnt]").text()
+    ),
+    iChildCount = parseInt(
+      $(".person_pop_layer").find("strong[name=childPaxCnt]").text()
+    ),
+    iInfantCount = parseInt(
+      $(".person_pop_layer").find("strong[name=infantPaxCnt]").text()
+    );
 
   if (iAdultCount > 0 && iChildCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount + ' 유아 ' + iInfantCount);
+    $("strong[name=person_num]").text(
+      "성인 " + iAdultCount + " 소아 " + iChildCount + " 유아 " + iInfantCount
+    );
   } else if (iAdultCount > 0 && iChildCount > 0) {
-    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 소아 ' + iChildCount);
+    $("strong[name=person_num]").text(
+      "성인 " + iAdultCount + " 소아 " + iChildCount
+    );
   } else if (iAdultCount > 0 && iInfantCount > 0) {
-    $("strong[name=person_num]").text('성인 ' + iAdultCount + ' 유아 ' + iInfantCount);
+    $("strong[name=person_num]").text(
+      "성인 " + iAdultCount + " 소아 " + iInfantCount
+    );
   } else if (iAdultCount > 0) {
-    $("strong[name=person_num]").text('성인 ' + iAdultCount);
+    $("strong[name=person_num]").text("성인 " + iAdultCount);
   } else if (iChildCount > 0) {
-    $("strong[name=person_num]").text('소아 ' + iChildCount);
+    $("strong[name=person_num]").text("소아 " + iChildCount);
   }
 
   // 중요. 확인 버튼 누를 때 성인, 소아, 유아의 수를 input:hidden에 넣음
   // 아무것도 선택 안할 경우 .adultPaxCnt의 default값 : 1로 지정
-  $('.adultPaxCnt').val(iAdultCount);
-  $('.childPaxCnt').val(iChildCount);
-  $('.infantPaxCnt').val(iInfantCount);
+  $(".adultPaxCnt").val(iAdultCount);
+  $(".childPaxCnt").val(iChildCount);
+  $(".infantPaxCnt").val(iInfantCount);
 
+  $(".person_layerbtn").css({ color: "rgb(0, 0, 0)" });
+  $(".person_down_img").css({ display: "inline-block" });
+  $(".person_up_img").css({ display: "none" });
+  $(".person_pop_layer").slideUp(50);
 
-  $(".person_layerbtn").css({ "color": "rgb(0, 0, 0)" });
-  $(".person_down_img").css({ "display": "inline-block" });
-  $(".person_up_img").css({ "display": "none" });
-  $('.person_pop_layer').slideUp(50);
-
-
-  $(".go_layerbtn").css({ "color": "rgb(145, 0, 70)" });
-  $(".go_select_opt").addClass('on');
+  $(".go_layerbtn").css({ color: "rgb(145, 0, 70)" });
+  $(".go_select_opt").addClass("on");
   $(".go_layer").slideDown("fast");
 }
 
