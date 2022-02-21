@@ -174,6 +174,28 @@ $(function () {
         $(".service_menu .menu3img").css("display", "block");
         $(".service_menu .menu3_invert").css("display", "none");
     })
+    $(".select_seat_wrap2 .select_comp").on("click", function() {
+        $(".service_content_wrap1").css("display", "none");
+        $(".service_content_wrap2").css("display", "block");  
+        $(".service_content_wrap3").css("display", "none");
+        $(".service_menu .menu2").css("color", "white");
+        $(".service_menu .menu2").css("background-color", "#661e43");
+
+        $(".service_menu .menu1").css("color", "#444");
+        $(".service_menu .menu1").css("background-color", "#EBEBEB");
+        $(".service_menu .menu3").css("color", "#444");
+        $(".service_menu .menu3").css("background-color", "#EBEBEB");
+
+        $(".service_menu .menu1img").css("display", "block");
+        $(".service_menu .menu1_invert").css("display", "none");
+    
+        $(".service_menu .menu2img").css("display", "none");
+        $(".service_menu .menu2_invert").css("display", "block");
+    
+        $(".service_menu .menu3img").css("display", "block");
+        $(".service_menu .menu3_invert").css("display", "none");
+})
+
     $(".service_menu .menu3").on("click", function() {
         $("#modal_agree_wrap").hide();
         $(".service_content_wrap1").css("display", "none");
@@ -197,6 +219,30 @@ $(function () {
         $(".service_menu .menu3img").css("display", "none");
         $(".service_menu .menu3_invert").css("display", "block");
     })
+
+    $(".select_baggage_wrap .select_comp").on("click", function() {
+        $("#modal_agree_wrap").hide();
+        $(".service_content_wrap1").css("display", "none");
+        $(".service_content_wrap2").css("display", "none");
+        $(".service_content_wrap3").css("display", "block");
+        $(".service_menu .menu3").css("color", "white");
+        $(".service_menu .menu3").css("background-color", "#661e43");
+        $("table .detail").css("display", "none");
+
+        $(".service_menu .menu1").css("color", "#444");
+        $(".service_menu .menu1").css("background-color", "#EBEBEB");
+        $(".service_menu .menu2").css("color", "#444");
+        $(".service_menu .menu2").css("background-color", "#EBEBEB");
+
+        $(".service_menu .menu1img").css("display", "block");
+        $(".service_menu .menu1_invert").css("display", "none");
+    
+        $(".service_menu .menu2img").css("display", "block");
+        $(".service_menu .menu2_invert").css("display", "none");
+    
+        $(".service_menu .menu3img").css("display", "none");
+        $(".service_menu .menu3_invert").css("display", "block");
+})
 
 
     /*좌석안내 모달창 */
@@ -279,7 +325,30 @@ $(function () {
         $(".passenger_info_wrap2").css("display", "block");
         $(".seat_info_wrap1").css("display", "none");
         $(".seat_info_wrap2").css("display", "block");
+    })
 
+    $(".select_seat_wrap1 .select_comp").on("click", function() {
+            $(".move_map").css("position", "absolute");
+            $(".move_map").css("top", "80px");
+            $(".seat_info").css("position", "absolute");
+            $(".seat_info").css("top", "95px");
+            $(".seat_info").css("left", "30px");
+    
+            $(".service_title1 .section1").css("background-color", "#EBEBEB");
+            $(".service_title1 .section1").css("color", "#444");
+            $(".service_title1 .section2").css("background-color", "#661e43");
+            $(".service_title1 .section2").css("color", "#fff");
+    
+            $(".service_content_wrap1 .service_title1 .section2 .checkBox_1").css("display", "inline-block");
+            $(".service_content_wrap1 .service_title1 .section2 .checkBox_2").css("display", "none");
+            $(".service_content_wrap1 .service_title1 .section1 .checkBox_1").css("display", "none");
+            $(".service_content_wrap1 .service_title1 .section1 .checkBox_2").css("display", "inline-block");
+            $(".select_seat_wrap1").css("display", "none");
+            $(".select_seat_wrap2").css("display", "flex");
+            $(".passenger_info_wrap1").css("display", "none");
+            $(".passenger_info_wrap2").css("display", "block");
+            $(".seat_info_wrap1").css("display", "none");
+            $(".seat_info_wrap2").css("display", "block");
     })
     /*구간선택2 */
     /*구간선택 끝 */

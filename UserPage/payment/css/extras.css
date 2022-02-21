@@ -1366,7 +1366,7 @@ body{
 
 .service_content .select_baggage_wrap {
     width: 745px;
-    padding: 20px;
+    padding: 0 10px;
 }
 
 .service_content .select_baggage_wrap .baggage_1, .baggage_2 {
@@ -1687,7 +1687,21 @@ body{
     border: none;
     font-weight: bold;
 }
-
+.service_content_wrap2 .select_comp {    
+    position: fixed;
+    display: flex;
+    bottom: 100px;
+    left: 56%;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 60px;
+    background-color: #BDD600;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(32, 32, 32, 0.5);
+}
 
 .service_content_wrap3 .service_content .insContent2 h2{
     margin-top: 30px;
