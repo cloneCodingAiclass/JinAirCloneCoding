@@ -581,6 +581,16 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
 }
+.covid_info .info_title .close{
+    position: relative;
+    left: 600px;
+    top: -10px;
+    width: 26px;
+    height: 26px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-image: url(/img/btn_close3.png);
+}
 .covid_info .info_box{
     background-color: white;
     width: 700px;
@@ -657,6 +667,19 @@ body{
     font-weight: 600;
 }
 .info_main .point_info{
+    width: 150px;
+    height: 40px;
+    background-color:#BDD600;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.info_main .mkt_info{
     width: 150px;
     height: 40px;
     background-color:#BDD600;
@@ -807,4 +830,226 @@ input[type="file"]{
     font-weight: 600;
     font-size: 1rem;
     line-height: 25px;
+}
+
+/* pointInfo_modal */
+
+.pointInfo_modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 101;
+    display: none;
+    padding-left: 35%;
+    padding-top: 5%;
+}
+.pointInfo_modal > .modal_content{
+    width:600px; height:700px;
+    background:#fff;
+    position: relative;
+    box-sizing:border-box; 
+    line-height:23px; cursor:pointer;
+    overflow-y: auto;
+}
+.pointInfo_modal > .title {
+    width: 600px;
+    height: 60px;
+    background-color: #661E43;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 30px
+}
+.pointInfo_modal > .title .close{
+    position: relative;
+    top: -30px;
+    left: 550px;
+    width: 26px;
+    height: 26px;
+    background-image: url(/img/btn_close3.png);
+}
+.modal_content > .title > h2 {
+    color: #f7f7f6;
+    line-height: 100px;
+    margin-left: 30px;
+}
+.modal_content > table{
+    margin: 30px 10px 10px 10px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+.modal_content > table th{
+    border: 1px solid black;
+    background-color: #f2f2f2;
+}
+.modal_content > table td{
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* pointInfo_modal 끝 */
+/* mkt_modal */
+.mkt_modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 101;
+    display: none;
+    padding-left: 35%;
+    padding-top: 5%;
+}
+.mkt_modal > form{
+    width:600px; height:700px;
+    background:#fff;
+    position: relative;
+    box-sizing:border-box; 
+    line-height:23px; cursor:pointer;
+    overflow-y: auto;
+}
+.mkt_modal > .title {
+    width: 600px;
+    height: 60px;
+    background-color: #661E43;
+    text-indent: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 30px
+}
+.mkt_modal > .title .close{
+    position: relative;
+    top: -30px;
+    left: 550px;
+    width: 26px;
+    height: 26px;
+    background-image: url(/img/btn_close3.png);
+}
+.modal_content > .title > h2 {
+    color: #f7f7f6;
+    line-height: 100px;
+    margin-left: 30px;
+}
+.fieldForm {
+    overflow: hidden;
+    padding: 30px 30px 0;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+caption {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.ajax-file-upload {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 70px;
+    height: 29px;
+    border: 1px solid #009fda;
+    line-height: 27px;
+    padding: 0 12px;
+    text-align: center;
+    color: #009fda;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 10px 10px 0;
+    vertical-align: middle;
+}
+.ajax-upload-dragdrop {
+    border: 2px dotted #A5A5C7;
+    width: 420px;
+    color: #333333;
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 10px 0px 10px;
+}
+.fieldForm tr {
+    border-top: 1px solid #e8e8e8;
+}
+.fieldForm td input[type=text], .fieldForm td input[type=password], .fieldForm td select {
+    width: 100%;
+    height: 62px;
+    padding: 0 20px;
+    color: #000;
+    text-align: left;
+}
+
+.fieldForm th, .fieldForm td, .fieldForm input[type=text], .fieldForm select, .fieldForm textarea, .fieldForm .chkArea label {
+    font-size: 16px;
+}
+input.placeholder {
+    color: #777 !important;
+}
+.fieldForm th, .fieldForm td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.fieldForm td {
+    height: 62px;
+    padding: 10px;
+    color: #000;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+.btnArea {
+    margin-top: 50px;
+    text-align: center;
+}
+.btnTypeA {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 135px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #000 !important;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #bdd600;
+}
+.btnTypeB {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 135px;
+    height: 42px;
+    line-height: 40px;
+    padding: 0 29px;
+    border: 1px solid #bdd600;
+    text-align: center;
+    font-size: 14px;
+    color: #000 !important;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+}
+.btnArea:after {
+    content: "";
+    display: block;
+    height: 30px;
 }

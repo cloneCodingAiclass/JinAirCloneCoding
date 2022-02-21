@@ -89,6 +89,11 @@ $(function () {
         $('body').css('overflow', '');        
         e.stopPropagation();  
     });
+    $('.close').click(function(e){
+        $('.covid_info').fadeOut(200);  
+        $('body').css('overflow', '');        
+        e.stopPropagation();  
+    });
     
     $(window).scroll(function() {
         if($(this).scrollTop() > 90) {
@@ -126,4 +131,37 @@ $(function () {
         let data = e.dataTransfer.files[0];
         console.dir(data);        
     })
+});
+
+$(function() {
+    $(".point_info").click(function(){
+        $('.pointInfo_modal').fadeIn();
+        $('body').css('overflow', 'hidden');
+    });
+    $(".close").click(function(){
+        $('.pointInfo_modal').fadeOut();
+        $('body').css('overflow', '');
+    });
+});
+
+$(function() {
+    $(".mkt_info").click(function(){
+        $('.mkt_modal').fadeIn();
+        $('body').css('overflow', 'hidden');
+    });
+    $(".close").click(function(){
+        $('.mkt_modal').fadeOut();
+        $('body').css('overflow', '');
+    });
+});
+
+$(function() {
+    $(".btnTypeA").click(function(){
+        $('.mkt_modal').fadeOut();
+        $('body').css('overflow', '');
+    });
+    $(".btnTypeB").click(function(){
+        $('.mkt_modal').fadeOut();
+        $('body').css('overflow', '');
+    });
 });
