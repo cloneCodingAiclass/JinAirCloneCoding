@@ -369,6 +369,13 @@ $(() => {
   $('.price_wrap').on('click', function(){
     $('.price_wrap').removeClass('on');
     $(this).addClass('on');
+
+    // 위치 움직이기
+    window.scrollTo({
+      top: $('.air_list2_wrap').offset().top-90,
+      behavior: 'smooth'
+    });
+
     let str = $(this).children('.date_price').html().split(',');
     strrr1 = '';
     for(let i = 0 ; i < str.length ; i++){
@@ -452,6 +459,12 @@ $(() => {
     // 확인점2
     $('.price_wrap1').on('click', function(){
       $('.price_wrap1').removeClass('on1');
+      // 위치 움직이기
+      window.scrollTo({
+        top: $('.fare_wrap').offset().top-120,
+        behavior: 'smooth'
+      });
+
       $(this).addClass('on1');
       let str = $(this).children('.date_price').html().split(',');
       strrr2 = '';
