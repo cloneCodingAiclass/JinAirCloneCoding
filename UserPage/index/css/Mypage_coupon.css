@@ -567,6 +567,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 101;
 }
 .pwcheck_modal .pwcheck_title{
     width: 500px;
