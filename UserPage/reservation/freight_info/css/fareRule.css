@@ -601,6 +601,9 @@ body{
     font-weight: 600;
     cursor: pointer;
 }
+.fareRules > ul > .pbgn{
+    margin-bottom: 60px;
+}
 .fareRule_container h2, h3{
     margin: 20px 0;
     color: black;
@@ -650,6 +653,7 @@ ul li{
     font-weight: 600;
     font-size: 1.1rem;
 }
+
 #fareRules2 .basic_box ul{
     width: 100%;
     display: flex;
@@ -661,8 +665,9 @@ ul li{
     width: 25%;
     padding: 50px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 12px;
     margin: 0;
+    font-weight: bold;
 }
 #fareRules2 .basic_box ul li p{
     font-weight: 500;
@@ -687,6 +692,10 @@ ul li{
 
 #fareRules2 .bundle_wrap{
     width: 100%;
+
+}
+#fareRules2 .bundle_wrap .bundle_step{
+margin-bottom: 50px;
 }
 #fareRules2 .bundle_wrap .bundle_step li{
     float: left;
@@ -789,4 +798,128 @@ ul li{
     background-color: #BDD600;
     font-size: 0.9rem;
     font-weight: 600;
+}
+.fontTypeC {
+    color: #bdd600 !important;
+}
+
+/* 이전 규정 확인하기 */
+#popWrap{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.midWrap{
+    overflow: hidden;
+    width: 1000px;
+    height: 850px;
+    background-color: #fff;
+}
+
+.midWrap > h1 {
+    width: 1000px;
+    min-height: 40px;
+    padding: 30px 50px 20px 30px;
+    font-size: 32px;
+    line-height: 1em;
+    color: #fff;
+    word-break: keep-all;
+    background: #661e43;
+    position: relative;
+    display: flex;
+}
+.midWrap > h1 > .close{
+    display: flex;
+    position: absolute;
+    background-image: url(/img/btn_close3.png);
+    width: 26px;
+    height: 26px;
+    left: 950px;
+}
+#popCont {
+    width: 1000px;
+    height: 1500px;
+    overflow: hidden;
+    padding: 30px 30px 30px;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.tabCont h3.typeA {
+    margin: 70px 0 20px 20px;
+    font-size: 26px;
+    line-height: 1em;
+    color: #000;
+    font-weight: bold;
+}
+.border_style {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 50px;
+}
+.tabCont h3.typeA .guide {
+    float: right;
+    margin-top: 5px;
+}
+.tabCont h3.typeA span {
+    font-size: 15px;
+}
+.bbsList {
+    width: 100%;
+    table-layout: fixed;
+}
+legend, caption {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.bbsList th[rowspan], .bbsList td[rowspan] {
+    border-right: 1px solid #eaeaea;
+}
+.bbsList thead th {
+    height: 50px;
+    font-size: 10px;
+    line-height: 22px;
+}
+.bbsList thead th {
+    height: 60px;
+    border-right: 0;
+    border-top-color: #000;
+    border-bottom: 0;
+    font-size: 18px;
+    background: #f7f7f6;
+    word-wrap: break-word;
+    text-align: center;
+}
+.bbsList tbody th, .bbsList tbody td {
+    height: 22px;
+    padding: 14px 0;
+    font-size: 10px;
+    line-height: 22px;
+}
+.bbsList tbody td {
+    height: 28px;
+    padding: 16px 0;
+    border: 1px solid #eaeaea;
+    border-right: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    word-wrap: break-word;
 }

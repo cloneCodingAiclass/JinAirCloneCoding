@@ -181,6 +181,17 @@ $(function () {
         $('.line1').css('border-bottom', '1px solid #661E43');
         $('.line2').css('border-bottom', '1px solid #F7F7F7');
     })
+
+    /* 이전 규정 확인하기 */
+    $('.fontTypeC').click(function(){
+        $('#popWrap').fadeIn();
+        $('body').css('overflow', 'hidden');
+    });
+    $('.close').click(function(){
+        $('#popWrap').fadeOut();
+        $('body').css('overflow', '');
+    });
+
 });
 
 function showFaq(obj){
