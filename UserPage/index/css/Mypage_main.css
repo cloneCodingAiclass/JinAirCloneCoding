@@ -843,6 +843,12 @@ body{
 .detailTbl p >span {
     display:inline-block;
 }
+.detailTbl p.long > span.cont span.arrow img {
+    position: relative;
+    top: 10px;
+    width: 40px;
+    margin: 0 40px;
+}
 .detailTbl p .dib{
     display:inline-block !important;
 }
