@@ -372,7 +372,7 @@
                                 <p class="jini_store_title">유의 사항</p>
                                 <p class="jini_store_content">출발 24시간 전까지 사전좌석지정 서비스 취소가 가능합니다. 출발 24시간 이내에는 취소 및 환불이 불가하며, 항공권 환불 시에도 사전좌석지정 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">신청한 좌석의 변경을 원하시는 경우에는, 기존 좌석 취소 후 재구매 해주시기 바랍니다.</p>
-                                <p class="jini_store_content">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다.</p>
+                                <p class="jini_store_content butt_wrap">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다. <span class="modal_rule_butt cursor">관련 규정 보기</span></p>
                                 <p class="jini_store_content_sub">비상구열 좌석 구매 후 공항에서 해당 좌석 이용이 불가능한 승객이라고 판단할 경우, 현장에서 임의로 좌석 지정을 취소할 수 있으며,
                                     이 경우 좌석 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">항공기 운영에 따라 일부 좌석은 사전좌석지정이 제한됨을 양해하여 주시기 바랍니다.</p>
@@ -560,7 +560,7 @@
                                 <p class="jini_store_title">유의 사항</p>
                                 <p class="jini_store_content">출발 24시간 전까지 사전좌석지정 서비스 취소가 가능합니다. 출발 24시간 이내에는 취소 및 환불이 불가하며, 항공권 환불 시에도 사전좌석지정 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">신청한 좌석의 변경을 원하시는 경우에는, 기존 좌석 취소 후 재구매 해주시기 바랍니다.</p>
-                                <p class="jini_store_content">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다.</p>
+                                <p class="jini_store_content butt_wrap">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다. <span class="modal_rule_butt cursor">관련 규정 보기</span></p>
                                 <p class="jini_store_content_sub">비상구열 좌석 구매 후 공항에서 해당 좌석 이용이 불가능한 승객이라고 판단할 경우, 현장에서 임의로 좌석 지정을 취소할 수 있으며,
                                     이 경우 좌석 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">항공기 운영에 따라 일부 좌석은 사전좌석지정이 제한됨을 양해하여 주시기 바랍니다.</p>
@@ -748,7 +748,7 @@
                                 <p class="jini_store_title">유의 사항</p>
                                 <p class="jini_store_content">출발 24시간 전까지 사전좌석지정 서비스 취소가 가능합니다. 출발 24시간 이내에는 취소 및 환불이 불가하며, 항공권 환불 시에도 사전좌석지정 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">신청한 좌석의 변경을 원하시는 경우에는, 기존 좌석 취소 후 재구매 해주시기 바랍니다.</p>
-                                <p class="jini_store_content">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다.</p>
+                                <p class="jini_store_content butt_wrap">관련 규정에 의거하여, 비상구 좌석 이용에 적합하지 않은 승객은 해당 좌석 배정을 제한하고 있습니다. <span class="modal_rule_butt cursor">관련 규정 보기</span></p>
                                 <p class="jini_store_content_sub">비상구열 좌석 구매 후 공항에서 해당 좌석 이용이 불가능한 승객이라고 판단할 경우, 현장에서 임의로 좌석 지정을 취소할 수 있으며,
                                     이 경우 좌석 비용은 환불되지 않습니다.</p>
                                 <p class="jini_store_content">항공기 운영에 따라 일부 좌석은 사전좌석지정이 제한됨을 양해하여 주시기 바랍니다.</p>
@@ -792,6 +792,46 @@
                 </div>
                 <!--좌석배치도 모달창 끝-->
             </div>
+            <!--비상구 좌석 지정 시 유의 사항 안내 모달창-->
+            <div id="modal_exit_seat_info">
+                <div class="modal_exit_seat_info">
+                    <div class="modal_title">
+                        <span class="text">
+                            비상구 좌석 지정 시 유의 사항 안내
+                        </span>
+                        <span class="close cursor">
+                            <img src="./img/close.png" alt="닫기" width="35px">
+                        </span>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="content">
+                            <p class="top_content"> 국토교통부의 운항기술기준(고시)에 의거하여, 비상 상황 발생 시 비상구 개방 등 임무 수행이 가능한 승객에 한해 비상구 좌석을 이용할 수 있사오니 <span class="col_red">하기 규정을 반드시 확인 후 좌석 지정해 주시기 바랍니다.</span>
+                            * 비상구 좌석 구매 승객은 웹/모바일 체크인 서비스 이용이 제한됩니다.
+                            <span class="col_red">* 출발지 공항 또는 객실 현장에서 착석 불가한 승객이라 판단될 경우 임의로 이용 취소 될 수 있으며 좌석 비용은 환불되지 않습니다.
+                            * 비상구는 반드시 승무원의 신호에 따라 개방되어야 하며, 임의로 비상구를 개방할 경우 항공보안법에 따라 형사 처벌을 받을 수 있습니다.</span>
+                            </p>
+                            <ul>
+                                <li>1. 만15세 미만이거나 동반자의 도움 없이 비상 상황에서의 역할을 수행하기에 불충분한 승객</li>
+                                <li>2. 승객의 상태나 책임(유소아 동반승객, 임산부 승객, 노약자등)으로 인하여, 비상 상황에서의 역할을 수행하는데 방해가 되거나 수행할 경우 해를 입게 되는 승객</li>
+                                <li>3. 활동성,체력 또는 양팔이나 손 및 다리의 민첩성이 비상 상황에서의 역할을 수행하기 어려운승객
+                                    <ul class="sub_ul">
+                                        <li>- 비상구나 탈출용 슬라이드 조작장치에 대한 접근</li>
+                                        <li>- 탈출용 슬라이드 조작장치를 잡고 밀거나 당기고 돌리는 동작, 슬라이드의 전개 또는 팽창 후 안정 유지 및 탈출용 슬라이드로 탈출한 승객이 슬라이드로부터 벗어날 수 있도록 하는 동작</li>
+                                        <li>- 비상구 작동 손잡이를 상하좌우로 잡고 당기거나 돌리거나 밀어서 비상구를 여는 동작 및 OVERWING WINDOW EXIT 작동 손잡이를 잡아 당겨서 EXIT를 여는 동작</li>
+                                        <li>- 날개 위의 OVERWING WINDOW EXIT와 비슷한 크기와 무게의 장애물 제거 및 장애물 제거 시 균형의 유지</li>
+                                        <li>- 신속한 비상구로의 접근 및 탈출</li>
+                                    </ul>
+                                </li>
+                                <li>4. 글 또는 그림의 형태로 제공된 비상탈출에 관한 지시를 읽고 이해하지 못하거나 승무원의 구두 지시를 이해하지 못하는 승객</li>
+                                <li>5. 콘텍트 렌즈나 안경을 제외한 다른 시력보조장비 없이는 비상 상황에서의 역할을 수행할 수 없는 승객</li>
+                                <li>6. 일반적인 보청기를 제외한 다른 청력보조장비 없이는 승무원의 탈출지시를 듣고 이해 할 수 없는 승객</li>
+                                <li>7. 다른 승객들에게 정보를 적절하게 전달할 수 있는 능력이 부족한 승객</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <!--비상구 좌석 지정 시 유의 사항 안내 모달창 끝-->
         </div>
         <!-- container 끝-->
         <!-- 푸터-->
@@ -835,6 +875,7 @@
                                 <li><a href="/UserPage/serviceCount/airport/baggage/baggage.html?directId=findbaggage">기내 유실물 찾기</a></li>
                             </ul>
                         </div>
+                        
                     </div><!--상단메뉴 컨테이너 끝-->
                 </div><!--위쪽푸터 끝-->
             </div>

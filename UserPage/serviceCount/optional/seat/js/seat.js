@@ -167,3 +167,15 @@ $(() => {
     })
     
 })
+
+$(() => {
+    $("#modal_exit_seat_info").hide();
+    $(".modal_rule_butt").on("click", () => {
+        $("#modal_exit_seat_info").fadeIn();
+        $("#modal_exit_seat_info").css("display", "flex");
+    })
+    $("#modal_exit_seat_info .close").on("click", () => {
+        $("#modal_exit_seat_info").fadeOut();
+        $("#modal_exit_seat_info").css("display", "none");
+    })
+})
