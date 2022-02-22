@@ -439,7 +439,6 @@ tr {
 .keywordList >li .ico {
     position: absolute;
     left: 10px;
-    top: 140px;
     width: 150px;
     height: 150px;
     border: 1px solid #000;
@@ -453,7 +452,7 @@ tr {
     padding-left: 200px;
     display: table-cell;
     vertical-align: middle;
-    top: 50px;
+    top: -50px;
 }
 .btnTypeA {
     display: inline-block;
