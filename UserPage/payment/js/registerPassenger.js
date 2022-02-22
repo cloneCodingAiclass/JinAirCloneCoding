@@ -716,7 +716,6 @@ function updateTrip() {
     let person = $(".person_cnt").text();
     let go1 = $("#go_area1").text();
     let arr1 = $("#arr_area1").text().trim();
-    // 세션으로 날짜값 받기
     let godate = $("#godate").text();
 
     let sub = godate.substr(5, 14);

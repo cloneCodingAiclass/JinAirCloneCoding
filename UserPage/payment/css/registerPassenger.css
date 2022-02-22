@@ -618,9 +618,6 @@ select.p90 {
     text-align: center;
 }
 
-.radio_wrap input[type="radio"]{
-    display:none;
-}
 
 .radio_wrap input[type="radio"] + span{
     display: inline-block;
@@ -1663,7 +1660,7 @@ td.cur::before {
 .oneway_wrap table.modal_table td,
 .multi_wrap table.modal_table td {
     border: none;
-    padding: 10px 5px;
+    padding: 10px 50px;
 }
 
 .go_layerbtn,
@@ -1721,23 +1718,44 @@ td.cur::before {
     font-size: 18px;
     text-align: center;
 }
-.go_layer,
-.go_layer2 {
+.go_layer{
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 195px;
-    left: 190px;
+    top: 200px;
+    left: 132px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
     text-align: left;
 }
-.go_layer2 {
+.multi_wrap .go_layer{
+    width: 880px;
+    padding: 40px 20px;
     position: absolute;
-    top: 225px;
+    display: none;
+    top: 280px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+}
+.multi_wrap .go_layer2 {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 362px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
 }
 .go_layer div,
 .go_layer2 div {
@@ -1784,22 +1802,44 @@ td.cur::before {
     line-height: 2;
     line-height: 3;
 }
-.arrive_layer,
-.arrive_layer2 {
+.arrive_layer{
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 195px;
-    left: 190px;
+    top: 200px;
+    left: 132px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
     text-align: left;
 }
-.arrive_layer2 {
-    top: 225px;
+.multi_wrap .arrive_layer{
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 280px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+}
+.multi_wrap .arrive_layer2 {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 362px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
 }
 .arrive_layer div,
 .arrive_layer2 div {

@@ -125,63 +125,63 @@ $(function () {
   $("#info_table_wrap").css("overflow-x", "none");
 
   $(".img").on('click', () => {
-      $(".img").css("display", "none");
-      $(".img2").css("display", "block");
-      $("#modal_totP_wrap").fadeIn();
-      $(".fix_modal").fadeIn();
+    $(".img").css("display", "none");
+    $(".img2").css("display", "block");
+    $("#modal_totP_wrap").fadeIn();
+    $(".fix_modal").fadeIn();
   })
   $(".close").on('click', () => {
-      $(".img2").css("display", "none");
-      $(".img").css("display", "block");
-      $("#modal_totP_wrap").fadeOut();
-      $(".fix_modal").fadeOut();
+    $(".img2").css("display", "none");
+    $(".img").css("display", "block");
+    $("#modal_totP_wrap").fadeOut();
+    $(".fix_modal").fadeOut();
   })
   $(".img2").on('click', () => {
-      $(".img2").css("display", "none");
-      $(".img").css("display", "block");
-      $("#modal_totP_wrap").fadeOut();
-      $(".fix_modal").fadeOut();
+    $(".img2").css("display", "none");
+    $(".img").css("display", "block");
+    $("#modal_totP_wrap").fadeOut();
+    $(".fix_modal").fadeOut();
   })
 
   /*자세히 보기 */
   $(".det1").on('click', () => {
-      $(".detD1").css("display", "inline-block");
+    $(".detD1").css("display", "inline-block");
   })
 
   $(".det2").on('click', () => {
-      $(".detD2").css("display", "inline-block");
+    $(".detD2").css("display", "inline-block");
   })
 
   $(".plus_1").on('click', () => {
-      $("#info_table_wrap").css("overflow", "scroll");
-      $("#info_table_wrap").css("overflow-x", "hidden");
-      $("#info_table_wrap").animate({ scrollTop: 300 }, 600);
-      $(".plus_1").css("display", "none");
-      $(".minus_1").css("display", "inline-block");
+    $("#info_table_wrap").css("overflow", "scroll");
+    $("#info_table_wrap").css("overflow-x", "hidden");
+    $("#info_table_wrap").animate({ scrollTop: 300 }, 600);
+    $(".plus_1").css("display", "none");
+    $(".minus_1").css("display", "inline-block");
   })
   $(".minus_1").on('click', () => {
-      $("#info_table_wrap").css("overflow", "hidden");
-      $("#info_table_wrap").css("overflow-x", "none");
-      $(".plus_1").css("display", "inline-block");
-      $(".minus_1").css("display", "none");
+    $("#info_table_wrap").css("overflow", "hidden");
+    $("#info_table_wrap").css("overflow-x", "none");
+    $(".plus_1").css("display", "inline-block");
+    $(".minus_1").css("display", "none");
   })
 
 
   $(window).scroll(function () {
-      let y = $(".fix_bott_wrap").offset().top - 650;
-      let h = $(document).scrollTop();
-      if (window.pageYOffset <= y) {
-          $(".fix_bott").css("position", "fixed");
-          $(".fix_bott").css("bottom", "0px");
-          $("#modal_totP_wrap").css("position", "fixed");
-          $("#modal_totP_wrap").css("top", "-100px");
-          $(".fix_trip_info").css("position", "fixed");
-      } else {
-          $(".fix_bott").css("position", "absolute");
-          $("#modal_totP_wrap").css("position", "absolute");
-          $("#modal_totP_wrap").css("top", y - 280);
-          $(".fix_trip_info").css("position", "absolute");
-      }
+    let y = $(".fix_bott_wrap").offset().top - 650;
+    let h = $(document).scrollTop();
+    if (window.pageYOffset <= y) {
+      $(".fix_bott").css("position", "fixed");
+      $(".fix_bott").css("bottom", "0px");
+      $("#modal_totP_wrap").css("position", "fixed");
+      $("#modal_totP_wrap").css("top", "-100px");
+      $(".fix_trip_info").css("position", "fixed");
+    } else {
+      $(".fix_bott").css("position", "absolute");
+      $("#modal_totP_wrap").css("position", "absolute");
+      $("#modal_totP_wrap").css("top", y - 280);
+      $(".fix_trip_info").css("position", "absolute");
+    }
   });
 
   /*날짜 설정 */
@@ -209,27 +209,20 @@ $(function () {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
-    week[date0.getDay()]
-  })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
-    week[date1.getDay()]
-  })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
-    week[date2.getDay()]
-  })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
-    week[date3.getDay()]
-  })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
-    week[date4.getDay()]
-  })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
-    week[date5.getDay()]
-  })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
-    week[date6.getDay()]
-  })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
+    })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
+    })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
+    })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
+    })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
+    })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
+    })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
+    })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -297,27 +290,20 @@ function set_day(res) {
   let date5 = new Date(yyyy, mm, dd + 2);
   let date6 = new Date(yyyy, mm, dd + 3);
 
-  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${
-    week[date0.getDay()]
-  })`;
-  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${
-    week[date1.getDay()]
-  })`;
-  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${
-    week[date2.getDay()]
-  })`;
-  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${
-    week[date3.getDay()]
-  })`;
-  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${
-    week[date4.getDay()]
-  })`;
-  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${
-    week[date5.getDay()]
-  })`;
-  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${
-    week[date6.getDay()]
-  })`;
+  let sel_date0 = `${date0.getFullYear()}-${date0.getMonth()}-${date0.getDate()}(${week[date0.getDay()]
+    })`;
+  let sel_date1 = `${date1.getFullYear()}-${date1.getMonth()}-${date1.getDate()}(${week[date1.getDay()]
+    })`;
+  let sel_date2 = `${date2.getFullYear()}-${date2.getMonth()}-${date2.getDate()}(${week[date2.getDay()]
+    })`;
+  let sel_date3 = `${date3.getFullYear()}-${date3.getMonth()}-${date3.getDate()}(${week[date3.getDay()]
+    })`;
+  let sel_date4 = `${date4.getFullYear()}-${date4.getMonth()}-${date4.getDate()}(${week[date4.getDay()]
+    })`;
+  let sel_date5 = `${date5.getFullYear()}-${date5.getMonth()}-${date5.getDate()}(${week[date5.getDay()]
+    })`;
+  let sel_date6 = `${date6.getFullYear()}-${date6.getMonth()}-${date6.getDate()}(${week[date6.getDay()]
+    })`;
 
   $(".date0").html(sel_date0);
   $(".date1").html(sel_date1);
@@ -367,109 +353,109 @@ $(() => {
   let strrr1 = 0;
   let strrr2 = 0;
 
-  $('.price_wrap').on('click', function(){
+  $('.price_wrap').on('click', function () {
     $('.price_wrap').removeClass('on');
     $(this).addClass('on');
 
     // 위치 움직이기
     window.scrollTo({
-      top: $('.air_list2_wrap').offset().top-90,
+      top: $('.air_list2_wrap').offset().top - 90,
       behavior: 'smooth'
     });
 
     let str = $(this).children('.date_price').html().split(',');
     strrr1 = '';
-    for(let i = 0 ; i < str.length ; i++){
+    for (let i = 0; i < str.length; i++) {
       strrr1 = strrr1 + str[i];
     }
     // 확인점1
     // 구간 1 + 구간 2 = 항공운임
     let totprice = Number(strrr1) + Number(strrr2);
     // 구간1 (,) 넣어주고 자세히보기에 출력
-    if(strrr1.length == 5){
-      $('.strrr1').html(`${strrr1.substr(-5,2)},${strrr1.substr(-3,3)}`);
-    }else if(strrr1.length == 6){
-      $('.strrr1').html(`${strrr1.substr(-6,3)},${strrr1.substr(-3,3)}`);
+    if (strrr1.length == 5) {
+      $('.strrr1').html(`${strrr1.substr(-5, 2)},${strrr1.substr(-3, 3)}`);
+    } else if (strrr1.length == 6) {
+      $('.strrr1').html(`${strrr1.substr(-6, 3)},${strrr1.substr(-3, 3)}`);
     }
     // 구간2 (,) 넣어주고 자세히보기에 출력
-    if(strrr2.length == 5){
-      $('.strrr2').html(`${strrr2.substr(-5,2)},${strrr2.substr(-3,3)}`);
-    }else if(strrr2.length == 6){
-      $('.strrr2').html(`${strrr2.substr(-6,3)},${strrr2.substr(-3,3)}`);
+    if (strrr2.length == 5) {
+      $('.strrr2').html(`${strrr2.substr(-5, 2)},${strrr2.substr(-3, 3)}`);
+    } else if (strrr2.length == 6) {
+      $('.strrr2').html(`${strrr2.substr(-6, 3)},${strrr2.substr(-3, 3)}`);
     }
 
     // 항공운인 (,) 처리
     let totpricecom = '';
-    if(String(totprice).length == 5){
-      totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
-    }else if(String(totprice).length == 6){
-      totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
+    if (String(totprice).length == 5) {
+      totpricecom = `${String(totprice).substr(-5, 2)},${String(totprice).substr(-3, 3)}`;
+    } else if (String(totprice).length == 6) {
+      totpricecom = `${String(totprice).substr(-6, 3)},${String(totprice).substr(-3, 3)}`;
     }
 
     $('.tot_price_wrap').find('.tot_price1').html(totpricecom); // 항공운임에 출력
     $('.tot_price11').html(totpricecom); // 자세히보기에 항공운임 출력
 
-    let taxprice = totprice*0.01; // 세금 계산
-    if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
+    let taxprice = totprice * 0.01; // 세금 계산
+    if (String(taxprice).length > 3) { // 세금이 4자리수 넘어갈 때
       let backtaxpricecom = '';
 
-      if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
+      if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 3) {
         // 뒷 3자리 처리
-        backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
-      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
-        if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
-          backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
-        }else{
-          backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+        backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3, 3))}`;
+      } else if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 2) {
+        if (Math.floor(String(taxprice).substr(-3, 3)) % 10 == 0) {
+          backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3, 3)))}0`;
+        } else {
+          backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3, 3)))}`;
         }
-      }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
-        backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+      } else if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 1) {
+        backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3, 3)))}`;
       }
-        // 앞자리 처리
-      let forwardtaxpricecom=''
-      if(String(taxprice).length == 4){
-        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
-      }else if(String(taxprice).length == 5){
-        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+      // 앞자리 처리
+      let forwardtaxpricecom = ''
+      if (String(taxprice).length == 4) {
+        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4, 1)));
+      } else if (String(taxprice).length == 5) {
+        forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5, 2)));
       }
 
       // 앞 뒷자리 결합
-      let taxpricecom = forwardtaxpricecom + backtaxpricecom;   
+      let taxpricecom = forwardtaxpricecom + backtaxpricecom;
       $('.tot_price_wrap').find('.tot_price3').html(taxpricecom); // 세금 출력
       $('.tot_price33').html(taxpricecom); // 자세히보기 1 출력
       $('.taxpriceprint').html(taxpricecom); // 자세히보기 2 출력
-    }else{ // 세금이 3자리수 이하일때
+    } else { // 세금이 3자리수 이하일때
       $('.tot_price_wrap').find('.tot_price3').html(taxprice);  // 세금 출력
       $('.tot_price33').html(taxprice); // 자세히보기 1 출력
       $('.taxpriceprint').html(taxprice); // 자세히보기 2 출력
     }
 
     // 총액
-    let totalprice = totprice + 10000 + totprice*0.01;
+    let totalprice = totprice + 10000 + totprice * 0.01;
     let finaltotalprice = '';
-    if(String(totalprice).length == 5){
-      finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
-    }else if(String(totalprice).length == 6){
-      finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
+    if (String(totalprice).length == 5) {
+      finaltotalprice = `${String(totalprice).substr(-5, 2)},${String(totalprice).substr(-3, 3)}`;
+    } else if (String(totalprice).length == 6) {
+      finaltotalprice = `${String(totalprice).substr(-6, 3)},${String(totalprice).substr(-3, 3)}`;
     }
 
     $('.total_price_wrap').find('.total_price').html(finaltotalprice);
     $('.finaltotalprice').html(finaltotalprice);
     $('.finaltotalpricee').html(finaltotalprice);
-    
+
     // 확인점2
-    $('.price_wrap1').on('click', function(){
+    $('.price_wrap1').on('click', function () {
       $('.price_wrap1').removeClass('on1');
       // 위치 움직이기
       window.scrollTo({
-        top: $('.fare_wrap').offset().top-120,
+        top: $('.fare_wrap').offset().top - 120,
         behavior: 'smooth'
       });
 
       $(this).addClass('on1');
       let str = $(this).children('.date_price').html().split(',');
       strrr2 = '';
-      for(let i = 0 ; i < str.length ; i++){
+      for (let i = 0; i < str.length; i++) {
         strrr2 = strrr2 + str[i];
       }
 
@@ -477,71 +463,71 @@ $(() => {
       // 구간 1 + 구간 2 = 항공운임
       let totprice = Number(strrr1) + Number(strrr2);
       // 구간1 (,) 넣어주고 자세히보기에 출력
-      if(strrr1.length == 5){
-        $('.strrr1').html(`${strrr1.substr(-5,2)},${strrr1.substr(-3,3)}`);
-      }else if(strrr1.length == 6){
-        $('.strrr1').html(`${strrr1.substr(-6,3)},${strrr1.substr(-3,3)}`);
+      if (strrr1.length == 5) {
+        $('.strrr1').html(`${strrr1.substr(-5, 2)},${strrr1.substr(-3, 3)}`);
+      } else if (strrr1.length == 6) {
+        $('.strrr1').html(`${strrr1.substr(-6, 3)},${strrr1.substr(-3, 3)}`);
       }
       // 구간2 (,) 넣어주고 자세히보기에 출력
-      if(strrr2.length == 5){
-        $('.strrr2').html(`${strrr2.substr(-5,2)},${strrr2.substr(-3,3)}`);
-      }else if(strrr2.length == 6){
-        $('.strrr2').html(`${strrr2.substr(-6,3)},${strrr2.substr(-3,3)}`);
+      if (strrr2.length == 5) {
+        $('.strrr2').html(`${strrr2.substr(-5, 2)},${strrr2.substr(-3, 3)}`);
+      } else if (strrr2.length == 6) {
+        $('.strrr2').html(`${strrr2.substr(-6, 3)},${strrr2.substr(-3, 3)}`);
       }
 
       // 항공운인 (,) 처리
       let totpricecom = '';
-      if(String(totprice).length == 5){
-        totpricecom = `${String(totprice).substr(-5,2)},${String(totprice).substr(-3,3)}`;
-      }else if(String(totprice).length == 6){
-        totpricecom = `${String(totprice).substr(-6,3)},${String(totprice).substr(-3,3)}`;
+      if (String(totprice).length == 5) {
+        totpricecom = `${String(totprice).substr(-5, 2)},${String(totprice).substr(-3, 3)}`;
+      } else if (String(totprice).length == 6) {
+        totpricecom = `${String(totprice).substr(-6, 3)},${String(totprice).substr(-3, 3)}`;
       }
 
       $('.tot_price_wrap').find('.tot_price1').html(totpricecom); // 항공운임에 출력
       $('.tot_price11').html(totpricecom); // 자세히보기에 항공운임 출력
 
-      let taxprice = totprice*0.01; // 세금 계산
-      if(String(taxprice).length > 3){ // 세금이 4자리수 넘어갈 때
+      let taxprice = totprice * 0.01; // 세금 계산
+      if (String(taxprice).length > 3) { // 세금이 4자리수 넘어갈 때
         let backtaxpricecom = '';
 
-        if(String(Math.floor(String(taxprice).substr(-3,3))).length == 3){
+        if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 3) {
           // 뒷 3자리 처리
-          backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3,3))}`;
-        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 2){
-          if(Math.floor(String(taxprice).substr(-3,3))%10 == 0){
-            backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3,3)))}0`;
-          }else{
-            backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+          backtaxpricecom = `,${Math.floor(String(taxprice).substr(-3, 3))}`;
+        } else if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 2) {
+          if (Math.floor(String(taxprice).substr(-3, 3)) % 10 == 0) {
+            backtaxpricecom = `,${String(Math.floor(String(taxprice).substr(-3, 3)))}0`;
+          } else {
+            backtaxpricecom = `,0${String(Math.floor(String(taxprice).substr(-3, 3)))}`;
           }
-        }else if(String(Math.floor(String(taxprice).substr(-3,3))).length == 1){
-          backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3,3)))}`;
+        } else if (String(Math.floor(String(taxprice).substr(-3, 3))).length == 1) {
+          backtaxpricecom = `,00${String(Math.floor(String(taxprice).substr(-3, 3)))}`;
         }
-          // 앞자리 처리
-        let forwardtaxpricecom=''
-        if(String(taxprice).length == 4){
-          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4,1)));
-        }else if(String(taxprice).length == 5){
-          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5,2)));
+        // 앞자리 처리
+        let forwardtaxpricecom = ''
+        if (String(taxprice).length == 4) {
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-4, 1)));
+        } else if (String(taxprice).length == 5) {
+          forwardtaxpricecom = String(Math.floor(String(taxprice).substr(-5, 2)));
         }
 
         // 앞 뒷자리 결합
-        let taxpricecom = forwardtaxpricecom + backtaxpricecom;   
+        let taxpricecom = forwardtaxpricecom + backtaxpricecom;
         $('.tot_price_wrap').find('.tot_price3').html(taxpricecom); // 세금 출력
         $('.tot_price33').html(taxpricecom); // 자세히보기 1 출력
         $('.taxpriceprint').html(taxpricecom); // 자세히보기 2 출력
-      }else{ // 세금이 3자리수 이하일때
+      } else { // 세금이 3자리수 이하일때
         $('.tot_price_wrap').find('.tot_price3').html(taxprice);  // 세금 출력
         $('.tot_price33').html(taxprice); // 자세히보기 1 출력
         $('.taxpriceprint').html(taxprice); // 자세히보기 2 출력
       }
 
       // 총액
-      let totalprice = totprice + 10000 + totprice*0.01;
+      let totalprice = totprice + 10000 + totprice * 0.01;
       let finaltotalprice = '';
-      if(String(totalprice).length == 5){
-        finaltotalprice = `${String(totalprice).substr(-5,2)},${String(totalprice).substr(-3,3)}`;
-      }else if(String(totalprice).length == 6){
-        finaltotalprice = `${String(totalprice).substr(-6,3)},${String(totalprice).substr(-3,3)}`;
+      if (String(totalprice).length == 5) {
+        finaltotalprice = `${String(totalprice).substr(-5, 2)},${String(totalprice).substr(-3, 3)}`;
+      } else if (String(totalprice).length == 6) {
+        finaltotalprice = `${String(totalprice).substr(-6, 3)},${String(totalprice).substr(-3, 3)}`;
       }
 
       $('.total_price_wrap').find('.total_price').html(finaltotalprice);
@@ -1018,8 +1004,8 @@ function fnSetPaxCountUp(strPaxType, obj) {
 function submit() {
   console.log("작동");
   var iAdultCount = parseInt(
-      $(".person_pop_layer").find("strong[name=adultPaxCnt]").text()
-    ),
+    $(".person_pop_layer").find("strong[name=adultPaxCnt]").text()
+  ),
     iChildCount = parseInt(
       $(".person_pop_layer").find("strong[name=childPaxCnt]").text()
     ),

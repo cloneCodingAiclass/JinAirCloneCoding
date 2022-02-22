@@ -555,26 +555,31 @@ $(() => {
 
   $(".checkbox_wrap #checkbox").on("click", () => {
     $("#modal_restricted_items_wrap").fadeIn();
+    $(".modal_restricted_items_wrap").fadeIn();
     $("body").css("overflow", "hidden");
   });
   $(
     "#modal_restricted_items_wrap .butt_canc, #modal_restricted_items_wrap .close"
   ).on("click", () => {
     $("#modal_restricted_items_wrap").fadeOut();
+    $(".modal_restricted_items_wrap").fadeOut();
     $(".checkbox_wrap #checkbox").prop("checked", false);
     $("body").css("overflow", "scroll");
   });
   $("#modal_restricted_items_wrap .butt_ok").on("click", () => {
     if ($("#modal_restricted_items_wrap #modal_checkbox").is(":checked")) {
       $("#modal_restricted_items_wrap").fadeOut();
+      $(".modal_restricted_items_wrap").fadeOut();
       $(".checkbox_wrap #checkbox").prop("checked", true);
       $("body").css("overflow", "scroll");
     } else {
       $("#modal_restricted_items_wrap #modal_conf_ok").fadeIn();
+      $(".modal_restricted_items_wrap #modal_conf_ok").fadeIn();
     }
   });
   $("#modal_restricted_items_wrap #modal_conf_ok").on("click", () => {
     $("#modal_restricted_items_wrap #modal_conf_ok").fadeOut();
+    $(".modal_restricted_items_wrap #modal_conf_ok").fadeOut();
   });
 });
 /* 항공기 위험물 안내 모달창 끝*/
@@ -636,12 +641,14 @@ $(() => {
   $("#modal_credit_int").hide();
   $(".dis_int").on("click", () => {
     $("#modal_credit_int").fadeIn();
+    $(".modal_credit_int").fadeIn();
     $("body").css("overflow", "hidden");
   });
   $(
     "#modal_credit_int .butt_canc_credit, #modal_fare_rules, .butt_ok_credit, .close"
   ).on("click", () => {
     $("#modal_credit_int").fadeOut();
+    $(".modal_credit_int").fadeOut();
     $("body").css("overflow", "scroll");
   });
 });
