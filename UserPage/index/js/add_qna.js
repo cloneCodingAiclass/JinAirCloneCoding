@@ -118,7 +118,7 @@ $(function () {
         }else{
             this.style.backgroundColor = 'lightgray';
         }
-});
+    });
     filebox.addEventListener('dragleave', function(e){
         this.style.backgroundColor = 'white';
     })
@@ -130,6 +130,16 @@ $(function () {
 
         let data = e.dataTransfer.files[0];
         console.dir(data);        
+    })
+
+    $('#file_add').on('change', function(){
+        $('.addfilecontent').css('display', 'block');
+        $('.addfilecontenttext').html($(this).val());
+    })
+    $('.addfilecontentbtn').on('click', function(){
+        $('.addfilecontent').css('display', 'none');
+        $('.addfilecontenttext').html('');
+        $('#file_add').val('');
     })
 });
 

@@ -661,6 +661,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
+    cursor: pointer;
 }
 .lcc_contents .search_box .search_form .go_layer div li a:hover {
     color: #7e0049;
@@ -699,6 +700,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 2;
+    cursor: pointer;
 }
 .lcc_contents .search_box .search_form .arrive_layer div li a:hover {
     color: #7e0049;
