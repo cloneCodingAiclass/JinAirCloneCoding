@@ -890,17 +890,28 @@ body {
     text-align: center;
     background-color: rgb(246, 247, 249);
 }
+#container .service_list > ul{
+    display: flex;
+    justify-content: center;
+}
+#container .service_list .service_item{
+    margin-right: 30px;
+}
 #container .service_list h3 {
     padding-top: 70px;
     margin-bottom: 20px;
     font-size: 45px;
     font-weight: bold;
     height: auto;
+    color: black;
 }
 #container .service_list .service_text {
     line-height: 2;
     font-weight: bold;
+    margin-top:20px;
     margin-bottom: 20px;
+    color: black;
+    font-size: 1.3rem;
 }
 
 /* covid alert */

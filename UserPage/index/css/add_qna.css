@@ -800,6 +800,40 @@ input[type="file"]{
     margin-right: 20px;
     cursor: pointer;    
 }
+.qna_date .addfilecontent{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(0, 124, 128);
+    border-radius: 4px;
+    margin-top: 8px;
+    vertical-align: middle;
+    padding-top: 7px;
+    display: none;
+}
+.addfilecontenttext{
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin: 0 15px 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+    text-indent: 5px;
+}
+.addfilecontentbtn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 25px;
+    background-color: rgba(255, 51, 0, 0.753);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
 .qna_date table tr td p.file_box span{
     font-weight: 700;
 }

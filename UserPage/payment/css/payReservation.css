@@ -356,6 +356,7 @@ body {
   font-size: 14px;
   z-index: 50;
   background-color: #fff;
+  font-weight: 600;
 }
 
 .fix_trip_info > .trip_info,
@@ -386,6 +387,7 @@ body {
   background-color: #bdd600;
   padding: 20px;
   border: none;
+  font-weight: 600;
 }
 .trip_info > .schedule > .arrow_img {
   display: block;
@@ -1462,6 +1464,7 @@ td > ul > li::before {
 
 /*항공기 위험물 안내 모달창*/
 #modal_restricted_items_wrap {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1477,6 +1480,7 @@ td > ul > li::before {
 }
 
 #modal_restricted_items_wrap .modal_restricted_items_wrap {
+  display: none;
   width: 60%;
   height: 800px;
   margin: 30px auto;
@@ -1808,6 +1812,7 @@ td > ul > li::before {
 /*신용카드 무이자 할부 및 혜택 안내 모달창 */
 
 #modal_credit_int {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1823,6 +1828,7 @@ td > ul > li::before {
 }
 
 #modal_credit_int .modal_credit_int {
+  display: none;
   width: 600px;
   height: 800px;
   margin: 30px auto;
@@ -2433,7 +2439,7 @@ td:last-child {
 .oneway_wrap table.modal_table td,
 .multi_wrap table.modal_table td {
   border: none;
-  padding: 10px 5px;
+  padding: 10px 50px;
 }
 
 .go_layerbtn,
@@ -2492,23 +2498,44 @@ td:last-child {
   font-size: 18px;
   text-align: center;
 }
-.go_layer,
-.go_layer2 {
+.go_layer{
   width: 880px;
   padding: 40px 20px;
   position: absolute;
   display: none;
-  top: 195px;
-  left: 190px;
+  top: 200px;
+  left: 132px;
   height: auto;
   background-color: #fff;
   border: 1px solid rgb(0, 0, 0, 0.2);
   z-index: 10;
   text-align: left;
 }
-.go_layer2 {
+.multi_wrap .go_layer{
+  width: 880px;
+  padding: 40px 20px;
   position: absolute;
-  top: 225px;
+  display: none;
+  top: 280px;
+  left: 132px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
+}
+.multi_wrap .go_layer2 {
+  width: 880px;
+  padding: 40px 20px;
+  position: absolute;
+  display: none;
+  top: 362px;
+  left: 132px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
 }
 .go_layer div,
 .go_layer2 div {
@@ -2555,22 +2582,44 @@ td:last-child {
   line-height: 2;
   line-height: 3;
 }
-.arrive_layer,
-.arrive_layer2 {
+.arrive_layer{
   width: 880px;
   padding: 40px 20px;
   position: absolute;
   display: none;
-  top: 195px;
-  left: 190px;
+  top: 200px;
+  left: 132px;
   height: auto;
   background-color: #fff;
   border: 1px solid rgb(0, 0, 0, 0.2);
   z-index: 10;
   text-align: left;
 }
-.arrive_layer2 {
-  top: 225px;
+.multi_wrap .arrive_layer{
+  width: 880px;
+  padding: 40px 20px;
+  position: absolute;
+  display: none;
+  top: 280px;
+  left: 132px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
+}
+.multi_wrap .arrive_layer2 {
+  width: 880px;
+  padding: 40px 20px;
+  position: absolute;
+  display: none;
+  top: 362px;
+  left: 132px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: left;
 }
 .arrive_layer div,
 .arrive_layer2 div {

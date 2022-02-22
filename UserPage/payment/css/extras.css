@@ -405,8 +405,9 @@ body{
     display: inline-block;
 }
 
-.trip_info > .trip_area span, .trip_info2 > .trip_area span {
+.trip_info > .trip_area span.sm_ft, .trip_info2 > .trip_area span.sm_ft {
     font-size: 14px;
+    vertical-align: middle;
 }
 
 .trip_info > .schedule > p > span, .trip_info2 > .schedule > p > span {
@@ -2254,7 +2255,10 @@ body{
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap {
-    width: 60%;
+    position: absolute;
+    top: 150px;
+    left: 26.8%;
+    width: 1160px;
     height: 800px;
 }
 
@@ -2417,14 +2421,13 @@ body{
 }
 
 #modal_insurance_info_wrap .modal_insurance_info_wrap .butt_ok {
-    position: fixed;
     width: 150px;
     bottom: 75px;
-    left: 50%;
     transform: translate(-50%);
     height: 45px;
     border: none;
     background-color: #BDD600;
+    margin-left: 500px;
 }
 
 table .detail {
@@ -2574,8 +2577,7 @@ h2 {
 
 
 .modal_agree2 {
-    position: absolute;
-    top: 400px;
+    position: fixed;
     left: 50%;
     transform: translate(-50%);
     width: 350px;
@@ -3910,7 +3912,7 @@ td.cur::before {
 .oneway_wrap table.modal_table td,
 .multi_wrap table.modal_table td {
     border: none;
-    padding: 10px 5px;
+    padding: 10px 50px;
 }
 
 .go_layerbtn,
@@ -3969,24 +3971,45 @@ td.cur::before {
     font-size: 18px;
     text-align: center;
 }
-.go_layer,
-.go_layer2 {
+.go_layer{
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 195px;
-    left: 190px;
+    top: 200px;
+    left: 132px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
     text-align: left;
-}
-.go_layer2 {
+  }
+  .multi_wrap .go_layer{
+    width: 880px;
+    padding: 40px 20px;
     position: absolute;
-    top: 225px;
-}
+    display: none;
+    top: 280px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+  }
+  .multi_wrap .go_layer2 {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 362px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+  }
 .go_layer div,
 .go_layer2 div {
     width: 160px;
@@ -4032,23 +4055,45 @@ td.cur::before {
     line-height: 2;
     line-height: 3;
 }
-.arrive_layer,
-.arrive_layer2 {
+.arrive_layer{
     width: 880px;
     padding: 40px 20px;
     position: absolute;
     display: none;
-    top: 195px;
-    left: 190px;
+    top: 200px;
+    left: 132px;
     height: auto;
     background-color: #fff;
     border: 1px solid rgb(0, 0, 0, 0.2);
     z-index: 10;
     text-align: left;
-}
-.arrive_layer2 {
-    top: 225px;
-}
+  }
+  .multi_wrap .arrive_layer{
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 280px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+  }
+  .multi_wrap .arrive_layer2 {
+    width: 880px;
+    padding: 40px 20px;
+    position: absolute;
+    display: none;
+    top: 362px;
+    left: 132px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    text-align: left;
+  }
 .arrive_layer div,
 .arrive_layer2 div {
     width: 160px;
